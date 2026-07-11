@@ -151,3 +151,6 @@ inc_before_page_list :
 inc_after_page_list : sidebar.html
 inc_before_post_list :
 inc_after_post_list :
+# 自定义样式
+sass:
+    style: compressed
