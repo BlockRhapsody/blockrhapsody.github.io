@@ -1,6 +1,7 @@
 ---
 ---
-@import "{{ site.theme }}";
+
+/* 不要 @import */
 
 /* ===== 全局样式 ===== */
 body {
@@ -51,27 +52,10 @@ a:hover {
     text-decoration: underline;
 }
 
-/* ===== 侧边栏 ===== */
-.sidebar {
-    background-color: #f8f9fa;
-    border-radius: 6px;
-    padding: 15px 20px;
-    border-left: 4px solid #c0392b;
-}
-
-.sidebar a {
-    color: #2c3e50;
-}
-
-.sidebar a:hover {
-    color: #c0392b;
-}
-
 /* ===== 代码块 ===== */
 pre, code {
     background-color: #f6f8fa;
     border-radius: 4px;
-    font-family: "SF Mono", "Menlo", "Monaco", "Consolas", monospace;
     font-size: 0.9em;
 }
 
@@ -110,11 +94,6 @@ blockquote {
     margin: 1em 0;
     background-color: #fdf6f5;
     color: #555;
-}
-
-/* ===== 列表 ===== */
-ul, ol {
-    padding-left: 1.5em;
 }
 
 /* ===== 页脚 ===== */
