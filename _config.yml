@@ -2,6 +2,8 @@ remote_theme: Drassil/git-wiki-theme@master
 # (string) Title of your wiki
 name: "方块狂想曲"
 repo_name: "方块狂想曲Wiki"
+# 浏览器图标
+favicon: "/assets/img/favicon.png"
 title: "方块狂想曲服务器"
 # (string) if you've installed your wiki in subfolder, you must change this configuration
 # with your folder name, otherwise leave it empty
