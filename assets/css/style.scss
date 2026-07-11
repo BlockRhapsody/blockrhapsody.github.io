@@ -1,0 +1,128 @@
+---
+---
+@import "{{ site.theme }}";
+
+/* ===== 全局样式 ===== */
+body {
+    background-color: #f5f7fa;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: #24292e;
+    line-height: 1.6;
+}
+
+/* ===== 内容区 ===== */
+.wrapper {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 30px 40px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.08);
+}
+
+/* ===== 标题 ===== */
+h1, h2, h3, h4, h5, h6 {
+    color: #1a1a2e;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+    font-weight: 600;
+}
+
+h1 {
+    font-size: 2em;
+    border-bottom: 3px solid #e8b4b8;
+    padding-bottom: 0.3em;
+}
+
+h2 {
+    font-size: 1.5em;
+    border-bottom: 2px solid #f0e6d3;
+    padding-bottom: 0.2em;
+}
+
+/* ===== 链接 ===== */
+a {
+    color: #c0392b;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #e74c3c;
+    text-decoration: underline;
+}
+
+/* ===== 侧边栏 ===== */
+.sidebar {
+    background-color: #f8f9fa;
+    border-radius: 6px;
+    padding: 15px 20px;
+    border-left: 4px solid #c0392b;
+}
+
+.sidebar a {
+    color: #2c3e50;
+}
+
+.sidebar a:hover {
+    color: #c0392b;
+}
+
+/* ===== 代码块 ===== */
+pre, code {
+    background-color: #f6f8fa;
+    border-radius: 4px;
+    font-family: "SF Mono", "Menlo", "Monaco", "Consolas", monospace;
+    font-size: 0.9em;
+}
+
+pre {
+    padding: 16px;
+    overflow: auto;
+    border: 1px solid #e1e4e8;
+}
+
+code {
+    padding: 0.2em 0.4em;
+}
+
+/* ===== 表格 ===== */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 1em 0;
+}
+
+th, td {
+    border: 1px solid #dfe2e5;
+    padding: 8px 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #f6f8fa;
+    font-weight: 600;
+}
+
+/* ===== 引用块 ===== */
+blockquote {
+    border-left: 4px solid #c0392b;
+    padding: 0.5em 1em;
+    margin: 1em 0;
+    background-color: #fdf6f5;
+    color: #555;
+}
+
+/* ===== 列表 ===== */
+ul, ol {
+    padding-left: 1.5em;
+}
+
+/* ===== 页脚 ===== */
+.footer {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #eaecef;
+    color: #6a737d;
+    font-size: 0.9em;
+    text-align: center;
+}
