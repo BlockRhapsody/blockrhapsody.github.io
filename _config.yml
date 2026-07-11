@@ -99,8 +99,6 @@ defaults:
       path: "assets/blog"
     values:
       layout: "git-wiki-blog"
-sass:
-    style: compressed
 plugins:
   - jekyll-avatar
   - jekyll-coffeescript
