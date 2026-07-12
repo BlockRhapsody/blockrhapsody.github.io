@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>方块狂想曲 · Wiki</title>
+    <!-- 引入像素风格字体 -->
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;700&display=swap" rel="stylesheet" />
+    <!-- 引入 Font Awesome 图标库 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <!-- 引入样式表 -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <!-- ===== 顶部导航栏 ===== -->
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="/">
+                    <i class="fas fa-cube"></i>
+                    <span>方块狂想曲</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===== 房间号横幅（默认隐藏，由 JS 控制显示） ===== -->
+    <div class="room-banner" id="roomBanner" style="display: none;">
+        <div class="room-content">
+            <i class="fas fa-door-open"></i>
+            <span>当前房间号：</span>
+            <strong id="roomNumberDisplay">加载中...</strong>
+        </div>
+    </div>
+
+    <!-- ===== 主体布局 ===== -->
+    <div class="main-wrapper">
+        <!-- 侧边栏 -->
+        <aside class="sidebar" id="sidebar">
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="category">
+                        <span class="category-toggle"><i class="fas fa-book"></i> 制度汇编</span>
+                        <ul class="sub-menu">
+                            <li><a href="/pages/制度汇编/玩家权限体制.html">玩家权限体制</a></li>
+                            <li><a href="/pages/制度汇编/玩家行政权限体制.html">玩家行政权限体制</a></li>
+                            <li><a href="/pages/制度汇编/监督委员会制度.html">监督委员会制度</a></li>
+                        </ul>
+                    </li>
+                    <li class="category">
+                        <span class="category-toggle"><i class="fas fa-gavel"></i> 服主令</span>
+                        <ul class="sub-menu">
+                            <li><a href="/pages/服主令/2026-1号.html">2026 第1号</a></li>
+                            <li><a href="/pages/服主令/2026-2号.html">2026 第2号</a></li>
+                            <li><a href="/pages/服主令/2026-3号.html">2026 第3号</a></li>
+                            <li><a href="/pages/服主令/2026-4号.html">2026 第4号</a></li>
+                            <li><a href="/pages/服主令/2026-5号.html">2026 第5号</a></li>
+                            <li><a href="/pages/服主令/2026-6号.html">2026 第6号</a></li>
+                            <li><a href="/pages/服主令/2026-7号.html">2026 第7号</a></li>
+                        </ul>
+                    </li>
+                    <li class="category">
+                        <span class="category-toggle"><i class="fas fa-user"></i> 人物志</span>
+                        <ul class="sub-menu">
+                            <li><a href="/pages/人物志/弘桀孤影行.html">弘桀孤影行</a></li>
+                        </ul>
+                    </li>
+                    <li class="category">
+                        <span class="category-toggle"><i class="fas fa-code"></i> 技术文档</span>
+                        <ul class="sub-menu">
+                            <li><a href="/pages/技术文档/MCC/目录.html">MCC 学习新编</a></li>
+                            <li><a href="/pages/技术文档/盔甲架指南.html">盔甲架指南</a></li>
+                        </ul>
+                    </li>
+                    <li class="category">
+                        <span class="category-toggle"><i class="fas fa-users"></i> 玩家文档</span>
+                        <ul class="sub-menu">
+                            <li><a href="/pages/玩家文档/游玩建议.html">玩家游玩建议</a></li>
+                            <li><a href="/pages/玩家文档/管理员手册.html">管理员学习手册</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- 主内容区 -->
+        <main class="main-content">
+            <section id="home-content">
+                <h1>欢迎来到方块狂想曲 Wiki</h1>
+                <p class="subtitle">服务器制度 · 技术文档 · 玩家指南</p>
+
+                <div class="card-grid">
+                    <a href="/pages/制度汇编/index.html" class="card">
+                        <i class="fas fa-book"></i>
+                        <h3>制度汇编</h3>
+                        <p>服务器纲领、权限体制、监督制度</p>
+                    </a>
+                    <a href="/pages/服主令/index.html" class="card">
+                        <i class="fas fa-gavel"></i>
+                        <h3>服主令</h3>
+                        <p>历次服主令全文存档</p>
+                    </a>
+                    <a href="/pages/人物志/index.html" class="card">
+                        <i class="fas fa-user"></i>
+                        <h3>人物志</h3>
+                        <p>服务器重要人物传记</p>
+                    </a>
+                    <a href="/pages/技术文档/index.html" class="card">
+                        <i class="fas fa-code"></i>
+                        <h3>技术文档</h3>
+                        <p>MCC 学习新编 · 盔甲架指南</p>
+                    </a>
+                    <a href="/pages/玩家文档/index.html" class="card">
+                        <i class="fas fa-users"></i>
+                        <h3>玩家文档</h3>
+                        <p>游玩建议 · 管理员手册</p>
+                    </a>
+                    <a href="/pages/论坛/index.html" class="card">
+                        <i class="fas fa-comments"></i>
+                        <h3>论坛</h3>
+                        <p>玩家交流与反馈</p>
+                    </a>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- ===== 底部信息 ===== -->
+    <footer class="footer">
+        <p>&copy; 2026 方块狂想曲服务器 · 由 <a href="https://github.com/BlockRhapsody" target="_blank">BlockRhapsody</a> 维护</p>
+    </footer>
+
+    <!-- 引入交互脚本 -->
+    <script src="script.js"></script>
+</body>
+</html>
