@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /pages/论坛/
+Sitemap: https://blockrhapsody.github.io/sitemap.xml
