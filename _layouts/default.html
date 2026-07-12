@@ -1,0 +1,24 @@
+---
+layout: git-wiki-default
+---
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>{{ page.title | default: site.title }}</title>
+  {% include git-wiki/sections/head/meta.html %}
+  {% include git-wiki/sections/head/scripts.html %}
+  {% include git-wiki/sections/head/styles.html %}
+</head>
+<body>
+  <div class="wrapper">
+    <div class="sidebar">
+      {% include git-wiki/sections/sidebar/sidebar.html %}
+    </div>
+    <div class="main-content">
+      {{ content }}
+    </div>
+  </div>
+</body>
+</html>
