@@ -124,7 +124,7 @@ plugins:
 #
 # INCLUDING HOOKS
 # They are optional, change them only if you need
-# Check wiki documentation to learn how they work
+# Check wiki documentation to learn how they wor
 #
 
 inc_before_toc : 
