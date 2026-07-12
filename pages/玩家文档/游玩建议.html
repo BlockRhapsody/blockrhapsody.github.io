@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>玩家游玩建议 · 方块狂想曲 Wiki</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="stylesheet" href="/style.css" />
+    <style>
+        /* 页面内联样式，继承全局风格，专注于内容呈现 */
+        .doc-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+            background: rgba(22, 22, 46, 0.6);
+            border-radius: 16px;
+            border: 1px solid #2a2a4a;
+            backdrop-filter: blur(4px);
+        }
+        .doc-content h1 {
+            font-size: 2.4rem;
+            color: #f0f0f0;
+            border-left: 5px solid #4CAF50;
+            padding-left: 1rem;
+            margin-top: 0;
+        }
+        .doc-content h2 {
+            font-size: 1.8rem;
+            color: #c8c8e8;
+            margin-top: 2.5rem;
+            padding-bottom: 0.3rem;
+            border-bottom: 2px solid #2a2a4a;
+        }
+        .doc-content h3 {
+            font-size: 1.3rem;
+            color: #a0c0ff;
+            margin-top: 1.8rem;
+        }
+        .doc-content p {
+            line-height: 1.8;
+            color: #d0d0e0;
+        }
+        .doc-content ul, .doc-content ol {
+            padding-left: 1.8rem;
+            color: #d0d0e0;
+        }
+        .doc-content li {
+            margin-bottom: 0.4rem;
+        }
+        .doc-content .highlight-box {
+            background: #1a1a3a;
+            border-left: 4px solid #4CAF50;
+            padding: 1rem 1.5rem;
+            border-radius: 0 8px 8px 0;
+            margin: 1.2rem 0;
+        }
+        .doc-content .highlight-box strong {
+            color: #8ab4f8;
+        }
+        .doc-content .badge {
+            display: inline-block;
+            background: #2a2a4a;
+            padding: 0.2rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            color: #8a8aaa;
+            margin-right: 0.4rem;
+        }
+        .doc-content table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.2rem 0;
+            font-size: 0.95rem;
+        }
+        .doc-content th {
+            background: #2a2a4a;
+            color: #e0e0e0;
+            padding: 0.6rem 0.8rem;
+            text-align: left;
+            border: 1px solid #3a3a5a;
+        }
+        .doc-content td {
+            padding: 0.6rem 0.8rem;
+            border: 1px solid #3a3a5a;
+            color: #c0c0d0;
+        }
+        .doc-content .footnote {
+            font-size: 0.85rem;
+            color: #7a7a9a;
+            border-top: 1px solid #2a2a4a;
+            padding-top: 1.5rem;
+            margin-top: 2rem;
+        }
+        .doc-content a {
+            color: #8ab4f8;
+            text-decoration: none;
+        }
+        .doc-content a:hover {
+            text-decoration: underline;
+        }
+        .doc-content code {
+            background: #0d0d1a;
+            padding: 0.1rem 0.4rem;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+            color: #e0e0e0;
+        }
+
+        /* 移动端适配 */
+        @media (max-width: 768px) {
+            .doc-content {
+                padding: 1.2rem 1rem;
+            }
+            .doc-content h1 {
+                font-size: 1.8rem;
+            }
+            .doc-content h2 {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- ===== 导航栏 ===== -->
+    <header class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="/">
+                    <i class="fas fa-cube"></i>
+                    <span>方块狂想曲</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===== 房间号横幅 ===== -->
+    <div class="room-banner" id="roomBanner" style="display: none;">
+        <div class="room-content">
+            <i class="fas fa-door-open"></i>
+            <span>当前房间号：</span>
+            <strong id="roomNumberDisplay">加载中...</strong>
+        </div>
+    </div>
+
+    <!-- ===== 主体布局 ===== -->
+    <div class="main-wrapper">
+        <!-- ===== 侧边栏 ===== -->
+        <aside class="sidebar" id="sidebar">
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="category">
+                        <span class="category-toggle"><i class="fas fa-book"></i> 制度汇编</span>
+                        <ul class="sub-menu">
+                            <li><a href="/pages/制度汇编/玩家权限体制.html">玩家权限体制</a></li>
+                            <li><a href="/pages/制度汇编/玩家行政权限体制.html">玩家行政权限体制</a></li>
+                            <li><a href="/pages/制度汇编/监督委员会制度.html">监督委员会制度</a></li>
+                        </ul>
+                    </li>
+                    <li class="category">
+                        <span class="category-toggle"><i class="fas fa-gavel"></i> 服主令</span>
+                        <ul class="sub-menu">
+                            <li><a href="/pages/服主令/2026-1号.html">2026 第1号</a></li>
+                            <li><a href="/pages/服主令/2026-2号.html">2026 第2号</a></li>
+                            <li><a href="/pages/服主令/2026-3号.html">2026 第3号</a></li>
+                            <li><a href="/pages/服主令/2026-4号.html">2026 第4号</a></li>
+                            <li><a href="/pages/服主令/2026-5号.html">2026 第5号</a></li>
+                            <li><a href="/pages/服主令/2026-6号.html">2026 第6号</a></li>
+                            <li><a href="/pages/服主令/2026-7号.html">2026 第7号</a></li>
+                        </ul>
+                    </li>
+                    <li class="category">
+                        <span class="category-toggle"><i class="fas fa-user"></i> 人物志</span>
+                        <ul class="sub-menu">
+                            <li><a href="/pages/人物志/弘桀孤影行.html">弘桀孤影行</a></li>
+                        </ul>
+                    </li>
+                    <li class="category">
+                        <span class="category-toggle"><i class="fas fa-code"></i> 技术文档</span>
+                        <ul class="sub-menu">
+                            <li><a href="/pages/技术文档/MCC/目录.html">MCC 学习新编</a></li>
+                            <li><a href="/pages/技术文档/盔甲架指南.html">盔甲架指南</a></li>
+                        </ul>
+                    </li>
+                    <li class="category">
+                        <span class="category-toggle"><i class="fas fa-users"></i> 玩家文档</span>
+                        <ul class="sub-menu">
+                            <li><a href="/pages/玩家文档/游玩建议.html">玩家游玩建议</a></li>
+                            <li><a href="/pages/玩家文档/管理员手册.html">管理员学习手册</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- ===== 主内容 ===== -->
+        <main class="main-content">
+            <article class="doc-content">
+                <h1>🎮 玩家游玩建议</h1>
+                <p style="color: #8a8aaa; margin-bottom: 2rem;">欢迎加入方块狂想曲服务器！</p>
+
+                <div class="highlight-box">
+                    <p>本服是一个以<strong>玩家创造与协作</strong>为核心精神的 Minecraft 中国版服务器。<strong>建设与发展</strong>是方块狂想曲的两大核心主题。</p>
+                    <p>本服由服主 <strong>弘桀孤影行</strong> 统一领导，坚持 <strong>玩家体验至上</strong> 的核心理念，确立了权利保障、权限体制、监督机制、玩家共治的基本框架。</p>
+                    <p>本服有《方块狂想曲服务器纲领》作为服务器的根本性纲领、六册服务器制度构成的基本法治框架，共同促进服务器高质量可持续发展。</p>
+                </div>
+
+                <h2>🚀 入服第一步</h2>
+                <ol>
+                    <li>进入服务器</li>
+                    <li>领取新手物资</li>
+                    <li>了解权限晋升条件（详见群内文件《玩家权限体制》）</li>
+                    <li>开始挖矿提升装备</li>
+                    <li>满60分钟后领取地皮</li>
+                </ol>
+
+                <h2>⚔️ 核心玩法</h2>
+                <p>我服继承了 <strong>“答辩资源房”</strong> 的基本玩法。“答辩资源房”是指以挖矿获取资源为核心玩法、快速提升装备等级的联机大厅房间类型。</p>
+                <p>与同类房间不同的是，我服持续拓展服务器玩法、持续优化玩家游戏体验，在玩家自由获得矿物的基础上，更以丰富的服务器玩法、完善的服务器制度而长久发展。</p>
+
+                <div class="highlight-box">
+                    <p><strong>🛡️ 32K 物品禁令</strong></p>
+                    <p>我服不存在超越原版游戏生存模式附魔限制的物品。我服严令禁止32K物品（通常指附魔等级为32767级的物品，远超原版生存模式上限），包括管理员在内的所有服务器成员均不能拥有此类物品。</p>
+                    <p>在我服，一位玩家在无力量、虚弱、急迫、挖掘疲劳效果时，未暴击的情况下，造成一次 <code>&gt;20</code> 的伤害，将被视为使用32K物品；持有面板伤害 <code>&ge; 20</code> 的武器，将会被视为持有32K。</p>
+                    <p>你可以放心游玩！</p>
+                </div>
+
+                <h2>🏡 地皮系统</h2>
+                <p>我服以地皮创作和PvP玩家竞技为主要玩法。玩家在线时长满60分钟后，可在地皮区领取一块绑定UID的专属地皮，大小为 <code>30×30</code> 格方块。</p>
+                <p><strong>领取方式：</strong> 站在地皮旁的石质压力板上即可领取。领取后再次触发压力板即可进入地皮。</p>
+                <p>你的地皮只有你能进入，如需邀请好友参观，可向管理员申请传送协助或申请添加访客权限。</p>
+
+                <h3>📦 初始物资</h3>
+                <ul>
+                    <li><strong>1.</strong> 包含《地皮使用须知》成书的讲台1个</li>
+                    <li><strong>2.</strong> 满盒白套餐：白色混凝土×9组、白色羊毛×9组、白色混凝土粉末×9组</li>
+                    <li><strong>3.</strong> 石砖套餐：石砖×18组、苔纹石砖×3组、裂纹石砖×3组、錾制石砖×3组</li>
+                    <li><strong>4.</strong> 深色石材套餐：深板岩石砖×9组、錾制黑石×9组、黑石石砖×9组</li>
+                    <li><strong>5.</strong> 混凝土套餐1、2：所有颜色的混凝土×3组、书架×3组、雕纹书架×3组、空附魔的附魔书×3本</li>
+                    <li><strong>6.</strong> 羊毛套餐1、2：所有颜色的羊毛×3组、草方块×3组、苔藓×3组、苍白苔藓×3组</li>
+                    <li><strong>7.</strong> 骨头+照明方块：骨头×9组、荧石×9组、海晶灯×9组</li>
+                    <li><strong>8.</strong> 主世界原木套餐：主世界自然生成的所有原木×3组（不含下界木头）</li>
+                    <li><strong>9.</strong> 末影箱1个</li>
+                    <li><strong>10.</strong> 附魔台1个</li>
+                </ul>
+                <div class="highlight-box">
+                    <p>🔒 <strong>地皮权利保障</strong></p>
+                    <p>包括管理员在内，任何组织或个人不得擅自变更、查封或清除玩家的地皮。非经其本人同意，或因严重违规并由管理员团队与监督委员会共同裁决且留存证据的，任何组织或个人不得擅自变更、查封或清除玩家的合法财产。在必要时，管理员团队经过服主批准后，可以对玩家的地皮进行复制。</p>
+                    <p>你可以安心地使用地皮！</p>
+                </div>
+
+                <h2>🛒 商店系统</h2>
+                <ul>
+                    <li>售卖物品换取方块币</li>
+                    <li>通过绿宝石等量兑换方块币</li>
+                    <li>通过方块币购买游戏道具、附魔书、无法合成的原版装备类物品</li>
+                </ul>
+
+                <h2>📖 附魔书获取途径</h2>
+                <ol>
+                    <li>通过附魔台给书附魔</li>
+                    <li>通过商店购买</li>
+                    <li>通过副本概率掉落</li>
+                    <li>通过特殊活动或任务获得</li>
+                    <li>获取特定物品的同时获得其无法在附魔台附魔的附魔书</li>
+                </ol>
+
+                <h2>⚡ 副本系统</h2>
+                <p>我服有丰富的副本系统，玩家在线时长满120秒后即可正常游玩副本功能。副本包含打怪、闯关等多种类型，获得的掉落物大部分可以在商店售卖以换取方块币，也可以留作收藏。一些特殊的副本掉落物可以合成增益性道具，具体内容可以在服务器内查看。</p>
+
+                <h2>📋 关于本服</h2>
+                <ul>
+                    <li><strong>服务器最大支持人数：</strong>10人</li>
+                    <li><strong>服务器配置：</strong>中国版联机大厅网易服务器的标准配置</li>
+                    <li><strong>开放时间：</strong>一般为周末下午、法定节假日大部分时间、寒暑假全天</li>
+                    <li><strong>管理员团队：</strong>WE泡沫君2、小鸡啄米放大炮、出击的阴笑徐铮、弋人何篡（经常改名）、忘_欲川（经常改名）</li>
+                </ul>
+
+                <h2>💬 反馈与申诉</h2>
+                <p>广大玩家在我服不会遭受到神权、强权、霸权。玩家所有合理诉求都会得到管理员团队的充分考量。</p>
+                <p>如在服务器中遭受不公平或不愉快的待遇，可以直接向服主 <strong>弘桀孤影行</strong> 反映（可通过QQ私聊、游戏内私信或群内@），你的诉求一定会得到认真听取和妥善处理！</p>
+                <p>你的游玩体验是管理员团队的永恒追求！</p>
+
+                <h2>📌 注意事项</h2>
+                <ul>
+                    <li>作为玩家，你的第一要义就是 <strong>尽情地游戏</strong>！在不违反服务器规章制度、不破坏服务器内容和其他玩家的游戏体验的前提下，你的一切行为都不受约束。</li>
+                    <li>我服的所有通知、公告、制度性文件都会在QQ交流群发布 <strong>QQ群：方块狂想曲交流群；群号：1103227383</strong>。这将帮助你第一时间了解服务器的动向与重要通知！</li>
+                    <li>方块狂想曲服务器的房主只会是中国版账号 <strong>弘桀孤影行</strong>，所以直接在启动器内添加服主好友即可在服主上线后第一时间进入服务器。</li>
+                </ul>
+
+                <div class="footnote">
+                    <p><i class="fas fa-edit"></i> 本文档最后更新于 2026年7月 · 方块狂想曲服务器</p>
+                </div>
+            </article>
+        </main>
+    </div>
+
+    <!-- ===== 底部 ===== -->
+    <footer class="footer">
+        <p>&copy; 2026 方块狂想曲服务器 · 由 <a href="https://github.com/BlockRhapsody" target="_blank">BlockRhapsody</a> 维护</p>
+    </footer>
+
+    <script src="/script.js"></script>
+</body>
+</html>
