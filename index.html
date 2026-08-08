@@ -22,26 +22,26 @@
         ::-webkit-scrollbar-thumb{background:var(--border-color);border-radius:8px}
         ::-webkit-scrollbar-thumb:hover{background:var(--accent)}
         .navbar{position:sticky;top:0;z-index:100;background:rgba(10,10,20,0.85);backdrop-filter:blur(18px) saturate(1.2);border-bottom:1px solid var(--border-color);padding:0.7rem 2rem;transition:background var(--transition)}
-        .nav-container{max-width:1440px;margin:0 auto;display:flex;justify-content:space-between;align-items:center}
-        .nav-brand a{font-size:1.4rem;font-weight:700;color:var(--text-primary);display:flex;align-items:center;gap:0.6rem;letter-spacing:1px;transition:transform var(--transition)}
+        .nav-container{max-width:1440px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.5rem}
+        .nav-brand a{font-size:clamp(1.1rem, 3vw, 1.8rem);font-weight:700;color:var(--text-primary);display:flex;align-items:center;gap:0.6rem;letter-spacing:1px;transition:transform var(--transition)}
         .nav-brand a:hover{transform:scale(1.02)}
-        .nav-brand i{color:var(--accent);font-size:1.6rem}
-        .nav-actions{display:flex;align-items:center;gap:1rem}
-        .nav-btn{padding:0.4rem 1.2rem;border-radius:40px;font-size:0.85rem;font-weight:700;font-family:var(--font-pixel);background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.08);color:var(--text-secondary);cursor:pointer;transition:all var(--transition);display:inline-flex;align-items:center;gap:0.4rem}
+        .nav-brand img{height:clamp(28px, 4vw, 44px);width:auto;display:block;image-rendering:pixelated}
+        .nav-actions{display:flex;align-items:center;gap:clamp(0.4rem, 1vw, 1rem);flex-wrap:wrap}
+        .nav-btn{padding:clamp(0.25rem, 0.6vw, 0.5rem) clamp(0.6rem, 1.2vw, 1.2rem);border-radius:40px;font-size:clamp(0.7rem, 1.1vw, 0.9rem);font-weight:700;font-family:var(--font-pixel);background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.08);color:var(--text-secondary);cursor:pointer;transition:all var(--transition);display:inline-flex;align-items:center;gap:0.4rem;white-space:nowrap}
         .nav-btn:hover{background:var(--accent);border-color:var(--accent);color:#fff;box-shadow:0 0 30px var(--accent-glow);transform:translateY(-1px)}
-        .nav-btn i{font-size:0.9rem}
+        .nav-btn i{font-size:clamp(0.7rem, 0.9vw, 0.9rem)}
         .room-banner{background:linear-gradient(135deg,#1b5e20,#2e7d32);padding:0.5rem 0;width:100%;border-bottom:2px solid #4CAF50;text-align:center;display:none;animation:slideDown 0.5s ease forwards}
         .room-banner.show{display:block}
         @keyframes slideDown{from{opacity:0;transform:translateY(-10px)}to{opacity:1;transform:translateY(0)}}
-        .room-content{display:inline-flex;align-items:center;gap:0.8rem;font-size:1.1rem;color:#fff}
+        .room-content{display:inline-flex;align-items:center;gap:0.8rem;font-size:clamp(0.9rem, 1.5vw, 1.2rem);color:#fff;flex-wrap:wrap;justify-content:center}
         .room-content i{color:rgba(255,255,255,0.7)}
-        .room-content strong{font-size:1.8rem;font-weight:700;letter-spacing:3px;background:rgba(0,0,0,0.25);padding:0.1rem 1.4rem;border-radius:40px;text-shadow:0 2px 8px rgba(0,0,0,0.3);font-family:var(--font-pixel)}
-        .main-wrapper{display:flex;flex:1;max-width:1440px;margin:0 auto;width:100%;padding:0 1.5rem;gap:1.5rem}
+        .room-content strong{font-size:clamp(1.2rem, 2.5vw, 2rem);font-weight:700;letter-spacing:3px;background:rgba(0,0,0,0.25);padding:0.05rem 0.8rem;border-radius:40px;text-shadow:0 2px 8px rgba(0,0,0,0.3);font-family:var(--font-pixel)}
+        .main-wrapper{display:flex;flex:1;max-width:1440px;margin:0 auto;width:100%;padding:0 1rem;gap:1.5rem}
         .sidebar{width:260px;flex-shrink:0;background:rgba(14,14,34,0.7);backdrop-filter:blur(8px);border-radius:var(--radius);border:1px solid var(--border-color);padding:1.5rem 0.8rem;margin-top:1.5rem;height:fit-content;max-height:calc(100vh - 120px);overflow-y:auto;position:sticky;top:80px;transition:all var(--transition)}
         .sidebar::-webkit-scrollbar{width:3px}
         .sidebar-nav ul{list-style:none;padding:0}
         .category{margin-bottom:0.2rem}
-        .category-toggle{display:flex;align-items:center;gap:0.6rem;padding:0.5rem 0.8rem;font-size:0.95rem;font-weight:700;color:var(--text-secondary);cursor:pointer;border-radius:10px;transition:all var(--transition);user-select:none;position:relative}
+        .category-toggle{display:flex;align-items:center;gap:0.6rem;padding:0.5rem 0.8rem;font-size:clamp(0.85rem, 1vw, 0.95rem);font-weight:700;color:var(--text-secondary);cursor:pointer;border-radius:10px;transition:all var(--transition);user-select:none;position:relative}
         .category-toggle:hover{background:rgba(255,255,255,0.05);color:var(--text-primary)}
         .category-toggle i{width:1.4rem;color:var(--text-muted);transition:color var(--transition)}
         .category-toggle:hover i{color:var(--accent)}
@@ -50,7 +50,7 @@
         .sub-menu{list-style:none;padding-left:2.2rem;max-height:0;overflow:hidden;transition:max-height 0.4s cubic-bezier(0.34,1.56,0.64,1)}
         .sub-menu.open{max-height:600px}
         .sub-menu li{padding:0.2rem 0}
-        .sub-menu a{font-size:0.85rem;color:var(--text-muted);display:block;padding:0.25rem 0.5rem;border-radius:6px;transition:all var(--transition);position:relative}
+        .sub-menu a{font-size:clamp(0.78rem, 0.9vw, 0.85rem);color:var(--text-muted);display:block;padding:0.25rem 0.5rem;border-radius:6px;transition:all var(--transition);position:relative;cursor:pointer}
         .sub-menu a::before{content:'';position:absolute;left:-0.8rem;top:50%;width:4px;height:4px;background:var(--text-muted);border-radius:50%;transform:translateY(-50%);opacity:0;transition:all var(--transition)}
         .sub-menu a:hover{background:rgba(255,255,255,0.04);color:var(--text-primary);padding-left:0.8rem}
         .sub-menu a:hover::before{opacity:1;background:var(--accent)}
@@ -59,51 +59,74 @@
         .main-content{flex:1;padding:1.5rem 0 2rem;min-height:70vh}
         #home-content{animation:fadeUp 0.6s ease forwards}
         @keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
-        #home-content h1{font-size:2.8rem;font-weight:700;letter-spacing:2px;background:linear-gradient(135deg,#fff,#8ab4f8);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:0.3rem}
-        .subtitle{font-size:1.1rem;color:var(--text-secondary);margin-bottom:2.5rem;letter-spacing:1px}
-        /* ===== 卡片样式 ===== */
+        #home-content h1{font-size:clamp(1.8rem, 4vw, 3rem);font-weight:700;letter-spacing:2px;background:linear-gradient(135deg,#fff,#8ab4f8);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:0.3rem}
+        .subtitle{font-size:clamp(0.9rem, 1.2vw, 1.1rem);color:var(--text-secondary);margin-bottom:2rem;letter-spacing:1px}
         .card-grid{display:flex;flex-direction:column;gap:1rem;width:100%}
-        .card{background:rgba(26,26,62,0.6);backdrop-filter:blur(4px);border:1px solid var(--border-color);border-radius:var(--radius);padding:1.2rem 1.8rem;transition:all 0.4s cubic-bezier(0.34,1.56,0.64,1);display:flex;flex-direction:column;gap:0.4rem;position:relative;overflow:hidden}
+        .card{background:rgba(26,26,62,0.6);backdrop-filter:blur(4px);border:1px solid var(--border-color);border-radius:var(--radius);padding:clamp(0.8rem, 1.5vw, 1.5rem) clamp(1rem, 2vw, 2rem);transition:all 0.4s cubic-bezier(0.34,1.56,0.64,1);display:flex;flex-direction:column;gap:0.4rem;position:relative;overflow:hidden}
         .card:hover{transform:translateX(6px);border-color:var(--accent);box-shadow:0 8px 32px rgba(0,0,0,0.4),0 0 30px var(--accent-glow)}
-        .card-title{font-size:1.3rem;font-weight:700;color:var(--text-primary);display:flex;align-items:center;gap:0.8rem}
-        .card-title i{color:var(--accent);font-size:1.6rem}
+        .card-title{font-size:clamp(1.1rem, 1.6vw, 1.4rem);font-weight:700;color:var(--text-primary);display:flex;align-items:center;gap:0.8rem}
+        .card-title i{color:var(--accent);font-size:clamp(1.2rem, 1.8vw, 1.6rem)}
         .card-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:0.1rem}
-        .card-list li{padding:0.3rem 0.8rem;border-radius:6px;color:var(--text-secondary);font-size:0.9rem;cursor:pointer;transition:all var(--transition);list-style:none}
-        .card-list li:hover{background:rgba(76,175,80,0.15);color:var(--text-primary);padding-left:1.2rem}
-        .card-list li i{margin-right:0.5rem;color:var(--text-muted);font-size:0.7rem;width:1.2rem;text-align:center}
+        .card-list li{padding:clamp(0.2rem, 0.4vw, 0.4rem) clamp(0.5rem, 0.8vw, 0.8rem);border-radius:6px;color:var(--text-secondary);font-size:clamp(0.78rem, 1vw, 0.95rem);cursor:pointer;transition:all var(--transition);list-style:none}
+        .card-list li:hover{background:rgba(76,175,80,0.15);color:var(--text-primary);padding-left:clamp(0.8rem, 1.2vw, 1.2rem)}
+        .card-list li i{margin-right:0.5rem;color:var(--text-muted);font-size:clamp(0.6rem, 0.7vw, 0.75rem);width:1.2rem;text-align:center}
+        .card-list li.active{color:var(--accent);background:rgba(76,175,80,0.08)}
         .doc-content{max-width:900px;margin:0 auto;padding:0 0.5rem;animation:fadeUp 0.5s ease forwards}
-        .doc-content h1{font-size:2.4rem;border-left:4px solid var(--accent);padding-left:1rem;margin-bottom:1.5rem}
-        .doc-content h2{font-size:1.6rem;margin-top:2.5rem;padding-bottom:0.3rem;border-bottom:2px solid var(--border-color);color:var(--text-primary)}
-        .doc-content h3{font-size:1.2rem;margin-top:1.8rem;color:#8ab4f8}
-        .doc-content p{line-height:1.8;color:var(--text-secondary);margin-bottom:0.8rem}
-        .doc-content ul,.doc-content ol{padding-left:1.8rem;color:var(--text-secondary);line-height:1.8}
+        .doc-content h1{font-size:clamp(1.6rem, 3vw, 2.4rem);border-left:4px solid var(--accent);padding-left:1rem;margin-bottom:1.5rem}
+        .doc-content h2{font-size:clamp(1.2rem, 1.8vw, 1.6rem);margin-top:2.5rem;padding-bottom:0.3rem;border-bottom:2px solid var(--border-color);color:var(--text-primary)}
+        .doc-content h3{font-size:clamp(1rem, 1.3vw, 1.2rem);margin-top:1.8rem;color:#8ab4f8}
+        .doc-content p{line-height:1.8;color:var(--text-secondary);margin-bottom:0.8rem;font-size:clamp(0.85rem, 1vw, 1rem)}
+        .doc-content ul,.doc-content ol{padding-left:1.8rem;color:var(--text-secondary);line-height:1.8;font-size:clamp(0.85rem, 1vw, 1rem)}
         .doc-content li{margin-bottom:0.3rem}
-        .doc-content .highlight-box{background:rgba(76,175,80,0.06);border-left:4px solid var(--accent);padding:1.2rem 1.5rem;border-radius:0 var(--radius) var(--radius) 0;margin:1.2rem 0}
+        .doc-content .highlight-box{background:rgba(76,175,80,0.06);border-left:4px solid var(--accent);padding:clamp(0.8rem, 1.2vw, 1.2rem) clamp(1rem, 1.5vw, 1.5rem);border-radius:0 var(--radius) var(--radius) 0;margin:1.2rem 0}
         .doc-content .highlight-box strong{color:var(--text-primary)}
         .doc-content code{background:rgba(255,255,255,0.06);padding:0.1rem 0.4rem;border-radius:4px;font-family:'Courier New',monospace;font-size:0.9em;color:#d0d0e0}
-        .doc-content table{width:100%;border-collapse:collapse;margin:1.2rem 0;font-size:0.9rem}
+        .doc-content table{width:100%;border-collapse:collapse;margin:1.2rem 0;font-size:clamp(0.8rem, 0.9vw, 0.9rem)}
         .doc-content th{background:var(--bg-secondary);color:var(--text-primary);padding:0.6rem 0.8rem;text-align:left;border:1px solid var(--border-color)}
         .doc-content td{padding:0.6rem 0.8rem;border:1px solid var(--border-color);color:var(--text-secondary)}
-        .doc-content .footnote{font-size:0.8rem;color:var(--text-muted);border-top:1px solid var(--border-color);padding-top:1.5rem;margin-top:2.5rem}
-        .footer{background:rgba(10,10,20,0.6);backdrop-filter:blur(8px);border-top:1px solid var(--border-color);text-align:center;padding:1.2rem 0;font-size:0.8rem;color:var(--text-muted);margin-top:1.5rem}
+        .doc-content .footnote{font-size:clamp(0.7rem, 0.8vw, 0.8rem);color:var(--text-muted);border-top:1px solid var(--border-color);padding-top:1.5rem;margin-top:2.5rem}
+        .footer{background:rgba(10,10,20,0.6);backdrop-filter:blur(8px);border-top:1px solid var(--border-color);text-align:center;padding:1.2rem 0;font-size:clamp(0.7rem, 0.8vw, 0.85rem);color:var(--text-muted);margin-top:1.5rem}
         .footer a{color:var(--text-secondary);transition:color var(--transition)}
         .footer a:hover{color:var(--accent)}
-        .large-text-gold{font-size:1.8rem;display:block;text-align:center;padding:0.8rem 0;letter-spacing:2px;color:#f0c040}
-        .large-text{font-size:1.5rem;display:block;text-align:center;padding:0.8rem 0;letter-spacing:2px;color:var(--text-primary)}
+        .large-text-gold{font-size:clamp(1.4rem, 2.2vw, 1.8rem);display:block;text-align:center;padding:0.8rem 0;letter-spacing:2px;color:#f0c040}
+        .large-text{font-size:clamp(1.2rem, 1.8vw, 1.5rem);display:block;text-align:center;padding:0.8rem 0;letter-spacing:2px;color:var(--text-primary)}
         .hidden{display:none}
+        /* ===== 登录模态框 ===== */
+        .modal-overlay{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.7);backdrop-filter:blur(8px);z-index:1000;display:none;justify-content:center;align-items:center;animation:fadeIn 0.3s ease}
+        .modal-overlay.active{display:flex}
+        @keyframes fadeIn{from{opacity:0}to{opacity:1}}
+        .modal-box{background:var(--bg-secondary);border:1px solid var(--border-color);border-radius:var(--radius);padding:clamp(1.5rem, 3vw, 2.5rem);max-width:420px;width:90%;box-shadow:0 24px 64px rgba(0,0,0,0.6);animation:scaleIn 0.3s ease}
+        @keyframes scaleIn{from{transform:scale(0.9);opacity:0}to{transform:scale(1);opacity:1}}
+        .modal-box h2{font-size:clamp(1.2rem, 2vw, 1.6rem);margin-bottom:0.3rem;color:var(--text-primary)}
+        .modal-box .modal-sub{font-size:clamp(0.8rem, 0.9vw, 0.9rem);color:var(--text-muted);margin-bottom:1.5rem}
+        .modal-box label{display:block;font-size:clamp(0.8rem, 0.9vw, 0.9rem);color:var(--text-secondary);margin-bottom:0.3rem}
+        .modal-box input{width:100%;padding:0.6rem 0.8rem;border-radius:8px;border:1px solid var(--border-color);background:rgba(255,255,255,0.05);color:var(--text-primary);font-family:var(--font-pixel);font-size:clamp(0.85rem, 1vw, 1rem);outline:none;transition:border-color var(--transition)}
+        .modal-box input:focus{border-color:var(--accent)}
+        .modal-box .input-group{margin-bottom:1rem}
+        .modal-box .modal-actions{display:flex;gap:0.8rem;margin-top:1.2rem;flex-wrap:wrap}
+        .modal-box .modal-actions .btn-primary{flex:1;padding:0.6rem 1.2rem;border-radius:40px;font-size:clamp(0.8rem, 0.9vw, 0.9rem);font-weight:700;font-family:var(--font-pixel);background:var(--accent);border:none;color:#fff;cursor:pointer;transition:all var(--transition)}
+        .modal-box .modal-actions .btn-primary:hover{background:var(--accent-hover);box-shadow:0 0 30px var(--accent-glow)}
+        .modal-box .modal-actions .btn-secondary{padding:0.6rem 1.2rem;border-radius:40px;font-size:clamp(0.8rem, 0.9vw, 0.9rem);font-weight:700;font-family:var(--font-pixel);background:rgba(255,255,255,0.06);border:1px solid var(--border-color);color:var(--text-secondary);cursor:pointer;transition:all var(--transition)}
+        .modal-box .modal-actions .btn-secondary:hover{background:rgba(255,255,255,0.1)}
+        .modal-box .modal-error{color:#ff6b6b;font-size:clamp(0.75rem, 0.8vw, 0.85rem);margin-top:0.5rem;display:none}
+        .modal-box .modal-error.show{display:block}
         @media(max-width:1024px){.sidebar{width:220px;padding:1rem 0.6rem}}
-        @media(max-width:768px){.sidebar{display:none}.main-wrapper{padding:0 1rem}#home-content h1{font-size:2rem}.card{padding:1rem 1.2rem}.card-title{font-size:1.1rem}.card-list li{font-size:0.8rem}.nav-container{flex-wrap:wrap;gap:0.5rem}.room-content strong{font-size:1.3rem;padding:0.05rem 0.8rem}.navbar{padding:0.5rem 1rem}}
-        @media(max-width:480px){.card-title{font-size:1rem}#home-content h1{font-size:1.6rem}.nav-brand a{font-size:1.1rem}.nav-btn{font-size:0.7rem;padding:0.3rem 0.8rem}.room-content{font-size:0.9rem;gap:0.4rem}.room-content strong{font-size:1.1rem}}
+        @media(max-width:768px){.sidebar{display:none}.main-wrapper{padding:0 1rem}.navbar{padding:0.5rem 1rem}.nav-container{flex-wrap:wrap}.nav-actions{width:100%;justify-content:flex-end}}
     </style>
 </head>
 <body>
     <header class="navbar">
         <div class="nav-container">
-            <div class="nav-brand"><a href="/"><i class="fas fa-cube"></i><span>方块狂想曲</span></a></div>
+            <div class="nav-brand">
+                <a href="/">
+                    <img src="/favicon.png" alt="方块狂想曲" />
+                    <span>方块狂想曲</span>
+                </a>
+            </div>
             <div class="nav-actions">
-                <span id="userDisplay" style="display:none;color:var(--text-secondary);font-size:0.9rem;"><i class="fas fa-user"></i> <span id="usernameDisplay"></span></span>
-                <a id="loginBtn" href="#login" class="nav-btn"><i class="fas fa-sign-in-alt"></i> 登录</a>
-                <a id="logoutBtn" href="#" style="display:none;" class="nav-btn"><i class="fas fa-sign-out-alt"></i> 退出</a>
+                <span id="userDisplay" style="display:none;color:var(--text-secondary);font-size:clamp(0.75rem, 0.9vw, 0.9rem);"><i class="fas fa-user"></i> <span id="usernameDisplay"></span></span>
+                <a id="loginBtn" href="#" class="nav-btn" onclick="openLoginModal(event)"><i class="fas fa-sign-in-alt"></i> 登录</a>
+                <a id="logoutBtn" href="#" style="display:none;" class="nav-btn" onclick="logout(event)"><i class="fas fa-sign-out-alt"></i> 退出</a>
             </div>
         </div>
     </header>
@@ -166,76 +189,53 @@
             <section id="home-content">
                 <h1>欢迎来到方块狂想曲 Wiki</h1>
                 <p class="subtitle">服务器制度 · 技术文档 · 玩家指南</p>
-                <div class="card-grid" id="cardGrid">
-                    <!-- 卡片由 JavaScript 动态生成 -->
-                </div>
+                <div class="card-grid" id="cardGrid"></div>
             </section>
             <div id="page-content" class="hidden"></div>
         </main>
     </div>
     <footer class="footer"><p>&copy; 2026 方块狂想曲服务器 · 由 <a href="https://github.com/BlockRhapsody" target="_blank">BlockRhapsody</a> 维护</p></footer>
+
+    <!-- ===== 登录模态框 ===== -->
+    <div class="modal-overlay" id="loginModal">
+        <div class="modal-box">
+            <h2>🔐 登录</h2>
+            <p class="modal-sub">输入你的中国版账号名称</p>
+            <div class="input-group">
+                <label for="loginUsername">用户名</label>
+                <input type="text" id="loginUsername" placeholder="输入中国版账号名" maxlength="32" />
+            </div>
+            <div class="modal-error" id="loginError">请输入用户名</div>
+            <div class="modal-actions">
+                <button class="btn-primary" onclick="login()">登 录</button>
+                <button class="btn-secondary" onclick="closeLoginModal()">取消</button>
+            </div>
+        </div>
+    </div>
+
     <script>
         // ============================================================
-        // 1. 卡片数据（只维护这份数据，页面会自动生成）
+        // 1. 卡片数据
         // ============================================================
         var cardData = [
-            {
-                title: '制度汇编',
-                icon: 'fa-book',
-                items: ['玩家权限体制', '玩家行政权限体制', '监督委员会制度', '创造者协会章程']
-            },
-            {
-                title: '服主令',
-                icon: 'fa-gavel',
-                items: ['2026第1号', '2026第2号', '2026第3号', '2026第4号', '2026第5号', '2026第6号']
-            },
-            {
-                title: '人物志',
-                icon: 'fa-user',
-                items: ['弘桀孤影行']
-            },
-            {
-                title: '技术文档',
-                icon: 'fa-code',
-                items: ['MCC目录', '盔甲架指南', '认识基岩版', '第一章', '第二章', '第三章', '第四章', '第五章', '第六章', '第七章', '第八章', '第九章', '第十章', '第十一章']
-            },
-            {
-                title: '玩家文档',
-                icon: 'fa-users',
-                items: ['玩家游玩建议', '管理员学习手册']
-            },
-            {
-                title: '论坛',
-                icon: 'fa-comments',
-                items: ['论坛']
-            }
+            { title: '制度汇编', icon: 'fa-book', items: ['玩家权限体制', '玩家行政权限体制', '监督委员会制度', '创造者协会章程'] },
+            { title: '服主令', icon: 'fa-gavel', items: ['2026第1号', '2026第2号', '2026第3号', '2026第4号', '2026第5号', '2026第6号'] },
+            { title: '人物志', icon: 'fa-user', items: ['弘桀孤影行'] },
+            { title: '技术文档', icon: 'fa-code', items: ['MCC目录', '盔甲架指南', '认识基岩版', '第一章', '第二章', '第三章', '第四章', '第五章', '第六章', '第七章', '第八章', '第九章', '第十章', '第十一章'] },
+            { title: '玩家文档', icon: 'fa-users', items: ['玩家游玩建议', '管理员学习手册'] },
+            { title: '论坛', icon: 'fa-comments', items: ['论坛'] }
         ];
-
-        // 显示名称映射（卡片上显示的名称）
         var displayNames = {
-            '2026第1号': '2026 第1号',
-            '2026第2号': '2026 第2号',
-            '2026第3号': '2026 第3号',
-            '2026第4号': '2026 第4号',
-            '2026第5号': '2026 第5号',
-            '2026第6号': '2026 第6号',
+            '2026第1号': '2026 第1号', '2026第2号': '2026 第2号', '2026第3号': '2026 第3号',
+            '2026第4号': '2026 第4号', '2026第5号': '2026 第5号', '2026第6号': '2026 第6号',
             'MCC目录': 'MCC 学习新编',
-            '第一章': '第一章 指令的基本概念',
-            '第二章': '第二章 权限等级',
-            '第三章': '第三章 指令的构成、解析与执行',
-            '第四章': '第四章 命令方块',
-            '第五章': '第五章 目标选择器',
-            '第六章': '第六章 JSON 文本',
-            '第七章': '第七章 Molang 语言',
-            '第八章': '第八章 计分板',
-            '第九章': '第九章 标签与数据标签NBT',
-            '第十章': '第十章 粒子技术',
-            '第十一章': '第十一章 /execute全解'
+            '第一章': '第一章 指令的基本概念', '第二章': '第二章 权限等级', '第三章': '第三章 指令的构成、解析与执行',
+            '第四章': '第四章 命令方块', '第五章': '第五章 目标选择器', '第六章': '第六章 JSON 文本',
+            '第七章': '第七章 Molang 语言', '第八章': '第八章 计分板', '第九章': '第九章 标签与数据标签NBT',
+            '第十章': '第十章 粒子技术', '第十一章': '第十一章 /execute全解'
         };
 
-        function getDisplayName(key) {
-            return displayNames[key] || key;
-        }
+        function getDisplayName(key) { return displayNames[key] || key; }
 
         // ============================================================
         // 2. 渲染卡片
@@ -248,19 +248,15 @@
                 var itemsHtml = '';
                 for (var j = 0; j < cat.items.length; j++) {
                     var key = cat.items[j];
-                    var displayName = getDisplayName(key);
-                    itemsHtml += '<li onclick="loadPage(\'' + key + '\')"><i class="fas fa-file-alt"></i> ' + displayName + '</li>';
+                    itemsHtml += '<li onclick="loadPage(\'' + key + '\')"><i class="fas fa-file-alt"></i> ' + getDisplayName(key) + '</li>';
                 }
-                html += '<div class="card">';
-                html += '<div class="card-title"><i class="fas ' + cat.icon + '"></i> ' + cat.title + '</div>';
-                html += '<ul class="card-list">' + itemsHtml + '</ul>';
-                html += '</div>';
+                html += '<div class="card"><div class="card-title"><i class="fas ' + cat.icon + '"></i> ' + cat.title + '</div><ul class="card-list">' + itemsHtml + '</ul></div>';
             }
             grid.innerHTML = html;
         }
 
         // ============================================================
-        // 3. 页面加载与切换
+        // 3. pages 对象（所有内容）
         // ============================================================
         var pages = {};
             // 所有内容页面
@@ -293,7 +289,7 @@
             pages['管理员学习手册'] = `<div class="doc-content"><h1>📖 管理员学习手册</h1>...完整内容...</div>`;
             pages['论坛'] = `<div class="doc-content"><h1>💬 论坛</h1><p style="color:var(--text-secondary);">玩家交流与反馈平台</p><div class="highlight-box"><p>论坛功能正在建设中，敬请期待。</p><p>目前可通过QQ交流群进行交流：<strong>1103227383</strong></p></div></div>`;
             // ============================================================
-        // 5. loadPage 函数（暴露到全局）
+               // 4. 页面加载函数
         // ============================================================
         function loadPage(pageId) {
             var home = document.getElementById('home-content');
@@ -305,74 +301,64 @@
             home.style.display = 'none';
             pageContent.style.display = 'block';
             pageContent.innerHTML = content;
-            // 滚动到顶部
             window.scrollTo({ top: 0, behavior: 'smooth' });
-            // 更新URL hash
             history.pushState(null, '', '#page-' + pageId);
-            // 高亮侧边栏和卡片列表
-            document.querySelectorAll('.sub-menu a, .card-list li').forEach(function(el) {
-                el.classList.remove('active');
-            });
-            document.querySelectorAll('.sub-menu a[href="#page-' + pageId + '"]').forEach(function(el) {
-                el.classList.add('active');
-            });
+            document.querySelectorAll('.sub-menu a, .card-list li').forEach(function(el) { el.classList.remove('active'); });
+            document.querySelectorAll('.sub-menu a[href="#page-' + pageId + '"]').forEach(function(el) { el.classList.add('active'); });
         }
 
         function showHome() {
-            var home = document.getElementById('home-content');
-            var pageContent = document.getElementById('page-content');
-            home.style.display = 'block';
-            pageContent.style.display = 'none';
+            document.getElementById('home-content').style.display = 'block';
+            document.getElementById('page-content').style.display = 'none';
             history.pushState(null, '', '/');
-            document.querySelectorAll('.sub-menu a, .card-list li').forEach(function(el) {
-                el.classList.remove('active');
-            });
+            document.querySelectorAll('.sub-menu a, .card-list li').forEach(function(el) { el.classList.remove('active'); });
         }
 
-        // 暴露到全局
         window.loadPage = loadPage;
         window.showHome = showHome;
 
         // ============================================================
-        // 6. 侧边栏和初始化
+        // 5. 登录功能（模态框 + localStorage）
         // ============================================================
-        function initSidebar() {
-            var toggles = document.querySelectorAll('.category-toggle');
-            for (var i = 0; i < toggles.length; i++) {
-                toggles[i].addEventListener('click', function(e) {
-                    e.stopPropagation();
-                    var parent = this.closest('.category');
-                    var sub = parent.querySelector('.sub-menu');
-                    if (sub) {
-                        sub.classList.toggle('open');
-                        this.classList.toggle('open');
-                    }
-                });
-            }
-            // 侧边栏链接点击
-            document.querySelectorAll('.sub-menu a').forEach(function(link) {
-                link.addEventListener('click', function(e) {
-                    var href = this.getAttribute('href');
-                    if (href && href.startsWith('#page-')) {
-                        e.preventDefault();
-                        var pageId = href.replace('#page-', '');
-                        loadPage(pageId);
-                    }
-                });
-            });
+        function openLoginModal(e) {
+            if (e) e.preventDefault();
+            document.getElementById('loginModal').classList.add('active');
+            document.getElementById('loginUsername').value = '';
+            document.getElementById('loginError').classList.remove('show');
+            setTimeout(function(){ document.getElementById('loginUsername').focus(); }, 100);
         }
 
-        function initRoomStatus() {
-            var banner = document.getElementById('roomBanner');
-            var display = document.getElementById('roomNumberDisplay');
-            var room = localStorage.getItem('roomNumber') || null;
-            if (room) {
-                display.textContent = room;
-                banner.classList.add('show');
-            }
+        function closeLoginModal() {
+            document.getElementById('loginModal').classList.remove('active');
         }
 
-        function initAuth() {
+        function login() {
+            var username = document.getElementById('loginUsername').value.trim();
+            var errorEl = document.getElementById('loginError');
+            if (!username) {
+                errorEl.textContent = '请输入用户名';
+                errorEl.classList.add('show');
+                return;
+            }
+            if (username.length < 2) {
+                errorEl.textContent = '用户名至少2个字符';
+                errorEl.classList.add('show');
+                return;
+            }
+            localStorage.setItem('token', 'mock-token');
+            localStorage.setItem('username', username);
+            closeLoginModal();
+            updateAuthUI();
+        }
+
+        function logout(e) {
+            if (e) e.preventDefault();
+            localStorage.removeItem('token');
+            localStorage.removeItem('username');
+            updateAuthUI();
+        }
+
+        function updateAuthUI() {
             var token = localStorage.getItem('token');
             var username = localStorage.getItem('username');
             var loginBtn = document.getElementById('loginBtn');
@@ -389,41 +375,66 @@
                 logoutBtn.style.display = 'none';
                 userDisplay.style.display = 'none';
             }
-            logoutBtn.addEventListener('click', function(e) {
-                e.preventDefault();
-                localStorage.removeItem('token');
-                localStorage.removeItem('username');
-                window.location.reload();
+        }
+
+        // Enter键触发登录
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('loginUsername').addEventListener('keydown', function(e) {
+                if (e.key === 'Enter') login();
             });
-            loginBtn.addEventListener('click', function(e) {
-                e.preventDefault();
-                var name = prompt('输入你的用户名（中国版账号）：');
-                if (name && name.trim()) {
-                    localStorage.setItem('token', 'mock-token');
-                    localStorage.setItem('username', name.trim());
-                    window.location.reload();
-                }
+            document.getElementById('loginModal').addEventListener('click', function(e) {
+                if (e.target === this) closeLoginModal();
             });
+        });
+
+        // ============================================================
+        // 6. 侧边栏和初始化
+        // ============================================================
+        function initSidebar() {
+            document.querySelectorAll('.category-toggle').forEach(function(toggle) {
+                toggle.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    var parent = this.closest('.category');
+                    var sub = parent.querySelector('.sub-menu');
+                    if (sub) {
+                        sub.classList.toggle('open');
+                        this.classList.toggle('open');
+                    }
+                });
+            });
+            document.querySelectorAll('.sub-menu a').forEach(function(link) {
+                link.addEventListener('click', function(e) {
+                    var href = this.getAttribute('href');
+                    if (href && href.startsWith('#page-')) {
+                        e.preventDefault();
+                        loadPage(href.replace('#page-', ''));
+                    }
+                });
+            });
+        }
+
+        function initRoomStatus() {
+            var room = localStorage.getItem('roomNumber') || null;
+            if (room) {
+                document.getElementById('roomNumberDisplay').textContent = room;
+                document.getElementById('roomBanner').classList.add('show');
+            }
         }
 
         function initHash() {
             var hash = window.location.hash;
             if (hash && hash.startsWith('#page-')) {
-                var pageId = hash.replace('#page-', '');
-                loadPage(pageId);
+                loadPage(hash.replace('#page-', ''));
             }
         }
 
-        // ============================================================
-        // 7. DOM加载完成后初始化
-        // ============================================================
         document.addEventListener('DOMContentLoaded', function() {
             document.body.classList.add('loaded');
             renderCards();
             initSidebar();
             initRoomStatus();
-            initAuth();
             initHash();
+            updateAuthUI();
         });
     </script>
 </body>
