@@ -44,8 +44,17 @@
 
         /* ===== 主体布局 ===== */
         .main-wrapper{display:flex;flex:1;max-width:1440px;margin:0 auto;width:100%;padding:0 1rem;gap:1.5rem;align-items:flex-start}
-        .sidebar{width:260px;flex-shrink:0;background:rgba(14,14,34,0.7);backdrop-filter:blur(8px);border-radius:var(--radius);border:1px solid var(--border-color);padding:1.5rem 0.8rem;margin-top:1.5rem;height:fit-content;max-height:calc(100vh - 100px);overflow-y:auto;position:sticky;top:80px;transition:all var(--transition);align-self:flex-start}
-        .sidebar::-webkit-scrollbar{width:3px}
+        .sidebar{width:260px;flex-shrink:0;background:rgba(14,14,34,0.7);backdrop-filter:blur(8px);border-radius:var(--radius);border:1px solid var(--border-color);padding:1.2rem 0.6rem;margin-top:1.5rem;height:fit-content;max-height:calc(100vh - 100px);overflow-y:auto;position:sticky;top:80px;transition:all var(--transition);align-self:flex-start}
+
+        /* ===== 侧边栏滚动条优化 - 不超出边框 ===== */
+        .sidebar::-webkit-scrollbar{width:4px}
+        .sidebar::-webkit-scrollbar-track{background:transparent;margin:0.5rem 0;border-radius:4px}
+        .sidebar::-webkit-scrollbar-thumb{background:var(--border-color);border-radius:4px;transition:background var(--smooth)}
+        .sidebar::-webkit-scrollbar-thumb:hover{background:var(--accent)}
+        /* Firefox 滚动条 */
+        .sidebar{scrollbar-width:thin;scrollbar-color:var(--border-color) transparent}
+        .sidebar:hover{scrollbar-color:var(--accent) transparent}
+
         .sidebar-nav ul{list-style:none;padding:0}
 
         /* ===== 侧边栏分类 - 丝滑非线性动画 ===== */
@@ -105,7 +114,7 @@
         .card-list li:hover i{color:var(--accent);transform:scale(1.1)}
         .card-list li.active{color:var(--accent);background:rgba(76,175,80,0.08)}
 
-        /* ===== 文档内容样式（从独立文件加载） ===== */
+        /* ===== 文档内容样式 ===== */
         .doc-content{max-width:900px;margin:0 auto;padding:0 0.5rem;animation:fadeUp 0.5s ease forwards}
         .doc-content h1{font-size:clamp(1.6rem, 3vw, 2.4rem);border-left:4px solid var(--accent);padding-left:1rem;margin-bottom:1.5rem}
         .doc-content h2{font-size:clamp(1.2rem, 1.8vw, 1.6rem);margin-top:2.5rem;padding-bottom:0.3rem;border-bottom:2px solid var(--border-color);color:var(--text-primary)}
@@ -192,6 +201,7 @@
                     <li class="category">
                         <span class="category-toggle"><i class="fas fa-book"></i> 制度汇编</span>
                         <ul class="sub-menu">
+                            <li><a href="#page-服务器纲领">服务器纲领</a></li>
                             <li><a href="#page-玩家权限体制">玩家权限体制</a></li>
                             <li><a href="#page-玩家行政权限体制">玩家行政权限体制</a></li>
                             <li><a href="#page-监督委员会制度">监督委员会制度</a></li>
@@ -284,7 +294,7 @@
     // 1. 卡片数据
     // ============================================================
     var cardData = [
-        { title: '制度汇编', icon: 'fa-book', items: ['玩家权限体制', '玩家行政权限体制', '监督委员会制度', '创造者协会章程'] },
+        { title: '制度汇编', icon: 'fa-book', items: ['服务器纲领', '玩家权限体制', '玩家行政权限体制', '监督委员会制度', '创造者协会章程'] },
         { title: '服主令', icon: 'fa-gavel', items: ['2026第1号', '2026第2号', '2026第3号', '2026第4号', '2026第5号', '2026第6号'] },
         { title: '人物志', icon: 'fa-user', items: ['弘桀孤影行', '出击的阴笑徐铮'] },
         { title: '技术文档', icon: 'fa-code', items: ['MCC目录', '盔甲架指南', '认识基岩版', '第一章', '第二章', '第三章', '第四章', '第五章', '第六章', '第七章', '第八章', '第九章', '第十章', '第十一章'] },
@@ -326,18 +336,23 @@
     // 3. 页面路径映射表（按需加载）
     // ============================================================
     var pagePathMap = {
+        // 制度汇编
+        '服务器纲领': '/pages/制度汇编/服务器纲领.html',
         '玩家权限体制': '/pages/制度汇编/玩家权限体制.html',
         '玩家行政权限体制': '/pages/制度汇编/玩家行政权限体制.html',
         '监督委员会制度': '/pages/制度汇编/监督委员会制度.html',
         '创造者协会章程': '/pages/制度汇编/创造者协会章程.html',
+        // 服主令
         '2026第1号': '/pages/服主令/2026-1号.html',
         '2026第2号': '/pages/服主令/2026-2号.html',
         '2026第3号': '/pages/服主令/2026-3号.html',
         '2026第4号': '/pages/服主令/2026-4号.html',
         '2026第5号': '/pages/服主令/2026-5号.html',
         '2026第6号': '/pages/服主令/2026-6号.html',
+        // 人物志
         '弘桀孤影行': '/pages/人物志/弘桀孤影行.html',
         '出击的阴笑徐铮': '/pages/人物志/出击的阴笑徐铮.html',
+        // 技术文档
         'MCC目录': '/pages/技术文档/MCC/目录.html',
         '盔甲架指南': '/pages/技术文档/盔甲架指南.html',
         '认识基岩版': '/pages/技术文档/认识基岩版.html',
@@ -352,13 +367,15 @@
         '第九章': '/pages/技术文档/第九章.html',
         '第十章': '/pages/技术文档/第十章.html',
         '第十一章': '/pages/技术文档/第十一章.html',
+        // 玩家文档
         '玩家游玩建议': '/pages/玩家文档/游玩建议.html',
         '管理员学习手册': '/pages/玩家文档/管理员手册.html',
+        // 论坛
         '论坛': '/pages/论坛/index.html'
     };
 
     // ============================================================
-    // 4. 页面加载函数（fetch 按需加载）
+    // 4. 页面加载函数
     // ============================================================
     function loadPage(pageId) {
         pageId = decodeURIComponent(pageId);
