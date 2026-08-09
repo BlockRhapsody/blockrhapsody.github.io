@@ -345,6 +345,9 @@
         // 4. 页面加载函数（fetch 按需加载 + sessionStorage 缓存）
         // ============================================================
         function loadPage(pageId) {
+            // 关键修复：解码 URL 编码的 pageId
+            pageId = decodeURIComponent(pageId);
+
             var home = document.getElementById('home-content');
             var pageContent = document.getElementById('page-content');
             var path = pagePathMap[pageId];
@@ -365,7 +368,10 @@
                 pageContent.style.display = 'block';
                 pageContent.innerHTML = cached;
                 window.scrollTo({ top: 0, behavior: 'smooth' });
-                history.pushState(null, '', '#page-' + pageId);
+                // 修复：更新 URL 哈希为解码后的中文
+                if (window.location.hash !== '#page-' + pageId) {
+                    history.pushState(null, '', '#page-' + pageId);
+                }
                 updateActiveState(pageId);
                 return;
             }
@@ -384,7 +390,10 @@
                     sessionStorage.setItem(cacheKey, html);
                     pageContent.innerHTML = html;
                     window.scrollTo({ top: 0, behavior: 'smooth' });
-                    history.pushState(null, '', '#page-' + pageId);
+                    // 修复：更新 URL 哈希为解码后的中文
+                    if (window.location.hash !== '#page-' + pageId) {
+                        history.pushState(null, '', '#page-' + pageId);
+                    }
                     updateActiveState(pageId);
                 })
                 .catch(function() {
@@ -499,6 +508,7 @@
                     var href = this.getAttribute('href');
                     if (href && href.startsWith('#page-')) {
                         e.preventDefault();
+                        // 关键修复：直接传递原始中文（href 中就是中文）
                         loadPage(href.replace('#page-', ''));
                     }
                 });
@@ -516,7 +526,9 @@
         function initHash() {
             var hash = window.location.hash;
             if (hash && hash.startsWith('#page-')) {
-                loadPage(hash.replace('#page-', ''));
+                // 关键修复：解码 URL 编码的页面标题，再传给 loadPage
+                var pageId = decodeURIComponent(hash.replace('#page-', ''));
+                loadPage(pageId);
             }
         }
 
