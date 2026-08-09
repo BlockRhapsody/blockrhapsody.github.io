@@ -230,6 +230,7 @@
                 <h1>欢迎来到方块狂想曲 Wiki</h1>
                 <p class="subtitle">服务器制度 · 技术文档 · 玩家指南</p>
                 <div class="card-grid" id="cardGrid"></div>
+                <!-- 关键修复：删除了这里多余的 <footer> 标签 -->
             </section>
             <div id="page-content" class="hidden"></div>
         </main>
@@ -355,7 +356,7 @@
         // 1. 隐藏首页
         home.style.display = 'none';
 
-        // 2. 关键修复：先彻底清空页面容器，再显示
+        // 2. 先彻底清空页面容器，再显示
         pageContent.innerHTML = '';
         pageContent.style.display = 'block';
 
@@ -382,7 +383,7 @@
             return;
         }
 
-        // 5. 显示加载中（此时容器已被清空，直接覆盖）
+        // 5. 显示加载中
         pageContent.innerHTML = '<div class="doc-content"><p style="color:var(--text-muted);text-align:center;padding:3rem 0;"><i class="fas fa-spinner fa-spin"></i> 加载中...</p></div>';
 
         // 6. fetch 加载
