@@ -1,0 +1,444 @@
+<div class="doc-content">
+    <h1>📖 MCC 学习新编</h1>
+    <p style="color:var(--text-secondary);">Minecraft Command 学习新编 · 方块狂想曲服务器内部教材</p>
+    <p style="color:var(--text-muted);font-size:0.9rem;">编著：服主弘桀孤影行</p>
+
+    <h2>前言</h2>
+    <h3>立书目的</h3>
+    <p>Minecraft 的魅力，既在于它赋予玩家创造世界的自由，更在于它为这种自由所提供的技术深度。指令系统（Command System）正是这一深度的集中体现——它让玩家从“用手搭建”走向“用逻辑创造”，从对游戏世界的被动适应走向主动定义。</p>
+    <p>方块狂想曲服务器自创立以来，始终将指令生态建设作为提升玩家体验、丰富玩法层次的重要支撑。在实际运营中我们发现，许多玩家对指令的理解长期停留在复制粘贴网传指令的层面，缺乏对指令语法、执行逻辑、权限体系以及命令方块应用原理的系统认知。一方面，这限制了玩家自身在服务器中实现想法的能力；另一方面，也加大了服务器在指令维护、事件监听和功能拓展上的沟通成本。</p>
+    <p>编撰本书的目的，即在填补这一空白。</p>
+    <p>我们希望在服务器内部建立一套从入门到进阶的指令学习体系。本书将涵盖目标选择器、基础指令语法、命令方块应用、计分板与数据标签、高级指令组合设计等核心内容，力求做到：概念清晰、示例充分、循序渐进、即学即用。</p>
+    <p>更为重要的是，本书不仅服务于个体玩家的学习需求，更是服务器指令建设走向规范化、体系化的一项基础工程。我们期待通过本书，在方块狂想曲服务器内形成一种“懂指令、会用指令、能写指令”的技术氛围，为服务器的长期发展储备技术力量。</p>
+    <p>是为立书目的。</p>
+
+    <div style="border-top:1px solid var(--border-color);margin:2rem 0;padding-top:1rem;">
+        <p style="color:var(--text-muted);font-size:0.85rem;">本书内容可以结合我的世界中文wiki学习，二者冲突之处，以本书为准。</p>
+        <ul style="color:var(--text-muted);font-size:0.85rem;list-style:none;padding-left:0;">
+            <li>📖 我的世界中文wiki——<a href="https://zh.minecraft.wiki" target="_blank">https://zh.minecraft.wiki</a></li>
+            <li>📖 MineBBS论坛——<a href="https://www.minebbs.com" target="_blank">https://www.minebbs.com</a></li>
+            <li>📖 MC百科——<a href="https://www.mcmod.cn" target="_blank">https://www.mcmod.cn</a></li>
+            <li>📖 苦力怕论坛——<a href="https://klpbbs.com" target="_blank">https://klpbbs.com</a></li>
+            <li>💬 我的世界QQ方块狂想曲交流群——1103227383</li>
+        </ul>
+    </div>
+
+    <h2>上篇 基础篇</h2>
+
+    <h3>认识基岩版</h3>
+    <ul>
+        <li>什么是基岩版</li>
+        <li>基岩版与Java版指令的主要差异</li>
+    </ul>
+
+    <h3 id="第一章">第一章 指令的基本概念</h3>
+    <ul>
+        <li><strong>1.1 什么是指令</strong></li>
+        <li><strong>1.2 指令的输入方式</strong>
+            <ul>
+                <li>聊天栏输入</li>
+                <li>命令方块输入</li>
+                <li>控制台输入</li>
+                <li>函数文件输入</li>
+                <li>魔法指令输入</li>
+            </ul>
+        </li>
+        <li><strong>1.3 Java版与基岩版的指令差异</strong>
+            <ul>
+                <li>指令名称的差异</li>
+                <li>参数格式的差异</li>
+                <li>NBT与组件的差异</li>
+                <li>目标选择器的差异</li>
+                <li>部分指令的基岩版独有特性</li>
+            </ul>
+        </li>
+        <li><strong>1.4 指令的执行限制条件</strong>
+            <ul>
+                <li>指令权限要求</li>
+                <li>命令方块的执行环境</li>
+                <li>执行者的身份对执行结果的影响</li>
+                <li>指令本身正确、没有语法错误</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h3 id="第二章">第二章 权限等级</h3>
+    <ul>
+        <li><strong>2.1 基岩版权限等级概述</strong>
+            <ul>
+                <li>0级：Normal</li>
+                <li>1级：Operator</li>
+                <li>2级：Host</li>
+                <li>3级：Automation</li>
+                <li>4级：Owner</li>
+            </ul>
+        </li>
+        <li><strong>2.2 不同场景下的权限等级</strong>
+            <ul>
+                <li>服务器控制台</li>
+                <li>函数文件</li>
+                <li>哪些指令必须1级以上</li>
+                <li>哪些指令仅限于2级到4级</li>
+            </ul>
+        </li>
+        <li><strong>2.3 玩家权限</strong>
+            <ul>
+                <li>访客</li>
+                <li>成员</li>
+                <li>管理员</li>
+                <li>自定义</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h3 id="第三章">第三章 指令的构成、解析与执行</h3>
+    <ul>
+        <li><strong>3.1 指令的语法结构</strong>
+            <ul>
+                <li>指令名</li>
+                <li>参数</li>
+                <li>可选项与必选项的标识</li>
+                <li>空格分隔规则</li>
+            </ul>
+        </li>
+        <li><strong>3.2 指令的解析过程</strong>
+            <ul>
+                <li>客户端解析</li>
+                <li>服务端解析</li>
+                <li>常见解析错误及原因</li>
+            </ul>
+        </li>
+        <li><strong>3.3 指令的执行流程</strong>
+            <ul>
+                <li>执行结果的反馈</li>
+                <li>指令的成功次数在链式命令中的用途</li>
+            </ul>
+        </li>
+        <li><strong>3.4 指令的调试方法</strong>
+            <ul>
+                <li>如何通过报错信息定位问题</li>
+                <li>分步测试的技巧</li>
+            </ul>
+        </li>
+        <li><strong>3.5 指令术语</strong></li>
+    </ul>
+
+    <h3 id="第四章">第四章 命令方块</h3>
+    <ul>
+        <li><strong>4.1 命令方块的基本概念与类型</strong>
+            <ul>
+                <li>脉冲命令方块</li>
+                <li>循环命令方块</li>
+                <li>连锁命令方块</li>
+            </ul>
+        </li>
+        <li><strong>4.2 命令方块的设置与界面</strong>
+            <ul>
+                <li>命令的输入与编辑</li>
+                <li>方块朝向与执行方向</li>
+                <li>保持开启/红石控制</li>
+                <li>无条件/有条件</li>
+                <li>延迟刻设置</li>
+            </ul>
+        </li>
+        <li><strong>4.3 命令方块的连接与链式执行</strong>
+            <ul>
+                <li>简单串联与条件链</li>
+                <li>循环命令方块的退出条件</li>
+                <li>常用设计模式</li>
+            </ul>
+        </li>
+        <li><strong>4.4 命令方块的调试与维护</strong>
+            <ul>
+                <li>使用有条件连锁命令方块观测命令方块的执行状态</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h3 id="第五章">第五章 目标选择器</h3>
+    <ul>
+        <li><strong>5.1 目标选择器的作用</strong></li>
+        <li><strong>5.2 基础目标选择器</strong>
+            <ul>
+                <li>@p（最近玩家）</li>
+                <li>@r（随机玩家）</li>
+                <li>@a（所有玩家）</li>
+                <li>@e（所有实体）</li>
+                <li>@s（命令的执行者）</li>
+                <li>@n（最近的一个实体）</li>
+                <li>@initiator（当前与NPC交互的玩家）</li>
+            </ul>
+        </li>
+        <li><strong>5.3 目标选择参数</strong>
+            <ul>
+                <li>坐标与距离参数：x、y、z、dx、dy、dz、r、rm</li>
+                <li>计分板、标签参数：scores、tag</li>
+                <li>实体类型参数：name、type、family</li>
+                <li>实体数据参数：rx、rxm、ry、rym、hasitem、has_property、l、lm、haspermission</li>
+                <li>数量参数：c</li>
+            </ul>
+        </li>
+        <li><strong>5.4 目标选择器在实际指令中的应用</strong>
+            <ul>
+                <li>常用组合示例</li>
+                <li>性能考量：哪些选择器开销较大</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h2>中篇 语法与技术</h2>
+
+    <h3 id="第六章">第六章 JSON 文本</h3>
+    <ul>
+        <li><strong>6.1 JSON在Minecraft中的用途</strong>
+            <ul>
+                <li>用于命令中的文本显示</li>
+                <li>用于附加包的数据驱动配置</li>
+            </ul>
+        </li>
+        <li><strong>6.2 基岩版JSON文本的基础语法</strong>
+            <ul>
+                <li>rawtext结构</li>
+                <li>text</li>
+                <li>translate与with</li>
+                <li>selector</li>
+                <li>scores</li>
+            </ul>
+        </li>
+        <li><strong>6.3 关于格式控制的说明</strong></li>
+        <li><strong>6.4 常见JSON文本应用示例</strong></li>
+    </ul>
+
+    <h3 id="第七章">第七章 Molang 语言</h3>
+    <ul>
+        <li><strong>7.1 Molang是什么</strong>
+            <ul>
+                <li>Molang的定义与定位</li>
+                <li>在基岩版指令与附加开发生态中的角色</li>
+            </ul>
+        </li>
+        <li><strong>7.2 Molang的语法基础</strong>
+            <ul>
+                <li>变量与查询函数</li>
+                <li>算术运算与逻辑运算</li>
+                <li>条件表达式</li>
+            </ul>
+        </li>
+        <li><strong>7.3 常用Molang查询函数</strong>
+            <ul>
+                <li>实体状态类</li>
+                <li>生命与战斗类</li>
+                <li>物品栏类</li>
+                <li>移动与位置类</li>
+                <li>动画与时间类</li>
+                <li>计分板相关</li>
+            </ul>
+        </li>
+        <li><strong>7.4 Molang在指令和组件中的应用场景</strong>
+            <ul>
+                <li>在item组件中动态计算数值</li>
+                <li>在实体事件中作为条件判断</li>
+                <li>在/playanimation指令中控制动画停止</li>
+            </ul>
+        </li>
+        <li><strong>7.5 本章结语</strong></li>
+    </ul>
+
+    <h3 id="第八章">第八章 计分板</h3>
+    <ul>
+        <li><strong>8.1 计分板的概念</strong></li>
+        <li><strong>8.2 计分板的创建与删除</strong>
+            <ul>
+                <li>/scoreboard objectives &lt;操作类型&gt;</li>
+            </ul>
+        </li>
+        <li><strong>8.3 计分板的玩家数据操作</strong>
+            <ul>
+                <li>/scoreboard players &lt;操作类型&gt;</li>
+            </ul>
+        </li>
+        <li><strong>8.4 计分板的显示方式</strong>
+            <ul>
+                <li>侧边栏显示</li>
+                <li>名称下方显示</li>
+                <li>List列表显示</li>
+            </ul>
+        </li>
+        <li><strong>8.5 计分板的条件检测</strong>
+            <ul>
+                <li>使用scores参数在目标选择器中检测分数</li>
+                <li>配合命令方块实现条件触发</li>
+            </ul>
+        </li>
+        <li><strong>8.6 计分板在方块狂想曲服务器中的应用</strong>
+            <ul>
+                <li>在线时长记录</li>
+                <li>方块币系统</li>
+                <li>击杀榜</li>
+                <li>权限晋升的判定依据</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h3 id="第九章">第九章 标签与数据标签NBT</h3>
+    <ul>
+        <li><strong>9.1 标签（Tag）</strong>
+            <ul>
+                <li>标签的作用</li>
+                <li>/tag指令的用法</li>
+                <li>在目标选择器中使用tag参数</li>
+            </ul>
+        </li>
+        <li><strong>9.2 基岩版NBT</strong>
+            <ul>
+                <li>NBT的基本结构</li>
+                <li>常见NBT应用</li>
+                <li>在指令中使用NBT</li>
+            </ul>
+        </li>
+        <li><strong>9.3 基岩版组件系统</strong>
+            <ul>
+                <li>基岩版与Java版NBT的差异</li>
+                <li>常用组件</li>
+                <li>在指令中使用组件</li>
+            </ul>
+        </li>
+        <li><strong>9.4 实体数据与方块数据的读取与修改</strong></li>
+    </ul>
+
+    <h3 id="第十章">第十章 粒子技术</h3>
+    <ul>
+        <li><strong>10.1 什么是粒子</strong>
+            <ul>
+                <li>调用已有粒子</li>
+                <li>创造自定义粒子</li>
+            </ul>
+        </li>
+        <li><strong>10.2 /particle指令基础语法</strong></li>
+        <li><strong>10.3 基岩版常用粒子ID速查</strong></li>
+        <li><strong>10.4 使用/execute的更多玩法</strong>
+            <ul>
+                <li>将粒子绑定到实体</li>
+                <li>使用/tp实现更复杂的粒子效果</li>
+                <li>粒子效果在服务器中的应用场景</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h3 id="第十一章">第十一章 /execute全解</h3>
+    <ul>
+        <li><strong>11.1 什么是/execute</strong>
+            <ul>
+                <li>地位与重要性</li>
+                <li>执行上下文的概念</li>
+            </ul>
+        </li>
+        <li><strong>11.2 子命令详解</strong>
+            <ul>
+                <li>修饰子命令</li>
+                <li>条件子命令</li>
+                <li>run子命令</li>
+            </ul>
+        </li>
+        <li><strong>11.3 执行分支机制</strong>
+            <ul>
+                <li>分叉的原理</li>
+                <li>基岩版与Java版差异</li>
+                <li>执行中断条件</li>
+            </ul>
+        </li>
+        <li><strong>11.4 从旧格式到新格式的迁移</strong>
+            <ul>
+                <li>转换规则与示例</li>
+            </ul>
+        </li>
+        <li><strong>11.5 实战案例</strong>
+            <ul>
+                <li>execute嵌套</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h2>下篇 综合设计与实战</h2>
+
+    <h3 id="第十二章">第十二章 指令组合设计</h3>
+    <ul>
+        <li><strong>12.1 时序控制</strong>
+            <ul>
+                <li>延迟执行</li>
+                <li>循环控制</li>
+                <li>条件分支</li>
+            </ul>
+        </li>
+        <li><strong>12.2 多人交互指令设计</strong>
+            <ul>
+                <li>玩家互传</li>
+                <li>商店系统</li>
+                <li>雪球菜单</li>
+            </ul>
+        </li>
+        <li><strong>12.3 事件监听的设计模式</strong>
+            <ul>
+                <li>利用循环命令方块检测特定条件</li>
+                <li>利用计分板触发事件</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h3 id="第十三章">第十三章 指令性能与安全</h3>
+    <ul>
+        <li><strong>13.1 性能优化原则</strong>
+            <ul>
+                <li>减少高频执行的检测</li>
+                <li>合并同类指令</li>
+                <li>合理设置执行频率</li>
+            </ul>
+        </li>
+        <li><strong>13.2 指令安全</strong>
+            <ul>
+                <li>目标选择器滥用的风险</li>
+                <li>命令方块毁档的防范</li>
+                <li>权限分级管理</li>
+            </ul>
+        </li>
+        <li><strong>13.3 方块狂想曲服务器的指令维护规范</strong></li>
+    </ul>
+
+    <h3 id="第十四章">第十四章 实战案例集</h3>
+    <ul>
+        <li><strong>14.1 方块狂想曲服务器指令系统全景</strong>
+            <ul>
+                <li>权限晋升系统</li>
+                <li>方块币经济系统</li>
+                <li>玩家互传与传唤管理员</li>
+            </ul>
+        </li>
+        <li><strong>14.2 典型功能实现</strong>
+            <ul>
+                <li>扫地机</li>
+                <li>定时公告</li>
+                <li>玩家加入欢迎系统</li>
+            </ul>
+        </li>
+        <li><strong>14.3 综合案例：设计一套完整的多人副本指令流程</strong></li>
+    </ul>
+
+    <h2>附录</h2>
+    <ul>
+        <li><strong>附录一</strong> 基岩版指令速查表</li>
+        <li><strong>附录二</strong> 目标选择器参数速查表</li>
+        <li><strong>附录三</strong> 常见错误代码及解决方法</li>
+        <li><strong>附录四</strong> 动画ID速查表</li>
+        <li><strong>附录五</strong> Java版与基岩版指令对照表</li>
+    </ul>
+
+    <div class="footnote">
+        <p>方块狂想曲服务器 · 服主弘桀孤影行 谨识</p>
+        <p style="margin-top:0.3rem;">本书内容可以结合我的世界中文wiki学习，二者冲突之处，以本书为准。</p>
+        <p style="margin-top:0.3rem;">我的世界中文wiki——<a href="https://zh.minecraft.wiki" target="_blank">https://zh.minecraft.wiki</a></p>
+        <p style="margin-top:0.3rem;">MineBBS论坛——<a href="https://www.minebbs.com" target="_blank">https://www.minebbs.com</a></p>
+        <p style="margin-top:0.3rem;">MC百科——<a href="https://www.mcmod.cn" target="_blank">https://www.mcmod.cn</a></p>
+        <p style="margin-top:0.3rem;">苦力怕论坛——<a href="https://klpbbs.com" target="_blank">https://klpbbs.com</a></p>
+        <p style="margin-top:0.3rem;">我的世界QQ方块狂想曲交流群——1103227383</p>
+    </div>
+</div>
