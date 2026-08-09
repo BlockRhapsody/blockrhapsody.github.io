@@ -563,7 +563,8 @@
     }
 
     // ============================================================
-    // 6. 页面加载函数
+    // ============================================================
+    // 5. 页面加载函数
     // ============================================================
     function loadPage(pageId) {
         var anchor = '';
@@ -595,6 +596,7 @@
 
         var cacheKey = 'page_' + pageId;
 
+        // 检查缓存是否有效
         if (isCacheValid(cacheKey)) {
             var cached = sessionStorage.getItem(cacheKey);
             pageContent.innerHTML = cached;
@@ -603,10 +605,20 @@
                 history.pushState(null, '', '#page-' + pageId);
             }
             updateActiveState(pageId);
+
+            // ===== 论坛页面：加载 Giscus =====
+            if (pageId === '论坛') {
+                setTimeout(function() {
+                    loadGiscus();
+                }, 300);
+            }
+
             if (anchor) {
                 setTimeout(function() {
                     var target = document.getElementById(anchor);
-                    if (target) target.scrollIntoView({ behavior: 'smooth' });
+                    if (target) {
+                        target.scrollIntoView({ behavior: 'smooth' });
+                    }
                 }, 150);
             }
             return;
@@ -631,10 +643,20 @@
                     history.pushState(null, '', '#page-' + pageId);
                 }
                 updateActiveState(pageId);
+
+                // ===== 论坛页面：加载 Giscus =====
+                if (pageId === '论坛') {
+                    setTimeout(function() {
+                        loadGiscus();
+                    }, 300);
+                }
+
                 if (anchor) {
                     setTimeout(function() {
                         var target = document.getElementById(anchor);
-                        if (target) target.scrollIntoView({ behavior: 'smooth' });
+                        if (target) {
+                            target.scrollIntoView({ behavior: 'smooth' });
+                        }
                     }, 150);
                 }
             })
@@ -643,6 +665,43 @@
             });
     }
 
+    // ============================================================
+    // 6. 加载 Giscus（论坛评论系统） ← 新增
+    // ============================================================
+    function loadGiscus() {
+        if (document.querySelector('.giscus iframe')) {
+            console.log('Giscus 已加载');
+            return;
+        }
+
+        var container = document.querySelector('.giscus');
+        if (!container) {
+            console.warn('Giscus 容器不存在');
+            return;
+        }
+
+        container.innerHTML = '';
+
+        var script = document.createElement('script');
+        script.src = 'https://giscus.app/client.js';
+        script.dataset.repo = 'BlockRhapsody/blockrhapsody.github.io';
+        script.dataset.repoId = 'R_kgDOTVXjKQ';
+        script.dataset.category = 'General';
+        script.dataset.categoryId = '51115557';
+        script.dataset.mapping = 'number';
+        script.dataset.term = '1';
+        script.dataset.strict = '0';
+        script.dataset.reactionsEnabled = '1';
+        script.dataset.emitMetadata = '0';
+        script.dataset.inputPosition = 'bottom';
+        script.dataset.theme = 'preferred_color_scheme';
+        script.dataset.lang = 'zh-CN';
+        script.crossOrigin = 'anonymous';
+        script.async = true;
+
+        container.parentNode.insertBefore(script, container.nextSibling);
+        console.log('Giscus 已加载');
+    }
     // ============================================================
     // 7. 清除缓存并刷新
     // ============================================================
