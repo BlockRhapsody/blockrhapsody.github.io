@@ -258,297 +258,302 @@
     </div>
 
     <script>
-        // ============================================================
-        // 1. 卡片数据
-        // ============================================================
-        var cardData = [
-            { title: '制度汇编', icon: 'fa-book', items: ['玩家权限体制', '玩家行政权限体制', '监督委员会制度', '创造者协会章程'] },
-            { title: '服主令', icon: 'fa-gavel', items: ['2026第1号', '2026第2号', '2026第3号', '2026第4号', '2026第5号', '2026第6号'] },
-            { title: '人物志', icon: 'fa-user', items: ['弘桀孤影行', '出击的阴笑徐铮'] },
-            { title: '技术文档', icon: 'fa-code', items: ['MCC目录', '盔甲架指南', '认识基岩版', '第一章', '第二章', '第三章', '第四章', '第五章', '第六章', '第七章', '第八章', '第九章', '第十章', '第十一章'] },
-            { title: '玩家文档', icon: 'fa-users', items: ['玩家游玩建议', '管理员学习手册'] },
-            { title: '论坛', icon: 'fa-comments', items: ['论坛'] }
-        ];
+    // ============================================================
+    // 1. 卡片数据
+    // ============================================================
+    var cardData = [
+        { title: '制度汇编', icon: 'fa-book', items: ['玩家权限体制', '玩家行政权限体制', '监督委员会制度', '创造者协会章程'] },
+        { title: '服主令', icon: 'fa-gavel', items: ['2026第1号', '2026第2号', '2026第3号', '2026第4号', '2026第5号', '2026第6号'] },
+        { title: '人物志', icon: 'fa-user', items: ['弘桀孤影行', '出击的阴笑徐铮'] },
+        { title: '技术文档', icon: 'fa-code', items: ['MCC目录', '盔甲架指南', '认识基岩版', '第一章', '第二章', '第三章', '第四章', '第五章', '第六章', '第七章', '第八章', '第九章', '第十章', '第十一章'] },
+        { title: '玩家文档', icon: 'fa-users', items: ['玩家游玩建议', '管理员学习手册'] },
+        { title: '论坛', icon: 'fa-comments', items: ['论坛'] }
+    ];
 
-        var displayNames = {
-            '2026第1号': '2026 第1号', '2026第2号': '2026 第2号', '2026第3号': '2026 第3号',
-            '2026第4号': '2026 第4号', '2026第5号': '2026 第5号', '2026第6号': '2026 第6号',
-            'MCC目录': 'MCC 学习新编',
-            '第一章': '第一章 指令的基本概念', '第二章': '第二章 权限等级', '第三章': '第三章 指令的构成、解析与执行',
-            '第四章': '第四章 命令方块', '第五章': '第五章 目标选择器', '第六章': '第六章 JSON 文本',
-            '第七章': '第七章 Molang 语言', '第八章': '第八章 计分板', '第九章': '第九章 标签与数据标签NBT',
-            '第十章': '第十章 粒子技术', '第十一章': '第十一章 /execute全解'
-        };
+    var displayNames = {
+        '2026第1号': '2026 第1号', '2026第2号': '2026 第2号', '2026第3号': '2026 第3号',
+        '2026第4号': '2026 第4号', '2026第5号': '2026 第5号', '2026第6号': '2026 第6号',
+        'MCC目录': 'MCC 学习新编',
+        '第一章': '第一章 指令的基本概念', '第二章': '第二章 权限等级', '第三章': '第三章 指令的构成、解析与执行',
+        '第四章': '第四章 命令方块', '第五章': '第五章 目标选择器', '第六章': '第六章 JSON 文本',
+        '第七章': '第七章 Molang 语言', '第八章': '第八章 计分板', '第九章': '第九章 标签与数据标签NBT',
+        '第十章': '第十章 粒子技术', '第十一章': '第十一章 /execute全解'
+    };
 
-        function getDisplayName(key) { return displayNames[key] || key; }
+    function getDisplayName(key) { return displayNames[key] || key; }
 
-        // ============================================================
-        // 2. 渲染卡片
-        // ============================================================
-        function renderCards() {
-            var grid = document.getElementById('cardGrid');
-            var html = '';
-            for (var i = 0; i < cardData.length; i++) {
-                var cat = cardData[i];
-                var itemsHtml = '';
-                for (var j = 0; j < cat.items.length; j++) {
-                    var key = cat.items[j];
-                    itemsHtml += '<li onclick="loadPage(\'' + key + '\')"><i class="fas fa-file-alt"></i> ' + getDisplayName(key) + '</li>';
-                }
-                html += '<div class="card"><div class="card-title"><i class="fas ' + cat.icon + '"></i> ' + cat.title + '</div><ul class="card-list">' + itemsHtml + '</ul></div>';
+    // ============================================================
+    // 2. 渲染卡片
+    // ============================================================
+    function renderCards() {
+        var grid = document.getElementById('cardGrid');
+        var html = '';
+        for (var i = 0; i < cardData.length; i++) {
+            var cat = cardData[i];
+            var itemsHtml = '';
+            for (var j = 0; j < cat.items.length; j++) {
+                var key = cat.items[j];
+                itemsHtml += '<li onclick="loadPage(\'' + key + '\')"><i class="fas fa-file-alt"></i> ' + getDisplayName(key) + '</li>';
             }
-            grid.innerHTML = html;
+            html += '<div class="card"><div class="card-title"><i class="fas ' + cat.icon + '"></i> ' + cat.title + '</div><ul class="card-list">' + itemsHtml + '</ul></div>';
+        }
+        grid.innerHTML = html;
+    }
+
+    // ============================================================
+    // 3. 页面路径映射表（按需加载）
+    // ============================================================
+    var pagePathMap = {
+        // 制度汇编
+        '玩家权限体制': '/pages/制度汇编/玩家权限体制.html',
+        '玩家行政权限体制': '/pages/制度汇编/玩家行政权限体制.html',
+        '监督委员会制度': '/pages/制度汇编/监督委员会制度.html',
+        '创造者协会章程': '/pages/制度汇编/创造者协会章程.html',
+        // 服主令
+        '2026第1号': '/pages/服主令/2026-1号.html',
+        '2026第2号': '/pages/服主令/2026-2号.html',
+        '2026第3号': '/pages/服主令/2026-3号.html',
+        '2026第4号': '/pages/服主令/2026-4号.html',
+        '2026第5号': '/pages/服主令/2026-5号.html',
+        '2026第6号': '/pages/服主令/2026-6号.html',
+        // 人物志
+        '弘桀孤影行': '/pages/人物志/弘桀孤影行.html',
+        '出击的阴笑徐铮': '/pages/人物志/出击的阴笑徐铮.html',
+        // 技术文档
+        'MCC目录': '/pages/技术文档/MCC/目录.html',
+        '盔甲架指南': '/pages/技术文档/盔甲架指南.html',
+        '认识基岩版': '/pages/技术文档/认识基岩版.html',
+        '第一章': '/pages/技术文档/第一章.html',
+        '第二章': '/pages/技术文档/第二章.html',
+        '第三章': '/pages/技术文档/第三章.html',
+        '第四章': '/pages/技术文档/第四章.html',
+        '第五章': '/pages/技术文档/第五章.html',
+        '第六章': '/pages/技术文档/第六章.html',
+        '第七章': '/pages/技术文档/第七章.html',
+        '第八章': '/pages/技术文档/第八章.html',
+        '第九章': '/pages/技术文档/第九章.html',
+        '第十章': '/pages/技术文档/第十章.html',
+        '第十一章': '/pages/技术文档/第十一章.html',
+        // 玩家文档
+        '玩家游玩建议': '/pages/玩家文档/游玩建议.html',
+        '管理员学习手册': '/pages/玩家文档/管理员手册.html',
+        // 论坛
+        '论坛': '/pages/论坛/index.html'
+    };
+
+    // ============================================================
+    // 4. 页面加载函数（fetch 按需加载）
+    // ============================================================
+    function loadPage(pageId) {
+        // 解码 URL 编码的 pageId
+        pageId = decodeURIComponent(pageId);
+
+        var home = document.getElementById('home-content');
+        var pageContent = document.getElementById('page-content');
+        var path = pagePathMap[pageId];
+
+        // 1. 先隐藏首页
+        home.style.display = 'none';
+
+        // 2. 如果没有找到映射，显示占位内容
+        if (!path) {
+            pageContent.style.display = 'block';
+            pageContent.innerHTML = '<div class="doc-content"><h1>📄 ' + pageId + '</h1><p style="color:var(--text-muted);">此页面内容正在建设中，敬请期待。</p></div>';
+            updateActiveState(pageId);
+            if (window.location.hash !== '#page-' + pageId) {
+                history.pushState(null, '', '#page-' + pageId);
+            }
+            return;
         }
 
-        // ============================================================
-        // 3. 页面路径映射表（按需加载）
-        // ============================================================
-        var pagePathMap = {
-            // 制度汇编
-            '玩家权限体制': '/pages/制度汇编/玩家权限体制.html',
-            '玩家行政权限体制': '/pages/制度汇编/玩家行政权限体制.html',
-            '监督委员会制度': '/pages/制度汇编/监督委员会制度.html',
-            '创造者协会章程': '/pages/制度汇编/创造者协会章程.html',
-            // 服主令
-            '2026第1号': '/pages/服主令/2026-1号.html',
-            '2026第2号': '/pages/服主令/2026-2号.html',
-            '2026第3号': '/pages/服主令/2026-3号.html',
-            '2026第4号': '/pages/服主令/2026-4号.html',
-            '2026第5号': '/pages/服主令/2026-5号.html',
-            '2026第6号': '/pages/服主令/2026-6号.html',
-            // 人物志
-            '弘桀孤影行': '/pages/人物志/弘桀孤影行.html',
-            '出击的阴笑徐铮': '/pages/人物志/出击的阴笑徐铮.html',
-            // 技术文档
-            'MCC目录': '/pages/技术文档/MCC/目录.html',
-            '盔甲架指南': '/pages/技术文档/盔甲架指南.html',
-            '认识基岩版': '/pages/技术文档/认识基岩版.html',
-            '第一章': '/pages/技术文档/第一章.html',
-            '第二章': '/pages/技术文档/第二章.html',
-            '第三章': '/pages/技术文档/第三章.html',
-            '第四章': '/pages/技术文档/第四章.html',
-            '第五章': '/pages/技术文档/第五章.html',
-            '第六章': '/pages/技术文档/第六章.html',
-            '第七章': '/pages/技术文档/第七章.html',
-            '第八章': '/pages/技术文档/第八章.html',
-            '第九章': '/pages/技术文档/第九章.html',
-            '第十章': '/pages/技术文档/第十章.html',
-            '第十一章': '/pages/技术文档/第十一章.html',
-            // 玩家文档
-            '玩家游玩建议': '/pages/玩家文档/游玩建议.html',
-            '管理员学习手册': '/pages/玩家文档/管理员手册.html',
-            // 论坛
-            '论坛': '/pages/论坛/index.html'
-        };
+        // 3. 显示加载中（覆盖之前的内容）
+        pageContent.style.display = 'block';
+        pageContent.innerHTML = '<div class="doc-content"><p style="color:var(--text-muted);text-align:center;padding:3rem 0;"><i class="fas fa-spinner fa-spin"></i> 加载中...</p></div>';
 
-        // ============================================================
-        // 4. 页面加载函数（fetch 按需加载 + sessionStorage 缓存）
-        // ============================================================
-        function loadPage(pageId) {
-            // 关键修复：解码 URL 编码的 pageId
-            pageId = decodeURIComponent(pageId);
-
-            var home = document.getElementById('home-content');
-            var pageContent = document.getElementById('page-content');
-            var path = pagePathMap[pageId];
-
-            if (!path) {
-                home.style.display = 'none';
-                pageContent.style.display = 'block';
-                pageContent.innerHTML = '<div class="doc-content"><h1>📄 ' + pageId + '</h1><p style="color:var(--text-muted);">此页面内容正在建设中，敬请期待。</p></div>';
-                updateActiveState(pageId);
-                return;
+        // 4. 检查 sessionStorage 缓存
+        var cacheKey = 'page_' + pageId;
+        var cached = sessionStorage.getItem(cacheKey);
+        if (cached) {
+            pageContent.innerHTML = cached;
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            if (window.location.hash !== '#page-' + pageId) {
+                history.pushState(null, '', '#page-' + pageId);
             }
+            updateActiveState(pageId);
+            return;
+        }
 
-            // 检查缓存
-            var cacheKey = 'page_' + pageId;
-            var cached = sessionStorage.getItem(cacheKey);
-            if (cached) {
-                home.style.display = 'none';
-                pageContent.style.display = 'block';
-                pageContent.innerHTML = cached;
+        // 5. fetch 加载
+        fetch(path)
+            .then(function(response) {
+                if (!response.ok) throw new Error('HTTP ' + response.status);
+                return response.text();
+            })
+            .then(function(html) {
+                sessionStorage.setItem(cacheKey, html);
+                pageContent.innerHTML = html;
                 window.scrollTo({ top: 0, behavior: 'smooth' });
-                // 修复：更新 URL 哈希为解码后的中文
                 if (window.location.hash !== '#page-' + pageId) {
                     history.pushState(null, '', '#page-' + pageId);
                 }
                 updateActiveState(pageId);
-                return;
-            }
-
-            // 显示加载中
-            home.style.display = 'none';
-            pageContent.style.display = 'block';
-            pageContent.innerHTML = '<div class="doc-content"><p style="color:var(--text-muted);text-align:center;padding:3rem 0;"><i class="fas fa-spinner fa-spin"></i> 加载中...</p></div>';
-
-            fetch(path)
-                .then(function(response) {
-                    if (!response.ok) throw new Error('HTTP ' + response.status);
-                    return response.text();
-                })
-                .then(function(html) {
-                    sessionStorage.setItem(cacheKey, html);
-                    pageContent.innerHTML = html;
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
-                    // 修复：更新 URL 哈希为解码后的中文
-                    if (window.location.hash !== '#page-' + pageId) {
-                        history.pushState(null, '', '#page-' + pageId);
-                    }
-                    updateActiveState(pageId);
-                })
-                .catch(function() {
-                    pageContent.innerHTML = '<div class="doc-content"><h1>📄 ' + pageId + '</h1><p style="color:var(--text-muted);">加载失败，请检查网络连接后重试。</p></div>';
-                });
-        }
-
-        // ============================================================
-        // 5. 更新高亮状态
-        // ============================================================
-        function updateActiveState(pageId) {
-            document.querySelectorAll('.sub-menu a, .card-list li').forEach(function(el) {
-                el.classList.remove('active');
+            })
+            .catch(function() {
+                pageContent.innerHTML = '<div class="doc-content"><h1>📄 ' + pageId + '</h1><p style="color:var(--text-muted);">加载失败，请检查网络连接后重试。</p></div>';
             });
-            document.querySelectorAll('.sub-menu a[href="#page-' + pageId + '"]').forEach(function(el) {
-                el.classList.add('active');
-            });
+    }
+
+    // ============================================================
+    // 5. 更新高亮状态
+    // ============================================================
+    function updateActiveState(pageId) {
+        document.querySelectorAll('.sub-menu a, .card-list li').forEach(function(el) {
+            el.classList.remove('active');
+        });
+        document.querySelectorAll('.sub-menu a[href="#page-' + pageId + '"]').forEach(function(el) {
+            el.classList.add('active');
+        });
+    }
+
+    // ============================================================
+    // 6. 返回首页
+    // ============================================================
+    function showHome() {
+        var home = document.getElementById('home-content');
+        var pageContent = document.getElementById('page-content');
+
+        home.style.display = 'block';
+        pageContent.style.display = 'none';
+        // 清空页面内容，避免残留
+        pageContent.innerHTML = '';
+
+        history.pushState(null, '', '/');
+        document.querySelectorAll('.sub-menu a, .card-list li').forEach(function(el) {
+            el.classList.remove('active');
+        });
+    }
+
+    window.loadPage = loadPage;
+    window.showHome = showHome;
+
+    // ============================================================
+    // 7. 登录功能
+    // ============================================================
+    function openLoginModal(e) {
+        if (e) e.preventDefault();
+        document.getElementById('loginModal').classList.add('active');
+        document.getElementById('loginUsername').value = '';
+        document.getElementById('loginError').classList.remove('show');
+        setTimeout(function(){ document.getElementById('loginUsername').focus(); }, 100);
+    }
+
+    function closeLoginModal() {
+        document.getElementById('loginModal').classList.remove('active');
+    }
+
+    function login() {
+        var username = document.getElementById('loginUsername').value.trim();
+        var errorEl = document.getElementById('loginError');
+        if (!username) {
+            errorEl.textContent = '请输入用户名';
+            errorEl.classList.add('show');
+            return;
         }
-
-        // ============================================================
-        // 6. 返回首页
-        // ============================================================
-        function showHome() {
-            document.getElementById('home-content').style.display = 'block';
-            document.getElementById('page-content').style.display = 'none';
-            history.pushState(null, '', '/');
-            document.querySelectorAll('.sub-menu a, .card-list li').forEach(function(el) {
-                el.classList.remove('active');
-            });
+        if (username.length < 2) {
+            errorEl.textContent = '用户名至少2个字符';
+            errorEl.classList.add('show');
+            return;
         }
+        localStorage.setItem('token', 'mock-token');
+        localStorage.setItem('username', username);
+        closeLoginModal();
+        updateAuthUI();
+    }
 
-        window.loadPage = loadPage;
-        window.showHome = showHome;
+    function logout(e) {
+        if (e) e.preventDefault();
+        localStorage.removeItem('token');
+        localStorage.removeItem('username');
+        updateAuthUI();
+    }
 
-        // ============================================================
-        // 7. 登录功能
-        // ============================================================
-        function openLoginModal(e) {
-            if (e) e.preventDefault();
-            document.getElementById('loginModal').classList.add('active');
-            document.getElementById('loginUsername').value = '';
-            document.getElementById('loginError').classList.remove('show');
-            setTimeout(function(){ document.getElementById('loginUsername').focus(); }, 100);
+    function updateAuthUI() {
+        var token = localStorage.getItem('token');
+        var username = localStorage.getItem('username');
+        var loginBtn = document.getElementById('loginBtn');
+        var logoutBtn = document.getElementById('logoutBtn');
+        var userDisplay = document.getElementById('userDisplay');
+        var usernameDisplay = document.getElementById('usernameDisplay');
+        if (token && username) {
+            loginBtn.style.display = 'none';
+            logoutBtn.style.display = 'inline-flex';
+            userDisplay.style.display = 'inline-block';
+            usernameDisplay.textContent = username;
+        } else {
+            loginBtn.style.display = 'inline-flex';
+            logoutBtn.style.display = 'none';
+            userDisplay.style.display = 'none';
         }
+    }
 
-        function closeLoginModal() {
-            document.getElementById('loginModal').classList.remove('active');
-        }
-
-        function login() {
-            var username = document.getElementById('loginUsername').value.trim();
-            var errorEl = document.getElementById('loginError');
-            if (!username) {
-                errorEl.textContent = '请输入用户名';
-                errorEl.classList.add('show');
-                return;
-            }
-            if (username.length < 2) {
-                errorEl.textContent = '用户名至少2个字符';
-                errorEl.classList.add('show');
-                return;
-            }
-            localStorage.setItem('token', 'mock-token');
-            localStorage.setItem('username', username);
-            closeLoginModal();
-            updateAuthUI();
-        }
-
-        function logout(e) {
-            if (e) e.preventDefault();
-            localStorage.removeItem('token');
-            localStorage.removeItem('username');
-            updateAuthUI();
-        }
-
-        function updateAuthUI() {
-            var token = localStorage.getItem('token');
-            var username = localStorage.getItem('username');
-            var loginBtn = document.getElementById('loginBtn');
-            var logoutBtn = document.getElementById('logoutBtn');
-            var userDisplay = document.getElementById('userDisplay');
-            var usernameDisplay = document.getElementById('usernameDisplay');
-            if (token && username) {
-                loginBtn.style.display = 'none';
-                logoutBtn.style.display = 'inline-flex';
-                userDisplay.style.display = 'inline-block';
-                usernameDisplay.textContent = username;
-            } else {
-                loginBtn.style.display = 'inline-flex';
-                logoutBtn.style.display = 'none';
-                userDisplay.style.display = 'none';
-            }
-        }
-
-        // ============================================================
-        // 8. 侧边栏和初始化
-        // ============================================================
-        function initSidebar() {
-            document.querySelectorAll('.category-toggle').forEach(function(toggle) {
-                toggle.addEventListener('click', function(e) {
-                    e.stopPropagation();
-                    var parent = this.closest('.category');
-                    var sub = parent.querySelector('.sub-menu');
-                    if (sub) {
-                        sub.classList.toggle('open');
-                        this.classList.toggle('open');
-                    }
-                });
-            });
-            document.querySelectorAll('.sub-menu a').forEach(function(link) {
-                link.addEventListener('click', function(e) {
-                    var href = this.getAttribute('href');
-                    if (href && href.startsWith('#page-')) {
-                        e.preventDefault();
-                        // 关键修复：直接传递原始中文（href 中就是中文）
-                        loadPage(href.replace('#page-', ''));
-                    }
-                });
-            });
-        }
-
-        function initRoomStatus() {
-            var room = localStorage.getItem('roomNumber') || null;
-            if (room) {
-                document.getElementById('roomNumberDisplay').textContent = room;
-                document.getElementById('roomBanner').classList.add('show');
-            }
-        }
-
-        function initHash() {
-            var hash = window.location.hash;
-            if (hash && hash.startsWith('#page-')) {
-                // 关键修复：解码 URL 编码的页面标题，再传给 loadPage
-                var pageId = decodeURIComponent(hash.replace('#page-', ''));
-                loadPage(pageId);
-            }
-        }
-
-        // DOM 加载完成后初始化
-        document.addEventListener('DOMContentLoaded', function() {
-            document.body.classList.add('loaded');
-            renderCards();
-            initSidebar();
-            initRoomStatus();
-            initHash();
-            updateAuthUI();
-
-            // Enter 键触发登录
-            document.getElementById('loginUsername').addEventListener('keydown', function(e) {
-                if (e.key === 'Enter') login();
-            });
-            document.getElementById('loginModal').addEventListener('click', function(e) {
-                if (e.target === this) closeLoginModal();
+    // ============================================================
+    // 8. 侧边栏和初始化
+    // ============================================================
+    function initSidebar() {
+        document.querySelectorAll('.category-toggle').forEach(function(toggle) {
+            toggle.addEventListener('click', function(e) {
+                e.stopPropagation();
+                var parent = this.closest('.category');
+                var sub = parent.querySelector('.sub-menu');
+                if (sub) {
+                    sub.classList.toggle('open');
+                    this.classList.toggle('open');
+                }
             });
         });
-    </script>
+        document.querySelectorAll('.sub-menu a').forEach(function(link) {
+            link.addEventListener('click', function(e) {
+                var href = this.getAttribute('href');
+                if (href && href.startsWith('#page-')) {
+                    e.preventDefault();
+                    loadPage(href.replace('#page-', ''));
+                }
+            });
+        });
+    }
+
+    function initRoomStatus() {
+        var room = localStorage.getItem('roomNumber') || null;
+        if (room) {
+            document.getElementById('roomNumberDisplay').textContent = room;
+            document.getElementById('roomBanner').classList.add('show');
+        }
+    }
+
+    function initHash() {
+        var hash = window.location.hash;
+        if (hash && hash.startsWith('#page-')) {
+            var pageId = decodeURIComponent(hash.replace('#page-', ''));
+            loadPage(pageId);
+        }
+    }
+
+    // DOM 加载完成后初始化
+    document.addEventListener('DOMContentLoaded', function() {
+        document.body.classList.add('loaded');
+        renderCards();
+        initSidebar();
+        initRoomStatus();
+        initHash();
+        updateAuthUI();
+
+        document.getElementById('loginUsername').addEventListener('keydown', function(e) {
+            if (e.key === 'Enter') login();
+        });
+        document.getElementById('loginModal').addEventListener('click', function(e) {
+            if (e.target === this) closeLoginModal();
+        });
+    });
+   </script>
 </body>
 </html>
