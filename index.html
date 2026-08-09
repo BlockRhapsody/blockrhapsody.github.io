@@ -66,8 +66,8 @@
         .sidebar-nav ul{list-style:none;padding:0}
 
         /* ===== 移动端遮罩层 ===== */
-        .sidebar-overlay{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.6);z-index:50;opacity:0;transition:opacity var(--smooth);pointer-events:none;backdrop-filter:blur(2px)}
-        .sidebar-overlay.active{display:block;opacity:1;pointer-events:auto}
+        .sidebar-overlay{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.6);z-index:50;opacity:0;visibility:hidden;transition:opacity 0.3s ease, visibility 0s 0.3s;pointer-events:none;backdrop-filter:blur(2px)}
+        .sidebar-overlay.active{opacity:1;visibility:visible;pointer-events:auto;transition:opacity 0.3s ease, visibility 0s 0s}
 
         /* ===== 侧边栏分类 ===== */
         .category{margin-bottom:0.2rem}
@@ -93,7 +93,7 @@
         #home-content{animation:fadeUp 0.6s ease forwards}
         @keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
         
-        /* ===== 首页专用大字号（仅首页） ===== */
+        /* ===== 首页专用大字号 ===== */
         #home-content h1{font-size:clamp(2.8rem, 6vw, 4.5rem);font-weight:700;letter-spacing:3px;background:linear-gradient(135deg,#fff,#8ab4f8);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:0.6rem;line-height:1.2}
         #home-content .subtitle{font-size:clamp(1.3rem, 1.8vw, 1.7rem);color:var(--text-secondary);margin-bottom:2.5rem;letter-spacing:2px}
 
@@ -111,7 +111,7 @@
         .card-list li:hover i{color:var(--accent);transform:scale(1.1)}
         .card-list li.active{color:var(--accent);background:rgba(76,175,80,0.08)}
 
-        /* ===== 文档内容样式（已针对移动端优化） ===== */
+        /* ===== 文档内容样式 ===== */
         .doc-content{max-width:900px;margin:0 auto;padding:0 0.5rem;animation:fadeUp 0.5s ease forwards}
         .doc-content h1{font-size:clamp(1.8rem, 4.5vw, 2.8rem);border-left:4px solid var(--accent);padding-left:1rem;margin-bottom:1.5rem;line-height:1.3}
         .doc-content h2{font-size:clamp(1.4rem, 3vw, 1.8rem);margin-top:2.5rem;padding-bottom:0.3rem;border-bottom:2px solid var(--border-color);color:var(--text-primary)}
@@ -157,10 +157,10 @@
         .hidden{display:none}
 
         /* ==========================================================
-           响应式布局（桌面优先，适配移动端）
+           响应式布局
            ========================================================== */
         
-        /* 电脑端：侧边栏固定显示，汉堡按钮隐藏 */
+        /* 电脑端：侧边栏固定显示 */
         @media(min-width:769px){
             .hamburger{display:none !important}
             .sidebar-overlay{display:none !important;pointer-events:none !important}
@@ -168,44 +168,37 @@
             .main-content{max-width:100%}
         }
         
-        /* 平板/手机：侧边栏从左侧滑出，汉堡按钮显示 */
+        /* 平板/手机：侧边栏滑出，硬件加速 */
         @media(max-width:768px){
-            /* 侧边栏独立滑动 */
-            .sidebar{position:fixed;top:0;left:-300px;width:280px;height:100vh;margin-top:0;border-radius:0;border-right:1px solid var(--border-color);background:rgba(10,10,20,0.98);backdrop-filter:blur(18px);padding:4.5rem 0.8rem 1.5rem;z-index:60;transition:left var(--gentle);overflow-y:auto;max-height:100vh}
-            .sidebar.open{left:0}
-            .sidebar-overlay{display:block}
-            .sidebar-overlay.active{display:block}
-            /* 页面其他元素调整 */
             .hamburger{display:flex}
+            .sidebar-overlay{display:block}
+            .sidebar{position:fixed;top:0;left:0;width:280px;height:100vh;margin-top:0;border-radius:0;border-right:1px solid var(--border-color);background:rgba(10,10,20,0.98);backdrop-filter:blur(18px);padding:4.5rem 0.8rem 1.5rem;z-index:60;overflow-y:auto;max-height:100vh;transform:translateX(-100%);transition:transform 0.3s cubic-bezier(0.22, 1, 0.36, 1)}
+            .sidebar.open{transform:translateX(0)}
             .main-wrapper{padding:0 0.5rem}
             .navbar{padding:0.4rem 1rem}
             .nav-container{gap:0.5rem}
             .nav-brand a{font-size:clamp(1.1rem, 3vw, 1.4rem)}
             .nav-brand img{height:clamp(26px, 4vw, 36px)}
             .nav-btn{font-size:clamp(0.7rem, 1.2vw, 0.85rem);padding:clamp(0.2rem, 0.5vw, 0.35rem) clamp(0.5rem, 1vw, 0.9rem)}
-            /* 卡片在移动端的间距和内边距优化 */
             .card{padding:clamp(0.8rem, 1.5vw, 1.2rem) clamp(1rem, 2vw, 1.5rem)}
             .doc-content .info-grid{grid-template-columns:1fr;gap:0.4rem}
-            /* 首页移动端字号 */
             #home-content h1{font-size:clamp(2.2rem, 7vw, 3.2rem)}
             #home-content .subtitle{font-size:clamp(1.0rem, 3vw, 1.3rem)}
-            /* 侧边栏移动端字号放大 */
             .category-toggle{font-size:clamp(1.1rem, 3.5vw, 1.3rem)}
             .sub-menu a{font-size:clamp(1rem, 3vw, 1.15rem)}
         }
         
-        /* 小屏手机特别优化 */
+        /* 小屏手机 */
         @media(max-width:480px){
             .nav-brand a{font-size:clamp(1.0rem, 3.5vw, 1.4rem)}
             .nav-brand img{height:clamp(24px, 4.5vw, 34px)}
             .nav-btn{font-size:clamp(0.6rem, 1.5vw, 0.8rem);padding:clamp(0.15rem, 0.5vw, 0.3rem) clamp(0.35rem, 0.8vw, 0.7rem)}
             #home-content h1{font-size:clamp(2.0rem, 8vw, 2.8rem)}
             #home-content .subtitle{font-size:clamp(0.9rem, 3vw, 1.1rem)}
-            .sidebar{width:260px;left:-260px}
-            .sidebar.open{left:0}
+            .sidebar{width:260px;transform:translateX(-100%)}
+            .sidebar.open{transform:translateX(0)}
             .category-toggle{font-size:clamp(1.0rem, 3.5vw, 1.2rem)}
             .sub-menu a{font-size:clamp(0.95rem, 3vw, 1.05rem)}
-            /* 文档内容在小屏手机上进一步优化 */
             .doc-content h1{font-size:clamp(1.5rem, 5vw, 2rem)}
             .doc-content h2{font-size:clamp(1.2rem, 4vw, 1.5rem)}
             .doc-content p,.doc-content ul,.doc-content ol{font-size:clamp(0.9rem, 2.5vw, 1rem)}
@@ -218,7 +211,6 @@
     <header class="navbar">
         <div class="nav-container">
             <div class="nav-left">
-                <!-- 汉堡菜单按钮 -->
                 <button class="hamburger" id="hamburgerBtn" aria-label="切换菜单">
                     <span></span>
                     <span></span>
@@ -240,7 +232,7 @@
         </div>
     </header>
 
-    <!-- ===== 遮罩层（点击关闭侧边栏） ===== -->
+    <!-- ===== 遮罩层 ===== -->
     <div class="sidebar-overlay" id="sidebarOverlay"></div>
 
     <!-- ===== 房间号横幅 ===== -->
@@ -254,7 +246,6 @@
 
     <!-- ===== 主体 ===== -->
     <div class="main-wrapper">
-        <!-- 侧边栏 -->
         <aside class="sidebar" id="sidebar">
             <nav class="sidebar-nav">
                 <ul>
@@ -322,7 +313,6 @@
             </nav>
         </aside>
 
-        <!-- 主内容 -->
         <main class="main-content" id="mainContent">
             <section id="home-content">
                 <h1>欢迎来到方块狂想曲 Wiki</h1>
@@ -333,12 +323,10 @@
         </main>
     </div>
 
-    <!-- ===== 页脚 ===== -->
     <footer class="footer">
         <p>&copy; 2026 方块狂想曲服务器 · 由 <a href="https://github.com/BlockRhapsody" target="_blank">BlockRhapsody</a> 维护</p>
     </footer>
 
-    <!-- ===== 登录模态框 ===== -->
     <div class="modal-overlay" id="loginModal">
         <div class="modal-box">
             <h2>🔐 登录 · 我们将会保护您的信息</h2>
@@ -359,7 +347,7 @@
     // ============================================================
     // 0. 版本控制与缓存管理
     // ============================================================
-    var APP_VERSION = '2026.08.10.004';
+    var APP_VERSION = '2026.08.10.005';
     var CACHE_MAX_AGE = 5 * 60 * 1000;
 
     var storedVersion = localStorage.getItem('app_version');
@@ -708,10 +696,10 @@
 
         function toggleSidebar(e) {
             e.stopPropagation();
-            sidebar.classList.toggle('open');
+            var isOpen = sidebar.classList.toggle('open');
             hamburger.classList.toggle('open');
             overlay.classList.toggle('active');
-            document.body.style.overflow = sidebar.classList.contains('open') ? 'hidden' : '';
+            document.body.style.overflow = isOpen ? 'hidden' : '';
         }
 
         function closeSidebar() {
@@ -757,7 +745,6 @@
             });
         });
 
-        // 卡片点击
         document.getElementById('cardGrid').addEventListener('click', function(e) {
             var target = e.target.closest('.card-list li');
             if (target && target.dataset.page) {
