@@ -10,6 +10,7 @@
     <meta name="description" content="方块狂想曲服务器 · 制度汇编 · 技术文档 · 玩家指南" />
     <meta name="theme-color" content="#0d0d1a" />
     <style>
+        /* ===== 全局重置 ===== */
         *{margin:0;padding:0;box-sizing:border-box}
         :root{--bg-primary:#0a0a14;--bg-secondary:#12122a;--bg-card:#1a1a3e;--bg-sidebar:#0e0e22;--border-color:#2a2a5a;--text-primary:#ececf0;--text-secondary:#9a9abe;--text-muted:#6a6a8a;--accent:#4CAF50;--accent-hover:#66BB6A;--accent-glow:rgba(76,175,80,0.25);--font-pixel:'Pixelify Sans','Courier New',monospace;--radius:16px;--transition:0.35s cubic-bezier(0.34,1.56,0.64,1)}
         html{scroll-behavior:smooth}
@@ -21,6 +22,8 @@
         ::-webkit-scrollbar-track{background:var(--bg-primary)}
         ::-webkit-scrollbar-thumb{background:var(--border-color);border-radius:8px}
         ::-webkit-scrollbar-thumb:hover{background:var(--accent)}
+
+        /* ===== 导航栏 ===== */
         .navbar{position:sticky;top:0;z-index:100;background:rgba(10,10,20,0.85);backdrop-filter:blur(18px) saturate(1.2);border-bottom:1px solid var(--border-color);padding:0.7rem 2rem;transition:background var(--transition)}
         .nav-container{max-width:1440px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;gap:1rem}
         .nav-brand a{font-size:clamp(1.1rem, 3vw, 1.8rem);font-weight:700;color:var(--text-primary);display:flex;align-items:center;gap:0.6rem;letter-spacing:1px;transition:transform var(--transition);white-space:nowrap}
@@ -30,12 +33,16 @@
         .nav-btn{padding:clamp(0.25rem, 0.6vw, 0.5rem) clamp(0.6rem, 1.2vw, 1.2rem);border-radius:40px;font-size:clamp(0.65rem, 0.9vw, 0.85rem);font-weight:700;font-family:var(--font-pixel);background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.08);color:var(--text-secondary);cursor:pointer;transition:all var(--transition);display:inline-flex;align-items:center;gap:0.4rem;white-space:nowrap}
         .nav-btn:hover{background:var(--accent);border-color:var(--accent);color:#fff;box-shadow:0 0 30px var(--accent-glow);transform:translateY(-1px)}
         .nav-btn i{font-size:clamp(0.6rem, 0.8vw, 0.85rem)}
+
+        /* ===== 房间号横幅 ===== */
         .room-banner{background:linear-gradient(135deg,#1b5e20,#2e7d32);padding:0.5rem 0;width:100%;border-bottom:2px solid #4CAF50;text-align:center;display:none;animation:slideDown 0.5s ease forwards}
         .room-banner.show{display:block}
         @keyframes slideDown{from{opacity:0;transform:translateY(-10px)}to{opacity:1;transform:translateY(0)}}
         .room-content{display:inline-flex;align-items:center;gap:0.8rem;font-size:clamp(0.9rem, 1.5vw, 1.2rem);color:#fff;flex-wrap:wrap;justify-content:center}
         .room-content i{color:rgba(255,255,255,0.7)}
         .room-content strong{font-size:clamp(1.2rem, 2.5vw, 2rem);font-weight:700;letter-spacing:3px;background:rgba(0,0,0,0.25);padding:0.05rem 0.8rem;border-radius:40px;text-shadow:0 2px 8px rgba(0,0,0,0.3);font-family:var(--font-pixel)}
+
+        /* ===== 主体布局 ===== */
         .main-wrapper{display:flex;flex:1;max-width:1440px;margin:0 auto;width:100%;padding:0 1rem;gap:1.5rem;align-items:flex-start}
         .sidebar{width:260px;flex-shrink:0;background:rgba(14,14,34,0.7);backdrop-filter:blur(8px);border-radius:var(--radius);border:1px solid var(--border-color);padding:1.5rem 0.8rem;margin-top:1.5rem;height:fit-content;max-height:calc(100vh - 100px);overflow-y:auto;position:sticky;top:80px;transition:all var(--transition);align-self:flex-start}
         .sidebar::-webkit-scrollbar{width:3px}
@@ -56,11 +63,15 @@
         .sub-menu a:hover::before{opacity:1;background:var(--accent)}
         .sub-menu a.active{color:var(--accent);background:rgba(76,175,80,0.08)}
         .sub-menu a.active::before{opacity:1;background:var(--accent)}
+
+        /* ===== 主内容区 ===== */
         .main-content{flex:1;padding:1.5rem 0 2rem;min-height:70vh}
         #home-content{animation:fadeUp 0.6s ease forwards}
         @keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
         #home-content h1{font-size:clamp(1.8rem, 4vw, 3rem);font-weight:700;letter-spacing:2px;background:linear-gradient(135deg,#fff,#8ab4f8);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:0.3rem}
         .subtitle{font-size:clamp(0.9rem, 1.2vw, 1.1rem);color:var(--text-secondary);margin-bottom:2rem;letter-spacing:1px}
+
+        /* ===== 卡片 ===== */
         .card-grid{display:flex;flex-direction:column;gap:1rem;width:100%}
         .card{background:rgba(26,26,62,0.6);backdrop-filter:blur(4px);border:1px solid var(--border-color);border-radius:var(--radius);padding:clamp(0.8rem, 1.5vw, 1.5rem) clamp(1rem, 2vw, 2rem);transition:all 0.4s cubic-bezier(0.34,1.56,0.64,1);display:flex;flex-direction:column;gap:0.4rem;position:relative;overflow:hidden}
         .card:hover{transform:translateX(6px);border-color:var(--accent);box-shadow:0 8px 32px rgba(0,0,0,0.4),0 0 30px var(--accent-glow)}
@@ -71,6 +82,8 @@
         .card-list li:hover{background:rgba(76,175,80,0.15);color:var(--text-primary);padding-left:clamp(0.8rem, 1.2vw, 1.2rem)}
         .card-list li i{margin-right:0.5rem;color:var(--text-muted);font-size:clamp(0.6rem, 0.7vw, 0.75rem);width:1.2rem;text-align:center}
         .card-list li.active{color:var(--accent);background:rgba(76,175,80,0.08)}
+
+        /* ===== 文档内容样式（从独立文件加载） ===== */
         .doc-content{max-width:900px;margin:0 auto;padding:0 0.5rem;animation:fadeUp 0.5s ease forwards}
         .doc-content h1{font-size:clamp(1.6rem, 3vw, 2.4rem);border-left:4px solid var(--accent);padding-left:1rem;margin-bottom:1.5rem}
         .doc-content h2{font-size:clamp(1.2rem, 1.8vw, 1.6rem);margin-top:2.5rem;padding-bottom:0.3rem;border-bottom:2px solid var(--border-color);color:var(--text-primary)}
@@ -84,13 +97,16 @@
         .doc-content table{width:100%;border-collapse:collapse;margin:1.2rem 0;font-size:clamp(0.8rem, 0.9vw, 0.9rem)}
         .doc-content th{background:var(--bg-secondary);color:var(--text-primary);padding:0.6rem 0.8rem;text-align:left;border:1px solid var(--border-color)}
         .doc-content td{padding:0.6rem 0.8rem;border:1px solid var(--border-color);color:var(--text-secondary)}
+        .doc-content .info-grid{display:grid;grid-template-columns:1fr 1fr;gap:0.6rem 2rem;background:rgba(255,255,255,0.03);padding:1rem 1.5rem;border-radius:var(--radius);margin:1rem 0}
+        .doc-content .info-grid span{color:var(--text-secondary)}
+        .doc-content .info-grid strong{color:var(--text-primary)}
         .doc-content .footnote{font-size:clamp(0.7rem, 0.8vw, 0.8rem);color:var(--text-muted);border-top:1px solid var(--border-color);padding-top:1.5rem;margin-top:2.5rem}
+
+        /* ===== 页脚 ===== */
         .footer{background:rgba(10,10,20,0.6);backdrop-filter:blur(8px);border-top:1px solid var(--border-color);text-align:center;padding:1.2rem 0;font-size:clamp(0.7rem, 0.8vw, 0.85rem);color:var(--text-muted);margin-top:1.5rem}
         .footer a{color:var(--text-secondary);transition:color var(--transition)}
         .footer a:hover{color:var(--accent)}
-        .large-text-gold{font-size:clamp(1.4rem, 2.2vw, 1.8rem);display:block;text-align:center;padding:0.8rem 0;letter-spacing:2px;color:#f0c040}
-        .large-text{font-size:clamp(1.2rem, 1.8vw, 1.5rem);display:block;text-align:center;padding:0.8rem 0;letter-spacing:2px;color:var(--text-primary)}
-        .hidden{display:none}
+
         /* ===== 登录模态框 ===== */
         .modal-overlay{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.7);backdrop-filter:blur(8px);z-index:1000;display:none;justify-content:center;align-items:center;animation:fadeIn 0.3s ease}
         .modal-overlay.active{display:flex}
@@ -110,12 +126,16 @@
         .modal-box .modal-actions .btn-secondary:hover{background:rgba(255,255,255,0.1)}
         .modal-box .modal-error{color:#ff6b6b;font-size:clamp(0.75rem, 0.8vw, 0.85rem);margin-top:0.5rem;display:none}
         .modal-box .modal-error.show{display:block}
+        .hidden{display:none}
+
+        /* ===== 响应式 ===== */
         @media(max-width:1024px){.sidebar{width:220px;padding:1rem 0.6rem}}
-        @media(max-width:768px){.sidebar{display:none}.main-wrapper{padding:0 0.5rem}.navbar{padding:0.4rem 1rem}.nav-container{gap:0.5rem}.nav-brand a{font-size:clamp(0.9rem, 2.5vw, 1.2rem)}.nav-brand img{height:clamp(22px, 3.5vw, 32px)}.nav-btn{font-size:clamp(0.55rem, 0.8vw, 0.7rem);padding:clamp(0.15rem, 0.4vw, 0.3rem) clamp(0.4rem, 0.8vw, 0.8rem)}.card{padding:clamp(0.6rem, 1vw, 1rem) clamp(0.8rem, 1.5vw, 1.2rem)}}
+        @media(max-width:768px){.sidebar{display:none}.main-wrapper{padding:0 0.5rem}.navbar{padding:0.4rem 1rem}.nav-container{gap:0.5rem}.nav-brand a{font-size:clamp(0.9rem, 2.5vw, 1.2rem)}.nav-brand img{height:clamp(22px, 3.5vw, 32px)}.nav-btn{font-size:clamp(0.55rem, 0.8vw, 0.7rem);padding:clamp(0.15rem, 0.4vw, 0.3rem) clamp(0.4rem, 0.8vw, 0.8rem)}.card{padding:clamp(0.6rem, 1vw, 1rem) clamp(0.8rem, 1.5vw, 1.2rem)}.doc-content .info-grid{grid-template-columns:1fr}}
         @media(max-width:480px){.nav-brand a{font-size:clamp(0.8rem, 2vw, 1rem)}.nav-brand img{height:clamp(18px, 3vw, 26px)}.nav-btn{font-size:clamp(0.5rem, 0.7vw, 0.65rem);padding:clamp(0.1rem, 0.3vw, 0.25rem) clamp(0.3rem, 0.6vw, 0.6rem)}}
     </style>
 </head>
 <body>
+    <!-- ===== 导航栏 ===== -->
     <header class="navbar">
         <div class="nav-container">
             <div class="nav-brand">
@@ -131,12 +151,24 @@
             </div>
         </div>
     </header>
-    <div class="room-banner" id="roomBanner"><div class="room-content"><i class="fas fa-door-open"></i><span>当前房间号：</span><strong id="roomNumberDisplay">加载中...</strong></div></div>
+
+    <!-- ===== 房间号横幅 ===== -->
+    <div class="room-banner" id="roomBanner">
+        <div class="room-content">
+            <i class="fas fa-door-open"></i>
+            <span>当前房间号：</span>
+            <strong id="roomNumberDisplay">加载中...</strong>
+        </div>
+    </div>
+
+    <!-- ===== 主体 ===== -->
     <div class="main-wrapper">
+        <!-- 侧边栏 -->
         <aside class="sidebar" id="sidebar">
             <nav class="sidebar-nav">
                 <ul>
-                    <li class="category"><span class="category-toggle"><i class="fas fa-book"></i> 制度汇编</span>
+                    <li class="category">
+                        <span class="category-toggle"><i class="fas fa-book"></i> 制度汇编</span>
                         <ul class="sub-menu">
                             <li><a href="#page-玩家权限体制">玩家权限体制</a></li>
                             <li><a href="#page-玩家行政权限体制">玩家行政权限体制</a></li>
@@ -144,7 +176,8 @@
                             <li><a href="#page-创造者协会章程">创造者协会章程</a></li>
                         </ul>
                     </li>
-                    <li class="category"><span class="category-toggle"><i class="fas fa-gavel"></i> 服主令</span>
+                    <li class="category">
+                        <span class="category-toggle"><i class="fas fa-gavel"></i> 服主令</span>
                         <ul class="sub-menu">
                             <li><a href="#page-2026第1号">2026 第1号</a></li>
                             <li><a href="#page-2026第2号">2026 第2号</a></li>
@@ -154,13 +187,15 @@
                             <li><a href="#page-2026第6号">2026 第6号</a></li>
                         </ul>
                     </li>
-                    <li class="category"><span class="category-toggle"><i class="fas fa-user"></i> 人物志</span>
+                    <li class="category">
+                        <span class="category-toggle"><i class="fas fa-user"></i> 人物志</span>
                         <ul class="sub-menu">
                             <li><a href="#page-弘桀孤影行">弘桀孤影行</a></li>
                             <li><a href="#page-出击的阴笑徐铮">出击的阴笑徐铮</a></li>
                         </ul>
                     </li>
-                    <li class="category"><span class="category-toggle"><i class="fas fa-code"></i> 技术文档</span>
+                    <li class="category">
+                        <span class="category-toggle"><i class="fas fa-code"></i> 技术文档</span>
                         <ul class="sub-menu">
                             <li><a href="#page-MCC目录">MCC 学习新编</a></li>
                             <li><a href="#page-盔甲架指南">盔甲架指南</a></li>
@@ -178,7 +213,8 @@
                             <li><a href="#page-第十一章">第十一章 /execute全解</a></li>
                         </ul>
                     </li>
-                    <li class="category"><span class="category-toggle"><i class="fas fa-users"></i> 玩家文档</span>
+                    <li class="category">
+                        <span class="category-toggle"><i class="fas fa-users"></i> 玩家文档</span>
                         <ul class="sub-menu">
                             <li><a href="#page-玩家游玩建议">玩家游玩建议</a></li>
                             <li><a href="#page-管理员学习手册">管理员学习手册</a></li>
@@ -187,6 +223,8 @@
                 </ul>
             </nav>
         </aside>
+
+        <!-- 主内容 -->
         <main class="main-content" id="mainContent">
             <section id="home-content">
                 <h1>欢迎来到方块狂想曲 Wiki</h1>
@@ -196,7 +234,11 @@
             <div id="page-content" class="hidden"></div>
         </main>
     </div>
-    <footer class="footer"><p>&copy; 2026 方块狂想曲服务器 · 由 <a href="https://github.com/BlockRhapsody" target="_blank">BlockRhapsody</a> 维护</p></footer>
+
+    <!-- ===== 页脚 ===== -->
+    <footer class="footer">
+        <p>&copy; 2026 方块狂想曲服务器 · 由 <a href="https://github.com/BlockRhapsody" target="_blank">BlockRhapsody</a> 维护</p>
+    </footer>
 
     <!-- ===== 登录模态框 ===== -->
     <div class="modal-overlay" id="loginModal">
@@ -227,6 +269,7 @@
             { title: '玩家文档', icon: 'fa-users', items: ['玩家游玩建议', '管理员学习手册'] },
             { title: '论坛', icon: 'fa-comments', items: ['论坛'] }
         ];
+
         var displayNames = {
             '2026第1号': '2026 第1号', '2026第2号': '2026 第2号', '2026第3号': '2026 第3号',
             '2026第4号': '2026 第4号', '2026第5号': '2026 第5号', '2026第6号': '2026 第6号',
@@ -258,70 +301,126 @@
         }
 
         // ============================================================
-        // 3. pages 对象（所有内容）
+        // 3. 页面路径映射表（按需加载）
         // ============================================================
-        var pages = {};
-            // 所有内容页面
-            pages['玩家权限体制'] = `<div class="doc-content"><h1>⚙️ 玩家权限体制</h1><p>说明：本体制与非管理员玩家的玩家权限体制并行适用。当两者发生冲突时，由维稳执行官或服主依据《方块狂想曲服务器纲领》第三条、第五条及第二十条所确立的基本原则作出决断。</p><h2>第一章 权限等级概览</h2><p>玩家权限共设六个等级。0至3级根据在线时间计分版的相应标准，达标后自动获得。4至5级在线时间计分版达标后，由管理员团队根据评判标准，手动给予。</p><p>0级：前权限 1级：初级权限 2级：中级权限 3级：高级权限 4级：资深权限 5级：顶级权限</p><p>1200游戏刻，在无卡顿情况下，约等于现实时间1分钟（20游戏刻约等于现实1秒钟）。</p><h2>第二章 0级·前权限</h2><p>加入服务器未满2400游戏刻者为0级。</p><p>所有计分板功能（在线时间除外）均不记录其行为。与服务器的交互功能受到较大限制。具体限制如下：</p><ul><li>无法在服务器内发言</li></ul><h2>第三章 1级·初级权限</h2><p>游玩满2400游戏刻者，自动晋升为1级。</p><p>其权益如下：</p><ul><li>状态器、方块币、击杀榜等大部分计分板开始记录其行为数据</li><li>服务器分配永久适用、不会变更的UID</li><li>可游玩副本</li><li>可使用商店的初级内容</li><li>可使用玩家互传等服务器功能</li></ul><h2>第四章 2级·中级权限</h2><p>在线时间满30分钟者，自动晋升为2级。</p><p>其权益如下：</p><ul><li>拥有跨纬度储物仓库</li><li>可在拍卖行上架和购买物品</li><li>开放更多服务器交互功能</li><li>解锁商店和副本的所有内容</li></ul><h2>第五章 3级·高级权限</h2><p>在线时间满60分钟者，自动晋升为3级。</p><p>其权益如下：</p><ul><li>在地皮区获得一块30×30的专属地皮</li><li>可以申请加入监督委员会</li><li>击杀玩家获得的方块币奖励提升至原来的200%</li><li>获得永久急迫1增益效果</li></ul><h2>第六章 4级·资深权限</h2><p>在线时间满120分钟者，在服务器内有有效建筑或实际贡献，管理员团队认可后，可以晋升为4级。</p><p>其权益如下：</p><ul><li>同时获得玩家行政权限2级</li><li>可切换服务器时间为白昼或夜晚</li><li>解锁万象维度（详见《尘埃落定处，万象由此生》）</li></ul><h2>第七章 5级·顶级权限</h2><p>在线时间满200分钟者，在服务器内有有效建筑并加入创造者协会成为会员或作为监督委员会成员有实际贡献的，管理员团队认可后，可以晋升为5级。</p><p>其权益如下：</p><ul><li>同时获得玩家行政权限3级</li><li>可进行全服喊话，消息将在屏幕中央显示</li><li>无需副本门票即可进入所有副本</li><li>可发起全服乱斗（详见《狂想不止，乱斗不休》）</li></ul></div>`;
-            pages['玩家行政权限体制'] = `<div class="doc-content"><h1>🏛️ 玩家行政权限体制</h1><p>说明：本体制与非管理员玩家的玩家权限体制并行适用。当两者发生冲突时，由维稳执行官或服主依据《方块狂想曲服务器纲领》第三条、第五条及第二十条所确立的基本原则作出决断。</p><h2>第一条 权限等级概览</h2><p>玩家行政权限共设四个等级：</p><ul><li><strong>0级：无行政主体资格</strong></li><li><strong>1级：基础行政权限</strong></li><li><strong>2级：中级行政权限</strong></li><li><strong>3级：高级行政权限</strong></li></ul><h2>第二条 0级·无权限</h2><p>加入服务器不足2400游戏刻者，或被列入黑名单者，为0级。不具备任何行政主体资格。</p><h2>第三条 1级·基础行政权限</h2><p>加入服务器满2400游戏刻且未被封禁者，自动晋升为1级。可参与行政等级为1的服务器行政活动。</p><h2>第四条 2级·中级行政权限</h2><p>具备以下条件之一者，晋升为2级：</p><ul><li>在线时间满90分钟自动晋升</li><li>由管理员指定晋升</li></ul><p>其核心权益如下：可直接向服主提出建议，服主将认真听取并讨论。</p><h2>第五条 3级·高级行政权限</h2><p>在服务器内有有效建筑并加入创造者协会成为会员或作为监督委员会成员有实际贡献的，管理员团队认可后，手动给予。</p><p>其核心权益如下：可传唤行政等级低于3级的玩家。被传唤的玩家，将在30秒后传送至传唤者所在位置。</p></div>`;
-            pages['监督委员会制度'] = `<div class="doc-content"><h1>🔍 监督委员会制度</h1><h2>第一章 总则</h2><p><strong>第一条</strong> 根据《方块狂想曲服务器纲领》所确立的玩家权限体制、玩家行政权限体制及管理员行政权限体制，制定监督委员会制度。</p><p><strong>第二条</strong> 监督委员会是服务器行使监督职能的专门机构。委员会成员依照本条例所赋予的职权，对服务器行使监督权，维护服务器秩序与玩家合法权益。</p><p><strong>第三条</strong> 本制度的根本宗旨是：坚持服主弘梁孤影行的统一领导，坚持玩家体验至上的服务理念。一切监督权力的行使，均以维护服务器秩序、保障玩家合法权益、营造良好游戏环境为最终目的。</p><h2>第二章 监督委员会的组成</h2><p><strong>第四条</strong> 监督委员会由主任一名及委员若干名组成。</p><p><strong>第五条</strong> 监督委员会主任由服主任命，现任主任为出击的阴笑徐铮，负责统筹全服监督与安保工作，组织落实监督委员会各项职责。</p><p><strong>第六条</strong> 监督委员会委员实行选任制。委员须具备以下条件：</p><ul><li>（一）在线时间满60分钟，已晋升为玩家权限3级</li><li>（二）近十四日内无违规处分记录</li><li>（三）了解服务器基本制度，能够正确行使监督职权</li><li>（四）未因滥用职权被移出过监督委员会</li></ul><p><strong>第七条</strong> 委员选任程序如下：</p><ul><li>（一）符合条件的玩家可在主城监督委员会办事处提交书面申请，或通过服务器公告帖、群内指定渠道向监督委员会主任提出申请</li><li>（二）监督委员会主任在收到申请后三个工作日内进行资格审查，确认申请人的在线时长、处分记录等基础条件是否满足要求</li><li>（三）通过资格审查的申请人，由监督委员会主任组织为期三天的考察期。考察期内，申请人以见习委员身份参与监督工作，熟悉监督流程与行为规范</li><li>（四）考察期满，由监督委员会主任根据申请人在考察期间的表现作出是否正式录用的决定，并向服主报备</li><li>（五）正式录用的委员，其姓名及职权范围在主城监督委员会办事处予以公示</li></ul><p><strong>第八条</strong> 委员任期与主任任期相同，可以连任。委员因故无法继续履职的，可向主任提出辞职，经同意后终止委员资格，并在主城予以公示。</p><p><strong>第九条</strong> 委员有下列情形之一的，由主任提请服主批准后，终止其委员资格：</p><ul><li>（一）滥用监督职权，损害玩家合法权益的</li><li>（二）连续十四日未参与监督工作的</li><li>（三）因违反服务器制度受到封禁处分的</li><li>（四）本人主动申请退出的</li></ul><h2>第三章 领导体制与责任关系</h2><p><strong>第十条</strong> 监督委员会由服主弘梁孤影行统一领导。</p><p><strong>第十一条</strong> 监督委员会直接对服主负责，同时接受广大玩家的监督。服主弘梁孤影行对监督委员会的各项决定拥有最终审查权与处置权。</p><h2>第四章 对非管理员玩家的监督职权</h2><p><strong>第十二条</strong> 监督委员会有权监督所有非管理员玩家的行为。</p><p><strong>第十三条</strong> 若发现玩家存在破坏服务器内容、损害其他玩家正常游玩体验的行为，委员会成员可对该破坏者直接作出踢出游戏的处罚。</p><p><strong>第十四条</strong> 踢出游戏功能，每小时内仅可使用一次，使用后应在二十四小时内向服主书面报备，说明使用理由。未经报备的，视为滥用职权。</p><h2>第五章 对管理员团队的监督职权</h2><p><strong>第十五条</strong> 监督委员会有权监督管理员团队的行为。</p><p><strong>第十六条</strong> 若发现管理员存在以下情形之一，且无正当理由的，委员会成员应直接向服主弘梁孤影行报告：</p><ul><li>（一）违反服务器纲领确立的根本原则，损害服主统一领导或玩家体验至上理念的</li><li>（二）滥用职权，侵害玩家合法权益或破坏服务器内容的</li><li>（三）玩忽职守，对服务器运行安全造成严重危害的</li><li>（四）越权制定或修改服务器制度性文件，未经原主授权的</li><li>（五）捏造事实，诬告陷害他人的</li></ul><p><strong>第十七条</strong> 报告经原主核实后，依以下规定处理：</p><ul><li>（一）情况属实的，原主对涉事管理员作出相应处理</li><li>（二）情况不实的，该行为已构成对监督委员会核心职责的严重违反，相关成员可能面临移除监督委员会资格及行政权限降级的处罚</li></ul><h2>第六章 日常运行监督职责</h2><p><strong>第十八条</strong> 监督委员会应当关注服务器的日常运行状态。</p><p><strong>第十九条</strong> 若发现以下问题，委员会成员应及时向管理员团队汇报并反映：</p><ul><li>（一）服务器运行机制存在异常</li><li>（二）玩法或指令出现漏洞</li><li>（三）其他影响服务器稳定运行的潜在风险</li></ul><h2>第七章 附则</h2><p><strong>第二十条</strong> 本条例自公布之日起施行。</p><p><strong>第二十一条</strong> 本条例的解释权归原主弘梁孤影行所有。</p></div>`;
-            pages['创造者协会章程'] = `<div class="doc-content"><h1>🎨 创造者协会章程</h1><p>根据《方块狂想曲服务器纲领》、玩家权限体制、玩家行政权限体制及管理员行政权限体制，建立创造者协会，制定协会的章程。创造者协会会员依照本条例各项规定，遵守协会章程，享受协会福利，履行协会义务。</p><h2>第一章 总则</h2><p><strong>第一条</strong> 创造者协会以弘扬方块狂想曲创造精神为宗旨，鼓励并支持会员积极投入服务器建设事业与建筑创造事业。</p><p><strong>第二条</strong> 创造者协会直接对服主负责，其设立与运行均以服务器服务器建设、提升建筑品质为根本目的。</p><h2>第二章 会员加入</h2><p><strong>第三条</strong> 满足协会加入条件的、未受到封禁处理的合法玩家，可以加入创造者协会。</p><p><strong>第四条</strong> 玩家加入创造者协会，须同时满足以下条件：</p><ul><li>（一）累计游玩时间超过120分钟</li><li>（二）在服务器内拥有有效建筑作品</li><li>（三）贡献获得管理员团队认可</li></ul><p><strong>第五条</strong> 符合前条规定条件的玩家，可向创造者协会或管理员团队提出入会申请。</p><p><strong>第六条</strong> 经管理员团队或创造者协会会长同意后，申请人自动成为创造者协会会员。</p><h2>第三章 会员权利与福利</h2><p><strong>第七条</strong> 创造者协会会员有权每日领取协会提供的建筑材料。建筑材料当日未领取的，不得累计至后续日期。</p><p><strong>第八条</strong> 每日建筑材料领取标准如下：</p><ul><li>（一）一盒混凝土礼包，包含所有颜色的混凝土</li><li>（二）一盒羊毛礼包，包含所有颜色的羊毛</li><li>（三）一盒玻璃礼包，包含所有颜色的玻璃</li><li>（四）一盒石砖礼包，包含四种类型的石砖</li></ul><p><strong>第九条</strong> 协会给予的建筑材料不得进行商业性买卖，但经双方自愿同意的友情交换不在此限。</p><h2>第四章 组织机构</h2><p><strong>第十条</strong> 建筑部部长兼任创造者协会会长，统一领导协会各项工作。</p><p><strong>第十一条</strong> 会长任期与建筑部部长任期相同。依照服务器纲领及服主令，会长可以长期连任。</p><p><strong>第十二条</strong> 会长行使以下职权：</p><ul><li>（一）管理每日建筑材料的发放</li><li>（二）决定当日是否发放建筑材料礼包</li><li>（三）决定当日是否发放某个特定的建筑材料礼包</li><li>（四）依照本章程规定移除协会会员</li><li>（五）依照本章程规定增加协会会员</li></ul><p><strong>第十三条</strong> 会长行使职权时，必须严格遵守本章程，符合协会根本利益，不得侵犯玩家的合法权益。违反者依服务器纲领及有关规定追究责任。</p><h2>第五章 会员义务与退出机制</h2><p><strong>第十四条</strong> 非创造者协会会员不得从协会会员处获取协会发放的建筑材料。服务器指令系统将对此类行为进行监测。</p><p><strong>第十五条</strong> 创造者协会会员有下列情形之一的，予以移除：</p><ul><li>（一）超过一周未进入服务器游玩，且无正当理由的</li><li>（二）一周内未有新建建筑作品的。正在参与经会长确认的长期建筑项目的，会长可视情况给予延期</li></ul><p><strong>第十六条</strong> 协会会员存在重大过失，包括但不限于违反服务器纲领、逾越权限制度等行为的，由服主或监督委员会直接移除其会员资格，情节严重的，可决定其永远不得加入创造者协会。</p><h2>第六章 附则</h2><p><strong>第十七条</strong> 本章程自公布之日起施行。</p><p><strong>第十八条</strong> 本章程的解释权归服主弘桀孤影行所有。</p><p><strong>第十九条</strong> 本章程的修改，须经服主批准。修改前应征求创造者协会及管理员团队意见。</p></div>`;
-            pages['2026第1号'] = `<div class="doc-content"><h1>方块狂想曲（2026）第1号</h1><p style="color:var(--text-secondary);">关于管理员团队人事任命的决定</p><p>为深入贯彻"以玩家为中心"的服务器宗旨，切实构建一支心怀热爱、服务玩家、忠于职守、甘于奉献的高素质管理员队伍，全面提升服务器建设质量与运维水平，经服主弘桀孤影行审慎研究，结合寒假存档期间全体玩家的历史贡献与上届管理员团队的履职实际，本着优化结构、人岗相适应的原则，现就新一届管理员团队人事任免事项决定如下：</p><h2>一、任命"出击的阴笑徐铮"为监督委员会委员长，授予管理员权限。</h2><p>该同志在寒假存档担任管理员期间表现突出，具备较强的组织协调能力与监督执纪意识。其于就任后，须严格依照《方块狂想曲服务器纲领》所确立的监督体制，切实履行对管理员团队及服务器各项事务的监察职责，确保权力运行公开透明。</p><p>本任命为长期任用。服主将视其履职情况适时予以考核。</p><h2>二、任命"弋人何纂"为维稳执行官，授予管理员权限。</h2><p>该同志立场坚定，处事果决，始终坚持服主弘桀孤影行在服务器中的领导地位。在寒假存档面对房主权限流失事件时，其坚定拒绝了非法持有权限者对于服务器权限体制的不当构想，展现出对服务器安全形势较强的研判与处置能力。</p><p>其于就任后，主管服务器安全事务与玩家人事变动，依法行使对违规玩家的封禁权限，维护服务器长治久安。</p><p>本任命为长期任用。其履职须同时接受服主领导与广大玩家反馈监督，以确保权力行使的正当性与审慎性。</p><h2>三、任命"忘_欲川"（现用名：简单乡鱼）为管理员，授予管理员权限。</h2><p>该同志在指令系统构建方面具备专长，系服务器技术生态建设所需之专业人才。其于就任后，主要协助服主开展高质量指令生态建设，统筹推进服务器各领域内容建设，以技术赋能提升玩家体验。</p><p>本任命为长期任用。</p><h2>四、任命"小鸡啄米放大炮"为建筑部部长，授予管理员权限。</h2><p>该同志在建筑规划与执行方面能力突出，宜于承担服务器空间风貌塑造之重任。其于就任后，主管服务器一切建筑事务，统筹负责建筑项目的规划审批、组织实施与质量验收，确保服务器建筑品质与整体风貌协调统一。</p><p>本任命为长期任用。</p><h2>五、任命"对秋香迷恋""真乖的绿豆糕"为建筑师，在服务器建设阶段授予管理员权限。</h2><p>此二同志在建筑创作领域各有造诣，系充实服务器建设期技术力量所亟需。其于就任后，主管服务器建筑、建设事务，全力投入新存档建设攻坚。</p><p>服务器建设阶段结束后，服主将根据届时工作实际情况与个人履职表现，另行审议后续任命及权限配置事宜。</p><h2>六、关于原最高管理员"WE泡沫君2"的任用安排</h2><p>鉴于该同志当前客观条件所限，暂难以投入充足时间驻服履职，经综合考量，本次不对其作出任命。待其具备充分驻服条件、愿意将主要游戏时间投入本服建设与发展时，服主将视情重新审议其任职事宜。</p><h2>七、附则</h2><p>以上任命自本令发布之日起生效。</p><p>望新任管理员团队全体成员恪尽职守、夙夜在公，以优质服务回应玩家期待，以务实行动践行服主嘱托，不负"方块狂想曲"悠久历史之荣光，不负两千余注册玩家之重托，奋力谱写"共创家园赛季"崭新篇章。</p><p style="color:var(--text-muted);font-size:0.9rem;">此令。方块狂想曲服务器服主弘绿扣彩行 二〇二六年四月二十六日</p></div>`;
-            pages['2026第2号'] = `<div class="doc-content"><h1>方块狂想曲（2026）第2号</h1><p style="color:var(--text-secondary);">关于最高管理员权限变动的补充决定</p><p>鉴于服务器原最高管理员“WE泡沫君2”因客观条件所限，无法长期驻服履职，经服主弘桀孤影行研究决定，现就最高管理员权限变动事项公布如下：</p><ul><li>原最高管理员“WE泡沫君2”所持有的最高管理员权限，自本令发布之日起予以调整。</li><li>任命“出击的阴笑徐铮”担任服务器最高管理员，授予最高管理员权限。</li><li>新任最高管理员须严格依照《方块狂想曲服务器纲领》及各项子制度行使职权，自觉接受服主领导与监督委员会监督，恪尽职守，维护服务器秩序与玩家权益。</li><li>原最高管理员“WE泡沫君2”待其具备充分驻服条件后，服主将视情另行安排。</li></ul><p>本令自发布之日起生效。</p><p style="color:var(--text-muted);font-size:0.9rem;">此令。方块狂想曲服务器服主弘桀孤影行 二〇二六年四月二十六日</p></div>`;
-            pages['2026第3号'] = `<div class="doc-content"><h1>方块狂想曲（2026）第3号</h1><p style="color:var(--text-secondary);">关于废止《终极公告》并重申服主权威的决定</p><p>近日，最高管理员"出击的阴笑徐铮"擅自发布《终极公告》，声称服主弘桀孤影行因"上课时间"被"合法制裁"，并据此作出多项越权声明。现将该公告全文公布如下：</p><div style="background:rgba(255,0,0,0.05);border-left:4px solid #ff4444;padding:1rem 1.5rem;margin:1rem 0;border-radius:0 8px 8px 0;"><p style="font-weight:bold;color:#ff6666;">【终极公告】服主已被上课时间合法制裁</p><p>依据现实世界强制管理条例，服主弘桀孤影行因上课时间启动紧急制裁，当场失去全部文字游戏权力，暂时退出服务器制度辩论现场。</p><p>本次制裁生效期间：</p><ol><li>服主无法发布通知、无法问责、无法处决、无法反驳。</li><li>原争议文件继续有效，维持现状不动。</li><li>监督委员会委员长出击的阴笑徐铮暂时安全，本局胜利。</li><li>服务器制度辩论被迫休庭，等待服主下课解除制裁。</li></ol><p style="font-weight:bold;color:#ff6666;">现实时间 &gt; 服务器权力</p><p style="font-weight:bold;color:#ff6666;">上课制裁 &gt; 服主权威</p><p style="text-align:right;color:var(--text-muted);">——方块狂想曲 独立裁决堂</p><p style="text-align:right;color:var(--text-muted);">（本次制裁不可反抗、不可上诉、不可保释）</p></div><p>经服主审查，该公告严重违反《方块狂想曲服务器纲领》及服务器基本法理。现就有关事项决定如下：</p><h2>一、关于该公告的违规认定</h2><p>该公告存在以下严重违规内容：</p><ul><li><strong>第一</strong>，声称服主"失去全部文字游戏权力""暂时退出服务器制度辩论现场"。此条直接否定服主弘桀孤影行的统一领导地位，违反《方块狂想曲服务器纲领》第一章总纲第一条。</li><li><strong>第二</strong>，声称"原争议文件继续有效，维持现状不动"。此条试图以单方面公告维持已被服主认定无效的文件，构成越权立法与抗命行为。</li><li><strong>第三</strong>，声称"监督委员会委员长出击的阴笑徐铮暂时安全，本局胜利"。此条以对立姿态宣示"胜利"，严重违背管理员团队应遵循的团结协作原则。</li><li><strong>第四</strong>，声称"现实时间大于服务器权力""上课制裁大于服主权威"。此条混淆现实生活与服务器秩序的根本关系。服主因现实事务暂时无法登录，不影响服主对服务器的最高所有权、领导权及解释权。服主的权威来源于其设立服务器的根本地位，不因一时在线与否而转移。</li><li><strong>第五</strong>，该公告以"独立裁决堂"名义发布。经查，本服务器从未设立所谓"独立裁决堂"，该机构为虚构机构，其所有声明均不具有任何效力。</li></ul><h2>二、关于事实性质的澄清</h2><p>服主弘桀孤影行因上课等现实事务暂时无法登录服务器，属于正常的现实生活安排。此等情形在任何服务器中均不构成对服主权力的"制裁"或"剥夺"。服主的领导地位与权威，不以其实时在线为前提。</p><p>所谓"服主已被上课时间合法制裁"的说法，既不符合事实，也不符合任何服务器管理制度的基本逻辑。</p><h2>三、处理决定</h2><p>依据《方块狂想曲服务器纲领》及《监督委员会制度》相关规定，现作出如下处理决定：</p><ul><li><strong>第一</strong>，该公告自始无效，不得以任何形式实施或引用。</li><li><strong>第二</strong>，原争议文件（即《方块狂想曲服务器纲领（终极独立裁决堂版）》）已被服主令宣布无效，维持现状之说不能成立。</li><li><strong>第三</strong>，对最高管理员"出击的阴笑徐铮"擅自发布该公告、越权立法、虚构机构、公然挑战服主权威等行为，予以严肃问责。具体处分将依据管理员纪律规定另行决定。</li><li><strong>第四</strong>，重申服主弘桀孤影行对服务器的绝对领导地位及最高决议权。任何个人和机构，包括最高管理员、监督委员会在内，均不得挑战此项根本原则。</li></ul><h2>四、结语</h2><p>现实生活中的上课等事务，是每一位学生玩家均应认真对待的责任。服主弘桀孤影行作为学生，遵守学校规定、按时上课，是其应尽的义务。此等正当行为，不应被曲解为"制裁"或"失败"。</p><p>望全体管理员及广大玩家正确理解现实与虚拟的关系，尊重服主的领导地位，共同维护服务器的正常秩序。</p><p style="color:var(--text-muted);font-size:0.9rem;">此令。方块狂想曲服务器服主弘绿扣彩行 二〇二六年四月二十六日</p></div>`;
-            pages['2026第4号'] = `<div class="doc-content"><h1>方块狂想曲（2026）第4号</h1><p style="color:var(--text-secondary);">关于撤销"出击的阴笑徐铮"最高管理员权限及确认最高管理员权限归属的决定</p><p>鉴于最高管理员"出击的阴笑徐铮"此前多次擅自制定服务器制度性文件、干扰服主正常履职、逾越管理员权限体制，经服主弘桀孤影行审慎研究，现就服务器最高管理员权限相关事项作出如下决定：</p><h2>一、关于"出击的阴笑徐铮"最高管理员权限的撤销</h2><p>自本令发布之日起，撤销"出击的阴笑徐铮"所持有的最高管理员权限。该同志此前以最高管理员身份发布的所有制度性文件、公告及决定，凡未经服主书面确认的，一律自始无效。</p><h2>二、关于最高管理员权限的归属确认</h2><p>自本令发布之日起，服务器最高管理员权限永远归属于"WE泡沫君2"。</p><p>"WE泡沫君2"是仅次于服主弘桀孤影行的服务器重要领导者之一，是服务器的杰出建设者之一，是服务器原始股东和长期建设者，是服务器三个主要赛季的见证者。</p><h2>三、关于最高管理员权限的性质</h2><p>最高管理员权限是服务器最高级别的管理权限，其行使应当严格遵循《方块狂想曲服务器纲领》及各项子制度的规定，自觉接受服主的统一领导。最高管理员权限的变更、冻结或撤销，专属于服主弘桀孤影行，任何其他组织或个人不得擅自变更。</p><h2>四、关于"WE泡沫君2"当前履职安排的说明</h2><p>鉴于"WE泡沫君2"当前因客观条件所限，暂难以投入充足时间驻服履职，其最高管理员权限由服主弘桀孤影行暂为代管。</p><p>待"WE泡沫君2"具备充分驻服条件时，服主将依本令规定向其移交最高管理员权限。</p><h2>五、关于"出击的阴笑徐铮"的其他管理权限</h2><p>"出击的阴笑徐铮"所持有的其他管理权限（包括但不限于监督委员会委员长职务），另行决定。在未作出新的决定前，该同志应当严格遵守服务器纪律，不得以任何形式干扰服务器正常管理秩序。</p><h2>六、附则</h2><p>本令自发布之日起生效。本令的解释权归服主弘桀孤影行所有。本令为服主令，优先级高于内部通知令及其他制度性文件。</p><p style="color:var(--text-muted);font-size:0.9rem;">此令。方块狂想曲服务器服主弘桀孤影行 二〇二六年四月二十六日</p></div>`;
-            pages['2026第5号'] = `<div class="doc-content"><h1>方块狂想曲（2026）第5号</h1><p style="color:var(--text-secondary);">关于WE泡沫君2回归履职及最高管理员权限移交的决定</p><p>鉴于WE泡沫君2现已具备长期驻服条件，经服主弘桀孤影行研究决定，现就相关事项作出如下决定：</p><h2>一、关于回归确认</h2><p>WE泡沫君2自本令发布之日起正式回归服务器履职。</p><h2>二、关于最高管理员权限移交</h2><p>自本令发布之日起，服主暂时代管的最高管理员权限，正式移交至WE泡沫君2。WE泡沫君2即日起行使最高管理员权限，其权限地位依据服主令（2026）第4号之规定，为仅次于服主弘桀孤影行的服务器重要领导者。</p><h2>三、关于履职要求</h2><p>WE泡沫君2行使最高管理员权限时，须严格遵循《方块狂想曲服务器纲领》及各项子制度，自觉接受服主的统一领导，恪尽职守，维护服务器秩序与玩家权益。</p><h2>四、附则</h2><p>本令自发布之日起生效。本令的解释权归服主弘桀孤影行所有。</p><p style="color:var(--text-muted);font-size:0.9rem;">此令。方块狂想曲服务器服主弘桀孤影行 二〇二六年四月二十六日</p></div>`;
-            pages['2026第6号'] = `<div class="doc-content"><h1>方块狂想曲（2026）第6号</h1><p style="color:var(--text-secondary);">关于杰出管理员名录及最高管理员地位的决定</p><p>自服务器寒假存档以来，历经近四个月的沧桑历程，以下四位人物脱颖而出，成为服务器杰出的管理员。此四人在服务器中拥有保存服务器地图的权利，分别为：WE泡沫君2、小鸡啄米放大炮、出击的阴笑徐铮，以及服主弘桀孤影行。为进一步明确上述人员的地位与职权，现郑重声明如下：</p><h2>一、关于最高管理员的重新定义</h2><p>WE泡沫君2，是方块狂想曲服务器自寒假存档以来，历经近四个月的沧桑历程中，涌现出的最杰出的管理者，没有之一。</p><p>他是仅次于服主弘桀孤影行的服务器重要领导者。</p><p>他是服务器的杰出贡献者。</p><p>他是服务器的原始股东和长期建设者。</p><p>他是服务器三个主要赛季的见证者。</p><p>他所拥有的最高管理员权限，是对他近四个月来坚守与付出的应有回报。</p><p>他所拥有的保存服务器地图的权利，是服主对他无条件的信任。</p><h2>二、关于其他杰出管理员的地位确认</h2><p><strong>小鸡啄米放大炮。</strong>为建筑部部长兼创造者协会会长，主管服务器一切建筑事务，拥有保存服务器地图的权利。</p><p><strong>出击的阴笑徐铮。</strong>为监督委员会委员长，负责统筹全服监督与安保力量，拥有保存服务器地图的权利。</p><p><strong>弘桀孤影行。</strong>为方块狂想曲服务器服主，对服务器所有内容拥有最终所有权及最高解释权。</p><h2>三、关于保存服务器地图权利的说明</h2><p>保存服务器地图的权利，是服务器对杰出管理员的重要授权之一，体现服主对上述人员的高度信任。此项权利的行使，应当以维护服务器数据安全、保障服务器正常运行为根本目的。</p><h2>四、关于最高管理员权限的再次确认</h2><p>依据服主令（2026）第4号及第5号之规定，WE泡沫君2的最高管理员权限已正式移交并生效。任何组织或个人不得以任何理由质疑或削弱其最高管理员地位。</p><h2>五、附则</h2><p>本令自发布之日起生效。本令的解释权归服主弘桀孤影行所有。</p><p style="color:var(--text-muted);font-size:0.9rem;">此令。方块狂想曲服务器服主弘桀孤影行 二〇二六年四月二十六日</p></div>`;
-            pages['弘桀孤影行'] = `<div class="doc-content"><h1>👤 弘桀孤影行</h1><p>说明：本章所载中国版游戏账号的在线时长、游玩时长等数据，均由网易自2024年6月起统计。</p><h2>一、个人简介</h2><p>弘桀孤影行，Minecraft基岩版资深玩家。他是方块狂想曲服务器的缔造者与领导者，以一人之力创立并引领了这片虚拟天地。不同于大多数中国版资源服服主，他将玩家体验奉为最高信条与服务器的根本宗旨。在他治下的方块狂想曲服务器，玩家各得其所，管理员人岗相适。他始终抵制特权与霸权行径，对32k物品秉持零容忍态度，以身作则，严禁一切32k进入服务器。</p><h2>二、Minecraft生涯</h2><p>从2021年初入世界的懵懂萌新，到2026年在指令编写与PvP领域皆有建树的资深玩家，弘桀孤影行完成了从追随者到引领者的蜕变。他对游戏的理解日益精进，对玩法的理念不断升华。他亲历了中国版从1.16到1.21的版本更迭，也见证了中国版Minecraft社区口碑的起伏变迁。</p><p>在中国版Minecraft中，他的主账号在线时长逾1000小时，小号亦超过200小时。主账号模组持有量突破2000个，估算总价值超过200元人民币。</p><p>他曾游历众多知名服务器，包括EC、布吉岛，以及那个已然关停却仍令人怀念的小游戏服务器——花雨庭。早在布吉岛电脑端爆发式走红之前，他便已投身于布吉岛起床战争，并在此长期鏖战。他是原版生存模式的忠实拥趸，累计游玩时长超过150小时，并在此玩法中结识了诸多志同道合的挚友。他同样是联机大厅玩法的深度参与者，深入体验过泥土商店2.7（及其各类版本与衍生玩法）、起床战争联机大厅版、布吉岛起床战争联机大厅版、无限神器生存、PotPvP等众多热门玩法。他持有国际基岩版正版账号，被记录的游戏时长已逾50小时。在网易更新新触控方案之前，他长期在国际版苦练新触控塔路与PvP技巧。</p><h2>三、服务器贡献</h2><p>作为方块狂想曲服务器的服主，弘桀孤影行始终践行玩家体验至上的理念，为服务器倾注了无数心血：</p><ul><li>服务器全部指令体系的架构者与实现者</li><li>服务器主城的主要建设者之一</li><li>寒假存档中PvP场地的主要建设者之一</li><li>寒假存档中商店系统与地皮系统的主要建设者</li><li>服务器主要的对外宣传者</li><li>普通玩家与管理团队之间的直接联络人</li><li>服务器的创办者与最高领导人</li><li>服务器所有建设工作的关键贡献者</li><li>服务器全部四个赛季的亲历者与见证者</li></ul><p>四个赛季分别为：① PvP资源服、② 游云大陆、③ 方块狂想曲PvP竞技服、④ 方块狂想曲·共创家园。可以毫不夸张地说：没有他，就没有方块狂想曲的故事。</p><h2>四、其他游戏成就</h2><p>弘桀孤影行亦是元气骑士的毕业级玩家，虽已退游，但其退役前的成就足以载入个人游戏史册：</p><ul><li>除绝版武器外，所有红武、神话武器均已解锁锻造</li><li>几乎所有其他品质的武器均已锻造完成</li><li>非绝版类别的全部机甲均已锻造</li><li>邪王模式存档突破150层</li><li>蓝币存量超过400万</li><li>持有大量植物与锻造物资</li><li>自三国赛季入坑以来，斩获全部赛季奖杯</li></ul><h2>五、现实荣誉</h2><p>现实生活中，弘桀孤影行是一名德智体美劳全面发展的优秀初中生。在校期间，成绩始终稳居班级前十名，历史、生物、道法、物理学科更是屡屡包揽全班第一。</p><ul><li>2022第5届"演说中国"全国青少年演讲与朗诵艺术展示活动三等奖</li><li>2023第6届"演说中国"全国青少年演讲与朗诵艺术展示活动铜奖</li><li>2023宝安区小学数学"问题引领学习"学生作品征集与评比活动三等奖</li><li>2023世界机器人大赛总决赛青少年机器人设计大赛三等奖</li><li>2024世界机器人大赛选拔赛青少年机器人设计大赛三等奖</li><li>2025"外教社杯"广东省第17届英语整本书阅读测评活动三等奖</li><li>2026"外教社杯"广东省第18届英语整本书阅读测评活动三等奖</li></ul><div class="footnote"><p>2026暑期更新 · 说明：本章所载中国版游戏账号数据均由网易自2024年6月起统计。</p></div></div>`;
-            pages['出击的阴笑徐铮'] = `<div class="doc-content"><h1>👤 出击的阴笑徐铮</h1><p style="color:var(--text-secondary);">本章所载服务器贡献、个人经历及现实事迹，均基于当事人口述及服务器历史文件记载整理。其中服务器相关部分，以《方块狂想曲服主令》系列文件、《关于〈方块狂想曲服务器纲领（终极独立裁决堂版）〉的违规审查意见》及《方块狂想曲管理员团队任命确认书》为事实依据。</p><h2>一、个人简介</h2><p>出击的阴笑徐铮，Minecraft基岩版资深玩家，方块狂想曲服务器监督委员会主任，曾任服务器最高管理员。</p><p>他是方块狂想曲服务器自寒假存档以来，历经近七个月沧桑历程中涌现出的杰出管理者之一。在服务器安全事务与玩家秩序维护方面，他以其特有的果决风格和丰富经验，构筑了服务器治安防线的重要力量。服主弘桀孤影行曾评价其"立场坚定，处事果决"，并依据《方块狂想曲服主令（2026）第1号》任命其为监督委员会委员长，统筹全服监督与安保工作。后经《方块狂想曲管理员团队任命确认书》确认，继续担任监督委员会主任一职。</p><p>监督委员会实行主任负责制。依据《监督委员会制度》第六条及第十一条之规定，监督委员会主任由服主直接任命，监督委员会直接对服主负责。出击的阴笑徐铮在任期间，严格依照《方块狂想曲服务器纲领》所确立的监督体制，切实履行对管理员团队及服务器各项事务的监察职责，履职表现优异，获得服主认可。</p><h2>二、Minecraft生涯</h2><h3>2.1 早期经历</h3><p>出击的阴笑徐铮的Minecraft生涯始于中国版基岩版。与多数玩家平稳的游戏历程不同，他的早年经历充满动荡与波折。</p><p>据其自述，他曾在早期服务器生涯中亲历了"网络第一次世界大战"——Minecraft中国玩家社区"对战"迷你世界玩家社区，这是一场波及多个服务器与玩家群体的重大冲突事件。在此次事件中，他被迫或主动解散了三个群聊，损失了大量玩家联络资源与人际网络。此后，他又经历了多次服务器冲突与建设挫折，累计炸毁房间逾五十次，先后遗失大号、中号两个主要游戏账号，最终仅保留当前使用的这个账号。因原绑定手机号无法找回，该账号成为其在Minecraft世界中的唯一身份标识。</p><h3>2.2 服务器建设与安保工作</h3><p>在方块狂想曲服务器创立后，出击的阴笑徐铮以其长期坚守的"老保安"身份，成为服务器秩序维护的重要力量。依据《方块狂想曲服主令（2026）第1号》《方块狂想曲管理员团队任命确认书》及服务器历史记录，其具体贡献包括但不限于：</p><ul><li><strong>监督委员会主任：</strong>依据服主令任命，担任监督委员会主任，负责统筹全服监督与安保工作，组织落实监督委员会各项职责。</li><li><strong>主城建设参与：</strong>作为主城主要建设者之一，深度参与了共创家园赛季主城的规划与施工，为服务器的空间风貌塑造贡献了实际力量。</li><li><strong>日常秩序维护：</strong>在日常运行中，其经常主动介入玩家之间的争执与摩擦，以劝架调和的方式维护服务器内的和谐氛围，为服务器的稳定运行提供了非制度性的补充保障。</li><li><strong>安全事务处置：</strong>作为监督委员会主任，其依法行使对违规玩家的处置权限，在多次涉安全事件中作出响应。经服主授权的关键决策，其均能有效贯彻实施。</li></ul><h3>2.3 争议事件</h3><p>2026年4月26日，出击的阴笑徐铮在服主因上课事务暂时离线期间，擅自发布《终极公告》，声称服主被"上课时间合法制裁"，并以虚构的"独立裁决堂"名义作出多项越权声明。</p><p>经服主审查，该公告被认定为严重违反《方块狂想曲服务器纲领》的行为。服主据此发布《方块狂想曲服主令（2026）第3号》，宣布该公告自始无效，并对相关责任人予以严肃问责。</p><p>同日，服主发布《方块狂想曲服主令（2026）第4号》，撤销出击的阴笑徐铮所持有的最高管理员权限，明确其此前以最高管理员身份发布的所有未经服主书面确认的制度性文件、公告及决定一律自始无效。依据该令，其最高管理员权限永远归属于WE泡沫君2。</p><p>关于其监督委员会主任职务，服主令（2026）第4号第五条明确规定："出击的阴笑徐铮所持有的其他管理权限（包括但不限于监督委员会委员长职务），另行决定。"后经《方块狂想曲管理员团队任命确认书》确认，其继续担任监督委员会主任一职。</p><h3>2.4 与服主的关系</h3><p>作为方块狂想曲服务器最早期的成员之一，出击的阴笑徐铮与服主弘桀孤影行之间存在特殊的信任与张力关系。一方面，他是服主在寒假存档期间给予高度信任的管理员之一，被授予保存服务器地图的权利与最高管理员权限；另一方面，其独立行事的风格亦屡屡与服主的治理理念产生碰撞。此种关系，用其本人的话概括，即："我是弘桀最早的玩家之一，同时也是被他骂得最多的人。"</p><h2>三、其他游戏成就</h2><p>在Minecraft之外，出击的阴笑徐铮亦涉足其他游戏领域，并留下若干值得一提的记录：</p><ul><li><strong>《暗区突围》资深玩家：</strong>以其自述为"暗区老被炸人之一"，多次在暗区撤离行动中遭遇爆炸物袭击。其同时为"水渠撤离专家"，累计成功撤离超过十次，并在撤离过程中成功携带过机密文件等高价值物资。</li></ul><h2>四、现实经历</h2><p>现实生活中的出击的阴笑徐铮，是一位以其鲜明个性和"炸裂"行为而在其社交圈内留下深刻印记的人物。下列事迹由其本人提供：</p><ul><li><strong>希沃白板事件：</strong>在校期间，其操作导致学校教学用希沃白板损坏。</li><li><strong>学校水管炸裂事件：</strong>因向学校水管中塞入纸巾，导致水管堵塞并最终炸裂，造成一定程度的校园设施损坏。</li><li><strong>"炸粪专家"称号的由来：</strong>据本人描述，在一次事件中，其将火药投入粪坑并点火，引发爆炸。此事件被其戏称为"世界名画：先点火药再点烟"。学校校长虽及时赶到现场，但未能阻止爆炸发生。自此，其被冠以"炸粪专家"的称号。</li><li><strong>柳州市音乐会第一名：</strong>在同城音乐赛事中，获得柳州市音乐会第一名。</li><li><strong>保安亭电脑损坏事件：</strong>在某次前往保安亭的过程中，将保安使用的电脑操作至损坏。</li></ul><h2>五、人物评价</h2><p>出击的阴笑徐铮是一位充满争议但不可忽视的服务器人物。其性格中既有维护秩序、劝架调和的务实一面，亦有挑战权威、自行其是的叛逆一面。在方块狂想曲服务器的历史叙事中，他既是制度的维护者，亦是制度的挑战者；既是服主最信任的执行者之一，亦是服主令中明确问责的对象。</p><p>依据《方块狂想曲服主令（2026）第6号》，出击的阴笑徐铮被列入服务器杰出管理员名录，与WE泡沫君2、小鸡啄米放大炮及服主弘桀孤影行并列，享有保存服务器地图的权利。此为服主对其历史贡献的肯定，亦是对其在服务器建设事业中长期坚守的承认。</p><p>监督委员会实行主任负责制，监督委员会主任对服主负责，对服务器广大玩家负责。在此制度设计之下，监督委员会主任的权力与责任高度统一。出击的阴笑徐铮在任期间，既有运用监督职权维护服务器秩序的履职实绩，亦有逾越权限体制、擅自发布的越权行为。观其大节，功过自有服务器广大玩家评说，是非留与方块狂想曲历史记载。</p><p>或许，这正是方块狂想曲服务器历史的一部分——一个由真实玩家构成的虚拟世界，其魅力恰在于人物性格的复杂性与历史的不可预知性。作为监督委员会主任，其功过自有评判，自有广大玩家予以见证；而作为方块狂想曲的一名老玩家，他的故事将始终被记录在服务器的历史之中。</p><div class="footnote"><p>本文相关历史文件参见《方块狂想曲服主令（2026）第1号》《方块狂想曲服主令（2026）第3号》《方块狂想曲服主令（2026）第4号》《方块狂想曲服主令（2026）第6号》《方块狂想曲管理员团队任命确认书》《关于〈方块狂想曲服务器纲领（终极独立裁决堂版）〉的违规审查意见》。</p></div></div>`;
-            pages['MCC目录'] = `<div class="doc-content"><h1>📖 MCC 学习新编</h1><p>《Minecraft Command 学习新编》（MCC）是方块狂想曲服务器内部指令学习教材，由服主弘桀孤影行编著。</p><h2>上篇 基础篇</h2><ul><li>认识基岩版</li><li>第一章 指令的基本概念<ul><li>1.1 什么是指令</li><li>1.2 指令的输入方式（聊天栏输入、命令方块输入、控制台输入、函数文件输入、魔法指令输入）</li><li>1.3 Java版与基岩版的指令差异（指令名称的差异、参数格式的差异、NBT与组件的差异、目标选择器的差异、部分指令的基岩版独有特性）</li><li>1.4 指令的执行限制条件（指令权限要求、命令方块的执行环境、执行者的身份对执行结果的影响、指令本身正确、没有语法错误）</li></ul></li><li>第二章 权限等级<ul><li>2.1 基岩版权限等级概述（0级：Normal、1级：Operator、2级：Host、3级：Automation、4级：Owner）</li><li>2.2 不同场景下的权限等级（服务器控制台、函数文件、哪些指令必须1级以上、哪些指令仅限于2级到4级）</li><li>2.3 玩家权限（访客、成员、管理员、自定义）</li></ul></li><li>第三章 指令的构成、解析与执行<ul><li>3.1 指令的语法结构（指令名、参数、可选项与必选项的标识、空格分隔规则）</li><li>3.2 指令的解析过程（客户端解析、服务端解析、常见解析错误及原因）</li><li>3.3 指令的执行流程（执行结果的反馈、指令的成功次数在链式命令中的用途）</li><li>3.4 指令的调试方法（如何通过报错信息定位问题、分步测试的技巧）</li><li>3.5 指令术语</li></ul></li></ul><h2>中篇 语法与技术</h2><ul><li>第四章 命令方块<ul><li>4.1 命令方块的基本概念与类型（脉冲命令方块、循环命令方块、连锁命令方块）</li><li>4.2 命令方块的设置与界面（命令的输入与编辑、方块朝向与执行方向、保持开启/红石控制、无条件/有条件、延迟刻设置）</li><li>4.3 命令方块的连接与链式执行（简单串联与条件链、循环命令方块的退出条件、常用设计模式）</li><li>4.4 命令方块的调试与维护（使用有条件连锁命令方块观测命令方块的执行状态）</li></ul></li><li>第五章 目标选择器<ul><li>5.1 目标选择器的作用</li><li>5.2 基础目标选择器（@p、@r、@a、@e、@s、@n、@initiator）</li><li>5.3 目标选择参数（坐标与距离参数：x、y、z、dx、dy、dz、r、rm；计分板、标签参数：scores、tag；实体类型参数：name、type、family；实体数据参数：rx、rxm、ry、rym、hasitem、has_property、l、lm、haspermission；数量参数：c）</li><li>5.4 目标选择器在实际指令中的应用（常用组合示例、性能考量：哪些选择器开销较大）</li></ul></li><li>第六章 JSON 文本<ul><li>6.1 JSON在Minecraft中的用途（用于命令中的文本显示、用于附加包的数据驱动配置）</li><li>6.2 基岩版JSON文本的基础语法（rawtext结构、text、translate与with、selector、scores）</li><li>6.3 关于格式控制的说明</li><li>6.4 常见JSON文本应用示例</li></ul></li><li>第七章 Molang 语言<ul><li>7.1 Molang是什么（Molang的定义与定位、在基岩版指令与附加开发生态中的角色）</li><li>7.2 Molang的语法基础（变量与查询函数、算术运算与逻辑运算、条件表达式）</li><li>7.3 常用Molang查询函数（实体状态类、生命与战斗类、物品栏类、移动与位置类、动画与时间类、计分板相关）</li><li>7.4 Molang在指令和组件中的应用场景（在item组件中动态计算数值、在实体事件中作为条件判断、在/playanimation指令中控制动画停止）</li><li>7.5 本章结语</li></ul></li><li>第八章 计分板<ul><li>8.1 计分板的概念</li><li>8.2 计分板的创建与删除（/scoreboard objectives）</li><li>8.3 计分板的玩家数据操作（/scoreboard players）</li><li>8.4 计分板的显示方式（侧边栏显示、名称下方显示、List列表显示）</li><li>8.5 计分板的条件检测（使用scores参数在目标选择器中检测分数、配合命令方块实现条件触发）</li><li>8.6 计分板在方块狂想曲服务器中的应用（在线时长记录、方块币系统、击杀榜、权限晋升的判定依据）</li></ul></li><li>第九章 标签与数据标签NBT<ul><li>9.1 标签（Tag）（标签的作用、/tag指令的用法、在目标选择器中使用tag参数）</li><li>9.2 基岩版NBT（NBT的基本结构、常见NBT应用、在指令中使用NBT）</li><li>9.3 基岩版组件系统（基岩版与Java版NBT的差异、常用组件、在指令中使用组件）</li><li>9.4 实体数据与方块数据的读取与修改</li></ul></li><li>第十章 粒子技术<ul><li>10.1 什么是粒子（调用已有粒子、创造自定义粒子）</li><li>10.2 /particle指令基础语法</li><li>10.3 基岩版常用粒子ID速查</li><li>10.4 使用/execute的更多玩法（将粒子绑定到实体、使用/tp实现更复杂的粒子效果、粒子效果在服务器中的应用场景）</li></ul></li><li>第十一章 /execute全解<ul><li>11.1 什么是/execute（地位与重要性、执行上下文的概念）</li><li>11.2 子命令详解（修饰子命令、条件子命令、run子命令）</li><li>11.3 执行分支机制（分叉的原理、基岩版与Java版差异、执行中断条件）</li><li>11.4 从旧格式到新格式的迁移（转换规则与示例）</li><li>11.5 实战案例（execute嵌套）</li></ul></li></ul><h2>下篇 综合设计与实战</h2><ul><li>第十二章 指令组合设计<ul><li>12.1 时序控制（延迟执行、循环控制、条件分支）</li><li>12.2 多人交互指令设计（玩家互传、商店系统、雪球菜单）</li><li>12.3 事件监听的设计模式（利用循环命令方块检测特定条件、利用计分板触发事件）</li></ul></li><li>第十三章 指令性能与安全<ul><li>13.1 性能优化原则（减少高频执行的检测、合并同类指令、合理设置执行频率）</li><li>13.2 指令安全（目标选择器滥用的风险、命令方块毁档的防范、权限分级管理）</li><li>13.3 方块狂想曲服务器的指令维护规范</li></ul></li><li>第十四章 实战案例集<ul><li>14.1 方块狂想曲服务器指令系统全景（权限晋升系统、方块币经济系统、玩家互传与传唤管理员）</li><li>14.2 典型功能实现（扫地机、定时公告、玩家加入欢迎系统）</li><li>14.3 综合案例：设计一套完整的多人副本指令流程</li></ul></li></ul><div class="footnote"><p>本书内容可结合我的世界中文wiki学习，二者冲突之处以本书为准。</p></div></div>`;
-            pages['盔甲架指南'] = `<div class="doc-content"><h1>🛡️ 方块狂想曲盔甲架使用指南</h1><p style="color:var(--text-secondary);">Comprehensive Guide to Armor Stands</p><p>在方块狂想曲服务器中，盔甲架是承载指令逻辑、实体判定、物品展示与动画演示的核心元素。为帮助玩家充分发挥其价值，服主弘桀孤影行基于指令技术，构建了一套便捷高效的盔甲架快捷操作模式。</p><h2>一、使用命名</h2><p>通过命名牌为盔甲架赋予特定名称，即可激活对应功能：</p><table><tr><th>命名</th><th>触发效果</th></tr><tr><td><code>rotate</code></td><td>以每秒+20°偏航角（Yaw）的速度持续顺时针自旋，其余运动状态不变。</td></tr><tr><td><code>invisibility</code></td><td>进入隐身状态（获得隐身效果），其余属性不变。</td></tr><tr><td><code>Keep_up</code></td><td>以每秒1格的速度沿Y轴匀速上升，仅改变垂直坐标。</td></tr><tr><td><code>rotate_and_invisibility</code></td><td>同时触发自旋（+20°/s）与匀速上升（1格/s）两种效果。</td></tr><tr><td><code>spreadplayers</code></td><td>在当前位置召唤一个名为 <code>origin</code> 的盔甲架，并令其每游戏刻（Tick）在所有水平面29×29范围内进行随机扩散移动。</td></tr><tr><td><code>Dinnerbone</code></td><td>盔甲架模型倒立。同时放大手持物品（播放动画），并附加隐身与自旋（+20°/s）效果。名为 <code>Grumm</code> 的倒立盔甲架不受影响。</td></tr></table><h2>二、使用物品条件</h2><p>除命名外，赋予盔甲架特定手持物品亦可触发特殊状态：</p><table><tr><th>手持物品</th><th>触发效果</th></tr><tr><td>海晶灯</td><td>进入隐身状态（获得隐身效果），其余属性不变。</td></tr><tr><td>荧石</td><td>进入无敌模式：连续获得256级抗性提升、生命回复与瞬间治疗效果。<br /><span style="color: #7a7a9a; font-size: 0.85rem;">注：该模式下，创造模式玩家仍可正常破坏该盔甲架。</span></td></tr></table><div class="footnote"><p><i class="fas fa-cube"></i> 基于指令技术构建 · 方块狂想曲内部文档</p></div></div>`;
-            pages['认识基岩版'] = `<div class="doc-content"><h1>🧱 认识基岩版</h1><h2>什么是基岩版</h2><p>基岩版（Bedrock Edition）是《我的世界》的多平台版本，常被玩家社群称为"MCBE"，基于C++语言编写，支持Windows、Android、iOS、Xbox、PlayStation、Nintendo Switch等多个平台。它与Java版不同，基岩版采用统一的代码库，实现了跨平台联机功能。</p><p>"基岩版"这一名称源于基岩代码库（Bedrock codebase），该代码库采用C++语言编写，旨在让游戏能够在不支持Java的平台上运行。在不同平台中，尽管为适配网络、存储访问等目标平台的特性而对代码进行了修改，但仍有约90%的代码保持一致。这一共享的功能核心被称为"基岩引擎"（Bedrock engine），不过该引擎并无实际的独立物理形态。</p><p>基岩代码库还被应用于教育版和中国版，以及已停止更新的树莓派版、New Nintendo 3DS版、Minecraft Earth、Minecraft Dungeons 和 Minecraft Legends。</p><p>对于指令学习者而言，基岩版与Java版最显著的差异在于指令系统——本书所讲指令均以基岩版为准。</p><h2>基岩版与Java版指令的主要差异</h2><ul><li><strong>目标选择器差异：</strong>基岩版独有的目标选择器包括@n（选择最近的一个实体）和@initiator（选择当前与NPC交互的玩家）。Java版中部分目标选择器参数在基岩版中不可用或名称不同。</li><li><strong>NBT与组件系统：</strong>Java版使用NBT（命名二进制标签）来存储和修改实体、物品的附加数据。基岩版则使用组件（Components）系统实现类似功能，语法格式为JSON对象。例如，在/give指令中为物品附加特殊属性时，基岩版使用components参数。</li><li><strong>指令名称与语法的差异：</strong>部分指令在两个版本中的名称或参数顺序存在差异。例如基岩版的/replaceitem指令与Java版的/item指令功能类似但用法不同。本书将在涉及具体指令时注明版本差异。</li><li><strong>部分指令基岩版独有：</strong>基岩版独有指令包括/agent（智能体控制）、/camera（相机视角控制）等。</li><li><strong>权限等级体系不同：</strong>基岩版使用的命令执行权限等级（0-4），与Java版的OP系统存在本质区别。详见第二章。</li></ul></div>`;
-            pages['第一章'] = `<div class="doc-content"><h1>第一章 指令的基本概念</h1><h2>1.1 什么是指令</h2><p>命令（Command）是通过文本交互游戏世界的高级功能。是玩家或游戏系统向Minecraft发出的特定操作请求。游戏引擎收到指令后，会根据指令的内容尝试执行相应操作。</p><p>可以这样理解：你在聊天栏中输入/time set day，游戏就会把时间调整为白天；输入/give @s diamond 64，你的背包里就会出现64颗钻石。这就是指令——通过文本命令来操控游戏世界。</p><p>指令可以非常简单，比如改变天气、传送位置；也可以非常复杂，比如构建一套完整的计分板系统来追踪玩家的各项数据。</p><p>无论何时，编写指令都应当遵循用较少的游戏负担实现目标功能的原则；特别的，在编写后台指令时应当遵循简化、简单的原则，便于维护的同时避免华而不实。</p><p>本书内容可以结合我的世界中文wiki学习，二者冲突之处，以本书为准。</p><p>我的世界中文wiki——https://zh.minecraft.wiki</p><h2>1.2 指令的输入方式</h2><p><strong>一、聊天栏输入</strong></p><p>最基础的输入方式。在客户端中，命令通过Minecraft的聊天窗口输入。按下T键、/键（默认）、或可以唤出聊天窗口。使用/键会同时输入命令必需的前缀斜杠（/），因此是个实用的快捷键。↑和↓键可浏览之前输入的文本，包含所有之前执行的命令。在输入命令时按下Tab键会循环显示当前可用的命令或参数玩家在聊天栏中以斜杠/开头输入指令，按下回车即可执行。聊天栏是学习指令的最常用入口，具有自动补全功能，输入时按Tab键可循环查看可用的指令和参数。</p><p><strong>二、命令方块输入</strong></p><p>命令方块是一种能够"记住"指令并自动执行的方块。玩家右键打开命令方块界面，在其中输入指令（无需斜杠，但加了也无妨），再通过红石信号或"保持开启"模式触发执行。</p><p>命令方块是构建自动化系统的核心工具。命令方块有三种类型：脉冲（一次红石信号执行一次）、循环（默认每游戏刻执行一次）、连锁（上一个命令方块执行后在同一游戏刻内连锁执行）。命令方块矿车也有类似功能，但其只有循环模式。</p><p><strong>三、控制台输入</strong></p><p>对于服务器，管理员可以在后台控制台直接输入指令，无需进入游戏。控制台执行指令不应该加斜杠前缀。</p><p><strong>四、函数文件输入</strong></p><p>函数文件（.mcfunction）是将多条指令按顺序写入一个文本文件中，然后在游戏中通过/function或/schedule指令调用。适合需要重复执行的多步操作，可以理解为指令的"批处理文件"。</p><p><strong>五、魔法指令输入（中国版特有）</strong></p><p>魔法指令是网易中国版内置的官方组件，基于人工智能语言大模型实现。玩家在魔法指令界面中输入自然语言描述（如"传送我到出生点"），由云端计算中心处理后自动转换为对应的游戏指令并执行。</p><p>魔法指令的权限等级较高，相当于WebSocket服务器，可以执行/agent等普通管理员（权限等级2）因权限不足而无法直接执行的指令。它主要面向不熟悉指令语法的新手玩家，帮助他们快速体验指令功能。装载组件后，拥有管理员权限的玩家会在屏幕左侧看到指令按钮。</p><p>需要注意的是，魔法指令并非对话式人工智能，不具有上下文理解记忆能力。每次输入独立处理，且消耗"魔法指令"次数（特殊途径获取，如冒险手册）。</p><p>玩家可以在魔法指令界面中点击常用命令中的选项，或是点击对话框上方的三个推荐内容，来直接执行预设的命令。玩家也可以在对话框中直接输入纯命令并执行。这些方式不会消耗魔法指令次数。</p><h2>1.3 Java版与基岩版的指令差异</h2><p>基岩版（本书使用版本）与Java版在指令方面存在以下主要差异：</p><p><strong>一、目标选择器差异</strong></p><table><tr><th>特性</th><th>Java版</th><th>基岩版</th></tr><tr><td>基础选择器</td><td>@p、@a、@r、@e、@s</td><td>同上，另加@n（最近实体）、@initiator（与NPC交互的玩家）</td></tr><tr><td>参数名称</td><td>部分参数不同</td><td>参见第五章</td></tr></table><p><strong>二、NBT与组件系统</strong></p><p>Java版使用NBT（命名二进制标签）格式来修改物品和实体的附加数据。基岩版使用组件（Components）系统，采用JSON格式。例如，要给一把剑附加"无法破坏"属性，两者的写法完全不同，基岩版甚至无法获得（因为游戏本来就没有这个组件）。参见第九章。</p><p><strong>三、部分指令的基岩版独有特性</strong></p><ul><li><strong>/camera</strong>：调整玩家相机位置或相对位置，角度。支持简单画面效果。允许自动化插值。</li><li><strong>/gametest</strong>：与测试结构配对的服务端测试的自动化工具。</li><li><strong>/hud</strong>：显示或隐藏HUD元素。</li><li><strong>/mobevent</strong>：控制流浪商人或灾厄巡逻队的生成。</li><li><strong>/save</strong>：启用或禁用服务器自动保存。</li><li><strong>/setmaxplayers</strong>：设置多人游戏最大玩家数量。</li><li><strong>/tickingarea</strong>：作为Java版/forceload命令的替代。</li><li><strong>/wsserver</strong>：使用命令信息与客户端互动以连接至WebSocket服务器。</li></ul><p><strong>游戏规则</strong></p><p>独有的游戏规则：functionCommandLimit、recipesUnlock、respawnBlocksExplode、showBorderEffect、showCoordinates、showDaysPlayed、showRecipeMessages、showTags</p><p><strong>四、执行环境差异</strong></p><p>在Java版中，命令方块的权限等级由世界设置中的"命令方块启用"选项控制。在基岩版中，需要在"作弊选项"中开启"启用命令方块"，命令方块具体受权限等级限制——命令方块不能执行超过自身所在层级权限等级的指令，即使改变了执行的主体（详见第二章）。</p><p>再次重复两个版本的差异是为了使你加深印象，避免在网上看见一些很明显就是Java版指令的东西就拿过来复用。</p><h2>1.4 指令的执行限制条件</h2><p>并非所有玩家都能执行所有指令。指令能否成功执行，取决于以下四个条件：</p><p><strong>一、权限等级要求</strong></p><p>每条指令都有其最低权限等级要求。权限等级不足时，游戏会提示"你没有权限执行此命令"。基岩版的具体权限等级体系将在第二章详细讲解。</p><p><strong>二、命令方块的执行环境</strong></p><p>命令方块自身的权限等级通常固定为1（非操作员级），这意味着：命令方块无法执行需要权限等级2到4的指令（如/op、/deop、/stop等）；魔法指令的权限等级较高（相当于权限等级4），可以执行命令方块和一般管理员玩家无法执行的指令，如控制台命令。</p><p><strong>三、执行者的身份对执行结果的影响</strong></p><p>同一条指令，由不同身份执行可能产生不同结果：玩家执行默认以玩家自身为执行原点，目标选择器@s代表自己；命令方块执行以命令方块的位置为执行原点，@s代表命令方块本身（因此用@s在命令方块中通常无意义，除非配合/execute改变执行者或执行位置）；控制台执行/函数文件执行以世界出生点为执行原点，@s无意义。</p><p><strong>四、指令本身正确、没有语法错误</strong></p></div>`;
-            pages['第二章'] = `<div class="doc-content"><h1>第二章 权限等级</h1><h2>2.1 基岩版权限等级概述</h2><p>基岩版的权限等级共分为五个级别，数字越大权限越高。下表列出各等级的名称与基本定位：</p><p><strong>0级——Normal（普通）</strong></p><p>最低权限等级。访客和成员以及未开启操作员命令的玩家处于此等级，只能执行聊天、查看帮助等基础命令。大部分涉及游戏世界修改的指令均不可执行。</p><p><strong>1级——Operator（操作员）</strong></p><p>大多数指令的权限等级要求。命令方块、函数文件、附加包脚本以及开启了"操作员命令"开关且未开启"传送命令"开关的玩家（在服务器环境下）均处于此等级。目标选择器可以在/say等命令和文本组件中使用。需要注意的是，基岩版的/kick指令也只需要1级权限，这也是命令方块能够执行/kick @a造成毁服的技术根源，详情参照附件六。</p><p><strong>2级——Host（主机/房主）</strong></p><p>管理员级权限。可执行/op、/deop、/reload等涉及权限管理和资源重载的指令。在服务器中，被授予管理员身份的玩家通常对应此等级。</p><p><strong>3级——Automation（自动化）</strong></p><p>介于管理员与所有者之间的等级。主要用于/setmaxplayers等涉及服务器容量管理的指令。在单人游戏或局域网联机中，开启作弊的主机玩家默认处于此等级。</p><p><strong>4级——Owner（所有者）</strong></p><p>最高权限等级。服务器控制台处于此等级，可执行/stop、/save、/whitelist、/permission等服务器管理级别的关键指令。这些指令命令方块和普通管理员均无法执行。</p><h2>2.2 不同场景下的权限等级</h2><p>不同执行环境对应的权限等级如下：</p><ul><li>命令方块和命令方块矿车的权限等级为1。</li><li>服务器控制台的权限等级为4。</li><li>函数或附加包中的脚本的权限等级为1。</li><li>/execute执行子命令的权限等级为1。</li><li>如果一个玩家在服务器中，且该玩家在"玩家权限"屏幕中的"操作员命令"开关已打开，那么他的权限等级默认为1。（可在server.properties文件中更改）</li><li>玩家权限为管理员的玩家（"玩家权限"屏幕中所有开关都打开）的权限等级默认为2。</li><li>如果一个玩家在单人游戏世界或局域网世界中，且该玩家在"玩家权限"屏幕中的"操作员命令"开关已打开，那么他的权限等级默认为3。</li><li>不符合上述条件的玩家的权限等级为0。</li></ul><p><strong>哪些指令0级就可以执行？</strong></p><p>绝大部分修改游戏世界的指令都需要1级或以上权限，0级玩家只能执行聊天、查看帮助等基础命令，如/help、/list、/me、/tell等。</p><p><strong>哪些指令仅限于2级到4级？</strong></p><p>需要2级及以上权限的指令主要是服务器管理类指令：</p><ul><li>/op和/deop——2级</li><li>/reload——2级</li><li>/loot——2级</li><li>/wsserver——2级</li><li>/setmaxplayers——3级</li><li>/stop——4级</li><li>/save——4级</li><li>/whitelist——4级</li><li>/permission——4级</li><li>/changesetting——4级</li></ul><h2>2.3 玩家权限</h2><p>在基岩版游戏的"玩家权限"设置界面中，玩家可以看到以下几种身份选项。这些身份与权限等级存在对应关系，但并非同一概念：</p><p><strong>访客</strong></p><p>访客不能放置或破坏方块，不能攻击实体，不能与任何方块交互（包括箱子、门等交互方块），只能四处走动观光。其权限等级相当于0级。</p><p><strong>成员</strong></p><p>成员可以正常进行游戏，包括建造、战斗、与方块交互等。默认情况下，成员的权限等级为0级。但在开启了作弊的世界中，若成员在"玩家权限"屏幕中打开了"操作员命令"开关，其权限等级会发生变化：在服务器环境下提升为1级；在单人游戏或局域网环境下提升为3级。</p><p><strong>管理员</strong></p><p>管理员拥有执行服务器管理指令的能力。在服务器环境下，管理员的权限等级为2级；在单人游戏或局域网环境下，开启作弊的房主权限等级为3级。</p><p><strong>自定义</strong></p><p>自定义由下方选项控制：</p><table><tr><th>选项</th><th>简介</th></tr><tr><td>建造</td><td>可以在世界中放置方块。</td></tr><tr><td>挖掘</td><td>可以在世界中挖掘方块。</td></tr><tr><td>使用门和开关</td><td>可以使用门、拉杆和按钮。</td></tr><tr><td>打开容器</td><td>可以打开容器的GUI（如箱子、漏斗和合成器等）。</td></tr><tr><td>攻击玩家</td><td>可以对其他玩家造成伤害。</td></tr><tr><td>攻击生物</td><td>可以对其他生物造成伤害。</td></tr><tr><td>操作员命令</td><td>可以使用管理员命令，同时根据环境修改玩家的权限等级，详见下方。</td></tr><tr><td>传送</td><td>可以使用/tp命令。</td></tr></table><p>无论自己的玩家权限是什么，主持世界的玩家都可以修改所有玩家的玩家权限。其他玩家只有成为管理员才可以修改玩家的玩家权限。所有玩家都可以查看自己和其他玩家的玩家权限，无论自身的玩家权限是什么。特别地，若世界不处于极限模式等情况下，无关主持世界的玩家对应的玩家权限，此玩家均可在设置中修改世界难度、修改世界选项或修改作弊。</p><p><strong>关键提示：</strong>"访客""成员""管理员"是游戏界面中显示的身份标签，而"0级到4级"是游戏引擎实际用于判断指令能否执行的数字。前者是面向玩家的身份标识，后者是面向游戏系统的技术依据。两者相互关联，但不能混为一谈。</p><p><strong>值得注意的是：</strong>网易联机大厅（不包括本地联机）和服务器（包括租赁服和我的山头）内，玩家都无法获得3级和4级的权限等级，但可以使用"魔法指令"以4级权限等级执行命令，且/setmaxplayers在上述玩法中没有实际作用。在租赁服玩法中玩家无法通过任何方式添加或修改函数文件，即没有函数文件。在联机玩法中，一般来说，玩家无法通过任何方式添加或修改函数文件，但玩法本身有相应功能的行为包支持的除外。</p></div>`;
-            pages['第三章'] = `<div class="doc-content"><h1>第三章 指令的构成、解析与执行</h1><h2>3.1 指令的语法结构</h2><p>一条完整的指令由若干以空格隔开的片段组成。理解这些片段的含义，是正确编写指令的基础。</p><p><strong>指令名</strong></p><p>指令名是指令的第一个片段，用于告诉游戏"要执行什么操作"。例如在/give @s diamond 64中，give就是指令名。指令名是固定的字面量，必须原样输入，不能更改。在基岩版中，指令名不区分大小写，/GIVE与/give效果相同，但习惯上使用小写。</p><p><strong>参数</strong></p><p>参数是指令名之后的片段，用于进一步指定"对谁执行""执行什么内容""如何执行"等细节。不同类型的参数有各自的填写规则，常见的参数类型包括：target（目标选择器）、int（整数）、float（浮点数）、string（字符串）、message（消息文本）、x y z（坐标）、Block（方块ID）、Item（物品ID）、json（JSON文本）。</p><p><strong>可选项与必选项的标识</strong></p><p>在基岩版的指令语法提示中，参数通过不同的括号标识其是否必须填写：尖括号<>表示该参数是必选的；方括号[]表示该参数是可选的；无括号的字面量表示该片段是固定的字面量，必须原样输入。</p><p>方括号修饰的输入项一般位于指令末尾，不会出现在指令中间。如果使用命令方块，不需要在指令前添加斜杠/，但加了也无妨。函数文件或控制台执行指令，不应在指令前添加斜杠/。</p><p><strong>空格分隔规则</strong></p><p>指令的各个片段之间必须用空格分隔。游戏通过空格来识别指令名、参数和参数之间的边界。如果参数本身包含空格（如消息文本），通常需要用英文引号包裹，以免被误认为是多个独立的参数。</p><h2>3.2 指令的解析过程</h2><p>指令从输入到执行，需要经过客户端的初步解析和服务端的最终解析两个阶段。</p><p><strong>客户端解析</strong></p><p>当玩家在聊天栏中输入指令时，客户端会先对指令进行初步解析。这一阶段主要完成语法提示和参数预览工作。输入时按下Tab键可循环查看当前可用的指令和参数。在基岩版中，当输入命令时，若某一个参数无法被客户端解析，则语法提示中的下一个参数将从灰色变为白色。</p><p>然而，能被客户端解析并不保证该参数一定能被服务端解析。客户端只是根据语法规则进行格式检查，并不验证参数值的有效性。</p><p><strong>服务端解析</strong></p><p>指令经过客户端初步检查后，会被发送到服务端进行最终解析。服务端解析阶段包括指令识别、参数校验和权限检查。基岩版中，当在命令方块中输入命令后，若命令无法解析，关闭命令方块界面时，错误信息会输出到命令方块的输出框中。</p><p><strong>常见解析错误及原因</strong></p><ul><li>"未知的命令"：输入的指令名不存在或拼写错误。</li><li>"语法错误"：参数数量不对、参数类型不匹配、缺少必要的空格分隔等。</li><li>"你没有权限执行此命令"：执行者的权限等级低于该指令的要求。</li><li>参数值无效：输入的参数值在游戏中不存在。</li></ul><p>若函数文件中存在无法解析的命令，该函数将无法被加载到游戏中。</p><h2>3.3 指令的执行流程</h2><p>指令成功解析后，进入执行阶段。并非所有"解析成功"的指令都会"执行成功"。</p><p><strong>执行结果的反馈</strong></p><ul><li>无法解析：指令不满足语法规则或限制条件，根本未能进入执行阶段。此时指令的成功次数为0，但不会被视为"执行失败"。</li><li>执行失败：指令语法正确、能够解析，但执行过程中未产生预期效果。此时指令的成功次数为0。</li><li>执行成功：指令语法正确，并且至少完成了一次有效操作。此时指令的成功次数大于0。</li></ul><p>"执行成功"的命令不一定会改变游戏世界，"执行失败"的命令也不意味着什么都没有改变。</p><p><strong>指令的成功次数在链式命令中的用途</strong></p><p>指令执行后产生的成功次数（success count）在自动化系统中具有重要作用：红石比较器检测、连锁命令方块的条件执行、/execute store存储。在命令方块调用脚本中，即使指令无法被命令方块执行，它依旧存在成功次数，只是无法通过红石比较器直接获取。</p><h2>3.4 指令的调试方法</h2><p><strong>如何通过报错信息定位问题</strong></p><p>游戏返回的报错信息是调试的第一线索：红色文本提示、命令方块输出框、内容日志。报错信息只会报错一个错误内容，通常是指令字符串的第一个错误内容。</p><p><strong>分步测试的技巧</strong></p><ul><li>在聊天栏中逐条验证</li><li>使用/execute的if子命令进行条件测试</li><li>逐层构建命令链</li><li>利用计分板记录中间状态/利用say汇报中间状态</li><li>注意命令方块与聊天栏的差异</li></ul><h2>3.5 指令术语</h2><p>指令术语是指令学习中的一套基础概念词汇。就像学化学要先理解"原子""分子"，指令学习也需要一套统一的术语，确保大家在讨论、提问、协作时说的是一回事。本节汇总指令学习中常用的基础术语，帮助读者建立统一的概念体系。</p><p><strong>命令（Command）</strong>：通过文本形式向游戏发出的操作请求。命令以特定的语法结构书写，由游戏引擎解析并执行，用于控制游戏状态、操控实体或管理服务器。</p><p><strong>斜杠（/）</strong>：命令的前缀符号。在聊天栏中输入命令时，必须以斜杠开头，用于将命令与普通聊天消息区分。在命令方块、控制台或函数文件中执行命令时，不需要斜杠前缀。</p><p><strong>命令名（Command Name）</strong>：命令的第一个片段，用于指定要执行的操作类型。例如/give中的give就是命令名。命令名是固定的字面量，必须原样输入，不区分大小写。</p><p><strong>参数（Argument / Parameter）</strong>：命令名之后的片段，用于提供执行命令所需的详细信息，如执行对象、物品类型、数量、坐标等。参数分为必选和可选两种，在语法提示中分别以尖括号&lt;&gt;和方括号[]标识。</p><p><strong>字面量（Literal）</strong>：命令中固定不变的部分，必须原样输入。例如/time set day中的set和day都是字面量，不能替换为其他词语（/time set night中的night是另一个字面量，但/time set abc则无效）。</p><p><strong>目标选择器（Target Selector）</strong>：用于在命令中选中一个或多个实体作为操作对象的特殊语法。如@p代表最近玩家，@a代表所有玩家，@e代表所有实体。目标选择器可以附加参数进一步筛选目标。</p><p><strong>目标选择器参数（Target Selector Argument）</strong>：附加在目标选择器后的筛选条件，用于缩小选择范围，写在方括号内。例如@e[type=zombie]中的type=zombie就是目标选择器参数，表示只选择僵尸类型的实体。</p><p><strong>执行者（Executor）</strong>：命令的实际发起主体。执行者可以是玩家、命令方块、函数文件、服务器控制台等。执行者的身份会影响命令的执行结果，例如目标选择器@s代表执行者自身，不同执行者使@s指向不同的对象；执行者的位置也会影响命令的效果范围。</p><p><strong>执行原点（Execution Origin）</strong>：命令执行时的参考位置。玩家执行时以自身位置为原点；命令方块以方块自身位置为原点；控制台或函数文件以世界出生点为原点。执行原点影响坐标的计算，例如/tp @s ~ ~10 ~中的~ ~10 ~是相对坐标，会从执行原点向上移动10格。</p><p><strong>权限等级（Permission Level）</strong>：用于控制命令执行权限的数字体系。基岩版分为0至4共五个等级，数字越大权限越高。每条命令都有其最低权限等级要求，执行者必须达到或超过该等级才能执行对应的命令。</p><p><strong>解析（Parsing）</strong>：游戏将输入的文本命令转换为可执行指令的过程。解析阶段检查命令的语法是否正确、参数类型是否匹配、参数值是否有效。解析失败时命令不会进入执行阶段。</p><p><strong>命令方块（Command Block）</strong>：一种能够自动执行命令的特殊方块。命令方块有三种类型：脉冲、循环、连锁。其权限等级固定为1级，因此无法执行需要2级及以上权限的命令。命令方块中的命令不需要斜杠前缀。</p><p><strong>函数（Function）</strong>：以.mcfunction文件形式存储的多条命令的集合。函数在行为包中定义，通过/function或/schedule指令调用执行。函数的权限等级为1级。</p><p><strong>魔法指令（Magic Command）</strong>：网易中国版内置的AI辅助指令功能。玩家用自然语言描述想要的效果，系统自动生成并执行对应的游戏指令。魔法指令的权限等级相当于4级，能够执行普通管理员无法执行的命令。</p><p><strong>执行结果（Result）</strong>：命令执行后产出的数值反馈。在基岩版中，命令方块执行命令后会产出执行结果，该结果可以通过红石比较器输出为红石信号强度，也可通过/execute store子命令存储到计分板中供后续逻辑使用。</p><p><strong>成功次数（Success Count）</strong>：命令执行后产出的成功计数，表示该命令是否成功执行了预期的操作。成功次数为0表示命令未产生有效操作；大于0表示至少完成了一次有效操作。在基岩版中，命令执行后的成功次数也可以通过红石比较器输出。命令的"执行结果"与"成功次数"通常是一致的，但并非所有命令都严格符合。例如/scoreboard players add命令不产生执行结果，但会产生成功次数。此外，命令的执行结果和成功次数均不受游戏规则commandBlockOutput和sendCommandFeedback的影响。</p><p><strong>输出框（Output Box）</strong>：命令方块界面中用于显示命令执行结果或错误信息的区域。输出框对调试命令具有参考作用。</p><p><strong>内容日志（Content Log）</strong>：基岩版创作者设置中的日志系统，用于记录命令执行过程中的错误、警告等信息。内容日志对排查行为包、命令组合等复杂问题具有重要作用。</p><p><strong>出生点（Spawn Point）</strong>：实体进入世界时出现的位置。分为以下两种：世界出生点（World Spawn）由世界生成时确定的固定坐标，通常位于世界原点附近。当玩家首次进入世界、死亡后重生（且无可用个人出生点）、通过末地传送门返回主世界时，均会出现在世界出生点。任何非玩家实体被传送时，若未指定目标位置，默认被送往世界出生点。玩家出生点（Player Spawn Point）是玩家通过床或重生锚设置的个性化出生位置。玩家死亡后，游戏会首先尝试将其放置在其个人出生点。如果玩家没有设置个人出生点，或个人出生点被阻挡或破坏，玩家就会出现在世界出生点，同时原有的个人出生点会被删除。</p><p><strong>文本组件（Text Component）</strong>：在基岩版中，文本组件是用于格式化聊天消息、物品名称、告示牌内容等的JSON结构。它通过rawtext数组组织多个文本片段，每个片段可以是纯文本（text）、翻译文本（translate）、分数显示（scores）或玩家名称（selector）。文本组件支持颜色、粗体、斜体、点击事件、悬停事件等格式，广泛应用于/tellraw、/titleraw等命令。</p><p><strong>行为包（Behavior Pack）</strong>：行为包是基岩版中用于修改或扩展游戏玩法的文件集合。行为包可以定义新的实体行为、物品属性、合成配方、战利品表、函数文件等内容。与资源包（用于修改视觉资源）不同，行为包侧重游戏逻辑层面的修改。函数文件（.mcfunction）通常存放在行为包中，通过/function指令调用执行。</p><p><strong>坐标（Coordinate）</strong>：坐标用于在Minecraft世界中确定三维空间中的位置。游戏使用右手坐标系，其中X轴指向东（正方向），Z轴指向南（正方向），Y轴向上（正方向）。坐标值的单位与游戏中的格数相对应。坐标有三种表示格式：绝对坐标用具体数值表示世界中的固定位置，如100 64 -200；相对坐标用波浪号~表示相对于执行原点的偏移量，例如/tp ~ ~10 ~表示在执行原点位置向上移动10格；局部坐标用脱字符^表示相对于执行者头部朝向的偏移量，例如/tp ^^^5表示沿执行者视线方向向前移动5格。</p><p><strong>调试命令（Debug Command）</strong>：调试命令主要用于游戏开发、行为包测试和问题排查，而非正常游戏过程中的常规使用。基岩版中的调试命令包括/debug（用于性能分析）、/reload（重新加载行为包和资源包）以及部分仅限开发者使用的诊断命令。注意：调试命令应当仅作调试用途使用，不应在正常游戏过程中开启。开启调试工具可能导致游戏崩溃或对存档产生不可逆的损害。除非明确知道自己在做什么，否则不建议普通玩家使用调试命令。</p><p><strong>WebSocket服务器（WebSocket Server）</strong>：WebSocket服务器是一种网络通信服务，与基岩版的/wsserver命令配合使用。/wsserver命令用于将游戏连接至指定的WebSocket服务器，使游戏能够接收外部指令并向外部发送数据。该命令需要权限等级2级才能执行。WebSocket服务器常用于实现第三方工具与Minecraft游戏之间的数据交互，例如远程管理工具、自动化脚本、实时数据监控等场景。魔法指令的权限等级相当于WebSocket服务器，这也是魔法指令能够执行/agent等需要较高权限的命令的原因之一。</p><p><strong>基岩版开发者命令（Bedrock Developer Commands）</strong>：基岩版开发者命令是Mojang为基岩版开发人员提供的一组特殊命令，用于测试、调试和开发行为包。这类命令通常不在正式游戏内容中面向普通玩家开放，部分开发者命令的权限等级要求较高（如权限等级3或4）。大多数开发者命令在正式版游戏中不可见或不可用，除非在开发者模式下运行。常见开发者命令包括但不限于/debug、部分实体和方块属性的测试命令等。普通玩家不应尝试使用这类命令，因为开发者命令未经充分测试，可能引发游戏崩溃或存档损坏。开发者命令在正式版中通常不可用，本书不作系统讲解。如需查阅开发者命令的详细列表，可参考Minecraft官方开发者文档或我的世界中文Wiki中的"基岩版开发者命令"条目。</p><p><strong>JSON</strong>：JSON（JavaScript Object Notation）是一种轻量级的数据交换格式，以易于阅读和编写的文本形式表达结构化数据。在Minecraft基岩版中，JSON主要用于两类场景：一、命令中的文本显示——JSON用于/tellraw、/titleraw等命令中，实现带格式、带动态内容的富文本消息。其核心结构为rawtext数组，配合text、translate、selector、score等组件，可构建复杂的文本输出。详见第六章"JSON文本"。二、附加包的数据驱动配置——在行为包和资源包中，JSON文件用于定义物品、方块、实体、配方、战利品表、交易、音效、书本等内容。与"文本组件"的关系：文本组件（Text Component）是JSON在Minecraft中的一种具体应用形式。简单来说，文本组件是"用途"（用于显示文本），JSON是"工具"（用于组织数据）。文本组件通过JSON语法实现其功能——rawtext结构、text、selector、score等均为JSON格式的具体体现。两者是应用与工具的关系。</p><p><strong>Molang</strong>：Molang是基岩版中用于计算动态数值的表达式语言。它主要用于行为包和资源包中的数据驱动配置中，在需要动态计算数值的场景下（如粒子效果的运动轨迹、实体属性的实时变化）发挥作用。Molang可以通过/playanimation指令在游戏内直接调用。/playanimation指令允许实体播放动画，并允许通过Molang表达式实时控制动画行为。其stop_expression参数用于定义动画的终止条件——当Molang表达式返回真值（非0）时，动画即停止播放。Molang的基本语法类似简单的编程表达式，支持算术运算（加减乘除）、逻辑运算（与或非）、条件表达式（三元运算符）以及内置的查询函数（如q.is_alive、q.scoreboard）。注意，variable可以简写为v，query可以简写为q。</p><p><strong>刻（Tick）简称T</strong>：Minecraft中的时间单位。游戏将现实时间划分为若干个离散的单位，每个单位称为一"刻"。刻是衡量游戏循环、方块更新、实体行为、红石信号等所有机制的基础时间尺度。不同"刻"的概念指代不同的更新机制。</p><p><strong>游戏刻（Game Tick）简称GT</strong>：Minecraft服务端的主循环周期。每个游戏刻，服务端会进行一次完整的更新：处理玩家输入、移动实体、更新方块状态、执行指令、处理命令方块等。游戏刻是Minecraft时间计算的最小单位，所有基于时间的机制（如熔炉烧炼、红石延迟、作物生长）都以游戏刻为基础进行计算。游戏刻的目标频率为每秒20次（即每50毫秒一次），服务端负载过重时可能无法维持此频率。</p><p><strong>红石刻（Redstone Tick）</strong>：红石刻用于红石电路系统，是红石信号传播和延迟的基本时间单位。1红石刻等于2游戏刻，即0.1秒。红石中继器的默认延迟为1红石刻（2游戏刻）。机械能等红石相关机制以红石刻为时间基准。</p><p><strong>区块刻（Chunk Tick）</strong>：区块刻用于区块级别的随机更新，主要作用于已加载区块中的方块。每个游戏刻，服务端会从已加载区块中随机选择一部分区块进行"区块刻"处理。区块刻主要用于处理水体的流动、草方块的蔓延、树叶的枯萎等非实时的环境变化。每区块每游戏刻被选中的概率较低，因此区块刻更新是随机的、概率性的，而非确定性定时更新。</p><p><strong>随机刻（Random Tick）</strong>：随机刻是方块级别的随机更新机制，是区块刻的具体执行单元。每个游戏刻，服务端对每个已加载的区块选择随机位置进行方块更新。随机刻是Minecraft中多种自然过程（如农作物生长、菌类扩散、树叶枯萎、冰融化、雪堆积等）的驱动力。随机刻的频率受游戏规则randomTickSpeed控制，默认值为1（即每区块每游戏刻约3个方块接受随机刻）。与游戏刻不同，随机刻是完全随机和概率性的。</p><p><strong>欧几里得距离</strong>：欧几里得距离（Euclidean distance），亦被称为直线距离，用两点之间的线段长度来测量彼此的距离。这种距离使用勾股定理计算，d=√((x₁-x₂)²+(y₁-y₂)²+(z₁-z₂)²)。游戏中部分情况取用水平欧几里得距离，其范围为高度无限的圆柱体：d=√((x₁-x₂)²+(z₁-z₂)²)。这是几何学中对两点距离最精确的算法。游戏一般只在需要较大精确度的地方使用欧几里得距离算法，相对不太常用。然而，平方根算法是一个处理器密集型算法，特别是在处理器性能不高的设备上，在同一游戏刻中执行的处理器密集型操作过多可能会导致游戏卡顿。如果不是需要精确求得欧几里得距离，只是比较欧几里得距离是否达到某个值，则不需要执行平方根算法，如比较两点之间的欧几里得距离是否达到16，只需比较开平方前的值是否达到256即可，无需将该值开平方后再与16比较，比较两个点与第三点之间的欧几里得距离同样也不需要执行平方根算法。游戏在处理生物和弹射物移动时进行的运算是已知欧几里得距离、起点坐标和方向反求终点坐标，此时用到的算法是正弦算法，同样也是一个处理器密集型算法，在处理爆炸对实体的推动时，根据实体与爆炸源的位置处理移动方向不需要使用正弦算法，但求出终点坐标时依然要使用平方根算法，所以生成大量生物、同时发射大量弹射物、点燃大量TNT等操作易导致游戏卡顿。</p><p><strong>值得注意的是（It is worth noting that）</strong>：一般表示指令在实际应用中需要注意的地方，或者中国版特有的内容。</p></div>`;
-            pages['第四章'] = `<div class="doc-content"><h1>第四章 命令方块</h1><h2>4.1 命令方块的基本概念与类型</h2><p>命令方块（Command Block）是Minecraft中的一种特殊方块，其核心功能是在游戏中自动执行命令。玩家可以在聊天栏中手动输入的命令，同样可以由命令方块通过来自动运行，但需要注意权限等级的问题。命令方块是构建指令自动化系统的核心工具。单个命令方块只能执行一条指令，但通过将多个命令方块串联成链，可以设计出复杂的游戏机制与交互逻辑。</p><p>命令方块共有三种类型，以方块外观颜色区分：</p><p><strong>脉冲命令方块（Impulse Command Block）</strong></p><p>外观为橙色。其执行规则为：每次只执行一次命令，需要再次收到红石信号或改变触发方式。适合需要"一次性触发"的场景，如传送按钮、给予物品的交互点。</p><p><strong>循环命令方块（Repeating Command Block）</strong></p><p>外观为紫色。其执行规则为：被激活期间，默认每个游戏刻执行一次命令。适合需要持续检测条件的功能，如区域检测、自动补给等。需要注意的是，大量循环命令方块保持开启状态会造成明显卡顿，应避免过度使用。</p><p><strong>连锁命令方块（Chain Command Block）</strong></p><p>外观为绿色。其执行规则为：当指向它的命令方块被激活后，该连锁命令方块才会执行。连锁命令方块通常配合脉冲或循环命令方块使用，形成命令执行链（简称"命令链"）。</p><h2>4.2 命令方块的设置与界面</h2><p>右键点击命令方块，可打开其配置界面。以下为主要设置项：</p><p><strong>命令的输入与编辑</strong></p><p>界面中央为命令输入框，用于输入要执行的命令。与聊天栏不同，命令方块中不需要以斜杠/开头（但加上也无妨）。例如，要在命令方块中给予玩家钻石，只需输入give @s diamond，而非/give @s diamond。</p><p><strong>方块朝向与执行方向</strong></p><p>放置命令方块时，方块顶部会出现一个箭头图案。箭头始终指向放置时玩家与命令方块的相对的方向。在链式设计中，箭头方向决定了命令的执行顺序：箭头所指的方向即为命令流向。即当一个命令方块执行完毕后，其箭头指向的方块将成为下一个执行目标。</p><p><strong>保持开启/红石控制</strong></p><p>在界面中可设置触发方式："需要红石"仅在收到红石信号时触发，这是默认选项；"保持开启"无需红石信号即可持续运行。对于脉冲命令方块，此模式会使它在设置完成后立即执行一次，此后不会再次触发；对于循环命令方块，此模式会使它以默认每游戏刻一次的频率无限执行；对于连锁命令方块，此模式在链式设计中通常默认启用。</p><p><strong>无条件/有条件</strong></p><p>"条件"设置决定命令方块何时执行动作："无条件"（默认）无论前一个命令方块是否执行成功，本命令方块都会执行；"有条件"只有在链中前一个命令方块执行成功时，本命令方块才会执行。若前一个命令失败，则本命令方块跳过执行，但依然会使箭头指向的命令方块执行。该选项仅对连锁命令方块有意义。</p><p><strong>延迟刻设置</strong></p><p>在界面中可设置"延迟刻"（Delay in Ticks），范围为0至2,147,483,647游戏刻。该选项设定命令方块从被激活到执行命令的等待时间。对于循环命令方块，延迟刻决定了两次执行之间的间隔时间；对于脉冲命令方块，延迟刻决定了红石信号触发后延迟多久执行；对于连锁命令方块，延迟刻决定了在前一命令执行完毕后再延迟多久执行本命令。</p><p><strong>执行第一个已选项（Execute on First Tick）</strong></p><p>该选项仅对循环命令方块有效：开启时，循环命令方块在激活后立即执行一次命令，然后等待延迟时间再继续循环；关闭时，循环命令方块先等待延迟时间，再执行第一次命令。配合延迟刻设置，此选项可用于控制循环命令方块的初始执行时机。</p><h2>4.3 命令方块的连接与链式执行</h2><p>链式执行是命令方块自动化的核心设计模式。</p><p><strong>简单串联与条件链</strong></p><p>简单串联是最基础的链式结构：一个脉冲命令方块（起始方块）后连接多个连锁命令方块。当脉冲方块触发时，连锁方块按照箭头方向依次执行。条件链则在此基础上增加了逻辑判断。将某些连锁方块设置为"有条件"模式，它们会检测前置命令的执行结果：只有前置命令执行成功，条件链方块才会执行；否则该方块及后续依赖它的命令都会被跳过，而箭头指向的下一个无条件连锁方块仍会正常执行。</p><p><strong>循环命令方块的退出条件</strong></p><p>循环命令方块默认无限循环。如果只需要在特定条件下执行有限次数，需要设计退出机制。一个常用的退出模式是：循环命令方块持续检测某个计分板的值。当计分板达到目标值时，通过命令关闭循环命令方块或重置红石信号，从而终止循环。</p><p><strong>常用设计模式</strong></p><ul><li>定点检测模式：循环命令方块保持开启，持续检测某坐标处的方块类型。当条件满足时，触发连锁命令方块执行动作，并通过清空检测位置来"锁定"，防止重复触发。</li><li>连锁反应模式：一个脉冲命令方块触发后，由连锁命令方块执行一系列有序操作——先后给予玩家物品、传送至指定位置、播放音效和粒子效果、发送提示消息——所有操作在同一游戏刻内依次完成。</li><li>定时循环模式：循环命令方块设置较大的延迟刻，每隔数秒执行一次定时任务，适用于定时公告、自动存档提醒、定时重置场地等场景。</li></ul><h2>4.4 命令方块的调试与维护</h2><p><strong>使用有条件连锁命令方块观测执行状态</strong></p><p>在调试复杂的命令方块系统时，了解每条命令是否成功执行至关重要。一个实用的技巧是：在链中插入一个执行/say的有条件连锁命令方块，用于汇报前置命令的执行状态。具体操作：在关键步骤后连接一个有条件连锁命令方块，输入命令say [步骤名] 执行成功。若该方块成功执行，说明前置命令成功执行；若未执行，则前置命令失败。</p><p><strong>命令方块界面中的输出框</strong></p><p>命令方块界面下方设有输出框。命令执行后，输出框会显示执行结果或错误信息，明确指出指令的具体错误位置。这是调试命令方块最直接的参考工具。</p><p><strong>内容日志</strong></p><p>在基岩版的"创作者设置"中开启"内容日志"，可记录命令执行过程中的更详细错误与警告信息。内容日志对排查行为包中的函数文件或复杂命令组合的解析问题尤其有用。</p><p><strong>调试过程中的常见问题</strong></p><ul><li>命令方块未执行：检查触发方式——"需要红石"模式下是否提供了红石信号，"保持开启"模式下是否正确设置。</li><li>连锁方块未执行：确认箭头方向是否正确，确认前一个命令方块是否成功执行（"有条件"模式下）。</li><li>循环方块过度执行：检查是否缺少退出条件，导致命令无限执行占用服务器性能。</li><li>命令在聊天栏中可用但在命令方块中无效：执行者顺序问题或命令本身的时序问题。可以尝试条件execute嵌套解决。解释这些问题比较复杂，不在这里赘述，请参考附录三。</li></ul></div>`;
-            pages['第五章'] = `<div class="doc-content"><h1>第五章 目标选择器</h1><p style="font-size:clamp(1.6rem, 2.4vw, 2.2rem);font-weight:700;color:var(--text-primary);text-align:center;padding:0.6rem 0;letter-spacing:4px;"><a href="https://zh.minecraft.wiki/w/%E7%9B%AE%E6%A0%87%E9%80%89%E6%8B%A9%E5%99%A8" target="_blank" style="color:var(--accent);text-decoration:none;transition:color var(--transition);">看 中文 Minecraft Wiki</a></p></div>`;
-            pages['第六章'] = `<div class="doc-content"><h1>第六章 JSON 文本</h1>...完整内容...</div>`;
-            pages['第七章'] = `<div class="doc-content"><h1>第七章 Molang 语言</h1>...完整内容...</div>`;
-            pages['第八章'] = `<div class="doc-content"><h1>第八章 计分板</h1>...完整内容...</div>`;
-            pages['第九章'] = `<div class="doc-content"><h1>第九章 标签与数据标签NBT</h1>...完整内容...</div>`;
-            pages['第十章'] = `<div class="doc-content"><h1>第十章 粒子技术</h1>...完整内容...</div>`;
-            pages['第十一章'] = `<div class="doc-content"><h1>第十一章 /execute全解</h1>...完整内容...</div>`;
-            pages['玩家游玩建议'] = `<div class="doc-content"><h1>🎮 玩家游玩建议</h1>...完整内容...</div>`;
-            pages['管理员学习手册'] = `<div class="doc-content"><h1>📖 管理员学习手册</h1><p style="color:var(--text-secondary);">方块狂想曲管理员团队学习教材 · 服主弘桀孤影行 编著</p><p>为深入贯彻"玩家体验至上"的服务器理念，切实构建一支心怀热爱、服务玩家、忠于职守、甘于奉献的高素质管理员队伍，全面提升服务器建设质量与运维水平，保障服务器高质量可持续发展，服主弘桀孤影行特立此书，以供学习。</p><h2>一、我们是什么</h2><p>我们是Minecraft中国版服务器：方块狂想曲服务器的管理员团队。是在方块狂想曲长期的建设与发展中脱颖而出的优秀玩家。在服务器中有着较大的历史贡献和玩家认可度。</p><p>本届管理员团队是服主弘桀孤影行在结合寒假存档期间全体玩家的历史贡献与上届管理员团队的履职实际进行安排的，同时根据"共创家园"赛季开服以来的实际履职情况进行了确认。</p><h2>二、我们要做什么</h2><p>作为方块狂想曲管理员团队，我们的第一要义就是为玩家服务、为服务器的建设与发展贡献技术与管理的才能。我们的一切行为都须遵从在"玩家体验至上"的服务器理念。我们的一切决策都是拥护服主弘桀孤影行对服务器的统一领导的。</p><p>作为管理员，拥有相较于普通玩家更大的服务器权限和权利、更高的服务器参与度。在服务器重大决策中，往往需要充分听取管理员团队的建议和意见。所以你的游戏理解与服务器参与度，直接决定了服务器能否作出有利于玩家和服务器发展的决策。</p><ul><li>管理员团队应遵循的团结协作原则。</li><li>在合理范围内质疑服主弘桀孤影行的决定是被鼓励的。</li><li>作为管理员，管理服务器是你的本职工作。你需要为服务器的建设与发展贡献你的才能。</li><li>在建设攻坚阶段，有建筑才能管理员尤为重要。</li></ul><p>服主弘桀孤影行指令能力与游戏理解已经处于Minecraft游戏顶尖水准，服务器当前对指令方面的人才需求不高。</p><p>因此，对于以"指令师"或"会指令"为由的毛遂自荐，服主一般不予采纳。若对方确有可核实的指令造诣或公开作品，可提交管理员团队评估——但任何未经评估的自荐行为均属违规。</p><h2>三、我们的宗旨</h2><p style="font-size:clamp(1.6rem, 2.4vw, 2.2rem);font-weight:700;color:var(--text-primary);text-align:center;padding:0.6rem 0;letter-spacing:4px;">心怀热爱、服务玩家、忠于职守、甘于奉献</p><h2>四、我们不能做什么</h2><p>作为方块狂想曲管理员团队的一员，我们不能做的有：</p><ol><li>违背或破坏服务器纲领确立的服务器原则；</li><li>破坏服主弘桀孤影行的统一领导；</li><li>违背"玩家体验至上"的服务器理念；</li><li>违背或破坏服主令的决定；</li><li>违背或破坏经过实践证明是正确的决策；</li><li>倒行逆施；</li><li>违背或恶意破坏经过管理员团队充分讨论后作出的决定；</li><li>恶意或蓄意破坏服务器内容；</li><li>恶意破坏玩家游戏体验；</li><li>公然带头违背服务器规则、制度以及服务器纲领确立的体制；</li><li>未经授权，以服主弘桀孤影行的名义发布命令、公布决定；</li><li>破坏交流群秩序、和谐氛围；</li><li>用生成式大模型干扰服主弘桀孤影行正常履职，例如《方块狂想曲服务器服主令2026第3号（关于废止《终极公告》并重申服主权威的决定）》中，关于"出击的阴笑徐铮"擅自发布《终极公告》的行为；</li><li>发布一些很荒谬的决定或通知，例如"依据现实世界强制管理条例，服主弘桀孤影行因上课时间启动紧急制裁，当场失去全部文字游戏权力，暂时退出服务器制度辩论现场。"；</li><li>口出狂言、辱骂玩家；</li><li>越权行事。</li></ol><h2>五、对待玩家</h2><p style="font-size:clamp(1.6rem, 2.4vw, 2.2rem);font-weight:700;color:var(--text-primary);text-align:center;padding:0.6rem 0;letter-spacing:4px;">放下身段、积极响应、公平对待、理性处理</p><div class="footnote"><p>方块狂想曲管理员团队 · 服主弘桀孤影行 立</p></div></div>`;
-            pages['论坛'] = `<div class="doc-content"><h1>💬 论坛</h1><p style="color:var(--text-secondary);">玩家交流与反馈平台</p><div class="highlight-box"><p>论坛功能正在建设中，敬请期待。</p><p>目前可通过QQ交流群进行交流：<strong>1103227383</strong></p></div></div>`;
-            // ============================================================
-                    // 4. 页面加载函数
+        var pagePathMap = {
+            // 制度汇编
+            '玩家权限体制': '/pages/制度汇编/玩家权限体制.html',
+            '玩家行政权限体制': '/pages/制度汇编/玩家行政权限体制.html',
+            '监督委员会制度': '/pages/制度汇编/监督委员会制度.html',
+            '创造者协会章程': '/pages/制度汇编/创造者协会章程.html',
+            // 服主令
+            '2026第1号': '/pages/服主令/2026-1号.html',
+            '2026第2号': '/pages/服主令/2026-2号.html',
+            '2026第3号': '/pages/服主令/2026-3号.html',
+            '2026第4号': '/pages/服主令/2026-4号.html',
+            '2026第5号': '/pages/服主令/2026-5号.html',
+            '2026第6号': '/pages/服主令/2026-6号.html',
+            // 人物志
+            '弘桀孤影行': '/pages/人物志/弘桀孤影行.html',
+            '出击的阴笑徐铮': '/pages/人物志/出击的阴笑徐铮.html',
+            // 技术文档
+            'MCC目录': '/pages/技术文档/MCC/目录.html',
+            '盔甲架指南': '/pages/技术文档/盔甲架指南.html',
+            '认识基岩版': '/pages/技术文档/认识基岩版.html',
+            '第一章': '/pages/技术文档/第一章.html',
+            '第二章': '/pages/技术文档/第二章.html',
+            '第三章': '/pages/技术文档/第三章.html',
+            '第四章': '/pages/技术文档/第四章.html',
+            '第五章': '/pages/技术文档/第五章.html',
+            '第六章': '/pages/技术文档/第六章.html',
+            '第七章': '/pages/技术文档/第七章.html',
+            '第八章': '/pages/技术文档/第八章.html',
+            '第九章': '/pages/技术文档/第九章.html',
+            '第十章': '/pages/技术文档/第十章.html',
+            '第十一章': '/pages/技术文档/第十一章.html',
+            // 玩家文档
+            '玩家游玩建议': '/pages/玩家文档/游玩建议.html',
+            '管理员学习手册': '/pages/玩家文档/管理员手册.html',
+            // 论坛
+            '论坛': '/pages/论坛/index.html'
+        };
+
+        // ============================================================
+        // 4. 页面加载函数（fetch 按需加载 + sessionStorage 缓存）
         // ============================================================
         function loadPage(pageId) {
             var home = document.getElementById('home-content');
             var pageContent = document.getElementById('page-content');
-            var content = pages[pageId];
-            if (!content) {
-                content = '<div class="doc-content"><h1>📄 ' + pageId + '</h1><p style="color:var(--text-muted);">此页面内容正在建设中，敬请期待。</p></div>';
+            var path = pagePathMap[pageId];
+
+            if (!path) {
+                home.style.display = 'none';
+                pageContent.style.display = 'block';
+                pageContent.innerHTML = '<div class="doc-content"><h1>📄 ' + pageId + '</h1><p style="color:var(--text-muted);">此页面内容正在建设中，敬请期待。</p></div>';
+                updateActiveState(pageId);
+                return;
             }
+
+            // 检查缓存
+            var cacheKey = 'page_' + pageId;
+            var cached = sessionStorage.getItem(cacheKey);
+            if (cached) {
+                home.style.display = 'none';
+                pageContent.style.display = 'block';
+                pageContent.innerHTML = cached;
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+                history.pushState(null, '', '#page-' + pageId);
+                updateActiveState(pageId);
+                return;
+            }
+
+            // 显示加载中
             home.style.display = 'none';
             pageContent.style.display = 'block';
-            pageContent.innerHTML = content;
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-            history.pushState(null, '', '#page-' + pageId);
-            document.querySelectorAll('.sub-menu a, .card-list li').forEach(function(el) { el.classList.remove('active'); });
-            document.querySelectorAll('.sub-menu a[href="#page-' + pageId + '"]').forEach(function(el) { el.classList.add('active'); });
+            pageContent.innerHTML = '<div class="doc-content"><p style="color:var(--text-muted);text-align:center;padding:3rem 0;"><i class="fas fa-spinner fa-spin"></i> 加载中...</p></div>';
+
+            fetch(path)
+                .then(function(response) {
+                    if (!response.ok) throw new Error('HTTP ' + response.status);
+                    return response.text();
+                })
+                .then(function(html) {
+                    sessionStorage.setItem(cacheKey, html);
+                    pageContent.innerHTML = html;
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                    history.pushState(null, '', '#page-' + pageId);
+                    updateActiveState(pageId);
+                })
+                .catch(function() {
+                    pageContent.innerHTML = '<div class="doc-content"><h1>📄 ' + pageId + '</h1><p style="color:var(--text-muted);">加载失败，请检查网络连接后重试。</p></div>';
+                });
         }
 
+        // ============================================================
+        // 5. 更新高亮状态
+        // ============================================================
+        function updateActiveState(pageId) {
+            document.querySelectorAll('.sub-menu a, .card-list li').forEach(function(el) {
+                el.classList.remove('active');
+            });
+            document.querySelectorAll('.sub-menu a[href="#page-' + pageId + '"]').forEach(function(el) {
+                el.classList.add('active');
+            });
+        }
+
+        // ============================================================
+        // 6. 返回首页
+        // ============================================================
         function showHome() {
             document.getElementById('home-content').style.display = 'block';
             document.getElementById('page-content').style.display = 'none';
             history.pushState(null, '', '/');
-            document.querySelectorAll('.sub-menu a, .card-list li').forEach(function(el) { el.classList.remove('active'); });
+            document.querySelectorAll('.sub-menu a, .card-list li').forEach(function(el) {
+                el.classList.remove('active');
+            });
         }
 
         window.loadPage = loadPage;
         window.showHome = showHome;
 
         // ============================================================
-        // 5. 登录功能（模态框 + localStorage）
+        // 7. 登录功能
         // ============================================================
         function openLoginModal(e) {
             if (e) e.preventDefault();
@@ -380,18 +479,8 @@
             }
         }
 
-        // Enter键触发登录
-        document.addEventListener('DOMContentLoaded', function() {
-            document.getElementById('loginUsername').addEventListener('keydown', function(e) {
-                if (e.key === 'Enter') login();
-            });
-            document.getElementById('loginModal').addEventListener('click', function(e) {
-                if (e.target === this) closeLoginModal();
-            });
-        });
-
         // ============================================================
-        // 6. 侧边栏和初始化
+        // 8. 侧边栏和初始化
         // ============================================================
         function initSidebar() {
             document.querySelectorAll('.category-toggle').forEach(function(toggle) {
@@ -431,6 +520,7 @@
             }
         }
 
+        // DOM 加载完成后初始化
         document.addEventListener('DOMContentLoaded', function() {
             document.body.classList.add('loaded');
             renderCards();
@@ -438,6 +528,14 @@
             initRoomStatus();
             initHash();
             updateAuthUI();
+
+            // Enter 键触发登录
+            document.getElementById('loginUsername').addEventListener('keydown', function(e) {
+                if (e.key === 'Enter') login();
+            });
+            document.getElementById('loginModal').addEventListener('click', function(e) {
+                if (e.target === this) closeLoginModal();
+            });
         });
     </script>
 </body>
