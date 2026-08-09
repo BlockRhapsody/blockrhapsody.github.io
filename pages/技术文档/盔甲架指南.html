@@ -1,0 +1,62 @@
+<div class="doc-content">
+    <h1>🛡️ 方块狂想曲盔甲架使用指南</h1>
+    <p style="color:var(--text-secondary);">Comprehensive Guide to Armor Stands</p>
+
+    <p>在方块狂想曲服务器中，盔甲架是承载指令逻辑、实体判定、物品展示与动画演示的核心元素。为帮助玩家充分发挥其价值，服主弘桀孤影行基于指令技术，构建了一套便捷高效的盔甲架快捷操作模式。</p>
+
+    <h2>一、使用命名</h2>
+    <p>通过命名牌为盔甲架赋予特定名称，即可激活对应功能：</p>
+
+    <table>
+        <tr>
+            <th>命名</th>
+            <th>触发效果</th>
+        </tr>
+        <tr>
+            <td><code>rotate</code></td>
+            <td>以每秒+20°偏航角（Yaw）的速度持续顺时针自旋，其余运动状态不变。</td>
+        </tr>
+        <tr>
+            <td><code>invisibility</code></td>
+            <td>进入隐身状态（获得隐身效果），其余属性不变。</td>
+        </tr>
+        <tr>
+            <td><code>Keep_up</code></td>
+            <td>以每秒1格的速度沿Y轴匀速上升，仅改变垂直坐标。</td>
+        </tr>
+        <tr>
+            <td><code>rotate_and_invisibility</code></td>
+            <td>同时触发自旋（+20°/s）与匀速上升（1格/s）两种效果。</td>
+        </tr>
+        <tr>
+            <td><code>spreadplayers</code></td>
+            <td>在当前位置召唤一个名为 <code>origin</code> 的盔甲架，并令其每游戏刻（Tick）在所有水平面29×29范围内进行随机扩散移动。</td>
+        </tr>
+        <tr>
+            <td><code>Dinnerbone</code></td>
+            <td>盔甲架模型倒立。同时放大手持物品（播放动画），并附加隐身与自旋（+20°/s）效果。名为 <code>Grumm</code> 的倒立盔甲架不受影响。</td>
+        </tr>
+    </table>
+
+    <h2>二、使用物品条件</h2>
+    <p>除命名外，赋予盔甲架特定手持物品亦可触发特殊状态：</p>
+
+    <table>
+        <tr>
+            <th>手持物品</th>
+            <th>触发效果</th>
+        </tr>
+        <tr>
+            <td>海晶灯</td>
+            <td>进入隐身状态（获得隐身效果），其余属性不变。</td>
+        </tr>
+        <tr>
+            <td>荧石</td>
+            <td>进入无敌模式：连续获得256级抗性提升、生命回复与瞬间治疗效果。<br /><span style="color: var(--text-muted); font-size: 0.85rem;">注：该模式下，创造模式玩家仍可正常破坏该盔甲架。</span></td>
+        </tr>
+    </table>
+
+    <div class="footnote">
+        <p><i class="fas fa-cube"></i> 基于指令技术构建 · 方块狂想曲内部文档</p>
+    </div>
+</div>
