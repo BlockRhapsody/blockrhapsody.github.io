@@ -10,7 +10,7 @@
     <meta name="description" content="方块狂想曲服务器 · 制度汇编 · 技术文档 · 玩家指南" />
     <meta name="theme-color" content="#0d0d1a" />
     <style>
-        /* ===== 全部样式保持不变 ===== */
+        /* ===== 全局重置 ===== */
         *{margin:0;padding:0;box-sizing:border-box}
         :root{--bg-primary:#0a0a14;--bg-secondary:#12122a;--bg-card:#1a1a3e;--bg-sidebar:#0e0e22;--border-color:#2a2a5a;--text-primary:#ececf0;--text-secondary:#9a9abe;--text-muted:#6a6a8a;--accent:#4CAF50;--accent-hover:#66BB6A;--accent-glow:rgba(76,175,80,0.25);--font-pixel:'Pixelify Sans','Courier New',monospace;--radius:16px;--transition:0.35s cubic-bezier(0.34,1.56,0.64,1);--bounce:0.5s cubic-bezier(0.34, 1.56, 0.64, 1);--smooth:0.4s cubic-bezier(0.22, 1, 0.36, 1);--gentle:0.6s cubic-bezier(0.34, 1.2, 0.64, 1)}
         html{scroll-behavior:smooth}
@@ -26,13 +26,13 @@
         /* ===== 导航栏 ===== */
         .navbar{position:sticky;top:0;z-index:100;background:rgba(10,10,20,0.85);backdrop-filter:blur(18px) saturate(1.2);border-bottom:1px solid var(--border-color);padding:0.7rem 2rem;transition:background var(--transition)}
         .nav-container{max-width:1440px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;gap:1rem}
-        .nav-brand a{font-size:clamp(1.1rem, 3vw, 1.8rem);font-weight:700;color:var(--text-primary);display:flex;align-items:center;gap:0.6rem;letter-spacing:1px;transition:transform var(--transition);white-space:nowrap}
+        .nav-brand a{font-size:clamp(1.4rem, 3.5vw, 2.2rem);font-weight:700;color:var(--text-primary);display:flex;align-items:center;gap:0.6rem;letter-spacing:1px;transition:transform var(--transition);white-space:nowrap}
         .nav-brand a:hover{transform:scale(1.02)}
-        .nav-brand img{height:clamp(28px, 4vw, 44px);width:auto;display:block;image-rendering:pixelated}
-        .nav-actions{display:flex;align-items:center;gap:clamp(0.4rem, 1vw, 1rem);flex-shrink:0}
-        .nav-btn{padding:clamp(0.25rem, 0.6vw, 0.5rem) clamp(0.6rem, 1.2vw, 1.2rem);border-radius:40px;font-size:clamp(0.65rem, 0.9vw, 0.85rem);font-weight:700;font-family:var(--font-pixel);background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.08);color:var(--text-secondary);cursor:pointer;transition:all var(--transition);display:inline-flex;align-items:center;gap:0.4rem;white-space:nowrap}
+        .nav-brand img{height:clamp(32px, 4.5vw, 52px);width:auto;display:block;image-rendering:pixelated}
+        .nav-actions{display:flex;align-items:center;gap:clamp(0.5rem, 1.2vw, 1.2rem);flex-shrink:0}
+        .nav-btn{padding:clamp(0.35rem, 0.7vw, 0.6rem) clamp(0.8rem, 1.5vw, 1.5rem);border-radius:40px;font-size:clamp(0.8rem, 1.1vw, 1.05rem);font-weight:700;font-family:var(--font-pixel);background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.08);color:var(--text-secondary);cursor:pointer;transition:all var(--transition);display:inline-flex;align-items:center;gap:0.5rem;white-space:nowrap}
         .nav-btn:hover{background:var(--accent);border-color:var(--accent);color:#fff;box-shadow:0 0 30px var(--accent-glow);transform:translateY(-1px)}
-        .nav-btn i{font-size:clamp(0.6rem, 0.8vw, 0.85rem)}
+        .nav-btn i{font-size:clamp(0.7rem, 1vw, 0.95rem)}
 
         /* ===== 房间号横幅 ===== */
         .room-banner{background:linear-gradient(135deg,#1b5e20,#2e7d32);padding:0.5rem 0;width:100%;border-bottom:2px solid #4CAF50;text-align:center;display:none;animation:slideDown 0.5s ease forwards}
@@ -76,24 +76,26 @@
         .main-content{flex:1;padding:1.5rem 0 2rem;min-height:70vh}
         #home-content{animation:fadeUp 0.6s ease forwards}
         @keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
-        #home-content h1{font-size:clamp(1.8rem, 4vw, 3rem);font-weight:700;letter-spacing:2px;background:linear-gradient(135deg,#fff,#8ab4f8);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:0.3rem}
-        .subtitle{font-size:clamp(0.9rem, 1.2vw, 1.1rem);color:var(--text-secondary);margin-bottom:2rem;letter-spacing:1px}
+        
+        /* ===== 首页专用大字号（仅首页） ===== */
+        #home-content h1{font-size:clamp(2.8rem, 6vw, 4.5rem);font-weight:700;letter-spacing:3px;background:linear-gradient(135deg,#fff,#8ab4f8);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:0.6rem;line-height:1.2}
+        #home-content .subtitle{font-size:clamp(1.3rem, 1.8vw, 1.7rem);color:var(--text-secondary);margin-bottom:2.5rem;letter-spacing:2px}
 
         /* ===== 卡片 ===== */
-        .card-grid{display:flex;flex-direction:column;gap:1rem;width:100%}
-        .card{background:rgba(26,26,62,0.6);backdrop-filter:blur(4px);border:1px solid var(--border-color);border-radius:var(--radius);padding:clamp(0.8rem, 1.5vw, 1.5rem) clamp(1rem, 2vw, 2rem);transition:all var(--bounce);display:flex;flex-direction:column;gap:0.4rem;position:relative;overflow:hidden}
+        .card-grid{display:flex;flex-direction:column;gap:1.2rem;width:100%}
+        .card{background:rgba(26,26,62,0.6);backdrop-filter:blur(4px);border:1px solid var(--border-color);border-radius:var(--radius);padding:clamp(1rem, 1.8vw, 1.8rem) clamp(1.2rem, 2.2vw, 2.2rem);transition:all var(--bounce);display:flex;flex-direction:column;gap:0.5rem;position:relative;overflow:hidden}
         .card:hover{transform:translateX(6px);border-color:var(--accent);box-shadow:0 8px 32px rgba(0,0,0,0.4),0 0 30px var(--accent-glow)}
-        .card-title{font-size:clamp(1.1rem, 1.6vw, 1.4rem);font-weight:700;color:var(--text-primary);display:flex;align-items:center;gap:0.8rem}
-        .card-title i{color:var(--accent);font-size:clamp(1.2rem, 1.8vw, 1.6rem);transition:transform var(--bounce)}
+        .card-title{font-size:clamp(1.4rem, 2vw, 1.8rem);font-weight:700;color:var(--text-primary);display:flex;align-items:center;gap:0.8rem}
+        .card-title i{color:var(--accent);font-size:clamp(1.5rem, 2.2vw, 2.0rem);transition:transform var(--bounce)}
         .card:hover .card-title i{transform:scale(1.1) rotate(-4deg)}
-        .card-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:0.1rem}
-        .card-list li{padding:clamp(0.2rem, 0.4vw, 0.4rem) clamp(0.5rem, 0.8vw, 0.8rem);border-radius:6px;color:var(--text-secondary);font-size:clamp(0.78rem, 1vw, 0.95rem);cursor:pointer;transition:all var(--smooth);list-style:none}
+        .card-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:0.15rem}
+        .card-list li{padding:clamp(0.35rem, 0.6vw, 0.6rem) clamp(0.6rem, 1vw, 1rem);border-radius:6px;color:var(--text-secondary);font-size:clamp(0.95rem, 1.2vw, 1.15rem);cursor:pointer;transition:all var(--smooth);list-style:none}
         .card-list li:hover{background:rgba(76,175,80,0.15);color:var(--text-primary);padding-left:clamp(0.8rem, 1.2vw, 1.2rem);transform:translateX(4px)}
-        .card-list li i{margin-right:0.5rem;color:var(--text-muted);font-size:clamp(0.6rem, 0.7vw, 0.75rem);width:1.2rem;text-align:center;transition:all var(--smooth)}
+        .card-list li i{margin-right:0.6rem;color:var(--text-muted);font-size:clamp(0.7rem, 0.9vw, 0.85rem);width:1.4rem;text-align:center;transition:all var(--smooth)}
         .card-list li:hover i{color:var(--accent);transform:scale(1.1)}
         .card-list li.active{color:var(--accent);background:rgba(76,175,80,0.08)}
 
-        /* ===== 文档内容样式 ===== */
+        /* ===== 文档内容样式（不变） ===== */
         .doc-content{max-width:900px;margin:0 auto;padding:0 0.5rem;animation:fadeUp 0.5s ease forwards}
         .doc-content h1{font-size:clamp(1.6rem, 3vw, 2.4rem);border-left:4px solid var(--accent);padding-left:1rem;margin-bottom:1.5rem}
         .doc-content h2{font-size:clamp(1.2rem, 1.8vw, 1.6rem);margin-top:2.5rem;padding-bottom:0.3rem;border-bottom:2px solid var(--border-color);color:var(--text-primary)}
@@ -140,8 +142,10 @@
 
         /* ===== 响应式 ===== */
         @media(max-width:1024px){.sidebar{width:220px;padding:1rem 0.6rem}}
-        @media(max-width:768px){.sidebar{display:none}.main-wrapper{padding:0 0.5rem}.navbar{padding:0.4rem 1rem}.nav-container{gap:0.5rem}.nav-brand a{font-size:clamp(0.9rem, 2.5vw, 1.2rem)}.nav-brand img{height:clamp(22px, 3.5vw, 32px)}.nav-btn{font-size:clamp(0.55rem, 0.8vw, 0.7rem);padding:clamp(0.15rem, 0.4vw, 0.3rem) clamp(0.4rem, 0.8vw, 0.8rem)}.card{padding:clamp(0.6rem, 1vw, 1rem) clamp(0.8rem, 1.5vw, 1.2rem)}.doc-content .info-grid{grid-template-columns:1fr}}
-        @media(max-width:480px){.nav-brand a{font-size:clamp(0.8rem, 2vw, 1rem)}.nav-brand img{height:clamp(18px, 3vw, 26px)}.nav-btn{font-size:clamp(0.5rem, 0.7vw, 0.65rem);padding:clamp(0.1rem, 0.3vw, 0.25rem) clamp(0.3rem, 0.6vw, 0.6rem)}}
+        @media(max-width:768px){.sidebar{display:none}.main-wrapper{padding:0 0.5rem}.navbar{padding:0.4rem 1rem}.nav-container{gap:0.5rem}.nav-brand a{font-size:clamp(1.2rem, 3vw, 1.6rem)}.nav-brand img{height:clamp(28px, 4vw, 40px)}.nav-btn{font-size:clamp(0.7rem, 1.2vw, 0.9rem);padding:clamp(0.2rem, 0.5vw, 0.35rem) clamp(0.5rem, 1vw, 0.9rem)}.card{padding:clamp(0.8rem, 1.5vw, 1.2rem) clamp(1rem, 2vw, 1.5rem)}.doc-content .info-grid{grid-template-columns:1fr}}
+        @media(max-width:480px){.nav-brand a{font-size:clamp(1.0rem, 3vw, 1.4rem)}.nav-brand img{height:clamp(24px, 4vw, 34px)}.nav-btn{font-size:clamp(0.6rem, 1.2vw, 0.8rem);padding:clamp(0.15rem, 0.5vw, 0.3rem) clamp(0.35rem, 0.8vw, 0.7rem)}
+        #home-content h1{font-size:clamp(2.2rem, 7vw, 3.2rem)}
+        #home-content .subtitle{font-size:clamp(1.0rem, 2.5vw, 1.3rem)}}
     </style>
 </head>
 <body>
@@ -632,9 +636,19 @@
         }
     }
 
-    document.addEventListener('DOMContentLoaded', function() {
-        // 关键修复：强制滚动到顶部，防止刷新后页面偏移
+    // 修复刷新滚动偏移：在页面加载完成后强制重置滚动位置
+    function resetScrollPosition() {
         window.scrollTo(0, 0);
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        // 关键修复：禁用浏览器的自动滚动恢复 + 强制置顶
+        if ('scrollRestoration' in history) {
+            history.scrollRestoration = 'manual';
+        }
+        
+        // 立即重置滚动位置
+        resetScrollPosition();
         
         document.body.classList.add('loaded');
         renderCards();
@@ -649,6 +663,10 @@
         document.getElementById('loginModal').addEventListener('click', function(e) {
             if (e.target === this) closeLoginModal();
         });
+        
+        // 额外保险：延迟再次重置
+        setTimeout(resetScrollPosition, 50);
+        setTimeout(resetScrollPosition, 200);
     });
     </script>
 </body>
