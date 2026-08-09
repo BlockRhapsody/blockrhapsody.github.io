@@ -279,7 +279,7 @@
     // ============================================================
     // 0. 版本控制与缓存管理
     // ============================================================
-    var APP_VERSION = '2026.08.09.004';
+    var APP_VERSION = '2026.08.09.005';
     var CACHE_MAX_AGE = 5 * 60 * 1000;
 
     var storedVersion = localStorage.getItem('app_version');
@@ -576,28 +576,23 @@
         var banner = document.getElementById('roomBanner');
         var display = document.getElementById('roomNumberDisplay');
 
-        // 每次刷新都强制从 room_number.txt 读取
-        fetch('/room_number.txt?' + Date.now()) // 加时间戳防止浏览器缓存
+        fetch('/room_number.txt?' + Date.now())
             .then(function(response) {
                 if (!response.ok) throw new Error('文件不存在');
                 return response.text();
             })
             .then(function(text) {
-                // 解析格式：setroomnumber:"房间号"
                 var match = text.match(/setroomnumber:"([^"]+)"/);
                 if (match && match[1]) {
                     var room = match[1];
                     display.textContent = room;
                     banner.classList.add('show');
-                    // 不写入 localStorage，防止用户篡改
                 } else {
-                    // 格式错误：不显示横幅
                     banner.classList.remove('show');
                     console.log('[MCC Wiki] room_number.txt 格式错误，未找到有效房间号');
                 }
             })
             .catch(function() {
-                // 文件不存在：不显示横幅
                 banner.classList.remove('show');
                 console.log('[MCC Wiki] room_number.txt 未找到，房间号横幅已隐藏');
             });
@@ -638,10 +633,13 @@
     }
 
     document.addEventListener('DOMContentLoaded', function() {
+        // 关键修复：强制滚动到顶部，防止刷新后页面偏移
+        window.scrollTo(0, 0);
+        
         document.body.classList.add('loaded');
         renderCards();
         initSidebar();
-        initRoomStatus(); // 每次刷新都会重新读取 room_number.txt
+        initRoomStatus();
         initHash();
         updateAuthUI();
 
