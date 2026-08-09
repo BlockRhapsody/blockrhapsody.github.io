@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>方块狂想曲 · Wiki</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     <link rel="icon" type="image/png" href="/favicon.png" />
@@ -168,12 +170,15 @@
             .main-content{max-width:100%}
         }
         
-        /* 平板/手机：侧边栏滑出，硬件加速 */
+        /* 平板/手机：侧边栏滑出，内容保持不动 */
         @media(max-width:768px){
             .hamburger{display:flex}
             .sidebar-overlay{display:block}
             .sidebar{position:fixed;top:0;left:0;width:280px;height:100vh;margin-top:0;border-radius:0;border-right:1px solid var(--border-color);background:rgba(10,10,20,0.98);backdrop-filter:blur(18px);padding:4.5rem 0.8rem 1.5rem;z-index:60;overflow-y:auto;max-height:100vh;transform:translateX(-100%);transition:transform 0.3s cubic-bezier(0.22, 1, 0.36, 1)}
             .sidebar.open{transform:translateX(0)}
+            
+            /* 内容区域完全不动，不添加任何 transform */
+            
             .main-wrapper{padding:0 0.5rem}
             .navbar{padding:0.4rem 1rem}
             .nav-container{gap:0.5rem}
@@ -347,7 +352,7 @@
     // ============================================================
     // 0. 版本控制与缓存管理
     // ============================================================
-    var APP_VERSION = '2026.08.10.005';
+    var APP_VERSION = '2026.08.10.007';
     var CACHE_MAX_AGE = 5 * 60 * 1000;
 
     var storedVersion = localStorage.getItem('app_version');
