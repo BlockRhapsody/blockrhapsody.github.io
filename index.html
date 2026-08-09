@@ -117,7 +117,7 @@
         .footer a{color:var(--text-secondary);transition:color var(--smooth)}
         .footer a:hover{color:var(--accent)}
 
-        /* ===== 登录模态 ===== */
+        /* ===== 登录模态框 ===== */
         .modal-overlay{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.7);backdrop-filter:blur(8px);z-index:1000;display:none;justify-content:center;align-items:center;animation:fadeIn 0.3s ease}
         .modal-overlay.active{display:flex}
         @keyframes fadeIn{from{opacity:0}to{opacity:1}}
@@ -277,12 +277,11 @@
 
     <script>
     // ============================================================
-    // 0. 版本控制与缓存管理（方案三 + 方案二）
+    // 0. 版本控制与缓存管理
     // ============================================================
-    var APP_VERSION = '2026.08.09.003'; // 更新此版本号将清除所有用户缓存
-    var CACHE_MAX_AGE = 5 * 60 * 1000; // 缓存有效期：5分钟
+    var APP_VERSION = '2026.08.09.004';
+    var CACHE_MAX_AGE = 5 * 60 * 1000;
 
-    // 检查版本号，变更时清除所有旧缓存
     var storedVersion = localStorage.getItem('app_version');
     if (storedVersion !== APP_VERSION) {
         sessionStorage.clear();
@@ -343,10 +342,9 @@
     }
 
     // ============================================================
-    // 3. 页面路径映射表（按需加载）
+    // 3. 页面路径映射表
     // ============================================================
     var pagePathMap = {
-        // 制度汇编
         '服务器纲领': '/pages/制度汇编/服务器纲领.html',
         '玩家权限体制': '/pages/制度汇编/玩家权限体制.html',
         '玩家行政权限体制': '/pages/制度汇编/玩家行政权限体制.html',
@@ -354,7 +352,6 @@
         '监督委员会制度': '/pages/制度汇编/监督委员会制度.html',
         '创造者协会章程': '/pages/制度汇编/创造者协会章程.html',
         '体制关系与适用规则': '/pages/制度汇编/体制关系与适用规则.html',
-        // 服主令
         '2026第1号': '/pages/服主令/2026-1号.html',
         '2026第2号': '/pages/服主令/2026-2号.html',
         '2026第3号': '/pages/服主令/2026-3号.html',
@@ -362,10 +359,8 @@
         '2026第5号': '/pages/服主令/2026-5号.html',
         '2026第6号': '/pages/服主令/2026-6号.html',
         '2026第7号': '/pages/服主令/2026-7号.html',
-        // 人物志
         '弘桀孤影行': '/pages/人物志/弘桀孤影行.html',
         '出击的阴笑徐铮': '/pages/人物志/出击的阴笑徐铮.html',
-        // 技术文档 - MCC
         'MCC目录': '/pages/技术文档/MCC/目录.html',
         '第一章': '/pages/技术文档/MCC/第一章.html',
         '第二章': '/pages/技术文档/MCC/第二章.html',
@@ -381,18 +376,15 @@
         '第十二章': '/pages/技术文档/MCC/第十二章.html',
         '第十三章': '/pages/技术文档/MCC/第十三章.html',
         '第十四章': '/pages/技术文档/MCC/第十四章.html',
-        // 技术文档 - 其他
         '盔甲架指南': '/pages/技术文档/盔甲架指南.html',
         '认识基岩版': '/pages/技术文档/认识基岩版.html',
-        // 玩家文档
         '玩家游玩建议': '/pages/玩家文档/游玩建议.html',
         '管理员学习手册': '/pages/玩家文档/管理员手册.html',
-        // 论坛
         '论坛': '/pages/论坛/index.html'
     };
 
     // ============================================================
-    // 4. 检查缓存是否有效（方案二）
+    // 4. 检查缓存是否有效
     // ============================================================
     function isCacheValid(cacheKey) {
         var cached = sessionStorage.getItem(cacheKey);
@@ -404,10 +396,9 @@
     }
 
     // ============================================================
-    // 5. 页面加载函数（支持锚点跳转 + 缓存生命周期）
+    // 5. 页面加载函数
     // ============================================================
     function loadPage(pageId) {
-        // 处理锚点
         var anchor = '';
         if (pageId.includes('#')) {
             var parts = pageId.split('#');
@@ -435,7 +426,6 @@
 
         var cacheKey = 'page_' + pageId;
 
-        // 检查缓存是否有效（方案二）
         if (isCacheValid(cacheKey)) {
             var cached = sessionStorage.getItem(cacheKey);
             pageContent.innerHTML = cached;
@@ -447,15 +437,12 @@
             if (anchor) {
                 setTimeout(function() {
                     var target = document.getElementById(anchor);
-                    if (target) {
-                        target.scrollIntoView({ behavior: 'smooth' });
-                    }
+                    if (target) target.scrollIntoView({ behavior: 'smooth' });
                 }, 150);
             }
             return;
         }
 
-        // 缓存无效或不存在，重新获取
         sessionStorage.removeItem(cacheKey);
         sessionStorage.removeItem(cacheKey + '_time');
 
@@ -467,7 +454,6 @@
                 return response.text();
             })
             .then(function(html) {
-                // 写入缓存（方案二）
                 sessionStorage.setItem(cacheKey, html);
                 sessionStorage.setItem(cacheKey + '_time', String(Date.now()));
                 pageContent.innerHTML = html;
@@ -479,9 +465,7 @@
                 if (anchor) {
                     setTimeout(function() {
                         var target = document.getElementById(anchor);
-                        if (target) {
-                            target.scrollIntoView({ behavior: 'smooth' });
-                        }
+                        if (target) target.scrollIntoView({ behavior: 'smooth' });
                     }, 150);
                 }
             })
@@ -491,14 +475,13 @@
     }
 
     // ============================================================
-    // 6. 清除缓存并刷新（方案二 + 方案三）
+    // 6. 清除缓存并刷新
     // ============================================================
     function clearCacheAndReload() {
         sessionStorage.clear();
         localStorage.setItem('app_version', APP_VERSION);
         location.reload();
     }
-
     window.clearCacheAndReload = clearCacheAndReload;
 
     // ============================================================
@@ -519,17 +502,14 @@
     function showHome() {
         var home = document.getElementById('home-content');
         var pageContent = document.getElementById('page-content');
-
         home.style.display = 'block';
         pageContent.style.display = 'none';
         pageContent.innerHTML = '';
-
         history.pushState(null, '', '/');
         document.querySelectorAll('.sub-menu a, .card-list li').forEach(function(el) {
             el.classList.remove('active');
         });
     }
-
     window.loadPage = loadPage;
     window.showHome = showHome;
 
@@ -543,11 +523,9 @@
         document.getElementById('loginError').classList.remove('show');
         setTimeout(function(){ document.getElementById('loginUsername').focus(); }, 100);
     }
-
     function closeLoginModal() {
         document.getElementById('loginModal').classList.remove('active');
     }
-
     function login() {
         var username = document.getElementById('loginUsername').value.trim();
         var errorEl = document.getElementById('loginError');
@@ -566,14 +544,12 @@
         closeLoginModal();
         updateAuthUI();
     }
-
     function logout(e) {
         if (e) e.preventDefault();
         localStorage.removeItem('token');
         localStorage.removeItem('username');
         updateAuthUI();
     }
-
     function updateAuthUI() {
         var token = localStorage.getItem('token');
         var username = localStorage.getItem('username');
@@ -594,38 +570,37 @@
     }
 
     // ============================================================
-    // 10. 房间号横幅（从 room_number.txt 读取）
+    // 10. 房间号横幅（强制读取 room_number.txt）
     // ============================================================
     function initRoomStatus() {
-        var room = localStorage.getItem('roomNumber') || null;
+        var banner = document.getElementById('roomBanner');
+        var display = document.getElementById('roomNumberDisplay');
 
-        // 如果 localStorage 中没有，从 room_number.txt 读取
-        if (!room) {
-            fetch('/room_number.txt')
-                .then(function(response) {
-                    if (!response.ok) throw new Error('文件不存在');
-                    return response.text();
-                })
-                .then(function(text) {
-                    // 解析格式：setroomnumber:"房间号"
-                    var match = text.match(/setroomnumber:"([^"]+)"/);
-                    if (match && match[1]) {
-                        room = match[1];
-                        localStorage.setItem('roomNumber', room);
-                        document.getElementById('roomNumberDisplay').textContent = room;
-                        document.getElementById('roomBanner').classList.add('show');
-                    }
-                })
-                .catch(function() {
-                    // 文件不存在或格式错误，静默失败，不显示横幅
-                    console.log('[MCC Wiki] room_number.txt 未找到或格式错误');
-                });
-            return;
-        }
-
-        // localStorage 中有房间号，直接显示
-        document.getElementById('roomNumberDisplay').textContent = room;
-        document.getElementById('roomBanner').classList.add('show');
+        // 每次刷新都强制从 room_number.txt 读取
+        fetch('/room_number.txt?' + Date.now()) // 加时间戳防止浏览器缓存
+            .then(function(response) {
+                if (!response.ok) throw new Error('文件不存在');
+                return response.text();
+            })
+            .then(function(text) {
+                // 解析格式：setroomnumber:"房间号"
+                var match = text.match(/setroomnumber:"([^"]+)"/);
+                if (match && match[1]) {
+                    var room = match[1];
+                    display.textContent = room;
+                    banner.classList.add('show');
+                    // 不写入 localStorage，防止用户篡改
+                } else {
+                    // 格式错误：不显示横幅
+                    banner.classList.remove('show');
+                    console.log('[MCC Wiki] room_number.txt 格式错误，未找到有效房间号');
+                }
+            })
+            .catch(function() {
+                // 文件不存在：不显示横幅
+                banner.classList.remove('show');
+                console.log('[MCC Wiki] room_number.txt 未找到，房间号横幅已隐藏');
+            });
     }
 
     // ============================================================
@@ -666,7 +641,7 @@
         document.body.classList.add('loaded');
         renderCards();
         initSidebar();
-        initRoomStatus();
+        initRoomStatus(); // 每次刷新都会重新读取 room_number.txt
         initHash();
         updateAuthUI();
 
