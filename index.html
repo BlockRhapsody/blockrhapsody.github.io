@@ -349,7 +349,7 @@
     // ============================================================
     // 0. 版本控制与缓存管理
     // ============================================================
-    var APP_VERSION = '2026.08.10.001';
+    var APP_VERSION = '2026.08.10.002';
     var CACHE_MAX_AGE = 5 * 60 * 1000;
 
     var storedVersion = localStorage.getItem('app_version');
@@ -394,7 +394,7 @@
     function getDisplayName(key) { return displayNames[key] || key; }
 
     // ============================================================
-    // 2. 渲染卡片
+    // 2. 渲染卡片（改用事件委托）
     // ============================================================
     function renderCards() {
         var grid = document.getElementById('cardGrid');
@@ -404,7 +404,8 @@
             var itemsHtml = '';
             for (var j = 0; j < cat.items.length; j++) {
                 var key = cat.items[j];
-                itemsHtml += '<li onclick="loadPage(\'' + key + '\')"><i class="fas fa-file-alt"></i> ' + getDisplayName(key) + '</li>';
+                // 改用 data-page 属性，不使用 onclick
+                itemsHtml += '<li data-page="' + key + '"><i class="fas fa-file-alt"></i> ' + getDisplayName(key) + '</li>';
             }
             html += '<div class="card"><div class="card-title"><i class="fas ' + cat.icon + '"></i> ' + cat.title + '</div><ul class="card-list">' + itemsHtml + '</ul></div>';
         }
@@ -466,7 +467,22 @@
     }
 
     // ============================================================
-    // 5. 页面加载函数
+    // 5. 关闭侧边栏（移动端）
+    // ============================================================
+    function closeSidebarIfMobile() {
+        if (window.innerWidth < 769) {
+            var sidebar = document.getElementById('sidebar');
+            var hamburger = document.getElementById('hamburgerBtn');
+            var overlay = document.getElementById('sidebarOverlay');
+            sidebar.classList.remove('open');
+            hamburger.classList.remove('open');
+            overlay.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    }
+
+    // ============================================================
+    // 6. 页面加载函数
     // ============================================================
     function loadPage(pageId) {
         var anchor = '';
@@ -480,6 +496,9 @@
         var home = document.getElementById('home-content');
         var pageContent = document.getElementById('page-content');
         var path = pagePathMap[pageId];
+
+        // 移动端关闭侧边栏
+        closeSidebarIfMobile();
 
         home.style.display = 'none';
         pageContent.innerHTML = '';
@@ -545,7 +564,7 @@
     }
 
     // ============================================================
-    // 6. 清除缓存并刷新
+    // 7. 清除缓存并刷新
     // ============================================================
     function clearCacheAndReload() {
         sessionStorage.clear();
@@ -555,7 +574,7 @@
     window.clearCacheAndReload = clearCacheAndReload;
 
     // ============================================================
-    // 7. 更新高亮状态
+    // 8. 更新高亮状态
     // ============================================================
     function updateActiveState(pageId) {
         document.querySelectorAll('.sub-menu a, .card-list li').forEach(function(el) {
@@ -564,10 +583,13 @@
         document.querySelectorAll('.sub-menu a[href="#page-' + pageId + '"]').forEach(function(el) {
             el.classList.add('active');
         });
+        document.querySelectorAll('.card-list li[data-page="' + pageId + '"]').forEach(function(el) {
+            el.classList.add('active');
+        });
     }
 
     // ============================================================
-    // 8. 返回首页
+    // 9. 返回首页
     // ============================================================
     function showHome() {
         var home = document.getElementById('home-content');
@@ -584,7 +606,7 @@
     window.showHome = showHome;
 
     // ============================================================
-    // 9. 登录功能
+    // 10. 登录功能
     // ============================================================
     function openLoginModal(e) {
         if (e) e.preventDefault();
@@ -640,7 +662,7 @@
     }
 
     // ============================================================
-    // 10. 房间号横幅（强制读取 room_number.txt）
+    // 11. 房间号横幅（强制读取 room_number.txt）
     // ============================================================
     function initRoomStatus() {
         var banner = document.getElementById('roomBanner');
@@ -669,14 +691,15 @@
     }
 
     // ============================================================
-    // 11. 汉堡菜单功能
+    // 12. 汉堡菜单功能
     // ============================================================
     function initHamburger() {
         var hamburger = document.getElementById('hamburgerBtn');
         var sidebar = document.getElementById('sidebar');
         var overlay = document.getElementById('sidebarOverlay');
 
-        function toggleSidebar() {
+        function toggleSidebar(e) {
+            e.stopPropagation();
             sidebar.classList.toggle('open');
             hamburger.classList.toggle('open');
             overlay.classList.toggle('active');
@@ -693,24 +716,19 @@
         hamburger.addEventListener('click', toggleSidebar);
         overlay.addEventListener('click', closeSidebar);
 
-        // 窗口大小变化时，如果恢复到桌面尺寸，自动关闭侧边栏并重置样式
+        // 窗口大小变化时，如果恢复到桌面尺寸，自动关闭侧边栏
         window.addEventListener('resize', function() {
             if (window.innerWidth >= 769) {
                 closeSidebar();
-                sidebar.style.display = '';
-                overlay.style.display = '';
-            } else {
-                // 确保移动端侧边栏样式正确
-                sidebar.style.display = '';
-                overlay.style.display = '';
             }
         });
     }
 
     // ============================================================
-    // 12. 侧边栏展开/折叠
+    // 13. 侧边栏展开/折叠 + 卡片点击（事件委托）
     // ============================================================
     function initSidebar() {
+        // 侧边栏分类展开/折叠
         document.querySelectorAll('.category-toggle').forEach(function(toggle) {
             toggle.addEventListener('click', function(e) {
                 e.stopPropagation();
@@ -722,21 +740,26 @@
                 }
             });
         });
+
+        // 侧边栏链接点击
         document.querySelectorAll('.sub-menu a').forEach(function(link) {
             link.addEventListener('click', function(e) {
                 var href = this.getAttribute('href');
                 if (href && href.startsWith('#page-')) {
                     e.preventDefault();
-                    // 移动端点击链接后自动关闭侧边栏
-                    if (window.innerWidth < 769) {
-                        document.getElementById('sidebar').classList.remove('open');
-                        document.getElementById('hamburgerBtn').classList.remove('open');
-                        document.getElementById('sidebarOverlay').classList.remove('active');
-                        document.body.style.overflow = '';
-                    }
                     loadPage(href.replace('#page-', ''));
                 }
             });
+        });
+
+        // 卡片点击 - 使用事件委托（关键修复）
+        document.getElementById('cardGrid').addEventListener('click', function(e) {
+            var target = e.target.closest('.card-list li');
+            if (target && target.dataset.page) {
+                e.preventDefault();
+                e.stopPropagation(); // 阻止事件冒泡
+                loadPage(target.dataset.page);
+            }
         });
     }
 
@@ -754,7 +777,6 @@
     }
 
     document.addEventListener('DOMContentLoaded', function() {
-        // 禁用浏览器的自动滚动恢复
         if ('scrollRestoration' in history) {
             history.scrollRestoration = 'manual';
         }
