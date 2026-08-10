@@ -58,10 +58,7 @@ var sidebarMenu = [
     {
         title: '实验性',
         icon: 'fa-flask',
-        items: [
-            { name: '皮肤查看器', indent: 0, display: '皮肤查看器' },
-            { name: '强刷新', indent: 0, display: '强刷新' }
-        ]
+        items: ['皮肤查看器', '强刷新', '图像文件']
     }
 ];
 
@@ -85,7 +82,7 @@ var cardData = [
     { title: '玩家文档', icon: 'fa-users', items: ['玩家游玩建议', '管理员学习手册'] },
     { title: '计划', icon: 'fa-calendar', items: ['六月建设计划', '普朗克计划'] },
     { title: '论坛', icon: 'fa-comments', items: ['论坛'] },
-    { title: '实验性', icon: 'fa-flask', items: ['皮肤查看器', '强刷新'] }
+    { title: '实验性', icon: 'fa-flask', items: ['皮肤查看器', '强刷新', '图像文件'] }
 ];
 
 // ============================================================
@@ -131,7 +128,8 @@ var pagePathMap = {
     '普朗克计划': '/pages/计划/普朗克计划.html',
     '论坛': '/pages/论坛/index.html',
     '皮肤查看器': '/pages/实验性/皮肤查看器.html',
-    '强刷新': '/pages/实验性/强刷新.html'
+    '强刷新': '/pages/实验性/强刷新.html',
+    '图像文件': '/pages/实验性/图像文件.html'
 };
 
 // ============================================================
