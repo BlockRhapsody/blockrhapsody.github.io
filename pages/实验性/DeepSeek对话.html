@@ -1,0 +1,299 @@
+<div class="doc-content">
+    <h1>DeepSeek 对话</h1>
+    <p style="color:var(--text-secondary);">基于 DeepSeek API 的智能对话 · 方块狂想曲实验性功能</p>
+
+    <!-- ===== 状态提示 ===== -->
+    <div id="statusBar" style="margin:0.8rem 0;padding:0.4rem 1rem;border-radius:var(--radius);background:rgba(255,255,255,0.03);border:1px solid var(--border-color);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.5rem;">
+        <span style="color:var(--text-muted);font-size:0.85rem;">
+            状态：<span id="connectionStatus" style="color:var(--accent);">就绪</span>
+        </span>
+        <span style="color:var(--text-muted);font-size:0.85rem;">
+            模型：<span id="modelDisplay" style="color:var(--text-primary);">deepseek-chat</span>
+        </span>
+        <button id="clearChatBtn" style="padding:0.2rem 1rem;border-radius:6px;border:1px solid var(--border-color);background:transparent;color:var(--text-secondary);font-family:var(--font-pixel);font-size:0.75rem;cursor:pointer;transition:all var(--transition);">
+            清空对话
+        </button>
+    </div>
+
+    <!-- ===== 对话区域 ===== -->
+    <div id="chatContainer" style="background:rgba(0,0,0,0.2);border-radius:var(--radius);border:1px solid var(--border-color);padding:1rem;min-height:300px;max-height:500px;overflow-y:auto;display:flex;flex-direction:column;gap:0.8rem;">
+        <div id="chatMessages" style="display:flex;flex-direction:column;gap:0.8rem;flex:1;">
+            <!-- 消息将由 JavaScript 动态渲染 -->
+        </div>
+        <div id="typingIndicator" style="display:none;color:var(--text-muted);font-size:0.85rem;padding:0.4rem 0;">
+            <span>DeepSeek 正在思考</span>
+            <span style="display:inline-block;animation:dots 1.4s infinite;">...</span>
+        </div>
+    </div>
+
+    <!-- ===== 输入区域 ===== -->
+    <div style="display:flex;gap:0.8rem;margin-top:0.8rem;">
+        <input type="text" id="chatInput" placeholder="输入消息，按 Enter 发送..." style="flex:1;padding:0.6rem 1rem;border-radius:var(--radius);border:1px solid var(--border-color);background:rgba(255,255,255,0.05);color:var(--text-primary);font-family:var(--font-pixel);font-size:0.95rem;outline:none;transition:border-color var(--transition);">
+        <button id="sendBtn" style="padding:0.6rem 1.5rem;border-radius:var(--radius);border:none;background:var(--accent);color:#fff;font-family:var(--font-pixel);font-size:0.95rem;cursor:pointer;transition:all var(--transition);">
+            发送
+        </button>
+    </div>
+
+    <!-- ===== 快捷提问 ===== -->
+    <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:0.8rem;">
+        <button class="quick-btn" data-msg="Minecraft 指令是什么？" style="padding:0.3rem 0.8rem;border-radius:6px;border:1px solid var(--border-color);background:rgba(255,255,255,0.03);color:var(--text-secondary);font-family:var(--font-pixel);font-size:0.75rem;cursor:pointer;transition:all var(--transition);">
+            Minecraft 指令是什么？
+        </button>
+        <button class="quick-btn" data-msg="什么是 /execute 指令？" style="padding:0.3rem 0.8rem;border-radius:6px;border:1px solid var(--border-color);background:rgba(255,255,255,0.03);color:var(--text-secondary);font-family:var(--font-pixel);font-size:0.75rem;cursor:pointer;transition:all var(--transition);">
+            什么是 /execute 指令？
+        </button>
+        <button class="quick-btn" data-msg="如何用计分板记录玩家金币？" style="padding:0.3rem 0.8rem;border-radius:6px;border:1px solid var(--border-color);background:rgba(255,255,255,0.03);color:var(--text-secondary);font-family:var(--font-pixel);font-size:0.75rem;cursor:pointer;transition:all var(--transition);">
+            如何用计分板记录金币？
+        </button>
+        <button class="quick-btn" data-msg="基岩版和 Java 版的指令有什么区别？" style="padding:0.3rem 0.8rem;border-radius:6px;border:1px solid var(--border-color);background:rgba(255,255,255,0.03);color:var(--text-secondary);font-family:var(--font-pixel);font-size:0.75rem;cursor:pointer;transition:all var(--transition);">
+            基岩版和 Java 版指令区别？
+        </button>
+        <button class="quick-btn" data-msg="什么是目标选择器？" style="padding:0.3rem 0.8rem;border-radius:6px;border:1px solid var(--border-color);background:rgba(255,255,255,0.03);color:var(--text-secondary);font-family:var(--font-pixel);font-size:0.75rem;cursor:pointer;transition:all var(--transition);">
+            什么是目标选择器？
+        </button>
+        <button class="quick-btn" data-msg="命令方块有哪几种类型？" style="padding:0.3rem 0.8rem;border-radius:6px;border:1px solid var(--border-color);background:rgba(255,255,255,0.03);color:var(--text-secondary);font-family:var(--font-pixel);font-size:0.75rem;cursor:pointer;transition:all var(--transition);">
+            命令方块有哪几种类型？
+        </button>
+    </div>
+
+    <div class="footnote">
+        <p>方块狂想曲 · 实验性功能 · 由 DeepSeek API 提供支持</p>
+    </div>
+</div>
+
+<style>
+    @keyframes dots {
+        0% { opacity: 0.3; transform: translateY(0); }
+        50% { opacity: 1; transform: translateY(-2px); }
+        100% { opacity: 0.3; transform: translateY(0); }
+    }
+
+    .message {
+        max-width: 80%;
+        padding: 0.6rem 1rem;
+        border-radius: var(--radius);
+        line-height: 1.6;
+        font-size: clamp(0.9rem, 1vw, 1rem);
+        word-wrap: break-word;
+        animation: fadeUp 0.3s ease forwards;
+    }
+
+    .message.user {
+        align-self: flex-end;
+        background: var(--accent);
+        color: #fff;
+        border-bottom-right-radius: 4px;
+    }
+
+    .message.assistant {
+        align-self: flex-start;
+        background: rgba(255,255,255,0.06);
+        color: var(--text-primary);
+        border-bottom-left-radius: 4px;
+        border: 1px solid var(--border-color);
+    }
+
+    .message .msg-time {
+        font-size: 0.6rem;
+        color: var(--text-muted);
+        margin-top: 0.2rem;
+        display: block;
+        opacity: 0.6;
+    }
+
+    .message.user .msg-time {
+        text-align: right;
+    }
+
+    .quick-btn:hover {
+        border-color: var(--accent);
+        color: var(--text-primary);
+        transform: scale(1.02);
+    }
+
+    #chatInput:focus {
+        border-color: var(--accent);
+        box-shadow: 0 0 20px var(--accent-glow);
+    }
+
+    #chatContainer::-webkit-scrollbar {
+        width: 4px;
+    }
+    #chatContainer::-webkit-scrollbar-track {
+        background: transparent;
+    }
+    #chatContainer::-webkit-scrollbar-thumb {
+        background: var(--border-color);
+        border-radius: 4px;
+    }
+    #chatContainer::-webkit-scrollbar-thumb:hover {
+        background: var(--accent);
+    }
+</style>
+
+<script>
+    (function initChat() {
+        // ============================================================
+        // 配置
+        // ============================================================
+        var API_URL = 'https://blockrhapsody-wiki.vercel.app/api/chat';
+        var SYSTEM_PROMPT = '你是一个 Minecraft 基岩版指令专家，擅长回答关于 Minecraft 指令、命令方块、计分板、目标选择器、JSON 文本、Molang 语言、粒子效果、NBT 标签等问题。你的回答应该准确、实用，适合中国版 Minecraft 玩家阅读。如果用户问的问题不是关于 Minecraft 的，你可以礼貌地拒绝回答，并引导用户询问 Minecraft 相关的问题。请用中文回答。';
+        var chatMessages = [];
+        var messageHistory = [];
+
+        var chatContainer = document.getElementById('chatContainer');
+        var chatMessagesEl = document.getElementById('chatMessages');
+        var chatInput = document.getElementById('chatInput');
+        var sendBtn = document.getElementById('sendBtn');
+        var clearBtn = document.getElementById('clearChatBtn');
+        var typingIndicator = document.getElementById('typingIndicator');
+        var statusEl = document.getElementById('connectionStatus');
+
+        // ============================================================
+        // 添加消息
+        // ============================================================
+        function addMessage(role, content) {
+            var messageDiv = document.createElement('div');
+            messageDiv.className = 'message ' + role;
+
+            var textSpan = document.createElement('span');
+            textSpan.textContent = content;
+            messageDiv.appendChild(textSpan);
+
+            var timeSpan = document.createElement('span');
+            timeSpan.className = 'msg-time';
+            timeSpan.textContent = new Date().toLocaleTimeString();
+            messageDiv.appendChild(timeSpan);
+
+            chatMessagesEl.appendChild(messageDiv);
+            chatContainer.scrollTop = chatContainer.scrollHeight;
+
+            messageHistory.push({ role: role, content: content });
+        }
+
+        // ============================================================
+        // 清空对话
+        // ============================================================
+        function clearChat() {
+            chatMessagesEl.innerHTML = '';
+            messageHistory = [];
+            messageHistory.push({ role: 'system', content: SYSTEM_PROMPT });
+            addMessage('assistant', '你好！我是方块狂想曲的指令助手，基于 DeepSeek 模型。有什么 Minecraft 指令问题可以问我！');
+        }
+
+        // ============================================================
+        // 发送消息
+        // ============================================================
+        function sendMessage() {
+            var text = chatInput.value.trim();
+            if (!text) return;
+
+            addMessage('user', text);
+            chatInput.value = '';
+            chatInput.focus();
+
+            typingIndicator.style.display = 'block';
+            statusEl.textContent = '思考中...';
+            statusEl.style.color = '#ffb347';
+
+            fetch(API_URL, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    messages: messageHistory,
+                    model: 'deepseek-chat',
+                    temperature: 0.7
+                })
+            })
+            .then(function(response) {
+                if (!response.ok) {
+                    return response.json().then(function(data) {
+                        throw new Error(data.error || '请求失败');
+                    });
+                }
+                return response.json();
+            })
+            .then(function(data) {
+                typingIndicator.style.display = 'none';
+                statusEl.textContent = '就绪';
+                statusEl.style.color = 'var(--accent)';
+
+                if (data.content) {
+                    addMessage('assistant', data.content);
+                } else {
+                    addMessage('assistant', '抱歉，我没有得到有效的回复。请稍后再试。');
+                }
+            })
+            .catch(function(error) {
+                typingIndicator.style.display = 'none';
+                statusEl.textContent = '错误';
+                statusEl.style.color = '#ff6b6b';
+                console.error('Error:', error);
+
+                var errorMsg = '请求失败：' + error.message;
+                if (error.message.includes('API Key')) {
+                    errorMsg = 'API 密钥未配置，请联系管理员。';
+                } else if (error.message.includes('余额') || error.message.includes('balance')) {
+                    errorMsg = 'API 账户余额不足，请联系管理员充值。';
+                }
+                addMessage('assistant', errorMsg);
+            });
+        }
+
+        // ============================================================
+        // 快捷提问
+        // ============================================================
+        function setupQuickButtons() {
+            var buttons = document.querySelectorAll('.quick-btn');
+            buttons.forEach(function(btn) {
+                btn.addEventListener('click', function() {
+                    var msg = this.dataset.msg;
+                    if (msg) {
+                        chatInput.value = msg;
+                        sendMessage();
+                    }
+                });
+            });
+        }
+
+        // ============================================================
+        // 键盘事件
+        // ============================================================
+        chatInput.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' && !e.shiftKey) {
+                e.preventDefault();
+                sendMessage();
+            }
+        });
+
+        // ============================================================
+        // 按钮事件
+        // ============================================================
+        sendBtn.addEventListener('click', sendMessage);
+        clearBtn.addEventListener('click', clearChat);
+
+        // ============================================================
+        // 初始化
+        // ============================================================
+        messageHistory.push({ role: 'system', content: SYSTEM_PROMPT });
+        addMessage('assistant', '你好！我是方块狂想曲的指令助手，基于 DeepSeek 模型。有什么 Minecraft 指令问题可以问我！');
+        setupQuickButtons();
+        chatInput.focus();
+
+        // 检测 API 可用性
+        fetch(API_URL, { method: 'OPTIONS' })
+            .then(function() {
+                statusEl.textContent = '就绪';
+                statusEl.style.color = 'var(--accent)';
+            })
+            .catch(function() {
+                statusEl.textContent = 'API 不可用';
+                statusEl.style.color = '#ff6b6b';
+            });
+
+        console.log('DeepSeek 对话已启动');
+        console.log('API 端点:', API_URL);
+    })();
+</script>
