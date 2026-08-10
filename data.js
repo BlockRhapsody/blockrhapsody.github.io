@@ -1,5 +1,74 @@
 // ============================================================
-// 卡片数据
+// 侧边栏菜单数据
+// ============================================================
+var sidebarMenu = [
+    {
+        title: '制度汇编',
+        icon: 'fa-book',
+        items: ['服务器纲领', '玩家权限体制', '玩家行政权限体制', '管理员行政权限体制', '监督委员会制度', '创造者协会章程', '体制关系与适用规则']
+    },
+    {
+        title: '服主令',
+        icon: 'fa-gavel',
+        items: ['2026第1号', '2026第2号', '2026第3号', '2026第4号', '2026第5号', '2026第6号', '2026第7号']
+    },
+    {
+        title: '人物志',
+        icon: 'fa-user',
+        items: ['弘桀孤影行', '出击的阴笑徐铮']
+    },
+    {
+        title: '技术文档',
+        icon: 'fa-code',
+        items: [
+            { name: 'MCC目录', indent: 0, display: '📖 MCC 学习新编' },
+            { name: '第一章', indent: 1, display: '第一章 指令的基本概念' },
+            { name: '第二章', indent: 1, display: '第二章 权限等级' },
+            { name: '第三章', indent: 1, display: '第三章 指令的构成、解析与执行' },
+            { name: '第四章', indent: 1, display: '第四章 命令方块' },
+            { name: '第五章', indent: 1, display: '第五章 目标选择器' },
+            { name: '第六章', indent: 1, display: '第六章 JSON 文本' },
+            { name: '第七章', indent: 1, display: '第七章 Molang 语言' },
+            { name: '第八章', indent: 1, display: '第八章 计分板' },
+            { name: '第九章', indent: 1, display: '第九章 标签与数据标签NBT' },
+            { name: '第十章', indent: 1, display: '第十章 粒子技术' },
+            { name: '第十一章', indent: 1, display: '第十一章 /execute全解' },
+            { name: '第十二章', indent: 1, display: '第十二章 指令组合设计' },
+            { name: '第十三章', indent: 1, display: '第十三章 指令性能与安全' },
+            { name: '第十四章', indent: 1, display: '第十四章 实战案例集' },
+            { name: '盔甲架指南', indent: 0, display: '🛡️ 盔甲架指南' },
+            { name: '认识基岩版', indent: 0, display: '🧱 认识基岩版' }
+        ]
+    },
+    {
+        title: '玩家文档',
+        icon: 'fa-users',
+        items: ['玩家游玩建议', '管理员学习手册']
+    },
+    {
+        title: '论坛',
+        icon: 'fa-comments',
+        items: ['论坛']
+    },
+    {
+        title: '实验性',
+        icon: 'fa-flask',
+        items: ['皮肤查看器']
+    }
+];
+
+// 兼容旧格式：将对象格式转换为字符串数组
+function getMenuItems(category) {
+    if (category.items.length > 0 && typeof category.items[0] === 'object') {
+        return category.items;
+    }
+    return category.items.map(function(name) {
+        return { name: name, indent: 0, display: displayNames[name] || name };
+    });
+}
+
+// ============================================================
+// 卡片数据（首页用）
 // ============================================================
 var cardData = [
     { title: '制度汇编', icon: 'fa-book', items: ['服务器纲领', '玩家权限体制', '玩家行政权限体制', '管理员行政权限体制', '监督委员会制度', '创造者协会章程', '体制关系与适用规则'] },
