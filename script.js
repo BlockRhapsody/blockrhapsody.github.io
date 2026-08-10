@@ -31,9 +31,7 @@ function renderSidebar() {
     desktopSidebar.innerHTML = html;
     mobileSidebar.innerHTML = html;
     
-    // 重新绑定事件
     initSidebarEvents();
-    // 恢复高亮状态
     initHashHighlight();
 }
 
@@ -69,7 +67,6 @@ function handleLinkClick(e) {
         if (typeof window.loadPage === 'function') {
             window.loadPage(href.replace('#page-', ''));
         }
-        // 移动端点击后自动关闭侧边栏
         closeSidebarIfMobile();
     }
 }
@@ -94,10 +91,7 @@ function initHamburger() {
     var sidebar = document.getElementById('mobileSidebar');
     var overlay = document.getElementById('mobileOverlay');
 
-    if (!hamburger || !sidebar || !overlay) {
-        console.warn('汉堡菜单元素未找到');
-        return;
-    }
+    if (!hamburger || !sidebar || !overlay) return;
 
     function toggleSidebar(e) {
         e.stopPropagation();
@@ -114,14 +108,12 @@ function initHamburger() {
         document.body.style.overflow = '';
     }
 
-    // 移除旧监听器避免重复绑定
     hamburger.removeEventListener('click', toggleSidebar);
     hamburger.addEventListener('click', toggleSidebar);
     
     overlay.removeEventListener('click', closeSidebar);
     overlay.addEventListener('click', closeSidebar);
 
-    // 窗口大小变化时自动关闭移动端侧边栏
     window.removeEventListener('resize', handleResize);
     window.addEventListener('resize', handleResize);
 }
@@ -155,7 +147,6 @@ function updateActiveState(pageId) {
     });
     document.querySelectorAll('.sub-menu a[href="#page-' + pageId + '"]').forEach(function(el) {
         el.classList.add('active');
-        // 自动展开父级菜单
         var parentSub = el.closest('.sub-menu');
         if (parentSub) {
             parentSub.classList.add('open');
@@ -177,7 +168,6 @@ window.addEventListener('hashchange', function() {
         var pageId = decodeURIComponent(hash.replace('#page-', ''));
         updateActiveState(pageId);
     } else {
-        // 回到首页时清除高亮
         document.querySelectorAll('.sub-menu a, .card-list li').forEach(function(el) {
             el.classList.remove('active');
         });
@@ -185,52 +175,15 @@ window.addEventListener('hashchange', function() {
 });
 
 // ============================================================
-// 5. 房间号显示逻辑
-// ============================================================
-function initRoomStatus() {
-    var banner = document.getElementById('roomBanner');
-    var roomNumberDisplay = document.getElementById('roomNumberDisplay');
-
-    if (!banner || !roomNumberDisplay) {
-        console.warn('房间号元素未找到');
-        return;
-    }
-
-    fetch('/room_number.txt?' + Date.now())
-        .then(function(response) {
-            if (!response.ok) throw new Error('文件不存在');
-            return response.text();
-        })
-        .then(function(text) {
-            var match = text.match(/setroomnumber:"([^"]+)"/);
-            if (match && match[1]) {
-                roomNumberDisplay.textContent = match[1];
-                banner.classList.add('show');
-            } else {
-                banner.classList.remove('show');
-                console.log('[MCC Wiki] room_number.txt 格式错误，未找到有效房间号');
-            }
-        })
-        .catch(function() {
-            banner.classList.remove('show');
-            console.log('[MCC Wiki] room_number.txt 未找到，房间号横幅已隐藏');
-        });
-}
-
-// ============================================================
-// 6. DOM 就绪初始化
+// 5. DOM 就绪初始化
 // ============================================================
 document.addEventListener('DOMContentLoaded', function() {
-    // 先渲染侧边栏
+    // 确保 data.js 已加载
     if (typeof sidebarMenu !== 'undefined' && typeof getMenuItems === 'function') {
         renderSidebar();
     } else {
         console.warn('sidebarMenu 或 getMenuItems 未定义，请确保 data.js 已加载');
     }
     
-    // 初始化汉堡菜单
     initHamburger();
-    
-    // 初始化房间号
-    initRoomStatus();
 });
