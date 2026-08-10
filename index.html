@@ -57,7 +57,7 @@
         /* ===== 主体布局 ===== */
         .main-wrapper{display:flex;flex:1;max-width:1440px;margin:0 auto;width:100%;padding:0 1rem;gap:1.5rem;align-items:flex-start;position:relative}
 
-        /* ===== 移动端侧边栏（独立于主内容，避免布局影响） ===== */
+        /* ===== 移动端侧边栏 ===== */
         .mobile-sidebar{position:fixed;top:0;left:0;width:280px;height:100vh;background:rgba(10,10,20,0.98);backdrop-filter:blur(18px);border-right:1px solid var(--border-color);padding:4.5rem 0.8rem 1.5rem;z-index:60;overflow-y:auto;transform:translateX(-100%);transition:transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);will-change:transform;display:none}
         .mobile-sidebar.open{transform:translateX(0)}
         .mobile-sidebar::-webkit-scrollbar{width:4px}
@@ -79,7 +79,7 @@
         .desktop-sidebar:hover{scrollbar-color:var(--accent) transparent}
         .desktop-sidebar .sidebar-nav ul{list-style:none;padding:0}
 
-        /* ===== 侧边栏分类（共用样式） ===== */
+        /* ===== 侧边栏分类样式 ===== */
         .category{margin-bottom:0.2rem}
         .category-toggle{display:flex;align-items:center;gap:0.8rem;padding:0.6rem 0.8rem;font-size:clamp(1rem, 1.2vw, 1.15rem);font-weight:700;color:var(--text-secondary);cursor:pointer;border-radius:10px;transition:all var(--smooth);user-select:none;position:relative;background:transparent}
         .category-toggle:hover{background:rgba(255,255,255,0.06);color:var(--text-primary);transform:translateX(4px)}
@@ -103,7 +103,6 @@
         #home-content{animation:fadeUp 0.6s ease forwards}
         @keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
         
-        /* ===== 首页专用大字号 ===== */
         #home-content h1{font-size:clamp(2.8rem, 6vw, 4.5rem);font-weight:700;letter-spacing:3px;background:linear-gradient(135deg,#fff,#8ab4f8);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:0.6rem;line-height:1.2}
         #home-content .subtitle{font-size:clamp(1.3rem, 1.8vw, 1.7rem);color:var(--text-secondary);margin-bottom:2.5rem;letter-spacing:2px}
 
@@ -140,11 +139,9 @@
         .doc-content .info-grid strong{color:var(--text-primary)}
         .doc-content .footnote{font-size:clamp(0.85rem, 1.2vw, 0.95rem);color:var(--text-muted);border-top:1px solid var(--border-color);padding-top:1.5rem;margin-top:2.5rem}
 
-        /* ===== 加载动画 ===== */
         .loading-icon{width:48px;height:48px;image-rendering:pixelated;animation:breathe 1.2s ease-in-out infinite}
         @keyframes breathe{0%,100%{transform:scale(1);opacity:0.7}50%{transform:scale(1.12);opacity:1}}
 
-        /* ===== 页脚 ===== */
         .footer{background:rgba(10,10,20,0.6);backdrop-filter:blur(8px);border-top:1px solid var(--border-color);text-align:center;padding:1.2rem 0;font-size:clamp(0.8rem, 1vw, 0.9rem);color:var(--text-muted);margin-top:1.5rem}
         .footer a{color:var(--text-secondary);transition:color var(--smooth)}
         .footer a:hover{color:var(--accent)}
@@ -170,11 +167,6 @@
         .modal-box .modal-error.show{display:block}
         .hidden{display:none}
 
-        /* ==========================================================
-           响应式布局
-           ========================================================== */
-        
-        /* 电脑端：桌面侧边栏显示，移动元素隐藏 */
         @media(min-width:769px){
             .hamburger{display:none !important}
             .mobile-sidebar{display:none !important}
@@ -182,14 +174,11 @@
             .desktop-sidebar{display:block !important}
             .main-content{max-width:100%}
         }
-        
-        /* 平板/手机：移动侧边栏显示，桌面侧边栏隐藏 */
         @media(max-width:768px){
             .hamburger{display:flex}
             .mobile-sidebar{display:block}
             .mobile-overlay{display:block}
             .desktop-sidebar{display:none !important}
-            
             .main-wrapper{padding:0 0.5rem}
             .navbar{padding:0.4rem 1rem}
             .nav-container{gap:0.5rem}
@@ -203,8 +192,6 @@
             .category-toggle{font-size:clamp(1.1rem, 3.5vw, 1.3rem)}
             .sub-menu a{font-size:clamp(1rem, 3vw, 1.15rem)}
         }
-        
-        /* 小屏手机 */
         @media(max-width:480px){
             .nav-brand a{font-size:clamp(1.0rem, 3.5vw, 1.4rem)}
             .nav-brand img{height:clamp(24px, 4.5vw, 34px)}
@@ -250,79 +237,8 @@
     <!-- ===== 移动端遮罩层 ===== -->
     <div class="mobile-overlay" id="mobileOverlay"></div>
 
-    <!-- ===== 移动端侧边栏 ===== -->
-    <div class="mobile-sidebar" id="mobileSidebar">
-        <nav class="sidebar-nav">
-            <ul>
-                <li class="category">
-                    <span class="category-toggle"><i class="fas fa-book"></i> 制度汇编</span>
-                    <ul class="sub-menu">
-                        <li><a href="#page-服务器纲领">服务器纲领</a></li>
-                        <li><a href="#page-玩家权限体制">玩家权限体制</a></li>
-                        <li><a href="#page-玩家行政权限体制">玩家行政权限体制</a></li>
-                        <li><a href="#page-管理员行政权限体制">管理员行政权限体制</a></li>
-                        <li><a href="#page-监督委员会制度">监督委员会制度</a></li>
-                        <li><a href="#page-创造者协会章程">创造者协会章程</a></li>
-                        <li><a href="#page-体制关系与适用规则">体制关系与适用规则</a></li>
-                    </ul>
-                </li>
-                <li class="category">
-                    <span class="category-toggle"><i class="fas fa-gavel"></i> 服主令</span>
-                    <ul class="sub-menu">
-                        <li><a href="#page-2026第1号">2026 第1号</a></li>
-                        <li><a href="#page-2026第2号">2026 第2号</a></li>
-                        <li><a href="#page-2026第3号">2026 第3号</a></li>
-                        <li><a href="#page-2026第4号">2026 第4号</a></li>
-                        <li><a href="#page-2026第5号">2026 第5号</a></li>
-                        <li><a href="#page-2026第6号">2026 第6号</a></li>
-                        <li><a href="#page-2026第7号">2026 第7号</a></li>
-                    </ul>
-                </li>
-                <li class="category">
-                    <span class="category-toggle"><i class="fas fa-user"></i> 人物志</span>
-                    <ul class="sub-menu">
-                        <li><a href="#page-弘桀孤影行">弘桀孤影行</a></li>
-                        <li><a href="#page-出击的阴笑徐铮">出击的阴笑徐铮</a></li>
-                    </ul>
-                </li>
-                <li class="category">
-                    <span class="category-toggle"><i class="fas fa-code"></i> 技术文档</span>
-                    <ul class="sub-menu">
-                        <li><a href="#page-MCC目录">📖 MCC 学习新编</a></li>
-                        <li style="padding-left:1.2rem;font-size:clamp(0.8rem, 0.9vw, 0.9rem);color:var(--text-muted);"><a href="#page-第一章">第一章 指令的基本概念</a></li>
-                        <li style="padding-left:1.2rem;font-size:clamp(0.8rem, 0.9vw, 0.9rem);color:var(--text-muted);"><a href="#page-第二章">第二章 权限等级</a></li>
-                        <li style="padding-left:1.2rem;font-size:clamp(0.8rem, 0.9vw, 0.9rem);color:var(--text-muted);"><a href="#page-第三章">第三章 指令的构成、解析与执行</a></li>
-                        <li style="padding-left:1.2rem;font-size:clamp(0.8rem, 0.9vw, 0.9rem);color:var(--text-muted);"><a href="#page-第四章">第四章 命令方块</a></li>
-                        <li style="padding-left:1.2rem;font-size:clamp(0.8rem, 0.9vw, 0.9rem);color:var(--text-muted);"><a href="#page-第五章">第五章 目标选择器</a></li>
-                        <li style="padding-left:1.2rem;font-size:clamp(0.8rem, 0.9vw, 0.9rem);color:var(--text-muted);"><a href="#page-第六章">第六章 JSON 文本</a></li>
-                        <li style="padding-left:1.2rem;font-size:clamp(0.8rem, 0.9vw, 0.9rem);color:var(--text-muted);"><a href="#page-第七章">第七章 Molang 语言</a></li>
-                        <li style="padding-left:1.2rem;font-size:clamp(0.8rem, 0.9vw, 0.9rem);color:var(--text-muted);"><a href="#page-第八章">第八章 计分板</a></li>
-                        <li style="padding-left:1.2rem;font-size:clamp(0.8rem, 0.9vw, 0.9rem);color:var(--text-muted);"><a href="#page-第九章">第九章 标签与数据标签NBT</a></li>
-                        <li style="padding-left:1.2rem;font-size:clamp(0.8rem, 0.9vw, 0.9rem);color:var(--text-muted);"><a href="#page-第十章">第十章 粒子技术</a></li>
-                        <li style="padding-left:1.2rem;font-size:clamp(0.8rem, 0.9vw, 0.9rem);color:var(--text-muted);"><a href="#page-第十一章">第十一章 /execute全解</a></li>
-                        <li style="padding-left:1.2rem;font-size:clamp(0.8rem, 0.9vw, 0.9rem);color:var(--text-muted);"><a href="#page-第十二章">第十二章 指令组合设计</a></li>
-                        <li style="padding-left:1.2rem;font-size:clamp(0.8rem, 0.9vw, 0.9rem);color:var(--text-muted);"><a href="#page-第十三章">第十三章 指令性能与安全</a></li>
-                        <li style="padding-left:1.2rem;font-size:clamp(0.8rem, 0.9vw, 0.9rem);color:var(--text-muted);"><a href="#page-第十四章">第十四章 实战案例集</a></li>
-                        <li><a href="#page-盔甲架指南">🛡️ 盔甲架指南</a></li>
-                        <li><a href="#page-认识基岩版">🧱 认识基岩版</a></li>
-                    </ul>
-                </li>
-                <li class="category">
-                    <span class="category-toggle"><i class="fas fa-users"></i> 玩家文档</span>
-                    <ul class="sub-menu">
-                        <li><a href="#page-玩家游玩建议">玩家游玩建议</a></li>
-                        <li><a href="#page-管理员学习手册">管理员学习手册</a></li>
-                    </ul>
-                </li>
-                <li class="category">
-                    <span class="category-toggle"><i class="fas fa-flask"></i> 实验性</span>
-                    <ul class="sub-menu">
-                        <li><a href="#page-皮肤查看器">🧪 皮肤查看器</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
-    </div>
+    <!-- ===== 移动端侧边栏（由 script.js 动态渲染） ===== -->
+    <div class="mobile-sidebar" id="mobileSidebar"></div>
 
     <!-- ===== 房间号横幅 ===== -->
     <div class="room-banner" id="roomBanner">
@@ -335,79 +251,8 @@
 
     <!-- ===== 主体 ===== -->
     <div class="main-wrapper">
-        <!-- 桌面端侧边栏 -->
-        <aside class="desktop-sidebar" id="desktopSidebar">
-            <nav class="sidebar-nav">
-                <ul>
-                    <li class="category">
-                        <span class="category-toggle"><i class="fas fa-book"></i> 制度汇编</span>
-                        <ul class="sub-menu">
-                            <li><a href="#page-服务器纲领">服务器纲领</a></li>
-                            <li><a href="#page-玩家权限体制">玩家权限体制</a></li>
-                            <li><a href="#page-玩家行政权限体制">玩家行政权限体制</a></li>
-                            <li><a href="#page-管理员行政权限体制">管理员行政权限体制</a></li>
-                            <li><a href="#page-监督委员会制度">监督委员会制度</a></li>
-                            <li><a href="#page-创造者协会章程">创造者协会章程</a></li>
-                            <li><a href="#page-体制关系与适用规则">体制关系与适用规则</a></li>
-                        </ul>
-                    </li>
-                    <li class="category">
-                        <span class="category-toggle"><i class="fas fa-gavel"></i> 服主令</span>
-                        <ul class="sub-menu">
-                            <li><a href="#page-2026第1号">2026 第1号</a></li>
-                            <li><a href="#page-2026第2号">2026 第2号</a></li>
-                            <li><a href="#page-2026第3号">2026 第3号</a></li>
-                            <li><a href="#page-2026第4号">2026 第4号</a></li>
-                            <li><a href="#page-2026第5号">2026 第5号</a></li>
-                            <li><a href="#page-2026第6号">2026 第6号</a></li>
-                            <li><a href="#page-2026第7号">2026 第7号</a></li>
-                        </ul>
-                    </li>
-                    <li class="category">
-                        <span class="category-toggle"><i class="fas fa-user"></i> 人物志</span>
-                        <ul class="sub-menu">
-                            <li><a href="#page-弘桀孤影行">弘桀孤影行</a></li>
-                            <li><a href="#page-出击的阴笑徐铮">出击的阴笑徐铮</a></li>
-                        </ul>
-                    </li>
-                    <li class="category">
-                        <span class="category-toggle"><i class="fas fa-code"></i> 技术文档</span>
-                        <ul class="sub-menu">
-                            <li><a href="#page-MCC目录">📖 MCC 学习新编</a></li>
-                            <li style="padding-left:1.2rem;font-size:clamp(0.8rem, 0.9vw, 0.9rem);color:var(--text-muted);"><a href="#page-第一章">第一章 指令的基本概念</a></li>
-                            <li style="padding-left:1.2rem;font-size:clamp(0.8rem, 0.9vw, 0.9rem);color:var(--text-muted);"><a href="#page-第二章">第二章 权限等级</a></li>
-                            <li style="padding-left:1.2rem;font-size:clamp(0.8rem, 0.9vw, 0.9rem);color:var(--text-muted);"><a href="#page-第三章">第三章 指令的构成、解析与执行</a></li>
-                            <li style="padding-left:1.2rem;font-size:clamp(0.8rem, 0.9vw, 0.9rem);color:var(--text-muted);"><a href="#page-第四章">第四章 命令方块</a></li>
-                            <li style="padding-left:1.2rem;font-size:clamp(0.8rem, 0.9vw, 0.9rem);color:var(--text-muted);"><a href="#page-第五章">第五章 目标选择器</a></li>
-                            <li style="padding-left:1.2rem;font-size:clamp(0.8rem, 0.9vw, 0.9rem);color:var(--text-muted);"><a href="#page-第六章">第六章 JSON 文本</a></li>
-                            <li style="padding-left:1.2rem;font-size:clamp(0.8rem, 0.9vw, 0.9rem);color:var(--text-muted);"><a href="#page-第七章">第七章 Molang 语言</a></li>
-                            <li style="padding-left:1.2rem;font-size:clamp(0.8rem, 0.9vw, 0.9rem);color:var(--text-muted);"><a href="#page-第八章">第八章 计分板</a></li>
-                            <li style="padding-left:1.2rem;font-size:clamp(0.8rem, 0.9vw, 0.9rem);color:var(--text-muted);"><a href="#page-第九章">第九章 标签与数据标签NBT</a></li>
-                            <li style="padding-left:1.2rem;font-size:clamp(0.8rem, 0.9vw, 0.9rem);color:var(--text-muted);"><a href="#page-第十章">第十章 粒子技术</a></li>
-                            <li style="padding-left:1.2rem;font-size:clamp(0.8rem, 0.9vw, 0.9rem);color:var(--text-muted);"><a href="#page-第十一章">第十一章 /execute全解</a></li>
-                            <li style="padding-left:1.2rem;font-size:clamp(0.8rem, 0.9vw, 0.9rem);color:var(--text-muted);"><a href="#page-第十二章">第十二章 指令组合设计</a></li>
-                            <li style="padding-left:1.2rem;font-size:clamp(0.8rem, 0.9vw, 0.9rem);color:var(--text-muted);"><a href="#page-第十三章">第十三章 指令性能与安全</a></li>
-                            <li style="padding-left:1.2rem;font-size:clamp(0.8rem, 0.9vw, 0.9rem);color:var(--text-muted);"><a href="#page-第十四章">第十四章 实战案例集</a></li>
-                            <li><a href="#page-盔甲架指南">🛡️ 盔甲架指南</a></li>
-                            <li><a href="#page-认识基岩版">🧱 认识基岩版</a></li>
-                        </ul>
-                    </li>
-                    <li class="category">
-                        <span class="category-toggle"><i class="fas fa-users"></i> 玩家文档</span>
-                        <ul class="sub-menu">
-                            <li><a href="#page-玩家游玩建议">玩家游玩建议</a></li>
-                            <li><a href="#page-管理员学习手册">管理员学习手册</a></li>
-                        </ul>
-                    </li>
-                    <li class="category">
-                        <span class="category-toggle"><i class="fas fa-flask"></i> 实验性</span>
-                        <ul class="sub-menu">
-                            <li><a href="#page-皮肤查看器">🧪 皮肤查看器</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </nav>
-        </aside>
+        <!-- 桌面端侧边栏（由 script.js 动态渲染） -->
+        <aside class="desktop-sidebar" id="desktopSidebar"></aside>
 
         <main class="main-content" id="mainContent">
             <section id="home-content">
@@ -439,59 +284,56 @@
         </div>
     </div>
 
+    <!-- ===== 加载外部文件 ===== -->
+    <script src="/data.js"></script>
+    <script src="/script.js"></script>
+
+    <!-- ===== 核心脚本（页面加载、缓存、登录等，与侧边栏无关） ===== -->
     <script>
     // ============================================================
-    // 0. 版本控制与缓存管理
+    // 版本控制与缓存管理
     // ============================================================
     var APP_VERSION = '2026.08.10.011';
     var CACHE_MAX_AGE = 5 * 60 * 1000;
 
-    var storedVersion = localStorage.getItem('app_version');
-    if (storedVersion !== APP_VERSION) {
-        sessionStorage.clear();
-        localStorage.setItem('app_version', APP_VERSION);
-        console.log('[MCC Wiki] 版本已更新，缓存已清除');
+    function loadVersion() {
+        fetch('/version.txt?' + Date.now())
+            .then(function(response) {
+                if (!response.ok) throw new Error('version.txt 不存在');
+                return response.text();
+            })
+            .then(function(text) {
+                var match = text.match(/version:"([^"]+)"/);
+                if (match && match[1]) {
+                    APP_VERSION = match[1].trim();
+                    console.log('[MCC Wiki] 版本号已加载:', APP_VERSION);
+                } else {
+                    console.warn('[MCC Wiki] version.txt 格式错误，使用默认版本号');
+                }
+                checkVersionAndClearCache();
+            })
+            .catch(function() {
+                console.warn('[MCC Wiki] version.txt 未找到，使用默认版本号:', APP_VERSION);
+                checkVersionAndClearCache();
+            });
+    }
+
+    function checkVersionAndClearCache() {
+        var storedVersion = localStorage.getItem('app_version');
+        if (storedVersion !== APP_VERSION) {
+            sessionStorage.clear();
+            localStorage.setItem('app_version', APP_VERSION);
+            console.log('[MCC Wiki] 版本已更新 (', storedVersion, '->', APP_VERSION, ')，缓存已清除');
+        } else {
+            console.log('[MCC Wiki] 版本一致，无需清除缓存');
+        }
     }
 
     // ============================================================
-    // 1. 卡片数据
+    // 卡片渲染
     // ============================================================
-    var cardData = [
-        { title: '制度汇编', icon: 'fa-book', items: ['服务器纲领', '玩家权限体制', '玩家行政权限体制', '管理员行政权限体制', '监督委员会制度', '创造者协会章程', '体制关系与适用规则'] },
-        { title: '服主令', icon: 'fa-gavel', items: ['2026第1号', '2026第2号', '2026第3号', '2026第4号', '2026第5号', '2026第6号', '2026第7号'] },
-        { title: '人物志', icon: 'fa-user', items: ['弘桀孤影行', '出击的阴笑徐铮'] },
-        { title: '技术文档', icon: 'fa-code', items: ['MCC目录', '第一章', '第二章', '第三章', '第四章', '第五章', '第六章', '第七章', '第八章', '第九章', '第十章', '第十一章', '第十二章', '第十三章', '第十四章', '盔甲架指南', '认识基岩版'] },
-        { title: '玩家文档', icon: 'fa-users', items: ['玩家游玩建议', '管理员学习手册'] },
-        { title: '论坛', icon: 'fa-comments', items: ['论坛'] },
-        { title: '实验性', icon: 'fa-flask', items: ['皮肤查看器'] }
-    ];
-
-    var displayNames = {
-        '2026第1号': '2026 第1号', '2026第2号': '2026 第2号', '2026第3号': '2026 第3号',
-        '2026第4号': '2026 第4号', '2026第5号': '2026 第5号', '2026第6号': '2026 第6号', '2026第7号': '2026 第7号',
-        'MCC目录': 'MCC 学习新编',
-        '第一章': '第一章 指令的基本概念',
-        '第二章': '第二章 权限等级',
-        '第三章': '第三章 指令的构成、解析与执行',
-        '第四章': '第四章 命令方块',
-        '第五章': '第五章 目标选择器',
-        '第六章': '第六章 JSON 文本',
-        '第七章': '第七章 Molang 语言',
-        '第八章': '第八章 计分板',
-        '第九章': '第九章 标签与数据标签NBT',
-        '第十章': '第十章 粒子技术',
-        '第十一章': '第十一章 /execute全解',
-        '第十二章': '第十二章 指令组合设计',
-        '第十三章': '第十三章 指令性能与安全',
-        '第十四章': '第十四章 实战案例集',
-        '皮肤查看器': '🧪 皮肤查看器'
-    };
-
     function getDisplayName(key) { return displayNames[key] || key; }
 
-    // ============================================================
-    // 2. 渲染卡片
-    // ============================================================
     function renderCards() {
         var grid = document.getElementById('cardGrid');
         var html = '';
@@ -508,50 +350,7 @@
     }
 
     // ============================================================
-    // 3. 页面路径映射表
-    // ============================================================
-    var pagePathMap = {
-        '服务器纲领': '/pages/制度汇编/服务器纲领.html',
-        '玩家权限体制': '/pages/制度汇编/玩家权限体制.html',
-        '玩家行政权限体制': '/pages/制度汇编/玩家行政权限体制.html',
-        '管理员行政权限体制': '/pages/制度汇编/管理员行政权限体制.html',
-        '监督委员会制度': '/pages/制度汇编/监督委员会制度.html',
-        '创造者协会章程': '/pages/制度汇编/创造者协会章程.html',
-        '体制关系与适用规则': '/pages/制度汇编/体制关系与适用规则.html',
-        '2026第1号': '/pages/服主令/2026-1号.html',
-        '2026第2号': '/pages/服主令/2026-2号.html',
-        '2026第3号': '/pages/服主令/2026-3号.html',
-        '2026第4号': '/pages/服主令/2026-4号.html',
-        '2026第5号': '/pages/服主令/2026-5号.html',
-        '2026第6号': '/pages/服主令/2026-6号.html',
-        '2026第7号': '/pages/服主令/2026-7号.html',
-        '弘桀孤影行': '/pages/人物志/弘桀孤影行.html',
-        '出击的阴笑徐铮': '/pages/人物志/出击的阴笑徐铮.html',
-        'MCC目录': '/pages/技术文档/MCC/目录.html',
-        '第一章': '/pages/技术文档/MCC/第一章.html',
-        '第二章': '/pages/技术文档/MCC/第二章.html',
-        '第三章': '/pages/技术文档/MCC/第三章.html',
-        '第四章': '/pages/技术文档/MCC/第四章.html',
-        '第五章': '/pages/技术文档/MCC/第五章.html',
-        '第六章': '/pages/技术文档/MCC/第六章.html',
-        '第七章': '/pages/技术文档/MCC/第七章.html',
-        '第八章': '/pages/技术文档/MCC/第八章.html',
-        '第九章': '/pages/技术文档/MCC/第九章.html',
-        '第十章': '/pages/技术文档/MCC/第十章.html',
-        '第十一章': '/pages/技术文档/MCC/第十一章.html',
-        '第十二章': '/pages/技术文档/MCC/第十二章.html',
-        '第十三章': '/pages/技术文档/MCC/第十三章.html',
-        '第十四章': '/pages/技术文档/MCC/第十四章.html',
-        '盔甲架指南': '/pages/技术文档/盔甲架指南.html',
-        '认识基岩版': '/pages/技术文档/认识基岩版.html',
-        '玩家游玩建议': '/pages/玩家文档/游玩建议.html',
-        '管理员学习手册': '/pages/玩家文档/管理员手册.html',
-        '论坛': '/pages/论坛/index.html',
-        '皮肤查看器': '/pages/实验性/皮肤查看器.html'
-    };
-
-    // ============================================================
-    // 4. 检查缓存是否有效
+    // 缓存检查
     // ============================================================
     function isCacheValid(cacheKey) {
         var cached = sessionStorage.getItem(cacheKey);
@@ -563,45 +362,34 @@
     }
 
     // ============================================================
-    // 5. 关闭侧边栏（移动端）
-    // ============================================================
-    function closeSidebarIfMobile() {
-        if (window.innerWidth < 769) {
-            var sidebar = document.getElementById('mobileSidebar');
-            var hamburger = document.getElementById('hamburgerBtn');
-            var overlay = document.getElementById('mobileOverlay');
-            sidebar.classList.remove('open');
-            hamburger.classList.remove('open');
-            overlay.classList.remove('active');
-            document.body.style.overflow = '';
-        }
-    }
-
-    // ============================================================
-    // 6. 重新执行动态加载的 <script> 标签
+    // 重新执行动态加载的 <script> 标签
     // ============================================================
     function reExecuteScripts(container) {
         var scripts = container.querySelectorAll('script');
         scripts.forEach(function(oldScript) {
             var newScript = document.createElement('script');
-            // 复制所有属性
             for (var i = 0; i < oldScript.attributes.length; i++) {
                 var attr = oldScript.attributes[i];
                 newScript.setAttribute(attr.name, attr.value);
             }
-            // 复制内联代码
             if (oldScript.textContent) {
                 newScript.textContent = oldScript.textContent;
             }
-            // 替换旧脚本
             oldScript.parentNode.replaceChild(newScript, oldScript);
         });
     }
 
     // ============================================================
-    // 7. 页面加载函数
+    // 页面加载函数（带加载状态锁）
     // ============================================================
+    var isLoading = false;
+
     function loadPage(pageId) {
+        if (isLoading) {
+            console.log('[MCC Wiki] 正在加载中，请稍候...');
+            return;
+        }
+
         var anchor = '';
         if (pageId.includes('#')) {
             var parts = pageId.split('#');
@@ -614,15 +402,15 @@
         var pageContent = document.getElementById('page-content');
         var path = pagePathMap[pageId];
 
-        closeSidebarIfMobile();
-
         home.style.display = 'none';
         pageContent.innerHTML = '';
         pageContent.style.display = 'block';
 
         if (!path) {
             pageContent.innerHTML = '<div class="doc-content"><h1>📄 ' + pageId + '</h1><p style="color:var(--text-muted);">此页面内容正在建设中，敬请期待。</p></div>';
-            updateActiveState(pageId);
+            if (typeof updateActiveState === 'function') {
+                updateActiveState(pageId);
+            }
             if (window.location.hash !== '#page-' + pageId) {
                 history.pushState(null, '', '#page-' + pageId);
             }
@@ -638,28 +426,24 @@
             if (window.location.hash !== '#page-' + pageId) {
                 history.pushState(null, '', '#page-' + pageId);
             }
-            updateActiveState(pageId);
-
-            // ===== 重新执行页面中的 <script> 标签 =====
+            if (typeof updateActiveState === 'function') {
+                updateActiveState(pageId);
+            }
             reExecuteScripts(pageContent);
 
             if (pageId === '论坛') {
-                setTimeout(function() {
-                    loadGiscus();
-                }, 300);
+                setTimeout(function() { loadGiscus(); }, 300);
             }
-
             if (anchor) {
                 setTimeout(function() {
                     var target = document.getElementById(anchor);
-                    if (target) {
-                        target.scrollIntoView({ behavior: 'smooth' });
-                    }
+                    if (target) target.scrollIntoView({ behavior: 'smooth' });
                 }, 150);
             }
             return;
         }
 
+        isLoading = true;
         sessionStorage.removeItem(cacheKey);
         sessionStorage.removeItem(cacheKey + '_time');
 
@@ -667,7 +451,10 @@
 
         fetch(path)
             .then(function(response) {
-                if (!response.ok) throw new Error('HTTP ' + response.status);
+                if (!response.ok) {
+                    if (response.status === 404) throw new Error('HTTP 404');
+                    throw new Error('HTTP ' + response.status);
+                }
                 return response.text();
             })
             .then(function(html) {
@@ -678,48 +465,47 @@
                 if (window.location.hash !== '#page-' + pageId) {
                     history.pushState(null, '', '#page-' + pageId);
                 }
-                updateActiveState(pageId);
-
-                // ===== 重新执行页面中的 <script> 标签 =====
+                if (typeof updateActiveState === 'function') {
+                    updateActiveState(pageId);
+                }
                 reExecuteScripts(pageContent);
 
                 if (pageId === '论坛') {
-                    setTimeout(function() {
-                        loadGiscus();
-                    }, 300);
+                    setTimeout(function() { loadGiscus(); }, 300);
                 }
-
                 if (anchor) {
                     setTimeout(function() {
                         var target = document.getElementById(anchor);
-                        if (target) {
-                            target.scrollIntoView({ behavior: 'smooth' });
-                        }
+                        if (target) target.scrollIntoView({ behavior: 'smooth' });
                     }, 150);
                 }
             })
-            .catch(function() {
-                pageContent.innerHTML = '<div class="doc-content"><h1>📄 ' + pageId + '</h1><p style="color:var(--text-muted);">加载失败，请检查网络连接后重试。</p></div>';
+            .catch(function(error) {
+                var message = '加载失败，请检查网络连接后重试。';
+                if (error.message === 'HTTP 404') {
+                    message = '📄 此页面内容正在建设中，敬请期待。';
+                }
+                pageContent.innerHTML = '<div class="doc-content"><h1>📄 ' + pageId + '</h1><p style="color:var(--text-muted);">' + message + '</p></div>';
+            })
+            .finally(function() {
+                isLoading = false;
             });
     }
 
     // ============================================================
-    // 8. 加载 Giscus（论坛评论系统）
+    // 加载 Giscus
     // ============================================================
     function loadGiscus() {
         if (document.querySelector('.giscus iframe')) {
             console.log('Giscus 已加载');
             return;
         }
-
         var container = document.querySelector('.giscus');
         if (!container) {
             console.warn('Giscus 容器不存在');
             return;
         }
-
         container.innerHTML = '';
-
         var script = document.createElement('script');
         script.src = 'https://giscus.app/client.js';
         script.dataset.repo = 'BlockRhapsody/blockrhapsody.github.io';
@@ -736,13 +522,12 @@
         script.dataset.lang = 'zh-CN';
         script.crossOrigin = 'anonymous';
         script.async = true;
-
         container.parentNode.insertBefore(script, container.nextSibling);
         console.log('Giscus 已加载');
     }
 
     // ============================================================
-    // 9. 清除缓存并刷新
+    // 清除缓存并刷新
     // ============================================================
     function clearCacheAndReload() {
         sessionStorage.clear();
@@ -752,22 +537,7 @@
     window.clearCacheAndReload = clearCacheAndReload;
 
     // ============================================================
-    // 10. 更新高亮状态
-    // ============================================================
-    function updateActiveState(pageId) {
-        document.querySelectorAll('.sub-menu a, .card-list li').forEach(function(el) {
-            el.classList.remove('active');
-        });
-        document.querySelectorAll('.sub-menu a[href="#page-' + pageId + '"]').forEach(function(el) {
-            el.classList.add('active');
-        });
-        document.querySelectorAll('.card-list li[data-page="' + pageId + '"]').forEach(function(el) {
-            el.classList.add('active');
-        });
-    }
-
-    // ============================================================
-    // 11. 返回首页
+    // 返回首页
     // ============================================================
     function showHome() {
         var home = document.getElementById('home-content');
@@ -784,7 +554,7 @@
     window.showHome = showHome;
 
     // ============================================================
-    // 12. 登录功能
+    // 登录功能
     // ============================================================
     function openLoginModal(e) {
         if (e) e.preventDefault();
@@ -840,11 +610,13 @@
     }
 
     // ============================================================
-    // 13. 房间号横幅
+    // 房间号横幅
     // ============================================================
     function initRoomStatus() {
         var banner = document.getElementById('roomBanner');
         var display = document.getElementById('roomNumberDisplay');
+
+        if (!banner || !display) return;
 
         fetch('/room_number.txt?' + Date.now())
             .then(function(response) {
@@ -854,8 +626,7 @@
             .then(function(text) {
                 var match = text.match(/setroomnumber:"([^"]+)"/);
                 if (match && match[1]) {
-                    var room = match[1];
-                    display.textContent = room;
+                    display.textContent = match[1];
                     banner.classList.add('show');
                 } else {
                     banner.classList.remove('show');
@@ -869,99 +640,26 @@
     }
 
     // ============================================================
-    // 14. 汉堡菜单
+    // 重置滚动位置
     // ============================================================
-    function initHamburger() {
-        var hamburger = document.getElementById('hamburgerBtn');
-        var sidebar = document.getElementById('mobileSidebar');
-        var overlay = document.getElementById('mobileOverlay');
-
-        function toggleSidebar(e) {
-            e.stopPropagation();
-            var isOpen = sidebar.classList.toggle('open');
-            hamburger.classList.toggle('open');
-            overlay.classList.toggle('active');
-            document.body.style.overflow = isOpen ? 'hidden' : '';
-        }
-
-        function closeSidebar() {
-            sidebar.classList.remove('open');
-            hamburger.classList.remove('open');
-            overlay.classList.remove('active');
-            document.body.style.overflow = '';
-        }
-
-        hamburger.addEventListener('click', toggleSidebar);
-        overlay.addEventListener('click', closeSidebar);
-
-        window.addEventListener('resize', function() {
-            if (window.innerWidth >= 769) {
-                closeSidebar();
-            }
-        });
-    }
-
-    // ============================================================
-    // 15. 侧边栏展开/折叠 + 卡片点击
-    // ============================================================
-    function initSidebar() {
-        document.querySelectorAll('.category-toggle').forEach(function(toggle) {
-            toggle.addEventListener('click', function(e) {
-                e.stopPropagation();
-                var parent = this.closest('.category');
-                var sub = parent.querySelector('.sub-menu');
-                if (sub) {
-                    sub.classList.toggle('open');
-                    this.classList.toggle('open');
-                }
-            });
-        });
-
-        document.querySelectorAll('.sub-menu a').forEach(function(link) {
-            link.addEventListener('click', function(e) {
-                var href = this.getAttribute('href');
-                if (href && href.startsWith('#page-')) {
-                    e.preventDefault();
-                    loadPage(href.replace('#page-', ''));
-                }
-            });
-        });
-
-        document.getElementById('cardGrid').addEventListener('click', function(e) {
-            var target = e.target.closest('.card-list li');
-            if (target && target.dataset.page) {
-                e.preventDefault();
-                e.stopPropagation();
-                loadPage(target.dataset.page);
-            }
-        });
-    }
-
-    function initHash() {
-        var hash = window.location.hash;
-        if (hash && hash.startsWith('#page-')) {
-            var pageId = decodeURIComponent(hash.replace('#page-', ''));
-            loadPage(pageId);
-        }
-    }
-
     function resetScrollPosition() {
         window.scrollTo(0, 0);
     }
 
+    // ============================================================
+    // DOM 就绪初始化
+    // ============================================================
     document.addEventListener('DOMContentLoaded', function() {
         if ('scrollRestoration' in history) {
             history.scrollRestoration = 'manual';
         }
-        
+
+        loadVersion();
         resetScrollPosition();
-        
         document.body.classList.add('loaded');
+        
         renderCards();
-        initHamburger();
-        initSidebar();
         initRoomStatus();
-        initHash();
         updateAuthUI();
 
         document.getElementById('loginUsername').addEventListener('keydown', function(e) {
@@ -970,10 +668,22 @@
         document.getElementById('loginModal').addEventListener('click', function(e) {
             if (e.target === this) closeLoginModal();
         });
-        
+
         setTimeout(resetScrollPosition, 50);
         setTimeout(resetScrollPosition, 200);
     });
+
+    // ============================================================
+    // URL 哈希初始化
+    // ============================================================
+    function initHash() {
+        var hash = window.location.hash;
+        if (hash && hash.startsWith('#page-')) {
+            var pageId = decodeURIComponent(hash.replace('#page-', ''));
+            loadPage(pageId);
+        }
+    }
+    initHash();
     </script>
 </body>
 </html>
