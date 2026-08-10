@@ -36,8 +36,8 @@ var sidebarMenu = [
             { name: '第十二章', indent: 1, display: '第十二章 指令组合设计' },
             { name: '第十三章', indent: 1, display: '第十三章 指令性能与安全' },
             { name: '第十四章', indent: 1, display: '第十四章 实战案例集' },
-            { name: '盔甲架指南', indent: 0, display: '🛡️ 盔甲架指南' },
-            { name: '认识基岩版', indent: 0, display: '🧱 认识基岩版' }
+            { name: '盔甲架指南', indent: 0, display: '盔甲架指南' },
+            { name: '认识基岩版', indent: 0, display: '认识基岩版' }
         ]
     },
     {
@@ -54,8 +54,8 @@ var sidebarMenu = [
         title: '实验性',
         icon: 'fa-flask',
         items: [
-            { name: '皮肤查看器', indent: 0, display: '🧪 皮肤查看器' },
-            { name: '强刷新', indent: 0, display: '🔄 强刷新' }
+            { name: '皮肤查看器', indent: 0, display: '皮肤查看器' },
+            { name: '强刷新', indent: 0, display: '强刷新' }
         ]
     }
 ];
@@ -147,6 +147,6 @@ var displayNames = {
     '第十二章': '第十二章 指令组合设计',
     '第十三章': '第十三章 指令性能与安全',
     '第十四章': '第十四章 实战案例集',
-    '皮肤查看器': '🧪 皮肤查看器',
-    '强刷新': '🔄 强刷新'
+    '皮肤查看器': '皮肤查看器',
+    '强刷新': '强刷新'
 };
