@@ -1,0 +1,427 @@
+<div class="doc-content">
+    <h1>🖼️ 图像文件</h1>
+    <p style="color:var(--text-secondary);">icon 目录下所有图片文件枚举 · 方块狂想曲服务器资源</p>
+
+    <!-- ===== 统计信息 ===== -->
+    <div style="display:flex;flex-wrap:wrap;gap:1rem;margin:1rem 0 1.5rem 0;">
+        <div style="background:rgba(255,255,255,0.03);border-radius:var(--radius);padding:0.6rem 1.2rem;border:1px solid var(--border-color);">
+            <span style="color:var(--text-muted);">总计：</span>
+            <span id="totalCount" style="color:var(--text-primary);font-weight:700;">加载中...</span>
+            <span style="color:var(--text-muted);">张</span>
+        </div>
+        <div style="background:rgba(255,255,255,0.03);border-radius:var(--radius);padding:0.6rem 1.2rem;border:1px solid var(--border-color);">
+            <span style="color:var(--text-muted);">PNG：</span>
+            <span id="pngCount" style="color:var(--text-primary);font-weight:700;">0</span>
+        </div>
+        <div style="background:rgba(255,255,255,0.03);border-radius:var(--radius);padding:0.6rem 1.2rem;border:1px solid var(--border-color);">
+            <span style="color:var(--text-muted);">JPG：</span>
+            <span id="jpgCount" style="color:var(--text-primary);font-weight:700;">0</span>
+        </div>
+        <div style="background:rgba(255,255,255,0.03);border-radius:var(--radius);padding:0.6rem 1.2rem;border:1px solid var(--border-color);">
+            <span style="color:var(--text-muted);">GIF：</span>
+            <span id="gifCount" style="color:var(--text-primary);font-weight:700;">0</span>
+        </div>
+        <div style="background:rgba(255,255,255,0.03);border-radius:var(--radius);padding:0.6rem 1.2rem;border:1px solid var(--border-color);">
+            <span style="color:var(--text-muted);">SVG：</span>
+            <span id="svgCount" style="color:var(--text-primary);font-weight:700;">0</span>
+        </div>
+        <div style="background:rgba(255,255,255,0.03);border-radius:var(--radius);padding:0.6rem 1.2rem;border:1px solid var(--border-color);">
+            <span style="color:var(--text-muted);">WEBP：</span>
+            <span id="webpCount" style="color:var(--text-primary);font-weight:700;">0</span>
+        </div>
+    </div>
+
+    <!-- ===== 加载状态 ===== -->
+    <div id="loadingStatus" style="text-align:center;padding:2rem 0;color:var(--text-muted);">
+        <img src="/icon/Structure_Block_3.png" alt="加载中" style="width:48px;height:48px;image-rendering:pixelated;animation:breathe 1.2s ease-in-out infinite;display:block;margin:0 auto;">
+        <p style="margin-top:0.8rem;">正在扫描图像文件...</p>
+    </div>
+
+    <!-- ===== 图像网格 ===== -->
+    <div id="imageGrid" style="display:grid;grid-template-columns:repeat(auto-fill, minmax(160px, 1fr));gap:1rem;display:none;">
+    </div>
+
+    <!-- ===== 无结果 ===== -->
+    <div id="noResult" style="text-align:center;padding:3rem 0;color:var(--text-muted);display:none;">
+        <p>📭 未找到任何图像文件</p>
+        <p style="font-size:0.85rem;margin-top:0.4rem;">请确保 icon 目录下存在图片文件</p>
+    </div>
+
+    <div class="footnote">
+        <p>方块狂想曲 · 实验性功能 · 图像文件自动枚举</p>
+    </div>
+</div>
+
+<style>
+    @keyframes breathe {
+        0%, 100% { transform: scale(1); opacity: 0.7; }
+        50% { transform: scale(1.12); opacity: 1; }
+    }
+
+    .image-card {
+        background: rgba(255,255,255,0.02);
+        border: 1px solid var(--border-color);
+        border-radius: var(--radius);
+        overflow: hidden;
+        transition: all var(--transition);
+        cursor: pointer;
+    }
+
+    .image-card:hover {
+        border-color: var(--accent);
+        transform: translateY(-4px);
+        box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+    }
+
+    .image-card img {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        object-fit: contain;
+        background: rgba(0,0,0,0.3);
+        display: block;
+        image-rendering: pixelated;
+        padding: 0.5rem;
+    }
+
+    .image-card .image-info {
+        padding: 0.5rem 0.6rem;
+        font-size: 0.7rem;
+        color: var(--text-muted);
+        border-top: 1px solid var(--border-color);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 0.3rem;
+        overflow: hidden;
+    }
+
+    .image-card .image-info .filename {
+        color: var(--text-secondary);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        flex: 1;
+        font-size: 0.75rem;
+    }
+
+    .image-card .image-info .filesize {
+        color: var(--text-muted);
+        font-size: 0.65rem;
+        flex-shrink: 0;
+    }
+
+    .image-card .image-info .format-badge {
+        font-size: 0.55rem;
+        padding: 0.1rem 0.4rem;
+        border-radius: 4px;
+        flex-shrink: 0;
+        font-weight: 700;
+    }
+
+    .format-badge.png { background: rgba(76,175,80,0.2); color: #4CAF50; }
+    .format-badge.jpg { background: rgba(255,193,7,0.2); color: #FFC107; }
+    .format-badge.jpeg { background: rgba(255,193,7,0.2); color: #FFC107; }
+    .format-badge.gif { background: rgba(156,39,176,0.2); color: #AB47BC; }
+    .format-badge.svg { background: rgba(33,150,243,0.2); color: #42A5F5; }
+    .format-badge.webp { background: rgba(0,188,212,0.2); color: #00BCD4; }
+
+    /* 大图预览模态框 */
+    .preview-overlay {
+        position: fixed;
+        top: 0; left: 0; right: 0; bottom: 0;
+        background: rgba(0,0,0,0.85);
+        backdrop-filter: blur(8px);
+        z-index: 1000;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem;
+        animation: fadeIn 0.3s ease;
+    }
+    .preview-overlay.active { display: flex; }
+    .preview-overlay img {
+        max-width: 80vw;
+        max-height: 80vh;
+        object-fit: contain;
+        image-rendering: pixelated;
+        border-radius: var(--radius);
+        box-shadow: 0 24px 64px rgba(0,0,0,0.5);
+    }
+    .preview-overlay .close-btn {
+        position: fixed;
+        top: 1.5rem;
+        right: 2rem;
+        font-size: 2rem;
+        color: var(--text-secondary);
+        cursor: pointer;
+        transition: color var(--transition);
+        background: none;
+        border: none;
+        font-family: var(--font-pixel);
+    }
+    .preview-overlay .close-btn:hover { color: var(--text-primary); }
+    .preview-overlay .preview-info {
+        position: fixed;
+        bottom: 2rem;
+        left: 50%;
+        transform: translateX(-50%);
+        color: var(--text-muted);
+        font-size: 0.85rem;
+        background: rgba(0,0,0,0.6);
+        padding: 0.4rem 1.2rem;
+        border-radius: 40px;
+        border: 1px solid var(--border-color);
+    }
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+    @media (max-width: 480px) {
+        .image-card .image-info .filename { font-size: 0.65rem; }
+        .preview-overlay img { max-width: 95vw; max-height: 70vh; }
+        .preview-overlay .close-btn { top: 1rem; right: 1rem; font-size: 1.5rem; }
+    }
+</style>
+
+<script>
+    // ============================================================
+    // 图像文件枚举器
+    // ============================================================
+    (function initImageGallery() {
+        var imageGrid = document.getElementById('imageGrid');
+        var loadingStatus = document.getElementById('loadingStatus');
+        var noResult = document.getElementById('noResult');
+
+        // 支持的图片格式
+        var SUPPORTED_EXTENSIONS = ['png', 'jpg', 'jpeg', 'gif', 'svg', 'webp'];
+
+        // 统计计数器
+        var stats = {
+            total: 0,
+            png: 0,
+            jpg: 0,
+            jpeg: 0,
+            gif: 0,
+            svg: 0,
+            webp: 0
+        };
+
+        // 已知图标列表（根据实际 icon 目录手动维护）
+        // 当 icon 目录新增文件时，需要在此添加
+        var KNOWN_ICONS = [
+            'Beacon.png',
+            'Book.png',
+            'Bookshelf.png',
+            'Chain_Command_Block.png',
+            'Command_Block.png',
+            'Creeper_Head.png',
+            'Dragon_Egg.png',
+            'Dragon_Head.png',
+            'Enchanting_Table_1.png',
+            'Enchanting_Table_2.png',
+            'Iron_Pickaxe.png',
+            'Lectern_Book.png',
+            'Player_Head.png',
+            'Repeating_Command_Block.png',
+            'Structure_Block_1.png',
+            'Structure_Block_2.png',
+            'Structure_Block_3.png',
+            'Written_Book.png',
+        ];
+
+        // ============================================================
+        // 格式化文件大小
+        // ============================================================
+        function formatFileSize(bytes) {
+            if (bytes < 1024) return bytes + 'B';
+            if (bytes < 1048576) return (bytes / 1024).toFixed(1) + 'KB';
+            return (bytes / 1048576).toFixed(1) + 'MB';
+        }
+
+        // ============================================================
+        // 获取文件扩展名
+        // ============================================================
+        function getExtension(filename) {
+            var parts = filename.split('.');
+            if (parts.length < 2) return '';
+            return parts[parts.length - 1].toLowerCase();
+        }
+
+        // ============================================================
+        // 检测文件是否存在
+        // ============================================================
+        function checkImageExists(url) {
+            return new Promise(function(resolve) {
+                var img = new Image();
+                img.onload = function() { resolve(true); };
+                img.onerror = function() { resolve(false); };
+                // 设置超时，避免长时间等待
+                var timeout = setTimeout(function() {
+                    img.src = '';
+                    resolve(false);
+                }, 3000);
+                img.src = url;
+            });
+        }
+
+        // ============================================================
+        // 获取文件大小（通过 HEAD 请求）
+        // ============================================================
+        function getFileSize(url) {
+            return fetch(url, { method: 'HEAD' })
+                .then(function(response) {
+                    var size = response.headers.get('content-length');
+                    return size ? parseInt(size) : 0;
+                })
+                .catch(function() {
+                    return 0;
+                });
+        }
+
+        // ============================================================
+        // 加载并渲染图像
+        // ============================================================
+        async function loadImages() {
+            var validImages = [];
+            var basePath = '/icon/';
+
+            // 逐个检测已知图标
+            for (var i = 0; i < KNOWN_ICONS.length; i++) {
+                var filename = KNOWN_ICONS[i];
+                var url = basePath + filename;
+                var exists = await checkImageExists(url);
+                if (exists) {
+                    var ext = getExtension(filename);
+                    var size = await getFileSize(url);
+                    validImages.push({
+                        filename: filename,
+                        url: url,
+                        ext: ext,
+                        size: size
+                    });
+                    // 更新统计
+                    stats.total++;
+                    if (ext === 'png') stats.png++;
+                    else if (ext === 'jpg') stats.jpg++;
+                    else if (ext === 'jpeg') stats.jpeg++;
+                    else if (ext === 'gif') stats.gif++;
+                    else if (ext === 'svg') stats.svg++;
+                    else if (ext === 'webp') stats.webp++;
+                }
+            }
+
+            // 更新统计显示
+            document.getElementById('totalCount').textContent = stats.total;
+            document.getElementById('pngCount').textContent = stats.png + stats.jpeg;
+            document.getElementById('jpgCount').textContent = stats.jpg;
+            document.getElementById('gifCount').textContent = stats.gif;
+            document.getElementById('svgCount').textContent = stats.svg;
+            document.getElementById('webpCount').textContent = stats.webp;
+
+            // 隐藏加载状态
+            loadingStatus.style.display = 'none';
+
+            if (validImages.length === 0) {
+                noResult.style.display = 'block';
+                return;
+            }
+
+            // 渲染网格
+            imageGrid.style.display = 'grid';
+            var html = '';
+            for (var j = 0; j < validImages.length; j++) {
+                var img = validImages[j];
+                var extClass = img.ext;
+                var sizeText = img.size > 0 ? formatFileSize(img.size) : '--';
+                html += '<div class="image-card" data-url="' + img.url + '" data-filename="' + img.filename + '">';
+                html += '<img src="' + img.url + '" alt="' + img.filename + '" loading="lazy" onerror="this.style.display=\'none\'">';
+                html += '<div class="image-info">';
+                html += '<span class="filename" title="' + img.filename + '">' + img.filename + '</span>';
+                html += '<span class="format-badge ' + extClass + '">' + img.ext.toUpperCase() + '</span>';
+                html += '<span class="filesize">' + sizeText + '</span>';
+                html += '</div></div>';
+            }
+            imageGrid.innerHTML = html;
+
+            // ============================================================
+            // 点击卡片弹出大图预览
+            // ============================================================
+            var cards = imageGrid.querySelectorAll('.image-card');
+            cards.forEach(function(card) {
+                card.addEventListener('click', function() {
+                    var url = this.dataset.url;
+                    var filename = this.dataset.filename;
+                    openPreview(url, filename);
+                });
+            });
+        }
+
+        // ============================================================
+        // 大图预览
+        // ============================================================
+        var previewOverlay = null;
+        var previewImg = null;
+        var previewInfo = null;
+        var closeBtn = null;
+
+        function openPreview(url, filename) {
+            if (!previewOverlay) {
+                // 创建预览模态框
+                previewOverlay = document.createElement('div');
+                previewOverlay.className = 'preview-overlay';
+                previewOverlay.id = 'previewOverlay';
+
+                closeBtn = document.createElement('button');
+                closeBtn.className = 'close-btn';
+                closeBtn.textContent = '✕';
+                closeBtn.addEventListener('click', closePreview);
+
+                previewImg = document.createElement('img');
+                previewImg.alt = filename;
+
+                previewInfo = document.createElement('div');
+                previewInfo.className = 'preview-info';
+                previewInfo.textContent = filename;
+
+                previewOverlay.appendChild(closeBtn);
+                previewOverlay.appendChild(previewImg);
+                previewOverlay.appendChild(previewInfo);
+
+                // 点击背景关闭
+                previewOverlay.addEventListener('click', function(e) {
+                    if (e.target === this) closePreview();
+                });
+
+                // ESC 键关闭
+                document.addEventListener('keydown', function(e) {
+                    if (e.key === 'Escape' && previewOverlay.classList.contains('active')) {
+                        closePreview();
+                    }
+                });
+
+                document.body.appendChild(previewOverlay);
+            }
+
+            previewImg.src = url;
+            previewImg.alt = filename;
+            previewInfo.textContent = filename;
+            previewOverlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closePreview() {
+            if (previewOverlay) {
+                previewOverlay.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        }
+
+        // ============================================================
+        // 暴露关闭函数到全局（供 HTML 内联使用）
+        // ============================================================
+        window.closePreview = closePreview;
+
+        // ============================================================
+        // 启动加载
+        // ============================================================
+        loadImages();
+    })();
+</script>
