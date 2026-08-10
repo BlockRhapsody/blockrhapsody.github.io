@@ -57,7 +57,6 @@ var sidebarMenu = [
     }
 ];
 
-// 兼容旧格式：将对象格式转换为字符串数组
 function getMenuItems(category) {
     if (category.items.length > 0 && typeof category.items[0] === 'object') {
         return category.items;
@@ -68,7 +67,7 @@ function getMenuItems(category) {
 }
 
 // ============================================================
-// 卡片数据（首页用）
+// 卡片数据
 // ============================================================
 var cardData = [
     { title: '制度汇编', icon: 'fa-book', items: ['服务器纲领', '玩家权限体制', '玩家行政权限体制', '管理员行政权限体制', '监督委员会制度', '创造者协会章程', '体制关系与适用规则'] },
