@@ -578,7 +578,28 @@
     }
 
     // ============================================================
-    // 6. 页面加载函数
+    // 6. 重新执行动态加载的 <script> 标签
+    // ============================================================
+    function reExecuteScripts(container) {
+        var scripts = container.querySelectorAll('script');
+        scripts.forEach(function(oldScript) {
+            var newScript = document.createElement('script');
+            // 复制所有属性
+            for (var i = 0; i < oldScript.attributes.length; i++) {
+                var attr = oldScript.attributes[i];
+                newScript.setAttribute(attr.name, attr.value);
+            }
+            // 复制内联代码
+            if (oldScript.textContent) {
+                newScript.textContent = oldScript.textContent;
+            }
+            // 替换旧脚本
+            oldScript.parentNode.replaceChild(newScript, oldScript);
+        });
+    }
+
+    // ============================================================
+    // 7. 页面加载函数
     // ============================================================
     function loadPage(pageId) {
         var anchor = '';
@@ -619,6 +640,9 @@
             }
             updateActiveState(pageId);
 
+            // ===== 重新执行页面中的 <script> 标签 =====
+            reExecuteScripts(pageContent);
+
             if (pageId === '论坛') {
                 setTimeout(function() {
                     loadGiscus();
@@ -656,6 +680,9 @@
                 }
                 updateActiveState(pageId);
 
+                // ===== 重新执行页面中的 <script> 标签 =====
+                reExecuteScripts(pageContent);
+
                 if (pageId === '论坛') {
                     setTimeout(function() {
                         loadGiscus();
@@ -677,7 +704,7 @@
     }
 
     // ============================================================
-    // 7. 加载 Giscus（论坛评论系统）
+    // 8. 加载 Giscus（论坛评论系统）
     // ============================================================
     function loadGiscus() {
         if (document.querySelector('.giscus iframe')) {
@@ -715,7 +742,7 @@
     }
 
     // ============================================================
-    // 8. 清除缓存并刷新
+    // 9. 清除缓存并刷新
     // ============================================================
     function clearCacheAndReload() {
         sessionStorage.clear();
@@ -725,7 +752,7 @@
     window.clearCacheAndReload = clearCacheAndReload;
 
     // ============================================================
-    // 9. 更新高亮状态
+    // 10. 更新高亮状态
     // ============================================================
     function updateActiveState(pageId) {
         document.querySelectorAll('.sub-menu a, .card-list li').forEach(function(el) {
@@ -740,7 +767,7 @@
     }
 
     // ============================================================
-    // 10. 返回首页
+    // 11. 返回首页
     // ============================================================
     function showHome() {
         var home = document.getElementById('home-content');
@@ -757,7 +784,7 @@
     window.showHome = showHome;
 
     // ============================================================
-    // 11. 登录功能
+    // 12. 登录功能
     // ============================================================
     function openLoginModal(e) {
         if (e) e.preventDefault();
@@ -813,7 +840,7 @@
     }
 
     // ============================================================
-    // 12. 房间号横幅
+    // 13. 房间号横幅
     // ============================================================
     function initRoomStatus() {
         var banner = document.getElementById('roomBanner');
@@ -842,7 +869,7 @@
     }
 
     // ============================================================
-    // 13. 汉堡菜单
+    // 14. 汉堡菜单
     // ============================================================
     function initHamburger() {
         var hamburger = document.getElementById('hamburgerBtn');
@@ -875,7 +902,7 @@
     }
 
     // ============================================================
-    // 14. 侧边栏展开/折叠 + 卡片点击
+    // 15. 侧边栏展开/折叠 + 卡片点击
     // ============================================================
     function initSidebar() {
         document.querySelectorAll('.category-toggle').forEach(function(toggle) {
