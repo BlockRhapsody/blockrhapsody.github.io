@@ -1,5 +1,5 @@
 <div class="doc-content">
-    <h1>🖼️ 图像文件</h1>
+    <h1>图像文件</h1>
     <p style="color:var(--text-secondary);">icon 目录下所有图片文件枚举 · 方块狂想曲服务器资源</p>
 
     <!-- ===== 统计信息 ===== -->
@@ -45,6 +45,12 @@
     <div id="noResult" style="text-align:center;padding:3rem 0;color:var(--text-muted);display:none;">
         <p>📭 未找到任何图像文件</p>
         <p style="font-size:0.85rem;margin-top:0.4rem;">请确保 icon 目录下存在图片文件</p>
+    </div>
+
+    <!-- ===== 错误提示 ===== -->
+    <div id="errorMsg" style="text-align:center;padding:2rem 0;color:#ff6b6b;display:none;">
+        <p>❌ 加载失败</p>
+        <p style="font-size:0.85rem;margin-top:0.4rem;" id="errorDetail">请检查网络连接</p>
     </div>
 
     <div class="footnote">
@@ -125,7 +131,6 @@
     .format-badge.svg { background: rgba(33,150,243,0.2); color: #42A5F5; }
     .format-badge.webp { background: rgba(0,188,212,0.2); color: #00BCD4; }
 
-    /* 大图预览模态框 */
     .preview-overlay {
         position: fixed;
         top: 0; left: 0; right: 0; bottom: 0;
@@ -183,17 +188,15 @@
 
 <script>
     // ============================================================
-    // 图像文件枚举器
+    // 图像文件枚举器 - 从 index.json 自动加载
     // ============================================================
     (function initImageGallery() {
         var imageGrid = document.getElementById('imageGrid');
         var loadingStatus = document.getElementById('loadingStatus');
         var noResult = document.getElementById('noResult');
+        var errorMsg = document.getElementById('errorMsg');
+        var errorDetail = document.getElementById('errorDetail');
 
-        // 支持的图片格式
-        var SUPPORTED_EXTENSIONS = ['png', 'jpg', 'jpeg', 'gif', 'svg', 'webp'];
-
-        // 统计计数器
         var stats = {
             total: 0,
             png: 0,
@@ -203,29 +206,6 @@
             svg: 0,
             webp: 0
         };
-
-        // 已知图标列表（根据实际 icon 目录手动维护）
-        // 当 icon 目录新增文件时，需要在此添加
-        var KNOWN_ICONS = [
-            'Beacon.png',
-            'Book.png',
-            'Bookshelf.png',
-            'Chain_Command_Block.png',
-            'Command_Block.png',
-            'Creeper_Head.png',
-            'Dragon_Egg.png',
-            'Dragon_Head.png',
-            'Enchanting_Table_1.png',
-            'Enchanting_Table_2.png',
-            'Iron_Pickaxe.png',
-            'Lectern_Book.png',
-            'Player_Head.png',
-            'Repeating_Command_Block.png',
-            'Structure_Block_1.png',
-            'Structure_Block_2.png',
-            'Structure_Block_3.png',
-            'Written_Book.png',
-        ];
 
         // ============================================================
         // 格式化文件大小
@@ -246,24 +226,7 @@
         }
 
         // ============================================================
-        // 检测文件是否存在
-        // ============================================================
-        function checkImageExists(url) {
-            return new Promise(function(resolve) {
-                var img = new Image();
-                img.onload = function() { resolve(true); };
-                img.onerror = function() { resolve(false); };
-                // 设置超时，避免长时间等待
-                var timeout = setTimeout(function() {
-                    img.src = '';
-                    resolve(false);
-                }, 3000);
-                img.src = url;
-            });
-        }
-
-        // ============================================================
-        // 获取文件大小（通过 HEAD 请求）
+        // 获取文件大小
         // ============================================================
         function getFileSize(url) {
             return fetch(url, { method: 'HEAD' })
@@ -271,9 +234,48 @@
                     var size = response.headers.get('content-length');
                     return size ? parseInt(size) : 0;
                 })
-                .catch(function() {
-                    return 0;
+                .catch(function() { return 0; });
+        }
+
+        // ============================================================
+        // 从 index.json 读取文件列表
+        // ============================================================
+        function loadImageList() {
+            return fetch('/icon/index.json?' + Date.now())
+                .then(function(response) {
+                    if (!response.ok) {
+                        throw new Error('index.json 不存在或无法读取 (HTTP ' + response.status + ')');
+                    }
+                    return response.json();
+                })
+                .then(function(data) {
+                    if (!Array.isArray(data)) {
+                        throw new Error('index.json 格式错误：应为数组');
+                    }
+                    return data;
                 });
+        }
+
+        // ============================================================
+        // 检测图片是否存在
+        // ============================================================
+        function checkImageExists(url) {
+            return new Promise(function(resolve) {
+                var img = new Image();
+                var timeout = setTimeout(function() {
+                    img.src = '';
+                    resolve(false);
+                }, 3000);
+                img.onload = function() {
+                    clearTimeout(timeout);
+                    resolve(true);
+                };
+                img.onerror = function() {
+                    clearTimeout(timeout);
+                    resolve(false);
+                };
+                img.src = url;
+            });
         }
 
         // ============================================================
@@ -283,75 +285,80 @@
             var validImages = [];
             var basePath = '/icon/';
 
-            // 逐个检测已知图标
-            for (var i = 0; i < KNOWN_ICONS.length; i++) {
-                var filename = KNOWN_ICONS[i];
-                var url = basePath + filename;
-                var exists = await checkImageExists(url);
-                if (exists) {
-                    var ext = getExtension(filename);
-                    var size = await getFileSize(url);
-                    validImages.push({
-                        filename: filename,
-                        url: url,
-                        ext: ext,
-                        size: size
-                    });
-                    // 更新统计
-                    stats.total++;
-                    if (ext === 'png') stats.png++;
-                    else if (ext === 'jpg') stats.jpg++;
-                    else if (ext === 'jpeg') stats.jpeg++;
-                    else if (ext === 'gif') stats.gif++;
-                    else if (ext === 'svg') stats.svg++;
-                    else if (ext === 'webp') stats.webp++;
+            try {
+                var fileList = await loadImageList();
+                loadingStatus.querySelector('p').textContent = '正在检测 ' + fileList.length + ' 个图像文件...';
+
+                // 逐个检测文件
+                for (var i = 0; i < fileList.length; i++) {
+                    var filename = fileList[i];
+                    var url = basePath + filename;
+                    var exists = await checkImageExists(url);
+                    if (exists) {
+                        var ext = getExtension(filename);
+                        var size = await getFileSize(url);
+                        validImages.push({
+                            filename: filename,
+                            url: url,
+                            ext: ext,
+                            size: size
+                        });
+                        stats.total++;
+                        if (ext === 'png') stats.png++;
+                        else if (ext === 'jpg') stats.jpg++;
+                        else if (ext === 'jpeg') stats.jpeg++;
+                        else if (ext === 'gif') stats.gif++;
+                        else if (ext === 'svg') stats.svg++;
+                        else if (ext === 'webp') stats.webp++;
+                    }
                 }
-            }
 
-            // 更新统计显示
-            document.getElementById('totalCount').textContent = stats.total;
-            document.getElementById('pngCount').textContent = stats.png + stats.jpeg;
-            document.getElementById('jpgCount').textContent = stats.jpg;
-            document.getElementById('gifCount').textContent = stats.gif;
-            document.getElementById('svgCount').textContent = stats.svg;
-            document.getElementById('webpCount').textContent = stats.webp;
+                // 更新统计
+                document.getElementById('totalCount').textContent = stats.total;
+                document.getElementById('pngCount').textContent = stats.png + stats.jpeg;
+                document.getElementById('jpgCount').textContent = stats.jpg;
+                document.getElementById('gifCount').textContent = stats.gif;
+                document.getElementById('svgCount').textContent = stats.svg;
+                document.getElementById('webpCount').textContent = stats.webp;
 
-            // 隐藏加载状态
-            loadingStatus.style.display = 'none';
+                loadingStatus.style.display = 'none';
 
-            if (validImages.length === 0) {
-                noResult.style.display = 'block';
-                return;
-            }
+                if (validImages.length === 0) {
+                    noResult.style.display = 'block';
+                    return;
+                }
 
-            // 渲染网格
-            imageGrid.style.display = 'grid';
-            var html = '';
-            for (var j = 0; j < validImages.length; j++) {
-                var img = validImages[j];
-                var extClass = img.ext;
-                var sizeText = img.size > 0 ? formatFileSize(img.size) : '--';
-                html += '<div class="image-card" data-url="' + img.url + '" data-filename="' + img.filename + '">';
-                html += '<img src="' + img.url + '" alt="' + img.filename + '" loading="lazy" onerror="this.style.display=\'none\'">';
-                html += '<div class="image-info">';
-                html += '<span class="filename" title="' + img.filename + '">' + img.filename + '</span>';
-                html += '<span class="format-badge ' + extClass + '">' + img.ext.toUpperCase() + '</span>';
-                html += '<span class="filesize">' + sizeText + '</span>';
-                html += '</div></div>';
-            }
-            imageGrid.innerHTML = html;
+                // 渲染网格
+                imageGrid.style.display = 'grid';
+                var html = '';
+                for (var j = 0; j < validImages.length; j++) {
+                    var img = validImages[j];
+                    var extClass = img.ext;
+                    var sizeText = img.size > 0 ? formatFileSize(img.size) : '--';
+                    html += '<div class="image-card" data-url="' + img.url + '" data-filename="' + img.filename + '">';
+                    html += '<img src="' + img.url + '" alt="' + img.filename + '" loading="lazy" onerror="this.style.display=\'none\'">';
+                    html += '<div class="image-info">';
+                    html += '<span class="filename" title="' + img.filename + '">' + img.filename + '</span>';
+                    html += '<span class="format-badge ' + extClass + '">' + img.ext.toUpperCase() + '</span>';
+                    html += '<span class="filesize">' + sizeText + '</span>';
+                    html += '</div></div>';
+                }
+                imageGrid.innerHTML = html;
 
-            // ============================================================
-            // 点击卡片弹出大图预览
-            // ============================================================
-            var cards = imageGrid.querySelectorAll('.image-card');
-            cards.forEach(function(card) {
-                card.addEventListener('click', function() {
-                    var url = this.dataset.url;
-                    var filename = this.dataset.filename;
-                    openPreview(url, filename);
+                // 点击卡片弹出大图
+                var cards = imageGrid.querySelectorAll('.image-card');
+                cards.forEach(function(card) {
+                    card.addEventListener('click', function() {
+                        openPreview(this.dataset.url, this.dataset.filename);
+                    });
                 });
-            });
+
+            } catch (error) {
+                loadingStatus.style.display = 'none';
+                errorMsg.style.display = 'block';
+                errorDetail.textContent = error.message;
+                console.error('图像文件加载失败:', error);
+            }
         }
 
         // ============================================================
@@ -364,7 +371,6 @@
 
         function openPreview(url, filename) {
             if (!previewOverlay) {
-                // 创建预览模态框
                 previewOverlay = document.createElement('div');
                 previewOverlay.className = 'preview-overlay';
                 previewOverlay.id = 'previewOverlay';
@@ -385,12 +391,10 @@
                 previewOverlay.appendChild(previewImg);
                 previewOverlay.appendChild(previewInfo);
 
-                // 点击背景关闭
                 previewOverlay.addEventListener('click', function(e) {
                     if (e.target === this) closePreview();
                 });
 
-                // ESC 键关闭
                 document.addEventListener('keydown', function(e) {
                     if (e.key === 'Escape' && previewOverlay.classList.contains('active')) {
                         closePreview();
@@ -414,9 +418,6 @@
             }
         }
 
-        // ============================================================
-        // 暴露关闭函数到全局（供 HTML 内联使用）
-        // ============================================================
         window.closePreview = closePreview;
 
         // ============================================================
