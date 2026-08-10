@@ -102,7 +102,7 @@
         .main-content{flex:1;padding:1.5rem 0 2rem;min-height:70vh;width:100%;max-width:100%;transition:all var(--smooth)}
         #home-content{animation:fadeUp 0.6s ease forwards}
         @keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
-        
+
         #home-content h1{font-size:clamp(2.8rem, 6vw, 4.5rem);font-weight:700;letter-spacing:3px;background:linear-gradient(135deg,#fff,#8ab4f8);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:0.6rem;line-height:1.2}
         #home-content .subtitle{font-size:clamp(1.3rem, 1.8vw, 1.7rem);color:var(--text-secondary);margin-bottom:2.5rem;letter-spacing:2px}
 
@@ -206,229 +206,202 @@
             .doc-content p,.doc-content ul,.doc-content ol{font-size:clamp(0.9rem, 2.5vw, 1rem)}
             .doc-content .info-grid span{font-size:clamp(0.85rem, 2vw, 0.95rem)}
         }
+
         /* ============================================================
-   提示框模板系统（完整版）
-   ============================================================ */
+           提示框模板系统
+           ============================================================ */
+        .msgbox {
+            position: relative;
+            padding: 0.8rem 1.2rem 0.8rem 3.2rem;
+            margin: 0.8rem 0;
+            border-radius: var(--radius);
+            border-left: 4px solid var(--text-muted);
+            background: rgba(255,255,255,0.03);
+            color: var(--text-secondary);
+            font-size: clamp(0.95rem, 1.1vw, 1.05rem);
+            line-height: 1.7;
+            overflow: hidden;
+            min-height: 2.8rem;
+        }
+        .msgbox::before {
+            position: absolute;
+            left: 0.8rem;
+            top: 0.8rem;
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            font-size: 1.2rem;
+            width: 1.6rem;
+            text-align: center;
+            color: var(--text-muted);
+            font-style: normal;
+        }
+        .msgbox.info {
+            border-left-color: #4a9eff;
+            background: rgba(74, 158, 255, 0.06);
+        }
+        .msgbox.info::before {
+            content: '\f05a';
+            color: #4a9eff;
+        }
+        .msgbox.warning {
+            border-left-color: #ffb347;
+            background: rgba(255, 179, 71, 0.06);
+        }
+        .msgbox.warning::before {
+            content: '\f071';
+            color: #ffb347;
+        }
+        .msgbox.important {
+            border-left-color: #ff6b6b;
+            background: rgba(255, 107, 107, 0.06);
+        }
+        .msgbox.important::before {
+            content: '\f06a';
+            color: #ff6b6b;
+        }
+        .msgbox.success {
+            border-left-color: #4CAF50;
+            background: rgba(76, 175, 80, 0.06);
+        }
+        .msgbox.success::before {
+            content: '\f058';
+            color: #4CAF50;
+        }
+        .msgbox.todo {
+            border-left-color: #ab47bc;
+            background: rgba(171, 71, 188, 0.06);
+        }
+        .msgbox.todo::before {
+            content: '\f0ae';
+            color: #ab47bc;
+        }
+        .msgbox.quote {
+            border-left-color: var(--text-muted);
+            background: rgba(255,255,255,0.02);
+            padding: 1.2rem 1.5rem 0.8rem 3.5rem;
+            font-style: italic;
+            position: relative;
+        }
+        .msgbox.quote::before {
+            content: '\201C';
+            position: absolute;
+            left: 0.8rem;
+            top: 0.6rem;
+            font-family: 'Georgia', serif;
+            font-size: 2.4rem;
+            font-weight: 700;
+            color: var(--text-muted);
+            line-height: 1;
+            font-style: normal;
+        }
+        .msgbox.quote .quote-source {
+            display: block;
+            text-align: right;
+            font-style: normal;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            margin-top: 0.4rem;
+            padding-right: 0.5rem;
+        }
+        .msgbox.quote .quote-source::before {
+            content: '\2014 ';
+        }
+        .msgbox.knowledge {
+            border-left-color: #8d6e63;
+            background: rgba(141, 110, 99, 0.06);
+        }
+        .msgbox.knowledge::before {
+            content: '\f02d';
+            color: #8d6e63;
+        }
+        .msgbox.link {
+            border-left-color: #26c6da;
+            background: rgba(38, 198, 218, 0.06);
+        }
+        .msgbox.link::before {
+            content: '\f0c1';
+            color: #26c6da;
+        }
+        .msgbox.link a {
+            color: #26c6da;
+            text-decoration: underline;
+            text-underline-offset: 2px;
+            transition: color var(--transition);
+        }
+        .msgbox.link a:hover {
+            color: #80deea;
+        }
+        .msgbox.functional {
+            border-left-color: #ffa726;
+            background: rgba(255, 167, 38, 0.06);
+        }
+        .msgbox.functional::before {
+            content: '\f0ae';
+            color: #ffa726;
+        }
+        .msgbox.plain {
+            padding-left: 1.2rem;
+            background: rgba(255,255,255,0.02);
+        }
+        .msgbox.plain::before {
+            display: none;
+        }
+        .msgbox .msgbox-title {
+            font-weight: 700;
+            color: var(--text-primary);
+            display: block;
+            margin-bottom: 0.2rem;
+            font-size: 1em;
+        }
+        .msgbox ul,
+        .msgbox ol {
+            margin: 0.2rem 0 0.2rem 1.2rem;
+            padding-left: 0.5rem;
+        }
+        .msgbox p:last-child,
+        .msgbox ul:last-child,
+        .msgbox ol:last-child {
+            margin-bottom: 0;
+        }
 
-.msgbox {
-    position: relative;
-    padding: 0.8rem 1.2rem 0.8rem 3.2rem;
-    margin: 0.8rem 0;
-    border-radius: var(--radius);
-    border-left: 4px solid var(--text-muted);
-    background: rgba(255,255,255,0.03);
-    color: var(--text-secondary);
-    font-size: clamp(0.95rem, 1.1vw, 1.05rem);
-    line-height: 1.7;
-    overflow: hidden;
-    min-height: 2.8rem;
-}
-
-.msgbox::before {
-    position: absolute;
-    left: 0.8rem;
-    top: 0.8rem;
-    font-family: 'Font Awesome 6 Free';
-    font-weight: 900;
-    font-size: 1.2rem;
-    width: 1.6rem;
-    text-align: center;
-    color: var(--text-muted);
-    font-style: normal;
-}
-
-/* ----- 类型：提示（信息） ----- */
-.msgbox.info {
-    border-left-color: #4a9eff;
-    background: rgba(74, 158, 255, 0.06);
-}
-.msgbox.info::before {
-    content: '\f05a';
-    color: #4a9eff;
-}
-
-/* ----- 类型：注意（警告） ----- */
-.msgbox.warning {
-    border-left-color: #ffb347;
-    background: rgba(255, 179, 71, 0.06);
-}
-.msgbox.warning::before {
-    content: '\f071';
-    color: #ffb347;
-}
-
-/* ----- 类型：重要 ----- */
-.msgbox.important {
-    border-left-color: #ff6b6b;
-    background: rgba(255, 107, 107, 0.06);
-}
-.msgbox.important::before {
-    content: '\f06a';
-    color: #ff6b6b;
-}
-
-/* ----- 类型：成功 ----- */
-.msgbox.success {
-    border-left-color: #4CAF50;
-    background: rgba(76, 175, 80, 0.06);
-}
-.msgbox.success::before {
-    content: '\f058';
-    color: #4CAF50;
-}
-
-/* ----- 类型：待办（计划/进行中） ----- */
-.msgbox.todo {
-    border-left-color: #ab47bc;
-    background: rgba(171, 71, 188, 0.06);
-}
-.msgbox.todo::before {
-    content: '\f0ae';
-    color: #ab47bc;
-}
-
-/* ----- 类型：引用（修复引号位置） ----- */
-.msgbox.quote {
-    border-left-color: var(--text-muted);
-    background: rgba(255,255,255,0.02);
-    padding: 1.2rem 1.5rem 0.8rem 3.5rem;
-    font-style: italic;
-    position: relative;
-}
-.msgbox.quote::before {
-    content: '\201C';
-    position: absolute;
-    left: 0.8rem;
-    top: 0.6rem;
-    font-family: 'Georgia', serif;
-    font-size: 2.4rem;
-    font-weight: 700;
-    color: var(--text-muted);
-    line-height: 1;
-    font-style: normal;
-}
-.msgbox.quote .quote-source {
-    display: block;
-    text-align: right;
-    font-style: normal;
-    color: var(--text-muted);
-    font-size: 0.85rem;
-    margin-top: 0.4rem;
-    padding-right: 0.5rem;
-}
-.msgbox.quote .quote-source::before {
-    content: '\2014 ';
-}
-
-/* ----- 类型：知识性提示（书架） ----- */
-.msgbox.knowledge {
-    border-left-color: #8d6e63;
-    background: rgba(141, 110, 99, 0.06);
-}
-.msgbox.knowledge::before {
-    content: '\f02d';
-    color: #8d6e63;
-}
-
-/* ----- 类型：传送门/链接提示（信标） ----- */
-.msgbox.link {
-    border-left-color: #26c6da;
-    background: rgba(38, 198, 218, 0.06);
-}
-.msgbox.link::before {
-    content: '\f0c1';
-    color: #26c6da;
-}
-.msgbox.link a {
-    color: #26c6da;
-    text-decoration: underline;
-    text-underline-offset: 2px;
-    transition: color var(--transition);
-}
-.msgbox.link a:hover {
-    color: #80deea;
-}
-
-/* ----- 类型：功能性提示（结构方块） ----- */
-.msgbox.functional {
-    border-left-color: #ffa726;
-    background: rgba(255, 167, 38, 0.06);
-}
-.msgbox.functional::before {
-    content: '\f0ae';
-    color: #ffa726;
-}
-
-/* ----- 无图标纯色块 ----- */
-.msgbox.plain {
-    padding-left: 1.2rem;
-    background: rgba(255,255,255,0.02);
-}
-.msgbox.plain::before {
-    display: none;
-}
-
-/* ----- 标题（可选） ----- */
-.msgbox .msgbox-title {
-    font-weight: 700;
-    color: var(--text-primary);
-    display: block;
-    margin-bottom: 0.2rem;
-    font-size: 1em;
-}
-
-/* ----- 嵌套列表调整 ----- */
-.msgbox ul,
-.msgbox ol {
-    margin: 0.2rem 0 0.2rem 1.2rem;
-    padding-left: 0.5rem;
-}
-.msgbox p:last-child,
-.msgbox ul:last-child,
-.msgbox ol:last-child {
-    margin-bottom: 0;
-}
-
-/* ============================================================
-   内联标记
-   ============================================================ */
-
-.tag {
-    display: inline-block;
-    padding: 0.05rem 0.5rem;
-    border-radius: 4px;
-    font-size: 0.7rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.02em;
-    vertical-align: middle;
-    margin: 0 0.1rem;
-}
-
-.tag.info {
-    background: rgba(74, 158, 255, 0.15);
-    color: #4a9eff;
-}
-.tag.warning {
-    background: rgba(255, 179, 71, 0.15);
-    color: #ffb347;
-}
-.tag.important {
-    background: rgba(255, 107, 107, 0.15);
-    color: #ff6b6b;
-}
-.tag.success {
-    background: rgba(76, 175, 80, 0.15);
-    color: #4CAF50;
-}
-.tag.todo {
-    background: rgba(171, 71, 188, 0.15);
-    color: #ab47bc;
-}
-.tag.vanilla {
-    background: rgba(255,255,255,0.06);
-    color: var(--text-muted);
-}
+        /* ============================================================
+           内联标记
+           ============================================================ */
+        .tag {
+            display: inline-block;
+            padding: 0.05rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.02em;
+            vertical-align: middle;
+            margin: 0 0.1rem;
+        }
+        .tag.info {
+            background: rgba(74, 158, 255, 0.15);
+            color: #4a9eff;
+        }
+        .tag.warning {
+            background: rgba(255, 179, 71, 0.15);
+            color: #ffb347;
+        }
+        .tag.important {
+            background: rgba(255, 107, 107, 0.15);
+            color: #ff6b6b;
+        }
+        .tag.success {
+            background: rgba(76, 175, 80, 0.15);
+            color: #4CAF50;
+        }
+        .tag.todo {
+            background: rgba(171, 71, 188, 0.15);
+            color: #ab47bc;
+        }
+        .tag.vanilla {
+            background: rgba(255,255,255,0.06);
+            color: var(--text-muted);
+        }
     </style>
 </head>
 <body>
@@ -460,7 +433,7 @@
     <!-- ===== 移动端遮罩层 ===== -->
     <div class="mobile-overlay" id="mobileOverlay"></div>
 
-    <!-- ===== 移动端侧边栏（由 script.js 动态渲染） ===== -->
+    <!-- ===== 移动端侧边栏 ===== -->
     <div class="mobile-sidebar" id="mobileSidebar"></div>
 
     <!-- ===== 房间号横幅 ===== -->
@@ -474,7 +447,6 @@
 
     <!-- ===== 主体 ===== -->
     <div class="main-wrapper">
-        <!-- 桌面端侧边栏（由 script.js 动态渲染） -->
         <aside class="desktop-sidebar" id="desktopSidebar"></aside>
 
         <main class="main-content" id="mainContent">
@@ -493,7 +465,7 @@
 
     <div class="modal-overlay" id="loginModal">
         <div class="modal-box">
-            <h2>🔐 登录 · 我们将会保护您的信息</h2>
+            <h2>登录 · 我们将会保护您的信息</h2>
             <p class="modal-sub">输入你的中国版账号名称</p>
             <div class="input-group">
                 <label for="loginUsername">用户名</label>
@@ -511,196 +483,159 @@
     <script src="/data.js"></script>
     <script src="/script.js"></script>
 
-    <!-- ===== 核心脚本（页面加载、缓存、登录等，与侧边栏无关） ===== -->
+    <!-- ===== 核心脚本 ===== -->
     <script>
-    // ============================================================
-    // 版本控制与缓存管理
-    // ============================================================
-    var APP_VERSION = '2026.08.10.011';
-    var CACHE_MAX_AGE = 5 * 60 * 1000;
+        // ============================================================
+        // 版本控制与缓存管理
+        // ============================================================
+        var APP_VERSION = '2026.08.10.011';
+        var CACHE_MAX_AGE = 5 * 60 * 1000;
 
-    function loadVersion() {
-        fetch('/version.txt?' + Date.now())
-            .then(function(response) {
-                if (!response.ok) throw new Error('version.txt 不存在');
-                return response.text();
-            })
-            .then(function(text) {
-                var match = text.match(/version:"([^"]+)"/);
-                if (match && match[1]) {
-                    APP_VERSION = match[1].trim();
-                    console.log('[MCC Wiki] 版本号已加载:', APP_VERSION);
-                } else {
-                    console.warn('[MCC Wiki] version.txt 格式错误，使用默认版本号');
+        function loadVersion() {
+            fetch('/version.txt?' + Date.now())
+                .then(function(response) {
+                    if (!response.ok) throw new Error('version.txt 不存在');
+                    return response.text();
+                })
+                .then(function(text) {
+                    var match = text.match(/version:"([^"]+)"/);
+                    if (match && match[1]) {
+                        APP_VERSION = match[1].trim();
+                        console.log('[MCC Wiki] 版本号已加载:', APP_VERSION);
+                    } else {
+                        console.warn('[MCC Wiki] version.txt 格式错误，使用默认版本号');
+                    }
+                    checkVersionAndClearCache();
+                })
+                .catch(function() {
+                    console.warn('[MCC Wiki] version.txt 未找到，使用默认版本号:', APP_VERSION);
+                    checkVersionAndClearCache();
+                });
+        }
+
+        function checkVersionAndClearCache() {
+            var storedVersion = localStorage.getItem('app_version');
+            if (storedVersion !== APP_VERSION) {
+                sessionStorage.clear();
+                localStorage.setItem('app_version', APP_VERSION);
+                console.log('[MCC Wiki] 版本已更新 (', storedVersion, '->', APP_VERSION, ')，缓存已清除');
+            } else {
+                console.log('[MCC Wiki] 版本一致，无需清除缓存');
+            }
+        }
+
+        // ============================================================
+        // 卡片渲染
+        // ============================================================
+        function getDisplayName(key) {
+            return displayNames[key] || key;
+        }
+
+        function renderCards() {
+            var grid = document.getElementById('cardGrid');
+            var html = '';
+            for (var i = 0; i < cardData.length; i++) {
+                var cat = cardData[i];
+                var itemsHtml = '';
+                for (var j = 0; j < cat.items.length; j++) {
+                    var key = cat.items[j];
+                    itemsHtml += '<li data-page="' + key + '"><i class="fas fa-file-alt"></i> ' + getDisplayName(key) + '</li>';
                 }
-                checkVersionAndClearCache();
-            })
-            .catch(function() {
-                console.warn('[MCC Wiki] version.txt 未找到，使用默认版本号:', APP_VERSION);
-                checkVersionAndClearCache();
+                html += '<div class="card"><div class="card-title"><i class="fas ' + cat.icon + '"></i> ' + cat.title + '</div><ul class="card-list">' + itemsHtml + '</ul></div>';
+            }
+            grid.innerHTML = html;
+        }
+
+        // ============================================================
+        // 卡片点击事件
+        // ============================================================
+        function initCards() {
+            var grid = document.getElementById('cardGrid');
+            if (!grid) return;
+
+            grid.addEventListener('click', function(e) {
+                var target = e.target.closest('.card-list li');
+                if (target && target.dataset.page) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    loadPage(target.dataset.page);
+                }
             });
-    }
-
-    function checkVersionAndClearCache() {
-        var storedVersion = localStorage.getItem('app_version');
-        if (storedVersion !== APP_VERSION) {
-            sessionStorage.clear();
-            localStorage.setItem('app_version', APP_VERSION);
-            console.log('[MCC Wiki] 版本已更新 (', storedVersion, '->', APP_VERSION, ')，缓存已清除');
-        } else {
-            console.log('[MCC Wiki] 版本一致，无需清除缓存');
-        }
-    }
-
-    // ============================================================
-    // 卡片渲染
-    // ============================================================
-    function getDisplayName(key) { return displayNames[key] || key; }
-
-    function renderCards() {
-        var grid = document.getElementById('cardGrid');
-        var html = '';
-        for (var i = 0; i < cardData.length; i++) {
-            var cat = cardData[i];
-            var itemsHtml = '';
-            for (var j = 0; j < cat.items.length; j++) {
-                var key = cat.items[j];
-                itemsHtml += '<li data-page="' + key + '"><i class="fas fa-file-alt"></i> ' + getDisplayName(key) + '</li>';
-            }
-            html += '<div class="card"><div class="card-title"><i class="fas ' + cat.icon + '"></i> ' + cat.title + '</div><ul class="card-list">' + itemsHtml + '</ul></div>';
-        }
-        grid.innerHTML = html;
-    }
-
-    // ============================================================
-    // 卡片点击事件
-    // ============================================================
-    function initCards() {
-        var grid = document.getElementById('cardGrid');
-        if (!grid) return;
-
-        grid.addEventListener('click', function(e) {
-            var target = e.target.closest('.card-list li');
-            if (target && target.dataset.page) {
-                e.preventDefault();
-                e.stopPropagation();
-                loadPage(target.dataset.page);
-            }
-        });
-    }
-
-    // ============================================================
-    // 缓存检查
-    // ============================================================
-    function isCacheValid(cacheKey) {
-        var cached = sessionStorage.getItem(cacheKey);
-        var timeKey = cacheKey + '_time';
-        var cacheTime = sessionStorage.getItem(timeKey);
-        if (!cached || !cacheTime) return false;
-        var now = Date.now();
-        return (now - parseInt(cacheTime)) < CACHE_MAX_AGE;
-    }
-
-    // ============================================================
-    // 重新执行动态加载的 <script> 标签
-    // ============================================================
-    function reExecuteScripts(container) {
-        var scripts = container.querySelectorAll('script');
-        scripts.forEach(function(oldScript) {
-            var newScript = document.createElement('script');
-            for (var i = 0; i < oldScript.attributes.length; i++) {
-                var attr = oldScript.attributes[i];
-                newScript.setAttribute(attr.name, attr.value);
-            }
-            if (oldScript.textContent) {
-                newScript.textContent = oldScript.textContent;
-            }
-            oldScript.parentNode.replaceChild(newScript, oldScript);
-        });
-    }
-
-    // ============================================================
-    // 页面加载函数（带加载状态锁）
-    // ============================================================
-    var isLoading = false;
-
-    function loadPage(pageId) {
-        if (isLoading) {
-            console.log('[MCC Wiki] 正在加载中，请稍候...');
-            return;
         }
 
-        var anchor = '';
-        if (pageId.includes('#')) {
-            var parts = pageId.split('#');
-            pageId = parts[0];
-            anchor = parts[1];
-        }
-        pageId = decodeURIComponent(pageId);
-
-        var home = document.getElementById('home-content');
-        var pageContent = document.getElementById('page-content');
-        var path = pagePathMap[pageId];
-
-        home.style.display = 'none';
-        pageContent.innerHTML = '';
-        pageContent.style.display = 'block';
-
-        if (!path) {
-            pageContent.innerHTML = '<div class="doc-content"><h1>📄 ' + pageId + '</h1><p style="color:var(--text-muted);">此页面内容正在建设中，敬请期待。</p></div>';
-            if (typeof updateActiveState === 'function') {
-                updateActiveState(pageId);
-            }
-            if (window.location.hash !== '#page-' + pageId) {
-                history.pushState(null, '', '#page-' + pageId);
-            }
-            return;
-        }
-
-        var cacheKey = 'page_' + pageId;
-
-        if (isCacheValid(cacheKey)) {
+        // ============================================================
+        // 缓存检查
+        // ============================================================
+        function isCacheValid(cacheKey) {
             var cached = sessionStorage.getItem(cacheKey);
-            pageContent.innerHTML = cached;
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-            if (window.location.hash !== '#page-' + pageId) {
-                history.pushState(null, '', '#page-' + pageId);
-            }
-            if (typeof updateActiveState === 'function') {
-                updateActiveState(pageId);
-            }
-            reExecuteScripts(pageContent);
-
-            if (pageId === '论坛') {
-                setTimeout(function() { loadGiscus(); }, 300);
-            }
-            if (anchor) {
-                setTimeout(function() {
-                    var target = document.getElementById(anchor);
-                    if (target) target.scrollIntoView({ behavior: 'smooth' });
-                }, 150);
-            }
-            return;
+            var timeKey = cacheKey + '_time';
+            var cacheTime = sessionStorage.getItem(timeKey);
+            if (!cached || !cacheTime) return false;
+            var now = Date.now();
+            return (now - parseInt(cacheTime)) < CACHE_MAX_AGE;
         }
 
-        isLoading = true;
-        sessionStorage.removeItem(cacheKey);
-        sessionStorage.removeItem(cacheKey + '_time');
-
-        pageContent.innerHTML = '<div class="doc-content" style="text-align:center;padding:3rem 0;"><img src="/icon/Structure_Block_3.png" alt="加载中" class="loading-icon" style="display:block;margin:0 auto;width:64px;height:64px;image-rendering:pixelated;animation:breathe 1.2s ease-in-out infinite;" /><p style="color:var(--text-muted);margin-top:1rem;font-size:clamp(0.9rem, 1.2vw, 1.1rem);">加载中...</p></div>';
-
-        fetch(path)
-            .then(function(response) {
-                if (!response.ok) {
-                    if (response.status === 404) throw new Error('HTTP 404');
-                    throw new Error('HTTP ' + response.status);
+        // ============================================================
+        // 重新执行动态加载的 <script> 标签
+        // ============================================================
+        function reExecuteScripts(container) {
+            var scripts = container.querySelectorAll('script');
+            scripts.forEach(function(oldScript) {
+                var newScript = document.createElement('script');
+                for (var i = 0; i < oldScript.attributes.length; i++) {
+                    var attr = oldScript.attributes[i];
+                    newScript.setAttribute(attr.name, attr.value);
                 }
-                return response.text();
-            })
-            .then(function(html) {
-                sessionStorage.setItem(cacheKey, html);
-                sessionStorage.setItem(cacheKey + '_time', String(Date.now()));
-                pageContent.innerHTML = html;
+                if (oldScript.textContent) {
+                    newScript.textContent = oldScript.textContent;
+                }
+                oldScript.parentNode.replaceChild(newScript, oldScript);
+            });
+        }
+
+        // ============================================================
+        // 页面加载函数
+        // ============================================================
+        var isLoading = false;
+
+        function loadPage(pageId) {
+            if (isLoading) {
+                console.log('[MCC Wiki] 正在加载中，请稍候...');
+                return;
+            }
+
+            var anchor = '';
+            if (pageId.includes('#')) {
+                var parts = pageId.split('#');
+                pageId = parts[0];
+                anchor = parts[1];
+            }
+            pageId = decodeURIComponent(pageId);
+
+            var home = document.getElementById('home-content');
+            var pageContent = document.getElementById('page-content');
+            var path = pagePathMap[pageId];
+
+            home.style.display = 'none';
+            pageContent.innerHTML = '';
+            pageContent.style.display = 'block';
+
+            if (!path) {
+                pageContent.innerHTML = '<div class="doc-content"><h1>📄 ' + pageId + '</h1><p style="color:var(--text-muted);">此页面内容正在建设中，敬请期待。</p></div>';
+                if (typeof updateActiveState === 'function') {
+                    updateActiveState(pageId);
+                }
+                if (window.location.hash !== '#page-' + pageId) {
+                    history.pushState(null, '', '#page-' + pageId);
+                }
+                return;
+            }
+
+            var cacheKey = 'page_' + pageId;
+
+            if (isCacheValid(cacheKey)) {
+                var cached = sessionStorage.getItem(cacheKey);
+                pageContent.innerHTML = cached;
                 window.scrollTo({ top: 0, behavior: 'smooth' });
                 if (window.location.hash !== '#page-' + pageId) {
                     history.pushState(null, '', '#page-' + pageId);
@@ -719,212 +654,257 @@
                         if (target) target.scrollIntoView({ behavior: 'smooth' });
                     }, 150);
                 }
-            })
-            .catch(function(error) {
-                var message = '加载失败，请检查网络连接后重试。';
-                if (error.message === 'HTTP 404') {
-                    message = '📄 此页面内容正在建设中，敬请期待。';
-                }
-                pageContent.innerHTML = '<div class="doc-content"><h1>📄 ' + pageId + '</h1><p style="color:var(--text-muted);">' + message + '</p></div>';
-            })
-            .finally(function() {
-                isLoading = false;
-            });
-    }
+                return;
+            }
 
-    // ============================================================
-    // 加载 Giscus
-    // ============================================================
-    function loadGiscus() {
-        if (document.querySelector('.giscus iframe')) {
+            isLoading = true;
+            sessionStorage.removeItem(cacheKey);
+            sessionStorage.removeItem(cacheKey + '_time');
+
+            pageContent.innerHTML = '<div class="doc-content" style="text-align:center;padding:3rem 0;"><img src="/icon/Structure_Block_3.png" alt="加载中" class="loading-icon" style="display:block;margin:0 auto;width:64px;height:64px;image-rendering:pixelated;animation:breathe 1.2s ease-in-out infinite;" /><p style="color:var(--text-muted);margin-top:1rem;font-size:clamp(0.9rem, 1.2vw, 1.1rem);">加载中...</p></div>';
+
+            fetch(path)
+                .then(function(response) {
+                    if (!response.ok) {
+                        if (response.status === 404) throw new Error('HTTP 404');
+                        throw new Error('HTTP ' + response.status);
+                    }
+                    return response.text();
+                })
+                .then(function(html) {
+                    sessionStorage.setItem(cacheKey, html);
+                    sessionStorage.setItem(cacheKey + '_time', String(Date.now()));
+                    pageContent.innerHTML = html;
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                    if (window.location.hash !== '#page-' + pageId) {
+                        history.pushState(null, '', '#page-' + pageId);
+                    }
+                    if (typeof updateActiveState === 'function') {
+                        updateActiveState(pageId);
+                    }
+                    reExecuteScripts(pageContent);
+
+                    if (pageId === '论坛') {
+                        setTimeout(function() { loadGiscus(); }, 300);
+                    }
+                    if (anchor) {
+                        setTimeout(function() {
+                            var target = document.getElementById(anchor);
+                            if (target) target.scrollIntoView({ behavior: 'smooth' });
+                        }, 150);
+                    }
+                })
+                .catch(function(error) {
+                    var message = '加载失败，请检查网络连接后重试。';
+                    if (error.message === 'HTTP 404') {
+                        message = '📄 此页面内容正在建设中，敬请期待。';
+                    }
+                    pageContent.innerHTML = '<div class="doc-content"><h1>📄 ' + pageId + '</h1><p style="color:var(--text-muted);">' + message + '</p></div>';
+                })
+                .finally(function() {
+                    isLoading = false;
+                });
+        }
+
+        // ============================================================
+        // 加载 Giscus
+        // ============================================================
+        function loadGiscus() {
+            if (document.querySelector('.giscus iframe')) {
+                console.log('Giscus 已加载');
+                return;
+            }
+            var container = document.querySelector('.giscus');
+            if (!container) {
+                console.warn('Giscus 容器不存在');
+                return;
+            }
+            container.innerHTML = '';
+            var script = document.createElement('script');
+            script.src = 'https://giscus.app/client.js';
+            script.dataset.repo = 'BlockRhapsody/blockrhapsody.github.io';
+            script.dataset.repoId = 'R_kgDOTVXjKQ';
+            script.dataset.category = 'General';
+            script.dataset.categoryId = '51115557';
+            script.dataset.mapping = 'number';
+            script.dataset.term = '1';
+            script.dataset.strict = '0';
+            script.dataset.reactionsEnabled = '1';
+            script.dataset.emitMetadata = '0';
+            script.dataset.inputPosition = 'bottom';
+            script.dataset.theme = 'preferred_color_scheme';
+            script.dataset.lang = 'zh-CN';
+            script.crossOrigin = 'anonymous';
+            script.async = true;
+            container.parentNode.insertBefore(script, container.nextSibling);
             console.log('Giscus 已加载');
-            return;
         }
-        var container = document.querySelector('.giscus');
-        if (!container) {
-            console.warn('Giscus 容器不存在');
-            return;
+
+        // ============================================================
+        // 清除缓存并刷新
+        // ============================================================
+        function clearCacheAndReload() {
+            sessionStorage.clear();
+            localStorage.setItem('app_version', APP_VERSION);
+            location.reload();
         }
-        container.innerHTML = '';
-        var script = document.createElement('script');
-        script.src = 'https://giscus.app/client.js';
-        script.dataset.repo = 'BlockRhapsody/blockrhapsody.github.io';
-        script.dataset.repoId = 'R_kgDOTVXjKQ';
-        script.dataset.category = 'General';
-        script.dataset.categoryId = '51115557';
-        script.dataset.mapping = 'number';
-        script.dataset.term = '1';
-        script.dataset.strict = '0';
-        script.dataset.reactionsEnabled = '1';
-        script.dataset.emitMetadata = '0';
-        script.dataset.inputPosition = 'bottom';
-        script.dataset.theme = 'preferred_color_scheme';
-        script.dataset.lang = 'zh-CN';
-        script.crossOrigin = 'anonymous';
-        script.async = true;
-        container.parentNode.insertBefore(script, container.nextSibling);
-        console.log('Giscus 已加载');
-    }
+        window.clearCacheAndReload = clearCacheAndReload;
 
-    // ============================================================
-    // 清除缓存并刷新
-    // ============================================================
-    function clearCacheAndReload() {
-        sessionStorage.clear();
-        localStorage.setItem('app_version', APP_VERSION);
-        location.reload();
-    }
-    window.clearCacheAndReload = clearCacheAndReload;
-
-    // ============================================================
-    // 返回首页
-    // ============================================================
-    function showHome() {
-        var home = document.getElementById('home-content');
-        var pageContent = document.getElementById('page-content');
-        home.style.display = 'block';
-        pageContent.style.display = 'none';
-        pageContent.innerHTML = '';
-        history.pushState(null, '', '/');
-        document.querySelectorAll('.sub-menu a, .card-list li').forEach(function(el) {
-            el.classList.remove('active');
-        });
-    }
-    window.loadPage = loadPage;
-    window.showHome = showHome;
-
-    // ============================================================
-    // 登录功能
-    // ============================================================
-    function openLoginModal(e) {
-        if (e) e.preventDefault();
-        document.getElementById('loginModal').classList.add('active');
-        document.getElementById('loginUsername').value = '';
-        document.getElementById('loginError').classList.remove('show');
-        setTimeout(function(){ document.getElementById('loginUsername').focus(); }, 100);
-    }
-    function closeLoginModal() {
-        document.getElementById('loginModal').classList.remove('active');
-    }
-    function login() {
-        var username = document.getElementById('loginUsername').value.trim();
-        var errorEl = document.getElementById('loginError');
-        if (!username) {
-            errorEl.textContent = '请输入用户名';
-            errorEl.classList.add('show');
-            return;
-        }
-        if (username.length < 2) {
-            errorEl.textContent = '用户名至少2个字符';
-            errorEl.classList.add('show');
-            return;
-        }
-        localStorage.setItem('token', 'mock-token');
-        localStorage.setItem('username', username);
-        closeLoginModal();
-        updateAuthUI();
-    }
-    function logout(e) {
-        if (e) e.preventDefault();
-        localStorage.removeItem('token');
-        localStorage.removeItem('username');
-        updateAuthUI();
-    }
-    function updateAuthUI() {
-        var token = localStorage.getItem('token');
-        var username = localStorage.getItem('username');
-        var loginBtn = document.getElementById('loginBtn');
-        var logoutBtn = document.getElementById('logoutBtn');
-        var userDisplay = document.getElementById('userDisplay');
-        var usernameDisplay = document.getElementById('usernameDisplay');
-        if (token && username) {
-            loginBtn.style.display = 'none';
-            logoutBtn.style.display = 'inline-flex';
-            userDisplay.style.display = 'inline-block';
-            usernameDisplay.textContent = username;
-        } else {
-            loginBtn.style.display = 'inline-flex';
-            logoutBtn.style.display = 'none';
-            userDisplay.style.display = 'none';
-        }
-    }
-
-    // ============================================================
-    // 房间号横幅
-    // ============================================================
-    function initRoomStatus() {
-        var banner = document.getElementById('roomBanner');
-        var display = document.getElementById('roomNumberDisplay');
-
-        if (!banner || !display) return;
-
-        fetch('/room_number.txt?' + Date.now())
-            .then(function(response) {
-                if (!response.ok) throw new Error('文件不存在');
-                return response.text();
-            })
-            .then(function(text) {
-                var match = text.match(/setroomnumber:"([^"]+)"/);
-                if (match && match[1]) {
-                    display.textContent = match[1];
-                    banner.classList.add('show');
-                } else {
-                    banner.classList.remove('show');
-                    console.log('[MCC Wiki] room_number.txt 格式错误，未找到有效房间号');
-                }
-            })
-            .catch(function() {
-                banner.classList.remove('show');
-                console.log('[MCC Wiki] room_number.txt 未找到，房间号横幅已隐藏');
+        // ============================================================
+        // 返回首页
+        // ============================================================
+        function showHome() {
+            var home = document.getElementById('home-content');
+            var pageContent = document.getElementById('page-content');
+            home.style.display = 'block';
+            pageContent.style.display = 'none';
+            pageContent.innerHTML = '';
+            history.pushState(null, '', '/');
+            document.querySelectorAll('.sub-menu a, .card-list li').forEach(function(el) {
+                el.classList.remove('active');
             });
-    }
+        }
+        window.loadPage = loadPage;
+        window.showHome = showHome;
 
-    // ============================================================
-    // 重置滚动位置
-    // ============================================================
-    function resetScrollPosition() {
-        window.scrollTo(0, 0);
-    }
-
-    // ============================================================
-    // DOM 就绪初始化
-    // ============================================================
-    document.addEventListener('DOMContentLoaded', function() {
-        if ('scrollRestoration' in history) {
-            history.scrollRestoration = 'manual';
+        // ============================================================
+        // 登录功能
+        // ============================================================
+        function openLoginModal(e) {
+            if (e) e.preventDefault();
+            document.getElementById('loginModal').classList.add('active');
+            document.getElementById('loginUsername').value = '';
+            document.getElementById('loginError').classList.remove('show');
+            setTimeout(function() {
+                document.getElementById('loginUsername').focus();
+            }, 100);
         }
 
-        loadVersion();
-        resetScrollPosition();
-        document.body.classList.add('loaded');
-        
-        renderCards();
-        initCards();
-        initRoomStatus();
-        updateAuthUI();
-
-        document.getElementById('loginUsername').addEventListener('keydown', function(e) {
-            if (e.key === 'Enter') login();
-        });
-        document.getElementById('loginModal').addEventListener('click', function(e) {
-            if (e.target === this) closeLoginModal();
-        });
-
-        setTimeout(resetScrollPosition, 50);
-        setTimeout(resetScrollPosition, 200);
-    });
-
-    // ============================================================
-    // URL 哈希初始化
-    // ============================================================
-    function initHash() {
-        var hash = window.location.hash;
-        if (hash && hash.startsWith('#page-')) {
-            var pageId = decodeURIComponent(hash.replace('#page-', ''));
-            loadPage(pageId);
+        function closeLoginModal() {
+            document.getElementById('loginModal').classList.remove('active');
         }
-    }
-    initHash();
+
+        function login() {
+            var username = document.getElementById('loginUsername').value.trim();
+            var errorEl = document.getElementById('loginError');
+            if (!username) {
+                errorEl.textContent = '请输入用户名';
+                errorEl.classList.add('show');
+                return;
+            }
+            if (username.length < 2) {
+                errorEl.textContent = '用户名至少2个字符';
+                errorEl.classList.add('show');
+                return;
+            }
+            localStorage.setItem('token', 'mock-token');
+            localStorage.setItem('username', username);
+            closeLoginModal();
+            updateAuthUI();
+        }
+
+        function logout(e) {
+            if (e) e.preventDefault();
+            localStorage.removeItem('token');
+            localStorage.removeItem('username');
+            updateAuthUI();
+        }
+
+        function updateAuthUI() {
+            var token = localStorage.getItem('token');
+            var username = localStorage.getItem('username');
+            var loginBtn = document.getElementById('loginBtn');
+            var logoutBtn = document.getElementById('logoutBtn');
+            var userDisplay = document.getElementById('userDisplay');
+            var usernameDisplay = document.getElementById('usernameDisplay');
+            if (token && username) {
+                loginBtn.style.display = 'none';
+                logoutBtn.style.display = 'inline-flex';
+                userDisplay.style.display = 'inline-block';
+                usernameDisplay.textContent = username;
+            } else {
+                loginBtn.style.display = 'inline-flex';
+                logoutBtn.style.display = 'none';
+                userDisplay.style.display = 'none';
+            }
+        }
+
+        // ============================================================
+        // 房间号横幅
+        // ============================================================
+        function initRoomStatus() {
+            var banner = document.getElementById('roomBanner');
+            var display = document.getElementById('roomNumberDisplay');
+
+            if (!banner || !display) return;
+
+            fetch('/room_number.txt?' + Date.now())
+                .then(function(response) {
+                    if (!response.ok) throw new Error('文件不存在');
+                    return response.text();
+                })
+                .then(function(text) {
+                    var match = text.match(/setroomnumber:"([^"]+)"/);
+                    if (match && match[1]) {
+                        display.textContent = match[1];
+                        banner.classList.add('show');
+                    } else {
+                        banner.classList.remove('show');
+                        console.log('[MCC Wiki] room_number.txt 格式错误，未找到有效房间号');
+                    }
+                })
+                .catch(function() {
+                    banner.classList.remove('show');
+                    console.log('[MCC Wiki] room_number.txt 未找到，房间号横幅已隐藏');
+                });
+        }
+
+        // ============================================================
+        // 重置滚动位置
+        // ============================================================
+        function resetScrollPosition() {
+            window.scrollTo(0, 0);
+        }
+
+        // ============================================================
+        // DOM 就绪初始化
+        // ============================================================
+        document.addEventListener('DOMContentLoaded', function() {
+            if ('scrollRestoration' in history) {
+                history.scrollRestoration = 'manual';
+            }
+
+            loadVersion();
+            resetScrollPosition();
+            document.body.classList.add('loaded');
+
+            renderCards();
+            initCards();
+            initRoomStatus();
+            updateAuthUI();
+
+            document.getElementById('loginUsername').addEventListener('keydown', function(e) {
+                if (e.key === 'Enter') login();
+            });
+            document.getElementById('loginModal').addEventListener('click', function(e) {
+                if (e.target === this) closeLoginModal();
+            });
+
+            setTimeout(resetScrollPosition, 50);
+            setTimeout(resetScrollPosition, 200);
+        });
+
+        // ============================================================
+        // URL 哈希初始化
+        // ============================================================
+        function initHash() {
+            var hash = window.location.hash;
+            if (hash && hash.startsWith('#page-')) {
+                var pageId = decodeURIComponent(hash.replace('#page-', ''));
+                loadPage(pageId);
+            }
+        }
+        initHash();
     </script>
 </body>
 </html>
