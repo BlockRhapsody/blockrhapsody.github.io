@@ -350,6 +350,23 @@
     }
 
     // ============================================================
+    // 卡片点击事件
+    // ============================================================
+    function initCards() {
+        var grid = document.getElementById('cardGrid');
+        if (!grid) return;
+
+        grid.addEventListener('click', function(e) {
+            var target = e.target.closest('.card-list li');
+            if (target && target.dataset.page) {
+                e.preventDefault();
+                e.stopPropagation();
+                loadPage(target.dataset.page);
+            }
+        });
+    }
+
+    // ============================================================
     // 缓存检查
     // ============================================================
     function isCacheValid(cacheKey) {
@@ -659,6 +676,7 @@
         document.body.classList.add('loaded');
         
         renderCards();
+        initCards();
         initRoomStatus();
         updateAuthUI();
 
