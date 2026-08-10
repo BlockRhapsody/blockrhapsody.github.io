@@ -47,8 +47,8 @@
     </div>
 </div>
 
-<!-- ===== skinview3d 依赖 ===== -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<!-- ===== 使用国内 CDN 镜像 ===== -->
+<script src="https://cdn.bootcdn.net/ajax/libs/three.js/r128/three.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/skinview3d@3.4.2/dist/skinview3d.min.js"></script>
 
 <script>
@@ -56,146 +56,194 @@
     // 皮肤查看器核心逻辑
     // ============================================================
 
-    // 获取 Canvas 元素
-    var canvas = document.getElementById('skinCanvas');
-    var loadingText = document.getElementById('loadingText');
+    // 等待 DOM 和依赖库加载完成
+    function initSkinViewer() {
+        var canvas = document.getElementById('skinCanvas');
+        var loadingText = document.getElementById('loadingText');
 
-    // 创建查看器
-    var viewer = new skinview3d.SkinViewer({
-        canvas: canvas,
-        width: 400,
-        height: 500,
-        skin: 'https://crafatar.com/skins/Notch',
-        background: 0x0a0a14,
-    });
-
-    // 添加微弱的网格背景
-    viewer.scene.background = new THREE.Color(0x0a0a14);
-
-    // 设置默认视角
-    viewer.zoom = 0.8;
-    viewer.autoRotate = true;
-    viewer.autoRotateSpeed = 2.0;
-    loadingText.style.display = 'none';
-
-    // 当前动画状态
-    var isWalking = false;
-    var walkAnimation = null;
-
-    // ============================================================
-    // 函数：加载玩家皮肤
-    // ============================================================
-    function loadPlayerSkin() {
-        var username = document.getElementById('usernameInput').value.trim();
-        if (!username) {
-            alert('请输入玩家名称');
+        // 检查 Three.js 和 skinview3d 是否加载成功
+        if (typeof THREE === 'undefined') {
+            loadingText.textContent = '❌ Three.js 加载失败，请检查网络';
+            loadingText.style.color = '#ff6b6b';
+            console.error('Three.js 未加载');
             return;
         }
-        loadingText.style.display = 'block';
-        var skinUrl = 'https://crafatar.com/skins/' + encodeURIComponent(username);
-        viewer.loadSkin(skinUrl, function() {
-            loadingText.style.display = 'none';
-            console.log('加载成功:', username);
-        }, function(err) {
-            loadingText.style.display = 'none';
-            alert('加载失败，请检查玩家名称是否正确');
-            console.error(err);
-        });
-    }
 
-    // ============================================================
-    // 函数：加载自定义皮肤 URL
-    // ============================================================
-    function loadCustomSkin() {
-        var url = document.getElementById('skinUrlInput').value.trim();
-        if (!url) {
-            alert('请输入皮肤图片 URL');
+        if (typeof skinview3d === 'undefined') {
+            loadingText.textContent = '❌ skinview3d 加载失败，请检查网络';
+            loadingText.style.color = '#ff6b6b';
+            console.error('skinview3d 未加载');
             return;
         }
-        loadingText.style.display = 'block';
-        viewer.loadSkin(url, function() {
+
+        try {
+            // 创建查看器
+            var viewer = new skinview3d.SkinViewer({
+                canvas: canvas,
+                width: 400,
+                height: 500,
+                skin: 'https://crafatar.com/skins/Notch',
+                background: 0x0a0a14,
+            });
+
+            // 设置场景背景
+            viewer.scene.background = new THREE.Color(0x0a0a14);
+
+            // 设置默认视角
+            viewer.zoom = 0.8;
+            viewer.autoRotate = true;
+            viewer.autoRotateSpeed = 2.0;
             loadingText.style.display = 'none';
-            console.log('加载成功:', url);
-        }, function(err) {
-            loadingText.style.display = 'none';
-            alert('加载失败，请检查 URL 是否正确');
-            console.error(err);
-        });
-    }
 
-    // ============================================================
-    // 函数：切换自动旋转
-    // ============================================================
-    function toggleAutoRotate() {
-        viewer.autoRotate = !viewer.autoRotate;
-        document.getElementById('autoRotateBtn').textContent = viewer.autoRotate ? '⏸ 暂停旋转' : '▶️ 恢复旋转';
-    }
+            // 保存到全局变量供其他函数使用
+            window._skinViewer = viewer;
 
-    // ============================================================
-    // 函数：切换行走动画
-    // ============================================================
-    function toggleWalking() {
-        isWalking = !isWalking;
-        if (isWalking) {
-            walkAnimation = new skinview3d.WalkingAnimation();
-            viewer.animation = walkAnimation;
-            document.getElementById('walkingBtn').textContent = '⏹ 停止行走';
-        } else {
-            viewer.animation = null;
-            document.getElementById('walkingBtn').textContent = '🚶 行走动画';
+            // 当前动画状态
+            var isWalking = false;
+            var walkAnimation = null;
+
+            // ============================================================
+            // 函数：加载玩家皮肤
+            // ============================================================
+            window.loadPlayerSkin = function() {
+                var username = document.getElementById('usernameInput').value.trim();
+                if (!username) {
+                    alert('请输入玩家名称');
+                    return;
+                }
+                loadingText.style.display = 'block';
+                loadingText.textContent = '加载中...';
+                loadingText.style.color = 'var(--text-muted)';
+                var skinUrl = 'https://crafatar.com/skins/' + encodeURIComponent(username);
+                window._skinViewer.loadSkin(skinUrl, function() {
+                    loadingText.style.display = 'none';
+                    console.log('加载成功:', username);
+                }, function(err) {
+                    loadingText.textContent = '❌ 加载失败，请检查玩家名称';
+                    loadingText.style.color = '#ff6b6b';
+                    console.error(err);
+                });
+            };
+
+            // ============================================================
+            // 函数：加载自定义皮肤 URL
+            // ============================================================
+            window.loadCustomSkin = function() {
+                var url = document.getElementById('skinUrlInput').value.trim();
+                if (!url) {
+                    alert('请输入皮肤图片 URL');
+                    return;
+                }
+                loadingText.style.display = 'block';
+                loadingText.textContent = '加载中...';
+                loadingText.style.color = 'var(--text-muted)';
+                window._skinViewer.loadSkin(url, function() {
+                    loadingText.style.display = 'none';
+                    console.log('加载成功:', url);
+                }, function(err) {
+                    loadingText.textContent = '❌ 加载失败，请检查 URL 是否正确';
+                    loadingText.style.color = '#ff6b6b';
+                    console.error(err);
+                });
+            };
+
+            // ============================================================
+            // 函数：切换自动旋转
+            // ============================================================
+            window.toggleAutoRotate = function() {
+                var viewer = window._skinViewer;
+                viewer.autoRotate = !viewer.autoRotate;
+                document.getElementById('autoRotateBtn').textContent = viewer.autoRotate ? '⏸ 暂停旋转' : '▶️ 恢复旋转';
+            };
+
+            // ============================================================
+            // 函数：切换行走动画
+            // ============================================================
+            window.toggleWalking = function() {
+                var viewer = window._skinViewer;
+                isWalking = !isWalking;
+                if (isWalking) {
+                    walkAnimation = new skinview3d.WalkingAnimation();
+                    viewer.animation = walkAnimation;
+                    document.getElementById('walkingBtn').textContent = '⏹ 停止行走';
+                } else {
+                    viewer.animation = null;
+                    document.getElementById('walkingBtn').textContent = '🚶 行走动画';
+                }
+            };
+
+            // ============================================================
+            // 函数：重置视角
+            // ============================================================
+            window.resetView = function() {
+                var viewer = window._skinViewer;
+                viewer.zoom = 0.8;
+                viewer.camera.position.set(1.2, 0.8, 2.0);
+                viewer.camera.lookAt(0, 1.2, 0);
+                if (viewer.controls) {
+                    viewer.controls.target.set(0, 1.2, 0);
+                }
+            };
+
+            // ============================================================
+            // 自适应 Canvas 大小
+            // ============================================================
+            function resizeCanvas() {
+                var container = canvas.parentElement;
+                var rect = container.getBoundingClientRect();
+                var w = rect.width - 20;
+                var h = Math.min(w * 1.2, 500);
+                canvas.width = w * 2;
+                canvas.height = h * 2;
+                canvas.style.width = w + 'px';
+                canvas.style.height = h + 'px';
+                if (window._skinViewer) {
+                    window._skinViewer.width = w * 2;
+                    window._skinViewer.height = h * 2;
+                    window._skinViewer.render();
+                }
+            }
+
+            window.addEventListener('resize', resizeCanvas);
+            setTimeout(resizeCanvas, 200);
+
+            // ============================================================
+            // 回车键触发加载
+            // ============================================================
+            document.getElementById('usernameInput').addEventListener('keydown', function(e) {
+                if (e.key === 'Enter') window.loadPlayerSkin();
+            });
+            document.getElementById('skinUrlInput').addEventListener('keydown', function(e) {
+                if (e.key === 'Enter') window.loadCustomSkin();
+            });
+
+            console.log('🎮 皮肤查看器已启动');
+            
+        } catch (error) {
+            loadingText.textContent = '❌ 初始化失败: ' + error.message;
+            loadingText.style.color = '#ff6b6b';
+            console.error('皮肤查看器初始化失败:', error);
         }
     }
 
     // ============================================================
-    // 函数：重置视角
+    // 等待 DOM 加载完成后再初始化
     // ============================================================
-    function resetView() {
-        viewer.zoom = 0.8;
-        viewer.camera.position.set(1.2, 0.8, 2.0);
-        viewer.camera.lookAt(0, 1.2, 0);
-        if (viewer.controls) {
-            viewer.controls.target.set(0, 1.2, 0);
-        }
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initSkinViewer);
+    } else {
+        // 如果 DOM 已加载，延迟执行以确保脚本加载完成
+        setTimeout(initSkinViewer, 200);
     }
 
-    // ============================================================
-    // 自适应 Canvas 大小
-    // ============================================================
-    function resizeCanvas() {
-        var container = canvas.parentElement;
-        var rect = container.getBoundingClientRect();
-        var w = rect.width - 20;
-        var h = Math.min(w * 1.2, 500);
-        canvas.width = w * 2;
-        canvas.height = h * 2;
-        canvas.style.width = w + 'px';
-        canvas.style.height = h + 'px';
-        if (viewer) {
-            viewer.width = w * 2;
-            viewer.height = h * 2;
-            viewer.render();
+    // 如果脚本加载失败，显示友好的错误提示
+    window.addEventListener('error', function(e) {
+        if (e.target.tagName === 'SCRIPT') {
+            var loadingText = document.getElementById('loadingText');
+            if (loadingText) {
+                loadingText.textContent = '❌ 脚本加载失败，请刷新页面重试';
+                loadingText.style.color = '#ff6b6b';
+            }
         }
-    }
-
-    window.addEventListener('resize', resizeCanvas);
-    setTimeout(resizeCanvas, 100);
-
-    // ============================================================
-    // 回车键触发加载
-    // ============================================================
-    document.getElementById('usernameInput').addEventListener('keydown', function(e) {
-        if (e.key === 'Enter') loadPlayerSkin();
     });
-    document.getElementById('skinUrlInput').addEventListener('keydown', function(e) {
-        if (e.key === 'Enter') loadCustomSkin();
-    });
-
-    // 暴露全局函数供 HTML 调用
-    window.loadPlayerSkin = loadPlayerSkin;
-    window.loadCustomSkin = loadCustomSkin;
-    window.toggleAutoRotate = toggleAutoRotate;
-    window.toggleWalking = toggleWalking;
-    window.resetView = resetView;
-
-    console.log('🎮 皮肤查看器已启动');
 </script>
