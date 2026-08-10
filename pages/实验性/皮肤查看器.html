@@ -42,35 +42,104 @@
     </div>
 </div>
 
-<!-- ===== 使用 CDN 加载 skinview3d ===== -->
-<script src="https://cdn.jsdelivr.net/npm/skinview3d@3.1.0/dist/skinview3d.bundle.js"></script>
-
+<!-- ===== 使用多个 CDN 源尝试加载 skinview3d ===== -->
 <script>
-    // 使用 DOMContentLoaded 确保页面元素已就绪
-    document.addEventListener('DOMContentLoaded', function() {
-        initSkinViewer();
-    });
+    // 尝试加载 skinview3d，使用多个备用 CDN
+    (function loadSkinView3D() {
+        var loadingText = document.getElementById('loadingText');
+        if (!loadingText) return;
 
-    // 如果 DOM 已加载，立即执行
-    if (document.readyState === 'complete' || document.readyState === 'interactive') {
-        initSkinViewer();
-    }
+        var cdnUrls = [
+            'https://cdnjs.cloudflare.com/ajax/libs/skinview3d/3.1.0/skinview3d.bundle.min.js',
+            'https://cdn.jsdelivr.net/npm/skinview3d@3.0.0/dist/skinview3d.bundle.js',
+            'https://unpkg.com/skinview3d@3.0.0/dist/skinview3d.bundle.js'
+        ];
 
+        var currentIndex = 0;
+
+        function tryLoadNext() {
+            if (currentIndex >= cdnUrls.length) {
+                // 所有 CDN 都失败了，尝试本地文件
+                var localScript = document.createElement('script');
+                localScript.src = '/icon/skinview3d.bundle.js';
+                localScript.onload = function() {
+                    console.log('✅ skinview3d 从本地加载成功');
+                    if (typeof skinview3d !== 'undefined') {
+                        loadingText.textContent = '✅ 加载完成';
+                        loadingText.style.color = 'var(--text-muted)';
+                        setTimeout(function() { loadingText.style.display = 'none'; }, 500);
+                        initSkinViewer();
+                    } else {
+                        showError('所有加载方式均失败，请刷新后重试');
+                    }
+                };
+                localScript.onerror = function() {
+                    showError('所有加载方式均失败，请刷新后重试');
+                };
+                document.head.appendChild(localScript);
+                return;
+            }
+
+            var url = cdnUrls[currentIndex];
+            console.log('尝试从 CDN 加载 skinview3d:', url);
+
+            var script = document.createElement('script');
+            script.src = url;
+            script.onload = function() {
+                // 检查是否成功加载
+                if (typeof skinview3d !== 'undefined') {
+                    console.log('✅ skinview3d 从 CDN 加载成功:', url);
+                    loadingText.textContent = '✅ 加载完成';
+                    loadingText.style.color = 'var(--text-muted)';
+                    setTimeout(function() { loadingText.style.display = 'none'; }, 500);
+                    initSkinViewer();
+                } else {
+                    // 加载了但没定义，尝试下一个
+                    currentIndex++;
+                    tryLoadNext();
+                }
+            };
+            script.onerror = function() {
+                // 加载失败，尝试下一个
+                currentIndex++;
+                tryLoadNext();
+            };
+            document.head.appendChild(script);
+        }
+
+        function showError(msg) {
+            loadingText.textContent = '❌ ' + msg;
+            loadingText.style.color = '#ff6b6b';
+            console.error('skinview3d 加载失败');
+        }
+
+        // 先检查是否已经加载
+        if (typeof skinview3d !== 'undefined') {
+            console.log('✅ skinview3d 已存在');
+            loadingText.style.display = 'none';
+            initSkinViewer();
+            return;
+        }
+
+        // 开始尝试加载
+        tryLoadNext();
+    })();
+
+    // ============================================================
+    // 初始化皮肤查看器
+    // ============================================================
     function initSkinViewer() {
         var canvas = document.getElementById('skinCanvas');
         var loadingText = document.getElementById('loadingText');
 
-        // 检查元素是否存在
         if (!canvas || !loadingText) {
             console.error('皮肤查看器元素未找到');
             return;
         }
 
-        // 检查 skinview3d 是否加载成功
         if (typeof skinview3d === 'undefined') {
-            loadingText.textContent = '❌ skinview3d 加载失败，请检查网络连接';
+            loadingText.textContent = '❌ skinview3d 未加载，请刷新后重试';
             loadingText.style.color = '#ff6b6b';
-            console.error('skinview3d 未加载');
             return;
         }
 
@@ -137,18 +206,22 @@
 
             function toggleAutoRotate() {
                 viewer.autoRotate = !viewer.autoRotate;
-                document.getElementById('autoRotateBtn').textContent = viewer.autoRotate ? '⏸ 暂停旋转' : '▶️ 恢复旋转';
+                var btn = document.getElementById('autoRotateBtn');
+                if (btn) {
+                    btn.textContent = viewer.autoRotate ? '⏸ 暂停旋转' : '▶️ 恢复旋转';
+                }
             }
 
             function toggleWalking() {
                 isWalking = !isWalking;
+                var btn = document.getElementById('walkingBtn');
                 if (isWalking) {
                     walkAnimation = new skinview3d.WalkingAnimation();
                     viewer.animation = walkAnimation;
-                    document.getElementById('walkingBtn').textContent = '⏹ 停止行走';
+                    if (btn) btn.textContent = '⏹ 停止行走';
                 } else {
                     viewer.animation = null;
-                    document.getElementById('walkingBtn').textContent = '🚶 行走动画';
+                    if (btn) btn.textContent = '🚶 行走动画';
                 }
             }
 
