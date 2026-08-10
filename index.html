@@ -314,6 +314,12 @@
                         <li><a href="#page-管理员学习手册">管理员学习手册</a></li>
                     </ul>
                 </li>
+                <li class="category">
+                    <span class="category-toggle"><i class="fas fa-flask"></i> 实验性</span>
+                    <ul class="sub-menu">
+                        <li><a href="#page-皮肤查看器">🧪 皮肤查看器</a></li>
+                    </ul>
+                </li>
             </ul>
         </nav>
     </div>
@@ -393,6 +399,12 @@
                             <li><a href="#page-管理员学习手册">管理员学习手册</a></li>
                         </ul>
                     </li>
+                    <li class="category">
+                        <span class="category-toggle"><i class="fas fa-flask"></i> 实验性</span>
+                        <ul class="sub-menu">
+                            <li><a href="#page-皮肤查看器">🧪 皮肤查看器</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </nav>
         </aside>
@@ -431,7 +443,7 @@
     // ============================================================
     // 0. 版本控制与缓存管理
     // ============================================================
-    var APP_VERSION = '2026.08.10.009';
+    var APP_VERSION = '2026.08.10.011';
     var CACHE_MAX_AGE = 5 * 60 * 1000;
 
     var storedVersion = localStorage.getItem('app_version');
@@ -450,7 +462,8 @@
         { title: '人物志', icon: 'fa-user', items: ['弘桀孤影行', '出击的阴笑徐铮'] },
         { title: '技术文档', icon: 'fa-code', items: ['MCC目录', '第一章', '第二章', '第三章', '第四章', '第五章', '第六章', '第七章', '第八章', '第九章', '第十章', '第十一章', '第十二章', '第十三章', '第十四章', '盔甲架指南', '认识基岩版'] },
         { title: '玩家文档', icon: 'fa-users', items: ['玩家游玩建议', '管理员学习手册'] },
-        { title: '论坛', icon: 'fa-comments', items: ['论坛'] }
+        { title: '论坛', icon: 'fa-comments', items: ['论坛'] },
+        { title: '实验性', icon: 'fa-flask', items: ['皮肤查看器'] }
     ];
 
     var displayNames = {
@@ -470,7 +483,8 @@
         '第十一章': '第十一章 /execute全解',
         '第十二章': '第十二章 指令组合设计',
         '第十三章': '第十三章 指令性能与安全',
-        '第十四章': '第十四章 实战案例集'
+        '第十四章': '第十四章 实战案例集',
+        '皮肤查看器': '🧪 皮肤查看器'
     };
 
     function getDisplayName(key) { return displayNames[key] || key; }
@@ -532,7 +546,8 @@
         '认识基岩版': '/pages/技术文档/认识基岩版.html',
         '玩家游玩建议': '/pages/玩家文档/游玩建议.html',
         '管理员学习手册': '/pages/玩家文档/管理员手册.html',
-        '论坛': '/pages/论坛/index.html'
+        '论坛': '/pages/论坛/index.html',
+        '皮肤查看器': '/pages/实验性/皮肤查看器.html'
     };
 
     // ============================================================
@@ -563,8 +578,7 @@
     }
 
     // ============================================================
-    // ============================================================
-    // 5. 页面加载函数
+    // 6. 页面加载函数
     // ============================================================
     function loadPage(pageId) {
         var anchor = '';
@@ -596,7 +610,6 @@
 
         var cacheKey = 'page_' + pageId;
 
-        // 检查缓存是否有效
         if (isCacheValid(cacheKey)) {
             var cached = sessionStorage.getItem(cacheKey);
             pageContent.innerHTML = cached;
@@ -606,7 +619,6 @@
             }
             updateActiveState(pageId);
 
-            // ===== 论坛页面：加载 Giscus =====
             if (pageId === '论坛') {
                 setTimeout(function() {
                     loadGiscus();
@@ -644,7 +656,6 @@
                 }
                 updateActiveState(pageId);
 
-                // ===== 论坛页面：加载 Giscus =====
                 if (pageId === '论坛') {
                     setTimeout(function() {
                         loadGiscus();
@@ -666,7 +677,7 @@
     }
 
     // ============================================================
-    // 6. 加载 Giscus（论坛评论系统） ← 新增
+    // 7. 加载 Giscus（论坛评论系统）
     // ============================================================
     function loadGiscus() {
         if (document.querySelector('.giscus iframe')) {
@@ -702,8 +713,9 @@
         container.parentNode.insertBefore(script, container.nextSibling);
         console.log('Giscus 已加载');
     }
+
     // ============================================================
-    // 7. 清除缓存并刷新
+    // 8. 清除缓存并刷新
     // ============================================================
     function clearCacheAndReload() {
         sessionStorage.clear();
@@ -713,7 +725,7 @@
     window.clearCacheAndReload = clearCacheAndReload;
 
     // ============================================================
-    // 8. 更新高亮状态
+    // 9. 更新高亮状态
     // ============================================================
     function updateActiveState(pageId) {
         document.querySelectorAll('.sub-menu a, .card-list li').forEach(function(el) {
@@ -728,7 +740,7 @@
     }
 
     // ============================================================
-    // 9. 返回首页
+    // 10. 返回首页
     // ============================================================
     function showHome() {
         var home = document.getElementById('home-content');
@@ -745,7 +757,7 @@
     window.showHome = showHome;
 
     // ============================================================
-    // 10. 登录功能
+    // 11. 登录功能
     // ============================================================
     function openLoginModal(e) {
         if (e) e.preventDefault();
@@ -801,7 +813,7 @@
     }
 
     // ============================================================
-    // 11. 房间号横幅
+    // 12. 房间号横幅
     // ============================================================
     function initRoomStatus() {
         var banner = document.getElementById('roomBanner');
@@ -830,7 +842,7 @@
     }
 
     // ============================================================
-    // 12. 汉堡菜单
+    // 13. 汉堡菜单
     // ============================================================
     function initHamburger() {
         var hamburger = document.getElementById('hamburgerBtn');
@@ -863,7 +875,7 @@
     }
 
     // ============================================================
-    // 13. 侧边栏展开/折叠 + 卡片点击
+    // 14. 侧边栏展开/折叠 + 卡片点击
     // ============================================================
     function initSidebar() {
         document.querySelectorAll('.category-toggle').forEach(function(toggle) {
