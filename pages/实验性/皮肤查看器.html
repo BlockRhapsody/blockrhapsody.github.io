@@ -47,8 +47,8 @@
     </div>
 </div>
 
-<!-- ===== 使用国内 CDN 镜像 ===== -->
-<script src="https://cdn.bootcdn.net/ajax/libs/three.js/r128/three.min.js"></script>
+<!-- ===== CDN 引用（使用国内稳定镜像） ===== -->
+<script src="https://cdn.staticfile.org/three.js/r128/three.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/skinview3d@3.4.2/dist/skinview3d.min.js"></script>
 
 <script>
@@ -61,16 +61,18 @@
         var canvas = document.getElementById('skinCanvas');
         var loadingText = document.getElementById('loadingText');
 
-        // 检查 Three.js 和 skinview3d 是否加载成功
+        // 检查 Three.js 是否加载成功
         if (typeof THREE === 'undefined') {
-            loadingText.textContent = '❌ Three.js 加载失败，请检查网络';
+            loadingText.textContent = '❌ Three.js 加载失败，请刷新重试';
             loadingText.style.color = '#ff6b6b';
             console.error('Three.js 未加载');
+            // 尝试重新加载
             return;
         }
 
+        // 检查 skinview3d 是否加载成功
         if (typeof skinview3d === 'undefined') {
-            loadingText.textContent = '❌ skinview3d 加载失败，请检查网络';
+            loadingText.textContent = '❌ skinview3d 加载失败，请刷新重试';
             loadingText.style.color = '#ff6b6b';
             console.error('skinview3d 未加载');
             return;
@@ -233,7 +235,7 @@
         document.addEventListener('DOMContentLoaded', initSkinViewer);
     } else {
         // 如果 DOM 已加载，延迟执行以确保脚本加载完成
-        setTimeout(initSkinViewer, 200);
+        setTimeout(initSkinViewer, 300);
     }
 
     // 如果脚本加载失败，显示友好的错误提示
