@@ -206,6 +206,173 @@
             .doc-content p,.doc-content ul,.doc-content ol{font-size:clamp(0.9rem, 2.5vw, 1rem)}
             .doc-content .info-grid span{font-size:clamp(0.85rem, 2vw, 0.95rem)}
         }
+        /* ============================================================
+   提示框模板系统（纯 FontAwesome 矢量图标）
+   用法：<div class="msgbox [type]">内容</div>
+   ============================================================ */
+
+.msgbox {
+    position: relative;
+    padding: 0.8rem 1.2rem 0.8rem 3.2rem;
+    margin: 0.8rem 0;
+    border-radius: var(--radius);
+    border-left: 4px solid var(--text-muted);
+    background: rgba(255,255,255,0.03);
+    color: var(--text-secondary);
+    font-size: clamp(0.95rem, 1.1vw, 1.05rem);
+    line-height: 1.7;
+    overflow: hidden;
+    min-height: 2.8rem;
+}
+
+/* 图标容器 - 使用 FontAwesome 矢量图标 */
+.msgbox::before {
+    position: absolute;
+    left: 0.8rem;
+    top: 0.8rem;
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    font-size: 1.2rem;
+    width: 1.6rem;
+    text-align: center;
+    color: var(--text-muted);
+    font-style: normal;
+}
+
+/* ----- 类型：提示（信息） ----- */
+.msgbox.info {
+    border-left-color: #4a9eff;
+    background: rgba(74, 158, 255, 0.06);
+}
+.msgbox.info::before {
+    content: '\f05a';
+    color: #4a9eff;
+}
+
+/* ----- 类型：注意（警告） ----- */
+.msgbox.warning {
+    border-left-color: #ffb347;
+    background: rgba(255, 179, 71, 0.06);
+}
+.msgbox.warning::before {
+    content: '\f071';
+    color: #ffb347;
+}
+
+/* ----- 类型：重要 ----- */
+.msgbox.important {
+    border-left-color: #ff6b6b;
+    background: rgba(255, 107, 107, 0.06);
+}
+.msgbox.important::before {
+    content: '\f06a';
+    color: #ff6b6b;
+}
+
+/* ----- 类型：成功 ----- */
+.msgbox.success {
+    border-left-color: #4CAF50;
+    background: rgba(76, 175, 80, 0.06);
+}
+.msgbox.success::before {
+    content: '\f058';
+    color: #4CAF50;
+}
+
+/* ----- 类型：待办（计划/进行中） ----- */
+.msgbox.todo {
+    border-left-color: #ab47bc;
+    background: rgba(171, 71, 188, 0.06);
+}
+.msgbox.todo::before {
+    content: '\f0ae';
+    color: #ab47bc;
+}
+
+/* ----- 类型：引用/来自某人 ----- */
+.msgbox.quote {
+    border-left-color: var(--text-muted);
+    background: rgba(255,255,255,0.02);
+    padding-left: 1.2rem;
+    font-style: italic;
+}
+.msgbox.quote::before {
+    content: '\f10d';
+    color: var(--text-muted);
+    font-style: normal;
+}
+
+/* ----- 类型：无图标纯色块 ----- */
+.msgbox.plain {
+    padding-left: 1.2rem;
+    background: rgba(255,255,255,0.02);
+}
+.msgbox.plain::before {
+    display: none;
+}
+
+/* ----- 标题（可选） ----- */
+.msgbox .msgbox-title {
+    font-weight: 700;
+    color: var(--text-primary);
+    display: block;
+    margin-bottom: 0.2rem;
+    font-size: 1em;
+}
+
+/* ----- 嵌套列表调整 ----- */
+.msgbox ul,
+.msgbox ol {
+    margin: 0.2rem 0 0.2rem 1.2rem;
+    padding-left: 0.5rem;
+}
+.msgbox p:last-child,
+.msgbox ul:last-child,
+.msgbox ol:last-child {
+    margin-bottom: 0;
+}
+
+/* ============================================================
+   内联标记（纯文本标签）
+   用法：<span class="tag [type]">文本</span>
+   ============================================================ */
+
+.tag {
+    display: inline-block;
+    padding: 0.05rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    vertical-align: middle;
+    margin: 0 0.1rem;
+}
+
+.tag.info {
+    background: rgba(74, 158, 255, 0.15);
+    color: #4a9eff;
+}
+.tag.warning {
+    background: rgba(255, 179, 71, 0.15);
+    color: #ffb347;
+}
+.tag.important {
+    background: rgba(255, 107, 107, 0.15);
+    color: #ff6b6b;
+}
+.tag.success {
+    background: rgba(76, 175, 80, 0.15);
+    color: #4CAF50;
+}
+.tag.todo {
+    background: rgba(171, 71, 188, 0.15);
+    color: #ab47bc;
+}
+.tag.vanilla {
+    background: rgba(255,255,255,0.06);
+    color: var(--text-muted);
+}
     </style>
 </head>
 <body>
