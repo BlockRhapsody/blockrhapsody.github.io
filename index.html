@@ -15,7 +15,7 @@
         /* ===== 全局重置与基础变量 ===== */
         *{margin:0;padding:0;box-sizing:border-box}
         :root{--bg-primary:#0a0a14;--bg-secondary:#12122a;--bg-card:#1a1a3e;--bg-sidebar:#0e0e22;--border-color:#2a2a5a;--text-primary:#ececf0;--text-secondary:#9a9abe;--text-muted:#6a6a8a;--accent:#4CAF50;--accent-hover:#66BB6A;--accent-glow:rgba(76,175,80,0.25);--font-pixel:'Pixelify Sans','Courier New',monospace;--radius:16px;--transition:0.35s cubic-bezier(0.34,1.56,0.64,1);--bounce:0.5s cubic-bezier(0.34, 1.56, 0.64, 1);--smooth:0.4s cubic-bezier(0.22, 1, 0.36, 1);--gentle:0.6s cubic-bezier(0.34, 1.2, 0.64, 1)}
-        html{scroll-behavior:smooth}
+        html{scroll-behavior:smooth;scrollbar-gutter:stable}
         body{font-family:var(--font-pixel);background:var(--bg-primary);color:var(--text-primary);min-height:100vh;display:flex;flex-direction:column;opacity:0;transition:opacity 0.5s ease;background-image:radial-gradient(ellipse at 20% 50%,rgba(76,175,80,0.06)0%,transparent 60%),radial-gradient(ellipse at 80% 20%,rgba(76,175,80,0.04)0%,transparent 50%);background-attachment:fixed;overflow-x:hidden}
         body.loaded{opacity:1}
         a{color:var(--text-secondary);text-decoration:none;transition:color var(--transition)}
