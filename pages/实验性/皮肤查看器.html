@@ -1,69 +1,14 @@
-<div class="doc-content">
-    <h1>🧪 实验性 · Minecraft 皮肤查看器</h1>
-    <p style="color:var(--text-secondary);">基于 skinview3d 的 3D 皮肤展示 · 输入玩家名称或皮肤图片 URL</p>
+<!-- ===== 使用 script 标签加载 skinview3d ===== -->
+<script src="/icon/skinview3d.bundle.js"></script>
 
-    <div style="display:flex;flex-wrap:wrap;gap:1.5rem;margin:1.5rem 0;">
-        <!-- 左侧：控制区 -->
-        <div style="flex:1;min-width:200px;background:rgba(255,255,255,0.03);border-radius:var(--radius);padding:1.5rem;border:1px solid var(--border-color);">
-            <h3 style="margin-bottom:0.5rem;">🎮 控制面板</h3>
-            
-            <div style="margin-bottom:1rem;">
-                <label style="display:block;color:var(--text-secondary);font-size:0.9rem;margin-bottom:0.3rem;">玩家名称</label>
-                <input type="text" id="usernameInput" value="Notch" placeholder="输入玩家名称..." style="width:100%;padding:0.5rem;border-radius:6px;border:1px solid var(--border-color);background:rgba(255,255,255,0.05);color:var(--text-primary);font-family:var(--font-pixel);font-size:0.9rem;outline:none;">
-                <button id="loadSkinBtn" style="margin-top:0.5rem;padding:0.4rem 1rem;border-radius:6px;border:none;background:var(--accent);color:#fff;font-family:var(--font-pixel);cursor:pointer;">加载皮肤</button>
-            </div>
-
-            <div style="border-top:1px solid var(--border-color);padding-top:1rem;margin-bottom:1rem;">
-                <p style="color:var(--text-muted);font-size:0.8rem;">或直接输入皮肤图片 URL：</p>
-                <input type="text" id="skinUrlInput" placeholder="https://example.com/skin.png" style="width:100%;padding:0.5rem;border-radius:6px;border:1px solid var(--border-color);background:rgba(255,255,255,0.05);color:var(--text-primary);font-size:0.85rem;outline:none;">
-                <button id="loadCustomBtn" style="margin-top:0.5rem;padding:0.4rem 1rem;border-radius:6px;border:none;background:var(--accent);color:#fff;font-family:var(--font-pixel);cursor:pointer;">加载自定义</button>
-            </div>
-
-            <div style="display:flex;flex-wrap:wrap;gap:0.5rem;border-top:1px solid var(--border-color);padding-top:1rem;">
-                <button id="autoRotateBtn" style="padding:0.3rem 0.8rem;border-radius:6px;border:1px solid var(--border-color);background:transparent;color:var(--text-secondary);font-family:var(--font-pixel);cursor:pointer;font-size:0.8rem;">⏸ 暂停旋转</button>
-                <button id="walkingBtn" style="padding:0.3rem 0.8rem;border-radius:6px;border:1px solid var(--border-color);background:transparent;color:var(--text-secondary);font-family:var(--font-pixel);cursor:pointer;font-size:0.8rem;">🚶 行走动画</button>
-                <button id="resetBtn" style="padding:0.3rem 0.8rem;border-radius:6px;border:1px solid var(--border-color);background:transparent;color:var(--text-secondary);font-family:var(--font-pixel);cursor:pointer;font-size:0.8rem;">↺ 重置视角</button>
-            </div>
-
-            <div style="border-top:1px solid var(--border-color);padding-top:1rem;margin-top:1rem;">
-                <p style="color:var(--text-muted);font-size:0.8rem;">💡 提示：鼠标拖拽旋转 · 滚轮缩放</p>
-            </div>
-        </div>
-
-        <!-- 右侧：皮肤展示 -->
-        <div style="flex:2;min-width:280px;background:rgba(255,255,255,0.02);border-radius:var(--radius);border:1px solid var(--border-color);display:flex;justify-content:center;align-items:center;min-height:400px;position:relative;">
-            <canvas id="skinCanvas" style="display:block;width:100%;height:100%;max-height:500px;image-rendering:pixelated;"></canvas>
-            <div id="loadingText" style="position:absolute;color:var(--text-muted);font-size:0.9rem;pointer-events:none;">加载中...</div>
-        </div>
-    </div>
-
-    <div class="footnote">
-        <p>实验性功能 · 方块狂想曲 Wiki</p>
-    </div>
-</div>
-
-<!-- ===== 使用 importmap 加载 skinview3d ===== -->
-<script type="importmap">
-{
-    "imports": {
-        "skinview3d": "/icon/skinview3d.bundle.js"
-    }
-}
-</script>
-
-<script type="module">
-    // ============================================================
-    // 导入 skinview3d
-    // ============================================================
-    import * as skinview3d from 'skinview3d';
-
+<script>
     // ============================================================
     // 初始化皮肤查看器
     // ============================================================
     var canvas = document.getElementById('skinCanvas');
     var loadingText = document.getElementById('loadingText');
 
-    // 检查 skinview3d 是否加载成功
+    // 检查 skinview3d 是否加载成功（作为全局变量）
     if (typeof skinview3d === 'undefined') {
         loadingText.textContent = '❌ skinview3d 加载失败，请检查 /icon/skinview3d.bundle.js 是否存在';
         loadingText.style.color = '#ff6b6b';
