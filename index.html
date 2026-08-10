@@ -207,8 +207,7 @@
             .doc-content .info-grid span{font-size:clamp(0.85rem, 2vw, 0.95rem)}
         }
         /* ============================================================
-   提示框模板系统（纯 FontAwesome 矢量图标）
-   用法：<div class="msgbox [type]">内容</div>
+   提示框模板系统（完整版）
    ============================================================ */
 
 .msgbox {
@@ -225,7 +224,6 @@
     min-height: 2.8rem;
 }
 
-/* 图标容器 - 使用 FontAwesome 矢量图标 */
 .msgbox::before {
     position: absolute;
     left: 0.8rem;
@@ -289,20 +287,79 @@
     color: #ab47bc;
 }
 
-/* ----- 类型：引用/来自某人 ----- */
+/* ----- 类型：引用（修复引号位置） ----- */
 .msgbox.quote {
     border-left-color: var(--text-muted);
     background: rgba(255,255,255,0.02);
-    padding-left: 1.2rem;
+    padding: 1.2rem 1.5rem 0.8rem 3.5rem;
     font-style: italic;
+    position: relative;
 }
 .msgbox.quote::before {
-    content: '\f10d';
+    content: '\201C';
+    position: absolute;
+    left: 0.8rem;
+    top: 0.6rem;
+    font-family: 'Georgia', serif;
+    font-size: 2.4rem;
+    font-weight: 700;
     color: var(--text-muted);
+    line-height: 1;
     font-style: normal;
 }
+.msgbox.quote .quote-source {
+    display: block;
+    text-align: right;
+    font-style: normal;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    margin-top: 0.4rem;
+    padding-right: 0.5rem;
+}
+.msgbox.quote .quote-source::before {
+    content: '\2014 ';
+}
 
-/* ----- 类型：无图标纯色块 ----- */
+/* ----- 类型：知识性提示（书架） ----- */
+.msgbox.knowledge {
+    border-left-color: #8d6e63;
+    background: rgba(141, 110, 99, 0.06);
+}
+.msgbox.knowledge::before {
+    content: '\f02d';
+    color: #8d6e63;
+}
+
+/* ----- 类型：传送门/链接提示（信标） ----- */
+.msgbox.link {
+    border-left-color: #26c6da;
+    background: rgba(38, 198, 218, 0.06);
+}
+.msgbox.link::before {
+    content: '\f0c1';
+    color: #26c6da;
+}
+.msgbox.link a {
+    color: #26c6da;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    transition: color var(--transition);
+}
+.msgbox.link a:hover {
+    color: #80deea;
+}
+
+/* ----- 类型：功能性提示（结构方块） ----- */
+.msgbox.functional {
+    border-left-color: #ffa726;
+    background: rgba(255, 167, 38, 0.06);
+}
+.msgbox.functional::before {
+    content: '\f0ae';
+    color: #ffa726;
+}
+
+/* ----- 无图标纯色块 ----- */
 .msgbox.plain {
     padding-left: 1.2rem;
     background: rgba(255,255,255,0.02);
@@ -333,8 +390,7 @@
 }
 
 /* ============================================================
-   内联标记（纯文本标签）
-   用法：<span class="tag [type]">文本</span>
+   内联标记
    ============================================================ */
 
 .tag {
