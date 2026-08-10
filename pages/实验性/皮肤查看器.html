@@ -59,7 +59,6 @@
 
         function tryLoadNext() {
             if (currentIndex >= cdnUrls.length) {
-                // 所有 CDN 都失败了，尝试本地文件
                 var localScript = document.createElement('script');
                 localScript.src = '/icon/skinview3d.bundle.js';
                 localScript.onload = function() {
@@ -143,16 +142,29 @@
         }
 
         try {
-            // ===== 先确保 Canvas 有正确的尺寸 =====
+            // ===== 获取容器尺寸，限制最大尺寸避免 WebGL 纹理溢出 =====
             var container = canvas.parentElement;
             var rect = container.getBoundingClientRect();
+            
+            // 最大纹理尺寸限制（WebGL 通常支持 4096x4096，这里保守设为 2048）
+            var MAX_SIZE = 2048;
+            // 像素比（设备缩放）
+            var dpr = Math.min(window.devicePixelRatio || 1, 2);
+            
+            // 计算实际尺寸（限制最大尺寸）
             var w = Math.max(rect.width - 20, 200);
             var h = Math.min(w * 1.2, 500);
             
-            canvas.width = Math.floor(w * 2);
-            canvas.height = Math.floor(h * 2);
+            // 乘以像素比，但不超过最大限制
+            var canvasW = Math.min(Math.floor(w * dpr), MAX_SIZE);
+            var canvasH = Math.min(Math.floor(h * dpr), MAX_SIZE);
+            
+            canvas.width = canvasW;
+            canvas.height = canvasH;
             canvas.style.width = w + 'px';
             canvas.style.height = h + 'px';
+
+            console.log('Canvas 尺寸:', canvas.width, 'x', canvas.height);
 
             // ===== 创建查看器 =====
             var viewer = new skinview3d.SkinViewer({
@@ -184,14 +196,13 @@
                 loadingText.style.display = 'block';
                 loadingText.textContent = '加载中...';
                 loadingText.style.color = 'var(--text-muted)';
-                // 使用代理避免 CORS 问题
                 var skinUrl = 'https://crafatar.com/skins/' + encodeURIComponent(username);
                 viewer.loadSkin(skinUrl, function() {
                     loadingText.style.display = 'none';
                     console.log('加载成功:', username);
                 }, function(err) {
-                    loadingText.textContent = '❌ 加载失败，请检查玩家名称或使用自定义 URL';
-                    loadingText.style.color = '#ff6b6b';
+                    loadingText.textContent = '⚠️ 加载失败，请尝试使用自定义 URL';
+                    loadingText.style.color = '#ffb347';
                     console.error(err);
                 });
             }
@@ -274,41 +285,58 @@
             }
 
             // ============================================================
-            // 自适应 Canvas 大小
+            // 自适应 Canvas 大小（防止纹理溢出）
             // ============================================================
+            var resizeTimer = null;
+
             function resizeCanvas() {
                 var container = canvas.parentElement;
                 var rect = container.getBoundingClientRect();
+                
                 var w = Math.max(rect.width - 20, 200);
                 var h = Math.min(w * 1.2, 500);
+                var dpr = Math.min(window.devicePixelRatio || 1, 2);
                 
-                // 只有尺寸变化时才重新设置
-                if (Math.abs(canvas.width - w * 2) > 1 || Math.abs(canvas.height - h * 2) > 1) {
-                    canvas.width = Math.floor(w * 2);
-                    canvas.height = Math.floor(h * 2);
+                var newW = Math.min(Math.floor(w * dpr), MAX_SIZE);
+                var newH = Math.min(Math.floor(h * dpr), MAX_SIZE);
+                
+                // 只有尺寸变化超过 2px 才更新
+                if (Math.abs(canvas.width - newW) > 2 || Math.abs(canvas.height - newH) > 2) {
+                    canvas.width = newW;
+                    canvas.height = newH;
                     canvas.style.width = w + 'px';
                     canvas.style.height = h + 'px';
                     viewer.width = canvas.width;
                     viewer.height = canvas.height;
                     viewer.render();
+                    console.log('Canvas 已调整:', canvas.width, 'x', canvas.height);
                 }
             }
 
-            // 使用 ResizeObserver 更精确地监听尺寸变化
-            if (window.ResizeObserver) {
-                var resizeObserver = new ResizeObserver(function() {
+            // 防抖：避免频繁 resize
+            function debouncedResize() {
+                if (resizeTimer) {
+                    cancelAnimationFrame(resizeTimer);
+                }
+                resizeTimer = requestAnimationFrame(function() {
                     resizeCanvas();
-                });
-                resizeObserver.observe(container);
-            } else {
-                window.addEventListener('resize', function() {
-                    setTimeout(resizeCanvas, 50);
+                    resizeTimer = null;
                 });
             }
 
+            // 使用 ResizeObserver 监听容器变化
+            if (window.ResizeObserver) {
+                var resizeObserver = new ResizeObserver(function() {
+                    debouncedResize();
+                });
+                resizeObserver.observe(container);
+            }
+
+            window.addEventListener('resize', debouncedResize);
+
             // 初始调整
-            setTimeout(resizeCanvas, 100);
-            setTimeout(resizeCanvas, 300);
+            setTimeout(debouncedResize, 100);
+            setTimeout(debouncedResize, 300);
 
             console.log('🎮 皮肤查看器已启动');
 
