@@ -47,43 +47,42 @@
 
 <script>
     // ============================================================
-    // 初始化皮肤查看器
+    // 初始化皮肤查看器（立即执行，不等待 DOMContentLoaded）
     // ============================================================
     (function initSkinViewer() {
         var canvas = document.getElementById('skinCanvas');
         var loadingText = document.getElementById('loadingText');
 
         if (!canvas || !loadingText) {
-            console.error('皮肤查看器元素未找到');
+            console.error('皮肤查看器元素未找到，可能 DOM 尚未加载');
+            // 如果元素未找到，等待 DOM 加载后再试
+            if (document.readyState !== 'complete') {
+                document.addEventListener('DOMContentLoaded', initSkinViewer);
+            }
             return;
         }
 
-        // 检查 skinview3d 是否加载成功
         if (typeof skinview3d === 'undefined') {
-            loadingText.textContent = '❌ skinview3d 未加载，请刷新后重试';
+            loadingText.textContent = '❌ skinview3d 未加载，请检查 /icon/skinview3d.bundle.js';
             loadingText.style.color = '#ff6b6b';
             console.error('skinview3d 未加载');
             return;
         }
 
         try {
-            // ===== 关键修复：先设置 Canvas 尺寸，限制最大尺寸 =====
+            // ===== 设置 Canvas 尺寸 =====
             var container = canvas.parentElement;
             var rect = container.getBoundingClientRect();
             
-            // 最大尺寸限制（防止 WebGL 纹理溢出）
             var MAX_SIZE = 1024;
-            // 设备像素比限制
             var dpr = Math.min(window.devicePixelRatio || 1, 1.5);
             
-            // 计算尺寸
             var w = Math.max(rect.width - 20, 280);
             var h = Math.min(w * 1.2, 500);
             
             var canvasW = Math.min(Math.floor(w * dpr), MAX_SIZE);
             var canvasH = Math.min(Math.floor(h * dpr), MAX_SIZE);
             
-            // 确保尺寸有效
             if (canvasW < 10) canvasW = 400;
             if (canvasH < 10) canvasH = 480;
             
@@ -99,45 +98,14 @@
                 canvas: canvas,
                 width: canvas.width,
                 height: canvas.height,
+                skin: 'https://crafatar.com/skins/Notch',
                 background: 0x0a0a14,
             });
 
-            // 加载默认皮肤（用自定义函数处理 CORS 问题）
-            loadSkinSafe(viewer, 'https://crafatar.com/skins/Notch');
-
-            // 设置默认视角
             viewer.zoom = 0.8;
             viewer.autoRotate = true;
             viewer.autoRotateSpeed = 2.0;
             loadingText.style.display = 'none';
-
-            // ============================================================
-            // 辅助：安全加载皮肤（处理 CORS 错误）
-            // ============================================================
-            function loadSkinSafe(viewer, url) {
-                // 使用 XMLHttpRequest 或 fetch 先获取图片，再用 Blob URL 加载
-                // 这样可以绕过某些 CORS 限制
-                fetch(url, { mode: 'cors' })
-                    .then(function(response) {
-                        if (!response.ok) throw new Error('HTTP ' + response.status);
-                        return response.blob();
-                    })
-                    .then(function(blob) {
-                        var objectURL = URL.createObjectURL(blob);
-                        viewer.loadSkin(objectURL, function() {
-                            console.log('皮肤加载成功');
-                            URL.revokeObjectURL(objectURL);
-                        }, function(err) {
-                            console.warn('皮肤加载失败，使用备用方法:', err);
-                            // 备用：直接尝试加载（可能因 CORS 失败，但不会影响查看器运行）
-                            viewer.loadSkin(url);
-                        });
-                    })
-                    .catch(function() {
-                        console.warn('Fetch 失败，直接尝试加载皮肤');
-                        viewer.loadSkin(url);
-                    });
-            }
 
             // ============================================================
             // 控制函数
@@ -155,11 +123,14 @@
                 loadingText.textContent = '加载中...';
                 loadingText.style.color = 'var(--text-muted)';
                 var skinUrl = 'https://crafatar.com/skins/' + encodeURIComponent(username);
-                loadSkinSafe(viewer, skinUrl);
-                // 无论加载结果如何，隐藏加载提示（给用户反馈）
-                setTimeout(function() {
+                viewer.loadSkin(skinUrl, function() {
                     loadingText.style.display = 'none';
-                }, 3000);
+                    console.log('加载成功:', username);
+                }, function(err) {
+                    loadingText.textContent = '⚠️ 加载失败，可尝试自定义 URL';
+                    loadingText.style.color = '#ffb347';
+                    console.error(err);
+                });
             }
 
             function loadCustomSkin() {
@@ -178,9 +149,6 @@
                     loadingText.textContent = '❌ 加载失败，请检查 URL';
                     loadingText.style.color = '#ff6b6b';
                     console.error(err);
-                    setTimeout(function() {
-                        loadingText.style.display = 'none';
-                    }, 2000);
                 });
             }
 
@@ -217,33 +185,21 @@
             // ============================================================
             // 绑定按钮事件
             // ============================================================
-            var loadSkinBtn = document.getElementById('loadSkinBtn');
-            var loadCustomBtn = document.getElementById('loadCustomBtn');
-            var autoRotateBtn = document.getElementById('autoRotateBtn');
-            var walkingBtn = document.getElementById('walkingBtn');
-            var resetBtn = document.getElementById('resetBtn');
-            var usernameInput = document.getElementById('usernameInput');
-            var skinUrlInput = document.getElementById('skinUrlInput');
+            document.getElementById('loadSkinBtn').addEventListener('click', loadPlayerSkin);
+            document.getElementById('loadCustomBtn').addEventListener('click', loadCustomSkin);
+            document.getElementById('autoRotateBtn').addEventListener('click', toggleAutoRotate);
+            document.getElementById('walkingBtn').addEventListener('click', toggleWalking);
+            document.getElementById('resetBtn').addEventListener('click', resetView);
 
-            if (loadSkinBtn) loadSkinBtn.addEventListener('click', loadPlayerSkin);
-            if (loadCustomBtn) loadCustomBtn.addEventListener('click', loadCustomSkin);
-            if (autoRotateBtn) autoRotateBtn.addEventListener('click', toggleAutoRotate);
-            if (walkingBtn) walkingBtn.addEventListener('click', toggleWalking);
-            if (resetBtn) resetBtn.addEventListener('click', resetView);
-
-            if (usernameInput) {
-                usernameInput.addEventListener('keydown', function(e) {
-                    if (e.key === 'Enter') loadPlayerSkin();
-                });
-            }
-            if (skinUrlInput) {
-                skinUrlInput.addEventListener('keydown', function(e) {
-                    if (e.key === 'Enter') loadCustomSkin();
-                });
-            }
+            document.getElementById('usernameInput').addEventListener('keydown', function(e) {
+                if (e.key === 'Enter') loadPlayerSkin();
+            });
+            document.getElementById('skinUrlInput').addEventListener('keydown', function(e) {
+                if (e.key === 'Enter') loadCustomSkin();
+            });
 
             // ============================================================
-            // 自适应 Canvas 大小（防抖优化）
+            // 自适应 Canvas 大小
             // ============================================================
             var resizeTimer = null;
 
@@ -282,17 +238,14 @@
                 });
             }
 
-            // 使用 ResizeObserver
             if (window.ResizeObserver) {
                 var resizeObserver = new ResizeObserver(function() {
                     debouncedResize();
                 });
                 resizeObserver.observe(container);
             }
-
             window.addEventListener('resize', debouncedResize);
 
-            // 初始调整
             setTimeout(debouncedResize, 100);
             setTimeout(debouncedResize, 300);
 
