@@ -3,7 +3,7 @@
     <p style="color:var(--text-secondary);">CSS 功能与渲染测试 · 方块狂想曲实验性功能</p>
 
     <!-- ============================================================ -->
-    <!-- 一、提示框模板测试 -->
+    <!-- 一、提示框模板测试（完整版） -->
     <!-- ============================================================ -->
     <h2>提示框模板</h2>
 
@@ -31,8 +31,23 @@
     </div>
 
     <div class="msgbox quote">
-        这是一条引用信息，用于展示他人言论或官方声明。
-        <br>——方块狂想曲服务器
+        玩家体验至上是方块狂想曲服务器的核心理念与行动准则。
+        <span class="quote-source">服主弘桀孤影行</span>
+    </div>
+
+    <div class="msgbox knowledge">
+        <span class="msgbox-title">你知道吗</span>
+        命令方块共有三种类型：脉冲、循环、连锁。每种类型有不同的执行规则和适用场景。
+    </div>
+
+    <div class="msgbox link">
+        <span class="msgbox-title">扩展阅读</span>
+        更多指令相关内容请参考 <a href="#page-MCC目录">MCC 学习新编</a> 或访问 <a href="https://zh.minecraft.wiki" target="_blank">我的世界中文Wiki</a>。
+    </div>
+
+    <div class="msgbox functional">
+        <span class="msgbox-title">交互提示</span>
+        点击侧边栏的「实验性」分类可以展开子菜单。点击卡片可以跳转到对应的页面。
     </div>
 
     <div class="msgbox plain">
@@ -107,7 +122,7 @@
     <p>使用 <code>/give @s diamond 64</code> 可以给自己 64 颗钻石。</p>
     <p>目标选择器 <code>@a</code> 表示所有玩家，<code>@e</code> 表示所有实体。</p>
 
-    <h3>代码块（预格式化）</h3>
+    <h3>代码块</h3>
     <pre style="background:rgba(0,0,0,0.3);border-radius:var(--radius);padding:1rem;overflow-x:auto;border:1px solid var(--border-color);font-family:'Courier New',monospace;font-size:0.85rem;color:var(--text-secondary);">
 /execute as @a at @s run say 你好，世界！
 /scoreboard objectives add money dummy 金币
