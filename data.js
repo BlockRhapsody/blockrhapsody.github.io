@@ -46,6 +46,13 @@ var sidebarMenu = [
         items: ['玩家游玩建议', '管理员学习手册']
     },
     {
+        title: '计划',
+        icon: 'fa-calendar',
+        items: [
+            { name: '六月建设计划', indent: 0, display: '六月建设计划' }
+        ]
+    },
+    {
         title: '论坛',
         icon: 'fa-comments',
         items: ['论坛']
@@ -78,6 +85,7 @@ var cardData = [
     { title: '人物志', icon: 'fa-user', items: ['弘桀孤影行', '出击的阴笑徐铮'] },
     { title: '技术文档', icon: 'fa-code', items: ['MCC目录', '第一章', '第二章', '第三章', '第四章', '第五章', '第六章', '第七章', '第八章', '第九章', '第十章', '第十一章', '第十二章', '第十三章', '第十四章', '盔甲架指南', '认识基岩版'] },
     { title: '玩家文档', icon: 'fa-users', items: ['玩家游玩建议', '管理员学习手册'] },
+    { title: '计划', icon: 'fa-calendar', items: ['六月建设计划'] },
     { title: '论坛', icon: 'fa-comments', items: ['论坛'] },
     { title: '实验性', icon: 'fa-flask', items: ['皮肤查看器', '强刷新'] }
 ];
@@ -121,6 +129,7 @@ var pagePathMap = {
     '认识基岩版': '/pages/技术文档/认识基岩版.html',
     '玩家游玩建议': '/pages/玩家文档/游玩建议.html',
     '管理员学习手册': '/pages/玩家文档/管理员手册.html',
+    '六月建设计划': '/pages/计划/六月建设计划.html'
     '论坛': '/pages/论坛/index.html',
     '皮肤查看器': '/pages/实验性/皮肤查看器.html',
     '强刷新': '/pages/实验性/强刷新.html'
