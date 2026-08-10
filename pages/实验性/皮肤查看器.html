@@ -42,8 +42,8 @@
     </div>
 </div>
 
-<!-- ===== 使用普通 script 标签加载 skinview3d ===== -->
-<script src="/icon/skinview3d.bundle.js"></script>
+<!-- ===== 使用 CDN 加载 skinview3d ===== -->
+<script src="https://cdn.jsdelivr.net/npm/skinview3d@3.1.0/dist/skinview3d.bundle.js"></script>
 
 <script>
     // 使用 DOMContentLoaded 确保页面元素已就绪
@@ -68,7 +68,7 @@
 
         // 检查 skinview3d 是否加载成功
         if (typeof skinview3d === 'undefined') {
-            loadingText.textContent = '❌ skinview3d 加载失败，请检查 /icon/skinview3d.bundle.js 是否存在';
+            loadingText.textContent = '❌ skinview3d 加载失败，请检查网络连接';
             loadingText.style.color = '#ff6b6b';
             console.error('skinview3d 未加载');
             return;
