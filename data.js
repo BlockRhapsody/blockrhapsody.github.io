@@ -21,7 +21,7 @@ var sidebarMenu = [
         title: '技术文档',
         icon: 'fa-code',
         items: [
-            { name: 'MCC目录', indent: 0, display: '📖 MCC 学习新编' },
+            { name: 'MCC目录', indent: 0, display: 'MCC 学习新编' },
             { name: '第一章', indent: 1, display: '第一章 指令的基本概念' },
             { name: '第二章', indent: 1, display: '第二章 权限等级' },
             { name: '第三章', indent: 1, display: '第三章 指令的构成、解析与执行' },
@@ -130,7 +130,7 @@ var pagePathMap = {
     '论坛': '/pages/论坛/index.html',
     '皮肤查看器': '/pages/实验性/皮肤查看器.html',
     '强刷新': '/pages/实验性/强刷新.html',
-    '图像文件': '/pages/实验性/图像文件.html'
+    '图像文件': '/pages/实验性/图像文件.html',
     '乱写文档': '/pages/实验性/乱写文档.html'
 };
 
