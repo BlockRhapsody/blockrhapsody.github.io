@@ -1,0 +1,18 @@
+【实体槽位类型】
+slot.armor: 马铠/地毯
+slot.armor.body: 
+slot.armor.chest: 胸甲
+slot.armor.feet: 靴子
+slot.armor.head: 头盔
+slot.armor.legs: 腿甲
+slot.chest: 箱子
+slot.enderchest: 末影箱
+slot.equippable: 
+slot.hotbar: 快捷栏
+slot.inventory: 物品栏
+slot.saddle: 鞍
+slot.weapon.mainhand: 主手持有
+slot.weapon.offhand: 副手持有
+
+※此ID表是MCBEID表的一部分，对应游戏版本为测试版（1.26.50.22）- 原版
+※详见：https://github.com/XeroAlpha/caidlist

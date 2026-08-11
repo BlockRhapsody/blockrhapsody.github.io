@@ -1,0 +1,2416 @@
+【方块】
+acacia button: 金合欢木按钮
+acacia door: 金合欢木门
+acacia fence: 金合欢木栅栏
+acacia fence gate: 金合欢木栅栏门
+acacia hanging sign: 悬挂式金合欢木告示牌
+acacia leaves: 金合欢树叶
+acacia log: 金合欢原木
+acacia planks: 金合欢木板
+acacia pressure plate: 金合欢木压力板
+acacia sapling: 金合欢树苗
+acacia shelf: 金合欢木展示架
+acacia sign: 金合欢木告示牌
+acacia slab: 金合欢木台阶
+acacia stairs: 金合欢木楼梯
+acacia trapdoor: 金合欢木活板门
+acacia wall hanging sign: 墙上的悬挂式金合欢木告示牌
+acacia wall sign: 墙上的金合欢木告示牌
+acacia wood: 金合欢木
+activator rail: 激活铁轨
+air: 空气
+allium: 绒球葱
+amethyst bud: 紫晶芽
+amethyst cluster: 紫水晶簇
+ancient debris: 远古残骸
+andesite: 安山岩
+andesite slab: 安山岩台阶
+andesite stairs: 安山岩楼梯
+andesite wall: 安山岩墙
+anvil: 铁砧
+attached melon stem: 结果的西瓜茎
+attached pumpkin stem: 结果的南瓜茎
+azalea: 杜鹃花丛
+azalea leaves: 杜鹃树叶
+azure bluet: 蓝花美耳草
+bamboo: 竹子
+bamboo button: 竹按钮
+bamboo door: 竹门
+bamboo fence: 竹栅栏
+bamboo fence gate: 竹栅栏门
+bamboo hanging sign: 悬挂式竹告示牌
+bamboo mosaic: 竹马赛克
+bamboo mosaic slab: 竹马赛克台阶
+bamboo mosaic stairs: 竹马赛克楼梯
+bamboo planks: 竹板
+bamboo pressure plate: 竹压力板
+bamboo shelf: 竹展示架
+bamboo shoot: 竹笋
+bamboo sign: 竹告示牌
+bamboo slab: 竹台阶
+bamboo stairs: 竹楼梯
+bamboo trapdoor: 竹活板门
+bamboo wall hanging sign: 墙上的悬挂式竹告示牌
+bamboo wall sign: 墙上的竹告示牌
+banner: 旗帜
+barrel: 木桶
+barrier: 屏障
+basalt: 玄武岩
+beacon: 信标
+bed: 床
+bedrock: 基岩
+bee nest: 蜂巢
+beehive: 蜂箱
+beetroots: 甜菜根
+bell: 钟
+big dripleaf: 大型垂滴叶
+big dripleaf stem: 大型垂滴叶茎
+birch button: 白桦木按钮
+birch door: 白桦木门
+birch fence: 白桦木栅栏
+birch fence gate: 白桦木栅栏门
+birch hanging sign: 悬挂式白桦木告示牌
+birch leaves: 白桦树叶
+birch log: 白桦原木
+birch planks: 白桦木板
+birch pressure plate: 白桦木压力板
+birch sapling: 白桦树苗
+birch shelf: 白桦木展示架
+birch sign: 白桦木告示牌
+birch slab: 白桦木台阶
+birch stairs: 白桦木楼梯
+birch trapdoor: 白桦木活板门
+birch wall hanging sign: 墙上的悬挂式白桦木告示牌
+birch wall sign: 墙上的白桦木告示牌
+birch wood: 白桦木
+black banner: 黑色旗帜
+black bed: 黑色床
+black candle: 黑色蜡烛
+black carpet: 黑色地毯
+black concrete: 黑色混凝土
+black concrete powder: 黑色混凝土粉末
+black concrete slab: 黑色混凝土台阶
+black concrete stairs: 黑色混凝土楼梯
+black glazed terracotta: 黑色带釉陶瓦
+black shulker box: 黑色潜影盒
+black stained glass: 黑色染色玻璃
+black stained glass pane: 黑色染色玻璃板
+black terracotta: 黑色陶瓦
+black wall banner: 墙上的黑色旗帜
+black wool: 黑色羊毛
+black wool slab: 黑色羊毛台阶
+black wool stairs: 黑色羊毛楼梯
+blackstone: 黑石
+blackstone slab: 黑石台阶
+blackstone stairs: 黑石楼梯
+blackstone wall: 黑石墙
+blast furnace: 高炉
+block of amethyst: 紫水晶块
+block of bamboo: 竹块
+block of coal: 煤炭块
+block of copper: 铜块
+block of diamond: 钻石块
+block of emerald: 绿宝石块
+block of gold: 金块
+block of iron: 铁块
+block of lapis lazuli: 青金石块
+block of netherite: 下界合金块
+block of quartz: 石英块
+block of raw copper: 粗铜块
+block of raw gold: 粗金块
+block of raw iron: 粗铁块
+block of redstone: 红石块
+block of resin: 树脂块
+block of stripped bamboo: 去皮竹块
+blue banner: 蓝色旗帜
+blue bed: 蓝色床
+blue candle: 蓝色蜡烛
+blue carpet: 蓝色地毯
+blue concrete: 蓝色混凝土
+blue concrete powder: 蓝色混凝土粉末
+blue concrete slab: 蓝色混凝土台阶
+blue concrete stairs: 蓝色混凝土楼梯
+blue glazed terracotta: 蓝色带釉陶瓦
+blue ice: 蓝冰
+blue orchid: 兰花
+blue shulker box: 蓝色潜影盒
+blue stained glass: 蓝色染色玻璃
+blue stained glass pane: 蓝色染色玻璃板
+blue terracotta: 蓝色陶瓦
+blue wall banner: 墙上的蓝色旗帜
+blue wool: 蓝色羊毛
+blue wool slab: 蓝色羊毛台阶
+blue wool stairs: 蓝色羊毛楼梯
+bone block: 骨块
+bookshelf: 书架
+brain coral: 脑纹珊瑚
+brain coral block: 脑纹珊瑚块
+brain coral fan: 脑纹珊瑚扇
+brain coral wall fan: 墙上的脑纹珊瑚扇
+brewing stand: 酿造台
+brick slab: 红砖台阶
+brick stairs: 红砖楼梯
+brick wall: 红砖墙
+bricks: 红砖块
+brown banner: 棕色旗帜
+brown bed: 棕色床
+brown candle: 棕色蜡烛
+brown carpet: 棕色地毯
+brown concrete: 棕色混凝土
+brown concrete powder: 棕色混凝土粉末
+brown concrete slab: 棕色混凝土台阶
+brown concrete stairs: 棕色混凝土楼梯
+brown glazed terracotta: 棕色带釉陶瓦
+brown mushroom: 棕色蘑菇
+brown mushroom block: 棕色蘑菇方块
+brown shulker box: 棕色潜影盒
+brown stained glass: 棕色染色玻璃
+brown stained glass pane: 棕色染色玻璃板
+brown terracotta: 棕色陶瓦
+brown wall banner: 墙上的棕色旗帜
+brown wool: 棕色羊毛
+brown wool slab: 棕色羊毛台阶
+brown wool stairs: 棕色羊毛楼梯
+bubble column: 气泡柱
+bubble coral: 气泡珊瑚
+bubble coral block: 气泡珊瑚块
+bubble coral fan: 气泡珊瑚扇
+bubble coral wall fan: 墙上的气泡珊瑚扇
+budding amethyst: 紫水晶母岩
+bush: 灌木丛
+button: 按钮
+cactus: 仙人掌
+cactus flower: 仙人掌花
+cake: 蛋糕
+cake with black candle: 插上黑色蜡烛的蛋糕
+cake with blue candle: 插上蓝色蜡烛的蛋糕
+cake with brown candle: 插上棕色蜡烛的蛋糕
+cake with candle: 插上蜡烛的蛋糕
+cake with cyan candle: 插上青色蜡烛的蛋糕
+cake with gray candle: 插上灰色蜡烛的蛋糕
+cake with green candle: 插上绿色蜡烛的蛋糕
+cake with light blue candle: 插上淡蓝色蜡烛的蛋糕
+cake with light gray candle: 插上淡灰色蜡烛的蛋糕
+cake with lime candle: 插上黄绿色蜡烛的蛋糕
+cake with magenta candle: 插上品红色蜡烛的蛋糕
+cake with orange candle: 插上橙色蜡烛的蛋糕
+cake with pink candle: 插上粉红色蜡烛的蛋糕
+cake with purple candle: 插上紫色蜡烛的蛋糕
+cake with red candle: 插上红色蜡烛的蛋糕
+cake with white candle: 插上白色蜡烛的蛋糕
+cake with yellow candle: 插上黄色蜡烛的蛋糕
+calcite: 方解石
+calibrated sculk sensor: 校频幽匿感测体
+campfire: 营火
+candle: 蜡烛
+carpet: 地毯
+carrots: 胡萝卜
+cartography table: 制图台
+carved pumpkin: 雕刻南瓜
+cauldron: 炼药锅
+cave air: 洞穴空气
+cave vines: 洞穴藤蔓
+cave vines plant: 洞穴藤蔓植株
+chain command block: 连锁型命令方块
+cherry button: 樱花木按钮
+cherry door: 樱花木门
+cherry fence: 樱花木栅栏
+cherry fence gate: 樱花木栅栏门
+cherry hanging sign: 悬挂式樱花木告示牌
+cherry leaves: 樱花树叶
+cherry log: 樱花原木
+cherry planks: 樱花木板
+cherry pressure plate: 樱花木压力板
+cherry sapling: 樱花树苗
+cherry shelf: 樱花木展示架
+cherry sign: 樱花木告示牌
+cherry slab: 樱花木台阶
+cherry stairs: 樱花木楼梯
+cherry trapdoor: 樱花木活板门
+cherry wall hanging sign: 墙上的悬挂式樱花木告示牌
+cherry wall sign: 墙上的樱花木告示牌
+cherry wood: 樱花木
+chest: 箱子
+chipped anvil: 开裂的铁砧
+chiseled bookshelf: 雕纹书架
+chiseled cinnabar: 雕纹朱砂
+chiseled copper: 雕纹铜块
+chiseled deepslate: 雕纹深板岩
+chiseled nether bricks: 雕纹下界砖块
+chiseled polished blackstone: 雕纹磨制黑石
+chiseled quartz block: 雕纹石英块
+chiseled red sandstone: 雕纹红砂岩
+chiseled resin bricks: 雕纹树脂砖块
+chiseled sandstone: 雕纹砂岩
+chiseled stone bricks: 雕纹石砖
+chiseled sulfur: 雕纹硫黄
+chiseled tuff: 雕纹凝灰岩
+chiseled tuff bricks: 雕纹凝灰岩砖
+chorus flower: 紫颂花
+chorus plant: 紫颂植株
+cinnabar: 朱砂
+cinnabar brick slab: 朱砂砖台阶
+cinnabar brick stairs: 朱砂砖楼梯
+cinnabar brick wall: 朱砂砖墙
+cinnabar bricks: 朱砂砖
+cinnabar slab: 朱砂台阶
+cinnabar stairs: 朱砂楼梯
+cinnabar wall: 朱砂墙
+clay: 黏土
+closed eyeblossom: 闭合的眼眸花
+coal ore: 煤矿石
+coarse dirt: 砂土
+cobbled deepslate: 深板岩圆石
+cobbled deepslate slab: 深板岩圆石台阶
+cobbled deepslate stairs: 深板岩圆石楼梯
+cobbled deepslate wall: 深板岩圆石墙
+cobblestone: 圆石
+cobblestone slab: 圆石台阶
+cobblestone stairs: 圆石楼梯
+cobblestone wall: 圆石墙
+cobweb: 蜘蛛网
+cocoa: 可可果
+command block: 命令方块
+composter: 堆肥桶
+concrete: 混凝土
+concrete powder: 混凝土粉末
+concrete slab: 混凝土台阶
+concrete stairs: 混凝土楼梯
+conduit: 潮涌核心
+copper bars: 铜栏杆
+copper bulb: 铜灯
+copper chain: 铜链
+copper chest: 铜箱子
+copper door: 铜门
+copper golem statue: 铜傀儡像
+copper grate: 铜格栅
+copper lantern: 铜灯笼
+copper ore: 铜矿石
+copper torch: 铜火把
+copper trapdoor: 铜活板门
+copper wall torch: 墙上的铜火把
+coral: 珊瑚
+coral block: 珊瑚块
+coral fan: 珊瑚扇
+coral wall fan: 墙上的珊瑚扇
+cornflower: 矢车菊
+cracked deepslate bricks: 裂纹深板岩砖
+cracked deepslate tiles: 裂纹深板岩瓦
+cracked nether bricks: 裂纹下界砖块
+cracked polished blackstone bricks: 裂纹磨制黑石砖
+cracked stone bricks: 裂纹石砖
+crafter: 合成器
+crafting table: 工作台
+creaking heart: 嘎枝之心
+creeper head: 苦力怕的头
+creeper wall head: 墙上的苦力怕的头
+crimson button: 绯红木按钮
+crimson door: 绯红木门
+crimson fence: 绯红木栅栏
+crimson fence gate: 绯红木栅栏门
+crimson fungus: 绯红菌
+crimson hanging sign: 悬挂式绯红木告示牌
+crimson hyphae: 绯红菌核
+crimson nylium: 绯红菌岩
+crimson planks: 绯红木板
+crimson pressure plate: 绯红木压力板
+crimson roots: 绯红菌索
+crimson shelf: 绯红木展示架
+crimson sign: 绯红木告示牌
+crimson slab: 绯红木台阶
+crimson stairs: 绯红木楼梯
+crimson stem: 绯红菌柄
+crimson trapdoor: 绯红木活板门
+crimson wall hanging sign: 墙上的悬挂式绯红木告示牌
+crimson wall sign: 墙上的绯红木告示牌
+crying obsidian: 哭泣的黑曜石
+cut copper: 切制铜块
+cut copper slab: 切制铜台阶
+cut copper stairs: 切制铜楼梯
+cut red sandstone: 切制红砂岩
+cut red sandstone slab: 切制红砂岩台阶
+cut sandstone: 切制砂岩
+cut sandstone slab: 切制砂岩台阶
+cyan banner: 青色旗帜
+cyan bed: 青色床
+cyan candle: 青色蜡烛
+cyan carpet: 青色地毯
+cyan concrete: 青色混凝土
+cyan concrete powder: 青色混凝土粉末
+cyan concrete slab: 青色混凝土台阶
+cyan concrete stairs: 青色混凝土楼梯
+cyan glazed terracotta: 青色带釉陶瓦
+cyan shulker box: 青色潜影盒
+cyan stained glass: 青色染色玻璃
+cyan stained glass pane: 青色染色玻璃板
+cyan terracotta: 青色陶瓦
+cyan wall banner: 墙上的青色旗帜
+cyan wool: 青色羊毛
+cyan wool slab: 青色羊毛台阶
+cyan wool stairs: 青色羊毛楼梯
+damaged anvil: 损坏的铁砧
+dandelion: 蒲公英
+dark oak button: 深色橡木按钮
+dark oak door: 深色橡木门
+dark oak fence: 深色橡木栅栏
+dark oak fence gate: 深色橡木栅栏门
+dark oak hanging sign: 悬挂式深色橡木告示牌
+dark oak leaves: 深色橡树树叶
+dark oak log: 深色橡木原木
+dark oak planks: 深色橡木木板
+dark oak pressure plate: 深色橡木压力板
+dark oak sapling: 深色橡树树苗
+dark oak shelf: 深色橡木展示架
+dark oak sign: 深色橡木告示牌
+dark oak slab: 深色橡木台阶
+dark oak stairs: 深色橡木楼梯
+dark oak trapdoor: 深色橡木活板门
+dark oak wall hanging sign: 墙上的悬挂式深色橡木告示牌
+dark oak wall sign: 墙上的深色橡木告示牌
+dark oak wood: 深色橡木
+dark prismarine: 暗海晶石
+dark prismarine slab: 暗海晶石台阶
+dark prismarine stairs: 暗海晶石楼梯
+daylight detector: 阳光探测器
+dead brain coral: 失活的脑纹珊瑚
+dead brain coral block: 失活的脑纹珊瑚块
+dead brain coral fan: 失活的脑纹珊瑚扇
+dead brain coral wall fan: 墙上的失活脑纹珊瑚扇
+dead bubble coral: 失活的气泡珊瑚
+dead bubble coral block: 失活的气泡珊瑚块
+dead bubble coral fan: 失活的气泡珊瑚扇
+dead bubble coral wall fan: 墙上的失活气泡珊瑚扇
+dead bush: 枯萎的灌木
+dead coral: 失活的珊瑚
+dead coral blocks: 失活的珊瑚块
+dead coral fans: 失活的珊瑚扇
+dead coral wall fan: 墙上的失活珊瑚扇
+dead fire coral: 失活的火珊瑚
+dead fire coral block: 失活的火珊瑚块
+dead fire coral fan: 失活的火珊瑚扇
+dead fire coral wall fan: 墙上的失活火珊瑚扇
+dead horn coral: 失活的鹿角珊瑚
+dead horn coral block: 失活的鹿角珊瑚块
+dead horn coral fan: 失活的鹿角珊瑚扇
+dead horn coral wall fan: 墙上的失活鹿角珊瑚扇
+dead tube coral: 失活的管珊瑚
+dead tube coral block: 失活的管珊瑚块
+dead tube coral fan: 失活的管珊瑚扇
+dead tube coral wall fan: 墙上的失活管珊瑚扇
+decorated pot: 饰纹陶罐
+deepslate: 深板岩
+deepslate brick slab: 深板岩砖台阶
+deepslate brick stairs: 深板岩砖楼梯
+deepslate brick wall: 深板岩砖墙
+deepslate bricks: 深板岩砖
+deepslate coal ore: 深层煤矿石
+deepslate copper ore: 深层铜矿石
+deepslate diamond ore: 深层钻石矿石
+deepslate emerald ore: 深层绿宝石矿石
+deepslate gold ore: 深层金矿石
+deepslate iron ore: 深层铁矿石
+deepslate lapis lazuli ore: 深层青金石矿石
+deepslate redstone ore: 深层红石矿石
+deepslate tile slab: 深板岩瓦台阶
+deepslate tile stairs: 深板岩瓦楼梯
+deepslate tile wall: 深板岩瓦墙
+deepslate tiles: 深板岩瓦
+detector rail: 探测铁轨
+diamond ore: 钻石矿石
+diorite: 闪长岩
+diorite slab: 闪长岩台阶
+diorite stairs: 闪长岩楼梯
+diorite wall: 闪长岩墙
+dirt: 泥土
+dirt path: 土径
+dispenser: 发射器
+door: 门
+dragon egg: 龙蛋
+dragon head: 龙首
+dragon wall head: 墙上的龙首
+dried ghast: 失水恶魂
+dried kelp block: 干海带块
+dripstone block: 滴水石块
+dropper: 投掷器
+emerald ore: 绿宝石矿石
+enchanting table: 附魔台
+end gateway: 末地折跃门
+end portal: 末地传送门
+end portal frame: 末地传送门框架
+end rod: 末地烛
+end stone: 末地石
+end stone brick slab: 末地石砖台阶
+end stone brick stairs: 末地石砖楼梯
+end stone brick wall: 末地石砖墙
+end stone bricks: 末地石砖
+ender chest: 末影箱
+exposed chiseled copper: 斑驳的雕纹铜块
+exposed copper: 斑驳的铜块
+exposed copper bars: 斑驳的铜栏杆
+exposed copper bulb: 斑驳的铜灯
+exposed copper chain: 斑驳的铜链
+exposed copper chest: 斑驳的铜箱子
+exposed copper door: 斑驳的铜门
+exposed copper golem statue: 斑驳的铜傀儡像
+exposed copper grate: 斑驳的铜格栅
+exposed copper lantern: 斑驳的铜灯笼
+exposed copper trapdoor: 斑驳的铜活板门
+exposed cut copper: 斑驳的切制铜块
+exposed cut copper slab: 斑驳的切制铜台阶
+exposed cut copper stairs: 斑驳的切制铜楼梯
+exposed lightning rod: 斑驳的避雷针
+farmland: 耕地
+fence: 栅栏
+fence gate: 栅栏门
+fern: 蕨
+fire: 火
+fire coral: 火珊瑚
+fire coral block: 火珊瑚块
+fire coral fan: 火珊瑚扇
+fire coral wall fan: 墙上的火珊瑚扇
+firefly bush: 萤火虫灌木丛
+fletching table: 制箭台
+flower: 花
+flower pot: 花盆
+flowering azalea: 盛开的杜鹃花丛
+flowering azalea leaves: 盛开的杜鹃树叶
+froglight: 蛙明灯
+frogspawn: 青蛙卵
+frosted ice: 霜冰
+fungus: 下界菌
+furnace: 熔炉
+gilded blackstone: 镶金黑石
+glass: 玻璃
+glass pane: 玻璃板
+glazed terracotta: 带釉陶瓦
+glow lichen: 发光地衣
+glowstone: 荧石
+gold ore: 金矿石
+golden dandelion: 金蒲公英
+granite: 花岗岩
+granite slab: 花岗岩台阶
+granite stairs: 花岗岩楼梯
+granite wall: 花岗岩墙
+grass block: 草方块
+gravel: 沙砾
+gray banner: 灰色旗帜
+gray bed: 灰色床
+gray candle: 灰色蜡烛
+gray carpet: 灰色地毯
+gray concrete: 灰色混凝土
+gray concrete powder: 灰色混凝土粉末
+gray concrete slab: 灰色混凝土台阶
+gray concrete stairs: 灰色混凝土楼梯
+gray glazed terracotta: 灰色带釉陶瓦
+gray shulker box: 灰色潜影盒
+gray stained glass: 灰色染色玻璃
+gray stained glass pane: 灰色染色玻璃板
+gray terracotta: 灰色陶瓦
+gray wall banner: 墙上的灰色旗帜
+gray wool: 灰色羊毛
+gray wool slab: 灰色羊毛台阶
+gray wool stairs: 灰色羊毛楼梯
+green banner: 绿色旗帜
+green bed: 绿色床
+green candle: 绿色蜡烛
+green carpet: 绿色地毯
+green concrete: 绿色混凝土
+green concrete powder: 绿色混凝土粉末
+green concrete slab: 绿色混凝土台阶
+green concrete stairs: 绿色混凝土楼梯
+green glazed terracotta: 绿色带釉陶瓦
+green shulker box: 绿色潜影盒
+green stained glass: 绿色染色玻璃
+green stained glass pane: 绿色染色玻璃板
+green terracotta: 绿色陶瓦
+green wall banner: 墙上的绿色旗帜
+green wool: 绿色羊毛
+green wool slab: 绿色羊毛台阶
+green wool stairs: 绿色羊毛楼梯
+grindstone: 砂轮
+hanging roots: 垂根
+hanging sign: 悬挂式告示牌
+hay bale: 干草捆
+head: 头颅
+heavy core: 沉重核心
+heavy weighted pressure plate: 重质测重压力板
+honey block: 蜂蜜块
+honeycomb block: 蜜脾块
+hopper: 漏斗
+horn coral: 鹿角珊瑚
+horn coral block: 鹿角珊瑚块
+horn coral fan: 鹿角珊瑚扇
+horn coral wall fan: 墙上的鹿角珊瑚扇
+hyphae: 菌核
+ice: 冰
+infested chiseled stone bricks: 虫蚀雕纹石砖
+infested cobblestone: 虫蚀圆石
+infested cracked stone bricks: 虫蚀裂纹石砖
+infested deepslate: 虫蚀深板岩
+infested mossy stone bricks: 虫蚀苔石砖
+infested stone: 虫蚀石头
+infested stone bricks: 虫蚀石砖
+iron bars: 铁栏杆
+iron chain: 铁链
+iron door: 铁门
+iron ore: 铁矿石
+iron trapdoor: 铁活板门
+jack o'lantern: 南瓜灯
+jigsaw block: 拼图方块
+jukebox: 唱片机
+jungle button: 丛林木按钮
+jungle door: 丛林木门
+jungle fence: 丛林木栅栏
+jungle fence gate: 丛林木栅栏门
+jungle hanging sign: 悬挂式丛林木告示牌
+jungle leaves: 丛林树叶
+jungle log: 丛林原木
+jungle planks: 丛林木板
+jungle pressure plate: 丛林木压力板
+jungle sapling: 丛林树苗
+jungle shelf: 丛林木展示架
+jungle sign: 丛林木告示牌
+jungle slab: 丛林木台阶
+jungle stairs: 丛林木楼梯
+jungle trapdoor: 丛林木活板门
+jungle wall hanging sign: 墙上的悬挂式丛林木告示牌
+jungle wall sign: 墙上的丛林木告示牌
+jungle wood: 丛林木
+kelp: 海带
+kelp plant: 海带植株
+ladder: 梯子
+lantern: 灯笼
+lapis lazuli ore: 青金石矿石
+large amethyst bud: 大型紫晶芽
+large fern: 大型蕨
+lava: 熔岩
+lava cauldron: 装有熔岩的炼药锅
+leaf litter: 枯叶堆
+leaves: 树叶
+lectern: 讲台
+lever: 拉杆
+light: 光源方块
+light blue banner: 淡蓝色旗帜
+light blue bed: 淡蓝色床
+light blue candle: 淡蓝色蜡烛
+light blue carpet: 淡蓝色地毯
+light blue concrete: 淡蓝色混凝土
+light blue concrete powder: 淡蓝色混凝土粉末
+light blue concrete slab: 淡蓝色混凝土台阶
+light blue concrete stairs: 淡蓝色混凝土楼梯
+light blue glazed terracotta: 淡蓝色带釉陶瓦
+light blue shulker box: 淡蓝色潜影盒
+light blue stained glass: 淡蓝色染色玻璃
+light blue stained glass pane: 淡蓝色染色玻璃板
+light blue terracotta: 淡蓝色陶瓦
+light blue wall banner: 墙上的淡蓝色旗帜
+light blue wool: 淡蓝色羊毛
+light blue wool slab: 淡蓝色羊毛台阶
+light blue wool stairs: 淡蓝色羊毛楼梯
+light gray banner: 淡灰色旗帜
+light gray bed: 淡灰色床
+light gray candle: 淡灰色蜡烛
+light gray carpet: 淡灰色地毯
+light gray concrete: 淡灰色混凝土
+light gray concrete powder: 淡灰色混凝土粉末
+light gray concrete slab: 淡灰色混凝土台阶
+light gray concrete stairs: 淡灰色混凝土楼梯
+light gray glazed terracotta: 淡灰色带釉陶瓦
+light gray shulker box: 淡灰色潜影盒
+light gray stained glass: 淡灰色染色玻璃
+light gray stained glass pane: 淡灰色染色玻璃板
+light gray terracotta: 淡灰色陶瓦
+light gray wall banner: 墙上的淡灰色旗帜
+light gray wool: 淡灰色羊毛
+light gray wool slab: 淡灰色羊毛台阶
+light gray wool stairs: 淡灰色羊毛楼梯
+light weighted pressure plate: 轻质测重压力板
+lightning rod: 避雷针
+lilac: 丁香
+lily of the valley: 铃兰
+lily pad: 睡莲
+lime banner: 黄绿色旗帜
+lime bed: 黄绿色床
+lime candle: 黄绿色蜡烛
+lime carpet: 黄绿色地毯
+lime concrete: 黄绿色混凝土
+lime concrete powder: 黄绿色混凝土粉末
+lime concrete slab: 黄绿色混凝土台阶
+lime concrete stairs: 黄绿色混凝土楼梯
+lime glazed terracotta: 黄绿色带釉陶瓦
+lime shulker box: 黄绿色潜影盒
+lime stained glass: 黄绿色染色玻璃
+lime stained glass pane: 黄绿色染色玻璃板
+lime terracotta: 黄绿色陶瓦
+lime wall banner: 墙上的黄绿色旗帜
+lime wool: 黄绿色羊毛
+lime wool slab: 黄绿色羊毛台阶
+lime wool stairs: 黄绿色羊毛楼梯
+locked chest: 上锁的箱子
+lodestone: 磁石
+log: 原木
+loom: 织布机
+magenta banner: 品红色旗帜
+magenta bed: 品红色床
+magenta candle: 品红色蜡烛
+magenta carpet: 品红色地毯
+magenta concrete: 品红色混凝土
+magenta concrete powder: 品红色混凝土粉末
+magenta concrete slab: 品红色混凝土台阶
+magenta concrete stairs: 品红色混凝土楼梯
+magenta glazed terracotta: 品红色带釉陶瓦
+magenta shulker box: 品红色潜影盒
+magenta stained glass: 品红色染色玻璃
+magenta stained glass pane: 品红色染色玻璃板
+magenta terracotta: 品红色陶瓦
+magenta wall banner: 墙上的品红色旗帜
+magenta wool: 品红色羊毛
+magenta wool slab: 品红色羊毛台阶
+magenta wool stairs: 品红色羊毛楼梯
+magma block: 岩浆块
+mangrove button: 红树木按钮
+mangrove door: 红树木门
+mangrove fence: 红树木栅栏
+mangrove fence gate: 红树木栅栏门
+mangrove hanging sign: 悬挂式红树木告示牌
+mangrove leaves: 红树树叶
+mangrove log: 红树原木
+mangrove planks: 红树木板
+mangrove pressure plate: 红树木压力板
+mangrove propagule: 红树胎生苗
+mangrove roots: 红树根
+mangrove shelf: 红树木展示架
+mangrove sign: 红树木告示牌
+mangrove slab: 红树木台阶
+mangrove stairs: 红树木楼梯
+mangrove trapdoor: 红树木活板门
+mangrove wall hanging sign: 墙上的悬挂式红树木告示牌
+mangrove wall sign: 墙上的红树木告示牌
+mangrove wood: 红树木
+medium amethyst bud: 中型紫晶芽
+melon: 西瓜
+melon stem: 西瓜茎
+monster spawner: 刷怪笼
+moss block: 苔藓块
+moss carpet: 覆地苔藓
+mossy cobblestone: 苔石
+mossy cobblestone slab: 苔石台阶
+mossy cobblestone stairs: 苔石楼梯
+mossy cobblestone wall: 苔石墙
+mossy stone brick slab: 苔石砖台阶
+mossy stone brick stairs: 苔石砖楼梯
+mossy stone brick wall: 苔石砖墙
+mossy stone bricks: 苔石砖
+moving piston: 移动的活塞
+mud: 泥巴
+mud brick slab: 泥砖台阶
+mud brick stairs: 泥砖楼梯
+mud brick wall: 泥砖墙
+mud bricks: 泥砖
+muddy mangrove roots: 沾泥的红树根
+mushroom: 蘑菇
+mushroom block: 蘑菇方块
+mushroom stem: 蘑菇柄
+mycelium: 菌丝体
+nether brick fence: 下界砖栅栏
+nether brick slab: 下界砖台阶
+nether brick stairs: 下界砖楼梯
+nether brick wall: 下界砖墙
+nether bricks: 下界砖块
+nether gold ore: 下界金矿石
+nether portal: 下界传送门
+nether quartz ore: 下界石英矿石
+nether sprouts: 下界苗
+nether wart: 下界疣
+nether wart block: 下界疣块
+netherrack: 下界岩
+note block: 音符盒
+nylium: 菌岩
+oak button: 橡木按钮
+oak door: 橡木门
+oak fence: 橡木栅栏
+oak fence gate: 橡木栅栏门
+oak hanging sign: 悬挂式橡木告示牌
+oak leaves: 橡树树叶
+oak log: 橡木原木
+oak planks: 橡木木板
+oak pressure plate: 橡木压力板
+oak sapling: 橡树树苗
+oak shelf: 橡木展示架
+oak sign: 橡木告示牌
+oak slab: 橡木台阶
+oak stairs: 橡木楼梯
+oak trapdoor: 橡木活板门
+oak wall hanging sign: 墙上的悬挂式橡木告示牌
+oak wall sign: 墙上的橡木告示牌
+oak wood: 橡木
+observer: 侦测器
+obsidian: 黑曜石
+ochre froglight: 赭黄蛙明灯
+ominous banner: 不祥旗帜
+ominous trial spawner: 不祥试炼刷怪笼
+ominous vault: 不祥宝库
+open eyeblossom: 张开的眼眸花
+orange banner: 橙色旗帜
+orange bed: 橙色床
+orange candle: 橙色蜡烛
+orange carpet: 橙色地毯
+orange concrete: 橙色混凝土
+orange concrete powder: 橙色混凝土粉末
+orange concrete slab: 橙色混凝土台阶
+orange concrete stairs: 橙色混凝土楼梯
+orange glazed terracotta: 橙色带釉陶瓦
+orange poplar leaves: 橙色杨树树叶
+orange shulker box: 橙色潜影盒
+orange stained glass: 橙色染色玻璃
+orange stained glass pane: 橙色染色玻璃板
+orange terracotta: 橙色陶瓦
+orange tulip: 橙色郁金香
+orange wall banner: 墙上的橙色旗帜
+orange wool: 橙色羊毛
+orange wool slab: 橙色羊毛台阶
+orange wool stairs: 橙色羊毛楼梯
+oxeye daisy: 滨菊
+oxidized chiseled copper: 氧化的雕纹铜块
+oxidized copper: 氧化的铜块
+oxidized copper bars: 氧化的铜栏杆
+oxidized copper bulb: 氧化的铜灯
+oxidized copper chain: 氧化的铜链
+oxidized copper chest: 氧化的铜箱子
+oxidized copper door: 氧化的铜门
+oxidized copper golem statue: 氧化的铜傀儡像
+oxidized copper grate: 氧化的铜格栅
+oxidized copper lantern: 氧化的铜灯笼
+oxidized copper trapdoor: 氧化的铜活板门
+oxidized cut copper: 氧化的切制铜块
+oxidized cut copper slab: 氧化的切制铜台阶
+oxidized cut copper stairs: 氧化的切制铜楼梯
+oxidized lightning rod: 氧化的避雷针
+packed ice: 浮冰
+packed mud: 泥坯
+pale hanging moss: 苍白垂须
+pale moss block: 苍白苔藓块
+pale moss carpet: 苍白覆地苔藓
+pale oak button: 苍白橡木按钮
+pale oak door: 苍白橡木门
+pale oak fence: 苍白橡木栅栏
+pale oak fence gate: 苍白橡木栅栏门
+pale oak hanging sign: 悬挂式苍白橡木告示牌
+pale oak leaves: 苍白橡树树叶
+pale oak log: 苍白橡木原木
+pale oak planks: 苍白橡木木板
+pale oak pressure plate: 苍白橡木压力板
+pale oak sapling: 苍白橡树树苗
+pale oak shelf: 苍白橡木展示架
+pale oak sign: 苍白橡木告示牌
+pale oak slab: 苍白橡木台阶
+pale oak stairs: 苍白橡木楼梯
+pale oak trapdoor: 苍白橡木活板门
+pale oak wall hanging sign: 墙上的悬挂式苍白橡木告示牌
+pale oak wall sign: 墙上的苍白橡木告示牌
+pale oak wood: 苍白橡木
+pearlescent froglight: 珠光蛙明灯
+peony: 牡丹
+petrified oak slab: 石化橡木台阶
+piglin head: 猪灵的头
+piglin wall head: 墙上的猪灵的头
+pink banner: 粉红色旗帜
+pink bed: 粉红色床
+pink candle: 粉红色蜡烛
+pink carpet: 粉红色地毯
+pink concrete: 粉红色混凝土
+pink concrete powder: 粉红色混凝土粉末
+pink concrete slab: 粉红色混凝土台阶
+pink concrete stairs: 粉红色混凝土楼梯
+pink glazed terracotta: 粉红色带釉陶瓦
+pink petals: 粉红色花簇
+pink shulker box: 粉红色潜影盒
+pink stained glass: 粉红色染色玻璃
+pink stained glass pane: 粉红色染色玻璃板
+pink terracotta: 粉红色陶瓦
+pink tulip: 粉红色郁金香
+pink wall banner: 墙上的粉红色旗帜
+pink wool: 粉红色羊毛
+pink wool slab: 粉红色羊毛台阶
+pink wool stairs: 粉红色羊毛楼梯
+piston: 活塞
+piston head: 活塞头
+pitcher crop: 瓶子草植株
+pitcher plant: 瓶子草
+planks: 木板
+player head: 玩家的头
+player wall head: 墙上的玩家的头
+podzol: 灰化土
+pointed dripstone: 滴水石锥
+polished andesite: 磨制安山岩
+polished andesite slab: 磨制安山岩台阶
+polished andesite stairs: 磨制安山岩楼梯
+polished basalt: 磨制玄武岩
+polished blackstone: 磨制黑石
+polished blackstone brick slab: 磨制黑石砖台阶
+polished blackstone brick stairs: 磨制黑石砖楼梯
+polished blackstone brick wall: 磨制黑石砖墙
+polished blackstone bricks: 磨制黑石砖
+polished blackstone button: 磨制黑石按钮
+polished blackstone pressure plate: 磨制黑石压力板
+polished blackstone slab: 磨制黑石台阶
+polished blackstone stairs: 磨制黑石楼梯
+polished blackstone wall: 磨制黑石墙
+polished cinnabar: 磨制朱砂
+polished cinnabar slab: 磨制朱砂台阶
+polished cinnabar stairs: 磨制朱砂楼梯
+polished cinnabar wall: 磨制朱砂墙
+polished deepslate: 磨制深板岩
+polished deepslate slab: 磨制深板岩台阶
+polished deepslate stairs: 磨制深板岩楼梯
+polished deepslate wall: 磨制深板岩墙
+polished diorite: 磨制闪长岩
+polished diorite slab: 磨制闪长岩台阶
+polished diorite stairs: 磨制闪长岩楼梯
+polished granite: 磨制花岗岩
+polished granite slab: 磨制花岗岩台阶
+polished granite stairs: 磨制花岗岩楼梯
+polished sulfur: 磨制硫黄
+polished sulfur slab: 磨制硫黄台阶
+polished sulfur stairs: 磨制硫黄楼梯
+polished sulfur wall: 磨制硫黄墙
+polished tuff: 磨制凝灰岩
+polished tuff slab: 磨制凝灰岩台阶
+polished tuff stairs: 磨制凝灰岩楼梯
+polished tuff wall: 磨制凝灰岩墙
+poplar button: 杨木按钮
+poplar door: 杨木门
+poplar fence: 杨木栅栏
+poplar fence gate: 杨木栅栏门
+poplar hanging sign: 悬挂式杨木告示牌
+poplar leaves: 杨树树叶
+poplar log: 杨木原木
+poplar planks: 杨木木板
+poplar pressure plate: 杨木压力板
+poplar sapling: 杨树树苗
+poplar shelf: 杨木展示架
+poplar sign: 杨木告示牌
+poplar slab: 杨木台阶
+poplar stairs: 杨木楼梯
+poplar trapdoor: 杨木活板门
+poplar wall hanging sign: 墙上的悬挂式杨木告示牌
+poplar wall sign: 墙上的杨木告示牌
+poplar wood: 杨木
+poppy: 虞美人
+potatoes: 马铃薯
+potent sulfur: 烈性硫黄
+potted acacia sapling: 金合欢树苗盆栽
+potted allium: 绒球葱盆栽
+potted azalea: 杜鹃花丛盆栽
+potted azure bluet: 蓝花美耳草盆栽
+potted bamboo: 竹子盆栽
+potted birch sapling: 白桦树苗盆栽
+potted blue orchid: 兰花盆栽
+potted brown mushroom: 棕色蘑菇盆栽
+potted cactus: 仙人掌盆栽
+potted cherry sapling: 樱花树苗盆栽
+potted closed eyeblossom: 闭合的眼眸花盆栽
+potted cornflower: 矢车菊盆栽
+potted crimson fungus: 绯红菌盆栽
+potted crimson roots: 绯红菌索盆栽
+potted dandelion: 蒲公英盆栽
+potted dark oak sapling: 深色橡树树苗盆栽
+potted dead bush: 枯萎的灌木盆栽
+potted fern: 蕨盆栽
+potted flowering azalea: 盛开的杜鹃花丛盆栽
+potted golden dandelion: 金蒲公英盆栽
+potted jungle sapling: 丛林树苗盆栽
+potted lily of the valley: 铃兰盆栽
+potted mangrove propagule: 红树胎生苗盆栽
+potted oak sapling: 橡树树苗盆栽
+potted open eyeblossom: 张开的眼眸花盆栽
+potted orange tulip: 橙色郁金香盆栽
+potted oxeye daisy: 滨菊盆栽
+potted pale oak sapling: 苍白橡树树苗盆栽
+potted pink tulip: 粉红色郁金香盆栽
+potted poppy: 虞美人盆栽
+potted red mushroom: 红色蘑菇盆栽
+potted red tulip: 红色郁金香盆栽
+potted spruce sapling: 云杉树苗盆栽
+potted torchflower: 火把花盆栽
+potted warped fungus: 诡异菌盆栽
+potted warped roots: 诡异菌索盆栽
+potted white tulip: 白色郁金香盆栽
+potted wither rose: 凋灵玫瑰盆栽
+powder snow: 细雪
+powder snow cauldron: 装有细雪的炼药锅
+powered rail: 动力铁轨
+pressure plate: 压力板
+prismarine: 海晶石
+prismarine brick slab: 海晶石砖台阶
+prismarine brick stairs: 海晶石砖楼梯
+prismarine bricks: 海晶石砖
+prismarine slab: 海晶石台阶
+prismarine stairs: 海晶石楼梯
+prismarine wall: 海晶石墙
+pumpkin: 南瓜
+pumpkin stem: 南瓜茎
+purple banner: 紫色旗帜
+purple bed: 紫色床
+purple candle: 紫色蜡烛
+purple carpet: 紫色地毯
+purple concrete: 紫色混凝土
+purple concrete powder: 紫色混凝土粉末
+purple concrete slab: 紫色混凝土台阶
+purple concrete stairs: 紫色混凝土楼梯
+purple glazed terracotta: 紫色带釉陶瓦
+purple shulker box: 紫色潜影盒
+purple stained glass: 紫色染色玻璃
+purple stained glass pane: 紫色染色玻璃板
+purple terracotta: 紫色陶瓦
+purple wall banner: 墙上的紫色旗帜
+purple wool: 紫色羊毛
+purple wool slab: 紫色羊毛台阶
+purple wool stairs: 紫色羊毛楼梯
+purpur block: 紫珀块
+purpur pillar: 紫珀柱
+purpur slab: 紫珀台阶
+purpur stairs: 紫珀楼梯
+quartz bricks: 石英砖
+quartz pillar: 石英柱
+quartz slab: 石英台阶
+quartz stairs: 石英楼梯
+rail: 铁轨
+red banner: 红色旗帜
+red bed: 红色床
+red candle: 红色蜡烛
+red carpet: 红色地毯
+red concrete: 红色混凝土
+red concrete powder: 红色混凝土粉末
+red concrete slab: 红色混凝土台阶
+red concrete stairs: 红色混凝土楼梯
+red glazed terracotta: 红色带釉陶瓦
+red mushroom: 红色蘑菇
+red mushroom block: 红色蘑菇方块
+red nether brick slab: 红色下界砖台阶
+red nether brick stairs: 红色下界砖楼梯
+red nether brick wall: 红色下界砖墙
+red nether bricks: 红色下界砖块
+red poplar leaves: 红色杨树树叶
+red sand: 红沙
+red sandstone: 红砂岩
+red sandstone slab: 红砂岩台阶
+red sandstone stairs: 红砂岩楼梯
+red sandstone wall: 红砂岩墙
+red shrub: 红灌木
+red shulker box: 红色潜影盒
+red stained glass: 红色染色玻璃
+red stained glass pane: 红色染色玻璃板
+red terracotta: 红色陶瓦
+red tulip: 红色郁金香
+red wall banner: 墙上的红色旗帜
+red wool: 红色羊毛
+red wool slab: 红色羊毛台阶
+red wool stairs: 红色羊毛楼梯
+redstone comparator: 红石比较器
+redstone lamp: 红石灯
+redstone ore: 红石矿石
+redstone repeater: 红石中继器
+redstone torch: 红石火把
+redstone wall torch: 墙上的红石火把
+redstone wire: 红石线
+reinforced deepslate: 强化深板岩
+repeating command block: 循环型命令方块
+resin brick slab: 树脂砖台阶
+resin brick stairs: 树脂砖楼梯
+resin brick wall: 树脂砖墙
+resin bricks: 树脂砖块
+resin clump: 树脂团
+respawn anchor: 重生锚
+rooted dirt: 缠根泥土
+roots: 菌索
+rose bush: 玫瑰丛
+sand: 沙子
+sandstone: 砂岩
+sandstone slab: 砂岩台阶
+sandstone stairs: 砂岩楼梯
+sandstone wall: 砂岩墙
+sapling: 树苗
+scaffolding: 脚手架
+sculk: 幽匿块
+sculk catalyst: 幽匿催发体
+sculk sensor: 幽匿感测体
+sculk shrieker: 幽匿尖啸体
+sculk vein: 幽匿脉络
+sea lantern: 海晶灯
+sea pickle: 海泡菜
+seagrass: 海草
+shelf mushroom: 层孔菇
+short dry grass: 矮枯草丛
+short grass: 矮草丛
+shroomlight: 菌光体
+shulker box: 潜影盒
+sign: 告示牌
+skeleton skull: 骷髅头颅
+skeleton wall skull: 墙上的骷髅头颅
+slab: 台阶
+slime block: 黏液块
+small amethyst bud: 小型紫晶芽
+small dripleaf: 小型垂滴叶
+smithing table: 锻造台
+smoker: 烟熏炉
+smooth basalt: 平滑玄武岩
+smooth quartz block: 平滑石英块
+smooth quartz slab: 平滑石英台阶
+smooth quartz stairs: 平滑石英楼梯
+smooth red sandstone: 平滑红砂岩
+smooth red sandstone slab: 平滑红砂岩台阶
+smooth red sandstone stairs: 平滑红砂岩楼梯
+smooth sandstone: 平滑砂岩
+smooth sandstone slab: 平滑砂岩台阶
+smooth sandstone stairs: 平滑砂岩楼梯
+smooth stone: 平滑石头
+smooth stone slab: 平滑石头台阶
+sniffer egg: 嗅探兽蛋
+snow: 雪
+snow block: 雪块
+soul campfire: 灵魂营火
+soul fire: 灵魂火
+soul lantern: 灵魂灯笼
+soul sand: 灵魂沙
+soul soil: 灵魂土
+soul torch: 灵魂火把
+soul wall torch: 墙上的灵魂火把
+sponge: 海绵
+spore blossom: 孢子花
+spruce button: 云杉木按钮
+spruce door: 云杉木门
+spruce fence: 云杉木栅栏
+spruce fence gate: 云杉木栅栏门
+spruce hanging sign: 悬挂式云杉木告示牌
+spruce leaves: 云杉树叶
+spruce log: 云杉原木
+spruce planks: 云杉木板
+spruce pressure plate: 云杉木压力板
+spruce sapling: 云杉树苗
+spruce shelf: 云杉木展示架
+spruce sign: 云杉木告示牌
+spruce slab: 云杉木台阶
+spruce stairs: 云杉木楼梯
+spruce trapdoor: 云杉木活板门
+spruce wall hanging sign: 墙上的悬挂式云杉木告示牌
+spruce wall sign: 墙上的云杉木告示牌
+spruce wood: 云杉木
+stained glass: 染色玻璃
+stained glass pane: 染色玻璃板
+stairs: 楼梯
+stem: 菌柄
+sticky piston: 黏性活塞
+stone: 石头
+stone brick slab: 石砖台阶
+stone brick stairs: 石砖楼梯
+stone brick wall: 石砖墙
+stone bricks: 石砖
+stone button: 石头按钮
+stone pressure plate: 石头压力板
+stone slab: 石头台阶
+stone stairs: 石头楼梯
+stonecutter: 切石机
+straw bed: Straw Bed
+stripped acacia log: 去皮金合欢原木
+stripped acacia wood: 去皮金合欢木
+stripped birch log: 去皮白桦原木
+stripped birch wood: 去皮白桦木
+stripped cherry log: 去皮樱花原木
+stripped cherry wood: 去皮樱花木
+stripped crimson hyphae: 去皮绯红菌核
+stripped crimson stem: 去皮绯红菌柄
+stripped dark oak log: 去皮深色橡木原木
+stripped dark oak wood: 去皮深色橡木
+stripped hyphae: 去皮菌核
+stripped jungle log: 去皮丛林原木
+stripped jungle wood: 去皮丛林木
+stripped log: 去皮原木
+stripped mangrove log: 去皮红树原木
+stripped mangrove wood: 去皮红树木
+stripped oak log: 去皮橡木原木
+stripped oak wood: 去皮橡木
+stripped pale oak log: 去皮苍白橡木原木
+stripped pale oak wood: 去皮苍白橡木
+stripped poplar log: 去皮杨木原木
+stripped poplar wood: 去皮杨木
+stripped spruce log: 去皮云杉原木
+stripped spruce wood: 去皮云杉木
+stripped stem: 去皮菌柄
+stripped warped hyphae: 去皮诡异菌核
+stripped warped stem: 去皮诡异菌柄
+stripped wood: 去皮木头
+structure block: 结构方块
+structure void: 结构空位
+sugar cane: 甘蔗
+sulfur: 硫黄
+sulfur brick slab: 硫黄砖台阶
+sulfur brick stairs: 硫黄砖楼梯
+sulfur brick wall: 硫黄砖墙
+sulfur bricks: 硫黄砖
+sulfur slab: 硫黄台阶
+sulfur spike: 硫黄尖锥
+sulfur stairs: 硫黄楼梯
+sulfur wall: 硫黄墙
+sunflower: 向日葵
+suspicious gravel: 可疑的沙砾
+suspicious sand: 可疑的沙子
+sweet berry bush: 甜浆果丛
+tall dry grass: 高枯草丛
+tall grass: 高草丛
+tall seagrass: 高海草
+target: 标靶
+terracotta: 陶瓦
+test block: 测试方块
+test instance block: 测试实例方块
+tinted glass: 遮光玻璃
+tnt: TNT
+torch: 火把
+torchflower: 火把花
+torchflower crop: 火把花植株
+trapdoor: 活板门
+trapped chest: 陷阱箱
+trial spawner: 试炼刷怪笼
+tripwire: 绊线
+tripwire hook: 绊线钩
+tube coral: 管珊瑚
+tube coral block: 管珊瑚块
+tube coral fan: 管珊瑚扇
+tube coral wall fan: 墙上的管珊瑚扇
+tuff: 凝灰岩
+tuff brick slab: 凝灰岩砖台阶
+tuff brick stairs: 凝灰岩砖楼梯
+tuff brick wall: 凝灰岩砖墙
+tuff bricks: 凝灰岩砖
+tuff slab: 凝灰岩台阶
+tuff stairs: 凝灰岩楼梯
+tuff wall: 凝灰岩墙
+turtle egg: 海龟蛋
+twisting vines: 缠怨藤
+twisting vines plant: 缠怨藤植株
+vault: 宝库
+verdant froglight: 青翠蛙明灯
+vines: 藤蔓
+void air: 虚空空气
+wall: 墙
+wall banner: 墙上的旗帜
+wall hanging sign: 墙上的悬挂式告示牌
+wall sign: 墙上的告示牌
+wall torch: 墙上的火把
+warped button: 诡异木按钮
+warped door: 诡异木门
+warped fence: 诡异木栅栏
+warped fence gate: 诡异木栅栏门
+warped fungus: 诡异菌
+warped hanging sign: 悬挂式诡异木告示牌
+warped hyphae: 诡异菌核
+warped nylium: 诡异菌岩
+warped planks: 诡异木板
+warped pressure plate: 诡异木压力板
+warped roots: 诡异菌索
+warped shelf: 诡异木展示架
+warped sign: 诡异木告示牌
+warped slab: 诡异木台阶
+warped stairs: 诡异木楼梯
+warped stem: 诡异菌柄
+warped trapdoor: 诡异木活板门
+warped wall hanging sign: 墙上的悬挂式诡异木告示牌
+warped wall sign: 墙上的诡异木告示牌
+warped wart block: 诡异疣块
+water: 水
+water cauldron: 装有水的炼药锅
+waxed block of copper: 涂蜡的铜块
+waxed chiseled copper: 涂蜡的雕纹铜块
+waxed copper bars: 涂蜡的铜栏杆
+waxed copper bulb: 涂蜡的铜灯
+waxed copper chain: 涂蜡的铜链
+waxed copper chest: 涂蜡的铜箱子
+waxed copper door: 涂蜡的铜门
+waxed copper golem statue: 涂蜡的铜傀儡像
+waxed copper grate: 涂蜡的铜格栅
+waxed copper lantern: 涂蜡的铜灯笼
+waxed copper trapdoor: 涂蜡的铜活板门
+waxed cut copper: 涂蜡的切制铜块
+waxed cut copper slab: 涂蜡的切制铜台阶
+waxed cut copper stairs: 涂蜡的切制铜楼梯
+waxed exposed chiseled copper: 涂蜡的斑驳雕纹铜块
+waxed exposed copper: 涂蜡的斑驳铜块
+waxed exposed copper bars: 涂蜡的斑驳铜栏杆
+waxed exposed copper bulb: 涂蜡的斑驳铜灯
+waxed exposed copper chain: 涂蜡的斑驳铜链
+waxed exposed copper chest: 涂蜡的斑驳铜箱子
+waxed exposed copper door: 涂蜡的斑驳铜门
+waxed exposed copper golem statue: 涂蜡的斑驳铜傀儡像
+waxed exposed copper grate: 涂蜡的斑驳铜格栅
+waxed exposed copper lantern: 涂蜡的斑驳铜灯笼
+waxed exposed copper trapdoor: 涂蜡的斑驳铜活板门
+waxed exposed cut copper: 涂蜡的斑驳切制铜块
+waxed exposed cut copper slab: 涂蜡的斑驳切制铜台阶
+waxed exposed cut copper stairs: 涂蜡的斑驳切制铜楼梯
+waxed exposed lightning rod: 涂蜡的斑驳避雷针
+waxed lightning rod: 涂蜡的避雷针
+waxed oxidized chiseled copper: 涂蜡的氧化雕纹铜块
+waxed oxidized copper: 涂蜡的氧化铜块
+waxed oxidized copper bars: 涂蜡的氧化铜栏杆
+waxed oxidized copper bulb: 涂蜡的氧化铜灯
+waxed oxidized copper chain: 涂蜡的氧化铜链
+waxed oxidized copper chest: 涂蜡的氧化铜箱子
+waxed oxidized copper door: 涂蜡的氧化铜门
+waxed oxidized copper golem statue: 涂蜡的氧化铜傀儡像
+waxed oxidized copper grate: 涂蜡的氧化铜格栅
+waxed oxidized copper lantern: 涂蜡的氧化铜灯笼
+waxed oxidized copper trapdoor: 涂蜡的氧化铜活板门
+waxed oxidized cut copper: 涂蜡的氧化切制铜块
+waxed oxidized cut copper slab: 涂蜡的氧化切制铜台阶
+waxed oxidized cut copper stairs: 涂蜡的氧化切制铜楼梯
+waxed oxidized lightning rod: 涂蜡的氧化避雷针
+waxed weathered chiseled copper: 涂蜡的锈蚀雕纹铜块
+waxed weathered copper: 涂蜡的锈蚀铜块
+waxed weathered copper bars: 涂蜡的锈蚀铜栏杆
+waxed weathered copper bulb: 涂蜡的锈蚀铜灯
+waxed weathered copper chain: 涂蜡的锈蚀铜链
+waxed weathered copper chest: 涂蜡的锈蚀铜箱子
+waxed weathered copper door: 涂蜡的锈蚀铜门
+waxed weathered copper golem statue: 涂蜡的锈蚀铜傀儡像
+waxed weathered copper grate: 涂蜡的锈蚀铜格栅
+waxed weathered copper lantern: 涂蜡的锈蚀铜灯笼
+waxed weathered copper trapdoor: 涂蜡的锈蚀铜活板门
+waxed weathered cut copper: 涂蜡的锈蚀切制铜块
+waxed weathered cut copper slab: 涂蜡的锈蚀切制铜台阶
+waxed weathered cut copper stairs: 涂蜡的锈蚀切制铜楼梯
+waxed weathered lightning rod: 涂蜡的锈蚀避雷针
+weathered chiseled copper: 锈蚀的雕纹铜块
+weathered copper: 锈蚀的铜块
+weathered copper bars: 锈蚀的铜栏杆
+weathered copper bulb: 锈蚀的铜灯
+weathered copper chain: 锈蚀的铜链
+weathered copper chest: 锈蚀的铜箱子
+weathered copper door: 锈蚀的铜门
+weathered copper golem statue: 锈蚀的铜傀儡像
+weathered copper grate: 锈蚀的铜格栅
+weathered copper lantern: 锈蚀的铜灯笼
+weathered copper trapdoor: 锈蚀的铜活板门
+weathered cut copper: 锈蚀的切制铜块
+weathered cut copper slab: 锈蚀的切制铜台阶
+weathered cut copper stairs: 锈蚀的切制铜楼梯
+weathered lightning rod: 锈蚀的避雷针
+weeping vines: 垂泪藤
+weeping vines plant: 垂泪藤植株
+weighted pressure plate: 测重压力板
+wet sponge: 湿海绵
+wheat crops: 小麦植株
+white banner: 白色旗帜
+white bed: 白色床
+white candle: 白色蜡烛
+white carpet: 白色地毯
+white concrete: 白色混凝土
+white concrete powder: 白色混凝土粉末
+white concrete slab: 白色混凝土台阶
+white concrete stairs: 白色混凝土楼梯
+white glazed terracotta: 白色带釉陶瓦
+white shulker box: 白色潜影盒
+white stained glass: 白色染色玻璃
+white stained glass pane: 白色染色玻璃板
+white terracotta: 白色陶瓦
+white tulip: 白色郁金香
+white wall banner: 墙上的白色旗帜
+white wool: 白色羊毛
+white wool slab: 白色羊毛台阶
+white wool stairs: 白色羊毛楼梯
+wildflowers: 野花簇
+wither rose: 凋灵玫瑰
+wither skeleton skull: 凋灵骷髅头颅
+wither skeleton wall skull: 墙上的凋灵骷髅头颅
+wood: 木头
+wool: 羊毛
+wool slab: 羊毛台阶
+wool stairs: 羊毛楼梯
+yellow banner: 黄色旗帜
+yellow bed: 黄色床
+yellow candle: 黄色蜡烛
+yellow carpet: 黄色地毯
+yellow concrete: 黄色混凝土
+yellow concrete powder: 黄色混凝土粉末
+yellow concrete slab: 黄色混凝土台阶
+yellow concrete stairs: 黄色混凝土楼梯
+yellow glazed terracotta: 黄色带釉陶瓦
+yellow poplar leaves: 黄色杨树树叶
+yellow shulker box: 黄色潜影盒
+yellow stained glass: 黄色染色玻璃
+yellow stained glass pane: 黄色染色玻璃板
+yellow terracotta: 黄色陶瓦
+yellow wall banner: 墙上的黄色旗帜
+yellow wool: 黄色羊毛
+yellow wool slab: 黄色羊毛台阶
+yellow wool stairs: 黄色羊毛楼梯
+zombie head: 僵尸的头
+zombie wall head: 墙上的僵尸的头
+
+【物品】
+acacia boat: 金合欢木船
+acacia boat with chest: 金合欢木运输船
+allay spawn egg: 悦灵刷怪蛋
+amethyst shard: 紫水晶碎片
+angler pottery sherd: 垂钓纹样陶片
+apple: 苹果
+archer pottery sherd: 弓箭纹样陶片
+armadillo scute: 犰狳鳞甲
+armadillo spawn egg: 犰狳刷怪蛋
+armor stand: 盔甲架
+arms up pottery sherd: 举臂纹样陶片
+arrow: 箭
+arrow of decay: 衰变之箭
+arrow of fire resistance: 抗火之箭
+arrow of harming: 伤害之箭
+arrow of healing: 治疗之箭
+arrow of infestation: 虫蚀之箭
+arrow of invisibility: 隐身之箭
+arrow of leaping: 跳跃之箭
+arrow of luck: 幸运之箭
+arrow of night vision: 夜视之箭
+arrow of oozing: 渗浆之箭
+arrow of poison: 剧毒之箭
+arrow of regeneration: 再生之箭
+arrow of slow falling: 缓降之箭
+arrow of slowness: 迟缓之箭
+arrow of splashing: 喷溅之箭
+arrow of strength: 力量之箭
+arrow of swiftness: 迅捷之箭
+arrow of the turtle master: 神龟之箭
+arrow of water breathing: 水肺之箭
+arrow of weakness: 虚弱之箭
+arrow of weaving: 盘丝之箭
+arrow of wind charging: 蓄风之箭
+awkward lingering potion: 滞留型粗制的药水
+awkward potion: 粗制的药水
+awkward splash potion: 喷溅型粗制的药水
+axe: 斧
+axolotl spawn egg: 美西螈刷怪蛋
+baked potato: 烤马铃薯
+bamboo raft: 竹筏
+bamboo raft with chest: 运输竹筏
+banner pattern: 旗帜图案
+bat spawn egg: 蝙蝠刷怪蛋
+bee spawn egg: 蜜蜂刷怪蛋
+beetroot: 甜菜根
+beetroot seeds: 甜菜种子
+beetroot soup: 甜菜汤
+birch boat: 白桦木船
+birch boat with chest: 白桦木运输船
+black bundle: 黑色收纳袋
+black cushion: 黑色坐垫
+black dye: 黑色染料
+black harness: 黑色挽具
+blade pottery sherd: 利刃纹样陶片
+blaze powder: 烈焰粉
+blaze rod: 烈焰棒
+blaze spawn egg: 烈焰人刷怪蛋
+blue bundle: 蓝色收纳袋
+blue cushion: 蓝色坐垫
+blue dye: 蓝色染料
+blue egg: 蓝色鸡蛋
+blue harness: 蓝色挽具
+bogged spawn egg: 沼骸刷怪蛋
+bolt armor trim: 镶铆盔甲纹饰
+bone: 骨头
+bone meal: 骨粉
+book: 书
+book and quill: 书与笔
+boots: 靴子
+bordure indented banner pattern: 波纹边旗帜图案
+bottle o' enchanting: 附魔之瓶
+bow: 弓
+bowl: 碗
+bread: 面包
+breeze rod: 旋风棒
+breeze spawn egg: 旋风人刷怪蛋
+brewer pottery sherd: 佳酿纹样陶片
+brewing stand: 酿造台
+brick: 红砖
+brown bundle: 棕色收纳袋
+brown cushion: 棕色坐垫
+brown dye: 棕色染料
+brown egg: 棕色鸡蛋
+brown harness: 棕色挽具
+brush: 刷子
+bucket: 铁桶
+bucket of axolotl: 美西螈桶
+bucket of cod: 鳕鱼桶
+bucket of pufferfish: 河豚桶
+bucket of salmon: 鲑鱼桶
+bucket of sulfur cube: 硫方怪桶
+bucket of tadpole: 蝌蚪桶
+bucket of tropical fish: 热带鱼桶
+bundle: 收纳袋
+buried treasure map: 藏宝图
+burn pottery sherd: 烈焰纹样陶片
+camel husk spawn egg: 骆驼尸壳刷怪蛋
+camel spawn egg: 骆驼刷怪蛋
+carrot: 胡萝卜
+carrot on a stick: 胡萝卜钓竿
+cat spawn egg: 猫刷怪蛋
+cauldron: 炼药锅
+cave spider spawn egg: 洞穴蜘蛛刷怪蛋
+chainmail boots: 锁链靴子
+chainmail chestplate: 锁链胸甲
+chainmail helmet: 锁链头盔
+chainmail leggings: 锁链护腿
+charcoal: 木炭
+cherry boat: 樱花木船
+cherry boat with chest: 樱花木运输船
+chestplate: 胸甲
+chicken spawn egg: 鸡刷怪蛋
+chorus fruit: 紫颂果
+clay ball: 黏土球
+clock: 时钟
+coal: 煤炭
+coast armor trim: 海岸盔甲纹饰
+cocoa beans: 可可豆
+cod spawn egg: 鳕鱼刷怪蛋
+compass: 指南针
+cooked chicken: 熟鸡肉
+cooked cod: 熟鳕鱼
+cooked mutton: 熟羊肉
+cooked porkchop: 熟猪排
+cooked rabbit: 熟兔肉
+cooked salmon: 熟鲑鱼
+cookie: 曲奇
+copper axe: 铜斧
+copper boots: 铜靴子
+copper chestplate: 铜胸甲
+copper golem spawn egg: 铜傀儡刷怪蛋
+copper helmet: 铜头盔
+copper hoe: 铜锄
+copper horse armor: 铜马铠
+copper ingot: 铜锭
+copper leggings: 铜护腿
+copper nautilus armor: 铜鹦鹉螺铠
+copper nugget: 铜粒
+copper pickaxe: 铜镐
+copper shovel: 铜锹
+copper spear: 铜矛
+copper sword: 铜剑
+cow spawn egg: 牛刷怪蛋
+creaking spawn egg: 嘎枝刷怪蛋
+creeper charge banner pattern: 苦力怕盾徽旗帜图案
+creeper spawn egg: 苦力怕刷怪蛋
+crossbow: 弩
+cyan bundle: 青色收纳袋
+cyan cushion: 青色坐垫
+cyan dye: 青色染料
+cyan harness: 青色挽具
+danger pottery sherd: 危机纹样陶片
+dark oak boat: 深色橡木船
+dark oak boat with chest: 深色橡木运输船
+debug stick: 调试棒
+desert village map: 沙漠村庄地图
+diamond: 钻石
+diamond axe: 钻石斧
+diamond boots: 钻石靴子
+diamond chestplate: 钻石胸甲
+diamond helmet: 钻石头盔
+diamond hoe: 钻石锄
+diamond horse armor: 钻石马铠
+diamond leggings: 钻石护腿
+diamond nautilus armor: 钻石鹦鹉螺铠
+diamond pickaxe: 钻石镐
+diamond shovel: 钻石锹
+diamond spear: 钻石矛
+diamond sword: 钻石剑
+disc fragment: 唱片残片
+dolphin spawn egg: 海豚刷怪蛋
+donkey spawn egg: 驴刷怪蛋
+dragon's breath: 龙息
+dried kelp: 干海带
+drowned spawn egg: 溺尸刷怪蛋
+dune armor trim: 沙丘盔甲纹饰
+dye: 染料
+echo shard: 回响碎片
+egg: 鸡蛋
+elder guardian spawn egg: 远古守卫者刷怪蛋
+elytra: 鞘翅
+emerald: 绿宝石
+empty map: 空地图
+enchanted book: 附魔书
+enchanted golden apple: 附魔金苹果
+end crystal: 末地水晶
+ender dragon spawn egg: 末影龙刷怪蛋
+ender pearl: 末影珍珠
+enderman spawn egg: 末影人刷怪蛋
+endermite spawn egg: 末影螨刷怪蛋
+evoker spawn egg: 唤魔者刷怪蛋
+explorer pottery sherd: 探险纹样陶片
+eye armor trim: 眼眸盔甲纹饰
+eye of ender: 末影之眼
+feather: 羽毛
+fermented spider eye: 发酵蛛眼
+field masoned banner pattern: 砖纹旗帜图案
+fire charge: 火焰弹
+firework rocket: 烟花火箭
+firework star: 烟火之星
+fishing rod: 钓鱼竿
+flint: 燧石
+flint and steel: 打火石
+flow armor trim: 涡流盔甲纹饰
+flow banner pattern: 涡流旗帜图案
+flow pottery sherd: 涡流纹样陶片
+flower charge banner pattern: 花朵盾徽旗帜图案
+flower pot: 花盆
+fox spawn egg: 狐狸刷怪蛋
+friend pottery sherd: 挚友纹样陶片
+frog spawn egg: 青蛙刷怪蛋
+ghast spawn egg: 恶魂刷怪蛋
+ghast tear: 恶魂之泪
+glass bottle: 玻璃瓶
+glistering melon slice: 闪烁的西瓜片
+globe banner pattern: 地球旗帜图案
+glow berries: 发光浆果
+glow ink sac: 荧光墨囊
+glow item frame: 荧光物品展示框
+glow squid spawn egg: 发光鱿鱼刷怪蛋
+glowstone dust: 荧石粉
+goat horn: 山羊角
+goat spawn egg: 山羊刷怪蛋
+gold ingot: 金锭
+gold nugget: 金粒
+golden apple: 金苹果
+golden axe: 金斧
+golden boots: 金靴子
+golden carrot: 金胡萝卜
+golden chestplate: 金胸甲
+golden helmet: 金头盔
+golden hoe: 金锄
+golden horse armor: 金马铠
+golden leggings: 金护腿
+golden nautilus armor: 金鹦鹉螺铠
+golden pickaxe: 金镐
+golden shovel: 金锹
+golden spear: 金矛
+golden sword: 金剑
+gray bundle: 灰色收纳袋
+gray cushion: 灰色坐垫
+gray dye: 灰色染料
+gray harness: 灰色挽具
+green bundle: 绿色收纳袋
+green cushion: 绿色坐垫
+green dye: 绿色染料
+green harness: 绿色挽具
+guardian spawn egg: 守卫者刷怪蛋
+gunpowder: 火药
+guster banner pattern: 旋风旗帜图案
+guster pottery sherd: 旋风纹样陶片
+happy ghast spawn egg: 快乐恶魂刷怪蛋
+heart of the sea: 海洋之心
+heart pottery sherd: 爱心纹样陶片
+heartbreak pottery sherd: 心碎纹样陶片
+helmet: 头盔
+hoe: 锄
+hoglin spawn egg: 疣猪兽刷怪蛋
+honey bottle: 蜂蜜瓶
+honeycomb: 蜜脾
+horse armor: 马铠
+horse spawn egg: 马刷怪蛋
+host armor trim: 雇主盔甲纹饰
+howl pottery sherd: 狼嚎纹样陶片
+husk spawn egg: 尸壳刷怪蛋
+ink sac: 墨囊
+iron axe: 铁斧
+iron boots: 铁靴子
+iron chestplate: 铁胸甲
+iron golem spawn egg: 铁傀儡刷怪蛋
+iron helmet: 铁头盔
+iron hoe: 铁锄
+iron horse armor: 铁马铠
+iron ingot: 铁锭
+iron leggings: 铁护腿
+iron nautilus armor: 铁鹦鹉螺铠
+iron nugget: 铁粒
+iron pickaxe: 铁镐
+iron shovel: 铁锹
+iron spear: 铁矛
+iron sword: 铁剑
+item frame: 物品展示框
+jungle boat: 丛林木船
+jungle boat with chest: 丛林木运输船
+jungle explorer map: 丛林探险家地图
+knowledge book: 知识之书
+lapis lazuli: 青金石
+lava bucket: 熔岩桶
+lead: 拴绳
+leather: 皮革
+leather boots: 皮革靴子
+leather cap: 皮革帽子
+leather horse armor: 皮革马铠
+leather pants: 皮革裤子
+leather tunic: 皮革外套
+leggings: 护腿
+light blue bundle: 淡蓝色收纳袋
+light blue cushion: 淡蓝色坐垫
+light blue dye: 淡蓝色染料
+light blue harness: 淡蓝色挽具
+light gray bundle: 淡灰色收纳袋
+light gray cushion: 淡灰色坐垫
+light gray dye: 淡灰色染料
+light gray harness: 淡灰色挽具
+lime bundle: 黄绿色收纳袋
+lime cushion: 黄绿色坐垫
+lime dye: 黄绿色染料
+lime harness: 黄绿色挽具
+lingering potion: 滞留药水
+lingering potion of fire resistance: 滞留型抗火药水
+lingering potion of harming: 滞留型伤害药水
+lingering potion of healing: 滞留型治疗药水
+lingering potion of infestation: 滞留型虫蚀药水
+lingering potion of invisibility: 滞留型隐身药水
+lingering potion of leaping: 滞留型跳跃药水
+lingering potion of luck: 滞留型幸运药水
+lingering potion of night vision: 滞留型夜视药水
+lingering potion of oozing: 滞留型渗浆药水
+lingering potion of poison: 滞留型剧毒药水
+lingering potion of regeneration: 滞留型再生药水
+lingering potion of slow falling: 滞留型缓降药水
+lingering potion of slowness: 滞留型迟缓药水
+lingering potion of strength: 滞留型力量药水
+lingering potion of swiftness: 滞留型迅捷药水
+lingering potion of the turtle master: 滞留型神龟药水
+lingering potion of water breathing: 滞留型水肺药水
+lingering potion of weakness: 滞留型虚弱药水
+lingering potion of weaving: 滞留型盘丝药水
+lingering potion of wind charging: 滞留型蓄风药水
+lingering uncraftable potion: 不可合成的滞留型药水
+lingering water bottle: 滞留型水瓶
+llama spawn egg: 羊驼刷怪蛋
+lodestone compass: 磁石指针
+mace: 重锤
+magenta bundle: 品红色收纳袋
+magenta cushion: 品红色坐垫
+magenta dye: 品红色染料
+magenta harness: 品红色挽具
+magma cream: 岩浆膏
+magma cube spawn egg: 岩浆怪刷怪蛋
+mangrove boat: 红树木船
+mangrove boat with chest: 红树木运输船
+map: 地图
+melon seeds: 西瓜种子
+melon slice: 西瓜片
+milk bucket: 奶桶
+minecart: 矿车
+minecart with chest: 运输矿车
+minecart with command block: 命令方块矿车
+minecart with furnace: 动力矿车
+minecart with hopper: 漏斗矿车
+minecart with tnt: TNT矿车
+miner pottery sherd: 采矿纹样陶片
+mooshroom spawn egg: 哞菇刷怪蛋
+mourner pottery sherd: 悲恸纹样陶片
+mule spawn egg: 骡刷怪蛋
+mundane lingering potion: 滞留型平凡的药水
+mundane potion: 平凡的药水
+mundane splash potion: 喷溅型平凡的药水
+mushroom stew: 蘑菇煲
+music disc: 音乐唱片
+name tag: 命名牌
+nautilus armor: 鹦鹉螺铠
+nautilus shell: 鹦鹉螺壳
+nautilus spawn egg: 鹦鹉螺刷怪蛋
+nether brick: 下界砖
+nether quartz: 下界石英
+nether star: 下界之星
+nether wart: 下界疣
+netherite axe: 下界合金斧
+netherite boots: 下界合金靴子
+netherite chestplate: 下界合金胸甲
+netherite helmet: 下界合金头盔
+netherite hoe: 下界合金锄
+netherite horse armor: 下界合金马铠
+netherite ingot: 下界合金锭
+netherite leggings: 下界合金护腿
+netherite nautilus armor: 下界合金鹦鹉螺铠
+netherite pickaxe: 下界合金镐
+netherite scrap: 下界合金碎片
+netherite shovel: 下界合金锹
+netherite spear: 下界合金矛
+netherite sword: 下界合金剑
+netherite upgrade: 下界合金升级
+oak boat: 橡木船
+oak boat with chest: 橡木运输船
+ocean explorer map: 海洋探险家地图
+ocelot spawn egg: 豹猫刷怪蛋
+ominous bottle: 不祥之瓶
+ominous trial key: 不祥试炼钥匙
+orange bundle: 橙色收纳袋
+orange cushion: 橙色坐垫
+orange dye: 橙色染料
+orange harness: 橙色挽具
+painting: 画
+pale oak boat: 苍白橡木船
+pale oak boat with chest: 苍白橡木运输船
+panda spawn egg: 熊猫刷怪蛋
+paper: 纸
+parched spawn egg: 焦骸刷怪蛋
+parrot spawn egg: 鹦鹉刷怪蛋
+phantom membrane: 幻翼膜
+phantom spawn egg: 幻翼刷怪蛋
+pickaxe: 镐
+pig spawn egg: 猪刷怪蛋
+piglin brute spawn egg: 猪灵蛮兵刷怪蛋
+piglin spawn egg: 猪灵刷怪蛋
+pillager spawn egg: 掠夺者刷怪蛋
+pink bundle: 粉红色收纳袋
+pink cushion: 粉红色坐垫
+pink dye: 粉红色染料
+pink harness: 粉红色挽具
+pitcher pod: 瓶子草荚果
+plains village map: 平原村庄地图
+plenty pottery sherd: 富饶纹样陶片
+poisonous potato: 毒马铃薯
+polar bear spawn egg: 北极熊刷怪蛋
+poplar boat: 杨木船
+poplar boat with chest: 杨木运输船
+popped chorus fruit: 爆裂紫颂果
+potato: 马铃薯
+potion: 药水
+potion of fire resistance: 抗火药水
+potion of harming: 伤害药水
+potion of healing: 治疗药水
+potion of infestation: 虫蚀药水
+potion of invisibility: 隐身药水
+potion of leaping: 跳跃药水
+potion of luck: 幸运药水
+potion of night vision: 夜视药水
+potion of oozing: 渗浆药水
+potion of poison: 剧毒药水
+potion of regeneration: 再生药水
+potion of slow falling: 缓降药水
+potion of slowness: 迟缓药水
+potion of strength: 力量药水
+potion of swiftness: 迅捷药水
+potion of the turtle master: 神龟药水
+potion of water breathing: 水肺药水
+potion of weakness: 虚弱药水
+potion of weaving: 盘丝药水
+potion of wind charging: 蓄风药水
+pottery sherd: 陶片
+powder snow bucket: 细雪桶
+prismarine crystals: 海晶砂粒
+prismarine shard: 海晶碎片
+prize pottery sherd: 珍宝纹样陶片
+pufferfish: 河豚
+pufferfish spawn egg: 河豚刷怪蛋
+pumpkin pie: 南瓜派
+pumpkin seeds: 南瓜种子
+purple bundle: 紫色收纳袋
+purple cushion: 紫色坐垫
+purple dye: 紫色染料
+purple harness: 紫色挽具
+rabbit hide: 兔子皮
+rabbit spawn egg: 兔子刷怪蛋
+rabbit stew: 兔肉煲
+rabbit's foot: 兔子脚
+raiser armor trim: 牧民盔甲纹饰
+ravager spawn egg: 劫掠兽刷怪蛋
+raw beef: 生牛肉
+raw chicken: 生鸡肉
+raw cod: 生鳕鱼
+raw copper: 粗铜
+raw gold: 粗金
+raw iron: 粗铁
+raw mutton: 生羊肉
+raw porkchop: 生猪排
+raw rabbit: 生兔肉
+raw salmon: 生鲑鱼
+recovery compass: 追溯指针
+red bundle: 红色收纳袋
+red cushion: 红色坐垫
+red dye: 红色染料
+red harness: 红色挽具
+redstone dust: 红石粉
+resin brick: 树脂砖
+rib armor trim: 肋骨盔甲纹饰
+rotten flesh: 腐肉
+saddle: 鞍
+salmon spawn egg: 鲑鱼刷怪蛋
+savanna village map: 热带草原村庄地图
+scrape pottery sherd: 刮削纹样陶片
+sentry armor trim: 哨兵盔甲纹饰
+shaper armor trim: 塑造盔甲纹饰
+sheaf pottery sherd: 麦捆纹样陶片
+shears: 剪刀
+sheep spawn egg: 绵羊刷怪蛋
+shelter pottery sherd: 树荫纹样陶片
+shield: 盾牌
+shovel: 锹
+shulker shell: 潜影壳
+shulker spawn egg: 潜影贝刷怪蛋
+silence armor trim: 幽静盔甲纹饰
+silverfish spawn egg: 蠹虫刷怪蛋
+skeleton horse spawn egg: 骷髅马刷怪蛋
+skeleton spawn egg: 骷髅刷怪蛋
+skull charge banner pattern: 头颅盾徽旗帜图案
+skull pottery sherd: 头颅纹样陶片
+slime spawn egg: 史莱姆刷怪蛋
+slimeball: 黏液球
+smithing template: 锻造模板
+sniffer spawn egg: 嗅探兽刷怪蛋
+snort pottery sherd: 嗅探纹样陶片
+snout armor trim: 猪鼻盔甲纹饰
+snout banner pattern: 猪鼻旗帜图案
+snow golem spawn egg: 雪傀儡刷怪蛋
+snowball: 雪球
+snowy village map: 雪原村庄地图
+spawn egg: 刷怪蛋
+spear: 矛
+spectral arrow: 光灵箭
+spider eye: 蜘蛛眼
+spider spawn egg: 蜘蛛刷怪蛋
+spire armor trim: 尖塔盔甲纹饰
+splash potion: 喷溅药水
+splash potion of fire resistance: 喷溅型抗火药水
+splash potion of harming: 喷溅型伤害药水
+splash potion of healing: 喷溅型治疗药水
+splash potion of infestation: 喷溅型虫蚀药水
+splash potion of invisibility: 喷溅型隐身药水
+splash potion of leaping: 喷溅型跳跃药水
+splash potion of luck: 喷溅型幸运药水
+splash potion of night vision: 喷溅型夜视药水
+splash potion of oozing: 喷溅型渗浆药水
+splash potion of poison: 喷溅型剧毒药水
+splash potion of regeneration: 喷溅型再生药水
+splash potion of slow falling: 喷溅型缓降药水
+splash potion of slowness: 喷溅型迟缓药水
+splash potion of strength: 喷溅型力量药水
+splash potion of swiftness: 喷溅型迅捷药水
+splash potion of the turtle master: 喷溅型神龟药水
+splash potion of water breathing: 喷溅型水肺药水
+splash potion of weakness: 喷溅型虚弱药水
+splash potion of weaving: 喷溅型盘丝药水
+splash potion of wind charging: 喷溅型蓄风药水
+splash uncraftable potion: 不可合成的喷溅型药水
+splash water bottle: 喷溅型水瓶
+spruce boat: 云杉木船
+spruce boat with chest: 云杉木运输船
+spyglass: 望远镜
+squid spawn egg: 鱿鱼刷怪蛋
+steak: 牛排
+stick: 木棍
+stone axe: 石斧
+stone hoe: 石锄
+stone pickaxe: 石镐
+stone shovel: 石锹
+stone spear: 石矛
+stone sword: 石剑
+stray spawn egg: 流浪者刷怪蛋
+strider spawn egg: 炽足兽刷怪蛋
+string: 线
+sugar: 糖
+sulfur cube spawn egg: 硫方怪刷怪蛋
+suspicious stew: 谜之炖菜
+swamp explorer map: 沼泽探险家地图
+sweet berries: 甜浆果
+sword: 剑
+tadpole spawn egg: 蝌蚪刷怪蛋
+taiga village map: 针叶林村庄地图
+thick lingering potion: 滞留型浓稠的药水
+thick potion: 浓稠的药水
+thick splash potion: 喷溅型浓稠的药水
+thing banner pattern: Mojang徽标旗帜图案
+tide armor trim: 潮汐盔甲纹饰
+tipped arrow: 药箭
+torchflower seeds: 火把花种子
+totem of undying: 不死图腾
+trader llama spawn egg: 行商羊驼刷怪蛋
+trial chambers map: 试炼密室地图
+trial explorer map: 试炼探险家地图
+trial key: 试炼钥匙
+trident: 三叉戟
+tropical fish: 热带鱼
+tropical fish spawn egg: 热带鱼刷怪蛋
+turtle scute: 海龟鳞甲
+turtle shell: 海龟壳
+turtle spawn egg: 海龟刷怪蛋
+uncraftable potion: 不可合成的药水
+uncraftable tipped arrow: 不可合成的药箭
+vex armor trim: 恼鬼盔甲纹饰
+vex spawn egg: 恼鬼刷怪蛋
+villager spawn egg: 村民刷怪蛋
+vindicator spawn egg: 卫道士刷怪蛋
+wandering trader spawn egg: 流浪商人刷怪蛋
+ward armor trim: 监守盔甲纹饰
+warden spawn egg: 监守者刷怪蛋
+warped fungus on a stick: 诡异菌钓竿
+water bottle: 水瓶
+water bucket: 水桶
+wayfinder armor trim: 向导盔甲纹饰
+wheat: 小麦
+wheat seeds: 小麦种子
+white bundle: 白色收纳袋
+white cushion: 白色坐垫
+white dye: 白色染料
+white harness: 白色挽具
+wild armor trim: 荒野盔甲纹饰
+wind charge: 风弹
+witch spawn egg: 女巫刷怪蛋
+wither skeleton spawn egg: 凋灵骷髅刷怪蛋
+wither spawn egg: 凋灵刷怪蛋
+wolf armor: 狼铠
+wolf spawn egg: 狼刷怪蛋
+wooden axe: 木斧
+wooden hoe: 木锄
+wooden pickaxe: 木镐
+wooden shovel: 木锹
+wooden spear: 木矛
+wooden sword: 木剑
+woodland explorer map: 林地探险家地图
+written book: 成书
+yellow bundle: 黄色收纳袋
+yellow cushion: 黄色坐垫
+yellow dye: 黄色染料
+yellow harness: 黄色挽具
+zoglin spawn egg: 僵尸疣猪兽刷怪蛋
+zombie horse spawn egg: 僵尸马刷怪蛋
+zombie nautilus spawn egg: 僵尸鹦鹉螺刷怪蛋
+zombie spawn egg: 僵尸刷怪蛋
+zombie villager spawn egg: 僵尸村民刷怪蛋
+zombified piglin spawn egg: 僵尸猪灵刷怪蛋
+
+【实体】
+Acacia Boat: 金合欢木船
+Acacia Boat with Chest: 金合欢木运输船
+Allay: 悦灵
+Area Effect Cloud: 区域效果云
+Armadillo: 犰狳
+Armor Stand: 盔甲架
+Arrow: 箭
+Axolotl: 美西螈
+Bamboo Raft: 竹筏
+Bamboo Raft with Chest: 运输竹筏
+Bat: 蝙蝠
+Bee: 蜜蜂
+Birch Boat: 白桦木船
+Birch Boat with Chest: 白桦木运输船
+Blaze: 烈焰人
+Block Display: 方块展示实体
+Boat: 船
+Boat with Chest: 运输船
+Bogged: 沼骸
+Breeze: 旋风人
+Camel: 骆驼
+Camel Husk: 骆驼尸壳
+Cat: 猫
+Cave Spider: 洞穴蜘蛛
+Cherry Boat: 樱花木船
+Cherry Boat with Chest: 樱花木运输船
+Chicken: 鸡
+Cod: 鳕鱼
+Copper Golem: 铜傀儡
+Cow: 牛
+Creaking: 嘎枝
+Creeper: 苦力怕
+Cushion: 坐垫
+Dark Oak Boat: 深色橡木船
+Dark Oak Boat with Chest: 深色橡木运输船
+Dolphin: 海豚
+Donkey: 驴
+Dragon Fireball: 末影龙火球
+Drowned: 溺尸
+Elder Guardian: 远古守卫者
+End Crystal: 末地水晶
+Ender Dragon: 末影龙
+Enderman: 末影人
+Endermite: 末影螨
+Evoker: 唤魔者
+Evoker Fangs: 唤魔者尖牙
+Experience Orb: 经验球
+Eye of Ender: 末影之眼
+Falling Block: 下落的方块
+Fireball: 火球
+Firework Rocket: 烟花火箭
+Fishing Bobber: 浮漂
+Fox: 狐狸
+Frog: 青蛙
+Ghast: 恶魂
+Giant: 巨人
+Glow Item Frame: 荧光物品展示框
+Glow Squid: 发光鱿鱼
+Goat: 山羊
+Guardian: 守卫者
+Happy Ghast: 快乐恶魂
+Hoglin: 疣猪兽
+Horse: 马
+Husk: 尸壳
+Illusioner: 幻术师
+Interaction: 交互实体
+Iron Golem: 铁傀儡
+Item: 物品
+Item Display: 物品展示实体
+Item Frame: 物品展示框
+Jungle Boat: 丛林木船
+Jungle Boat with Chest: 丛林木运输船
+Leash Knot: 拴绳结
+Lightning Bolt: 闪电束
+Lingering Potion: 滞留药水
+Llama: 羊驼
+Llama Spit: 羊驼唾沫
+Magma Cube: 岩浆怪
+Mangrove Boat: 红树木船
+Mangrove Boat with Chest: 红树木运输船
+Mannequin: 玩家模型
+Marker: 标记
+Minecart: 矿车
+Minecart with Chest: 运输矿车
+Minecart with Command Block: 命令方块矿车
+Minecart with Furnace: 动力矿车
+Minecart with Hopper: 漏斗矿车
+Minecart with Monster Spawner: 刷怪笼矿车
+Minecart with TNT: TNT矿车
+Mooshroom: 哞菇
+Mule: 骡
+Nautilus: 鹦鹉螺
+Oak Boat: 橡木船
+Oak Boat with Chest: 橡木运输船
+Ocelot: 豹猫
+Ominous Item Spawner: 不祥之物生成器
+Painting: 画
+Pale Oak Boat: 苍白橡木船
+Pale Oak Boat with Chest: 苍白橡木运输船
+Panda: 熊猫
+Parched: 焦骸
+Parrot: 鹦鹉
+Phantom: 幻翼
+Pig: 猪
+Piglin: 猪灵
+Piglin Brute: 猪灵蛮兵
+Pillager: 掠夺者
+Player: 玩家
+Polar Bear: 北极熊
+Primed TNT: 被激活的TNT
+Pufferfish: 河豚
+Rabbit: 兔子
+Ravager: 劫掠兽
+Salmon: 鲑鱼
+Sheep: 绵羊
+Shulker: 潜影贝
+Shulker Bullet: 潜影弹
+Silverfish: 蠹虫
+Skeleton: 骷髅
+Skeleton Horse: 骷髅马
+Slime: 史莱姆
+Small Fireball: 小火球
+Sniffer: 嗅探兽
+Snow Golem: 雪傀儡
+Snowball: 雪球
+Spectral Arrow: 光灵箭
+Spider: 蜘蛛
+Splash Potion: 喷溅药水
+Spruce Boat: 云杉木船
+Spruce Boat with Chest: 云杉木运输船
+Squid: 鱿鱼
+Stray: 流浪者
+Strider: 炽足兽
+Sulfur Cube: 硫方怪
+Tadpole: 蝌蚪
+Text Display: 文本展示实体
+The Killer Bunny: 杀手兔
+Thrown Bottle o' Enchanting: 掷出的附魔之瓶
+Thrown Egg: 掷出的鸡蛋
+Thrown Ender Pearl: 掷出的末影珍珠
+Trader Llama: 行商羊驼
+Trident: 三叉戟
+Tropical Fish: 热带鱼
+Turtle: 海龟
+Vex: 恼鬼
+Villager: 村民
+Vindicator: 卫道士
+Wandering Trader: 流浪商人
+Warden: 监守者
+Wind Charge: 风弹
+Witch: 女巫
+Wither: 凋灵
+Wither Skeleton: 凋灵骷髅
+Wither Skull: 凋灵之首
+Wolf: 狼
+Zoglin: 僵尸疣猪兽
+Zombie: 僵尸
+Zombie Horse: 僵尸马
+Zombie Nautilus: 僵尸鹦鹉螺
+Zombie Villager: 僵尸村民
+Zombified Piglin: 僵尸猪灵
+
+【状态效果】
+Absorption: 伤害吸收
+Bad Luck: 霉运
+Bad Omen: 不祥之兆
+Blindness: 失明
+Breath of the Nautilus: 鹦鹉螺之息
+Conduit Power: 潮涌能量
+Darkness: 黑暗
+Dolphin's Grace: 海豚的恩惠
+Fire Resistance: 抗火
+Glowing: 发光
+Haste: 急迫
+Health Boost: 生命提升
+Hero of the Village: 村庄英雄
+Hunger: 饥饿
+Infested: 寄生
+Instant Damage: 瞬间伤害
+Instant Health: 瞬间治疗
+Invisibility: 隐身
+Jump Boost: 跳跃提升
+Levitation: 飘浮
+Luck: 幸运
+Mining Fatigue: 挖掘疲劳
+Nausea: 反胃
+Night Vision: 夜视
+Oozing: 渗浆
+Poison: 中毒
+Raid Omen: 袭击之兆
+Regeneration: 生命恢复
+Resistance: 抗性提升
+Saturation: 饱和
+Slow Falling: 缓降
+Slowness: 缓慢
+Speed: 迅捷
+Strength: 力量
+Trial Omen: 试炼之兆
+Water Breathing: 水下呼吸
+Weakness: 虚弱
+Weaving: 盘丝
+Wind Charged: 蓄风
+Wither: 凋零
+
+【魔咒】
+Aqua Affinity: 水下速掘
+Bane of Arthropods: 节肢杀手
+Blast Protection: 爆炸保护
+Breach: 破甲
+Channeling: 引雷
+Curse of Binding: 绑定诅咒
+Curse of Vanishing: 消失诅咒
+Density: 致密
+Depth Strider: 深海探索者
+Efficiency: 效率
+Feather Falling: 摔落缓冲
+Fire Aspect: 火焰附加
+Fire Protection: 火焰保护
+Flame: 火矢
+Fortune: 时运
+Frost Walker: 冰霜行者
+Impaling: 穿刺
+Infinity: 无限
+Knockback: 击退
+Looting: 抢夺
+Loyalty: 忠诚
+Luck of the Sea: 海之眷顾
+Lunge: 突进
+Lure: 饵钓
+Mending: 经验修补
+Multishot: 多重射击
+Piercing: 穿透
+Power: 力量
+Projectile Protection: 弹射物保护
+Protection: 保护
+Punch: 冲击
+Quick Charge: 快速装填
+Respiration: 水下呼吸
+Riptide: 激流
+Sharpness: 锋利
+Silk Touch: 精准采集
+Smite: 亡灵杀手
+Soul Speed: 灵魂疾行
+Sweeping Edge: 横扫之刃
+Swift Sneak: 迅捷潜行
+Thorns: 荆棘
+Unbreaking: 耐久
+Wind Burst: 风爆
+
+【生物群系】
+Badlands: 恶地
+Bamboo Jungle: 竹林
+Basalt Deltas: 玄武岩三角洲
+Beach: 沙滩
+Birch Forest: 桦木森林
+Cherry Grove: 樱花树林
+Cold Ocean: 冷水海洋
+Crimson Forest: 绯红森林
+Dappled Forest: 斑驳森林
+Dark Forest: 黑森林
+Deep Cold Ocean: 冷水深海
+Deep Dark: 深暗之域
+Deep Frozen Ocean: 冰冻深海
+Deep Lukewarm Ocean: 温水深海
+Deep Ocean: 深海
+Desert: 沙漠
+Dripstone Caves: 溶洞
+End Barrens: 末地荒地
+End Highlands: 末地高地
+End Midlands: 末地内陆
+Eroded Badlands: 风蚀恶地
+Flower Forest: 繁花森林
+Forest: 森林
+Frozen Ocean: 冻洋
+Frozen Peaks: 冰封山峰
+Frozen River: 冻河
+Grove: 雪林
+Ice Spikes: 冰刺之地
+Jagged Peaks: 尖峭山峰
+Jungle: 丛林
+Lukewarm Ocean: 温水海洋
+Lush Caves: 繁茂洞穴
+Mangrove Swamp: 红树林沼泽
+Meadow: 草甸
+Mushroom Fields: 蘑菇岛
+Nether Wastes: 下界荒地
+Ocean: 海洋
+Old Growth Birch Forest: 原始桦木森林
+Old Growth Pine Taiga: 原始松木针叶林
+Old Growth Spruce Taiga: 原始云杉针叶林
+Pale Garden: 苍白之园
+Plains: 平原
+River: 河流
+Savanna: 热带草原
+Savanna Plateau: 热带高原
+Small End Islands: 末地小型岛屿
+Snowy Beach: 积雪沙滩
+Snowy Plains: 雪原
+Snowy Slopes: 积雪山坡
+Snowy Taiga: 积雪针叶林
+Soul Sand Valley: 灵魂沙峡谷
+Sparse Jungle: 稀疏丛林
+Stony Peaks: 裸岩山峰
+Stony Shore: 石岸
+Sulfur Caves: 硫黄洞穴
+Sunflower Plains: 向日葵平原
+Swamp: 沼泽
+Taiga: 针叶林
+The End: 末地
+The Void: 虚空
+Warm Ocean: 暖水海洋
+Warped Forest: 诡异森林
+Windswept Forest: 风袭森林
+Windswept Gravelly Hills: 风袭沙砾丘陵
+Windswept Hills: 风袭丘陵
+Windswept Savanna: 风袭热带草原
+Wooded Badlands: 疏林恶地
+
+【环境】
+abandoned camp: 废弃营地
+acacia: 金合欢树
+amethyst geode: 紫晶洞
+ancient city: 远古城市
+aquifer: 含水层
+azalea: 杜鹃树
+basalt column: 玄武岩石柱林
+basalt pillar: 玄武岩柱
+bastion remnant: 堡垒遗迹
+birch: 白桦
+blue ice: 蓝冰
+bonus chest: 奖励箱
+bryce pillar: 岩柱
+buried treasure: 埋藏的宝藏
+cave: 洞穴
+cheese cave: 芝士洞穴
+cherry blossom tree: 樱花树
+chorus plant: 紫颂树
+cloud: 云
+conduit frame: 潮涌核心框架
+coral reef: 珊瑚礁
+dark oak: 深色橡树
+delta: 三角洲
+desert pyramid: 沙漠神殿
+desert well: 沙漠水井
+dimension: 维度
+disk: 圆盘
+dripstone: 滴水石
+dripstone cluster: 滴水石簇
+end city: 末地城
+end gateway: 末地折跃门
+end island: 末地浮岛
+end platform: 末地平台
+end portal: 末地传送门
+end ship: 末地船
+erosion: 盆地
+exit portal: 返回传送门
+far lands: 边境之地
+fill layer: 填充层
+floating island: 浮岛
+fog: 迷雾
+fortress: 下界要塞
+fossil: 化石
+freeze top layer: 冰冻顶层
+glowstone blob: 荧石堆
+hill: 丘陵
+huge brown mushroom: 巨型棕色蘑菇
+huge crimson fungus: 巨型绯红菌
+huge fungus: 巨型下界菌
+huge mushroom: 巨型蘑菇
+huge red mushroom: 巨型红色蘑菇
+huge warped fungus: 巨型诡异菌
+ice spike: 冰刺
+iceberg: 冰山
+igloo: 雪屋
+jungle pyramid: 丛林神庙
+jungle tree: 丛林树
+large dripstone: 大型滴水石
+lava lake: 熔岩湖
+lava sea: 熔岩海
+leaf clay: 多叶黏土层
+mangrove: 红树
+mansion: 林地府邸
+mineshaft: 废弃矿井
+monster room: 刷怪房
+moon: 月亮
+mossy cobblestone boulder: 生苔的巨石
+mountain: 山脉
+nether fortress: 下界要塞
+nether fossil: 下界化石
+nether portal: 下界传送门
+noise cave: 噪声洞穴
+noodle cave: 面条洞穴
+oak: 橡树
+obsidian pillar: 黑曜石柱
+obsidian platform: 黑曜石平台
+ocean monument: 海底神殿
+ocean ruin: 海底废墟
+ore: 矿团
+overworld: 主世界
+pale oak: 苍白橡树
+pile: 方块堆
+pillager outpost: 掠夺者前哨站
+pointed dripstone: 滴水石锥
+rain: 降雨
+random patch: 随机斑块
+ravine: 峡谷
+ruined portal: 废弃传送门
+sculk patch: 幽匿斑块
+shipwreck: 沉船
+snowfall: 降雪
+spaghetti cave: 意面洞穴
+spring: 涌泉
+spruce: 云杉
+stars: 星星
+stone platform: 石头平台
+stronghold: 要塞
+sulfur pool: 硫黄池
+sulfur spike: 硫黄尖锥
+sulfur spike cluster: 硫黄尖锥簇
+sulfur spring: 硫黄涌泉
+sun: 太阳
+swamp hut: 沼泽小屋
+the end: 末地
+the nether: 下界
+the void: 虚空
+thunderstorm: 雷暴
+trail ruins: 古迹废墟
+tree: 树木
+trial chambers: 试炼密室
+underwater cave: 水下洞穴
+underwater ravine: 水下峡谷
+underwater ruins: 海底废墟
+village: 村庄
+void start platform: 虚空平台
+woodland mansion: 林地府邸
+world border: 世界边界
+world boundary: 世界界限
+
+※此ID表是MCBEID表的一部分，对应游戏版本为测试版（1.26.50.22）- 原版
+※详见：https://github.com/XeroAlpha/caidlist

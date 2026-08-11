@@ -1,0 +1,18 @@
+【HUD界面元素】
+air_bubbles: 氧气槽
+all: 全部
+armor: 盔甲条
+crosshair: 十字准星
+health: 生命条
+horse_health: 骑乘生物生命条
+hotbar: 快捷栏
+hunger: 饥饿条
+item_text: 物品提示
+paperdoll: 纸娃娃
+progress_bar: 经验条
+status_effects: 状态效果
+tooltips: 提示消息
+touch_controls: 触屏按键
+
+※此ID表是MCBEID表的一部分，对应游戏版本为测试版（1.26.50.22）- 原版
+※详见：https://github.com/XeroAlpha/caidlist

@@ -1,0 +1,4049 @@
+【配方】
+ButtonAcacia_recipeId: 
+ButtonBirch_recipeId: 
+ButtonDarkOak_recipeId: 
+ButtonJungle_recipeId: 
+ButtonSpruce_recipeId: 
+Painting_Cobblestone_recipeId: 
+Painting_NetherBrick_recipeId: 
+Painting_VanillaBlocks_recipeId: 
+PressurePlateAcacia_recipeId: 
+PressurePlateBirch_recipeId: 
+PressurePlateDarkOak_recipeId: 
+PressurePlateJungle_recipeId: 
+PressurePlateSpruce_recipeId: 
+Stick_bamboo_recipeId: 
+StoneSlab4_recipeId: 
+StoneSlab4_stoneBrick_recipeId: 
+StoneSlab_Brick_recipeId: 
+StoneSlab_StoneBrick_recipeId: 
+StoneSlab_recipeId: 
+TrapdoorAcacia_recipeId: 
+TrapdoorBirch_recipeId: 
+TrapdoorDarkOak_recipeId: 
+TrapdoorJungle_recipeId: 
+TrapdoorSpruce_recipeId: 
+Trapdoor_recipeId: 
+WoodButton_recipeId: 
+WoodPressurePlate_recipeId: 
+acacia_stairs_acacia_recipeId: 
+bed_color_0: 
+bed_color_1: 
+bed_color_10: 
+bed_color_11: 
+bed_color_12: 
+bed_color_13: 
+bed_color_14: 
+bed_color_15: 
+bed_color_16: 
+bed_color_17: 
+bed_color_18: 
+bed_color_19: 
+bed_color_2: 
+bed_color_3: 
+bed_color_4: 
+bed_color_5: 
+bed_color_6: 
+bed_color_7: 
+bed_color_8: 
+bed_color_9: 
+bed_color_bamboo_0: 
+bed_color_bamboo_1: 
+bed_color_bamboo_10: 
+bed_color_bamboo_11: 
+bed_color_bamboo_12: 
+bed_color_bamboo_13: 
+bed_color_bamboo_14: 
+bed_color_bamboo_15: 
+bed_color_bamboo_2: 
+bed_color_bamboo_3: 
+bed_color_bamboo_4: 
+bed_color_bamboo_5: 
+bed_color_bamboo_6: 
+bed_color_bamboo_7: 
+bed_color_bamboo_8: 
+bed_color_bamboo_9: 
+birch_stairs_birch_recipeId: 
+bundle_dye_0: 
+bundle_dye_0_1: 
+bundle_dye_0_10: 
+bundle_dye_0_11: 
+bundle_dye_0_12: 
+bundle_dye_0_13: 
+bundle_dye_0_14: 
+bundle_dye_0_15: 
+bundle_dye_0_17: 
+bundle_dye_0_18: 
+bundle_dye_0_19: 
+bundle_dye_0_2: 
+bundle_dye_0_3: 
+bundle_dye_0_4: 
+bundle_dye_0_5: 
+bundle_dye_0_6: 
+bundle_dye_0_7: 
+bundle_dye_0_8: 
+bundle_dye_0_9: 
+bundle_dye_1: 
+bundle_dye_10: 
+bundle_dye_10_0: 
+bundle_dye_10_1: 
+bundle_dye_10_11: 
+bundle_dye_10_12: 
+bundle_dye_10_13: 
+bundle_dye_10_14: 
+bundle_dye_10_15: 
+bundle_dye_10_16: 
+bundle_dye_10_17: 
+bundle_dye_10_18: 
+bundle_dye_10_19: 
+bundle_dye_10_2: 
+bundle_dye_10_3: 
+bundle_dye_10_4: 
+bundle_dye_10_5: 
+bundle_dye_10_6: 
+bundle_dye_10_7: 
+bundle_dye_10_8: 
+bundle_dye_10_9: 
+bundle_dye_11: 
+bundle_dye_11_0: 
+bundle_dye_11_1: 
+bundle_dye_11_10: 
+bundle_dye_11_12: 
+bundle_dye_11_13: 
+bundle_dye_11_14: 
+bundle_dye_11_15: 
+bundle_dye_11_16: 
+bundle_dye_11_17: 
+bundle_dye_11_18: 
+bundle_dye_11_19: 
+bundle_dye_11_2: 
+bundle_dye_11_3: 
+bundle_dye_11_4: 
+bundle_dye_11_5: 
+bundle_dye_11_6: 
+bundle_dye_11_7: 
+bundle_dye_11_8: 
+bundle_dye_11_9: 
+bundle_dye_12: 
+bundle_dye_12_0: 
+bundle_dye_12_1: 
+bundle_dye_12_10: 
+bundle_dye_12_11: 
+bundle_dye_12_13: 
+bundle_dye_12_14: 
+bundle_dye_12_15: 
+bundle_dye_12_16: 
+bundle_dye_12_17: 
+bundle_dye_12_18: 
+bundle_dye_12_19: 
+bundle_dye_12_2: 
+bundle_dye_12_3: 
+bundle_dye_12_4: 
+bundle_dye_12_5: 
+bundle_dye_12_6: 
+bundle_dye_12_7: 
+bundle_dye_12_8: 
+bundle_dye_12_9: 
+bundle_dye_13: 
+bundle_dye_13_0: 
+bundle_dye_13_1: 
+bundle_dye_13_10: 
+bundle_dye_13_11: 
+bundle_dye_13_12: 
+bundle_dye_13_14: 
+bundle_dye_13_15: 
+bundle_dye_13_16: 
+bundle_dye_13_17: 
+bundle_dye_13_18: 
+bundle_dye_13_19: 
+bundle_dye_13_2: 
+bundle_dye_13_3: 
+bundle_dye_13_4: 
+bundle_dye_13_5: 
+bundle_dye_13_6: 
+bundle_dye_13_7: 
+bundle_dye_13_8: 
+bundle_dye_13_9: 
+bundle_dye_14: 
+bundle_dye_14_0: 
+bundle_dye_14_1: 
+bundle_dye_14_10: 
+bundle_dye_14_11: 
+bundle_dye_14_12: 
+bundle_dye_14_13: 
+bundle_dye_14_15: 
+bundle_dye_14_16: 
+bundle_dye_14_17: 
+bundle_dye_14_18: 
+bundle_dye_14_19: 
+bundle_dye_14_2: 
+bundle_dye_14_3: 
+bundle_dye_14_4: 
+bundle_dye_14_5: 
+bundle_dye_14_6: 
+bundle_dye_14_7: 
+bundle_dye_14_8: 
+bundle_dye_14_9: 
+bundle_dye_15: 
+bundle_dye_15_0: 
+bundle_dye_15_1: 
+bundle_dye_15_10: 
+bundle_dye_15_11: 
+bundle_dye_15_12: 
+bundle_dye_15_13: 
+bundle_dye_15_14: 
+bundle_dye_15_16: 
+bundle_dye_15_17: 
+bundle_dye_15_18: 
+bundle_dye_15_2: 
+bundle_dye_15_3: 
+bundle_dye_15_4: 
+bundle_dye_15_5: 
+bundle_dye_15_6: 
+bundle_dye_15_7: 
+bundle_dye_15_8: 
+bundle_dye_15_9: 
+bundle_dye_16: 
+bundle_dye_16_1: 
+bundle_dye_16_10: 
+bundle_dye_16_11: 
+bundle_dye_16_12: 
+bundle_dye_16_13: 
+bundle_dye_16_14: 
+bundle_dye_16_15: 
+bundle_dye_16_17: 
+bundle_dye_16_18: 
+bundle_dye_16_19: 
+bundle_dye_16_2: 
+bundle_dye_16_3: 
+bundle_dye_16_4: 
+bundle_dye_16_5: 
+bundle_dye_16_6: 
+bundle_dye_16_7: 
+bundle_dye_16_8: 
+bundle_dye_16_9: 
+bundle_dye_17: 
+bundle_dye_17_0: 
+bundle_dye_17_1: 
+bundle_dye_17_10: 
+bundle_dye_17_11: 
+bundle_dye_17_12: 
+bundle_dye_17_13: 
+bundle_dye_17_14: 
+bundle_dye_17_15: 
+bundle_dye_17_16: 
+bundle_dye_17_18: 
+bundle_dye_17_19: 
+bundle_dye_17_2: 
+bundle_dye_17_4: 
+bundle_dye_17_5: 
+bundle_dye_17_6: 
+bundle_dye_17_7: 
+bundle_dye_17_8: 
+bundle_dye_17_9: 
+bundle_dye_18: 
+bundle_dye_18_0: 
+bundle_dye_18_1: 
+bundle_dye_18_10: 
+bundle_dye_18_11: 
+bundle_dye_18_12: 
+bundle_dye_18_13: 
+bundle_dye_18_14: 
+bundle_dye_18_15: 
+bundle_dye_18_16: 
+bundle_dye_18_17: 
+bundle_dye_18_19: 
+bundle_dye_18_2: 
+bundle_dye_18_3: 
+bundle_dye_18_5: 
+bundle_dye_18_6: 
+bundle_dye_18_7: 
+bundle_dye_18_8: 
+bundle_dye_18_9: 
+bundle_dye_19: 
+bundle_dye_19_0: 
+bundle_dye_19_1: 
+bundle_dye_19_10: 
+bundle_dye_19_11: 
+bundle_dye_19_12: 
+bundle_dye_19_13: 
+bundle_dye_19_14: 
+bundle_dye_19_16: 
+bundle_dye_19_17: 
+bundle_dye_19_18: 
+bundle_dye_19_2: 
+bundle_dye_19_3: 
+bundle_dye_19_4: 
+bundle_dye_19_5: 
+bundle_dye_19_6: 
+bundle_dye_19_7: 
+bundle_dye_19_8: 
+bundle_dye_19_9: 
+bundle_dye_1_0: 
+bundle_dye_1_10: 
+bundle_dye_1_11: 
+bundle_dye_1_12: 
+bundle_dye_1_13: 
+bundle_dye_1_14: 
+bundle_dye_1_15: 
+bundle_dye_1_16: 
+bundle_dye_1_17: 
+bundle_dye_1_18: 
+bundle_dye_1_19: 
+bundle_dye_1_2: 
+bundle_dye_1_3: 
+bundle_dye_1_4: 
+bundle_dye_1_5: 
+bundle_dye_1_6: 
+bundle_dye_1_7: 
+bundle_dye_1_8: 
+bundle_dye_1_9: 
+bundle_dye_2: 
+bundle_dye_2_0: 
+bundle_dye_2_1: 
+bundle_dye_2_10: 
+bundle_dye_2_11: 
+bundle_dye_2_12: 
+bundle_dye_2_13: 
+bundle_dye_2_14: 
+bundle_dye_2_15: 
+bundle_dye_2_16: 
+bundle_dye_2_17: 
+bundle_dye_2_18: 
+bundle_dye_2_19: 
+bundle_dye_2_3: 
+bundle_dye_2_4: 
+bundle_dye_2_5: 
+bundle_dye_2_6: 
+bundle_dye_2_7: 
+bundle_dye_2_8: 
+bundle_dye_2_9: 
+bundle_dye_3: 
+bundle_dye_3_0: 
+bundle_dye_3_1: 
+bundle_dye_3_10: 
+bundle_dye_3_11: 
+bundle_dye_3_12: 
+bundle_dye_3_13: 
+bundle_dye_3_14: 
+bundle_dye_3_15: 
+bundle_dye_3_16: 
+bundle_dye_3_18: 
+bundle_dye_3_19: 
+bundle_dye_3_2: 
+bundle_dye_3_4: 
+bundle_dye_3_5: 
+bundle_dye_3_6: 
+bundle_dye_3_7: 
+bundle_dye_3_8: 
+bundle_dye_3_9: 
+bundle_dye_4: 
+bundle_dye_4_0: 
+bundle_dye_4_1: 
+bundle_dye_4_10: 
+bundle_dye_4_11: 
+bundle_dye_4_12: 
+bundle_dye_4_13: 
+bundle_dye_4_14: 
+bundle_dye_4_15: 
+bundle_dye_4_16: 
+bundle_dye_4_17: 
+bundle_dye_4_19: 
+bundle_dye_4_2: 
+bundle_dye_4_3: 
+bundle_dye_4_5: 
+bundle_dye_4_6: 
+bundle_dye_4_7: 
+bundle_dye_4_8: 
+bundle_dye_4_9: 
+bundle_dye_5: 
+bundle_dye_5_0: 
+bundle_dye_5_1: 
+bundle_dye_5_10: 
+bundle_dye_5_11: 
+bundle_dye_5_12: 
+bundle_dye_5_13: 
+bundle_dye_5_14: 
+bundle_dye_5_15: 
+bundle_dye_5_16: 
+bundle_dye_5_17: 
+bundle_dye_5_18: 
+bundle_dye_5_19: 
+bundle_dye_5_2: 
+bundle_dye_5_3: 
+bundle_dye_5_4: 
+bundle_dye_5_6: 
+bundle_dye_5_7: 
+bundle_dye_5_8: 
+bundle_dye_5_9: 
+bundle_dye_6: 
+bundle_dye_6_0: 
+bundle_dye_6_1: 
+bundle_dye_6_10: 
+bundle_dye_6_11: 
+bundle_dye_6_12: 
+bundle_dye_6_13: 
+bundle_dye_6_14: 
+bundle_dye_6_15: 
+bundle_dye_6_16: 
+bundle_dye_6_17: 
+bundle_dye_6_18: 
+bundle_dye_6_19: 
+bundle_dye_6_2: 
+bundle_dye_6_3: 
+bundle_dye_6_4: 
+bundle_dye_6_5: 
+bundle_dye_6_7: 
+bundle_dye_6_8: 
+bundle_dye_6_9: 
+bundle_dye_7: 
+bundle_dye_7_0: 
+bundle_dye_7_1: 
+bundle_dye_7_10: 
+bundle_dye_7_11: 
+bundle_dye_7_12: 
+bundle_dye_7_13: 
+bundle_dye_7_14: 
+bundle_dye_7_15: 
+bundle_dye_7_16: 
+bundle_dye_7_17: 
+bundle_dye_7_18: 
+bundle_dye_7_19: 
+bundle_dye_7_2: 
+bundle_dye_7_3: 
+bundle_dye_7_4: 
+bundle_dye_7_5: 
+bundle_dye_7_6: 
+bundle_dye_7_8: 
+bundle_dye_7_9: 
+bundle_dye_8: 
+bundle_dye_8_0: 
+bundle_dye_8_1: 
+bundle_dye_8_10: 
+bundle_dye_8_11: 
+bundle_dye_8_12: 
+bundle_dye_8_13: 
+bundle_dye_8_14: 
+bundle_dye_8_15: 
+bundle_dye_8_16: 
+bundle_dye_8_17: 
+bundle_dye_8_18: 
+bundle_dye_8_19: 
+bundle_dye_8_2: 
+bundle_dye_8_3: 
+bundle_dye_8_4: 
+bundle_dye_8_5: 
+bundle_dye_8_6: 
+bundle_dye_8_7: 
+bundle_dye_8_9: 
+bundle_dye_9: 
+bundle_dye_9_0: 
+bundle_dye_9_1: 
+bundle_dye_9_10: 
+bundle_dye_9_11: 
+bundle_dye_9_12: 
+bundle_dye_9_13: 
+bundle_dye_9_14: 
+bundle_dye_9_15: 
+bundle_dye_9_16: 
+bundle_dye_9_17: 
+bundle_dye_9_18: 
+bundle_dye_9_19: 
+bundle_dye_9_2: 
+bundle_dye_9_3: 
+bundle_dye_9_4: 
+bundle_dye_9_5: 
+bundle_dye_9_6: 
+bundle_dye_9_7: 
+bundle_dye_9_8: 
+chiseled_quartz_recipeId: 
+chiseled_stonebrick_recipeId: 
+cushion_dye_0_1: 
+cushion_dye_0_10: 
+cushion_dye_0_11: 
+cushion_dye_0_12: 
+cushion_dye_0_13: 
+cushion_dye_0_14: 
+cushion_dye_0_15: 
+cushion_dye_0_17: 
+cushion_dye_0_18: 
+cushion_dye_0_19: 
+cushion_dye_0_2: 
+cushion_dye_0_3: 
+cushion_dye_0_4: 
+cushion_dye_0_5: 
+cushion_dye_0_6: 
+cushion_dye_0_7: 
+cushion_dye_0_8: 
+cushion_dye_0_9: 
+cushion_dye_10_0: 
+cushion_dye_10_1: 
+cushion_dye_10_11: 
+cushion_dye_10_12: 
+cushion_dye_10_13: 
+cushion_dye_10_14: 
+cushion_dye_10_15: 
+cushion_dye_10_16: 
+cushion_dye_10_17: 
+cushion_dye_10_18: 
+cushion_dye_10_19: 
+cushion_dye_10_2: 
+cushion_dye_10_3: 
+cushion_dye_10_4: 
+cushion_dye_10_5: 
+cushion_dye_10_6: 
+cushion_dye_10_7: 
+cushion_dye_10_8: 
+cushion_dye_10_9: 
+cushion_dye_11_0: 
+cushion_dye_11_1: 
+cushion_dye_11_10: 
+cushion_dye_11_12: 
+cushion_dye_11_13: 
+cushion_dye_11_14: 
+cushion_dye_11_15: 
+cushion_dye_11_16: 
+cushion_dye_11_17: 
+cushion_dye_11_18: 
+cushion_dye_11_19: 
+cushion_dye_11_2: 
+cushion_dye_11_3: 
+cushion_dye_11_4: 
+cushion_dye_11_5: 
+cushion_dye_11_6: 
+cushion_dye_11_7: 
+cushion_dye_11_8: 
+cushion_dye_11_9: 
+cushion_dye_12_0: 
+cushion_dye_12_1: 
+cushion_dye_12_10: 
+cushion_dye_12_11: 
+cushion_dye_12_13: 
+cushion_dye_12_14: 
+cushion_dye_12_15: 
+cushion_dye_12_16: 
+cushion_dye_12_17: 
+cushion_dye_12_18: 
+cushion_dye_12_19: 
+cushion_dye_12_2: 
+cushion_dye_12_3: 
+cushion_dye_12_4: 
+cushion_dye_12_5: 
+cushion_dye_12_6: 
+cushion_dye_12_7: 
+cushion_dye_12_8: 
+cushion_dye_12_9: 
+cushion_dye_13_0: 
+cushion_dye_13_1: 
+cushion_dye_13_10: 
+cushion_dye_13_11: 
+cushion_dye_13_12: 
+cushion_dye_13_14: 
+cushion_dye_13_15: 
+cushion_dye_13_16: 
+cushion_dye_13_17: 
+cushion_dye_13_18: 
+cushion_dye_13_19: 
+cushion_dye_13_2: 
+cushion_dye_13_3: 
+cushion_dye_13_4: 
+cushion_dye_13_5: 
+cushion_dye_13_6: 
+cushion_dye_13_7: 
+cushion_dye_13_8: 
+cushion_dye_13_9: 
+cushion_dye_14_0: 
+cushion_dye_14_1: 
+cushion_dye_14_10: 
+cushion_dye_14_11: 
+cushion_dye_14_12: 
+cushion_dye_14_13: 
+cushion_dye_14_15: 
+cushion_dye_14_16: 
+cushion_dye_14_17: 
+cushion_dye_14_18: 
+cushion_dye_14_19: 
+cushion_dye_14_2: 
+cushion_dye_14_3: 
+cushion_dye_14_4: 
+cushion_dye_14_5: 
+cushion_dye_14_6: 
+cushion_dye_14_7: 
+cushion_dye_14_8: 
+cushion_dye_14_9: 
+cushion_dye_15_0: 
+cushion_dye_15_1: 
+cushion_dye_15_10: 
+cushion_dye_15_11: 
+cushion_dye_15_12: 
+cushion_dye_15_13: 
+cushion_dye_15_14: 
+cushion_dye_15_16: 
+cushion_dye_15_17: 
+cushion_dye_15_18: 
+cushion_dye_15_2: 
+cushion_dye_15_3: 
+cushion_dye_15_4: 
+cushion_dye_15_5: 
+cushion_dye_15_6: 
+cushion_dye_15_7: 
+cushion_dye_15_8: 
+cushion_dye_15_9: 
+cushion_dye_16_1: 
+cushion_dye_16_10: 
+cushion_dye_16_11: 
+cushion_dye_16_12: 
+cushion_dye_16_13: 
+cushion_dye_16_14: 
+cushion_dye_16_15: 
+cushion_dye_16_17: 
+cushion_dye_16_18: 
+cushion_dye_16_19: 
+cushion_dye_16_2: 
+cushion_dye_16_3: 
+cushion_dye_16_4: 
+cushion_dye_16_5: 
+cushion_dye_16_6: 
+cushion_dye_16_7: 
+cushion_dye_16_8: 
+cushion_dye_16_9: 
+cushion_dye_17_0: 
+cushion_dye_17_1: 
+cushion_dye_17_10: 
+cushion_dye_17_11: 
+cushion_dye_17_12: 
+cushion_dye_17_13: 
+cushion_dye_17_14: 
+cushion_dye_17_15: 
+cushion_dye_17_16: 
+cushion_dye_17_18: 
+cushion_dye_17_19: 
+cushion_dye_17_2: 
+cushion_dye_17_4: 
+cushion_dye_17_5: 
+cushion_dye_17_6: 
+cushion_dye_17_7: 
+cushion_dye_17_8: 
+cushion_dye_17_9: 
+cushion_dye_18_0: 
+cushion_dye_18_1: 
+cushion_dye_18_10: 
+cushion_dye_18_11: 
+cushion_dye_18_12: 
+cushion_dye_18_13: 
+cushion_dye_18_14: 
+cushion_dye_18_15: 
+cushion_dye_18_16: 
+cushion_dye_18_17: 
+cushion_dye_18_19: 
+cushion_dye_18_2: 
+cushion_dye_18_3: 
+cushion_dye_18_5: 
+cushion_dye_18_6: 
+cushion_dye_18_7: 
+cushion_dye_18_8: 
+cushion_dye_18_9: 
+cushion_dye_19_0: 
+cushion_dye_19_1: 
+cushion_dye_19_10: 
+cushion_dye_19_11: 
+cushion_dye_19_12: 
+cushion_dye_19_13: 
+cushion_dye_19_14: 
+cushion_dye_19_16: 
+cushion_dye_19_17: 
+cushion_dye_19_18: 
+cushion_dye_19_2: 
+cushion_dye_19_3: 
+cushion_dye_19_4: 
+cushion_dye_19_5: 
+cushion_dye_19_6: 
+cushion_dye_19_7: 
+cushion_dye_19_8: 
+cushion_dye_19_9: 
+cushion_dye_1_0: 
+cushion_dye_1_10: 
+cushion_dye_1_11: 
+cushion_dye_1_12: 
+cushion_dye_1_13: 
+cushion_dye_1_14: 
+cushion_dye_1_15: 
+cushion_dye_1_16: 
+cushion_dye_1_17: 
+cushion_dye_1_18: 
+cushion_dye_1_19: 
+cushion_dye_1_2: 
+cushion_dye_1_3: 
+cushion_dye_1_4: 
+cushion_dye_1_5: 
+cushion_dye_1_6: 
+cushion_dye_1_7: 
+cushion_dye_1_8: 
+cushion_dye_1_9: 
+cushion_dye_2_0: 
+cushion_dye_2_1: 
+cushion_dye_2_10: 
+cushion_dye_2_11: 
+cushion_dye_2_12: 
+cushion_dye_2_13: 
+cushion_dye_2_14: 
+cushion_dye_2_15: 
+cushion_dye_2_16: 
+cushion_dye_2_17: 
+cushion_dye_2_18: 
+cushion_dye_2_19: 
+cushion_dye_2_3: 
+cushion_dye_2_4: 
+cushion_dye_2_5: 
+cushion_dye_2_6: 
+cushion_dye_2_7: 
+cushion_dye_2_8: 
+cushion_dye_2_9: 
+cushion_dye_3_0: 
+cushion_dye_3_1: 
+cushion_dye_3_10: 
+cushion_dye_3_11: 
+cushion_dye_3_12: 
+cushion_dye_3_13: 
+cushion_dye_3_14: 
+cushion_dye_3_15: 
+cushion_dye_3_16: 
+cushion_dye_3_18: 
+cushion_dye_3_19: 
+cushion_dye_3_2: 
+cushion_dye_3_4: 
+cushion_dye_3_5: 
+cushion_dye_3_6: 
+cushion_dye_3_7: 
+cushion_dye_3_8: 
+cushion_dye_3_9: 
+cushion_dye_4_0: 
+cushion_dye_4_1: 
+cushion_dye_4_10: 
+cushion_dye_4_11: 
+cushion_dye_4_12: 
+cushion_dye_4_13: 
+cushion_dye_4_14: 
+cushion_dye_4_15: 
+cushion_dye_4_16: 
+cushion_dye_4_17: 
+cushion_dye_4_19: 
+cushion_dye_4_2: 
+cushion_dye_4_3: 
+cushion_dye_4_5: 
+cushion_dye_4_6: 
+cushion_dye_4_7: 
+cushion_dye_4_8: 
+cushion_dye_4_9: 
+cushion_dye_5_0: 
+cushion_dye_5_1: 
+cushion_dye_5_10: 
+cushion_dye_5_11: 
+cushion_dye_5_12: 
+cushion_dye_5_13: 
+cushion_dye_5_14: 
+cushion_dye_5_15: 
+cushion_dye_5_16: 
+cushion_dye_5_17: 
+cushion_dye_5_18: 
+cushion_dye_5_19: 
+cushion_dye_5_2: 
+cushion_dye_5_3: 
+cushion_dye_5_4: 
+cushion_dye_5_6: 
+cushion_dye_5_7: 
+cushion_dye_5_8: 
+cushion_dye_5_9: 
+cushion_dye_6_0: 
+cushion_dye_6_1: 
+cushion_dye_6_10: 
+cushion_dye_6_11: 
+cushion_dye_6_12: 
+cushion_dye_6_13: 
+cushion_dye_6_14: 
+cushion_dye_6_15: 
+cushion_dye_6_16: 
+cushion_dye_6_17: 
+cushion_dye_6_18: 
+cushion_dye_6_19: 
+cushion_dye_6_2: 
+cushion_dye_6_3: 
+cushion_dye_6_4: 
+cushion_dye_6_5: 
+cushion_dye_6_7: 
+cushion_dye_6_8: 
+cushion_dye_6_9: 
+cushion_dye_7_0: 
+cushion_dye_7_1: 
+cushion_dye_7_10: 
+cushion_dye_7_11: 
+cushion_dye_7_12: 
+cushion_dye_7_13: 
+cushion_dye_7_14: 
+cushion_dye_7_15: 
+cushion_dye_7_16: 
+cushion_dye_7_17: 
+cushion_dye_7_18: 
+cushion_dye_7_19: 
+cushion_dye_7_2: 
+cushion_dye_7_3: 
+cushion_dye_7_4: 
+cushion_dye_7_5: 
+cushion_dye_7_6: 
+cushion_dye_7_8: 
+cushion_dye_7_9: 
+cushion_dye_8_0: 
+cushion_dye_8_1: 
+cushion_dye_8_10: 
+cushion_dye_8_11: 
+cushion_dye_8_12: 
+cushion_dye_8_13: 
+cushion_dye_8_14: 
+cushion_dye_8_15: 
+cushion_dye_8_16: 
+cushion_dye_8_17: 
+cushion_dye_8_18: 
+cushion_dye_8_19: 
+cushion_dye_8_2: 
+cushion_dye_8_3: 
+cushion_dye_8_4: 
+cushion_dye_8_5: 
+cushion_dye_8_6: 
+cushion_dye_8_7: 
+cushion_dye_8_9: 
+cushion_dye_9_0: 
+cushion_dye_9_1: 
+cushion_dye_9_10: 
+cushion_dye_9_11: 
+cushion_dye_9_12: 
+cushion_dye_9_13: 
+cushion_dye_9_14: 
+cushion_dye_9_15: 
+cushion_dye_9_16: 
+cushion_dye_9_17: 
+cushion_dye_9_18: 
+cushion_dye_9_19: 
+cushion_dye_9_2: 
+cushion_dye_9_3: 
+cushion_dye_9_4: 
+cushion_dye_9_5: 
+cushion_dye_9_6: 
+cushion_dye_9_7: 
+cushion_dye_9_8: 
+dark_oak_stairs_dark_oak_recipeId: 
+decorated_pot_base_recipeId: 
+dye_wool_slab_0_1: 
+dye_wool_slab_0_10: 
+dye_wool_slab_0_11: 
+dye_wool_slab_0_12: 
+dye_wool_slab_0_13: 
+dye_wool_slab_0_14: 
+dye_wool_slab_0_15: 
+dye_wool_slab_0_2: 
+dye_wool_slab_0_3: 
+dye_wool_slab_0_4: 
+dye_wool_slab_0_5: 
+dye_wool_slab_0_6: 
+dye_wool_slab_0_7: 
+dye_wool_slab_0_8: 
+dye_wool_slab_0_9: 
+dye_wool_slab_10_0: 
+dye_wool_slab_10_1: 
+dye_wool_slab_10_11: 
+dye_wool_slab_10_12: 
+dye_wool_slab_10_13: 
+dye_wool_slab_10_14: 
+dye_wool_slab_10_15: 
+dye_wool_slab_10_2: 
+dye_wool_slab_10_3: 
+dye_wool_slab_10_4: 
+dye_wool_slab_10_5: 
+dye_wool_slab_10_6: 
+dye_wool_slab_10_7: 
+dye_wool_slab_10_8: 
+dye_wool_slab_10_9: 
+dye_wool_slab_11_0: 
+dye_wool_slab_11_1: 
+dye_wool_slab_11_10: 
+dye_wool_slab_11_12: 
+dye_wool_slab_11_13: 
+dye_wool_slab_11_14: 
+dye_wool_slab_11_15: 
+dye_wool_slab_11_2: 
+dye_wool_slab_11_3: 
+dye_wool_slab_11_4: 
+dye_wool_slab_11_5: 
+dye_wool_slab_11_6: 
+dye_wool_slab_11_7: 
+dye_wool_slab_11_8: 
+dye_wool_slab_11_9: 
+dye_wool_slab_12_0: 
+dye_wool_slab_12_1: 
+dye_wool_slab_12_10: 
+dye_wool_slab_12_11: 
+dye_wool_slab_12_13: 
+dye_wool_slab_12_14: 
+dye_wool_slab_12_15: 
+dye_wool_slab_12_2: 
+dye_wool_slab_12_3: 
+dye_wool_slab_12_4: 
+dye_wool_slab_12_5: 
+dye_wool_slab_12_6: 
+dye_wool_slab_12_7: 
+dye_wool_slab_12_8: 
+dye_wool_slab_12_9: 
+dye_wool_slab_13_0: 
+dye_wool_slab_13_1: 
+dye_wool_slab_13_10: 
+dye_wool_slab_13_11: 
+dye_wool_slab_13_12: 
+dye_wool_slab_13_14: 
+dye_wool_slab_13_15: 
+dye_wool_slab_13_2: 
+dye_wool_slab_13_3: 
+dye_wool_slab_13_4: 
+dye_wool_slab_13_5: 
+dye_wool_slab_13_6: 
+dye_wool_slab_13_7: 
+dye_wool_slab_13_8: 
+dye_wool_slab_13_9: 
+dye_wool_slab_14_0: 
+dye_wool_slab_14_1: 
+dye_wool_slab_14_10: 
+dye_wool_slab_14_11: 
+dye_wool_slab_14_12: 
+dye_wool_slab_14_13: 
+dye_wool_slab_14_15: 
+dye_wool_slab_14_2: 
+dye_wool_slab_14_3: 
+dye_wool_slab_14_4: 
+dye_wool_slab_14_5: 
+dye_wool_slab_14_6: 
+dye_wool_slab_14_7: 
+dye_wool_slab_14_8: 
+dye_wool_slab_14_9: 
+dye_wool_slab_15_0: 
+dye_wool_slab_15_1: 
+dye_wool_slab_15_10: 
+dye_wool_slab_15_11: 
+dye_wool_slab_15_12: 
+dye_wool_slab_15_13: 
+dye_wool_slab_15_14: 
+dye_wool_slab_15_2: 
+dye_wool_slab_15_3: 
+dye_wool_slab_15_4: 
+dye_wool_slab_15_5: 
+dye_wool_slab_15_6: 
+dye_wool_slab_15_7: 
+dye_wool_slab_15_8: 
+dye_wool_slab_15_9: 
+dye_wool_slab_16_1: 
+dye_wool_slab_16_10: 
+dye_wool_slab_16_11: 
+dye_wool_slab_16_12: 
+dye_wool_slab_16_13: 
+dye_wool_slab_16_14: 
+dye_wool_slab_16_15: 
+dye_wool_slab_16_2: 
+dye_wool_slab_16_3: 
+dye_wool_slab_16_4: 
+dye_wool_slab_16_5: 
+dye_wool_slab_16_6: 
+dye_wool_slab_16_7: 
+dye_wool_slab_16_8: 
+dye_wool_slab_16_9: 
+dye_wool_slab_17_0: 
+dye_wool_slab_17_1: 
+dye_wool_slab_17_10: 
+dye_wool_slab_17_11: 
+dye_wool_slab_17_12: 
+dye_wool_slab_17_13: 
+dye_wool_slab_17_14: 
+dye_wool_slab_17_15: 
+dye_wool_slab_17_2: 
+dye_wool_slab_17_4: 
+dye_wool_slab_17_5: 
+dye_wool_slab_17_6: 
+dye_wool_slab_17_7: 
+dye_wool_slab_17_8: 
+dye_wool_slab_17_9: 
+dye_wool_slab_18_0: 
+dye_wool_slab_18_1: 
+dye_wool_slab_18_10: 
+dye_wool_slab_18_11: 
+dye_wool_slab_18_12: 
+dye_wool_slab_18_13: 
+dye_wool_slab_18_14: 
+dye_wool_slab_18_15: 
+dye_wool_slab_18_2: 
+dye_wool_slab_18_3: 
+dye_wool_slab_18_5: 
+dye_wool_slab_18_6: 
+dye_wool_slab_18_7: 
+dye_wool_slab_18_8: 
+dye_wool_slab_18_9: 
+dye_wool_slab_19_0: 
+dye_wool_slab_19_1: 
+dye_wool_slab_19_10: 
+dye_wool_slab_19_11: 
+dye_wool_slab_19_12: 
+dye_wool_slab_19_13: 
+dye_wool_slab_19_14: 
+dye_wool_slab_19_2: 
+dye_wool_slab_19_3: 
+dye_wool_slab_19_4: 
+dye_wool_slab_19_5: 
+dye_wool_slab_19_6: 
+dye_wool_slab_19_7: 
+dye_wool_slab_19_8: 
+dye_wool_slab_19_9: 
+dye_wool_slab_1_0: 
+dye_wool_slab_1_10: 
+dye_wool_slab_1_11: 
+dye_wool_slab_1_12: 
+dye_wool_slab_1_13: 
+dye_wool_slab_1_14: 
+dye_wool_slab_1_15: 
+dye_wool_slab_1_2: 
+dye_wool_slab_1_3: 
+dye_wool_slab_1_4: 
+dye_wool_slab_1_5: 
+dye_wool_slab_1_6: 
+dye_wool_slab_1_7: 
+dye_wool_slab_1_8: 
+dye_wool_slab_1_9: 
+dye_wool_slab_2_0: 
+dye_wool_slab_2_1: 
+dye_wool_slab_2_10: 
+dye_wool_slab_2_11: 
+dye_wool_slab_2_12: 
+dye_wool_slab_2_13: 
+dye_wool_slab_2_14: 
+dye_wool_slab_2_15: 
+dye_wool_slab_2_3: 
+dye_wool_slab_2_4: 
+dye_wool_slab_2_5: 
+dye_wool_slab_2_6: 
+dye_wool_slab_2_7: 
+dye_wool_slab_2_8: 
+dye_wool_slab_2_9: 
+dye_wool_slab_3_0: 
+dye_wool_slab_3_1: 
+dye_wool_slab_3_10: 
+dye_wool_slab_3_11: 
+dye_wool_slab_3_12: 
+dye_wool_slab_3_13: 
+dye_wool_slab_3_14: 
+dye_wool_slab_3_15: 
+dye_wool_slab_3_2: 
+dye_wool_slab_3_4: 
+dye_wool_slab_3_5: 
+dye_wool_slab_3_6: 
+dye_wool_slab_3_7: 
+dye_wool_slab_3_8: 
+dye_wool_slab_3_9: 
+dye_wool_slab_4_0: 
+dye_wool_slab_4_1: 
+dye_wool_slab_4_10: 
+dye_wool_slab_4_11: 
+dye_wool_slab_4_12: 
+dye_wool_slab_4_13: 
+dye_wool_slab_4_14: 
+dye_wool_slab_4_15: 
+dye_wool_slab_4_2: 
+dye_wool_slab_4_3: 
+dye_wool_slab_4_5: 
+dye_wool_slab_4_6: 
+dye_wool_slab_4_7: 
+dye_wool_slab_4_8: 
+dye_wool_slab_4_9: 
+dye_wool_slab_5_0: 
+dye_wool_slab_5_1: 
+dye_wool_slab_5_10: 
+dye_wool_slab_5_11: 
+dye_wool_slab_5_12: 
+dye_wool_slab_5_13: 
+dye_wool_slab_5_14: 
+dye_wool_slab_5_15: 
+dye_wool_slab_5_2: 
+dye_wool_slab_5_3: 
+dye_wool_slab_5_4: 
+dye_wool_slab_5_6: 
+dye_wool_slab_5_7: 
+dye_wool_slab_5_8: 
+dye_wool_slab_5_9: 
+dye_wool_slab_6_0: 
+dye_wool_slab_6_1: 
+dye_wool_slab_6_10: 
+dye_wool_slab_6_11: 
+dye_wool_slab_6_12: 
+dye_wool_slab_6_13: 
+dye_wool_slab_6_14: 
+dye_wool_slab_6_15: 
+dye_wool_slab_6_2: 
+dye_wool_slab_6_3: 
+dye_wool_slab_6_4: 
+dye_wool_slab_6_5: 
+dye_wool_slab_6_7: 
+dye_wool_slab_6_8: 
+dye_wool_slab_6_9: 
+dye_wool_slab_7_0: 
+dye_wool_slab_7_1: 
+dye_wool_slab_7_10: 
+dye_wool_slab_7_11: 
+dye_wool_slab_7_12: 
+dye_wool_slab_7_13: 
+dye_wool_slab_7_14: 
+dye_wool_slab_7_15: 
+dye_wool_slab_7_2: 
+dye_wool_slab_7_3: 
+dye_wool_slab_7_4: 
+dye_wool_slab_7_5: 
+dye_wool_slab_7_6: 
+dye_wool_slab_7_8: 
+dye_wool_slab_7_9: 
+dye_wool_slab_8_0: 
+dye_wool_slab_8_1: 
+dye_wool_slab_8_10: 
+dye_wool_slab_8_11: 
+dye_wool_slab_8_12: 
+dye_wool_slab_8_13: 
+dye_wool_slab_8_14: 
+dye_wool_slab_8_15: 
+dye_wool_slab_8_2: 
+dye_wool_slab_8_3: 
+dye_wool_slab_8_4: 
+dye_wool_slab_8_5: 
+dye_wool_slab_8_6: 
+dye_wool_slab_8_7: 
+dye_wool_slab_8_9: 
+dye_wool_slab_9_0: 
+dye_wool_slab_9_1: 
+dye_wool_slab_9_10: 
+dye_wool_slab_9_11: 
+dye_wool_slab_9_12: 
+dye_wool_slab_9_13: 
+dye_wool_slab_9_14: 
+dye_wool_slab_9_15: 
+dye_wool_slab_9_2: 
+dye_wool_slab_9_3: 
+dye_wool_slab_9_4: 
+dye_wool_slab_9_5: 
+dye_wool_slab_9_6: 
+dye_wool_slab_9_7: 
+dye_wool_slab_9_8: 
+dye_wool_stairs_0_1: 
+dye_wool_stairs_0_10: 
+dye_wool_stairs_0_11: 
+dye_wool_stairs_0_12: 
+dye_wool_stairs_0_13: 
+dye_wool_stairs_0_14: 
+dye_wool_stairs_0_15: 
+dye_wool_stairs_0_2: 
+dye_wool_stairs_0_3: 
+dye_wool_stairs_0_4: 
+dye_wool_stairs_0_5: 
+dye_wool_stairs_0_6: 
+dye_wool_stairs_0_7: 
+dye_wool_stairs_0_8: 
+dye_wool_stairs_0_9: 
+dye_wool_stairs_10_0: 
+dye_wool_stairs_10_1: 
+dye_wool_stairs_10_11: 
+dye_wool_stairs_10_12: 
+dye_wool_stairs_10_13: 
+dye_wool_stairs_10_14: 
+dye_wool_stairs_10_15: 
+dye_wool_stairs_10_2: 
+dye_wool_stairs_10_3: 
+dye_wool_stairs_10_4: 
+dye_wool_stairs_10_5: 
+dye_wool_stairs_10_6: 
+dye_wool_stairs_10_7: 
+dye_wool_stairs_10_8: 
+dye_wool_stairs_10_9: 
+dye_wool_stairs_11_0: 
+dye_wool_stairs_11_1: 
+dye_wool_stairs_11_10: 
+dye_wool_stairs_11_12: 
+dye_wool_stairs_11_13: 
+dye_wool_stairs_11_14: 
+dye_wool_stairs_11_15: 
+dye_wool_stairs_11_2: 
+dye_wool_stairs_11_3: 
+dye_wool_stairs_11_4: 
+dye_wool_stairs_11_5: 
+dye_wool_stairs_11_6: 
+dye_wool_stairs_11_7: 
+dye_wool_stairs_11_8: 
+dye_wool_stairs_11_9: 
+dye_wool_stairs_12_0: 
+dye_wool_stairs_12_1: 
+dye_wool_stairs_12_10: 
+dye_wool_stairs_12_11: 
+dye_wool_stairs_12_13: 
+dye_wool_stairs_12_14: 
+dye_wool_stairs_12_15: 
+dye_wool_stairs_12_2: 
+dye_wool_stairs_12_3: 
+dye_wool_stairs_12_4: 
+dye_wool_stairs_12_5: 
+dye_wool_stairs_12_6: 
+dye_wool_stairs_12_7: 
+dye_wool_stairs_12_8: 
+dye_wool_stairs_12_9: 
+dye_wool_stairs_13_0: 
+dye_wool_stairs_13_1: 
+dye_wool_stairs_13_10: 
+dye_wool_stairs_13_11: 
+dye_wool_stairs_13_12: 
+dye_wool_stairs_13_14: 
+dye_wool_stairs_13_15: 
+dye_wool_stairs_13_2: 
+dye_wool_stairs_13_3: 
+dye_wool_stairs_13_4: 
+dye_wool_stairs_13_5: 
+dye_wool_stairs_13_6: 
+dye_wool_stairs_13_7: 
+dye_wool_stairs_13_8: 
+dye_wool_stairs_13_9: 
+dye_wool_stairs_14_0: 
+dye_wool_stairs_14_1: 
+dye_wool_stairs_14_10: 
+dye_wool_stairs_14_11: 
+dye_wool_stairs_14_12: 
+dye_wool_stairs_14_13: 
+dye_wool_stairs_14_15: 
+dye_wool_stairs_14_2: 
+dye_wool_stairs_14_3: 
+dye_wool_stairs_14_4: 
+dye_wool_stairs_14_5: 
+dye_wool_stairs_14_6: 
+dye_wool_stairs_14_7: 
+dye_wool_stairs_14_8: 
+dye_wool_stairs_14_9: 
+dye_wool_stairs_15_0: 
+dye_wool_stairs_15_1: 
+dye_wool_stairs_15_10: 
+dye_wool_stairs_15_11: 
+dye_wool_stairs_15_12: 
+dye_wool_stairs_15_13: 
+dye_wool_stairs_15_14: 
+dye_wool_stairs_15_2: 
+dye_wool_stairs_15_3: 
+dye_wool_stairs_15_4: 
+dye_wool_stairs_15_5: 
+dye_wool_stairs_15_6: 
+dye_wool_stairs_15_7: 
+dye_wool_stairs_15_8: 
+dye_wool_stairs_15_9: 
+dye_wool_stairs_16_1: 
+dye_wool_stairs_16_10: 
+dye_wool_stairs_16_11: 
+dye_wool_stairs_16_12: 
+dye_wool_stairs_16_13: 
+dye_wool_stairs_16_14: 
+dye_wool_stairs_16_15: 
+dye_wool_stairs_16_2: 
+dye_wool_stairs_16_3: 
+dye_wool_stairs_16_4: 
+dye_wool_stairs_16_5: 
+dye_wool_stairs_16_6: 
+dye_wool_stairs_16_7: 
+dye_wool_stairs_16_8: 
+dye_wool_stairs_16_9: 
+dye_wool_stairs_17_0: 
+dye_wool_stairs_17_1: 
+dye_wool_stairs_17_10: 
+dye_wool_stairs_17_11: 
+dye_wool_stairs_17_12: 
+dye_wool_stairs_17_13: 
+dye_wool_stairs_17_14: 
+dye_wool_stairs_17_15: 
+dye_wool_stairs_17_2: 
+dye_wool_stairs_17_4: 
+dye_wool_stairs_17_5: 
+dye_wool_stairs_17_6: 
+dye_wool_stairs_17_7: 
+dye_wool_stairs_17_8: 
+dye_wool_stairs_17_9: 
+dye_wool_stairs_18_0: 
+dye_wool_stairs_18_1: 
+dye_wool_stairs_18_10: 
+dye_wool_stairs_18_11: 
+dye_wool_stairs_18_12: 
+dye_wool_stairs_18_13: 
+dye_wool_stairs_18_14: 
+dye_wool_stairs_18_15: 
+dye_wool_stairs_18_2: 
+dye_wool_stairs_18_3: 
+dye_wool_stairs_18_5: 
+dye_wool_stairs_18_6: 
+dye_wool_stairs_18_7: 
+dye_wool_stairs_18_8: 
+dye_wool_stairs_18_9: 
+dye_wool_stairs_19_0: 
+dye_wool_stairs_19_1: 
+dye_wool_stairs_19_10: 
+dye_wool_stairs_19_11: 
+dye_wool_stairs_19_12: 
+dye_wool_stairs_19_13: 
+dye_wool_stairs_19_14: 
+dye_wool_stairs_19_2: 
+dye_wool_stairs_19_3: 
+dye_wool_stairs_19_4: 
+dye_wool_stairs_19_5: 
+dye_wool_stairs_19_6: 
+dye_wool_stairs_19_7: 
+dye_wool_stairs_19_8: 
+dye_wool_stairs_19_9: 
+dye_wool_stairs_1_0: 
+dye_wool_stairs_1_10: 
+dye_wool_stairs_1_11: 
+dye_wool_stairs_1_12: 
+dye_wool_stairs_1_13: 
+dye_wool_stairs_1_14: 
+dye_wool_stairs_1_15: 
+dye_wool_stairs_1_2: 
+dye_wool_stairs_1_3: 
+dye_wool_stairs_1_4: 
+dye_wool_stairs_1_5: 
+dye_wool_stairs_1_6: 
+dye_wool_stairs_1_7: 
+dye_wool_stairs_1_8: 
+dye_wool_stairs_1_9: 
+dye_wool_stairs_2_0: 
+dye_wool_stairs_2_1: 
+dye_wool_stairs_2_10: 
+dye_wool_stairs_2_11: 
+dye_wool_stairs_2_12: 
+dye_wool_stairs_2_13: 
+dye_wool_stairs_2_14: 
+dye_wool_stairs_2_15: 
+dye_wool_stairs_2_3: 
+dye_wool_stairs_2_4: 
+dye_wool_stairs_2_5: 
+dye_wool_stairs_2_6: 
+dye_wool_stairs_2_7: 
+dye_wool_stairs_2_8: 
+dye_wool_stairs_2_9: 
+dye_wool_stairs_3_0: 
+dye_wool_stairs_3_1: 
+dye_wool_stairs_3_10: 
+dye_wool_stairs_3_11: 
+dye_wool_stairs_3_12: 
+dye_wool_stairs_3_13: 
+dye_wool_stairs_3_14: 
+dye_wool_stairs_3_15: 
+dye_wool_stairs_3_2: 
+dye_wool_stairs_3_4: 
+dye_wool_stairs_3_5: 
+dye_wool_stairs_3_6: 
+dye_wool_stairs_3_7: 
+dye_wool_stairs_3_8: 
+dye_wool_stairs_3_9: 
+dye_wool_stairs_4_0: 
+dye_wool_stairs_4_1: 
+dye_wool_stairs_4_10: 
+dye_wool_stairs_4_11: 
+dye_wool_stairs_4_12: 
+dye_wool_stairs_4_13: 
+dye_wool_stairs_4_14: 
+dye_wool_stairs_4_15: 
+dye_wool_stairs_4_2: 
+dye_wool_stairs_4_3: 
+dye_wool_stairs_4_5: 
+dye_wool_stairs_4_6: 
+dye_wool_stairs_4_7: 
+dye_wool_stairs_4_8: 
+dye_wool_stairs_4_9: 
+dye_wool_stairs_5_0: 
+dye_wool_stairs_5_1: 
+dye_wool_stairs_5_10: 
+dye_wool_stairs_5_11: 
+dye_wool_stairs_5_12: 
+dye_wool_stairs_5_13: 
+dye_wool_stairs_5_14: 
+dye_wool_stairs_5_15: 
+dye_wool_stairs_5_2: 
+dye_wool_stairs_5_3: 
+dye_wool_stairs_5_4: 
+dye_wool_stairs_5_6: 
+dye_wool_stairs_5_7: 
+dye_wool_stairs_5_8: 
+dye_wool_stairs_5_9: 
+dye_wool_stairs_6_0: 
+dye_wool_stairs_6_1: 
+dye_wool_stairs_6_10: 
+dye_wool_stairs_6_11: 
+dye_wool_stairs_6_12: 
+dye_wool_stairs_6_13: 
+dye_wool_stairs_6_14: 
+dye_wool_stairs_6_15: 
+dye_wool_stairs_6_2: 
+dye_wool_stairs_6_3: 
+dye_wool_stairs_6_4: 
+dye_wool_stairs_6_5: 
+dye_wool_stairs_6_7: 
+dye_wool_stairs_6_8: 
+dye_wool_stairs_6_9: 
+dye_wool_stairs_7_0: 
+dye_wool_stairs_7_1: 
+dye_wool_stairs_7_10: 
+dye_wool_stairs_7_11: 
+dye_wool_stairs_7_12: 
+dye_wool_stairs_7_13: 
+dye_wool_stairs_7_14: 
+dye_wool_stairs_7_15: 
+dye_wool_stairs_7_2: 
+dye_wool_stairs_7_3: 
+dye_wool_stairs_7_4: 
+dye_wool_stairs_7_5: 
+dye_wool_stairs_7_6: 
+dye_wool_stairs_7_8: 
+dye_wool_stairs_7_9: 
+dye_wool_stairs_8_0: 
+dye_wool_stairs_8_1: 
+dye_wool_stairs_8_10: 
+dye_wool_stairs_8_11: 
+dye_wool_stairs_8_12: 
+dye_wool_stairs_8_13: 
+dye_wool_stairs_8_14: 
+dye_wool_stairs_8_15: 
+dye_wool_stairs_8_2: 
+dye_wool_stairs_8_3: 
+dye_wool_stairs_8_4: 
+dye_wool_stairs_8_5: 
+dye_wool_stairs_8_6: 
+dye_wool_stairs_8_7: 
+dye_wool_stairs_8_9: 
+dye_wool_stairs_9_0: 
+dye_wool_stairs_9_1: 
+dye_wool_stairs_9_10: 
+dye_wool_stairs_9_11: 
+dye_wool_stairs_9_12: 
+dye_wool_stairs_9_13: 
+dye_wool_stairs_9_14: 
+dye_wool_stairs_9_15: 
+dye_wool_stairs_9_2: 
+dye_wool_stairs_9_3: 
+dye_wool_stairs_9_4: 
+dye_wool_stairs_9_5: 
+dye_wool_stairs_9_6: 
+dye_wool_stairs_9_7: 
+dye_wool_stairs_9_8: 
+harness_color_0: 
+harness_color_0_1: 
+harness_color_0_10: 
+harness_color_0_11: 
+harness_color_0_12: 
+harness_color_0_13: 
+harness_color_0_14: 
+harness_color_0_15: 
+harness_color_0_17: 
+harness_color_0_18: 
+harness_color_0_19: 
+harness_color_0_2: 
+harness_color_0_3: 
+harness_color_0_4: 
+harness_color_0_5: 
+harness_color_0_6: 
+harness_color_0_7: 
+harness_color_0_8: 
+harness_color_0_9: 
+harness_color_1: 
+harness_color_10: 
+harness_color_10_0: 
+harness_color_10_1: 
+harness_color_10_11: 
+harness_color_10_12: 
+harness_color_10_13: 
+harness_color_10_14: 
+harness_color_10_15: 
+harness_color_10_16: 
+harness_color_10_17: 
+harness_color_10_18: 
+harness_color_10_19: 
+harness_color_10_2: 
+harness_color_10_3: 
+harness_color_10_4: 
+harness_color_10_5: 
+harness_color_10_6: 
+harness_color_10_7: 
+harness_color_10_8: 
+harness_color_10_9: 
+harness_color_11: 
+harness_color_11_0: 
+harness_color_11_1: 
+harness_color_11_10: 
+harness_color_11_12: 
+harness_color_11_13: 
+harness_color_11_14: 
+harness_color_11_15: 
+harness_color_11_16: 
+harness_color_11_17: 
+harness_color_11_18: 
+harness_color_11_19: 
+harness_color_11_2: 
+harness_color_11_3: 
+harness_color_11_4: 
+harness_color_11_5: 
+harness_color_11_6: 
+harness_color_11_7: 
+harness_color_11_8: 
+harness_color_11_9: 
+harness_color_12: 
+harness_color_12_0: 
+harness_color_12_1: 
+harness_color_12_10: 
+harness_color_12_11: 
+harness_color_12_13: 
+harness_color_12_14: 
+harness_color_12_15: 
+harness_color_12_16: 
+harness_color_12_17: 
+harness_color_12_18: 
+harness_color_12_19: 
+harness_color_12_2: 
+harness_color_12_3: 
+harness_color_12_4: 
+harness_color_12_5: 
+harness_color_12_6: 
+harness_color_12_7: 
+harness_color_12_8: 
+harness_color_12_9: 
+harness_color_13: 
+harness_color_13_0: 
+harness_color_13_1: 
+harness_color_13_10: 
+harness_color_13_11: 
+harness_color_13_12: 
+harness_color_13_14: 
+harness_color_13_15: 
+harness_color_13_16: 
+harness_color_13_17: 
+harness_color_13_18: 
+harness_color_13_19: 
+harness_color_13_2: 
+harness_color_13_3: 
+harness_color_13_4: 
+harness_color_13_5: 
+harness_color_13_6: 
+harness_color_13_7: 
+harness_color_13_8: 
+harness_color_13_9: 
+harness_color_14: 
+harness_color_14_0: 
+harness_color_14_1: 
+harness_color_14_10: 
+harness_color_14_11: 
+harness_color_14_12: 
+harness_color_14_13: 
+harness_color_14_15: 
+harness_color_14_16: 
+harness_color_14_17: 
+harness_color_14_18: 
+harness_color_14_19: 
+harness_color_14_2: 
+harness_color_14_3: 
+harness_color_14_4: 
+harness_color_14_5: 
+harness_color_14_6: 
+harness_color_14_7: 
+harness_color_14_8: 
+harness_color_14_9: 
+harness_color_15: 
+harness_color_15_0: 
+harness_color_15_1: 
+harness_color_15_10: 
+harness_color_15_11: 
+harness_color_15_12: 
+harness_color_15_13: 
+harness_color_15_14: 
+harness_color_15_16: 
+harness_color_15_17: 
+harness_color_15_18: 
+harness_color_15_2: 
+harness_color_15_3: 
+harness_color_15_4: 
+harness_color_15_5: 
+harness_color_15_6: 
+harness_color_15_7: 
+harness_color_15_8: 
+harness_color_15_9: 
+harness_color_16: 
+harness_color_16_1: 
+harness_color_16_10: 
+harness_color_16_11: 
+harness_color_16_12: 
+harness_color_16_13: 
+harness_color_16_14: 
+harness_color_16_15: 
+harness_color_16_17: 
+harness_color_16_18: 
+harness_color_16_19: 
+harness_color_16_2: 
+harness_color_16_3: 
+harness_color_16_4: 
+harness_color_16_5: 
+harness_color_16_6: 
+harness_color_16_7: 
+harness_color_16_8: 
+harness_color_16_9: 
+harness_color_17: 
+harness_color_17_0: 
+harness_color_17_1: 
+harness_color_17_10: 
+harness_color_17_11: 
+harness_color_17_12: 
+harness_color_17_13: 
+harness_color_17_14: 
+harness_color_17_15: 
+harness_color_17_16: 
+harness_color_17_18: 
+harness_color_17_19: 
+harness_color_17_2: 
+harness_color_17_4: 
+harness_color_17_5: 
+harness_color_17_6: 
+harness_color_17_7: 
+harness_color_17_8: 
+harness_color_17_9: 
+harness_color_18: 
+harness_color_18_0: 
+harness_color_18_1: 
+harness_color_18_10: 
+harness_color_18_11: 
+harness_color_18_12: 
+harness_color_18_13: 
+harness_color_18_14: 
+harness_color_18_15: 
+harness_color_18_16: 
+harness_color_18_17: 
+harness_color_18_19: 
+harness_color_18_2: 
+harness_color_18_3: 
+harness_color_18_5: 
+harness_color_18_6: 
+harness_color_18_7: 
+harness_color_18_8: 
+harness_color_18_9: 
+harness_color_19: 
+harness_color_19_0: 
+harness_color_19_1: 
+harness_color_19_10: 
+harness_color_19_11: 
+harness_color_19_12: 
+harness_color_19_13: 
+harness_color_19_14: 
+harness_color_19_16: 
+harness_color_19_17: 
+harness_color_19_18: 
+harness_color_19_2: 
+harness_color_19_3: 
+harness_color_19_4: 
+harness_color_19_5: 
+harness_color_19_6: 
+harness_color_19_7: 
+harness_color_19_8: 
+harness_color_19_9: 
+harness_color_1_0: 
+harness_color_1_10: 
+harness_color_1_11: 
+harness_color_1_12: 
+harness_color_1_13: 
+harness_color_1_14: 
+harness_color_1_15: 
+harness_color_1_16: 
+harness_color_1_17: 
+harness_color_1_18: 
+harness_color_1_19: 
+harness_color_1_2: 
+harness_color_1_3: 
+harness_color_1_4: 
+harness_color_1_5: 
+harness_color_1_6: 
+harness_color_1_7: 
+harness_color_1_8: 
+harness_color_1_9: 
+harness_color_2: 
+harness_color_2_0: 
+harness_color_2_1: 
+harness_color_2_10: 
+harness_color_2_11: 
+harness_color_2_12: 
+harness_color_2_13: 
+harness_color_2_14: 
+harness_color_2_15: 
+harness_color_2_16: 
+harness_color_2_17: 
+harness_color_2_18: 
+harness_color_2_19: 
+harness_color_2_3: 
+harness_color_2_4: 
+harness_color_2_5: 
+harness_color_2_6: 
+harness_color_2_7: 
+harness_color_2_8: 
+harness_color_2_9: 
+harness_color_3: 
+harness_color_3_0: 
+harness_color_3_1: 
+harness_color_3_10: 
+harness_color_3_11: 
+harness_color_3_12: 
+harness_color_3_13: 
+harness_color_3_14: 
+harness_color_3_15: 
+harness_color_3_16: 
+harness_color_3_18: 
+harness_color_3_19: 
+harness_color_3_2: 
+harness_color_3_4: 
+harness_color_3_5: 
+harness_color_3_6: 
+harness_color_3_7: 
+harness_color_3_8: 
+harness_color_3_9: 
+harness_color_4: 
+harness_color_4_0: 
+harness_color_4_1: 
+harness_color_4_10: 
+harness_color_4_11: 
+harness_color_4_12: 
+harness_color_4_13: 
+harness_color_4_14: 
+harness_color_4_15: 
+harness_color_4_16: 
+harness_color_4_17: 
+harness_color_4_19: 
+harness_color_4_2: 
+harness_color_4_3: 
+harness_color_4_5: 
+harness_color_4_6: 
+harness_color_4_7: 
+harness_color_4_8: 
+harness_color_4_9: 
+harness_color_5: 
+harness_color_5_0: 
+harness_color_5_1: 
+harness_color_5_10: 
+harness_color_5_11: 
+harness_color_5_12: 
+harness_color_5_13: 
+harness_color_5_14: 
+harness_color_5_15: 
+harness_color_5_16: 
+harness_color_5_17: 
+harness_color_5_18: 
+harness_color_5_19: 
+harness_color_5_2: 
+harness_color_5_3: 
+harness_color_5_4: 
+harness_color_5_6: 
+harness_color_5_7: 
+harness_color_5_8: 
+harness_color_5_9: 
+harness_color_6: 
+harness_color_6_0: 
+harness_color_6_1: 
+harness_color_6_10: 
+harness_color_6_11: 
+harness_color_6_12: 
+harness_color_6_13: 
+harness_color_6_14: 
+harness_color_6_15: 
+harness_color_6_16: 
+harness_color_6_17: 
+harness_color_6_18: 
+harness_color_6_19: 
+harness_color_6_2: 
+harness_color_6_3: 
+harness_color_6_4: 
+harness_color_6_5: 
+harness_color_6_7: 
+harness_color_6_8: 
+harness_color_6_9: 
+harness_color_7: 
+harness_color_7_0: 
+harness_color_7_1: 
+harness_color_7_10: 
+harness_color_7_11: 
+harness_color_7_12: 
+harness_color_7_13: 
+harness_color_7_14: 
+harness_color_7_15: 
+harness_color_7_16: 
+harness_color_7_17: 
+harness_color_7_18: 
+harness_color_7_19: 
+harness_color_7_2: 
+harness_color_7_3: 
+harness_color_7_4: 
+harness_color_7_5: 
+harness_color_7_6: 
+harness_color_7_8: 
+harness_color_7_9: 
+harness_color_8: 
+harness_color_8_0: 
+harness_color_8_1: 
+harness_color_8_10: 
+harness_color_8_11: 
+harness_color_8_12: 
+harness_color_8_13: 
+harness_color_8_14: 
+harness_color_8_15: 
+harness_color_8_16: 
+harness_color_8_17: 
+harness_color_8_18: 
+harness_color_8_19: 
+harness_color_8_2: 
+harness_color_8_3: 
+harness_color_8_4: 
+harness_color_8_5: 
+harness_color_8_6: 
+harness_color_8_7: 
+harness_color_8_9: 
+harness_color_9: 
+harness_color_9_0: 
+harness_color_9_1: 
+harness_color_9_10: 
+harness_color_9_11: 
+harness_color_9_12: 
+harness_color_9_13: 
+harness_color_9_14: 
+harness_color_9_15: 
+harness_color_9_16: 
+harness_color_9_17: 
+harness_color_9_18: 
+harness_color_9_19: 
+harness_color_9_2: 
+harness_color_9_3: 
+harness_color_9_4: 
+harness_color_9_5: 
+harness_color_9_6: 
+harness_color_9_7: 
+harness_color_9_8: 
+heiroglyphs_redsandstone_recipeId: 
+heiroglyphs_sandstone_recipeId: 
+jungle_stairs_jungle_recipeId: 
+lines_purpur_recipeId: 
+minecraft:Bookshelf_woodplanks_recipeId: <工作台>木板*6+书*3->书架
+minecraft:Bowl_recipeId: <工作台>木板*3->碗*4
+minecraft:Chest_recipeId: <工作台>木板*8->箱子
+minecraft:DaylightDetector_recipeId: <工作台>玻璃*3+下界石英*3+木质台阶*3->阳光探测器
+minecraft:FireCharge_coal_sulphur_recipeId: <工作台>烈焰粉+煤炭/木炭+火药~>火焰弹*3
+minecraft:Jukebox_recipeId: <工作台>木板*8+钻石->唱片机
+minecraft:WorkBench_recipeId: <工作台>木板*4->工作台
+minecraft:WorkBench_recipeId_from_oak: <工作台>橡木木板*4->工作台
+minecraft:acacia_boat: <工作台>金合欢木板*5->金合欢木船
+minecraft:acacia_chest_boat: <工作台>箱子+金合欢木船~>金合欢木运输船
+minecraft:acacia_door: <工作台>金合欢木板*6->金合欢木门*3
+minecraft:acacia_fence: <工作台>木棍*2+金合欢木板*4->金合欢木栅栏*3
+minecraft:acacia_fence_gate: <工作台>木棍*4+金合欢木板*2->金合欢木栅栏门
+minecraft:acacia_hanging_sign: <工作台>去皮金合欢原木*6+铁链*2->悬挂式金合欢木告示牌*6
+minecraft:acacia_planks: <工作台>金合欢原木->金合欢木板*4
+minecraft:acacia_planks_from_stripped: <工作台>去皮金合欢原木->金合欢木板*4
+minecraft:acacia_planks_from_stripped_wood: <工作台>去皮金合欢木->金合欢木板*4
+minecraft:acacia_planks_from_wood: <工作台>金合欢木->金合欢木板*4
+minecraft:acacia_shelf_from_stripped_acacia_log: <工作台>去皮金合欢原木*6->金合欢木展示架*6
+minecraft:acacia_stairs: <工作台>金合欢木板*6->金合欢木楼梯*4
+minecraft:acacia_wood: <工作台>金合欢原木*4->金合欢木*3
+minecraft:acacia_wood_stripped: <工作台>去皮金合欢原木*4->去皮金合欢木*3
+minecraft:acacia_wooden_slab: <工作台>金合欢木板*3->金合欢木台阶*6
+minecraft:activator_rail: <工作台>红石火把+木棍*2+铁锭*6->激活铁轨*6
+minecraft:amethyst_block: <工作台>紫水晶碎片*4->紫水晶块
+minecraft:andesite: <工作台>闪长岩+圆石~>安山岩*2
+minecraft:andesite_stairs: <工作台>安山岩*6->安山岩楼梯*4
+minecraft:andesite_wall: <工作台>安山岩*6->安山岩墙*6
+minecraft:anvil: <工作台>铁块*3+铁锭*4->铁砧
+minecraft:armor_stand: <工作台>木棍*6+平滑石头台阶->盔甲架
+minecraft:arrow: <工作台>木棍+燧石+羽毛->箭*4
+minecraft:bamboo_block: <工作台>竹子*9->竹块
+minecraft:bamboo_button: <工作台>竹板->竹按钮
+minecraft:bamboo_chest_raft: <工作台>箱子+竹筏~>运输竹筏
+minecraft:bamboo_door: <工作台>竹板*6->竹门*3
+minecraft:bamboo_fence: <工作台>木棍*2+竹板*4->竹栅栏*3
+minecraft:bamboo_fence_gate: <工作台>木棍*4+竹板*2->竹栅栏门
+minecraft:bamboo_hanging_sign: <工作台>去皮竹块*6+铁链*2->悬挂式竹告示牌*6
+minecraft:bamboo_mosaic: <工作台>竹台阶*2->竹马赛克
+minecraft:bamboo_mosaic_slab: <工作台>竹马赛克*3->竹马赛克台阶*6
+minecraft:bamboo_mosaic_stairs: <工作台>竹马赛克*6->竹马赛克楼梯*4
+minecraft:bamboo_planks: <工作台>竹块->竹板*2
+minecraft:bamboo_planks_from_stripped: <工作台>去皮竹块->竹板*2
+minecraft:bamboo_pressure_plate: <工作台>竹板*2->竹压力板
+minecraft:bamboo_raft: <工作台>竹板*5->竹筏
+minecraft:bamboo_shelf_from_stripped_bamboo_block: <工作台>去皮竹块*6->竹展示架*6
+minecraft:bamboo_sign: <工作台>竹板*6+木棍->竹告示牌*3
+minecraft:bamboo_slab: <工作台>竹板*3->竹台阶*6
+minecraft:bamboo_stairs: <工作台>竹板*6->竹楼梯*4
+minecraft:bamboo_trapdoor: <工作台>竹板*6->竹活板门*2
+minecraft:banner_pattern_bricks: <工作台>纸+红砖块~>砖纹旗帜图案
+minecraft:banner_pattern_creeper: <工作台>纸+苦力怕的头~>苦力怕盾徽旗帜图案
+minecraft:banner_pattern_flower: <工作台>纸+滨菊~>花朵盾徽旗帜图案
+minecraft:banner_pattern_skull: <工作台>纸+凋灵骷髅头颅~>头颅盾徽旗帜图案
+minecraft:banner_pattern_thing: <工作台>纸+附魔金苹果~>Mojang徽标旗帜图案
+minecraft:banner_pattern_vines: <工作台>纸+藤蔓~>波纹边旗帜图案
+minecraft:barrel_with_planks: <工作台>木板*6+木质台阶*2->木桶
+minecraft:basic_map_to_enhanced: <工作台>空地图+指南针~>空定位器地图
+minecraft:beacon: <工作台>下界之星+玻璃*5+黑曜石*3->信标
+minecraft:beehive: <工作台>木板*6+蜜脾*3->蜂箱
+minecraft:beetroot_soup: <工作台>碗+甜菜根*6~>甜菜汤
+minecraft:birch_boat: <工作台>白桦木板*5->白桦木船
+minecraft:birch_chest_boat: <工作台>箱子+白桦木船~>白桦木运输船
+minecraft:birch_door: <工作台>白桦木板*6->白桦木门*3
+minecraft:birch_fence: <工作台>木棍*2+白桦木板*4->白桦木栅栏*3
+minecraft:birch_fence_gate: <工作台>木棍*4+白桦木板*2->白桦木栅栏门
+minecraft:birch_hanging_sign: <工作台>去皮白桦原木*6+铁链*2->悬挂式白桦木告示牌*6
+minecraft:birch_planks: <工作台>白桦原木->白桦木板*4
+minecraft:birch_planks_from_stripped: <工作台>去皮白桦原木->白桦木板*4
+minecraft:birch_planks_from_stripped_wood: <工作台>去皮白桦木->白桦木板*4
+minecraft:birch_planks_from_wood: <工作台>白桦木->白桦木板*4
+minecraft:birch_shelf_from_stripped_birch_log: <工作台>去皮白桦原木*6->白桦木展示架*6
+minecraft:birch_stairs: <工作台>白桦木板*6->白桦木楼梯*4
+minecraft:birch_wood: <工作台>白桦原木*4->白桦木*3
+minecraft:birch_wood_stripped: <工作台>去皮白桦原木*4->去皮白桦木*3
+minecraft:birch_wooden_slab: <工作台>白桦木板*3->白桦木台阶*6
+minecraft:black_banner: <工作台>黑色羊毛*6+木棍->黑色旗帜
+minecraft:black_candle: <工作台>蜡烛+黑色染料~>黑色蜡烛
+minecraft:black_candle_from_ink_sac: <工作台>蜡烛+墨囊~>黑色蜡烛
+minecraft:black_carpet: <工作台>黑色羊毛*2->黑色地毯*3
+minecraft:black_carpet_from_white: <工作台>白色地毯*8+黑色染料->黑色地毯*8
+minecraft:black_concrete_powder: <工作台>黑色染料+沙子+沙子+沙子+沙子+沙砾+沙砾+沙砾+沙砾~>黑色混凝土粉末*8
+minecraft:black_concrete_powder_from_ink_sac: <工作台>墨囊+沙子+沙子+沙子+沙子+沙砾+沙砾+沙砾+沙砾~>黑色混凝土粉末*8
+minecraft:black_cushion: <工作台>黑色羊毛台阶*3->黑色坐垫
+minecraft:black_dye_from_ink_sac: <工作台>墨囊~>黑色染料
+minecraft:black_dye_from_wither_rose: <工作台>凋灵玫瑰~>黑色染料
+minecraft:black_stained_glass: <工作台>玻璃*8+黑色染料->黑色染色玻璃*8
+minecraft:black_stained_glass_from_ink_sac: <工作台>玻璃*8+墨囊->黑色染色玻璃*8
+minecraft:black_stained_glass_pane: <工作台>黑色染色玻璃*6->黑色染色玻璃板*16
+minecraft:black_stained_glass_pane_from_pane: <工作台>玻璃板*8+黑色染料->黑色染色玻璃板*8
+minecraft:black_stained_hardened_clay: <工作台>陶瓦*8+黑色染料->黑色陶瓦*8
+minecraft:black_stained_hardened_clay_from_ink_sac: <工作台>陶瓦*8+墨囊->黑色陶瓦*8
+minecraft:black_wool_slab: <工作台>黑色羊毛*3->黑色羊毛台阶*6
+minecraft:black_wool_stairs: <工作台>黑色羊毛*6->黑色羊毛楼梯*4
+minecraft:blackstone_slab: <工作台>黑石*3->黑石台阶*6
+minecraft:blackstone_stairs: <工作台>黑石*6->黑石楼梯*4
+minecraft:blackstone_wall: <工作台>黑石*6->黑石墙*6
+minecraft:blast_furnace: <工作台>平滑石头*3+铁锭*5+熔炉->高炉
+minecraft:blaze_powder: <工作台>烈焰棒~>烈焰粉*2
+minecraft:blue_banner: <工作台>蓝色羊毛*6+木棍->蓝色旗帜
+minecraft:blue_candle: <工作台>蜡烛+蓝色染料~>蓝色蜡烛
+minecraft:blue_candle_from_lapis_lazuli: <工作台>蜡烛+青金石~>蓝色蜡烛
+minecraft:blue_carpet: <工作台>蓝色羊毛*2->蓝色地毯*3
+minecraft:blue_carpet_from_white: <工作台>白色地毯*8+蓝色染料->蓝色地毯*8
+minecraft:blue_concrete_powder: <工作台>蓝色染料+沙子+沙子+沙子+沙子+沙砾+沙砾+沙砾+沙砾~>蓝色混凝土粉末*8
+minecraft:blue_concrete_powder_from_lapis_lazuli: <工作台>青金石+沙子+沙子+沙子+沙子+沙砾+沙砾+沙砾+沙砾~>蓝色混凝土粉末*8
+minecraft:blue_cushion: <工作台>蓝色羊毛台阶*3->蓝色坐垫
+minecraft:blue_dye_from_cornflower: <工作台>矢车菊~>蓝色染料
+minecraft:blue_dye_from_lapis_lazuli: <工作台>青金石~>蓝色染料
+minecraft:blue_ice: <工作台>浮冰*9->蓝冰
+minecraft:blue_stained_glass: <工作台>玻璃*8+蓝色染料->蓝色染色玻璃*8
+minecraft:blue_stained_glass_from_lapis_lazuli: <工作台>玻璃*8+青金石->蓝色染色玻璃*8
+minecraft:blue_stained_glass_pane: <工作台>蓝色染色玻璃*6->蓝色染色玻璃板*16
+minecraft:blue_stained_glass_pane_from_pane: <工作台>玻璃板*8+蓝色染料->蓝色染色玻璃板*8
+minecraft:blue_stained_hardened_clay: <工作台>陶瓦*8+蓝色染料->蓝色陶瓦*8
+minecraft:blue_stained_hardened_clay_from_lapis_lazuli: <工作台>陶瓦*8+青金石->蓝色陶瓦*8
+minecraft:blue_wool_slab: <工作台>蓝色羊毛*3->蓝色羊毛台阶*6
+minecraft:blue_wool_stairs: <工作台>蓝色羊毛*6->蓝色羊毛楼梯*4
+minecraft:boat: <工作台>橡木木板*5->橡木船
+minecraft:bolt_armor_trim_smithing_template_duplicate: <工作台>镶铆盔甲纹饰 锻造模板+钻石*7+铜块->镶铆盔甲纹饰 锻造模板*2
+minecraft:bolt_armor_trim_smithing_template_duplicate_waxed: <工作台>镶铆盔甲纹饰 锻造模板+钻石*7+涂蜡的铜块->镶铆盔甲纹饰 锻造模板*2
+minecraft:bone_block: <工作台>骨粉*9->骨块
+minecraft:bone_meal_from_block: <工作台>骨块~>骨粉*9
+minecraft:bone_meal_from_bone: <工作台>骨头~>骨粉*3
+minecraft:book: <工作台>纸+纸+纸+皮革~>书
+minecraft:bow: <工作台>木棍*3+线*3->弓
+minecraft:bread: <工作台>小麦*3->面包
+minecraft:brewing_stand: <工作台>烈焰棒+类圆石方块*3->酿造台
+minecraft:brick_block: <工作台>红砖*4->红砖块
+minecraft:brick_stairs: <工作台>红砖块*6->红砖楼梯*4
+minecraft:brick_wall: <工作台>红砖块*6->红砖墙*6
+minecraft:brown_banner: <工作台>棕色羊毛*6+木棍->棕色旗帜
+minecraft:brown_candle: <工作台>蜡烛+棕色染料~>棕色蜡烛
+minecraft:brown_candle_from_cocoa_beans: <工作台>蜡烛+可可豆~>棕色蜡烛
+minecraft:brown_carpet: <工作台>棕色羊毛*2->棕色地毯*3
+minecraft:brown_carpet_from_white: <工作台>白色地毯*8+棕色染料->棕色地毯*8
+minecraft:brown_concrete_powder: <工作台>棕色染料+沙子+沙子+沙子+沙子+沙砾+沙砾+沙砾+沙砾~>棕色混凝土粉末*8
+minecraft:brown_concrete_powder_from_cocoa_beans: <工作台>可可豆+沙子+沙子+沙子+沙子+沙砾+沙砾+沙砾+沙砾~>棕色混凝土粉末*8
+minecraft:brown_cushion: <工作台>棕色羊毛台阶*3->棕色坐垫
+minecraft:brown_dye_from_cocoa_beans: <工作台>可可豆~>棕色染料
+minecraft:brown_stained_glass: <工作台>玻璃*8+棕色染料->棕色染色玻璃*8
+minecraft:brown_stained_glass_from_cocoa_beans: <工作台>玻璃*8+可可豆->棕色染色玻璃*8
+minecraft:brown_stained_glass_pane: <工作台>棕色染色玻璃*6->棕色染色玻璃板*16
+minecraft:brown_stained_glass_pane_from_pane: <工作台>玻璃板*8+棕色染料->棕色染色玻璃板*8
+minecraft:brown_stained_hardened_clay: <工作台>陶瓦*8+棕色染料->棕色陶瓦*8
+minecraft:brown_stained_hardened_clay_from_cocoa_beans: <工作台>陶瓦*8+可可豆->棕色陶瓦*8
+minecraft:brown_wool_slab: <工作台>棕色羊毛*3->棕色羊毛台阶*6
+minecraft:brown_wool_stairs: <工作台>棕色羊毛*6->棕色羊毛楼梯*4
+minecraft:brush: <工作台>羽毛+铜锭+木棍->刷子
+minecraft:bucket: <工作台>铁锭*3->铁桶
+minecraft:bundle: <工作台>线+皮革->收纳袋
+minecraft:cake: <工作台>奶桶*3+糖*2+小麦*3+鸡蛋->蛋糕,铁桶*3
+minecraft:calibrated_sculk_sensor: <工作台>紫水晶碎片*3+幽匿感测体->校频幽匿感测体
+minecraft:campfire: <工作台>木棍*3+原木*3+煤炭/木炭->营火
+minecraft:candle: <工作台>蜜脾+线->蜡烛
+minecraft:carrot_on_a_stick: <工作台>钓鱼竿+胡萝卜->胡萝卜钓竿
+minecraft:cartography_table: <工作台>纸*2+木板*4->制图台
+minecraft:cartography_table_locator_map: <制图台>纸+指南针~>空定位器地图
+minecraft:cartography_table_map: <制图台>纸~>空地图
+minecraft:cauldron: <工作台>铁锭*7->炼药锅
+minecraft:chain: <工作台>铁粒*2+铁锭->铁链
+minecraft:cherry_boat: <工作台>樱花木板*5->樱花木船
+minecraft:cherry_button: <工作台>樱花木板->樱花木按钮
+minecraft:cherry_chest_boat: <工作台>箱子+樱花木船~>樱花木运输船
+minecraft:cherry_door: <工作台>樱花木板*6->樱花木门*3
+minecraft:cherry_fence: <工作台>木棍*2+樱花木板*4->樱花木栅栏*3
+minecraft:cherry_fence_gate: <工作台>木棍*4+樱花木板*2->樱花木栅栏门
+minecraft:cherry_hanging_sign: <工作台>去皮樱花原木*6+铁链*2->悬挂式樱花木告示牌*6
+minecraft:cherry_planks_from_log: <工作台>樱花原木->樱花木板*4
+minecraft:cherry_planks_from_stripped_log: <工作台>去皮樱花原木->樱花木板*4
+minecraft:cherry_planks_from_stripped_wood: <工作台>去皮樱花木->樱花木板*4
+minecraft:cherry_planks_from_wood: <工作台>樱花木->樱花木板*4
+minecraft:cherry_pressure_plate: <工作台>樱花木板*2->樱花木压力板
+minecraft:cherry_shelf_from_stripped_cherry_log: <工作台>去皮樱花原木*6->樱花木展示架*6
+minecraft:cherry_sign: <工作台>樱花木板*6+木棍->樱花木告示牌*3
+minecraft:cherry_slab: <工作台>樱花木板*3->樱花木台阶*6
+minecraft:cherry_stairs: <工作台>樱花木板*6->樱花木楼梯*4
+minecraft:cherry_trapdoor: <工作台>樱花木板*6->樱花木活板门*2
+minecraft:cherry_wood_from_log: <工作台>樱花原木*4->樱花木*3
+minecraft:cherry_wood_from_stripped_log: <工作台>去皮樱花原木*4->去皮樱花木*3
+minecraft:chest_boat: <工作台>箱子+橡木船~>橡木运输船
+minecraft:chest_minecart: <工作台>箱子+矿车~>运输矿车
+minecraft:chiseled_bookshelf: <工作台>木板*6+木质台阶*3->雕纹书架
+minecraft:chiseled_cinnabar: <工作台>朱砂台阶*2->雕纹朱砂
+minecraft:chiseled_deepslate: <工作台>深板岩圆石台阶*2->雕纹深板岩
+minecraft:chiseled_deepslate_from_cobbled_deepslate_stonecutting: <切石机>深板岩圆石~>雕纹深板岩
+minecraft:chiseled_nether_bricks: <工作台>下界砖台阶*2->雕纹下界砖块
+minecraft:chiseled_polished_blackstone: <工作台>磨制黑石台阶*2->雕纹磨制黑石
+minecraft:chiseled_resin_bricks_from_slabs: <工作台>树脂砖台阶*2->雕纹树脂砖块
+minecraft:chiseled_sulfur: <工作台>硫黄台阶*2->雕纹硫黄
+minecraft:chiseled_tuff: <工作台>凝灰岩台阶*2->雕纹凝灰岩
+minecraft:chiseled_tuff_bricks: <工作台>凝灰岩砖台阶*2->雕纹凝灰岩砖
+minecraft:cinnabar_brick_slab: <工作台>朱砂砖*3->朱砂砖台阶*6
+minecraft:cinnabar_brick_stairs: <工作台>朱砂砖*6->朱砂砖楼梯*4
+minecraft:cinnabar_brick_wall: <工作台>朱砂砖*6->朱砂砖墙*6
+minecraft:cinnabar_bricks: <工作台>磨制朱砂*4->朱砂砖*4
+minecraft:cinnabar_slab: <工作台>朱砂*3->朱砂台阶*6
+minecraft:cinnabar_stairs: <工作台>朱砂*6->朱砂楼梯*4
+minecraft:cinnabar_wall: <工作台>朱砂*6->朱砂墙*6
+minecraft:clay: <工作台>黏土球*4->黏土
+minecraft:clock: <工作台>金锭*4+红石粉->时钟
+minecraft:coal: <工作台>煤炭块->煤炭*9
+minecraft:coal_block: <工作台>煤炭*9->煤炭块
+minecraft:coarse_dirt: <工作台>泥土*2+沙砾*2->砂土*4
+minecraft:coast_armor_trim_smithing_template_duplicate: <工作台>海岸盔甲纹饰 锻造模板+钻石*7+圆石->海岸盔甲纹饰 锻造模板*2
+minecraft:cobbled_deepslate_slab: <工作台>深板岩圆石*3->深板岩圆石台阶*6
+minecraft:cobbled_deepslate_slab_from_cobbled_deepslate_stonecutting: <切石机>深板岩圆石~>深板岩圆石台阶*2
+minecraft:cobbled_deepslate_stairs: <工作台>深板岩圆石*6->深板岩圆石楼梯*4
+minecraft:cobbled_deepslate_stairs_from_cobbled_deepslate_stonecutting: <切石机>深板岩圆石~>深板岩圆石楼梯
+minecraft:cobbled_deepslate_wall: <工作台>深板岩圆石*6->深板岩圆石墙*6
+minecraft:cobbled_deepslate_wall_from_cobbled_deepslate_stonecutting: <切石机>深板岩圆石~>深板岩圆石墙
+minecraft:cobblestone_stairs: <工作台>圆石*6->圆石楼梯*4
+minecraft:cobblestone_wall: <工作台>圆石*6->圆石墙*6
+minecraft:comparator: <工作台>红石火把*3+下界石英+石头*3->红石比较器
+minecraft:compass: <工作台>铁锭*4+红石粉->指南针
+minecraft:composter: <工作台>木质台阶*7->堆肥桶
+minecraft:conduit: <工作台>鹦鹉螺壳*8+海洋之心->潮涌核心
+minecraft:cookie: <工作台>小麦*2+可可豆->曲奇*8
+minecraft:copper_axe: <工作台>木棍*2+铜锭*3->铜斧
+minecraft:copper_bars: <工作台>铜锭*6->铜栏杆*16
+minecraft:copper_block_from_ingots: <工作台>铜锭*9->铜块
+minecraft:copper_boots: <工作台>铜锭*4->铜靴子
+minecraft:copper_bulb: <工作台>红石粉+铜块*3+烈焰棒->铜灯*4
+minecraft:copper_chain: <工作台>铜粒*2+铜锭->铜链
+minecraft:copper_chest: <工作台>箱子+铜锭*8->铜箱子
+minecraft:copper_chestplate: <工作台>铜锭*8->铜胸甲
+minecraft:copper_door: <工作台>铜锭*6->铜门*3
+minecraft:copper_grate: <工作台>铜块*4->铜格栅*4
+minecraft:copper_helmet: <工作台>铜锭*5->铜头盔
+minecraft:copper_hoe: <工作台>木棍*2+铜锭*2->铜锄
+minecraft:copper_ingot_from_nuggets: <工作台>铜粒*9->铜锭
+minecraft:copper_lantern: <工作台>铜粒*8+铜火把->铜灯笼
+minecraft:copper_leggings: <工作台>铜锭*7->铜护腿
+minecraft:copper_nugget: <工作台>铜锭->铜粒*9
+minecraft:copper_pickaxe: <工作台>木棍*2+铜锭*3->铜镐
+minecraft:copper_shovel: <工作台>木棍*2+铜锭->铜锹
+minecraft:copper_spear: <工作台>木棍*2+铜锭->铜矛
+minecraft:copper_sword: <工作台>木棍+铜锭*2->铜剑
+minecraft:copper_torch: <工作台>煤炭/木炭+木棍+铜粒->铜火把*4
+minecraft:copper_trapdoor: <工作台>铜锭*4->铜活板门
+minecraft:cracked_deepslate_bricks_furnace: <熔炉>深板岩砖->裂纹深板岩砖
+minecraft:cracked_deepslate_tiles_furnace: <熔炉>深板岩瓦->裂纹深板岩瓦
+minecraft:crafter: <工作台>红石粉*2+铁锭*5+投掷器+工作台->合成器
+minecraft:crafting_table_chiseled_copper: <工作台>切制铜台阶*2->雕纹铜块
+minecraft:crafting_table_cut_copper: <工作台>铜块*4->切制铜块*4
+minecraft:crafting_table_cut_copper_slab: <工作台>切制铜块*3->切制铜台阶*6
+minecraft:crafting_table_cut_copper_stairs: <工作台>切制铜块*6->切制铜楼梯*4
+minecraft:crafting_table_exposed_cut_copper: <工作台>斑驳的铜块*4->斑驳的切制铜块*4
+minecraft:crafting_table_exposed_cut_copper_slab: <工作台>斑驳的切制铜块*3->斑驳的切制铜台阶*6
+minecraft:crafting_table_exposed_cut_copper_stairs: <工作台>斑驳的切制铜块*6->斑驳的切制铜楼梯*4
+minecraft:crafting_table_oxidized_cut_copper: <工作台>氧化的铜块*4->氧化的切制铜块*4
+minecraft:crafting_table_oxidized_cut_copper_slab: <工作台>氧化的切制铜块*3->氧化的切制铜台阶*6
+minecraft:crafting_table_oxidized_cut_copper_stairs: <工作台>氧化的切制铜块*6->氧化的切制铜楼梯*4
+minecraft:crafting_table_waxed_copper_door: <工作台>涂蜡的铜块*6->涂蜡的铜门*3
+minecraft:crafting_table_waxed_cut_copper: <工作台>涂蜡的铜块*4->涂蜡的切制铜块*4
+minecraft:crafting_table_waxed_cut_copper_slab: <工作台>涂蜡的切制铜块*3->涂蜡的切制铜台阶*6
+minecraft:crafting_table_waxed_cut_copper_stairs: <工作台>涂蜡的切制铜块*6->涂蜡的切制铜楼梯*4
+minecraft:crafting_table_waxed_exposed_cut_copper: <工作台>涂蜡的斑驳铜块*4->涂蜡的斑驳切制铜块*4
+minecraft:crafting_table_waxed_exposed_cut_copper_slab: <工作台>涂蜡的斑驳切制铜块*3->涂蜡的斑驳切制铜台阶*6
+minecraft:crafting_table_waxed_exposed_cut_copper_stairs: <工作台>涂蜡的斑驳切制铜块*6->涂蜡的斑驳切制铜楼梯*4
+minecraft:crafting_table_waxed_oxidized_cut_copper: <工作台>涂蜡的氧化铜块*4->涂蜡的氧化切制铜块*4
+minecraft:crafting_table_waxed_oxidized_cut_copper_slab: <工作台>涂蜡的氧化切制铜块*3->涂蜡的氧化切制铜台阶*6
+minecraft:crafting_table_waxed_oxidized_cut_copper_stairs: <工作台>涂蜡的氧化切制铜块*6->涂蜡的氧化切制铜楼梯*4
+minecraft:crafting_table_waxed_weathered_cut_copper: <工作台>涂蜡的锈蚀铜块*4->涂蜡的锈蚀切制铜块*4
+minecraft:crafting_table_waxed_weathered_cut_copper_slab: <工作台>涂蜡的锈蚀切制铜块*3->涂蜡的锈蚀切制铜台阶*6
+minecraft:crafting_table_waxed_weathered_cut_copper_stairs: <工作台>涂蜡的锈蚀切制铜块*6->涂蜡的锈蚀切制铜楼梯*4
+minecraft:crafting_table_weathered_cut_copper: <工作台>锈蚀的铜块*4->锈蚀的切制铜块*4
+minecraft:crafting_table_weathered_cut_copper_slab: <工作台>锈蚀的切制铜块*3->锈蚀的切制铜台阶*6
+minecraft:crafting_table_weathered_cut_copper_stairs: <工作台>锈蚀的切制铜块*6->锈蚀的切制铜楼梯*4
+minecraft:creaking_heart: <工作台>苍白橡木原木*2+树脂块->嘎枝之心
+minecraft:crimson_button: <工作台>绯红木板->绯红木按钮
+minecraft:crimson_door: <工作台>绯红木板*6->绯红木门*3
+minecraft:crimson_fence: <工作台>木棍*2+绯红木板*4->绯红木栅栏*3
+minecraft:crimson_fence_gate: <工作台>木棍*4+绯红木板*2->绯红木栅栏门
+minecraft:crimson_hanging_sign: <工作台>去皮绯红菌柄*6+铁链*2->悬挂式绯红木告示牌*6
+minecraft:crimson_hyphae: <工作台>绯红菌柄*4->绯红菌核*3
+minecraft:crimson_planks: <工作台>绯红菌柄->绯红木板*4
+minecraft:crimson_planks_from_crimson_hyphae: <工作台>绯红菌核->绯红木板*4
+minecraft:crimson_planks_from_stripped_crimson_hyphae: <工作台>去皮绯红菌核->绯红木板*4
+minecraft:crimson_planks_from_stripped_log: <工作台>去皮绯红菌柄->绯红木板*4
+minecraft:crimson_pressure_plate: <工作台>绯红木板*2->绯红木压力板
+minecraft:crimson_shelf_from_stripped_crimson_stem: <工作台>去皮绯红菌柄*6->绯红木展示架*6
+minecraft:crimson_sign: <工作台>绯红木板*6+木棍->绯红木告示牌*3
+minecraft:crimson_slab: <工作台>绯红木板*3->绯红木台阶*6
+minecraft:crimson_stairs: <工作台>绯红木板*6->绯红木楼梯*4
+minecraft:crimson_trapdoor: <工作台>绯红木板*6->绯红木活板门*2
+minecraft:crossbow: <工作台>木棍*3+线*2+铁锭+绊线钩->弩
+minecraft:cyan_banner: <工作台>青色羊毛*6+木棍->青色旗帜
+minecraft:cyan_candle: <工作台>蜡烛+青色染料~>青色蜡烛
+minecraft:cyan_carpet: <工作台>青色羊毛*2->青色地毯*3
+minecraft:cyan_carpet_from_white: <工作台>白色地毯*8+青色染料->青色地毯*8
+minecraft:cyan_concrete_powder: <工作台>青色染料+沙子+沙子+沙子+沙子+沙砾+沙砾+沙砾+沙砾~>青色混凝土粉末*8
+minecraft:cyan_cushion: <工作台>青色羊毛台阶*3->青色坐垫
+minecraft:cyan_dye: <工作台>蓝色染料+绿色染料~>青色染料*2
+minecraft:cyan_dye_from_lapis_lazuli: <工作台>青金石+绿色染料~>青色染料*2
+minecraft:cyan_dye_from_pitcher_plant: <工作台>瓶子草~>青色染料*2
+minecraft:cyan_stained_glass: <工作台>玻璃*8+青色染料->青色染色玻璃*8
+minecraft:cyan_stained_glass_pane: <工作台>青色染色玻璃*6->青色染色玻璃板*16
+minecraft:cyan_stained_glass_pane_from_pane: <工作台>玻璃板*8+青色染料->青色染色玻璃板*8
+minecraft:cyan_stained_hardened_clay: <工作台>陶瓦*8+青色染料->青色陶瓦*8
+minecraft:cyan_wool_slab: <工作台>青色羊毛*3->青色羊毛台阶*6
+minecraft:cyan_wool_stairs: <工作台>青色羊毛*6->青色羊毛楼梯*4
+minecraft:dark_oak_boat: <工作台>深色橡木木板*5->深色橡木船
+minecraft:dark_oak_chest_boat: <工作台>箱子+深色橡木船~>深色橡木运输船
+minecraft:dark_oak_door: <工作台>深色橡木木板*6->深色橡木门*3
+minecraft:dark_oak_fence: <工作台>木棍*2+深色橡木木板*4->深色橡木栅栏*3
+minecraft:dark_oak_fence_gate: <工作台>木棍*4+深色橡木木板*2->深色橡木栅栏门
+minecraft:dark_oak_hanging_sign: <工作台>去皮深色橡木原木*6+铁链*2->悬挂式深色橡木告示牌*6
+minecraft:dark_oak_planks: <工作台>深色橡木原木->深色橡木木板*4
+minecraft:dark_oak_planks_from_stripped: <工作台>去皮深色橡木原木->深色橡木木板*4
+minecraft:dark_oak_planks_from_stripped_wood: <工作台>去皮深色橡木->深色橡木木板*4
+minecraft:dark_oak_planks_from_wood: <工作台>深色橡木->深色橡木木板*4
+minecraft:dark_oak_shelf_from_stripped_dark_oak_log: <工作台>去皮深色橡木原木*6->深色橡木展示架*6
+minecraft:dark_oak_stairs: <工作台>深色橡木木板*6->深色橡木楼梯*4
+minecraft:dark_oak_wood: <工作台>深色橡木原木*4->深色橡木*3
+minecraft:dark_oak_wood_stripped: <工作台>去皮深色橡木原木*4->去皮深色橡木*3
+minecraft:dark_oak_wooden_slab: <工作台>深色橡木木板*3->深色橡木台阶*6
+minecraft:dark_prismarine: <工作台>海晶碎片*8+黑色染料->暗海晶石
+minecraft:dark_prismarine_from_ink_sac: <工作台>海晶碎片*8+墨囊->暗海晶石
+minecraft:deepslate_brick_slab: <工作台>深板岩砖*3->深板岩砖台阶*6
+minecraft:deepslate_brick_slab_from_cobbled_deepslate_stonecutting: <切石机>深板岩圆石~>深板岩砖台阶*2
+minecraft:deepslate_brick_slab_from_deepslate_bricks_stonecutting: <切石机>深板岩砖~>深板岩砖台阶*2
+minecraft:deepslate_brick_slab_from_polished_deepslate_stonecutting: <切石机>磨制深板岩~>深板岩砖台阶*2
+minecraft:deepslate_brick_stairs: <工作台>深板岩砖*6->深板岩砖楼梯*4
+minecraft:deepslate_brick_stairs_from_cobbled_deepslate_stonecutting: <切石机>深板岩圆石~>深板岩砖楼梯
+minecraft:deepslate_brick_stairs_from_deepslate_bricks_stonecutting: <切石机>深板岩砖~>深板岩砖楼梯
+minecraft:deepslate_brick_stairs_from_polished_deepslate_stonecut: <切石机>磨制深板岩~>深板岩砖楼梯
+minecraft:deepslate_brick_wall: <工作台>深板岩砖*6->深板岩砖墙*6
+minecraft:deepslate_brick_wall_from_cobbled_deepslate_stonecutting: <切石机>深板岩圆石~>深板岩砖墙
+minecraft:deepslate_brick_wall_from_deepslate_bricks_stonecutting: <切石机>深板岩砖~>深板岩砖墙
+minecraft:deepslate_brick_wall_from_polished_deepslate_stonecutting: <切石机>磨制深板岩~>深板岩砖墙
+minecraft:deepslate_bricks: <工作台>磨制深板岩*4->深板岩砖*4
+minecraft:deepslate_bricks_from_cobbled_deepslate_stonecutting: <切石机>深板岩圆石~>深板岩砖
+minecraft:deepslate_bricks_from_polished_deepslate_stonecutting: <切石机>磨制深板岩~>深板岩砖
+minecraft:deepslate_furnace: <熔炉>深板岩圆石->深板岩
+minecraft:deepslate_tile_slab: <工作台>深板岩瓦*3->深板岩瓦台阶*6
+minecraft:deepslate_tile_slab_from_cobbled_deepslate_stonecutting: <切石机>深板岩圆石~>深板岩瓦台阶*2
+minecraft:deepslate_tile_slab_from_deepslate_bricks_stonecutting: <切石机>深板岩砖~>深板岩瓦台阶*2
+minecraft:deepslate_tile_slab_from_deepslate_tiles_stonecutting: <切石机>深板岩瓦~>深板岩瓦台阶*2
+minecraft:deepslate_tile_slab_from_polished_deepslate_stonecutting: <切石机>磨制深板岩~>深板岩瓦台阶*2
+minecraft:deepslate_tile_stairs: <工作台>深板岩瓦*6->深板岩瓦楼梯*4
+minecraft:deepslate_tile_stairs_from_cobbled_deepslate_stonecutting: <切石机>深板岩圆石~>深板岩瓦楼梯
+minecraft:deepslate_tile_stairs_from_deepslate_bricks_stonecutting: <切石机>深板岩砖~>深板岩瓦楼梯
+minecraft:deepslate_tile_stairs_from_deepslate_tiles_stonecutting: <切石机>深板岩瓦~>深板岩瓦楼梯
+minecraft:deepslate_tile_stairs_from_polished_deepslate_stonecutting: <切石机>磨制深板岩~>深板岩瓦楼梯
+minecraft:deepslate_tile_wall: <工作台>深板岩瓦*6->深板岩瓦墙*6
+minecraft:deepslate_tile_wall_from_cobbled_deepslate_stonecutting: <切石机>深板岩圆石~>深板岩瓦墙
+minecraft:deepslate_tile_wall_from_deepslate_bricks_stonecutting: <切石机>深板岩砖~>深板岩瓦墙
+minecraft:deepslate_tile_wall_from_deepslate_tiles_stonecutting: <切石机>深板岩瓦~>深板岩瓦墙
+minecraft:deepslate_tile_wall_from_polished_deepslate_stonecutting: <切石机>磨制深板岩~>深板岩瓦墙
+minecraft:deepslate_tiles: <工作台>深板岩砖*4->深板岩瓦*4
+minecraft:deepslate_tiles_from_cobbled_deepslate_stonecutting: <切石机>深板岩圆石~>深板岩瓦
+minecraft:deepslate_tiles_from_deepslate_bricks_stonecutting: <切石机>深板岩砖~>深板岩瓦
+minecraft:deepslate_tiles_from_polished_deepslate_stonecutting: <切石机>磨制深板岩~>深板岩瓦
+minecraft:detector_rail: <工作台>红石粉+石头压力板+铁锭*6->探测铁轨*6
+minecraft:diamond: <工作台>钻石块->钻石*9
+minecraft:diamond_axe: <工作台>木棍*2+钻石*3->钻石斧
+minecraft:diamond_block: <工作台>钻石*9->钻石块
+minecraft:diamond_boots: <工作台>钻石*4->钻石靴子
+minecraft:diamond_chestplate: <工作台>钻石*8->钻石胸甲
+minecraft:diamond_helmet: <工作台>钻石*5->钻石头盔
+minecraft:diamond_hoe: <工作台>木棍*2+钻石*2->钻石锄
+minecraft:diamond_leggings: <工作台>钻石*7->钻石护腿
+minecraft:diamond_pickaxe: <工作台>木棍*2+钻石*3->钻石镐
+minecraft:diamond_shovel: <工作台>木棍*2+钻石->钻石锹
+minecraft:diamond_spear: <工作台>木棍*2+钻石->钻石矛
+minecraft:diamond_sword: <工作台>木棍+钻石*2->钻石剑
+minecraft:diorite: <工作台>下界石英*2+圆石*2->闪长岩*2
+minecraft:diorite_stairs: <工作台>闪长岩*6->闪长岩楼梯*4
+minecraft:diorite_wall: <工作台>闪长岩*6->闪长岩墙*6
+minecraft:dispenser: <工作台>红石粉+圆石*7+弓->发射器
+minecraft:dried_ghast: <工作台>恶魂之泪*8+灵魂沙->失水恶魂
+minecraft:dried_kelp: <工作台>干海带块->干海带*9
+minecraft:dried_kelp_block: <工作台>干海带*9->干海带块
+minecraft:dripstone_block: <工作台>滴水石锥*4->滴水石块
+minecraft:dropper: <工作台>红石粉+圆石*7->投掷器
+minecraft:dune_armor_trim_smithing_template_duplicate: <工作台>沙丘盔甲纹饰 锻造模板+钻石*7+砂岩->沙丘盔甲纹饰 锻造模板*2
+minecraft:emerald: <工作台>绿宝石块->绿宝石*9
+minecraft:emerald_block: <工作台>绿宝石*9->绿宝石块
+minecraft:empty_map_to_enhanced: <工作台>空地图+指南针~>空定位器地图
+minecraft:enchanting_table: <工作台>书+黑曜石*4+钻石*2->附魔台
+minecraft:end_brick_stairs: <工作台>末地石砖*6->末地石砖楼梯*4
+minecraft:end_brick_wall: <工作台>末地石砖*6->末地石砖墙*6
+minecraft:end_bricks: <工作台>末地石*4->末地石砖*4
+minecraft:end_crystal: <工作台>恶魂之泪+末影之眼+玻璃*7->末地水晶
+minecraft:end_rod: <工作台>爆裂紫颂果+烈焰棒->末地烛*4
+minecraft:ender_chest: <工作台>黑曜石*8+末影之眼->末影箱
+minecraft:ender_eye: <工作台>末影珍珠+烈焰粉~>末影之眼
+minecraft:exposed_chiseled_copper: <工作台>斑驳的切制铜台阶*2->斑驳的雕纹铜块
+minecraft:exposed_copper_bulb: <工作台>红石粉+斑驳的铜块*3+烈焰棒->斑驳的铜灯*4
+minecraft:exposed_copper_grate: <工作台>斑驳的铜块*4->斑驳的铜格栅*4
+minecraft:eye_armor_trim_smithing_template_duplicate: <工作台>眼眸盔甲纹饰 锻造模板+钻石*7+末地石->眼眸盔甲纹饰 锻造模板*2
+minecraft:fence: <工作台>木棍*2+橡木木板*4->橡木栅栏*3
+minecraft:fence_gate: <工作台>木棍*4+橡木木板*2->橡木栅栏门
+minecraft:fermented_spider_eye: <工作台>蜘蛛眼+棕色蘑菇+糖~>发酵蛛眼
+minecraft:fishing_rod: <工作台>木棍*3+线*2->钓鱼竿
+minecraft:fletching_table: <工作台>燧石*2+木板*4->制箭台
+minecraft:flint_and_steel: <工作台>铁锭+燧石~>打火石
+minecraft:flow_armor_trim_smithing_template_duplicate: <工作台>涡流盔甲纹饰 锻造模板+钻石*7+旋风棒->涡流盔甲纹饰 锻造模板*2
+minecraft:flower_pot: <工作台>红砖*3->花盆
+minecraft:furnace: <工作台>类圆石方块*8->熔炉
+minecraft:furnace_acacia_leaves: <熔炉>金合欢树叶->枯叶堆
+minecraft:furnace_acacia_wood: <已弃用>金合欢木->煤炭
+minecraft:furnace_ancient_debris: <熔炉/高炉>远古残骸->下界合金碎片
+minecraft:furnace_azalea_leaves: <熔炉>杜鹃树叶->枯叶堆
+minecraft:furnace_beef: <熔炉/烟熏炉/营火/灵魂营火>生牛肉->牛排
+minecraft:furnace_birch_leaves: <熔炉>白桦树叶->枯叶堆
+minecraft:furnace_birch_wood: <已弃用>白桦木->煤炭
+minecraft:furnace_cactus: <熔炉>仙人掌->绿色染料
+minecraft:furnace_chainmail_boots: <熔炉/高炉>锁链靴子->铁粒
+minecraft:furnace_chainmail_chestplate: <熔炉/高炉>锁链胸甲->铁粒
+minecraft:furnace_chainmail_helmet: <熔炉/高炉>锁链头盔->铁粒
+minecraft:furnace_chainmail_leggings: <熔炉/高炉>锁链护腿->铁粒
+minecraft:furnace_cherry_leaves: <熔炉>樱花树叶->枯叶堆
+minecraft:furnace_chicken: <熔炉/烟熏炉/营火/灵魂营火>鸡->熟鸡肉
+minecraft:furnace_chorus_fruit: <熔炉>紫颂果->爆裂紫颂果
+minecraft:furnace_clay: <熔炉>黏土->陶瓦
+minecraft:furnace_clay_ball: <熔炉>黏土球->红砖
+minecraft:furnace_coal_ore: <熔炉/高炉>煤矿石->煤炭
+minecraft:furnace_cobblestone: <熔炉>圆石->石头
+minecraft:furnace_copper: <熔炉/高炉>粗铜->铜锭
+minecraft:furnace_copper_axe: <熔炉/高炉>铜斧->铜粒
+minecraft:furnace_copper_boots: <熔炉/高炉>铜靴子->铜粒
+minecraft:furnace_copper_chestplate: <熔炉/高炉>铜胸甲->铜粒
+minecraft:furnace_copper_helmet: <熔炉/高炉>铜头盔->铜粒
+minecraft:furnace_copper_hoe: <熔炉/高炉>铜锄->铜粒
+minecraft:furnace_copper_leggings: <熔炉/高炉>铜护腿->铜粒
+minecraft:furnace_copper_nautilus_armor: <熔炉/高炉>铜鹦鹉螺铠->铜粒
+minecraft:furnace_copper_ore: <熔炉/高炉>铜矿石->铜锭
+minecraft:furnace_copper_pickaxe: <熔炉/高炉>铜镐->铜粒
+minecraft:furnace_copper_shovel: <熔炉/高炉>铜锹->铜粒
+minecraft:furnace_copper_spear: <熔炉/高炉>铜矛->铜粒
+minecraft:furnace_copper_sword: <熔炉/高炉>铜剑->铜粒
+minecraft:furnace_cracked_nether_bricks: <熔炉>下界砖块->裂纹下界砖块
+minecraft:furnace_cracked_polished_blackstone_bricks: <熔炉>磨制黑石砖->裂纹磨制黑石砖
+minecraft:furnace_dark_oak_leaves: <熔炉>深色橡树树叶->枯叶堆
+minecraft:furnace_dark_oak_wood: <已弃用>深色橡木->煤炭
+minecraft:furnace_deepslate_coal_ore: <熔炉/高炉>深层煤矿石->煤炭
+minecraft:furnace_deepslate_copper_ore: <熔炉/高炉>深层铜矿石->铜锭
+minecraft:furnace_deepslate_diamond_ore: <熔炉/高炉>深层钻石矿石->钻石
+minecraft:furnace_deepslate_emerald_ore: <熔炉/高炉>深层绿宝石矿石->绿宝石
+minecraft:furnace_deepslate_gold_ore: <熔炉/高炉>深层金矿石->金锭
+minecraft:furnace_deepslate_iron_ore: <熔炉/高炉>深层铁矿石->铁锭
+minecraft:furnace_deepslate_lapis_ore: <熔炉/高炉>深层青金石矿石->青金石
+minecraft:furnace_deepslate_redstone_ore: <熔炉/高炉>深层红石矿石->红石粉
+minecraft:furnace_diamond_ore: <熔炉/高炉>钻石矿石->钻石
+minecraft:furnace_emerald_ore: <熔炉/高炉>绿宝石矿石->绿宝石
+minecraft:furnace_fish: <熔炉/烟熏炉/营火/灵魂营火>鱼->熟鱼
+minecraft:furnace_flowering_azalea_leaves: <熔炉>盛开的杜鹃树叶->枯叶堆
+minecraft:furnace_from_blackstone: <工作台>黑石*8->熔炉
+minecraft:furnace_from_cobbled_deepslate: <工作台>深板岩圆石*8->熔炉
+minecraft:furnace_gold: <熔炉/高炉>粗金->金锭
+minecraft:furnace_gold_ore: <熔炉/高炉>金矿石->金锭
+minecraft:furnace_golden_axe: <熔炉/高炉>金斧->金粒
+minecraft:furnace_golden_boots: <熔炉/高炉>金靴子->金粒
+minecraft:furnace_golden_chestplate: <熔炉/高炉>金胸甲->金粒
+minecraft:furnace_golden_helmet: <熔炉/高炉>金头盔->金粒
+minecraft:furnace_golden_hoe: <熔炉/高炉>金锄->金粒
+minecraft:furnace_golden_leggings: <熔炉/高炉>金护腿->金粒
+minecraft:furnace_golden_nautilus_armor: <熔炉/高炉>金鹦鹉螺铠->金粒
+minecraft:furnace_golden_pickaxe: <熔炉/高炉>金镐->金粒
+minecraft:furnace_golden_shovel: <熔炉/高炉>金锹->金粒
+minecraft:furnace_golden_spear: <熔炉/高炉>金矛->金粒
+minecraft:furnace_golden_sword: <熔炉/高炉>金剑->金粒
+minecraft:furnace_horse_armor_copper: <熔炉/高炉>铜马铠->铜粒
+minecraft:furnace_horse_armor_gold: <熔炉/高炉>金马铠->金粒
+minecraft:furnace_horse_armor_iron: <熔炉/高炉>铁马铠->铁粒
+minecraft:furnace_iron: <熔炉/高炉>粗铁->铁锭
+minecraft:furnace_iron_axe: <熔炉/高炉>铁斧->铁粒
+minecraft:furnace_iron_boots: <熔炉/高炉>铁靴子->铁粒
+minecraft:furnace_iron_chestplate: <熔炉/高炉>铁胸甲->铁粒
+minecraft:furnace_iron_helmet: <熔炉/高炉>铁头盔->铁粒
+minecraft:furnace_iron_hoe: <熔炉/高炉>铁锄->铁粒
+minecraft:furnace_iron_leggings: <熔炉/高炉>铁护腿->铁粒
+minecraft:furnace_iron_nautilus_armor: <熔炉/高炉>铁鹦鹉螺铠->铁粒
+minecraft:furnace_iron_ore: <熔炉/高炉>铁矿石->铁锭
+minecraft:furnace_iron_pickaxe: <熔炉/高炉>铁镐->铁粒
+minecraft:furnace_iron_shovel: <熔炉/高炉>铁锹->铁粒
+minecraft:furnace_iron_spear: <熔炉/高炉>铁矛->铁粒
+minecraft:furnace_iron_sword: <熔炉/高炉>铁剑->铁粒
+minecraft:furnace_jungle_leaves: <熔炉>丛林树叶->枯叶堆
+minecraft:furnace_jungle_wood: <已弃用>丛林木->煤炭
+minecraft:furnace_kelp: <熔炉/烟熏炉/营火/灵魂营火>海带->干海带
+minecraft:furnace_lapis_ore: <熔炉/高炉>青金石矿石->青金石
+minecraft:furnace_log: <熔炉>原木->煤炭
+minecraft:furnace_log2_acacia: <已弃用>金合欢原木->煤炭
+minecraft:furnace_log2_dark_oak: <已弃用>深色橡木原木->煤炭
+minecraft:furnace_log_birch: <已弃用>白桦原木->煤炭
+minecraft:furnace_log_jungle: <已弃用>丛林原木->煤炭
+minecraft:furnace_log_mangrove: <熔炉>红树原木->煤炭
+minecraft:furnace_log_oak: <已弃用>橡木原木->煤炭
+minecraft:furnace_log_spruce: <已弃用>云杉原木->煤炭
+minecraft:furnace_mangrove_leaves: <熔炉>红树树叶->枯叶堆
+minecraft:furnace_mangrove_wood: <熔炉>红树木->煤炭
+minecraft:furnace_mutton_raw: <熔炉/烟熏炉/营火/灵魂营火>生羊肉->熟羊肉
+minecraft:furnace_nether_gold_ore: <熔炉/高炉>下界金矿石->金锭
+minecraft:furnace_netherrack: <熔炉>下界岩->下界砖
+minecraft:furnace_oak_leaves: <熔炉>橡树树叶->枯叶堆
+minecraft:furnace_oak_wood: <已弃用>橡木->煤炭
+minecraft:furnace_pale_oak_leaves: <熔炉>苍白橡树树叶->枯叶堆
+minecraft:furnace_porkchop: <熔炉/烟熏炉/营火/灵魂营火>生猪排->熟猪排
+minecraft:furnace_potato: <熔炉/烟熏炉/营火/灵魂营火>马铃薯->烤马铃薯
+minecraft:furnace_quartz_block: <熔炉>石英块->平滑石英块
+minecraft:furnace_quartz_ore: <熔炉/高炉>下界石英矿石->下界石英
+minecraft:furnace_rabbit: <熔炉/烟熏炉/营火/灵魂营火>兔子->熟兔肉
+minecraft:furnace_red_sand: <熔炉>红沙->玻璃
+minecraft:furnace_red_sandstone: <熔炉>红砂岩->平滑红砂岩
+minecraft:furnace_redstone_ore: <熔炉/高炉>红石矿石->红石粉
+minecraft:furnace_resin_brick: <熔炉>树脂团->树脂砖
+minecraft:furnace_salmon: <熔炉/烟熏炉/营火/灵魂营火>鲑鱼->熟鲑鱼
+minecraft:furnace_sand: <熔炉>沙子->玻璃
+minecraft:furnace_sandstone: <熔炉>砂岩->平滑砂岩
+minecraft:furnace_sea_pickle: <熔炉>海泡菜->黄绿色染料
+minecraft:furnace_smooth_basalt: <熔炉>玄武岩->平滑玄武岩
+minecraft:furnace_sponge: <熔炉>湿海绵->海绵
+minecraft:furnace_spruce_leaves: <熔炉>云杉树叶->枯叶堆
+minecraft:furnace_spruce_wood: <已弃用>云杉木->煤炭
+minecraft:furnace_stained_hardened_clay0: <熔炉>白色陶瓦->白色带釉陶瓦
+minecraft:furnace_stained_hardened_clay1: <熔炉>橙色陶瓦->橙色带釉陶瓦
+minecraft:furnace_stained_hardened_clay10: <熔炉>紫色陶瓦->紫色带釉陶瓦
+minecraft:furnace_stained_hardened_clay11: <熔炉>蓝色陶瓦->蓝色带釉陶瓦
+minecraft:furnace_stained_hardened_clay12: <熔炉>棕色陶瓦->棕色带釉陶瓦
+minecraft:furnace_stained_hardened_clay13: <熔炉>绿色陶瓦->绿色带釉陶瓦
+minecraft:furnace_stained_hardened_clay14: <熔炉>红色陶瓦->红色带釉陶瓦
+minecraft:furnace_stained_hardened_clay15: <熔炉>黑色陶瓦->黑色带釉陶瓦
+minecraft:furnace_stained_hardened_clay2: <熔炉>品红色陶瓦->品红色带釉陶瓦
+minecraft:furnace_stained_hardened_clay3: <熔炉>淡蓝色陶瓦->淡蓝色带釉陶瓦
+minecraft:furnace_stained_hardened_clay4: <熔炉>黄色陶瓦->黄色带釉陶瓦
+minecraft:furnace_stained_hardened_clay5: <熔炉>黄绿色陶瓦->黄绿色带釉陶瓦
+minecraft:furnace_stained_hardened_clay6: <熔炉>粉红色陶瓦->粉红色带釉陶瓦
+minecraft:furnace_stained_hardened_clay7: <熔炉>灰色陶瓦->灰色带釉陶瓦
+minecraft:furnace_stained_hardened_clay8: <熔炉>淡灰色陶瓦->淡灰色带釉陶瓦
+minecraft:furnace_stained_hardened_clay9: <熔炉>青色陶瓦->青色带釉陶瓦
+minecraft:furnace_stone: <熔炉>石头->平滑石头
+minecraft:furnace_stone_brick: <熔炉>石砖->裂纹石砖
+minecraft:furnace_stripped_acacia_log: <熔炉>去皮金合欢原木->煤炭
+minecraft:furnace_stripped_acacia_wood: <已弃用>去皮金合欢木->煤炭
+minecraft:furnace_stripped_birch_log: <熔炉>去皮白桦原木->煤炭
+minecraft:furnace_stripped_birch_wood: <已弃用>去皮白桦木->煤炭
+minecraft:furnace_stripped_dark_oak_log: <熔炉>去皮深色橡木原木->煤炭
+minecraft:furnace_stripped_dark_oak_wood: <已弃用>去皮深色橡木->煤炭
+minecraft:furnace_stripped_jungle_log: <熔炉>去皮丛林原木->煤炭
+minecraft:furnace_stripped_jungle_wood: <已弃用>去皮丛林木->煤炭
+minecraft:furnace_stripped_mangrove_log: <熔炉>去皮红树原木->煤炭
+minecraft:furnace_stripped_mangrove_wood: <熔炉>去皮红树木->煤炭
+minecraft:furnace_stripped_oak_log: <熔炉>去皮橡木原木->煤炭
+minecraft:furnace_stripped_oak_wood: <已弃用>去皮橡木->煤炭
+minecraft:furnace_stripped_spruce_log: <熔炉>去皮云杉原木->煤炭
+minecraft:furnace_stripped_spruce_wood: <已弃用>去皮云杉木->煤炭
+minecraft:glass_bottle: <工作台>玻璃*3->玻璃瓶*3
+minecraft:glass_pane: <工作台>玻璃*6->玻璃板*16
+minecraft:glow_frame: <工作台>物品展示框+荧光墨囊~>荧光物品展示框
+minecraft:glowstone: <工作台>荧石粉*4->荧石
+minecraft:gold_block: <工作台>金锭*9->金块
+minecraft:gold_ingot_from_block: <工作台>金块->金锭*9
+minecraft:gold_ingot_from_nuggets: <工作台>金粒*9->金锭
+minecraft:gold_nugget: <工作台>金锭->金粒*9
+minecraft:golden_apple: <工作台>金锭*8+苹果->金苹果
+minecraft:golden_axe: <工作台>木棍*2+金锭*3->金斧
+minecraft:golden_boots: <工作台>金锭*4->金靴子
+minecraft:golden_carrot: <工作台>金粒*8+胡萝卜->金胡萝卜
+minecraft:golden_chestplate: <工作台>金锭*8->金胸甲
+minecraft:golden_dandelion: <工作台>金粒*8+蒲公英->金蒲公英
+minecraft:golden_helmet: <工作台>金锭*5->金头盔
+minecraft:golden_hoe: <工作台>木棍*2+金锭*2->金锄
+minecraft:golden_leggings: <工作台>金锭*7->金护腿
+minecraft:golden_pickaxe: <工作台>木棍*2+金锭*3->金镐
+minecraft:golden_rail: <工作台>红石粉+木棍+金锭*6->动力铁轨*6
+minecraft:golden_shovel: <工作台>木棍*2+金锭->金锹
+minecraft:golden_spear: <工作台>木棍*2+金锭->金矛
+minecraft:golden_sword: <工作台>木棍+金锭*2->金剑
+minecraft:granite: <工作台>闪长岩+下界石英~>花岗岩
+minecraft:granite_stairs: <工作台>花岗岩*6->花岗岩楼梯*4
+minecraft:granite_wall: <工作台>花岗岩*6->花岗岩墙*6
+minecraft:gray_banner: <工作台>灰色羊毛*6+木棍->灰色旗帜
+minecraft:gray_candle: <工作台>蜡烛+灰色染料~>灰色蜡烛
+minecraft:gray_carpet: <工作台>灰色羊毛*2->灰色地毯*3
+minecraft:gray_carpet_from_white: <工作台>白色地毯*8+灰色染料->灰色地毯*8
+minecraft:gray_concrete_powder: <工作台>灰色染料+沙子+沙子+沙子+沙子+沙砾+沙砾+沙砾+沙砾~>灰色混凝土粉末*8
+minecraft:gray_cushion: <工作台>灰色羊毛台阶*3->灰色坐垫
+minecraft:gray_dye: <工作台>黑色染料+白色染料~>灰色染料*2
+minecraft:gray_dye_from_black_bonemeal: <工作台>黑色染料+骨粉~>灰色染料*2
+minecraft:gray_dye_from_closed_eyeblossom: <工作台>闭合的眼眸花~>灰色染料
+minecraft:gray_dye_from_ink_bonemeal: <工作台>墨囊+骨粉~>灰色染料*2
+minecraft:gray_dye_from_ink_white: <工作台>墨囊+白色染料~>灰色染料*2
+minecraft:gray_stained_glass: <工作台>玻璃*8+灰色染料->灰色染色玻璃*8
+minecraft:gray_stained_glass_pane: <工作台>灰色染色玻璃*6->灰色染色玻璃板*16
+minecraft:gray_stained_glass_pane_from_pane: <工作台>玻璃板*8+灰色染料->灰色染色玻璃板*8
+minecraft:gray_stained_hardened_clay: <工作台>陶瓦*8+灰色染料->灰色陶瓦*8
+minecraft:gray_wool_slab: <工作台>灰色羊毛*3->灰色羊毛台阶*6
+minecraft:gray_wool_stairs: <工作台>灰色羊毛*6->灰色羊毛楼梯*4
+minecraft:green_banner: <工作台>绿色羊毛*6+木棍->绿色旗帜
+minecraft:green_candle: <工作台>蜡烛+绿色染料~>绿色蜡烛
+minecraft:green_carpet: <工作台>绿色羊毛*2->绿色地毯*3
+minecraft:green_carpet_from_white: <工作台>白色地毯*8+绿色染料->绿色地毯*8
+minecraft:green_concrete_powder: <工作台>绿色染料+沙子+沙子+沙子+沙子+沙砾+沙砾+沙砾+沙砾~>绿色混凝土粉末*8
+minecraft:green_cushion: <工作台>绿色羊毛台阶*3->绿色坐垫
+minecraft:green_stained_glass: <工作台>玻璃*8+绿色染料->绿色染色玻璃*8
+minecraft:green_stained_glass_pane: <工作台>绿色染色玻璃*6->绿色染色玻璃板*16
+minecraft:green_stained_glass_pane_from_pane: <工作台>玻璃板*8+绿色染料->绿色染色玻璃板*8
+minecraft:green_stained_hardened_clay: <工作台>陶瓦*8+绿色染料->绿色陶瓦*8
+minecraft:green_wool_slab: <工作台>绿色羊毛*3->绿色羊毛台阶*6
+minecraft:green_wool_stairs: <工作台>绿色羊毛*6->绿色羊毛楼梯*4
+minecraft:grindstone: <工作台>木棍*2+木板*2+石头台阶->砂轮
+minecraft:hay_block: <工作台>小麦*9->干草捆
+minecraft:heavy_weighted_pressure_plate: <工作台>铁锭*2->重质测重压力板
+minecraft:honey_block: <工作台>蜂蜜瓶*4->蜂蜜块,玻璃瓶*4
+minecraft:honey_bottle: <工作台>蜂蜜块+玻璃瓶+玻璃瓶+玻璃瓶+玻璃瓶~>蜂蜜瓶*4
+minecraft:honey_bottle_to_sugar: <工作台>蜂蜜瓶->糖*3,玻璃瓶
+minecraft:honeycomb_block: <工作台>蜜脾*4->蜜脾块
+minecraft:hopper: <工作台>箱子+铁锭*5->漏斗
+minecraft:hopper_minecart: <工作台>漏斗+矿车~>漏斗矿车
+minecraft:host_armor_trim_smithing_template_duplicate: <工作台>雇主盔甲纹饰 锻造模板+钻石*7+陶瓦->雇主盔甲纹饰 锻造模板*2
+minecraft:ingots_from_copper: <工作台>铜块->铜锭*9
+minecraft:ingots_from_waxed_copper: <工作台>涂蜡的铜块->铜锭*9
+minecraft:iron_axe: <工作台>木棍*2+铁锭*3->铁斧
+minecraft:iron_bars: <工作台>铁锭*6->铁栏杆*16
+minecraft:iron_block: <工作台>铁锭*9->铁块
+minecraft:iron_boots: <工作台>铁锭*4->铁靴子
+minecraft:iron_chestplate: <工作台>铁锭*8->铁胸甲
+minecraft:iron_door: <工作台>铁锭*6->铁门*3
+minecraft:iron_helmet: <工作台>铁锭*5->铁头盔
+minecraft:iron_hoe: <工作台>木棍*2+铁锭*2->铁锄
+minecraft:iron_ingot_from_block: <工作台>铁块->铁锭*9
+minecraft:iron_ingot_from_nuggets: <工作台>铁粒*9->铁锭
+minecraft:iron_leggings: <工作台>铁锭*7->铁护腿
+minecraft:iron_nugget: <工作台>铁锭->铁粒*9
+minecraft:iron_pickaxe: <工作台>木棍*2+铁锭*3->铁镐
+minecraft:iron_shovel: <工作台>木棍*2+铁锭->铁锹
+minecraft:iron_spear: <工作台>木棍*2+铁锭->铁矛
+minecraft:iron_sword: <工作台>木棍+铁锭*2->铁剑
+minecraft:iron_trapdoor: <工作台>铁锭*4->铁活板门
+minecraft:item_frame: <工作台>木棍*8+皮革->物品展示框
+minecraft:jungle_boat: <工作台>丛林木板*5->丛林木船
+minecraft:jungle_chest_boat: <工作台>箱子+丛林木船~>丛林木运输船
+minecraft:jungle_door: <工作台>丛林木板*6->丛林木门*3
+minecraft:jungle_fence: <工作台>木棍*2+丛林木板*4->丛林木栅栏*3
+minecraft:jungle_fence_gate: <工作台>木棍*4+丛林木板*2->丛林木栅栏门
+minecraft:jungle_hanging_sign: <工作台>去皮丛林原木*6+铁链*2->悬挂式丛林木告示牌*6
+minecraft:jungle_planks: <工作台>丛林原木->丛林木板*4
+minecraft:jungle_planks_from_stripped: <工作台>去皮丛林原木->丛林木板*4
+minecraft:jungle_planks_from_stripped_wood: <工作台>去皮丛林木->丛林木板*4
+minecraft:jungle_planks_from_wood: <工作台>丛林木->丛林木板*4
+minecraft:jungle_shelf_from_stripped_jungle_log: <工作台>去皮丛林原木*6->丛林木展示架*6
+minecraft:jungle_stairs: <工作台>丛林木板*6->丛林木楼梯*4
+minecraft:jungle_wood: <工作台>丛林原木*4->丛林木*3
+minecraft:jungle_wood_stripped: <工作台>去皮丛林原木*4->去皮丛林木*3
+minecraft:jungle_wooden_slab: <工作台>丛林木板*3->丛林木台阶*6
+minecraft:ladder: <工作台>木棍*7->梯子*3
+minecraft:lantern: <工作台>铁粒*8+火把->灯笼
+minecraft:lapis_block: <工作台>青金石*9->青金石块
+minecraft:lapis_lazuli: <工作台>青金石块->青金石*9
+minecraft:lead: <工作台>线*5->拴绳*2
+minecraft:leather: <工作台>兔子皮*4->皮革
+minecraft:leather_boots: <工作台>皮革*4->皮革靴子
+minecraft:leather_chestplate: <工作台>皮革*8->皮革外套
+minecraft:leather_helmet: <工作台>皮革*5->皮革帽子
+minecraft:leather_horse_armor: <工作台>皮革*7->皮革马铠
+minecraft:leather_leggings: <工作台>皮革*7->皮革裤子
+minecraft:lectern: <工作台>木质台阶*4+书架->讲台
+minecraft:lever: <工作台>圆石+木棍->拉杆
+minecraft:light_blue_banner: <工作台>淡蓝色羊毛*6+木棍->淡蓝色旗帜
+minecraft:light_blue_candle: <工作台>蜡烛+淡蓝色染料~>淡蓝色蜡烛
+minecraft:light_blue_carpet: <工作台>淡蓝色羊毛*2->淡蓝色地毯*3
+minecraft:light_blue_carpet_from_white: <工作台>白色地毯*8+淡蓝色染料->淡蓝色地毯*8
+minecraft:light_blue_concrete_powder: <工作台>淡蓝色染料+沙子+沙子+沙子+沙子+沙砾+沙砾+沙砾+沙砾~>淡蓝色混凝土粉末*8
+minecraft:light_blue_cushion: <工作台>淡蓝色羊毛台阶*3->淡蓝色坐垫
+minecraft:light_blue_dye: <工作台>蓝色染料+白色染料~>淡蓝色染料*2
+minecraft:light_blue_dye_from_blue_bonemeal: <工作台>蓝色染料+骨粉~>淡蓝色染料*2
+minecraft:light_blue_dye_from_blue_orchid: <工作台>兰花~>淡蓝色染料
+minecraft:light_blue_dye_from_lapis_bonemeal: <工作台>青金石+骨粉~>淡蓝色染料*2
+minecraft:light_blue_dye_from_lapis_white: <工作台>青金石+白色染料~>淡蓝色染料*2
+minecraft:light_blue_stained_glass: <工作台>玻璃*8+淡蓝色染料->淡蓝色染色玻璃*8
+minecraft:light_blue_stained_glass_pane: <工作台>淡蓝色染色玻璃*6->淡蓝色染色玻璃板*16
+minecraft:light_blue_stained_glass_pane_from_pane: <工作台>玻璃板*8+淡蓝色染料->淡蓝色染色玻璃板*8
+minecraft:light_blue_stained_hardened_clay: <工作台>陶瓦*8+淡蓝色染料->淡蓝色陶瓦*8
+minecraft:light_blue_wool_slab: <工作台>淡蓝色羊毛*3->淡蓝色羊毛台阶*6
+minecraft:light_blue_wool_stairs: <工作台>淡蓝色羊毛*6->淡蓝色羊毛楼梯*4
+minecraft:light_gray__carpet_from_white: <工作台>白色地毯*8+淡灰色染料->淡灰色地毯*8
+minecraft:light_gray_banner: <工作台>淡灰色羊毛*6+木棍->淡灰色旗帜
+minecraft:light_gray_candle: <工作台>蜡烛+淡灰色染料~>淡灰色蜡烛
+minecraft:light_gray_carpet: <工作台>淡灰色羊毛*2->淡灰色地毯*3
+minecraft:light_gray_concrete_powder: <工作台>淡灰色染料+沙子+沙子+沙子+沙子+沙砾+沙砾+沙砾+沙砾~>淡灰色混凝土粉末*8
+minecraft:light_gray_cushion: <工作台>淡灰色羊毛台阶*3->淡灰色坐垫
+minecraft:light_gray_dye: <工作台>黑色染料+白色染料+白色染料~>淡灰色染料*3
+minecraft:light_gray_dye_from_azure_bluet: <工作台>蓝花美耳草~>淡灰色染料
+minecraft:light_gray_dye_from_black_bonemeal: <工作台>黑色染料+骨粉+骨粉~>淡灰色染料*3
+minecraft:light_gray_dye_from_gray_bonemeal: <工作台>灰色染料+骨粉~>淡灰色染料*2
+minecraft:light_gray_dye_from_gray_white: <工作台>灰色染料+白色染料~>淡灰色染料*2
+minecraft:light_gray_dye_from_ink_bonemeal: <工作台>墨囊+骨粉+骨粉~>淡灰色染料*3
+minecraft:light_gray_dye_from_ink_white: <工作台>墨囊+白色染料+白色染料~>淡灰色染料*3
+minecraft:light_gray_dye_from_oxeye_daisy: <工作台>滨菊~>淡灰色染料
+minecraft:light_gray_dye_from_white_tulip: <工作台>白色郁金香~>淡灰色染料
+minecraft:light_gray_stained_glass: <工作台>玻璃*8+淡灰色染料->淡灰色染色玻璃*8
+minecraft:light_gray_stained_glass_pane: <工作台>淡灰色染色玻璃*6->淡灰色染色玻璃板*16
+minecraft:light_gray_stained_glass_pane_from_pane: <工作台>玻璃板*8+淡灰色染料->淡灰色染色玻璃板*8
+minecraft:light_gray_stained_hardened_clay: <工作台>陶瓦*8+淡灰色染料->淡灰色陶瓦*8
+minecraft:light_gray_wool_slab: <工作台>淡灰色羊毛*3->淡灰色羊毛台阶*6
+minecraft:light_gray_wool_stairs: <工作台>淡灰色羊毛*6->淡灰色羊毛楼梯*4
+minecraft:light_weighted_pressure_plate: <工作台>金锭*2->轻质测重压力板
+minecraft:lightning_rod: <工作台>铜锭*3->避雷针
+minecraft:lime__carpet_from_white: <工作台>白色地毯*8+黄绿色染料->黄绿色地毯*8
+minecraft:lime_banner: <工作台>黄绿色羊毛*6+木棍->黄绿色旗帜
+minecraft:lime_candle: <工作台>蜡烛+黄绿色染料~>黄绿色蜡烛
+minecraft:lime_carpet: <工作台>黄绿色羊毛*2->黄绿色地毯*3
+minecraft:lime_concrete_powder: <工作台>黄绿色染料+沙子+沙子+沙子+沙子+沙砾+沙砾+沙砾+沙砾~>黄绿色混凝土粉末*8
+minecraft:lime_cushion: <工作台>黄绿色羊毛台阶*3->黄绿色坐垫
+minecraft:lime_dye: <工作台>绿色染料+白色染料~>黄绿色染料*2
+minecraft:lime_dye_from_bonemeal: <工作台>绿色染料+骨粉~>黄绿色染料*2
+minecraft:lime_stained_glass: <工作台>玻璃*8+黄绿色染料->黄绿色染色玻璃*8
+minecraft:lime_stained_glass_pane: <工作台>黄绿色染色玻璃*6->黄绿色染色玻璃板*16
+minecraft:lime_stained_glass_pane_from_pane: <工作台>玻璃板*8+黄绿色染料->黄绿色染色玻璃板*8
+minecraft:lime_stained_hardened_clay: <工作台>陶瓦*8+黄绿色染料->黄绿色陶瓦*8
+minecraft:lime_wool_slab: <工作台>黄绿色羊毛*3->黄绿色羊毛台阶*6
+minecraft:lime_wool_stairs: <工作台>黄绿色羊毛*6->黄绿色羊毛楼梯*4
+minecraft:lit_pumpkin: <工作台>雕刻南瓜+火把->南瓜灯
+minecraft:locator_map: <工作台>纸*8+指南针->空定位器地图
+minecraft:lodestone: <工作台>雕纹石砖*8+铁锭->磁石
+minecraft:loom: <工作台>线*2+木板*2->织布机
+minecraft:mace: <工作台>旋风棒+沉重核心->重锤
+minecraft:magenta_banner: <工作台>品红色羊毛*6+木棍->品红色旗帜
+minecraft:magenta_candle: <工作台>蜡烛+品红色染料~>品红色蜡烛
+minecraft:magenta_carpet: <工作台>品红色羊毛*2->品红色地毯*3
+minecraft:magenta_carpet_from_white: <工作台>白色地毯*8+品红色染料->品红色地毯*8
+minecraft:magenta_concrete_powder: <工作台>品红色染料+沙子+沙子+沙子+沙子+沙砾+沙砾+沙砾+沙砾~>品红色混凝土粉末*8
+minecraft:magenta_cushion: <工作台>品红色羊毛台阶*3->品红色坐垫
+minecraft:magenta_dye: <工作台>蓝色染料+红色染料+粉红色染料~>品红色染料*3
+minecraft:magenta_dye_from_allium: <工作台>绒球葱~>品红色染料
+minecraft:magenta_dye_from_blue_ink_bonemeal: <工作台>蓝色染料+红色染料+红色染料+骨粉~>品红色染料*4
+minecraft:magenta_dye_from_blue_ink_white: <工作台>蓝色染料+红色染料+红色染料+白色染料~>品红色染料*4
+minecraft:magenta_dye_from_lapis_ink_bonemeal: <工作台>青金石+红色染料+红色染料+骨粉~>品红色染料*4
+minecraft:magenta_dye_from_lapis_ink_white: <工作台>青金石+红色染料+红色染料+白色染料~>品红色染料*4
+minecraft:magenta_dye_from_lapis_red_pink: <工作台>青金石+红色染料+粉红色染料~>品红色染料*3
+minecraft:magenta_dye_from_lilac: <工作台>丁香~>品红色染料*2
+minecraft:magenta_dye_from_purple_and_pink: <工作台>紫色染料+粉红色染料~>品红色染料*2
+minecraft:magenta_stained_glass: <工作台>玻璃*8+品红色染料->品红色染色玻璃*8
+minecraft:magenta_stained_glass_pane: <工作台>品红色染色玻璃*6->品红色染色玻璃板*16
+minecraft:magenta_stained_glass_pane_from_pane: <工作台>玻璃板*8+品红色染料->品红色染色玻璃板*8
+minecraft:magenta_stained_hardened_clay: <工作台>陶瓦*8+品红色染料->品红色陶瓦*8
+minecraft:magenta_wool_slab: <工作台>品红色羊毛*3->品红色羊毛台阶*6
+minecraft:magenta_wool_stairs: <工作台>品红色羊毛*6->品红色羊毛楼梯*4
+minecraft:magma: <工作台>岩浆膏*4->岩浆块
+minecraft:magma_cream: <工作台>烈焰粉+黏液球~>岩浆膏
+minecraft:mangrove_boat: <工作台>红树木板*5->红树木船
+minecraft:mangrove_button: <工作台>红树木板->红树木按钮
+minecraft:mangrove_chest_boat: <工作台>箱子+红树木船~>红树木运输船
+minecraft:mangrove_door: <工作台>红树木板*6->红树木门*3
+minecraft:mangrove_fence: <工作台>木棍*2+红树木板*4->红树木栅栏*3
+minecraft:mangrove_fence_gate: <工作台>木棍*4+红树木板*2->红树木栅栏门
+minecraft:mangrove_hanging_sign: <工作台>去皮红树原木*6+铁链*2->悬挂式红树木告示牌*6
+minecraft:mangrove_planks: <工作台>红树原木->红树木板*4
+minecraft:mangrove_planks_from_stripped_log: <工作台>去皮红树原木->红树木板*4
+minecraft:mangrove_planks_from_stripped_wood: <工作台>去皮红树木->红树木板*4
+minecraft:mangrove_planks_from_wood: <工作台>红树木->红树木板*4
+minecraft:mangrove_pressure_plate: <工作台>红树木板*2->红树木压力板
+minecraft:mangrove_shelf_from_stripped_mangrove_log: <工作台>去皮红树原木*6->红树木展示架*6
+minecraft:mangrove_sign: <工作台>红树木板*6+木棍->红树木告示牌*3
+minecraft:mangrove_slab: <工作台>红树木板*3->红树木台阶*6
+minecraft:mangrove_stairs: <工作台>红树木板*6->红树木楼梯*4
+minecraft:mangrove_trapdoor: <工作台>红树木板*6->红树木活板门*2
+minecraft:mangrove_wood: <工作台>红树原木*4->红树木*3
+minecraft:mangrove_wood_stripped: <工作台>去皮红树原木*4->去皮红树木*3
+minecraft:map: <工作台>纸*9->空地图
+minecraft:melon_block: <工作台>西瓜片*9->西瓜
+minecraft:melon_seeds: <工作台>西瓜片->西瓜种子
+minecraft:minecart: <工作台>铁锭*5->矿车
+minecraft:moss_carpet: <工作台>苔藓块*2->覆地苔藓*3
+minecraft:mossy_cobblestone: <工作台>圆石+藤蔓~>苔石
+minecraft:mossy_cobblestone_from_moss: <工作台>圆石+苔藓块~>苔石
+minecraft:mossy_cobblestone_stairs: <工作台>苔石*6->苔石楼梯*4
+minecraft:mossy_cobblestone_wall: <工作台>苔石*6->苔石墙*6
+minecraft:mossy_stone_brick_stairs: <工作台>苔石砖*6->苔石砖楼梯*4
+minecraft:mossy_stone_brick_wall: <工作台>苔石砖*6->苔石砖墙*6
+minecraft:mossy_stonebrick: <工作台>石砖+藤蔓~>苔石砖
+minecraft:mossy_stonebrick_from_moss: <工作台>石砖+苔藓块~>苔石砖
+minecraft:mud_brick_slab: <工作台>泥砖*3->泥砖台阶*6
+minecraft:mud_brick_stairs: <工作台>泥砖*6->泥砖楼梯*4
+minecraft:mud_brick_wall: <工作台>泥砖*6->泥砖墙*6
+minecraft:mud_bricks: <工作台>泥坯*4->泥砖*4
+minecraft:muddy_mangrove_roots: <工作台>红树根+泥巴~>沾泥的红树根
+minecraft:mushroom_stew: <工作台>蘑菇+蘑菇+碗~>蘑菇煲
+minecraft:name_tag: <工作台>纸+金属粒->命名牌
+minecraft:nether_brick: <工作台>下界砖*4->下界砖块
+minecraft:nether_brick_fence: <工作台>下界砖*2+下界砖块*4->下界砖栅栏*6
+minecraft:nether_brick_stairs: <工作台>下界砖块*6->下界砖楼梯*4
+minecraft:nether_brick_wall: <工作台>下界砖块*6->下界砖墙*6
+minecraft:nether_wart_block: <工作台>下界疣*9->下界疣块
+minecraft:netherite_block: <工作台>下界合金锭*9->下界合金块
+minecraft:netherite_ingot: <工作台>下界合金碎片*4+金锭*4~>下界合金锭
+minecraft:netherite_ingot_from_block: <工作台>下界合金块->下界合金锭*9
+minecraft:netherite_upgrade_smithing_template_duplicate: <工作台>下界合金升级 锻造模板+钻石*7+下界岩->下界合金升级 锻造模板*2
+minecraft:noteblock: <工作台>木板*8+红石粉->音符盒
+minecraft:oak_fence: <工作台>木棍*2+橡木木板*4->橡木栅栏*3
+minecraft:oak_hanging_sign: <工作台>去皮橡木原木*6+铁链*2->悬挂式橡木告示牌*6
+minecraft:oak_planks: <工作台>橡木原木->橡木木板*4
+minecraft:oak_planks_from_stripped: <工作台>去皮橡木原木->橡木木板*4
+minecraft:oak_planks_from_stripped_wood: <工作台>去皮橡木->橡木木板*4
+minecraft:oak_planks_from_wood: <工作台>橡木->橡木木板*4
+minecraft:oak_shelf_from_stripped_oak_log: <工作台>去皮橡木原木*6->橡木展示架*6
+minecraft:oak_stairs: <工作台>橡木木板*6->橡木楼梯*4
+minecraft:oak_wood: <工作台>橡木原木*4->橡木*3
+minecraft:oak_wood_stripped: <工作台>去皮橡木原木*4->去皮橡木*3
+minecraft:oak_wooden_slab: <工作台>橡木木板*3->橡木台阶*6
+minecraft:observer: <工作台>下界石英+红石粉*2+圆石*6->侦测器
+minecraft:orange_banner: <工作台>橙色羊毛*6+木棍->橙色旗帜
+minecraft:orange_candle: <工作台>蜡烛+橙色染料~>橙色蜡烛
+minecraft:orange_carpet: <工作台>橙色羊毛*2->橙色地毯*3
+minecraft:orange_carpet_from_white: <工作台>白色地毯*8+橙色染料->橙色地毯*8
+minecraft:orange_concrete_powder: <工作台>橙色染料+沙子+沙子+沙子+沙子+沙砾+沙砾+沙砾+沙砾~>橙色混凝土粉末*8
+minecraft:orange_cushion: <工作台>橙色羊毛台阶*3->橙色坐垫
+minecraft:orange_dye_from_open_eyeblossom: <工作台>张开的眼眸花~>橙色染料
+minecraft:orange_dye_from_orange_tulip: <工作台>橙色郁金香~>橙色染料
+minecraft:orange_dye_from_red_yellow: <工作台>红色染料+黄色染料~>橙色染料*2
+minecraft:orange_dye_from_torchflower: <工作台>火把花~>橙色染料
+minecraft:orange_stained_glass: <工作台>玻璃*8+橙色染料->橙色染色玻璃*8
+minecraft:orange_stained_glass_pane: <工作台>橙色染色玻璃*6->橙色染色玻璃板*16
+minecraft:orange_stained_glass_pane_from_pane: <工作台>玻璃板*8+橙色染料->橙色染色玻璃板*8
+minecraft:orange_stained_hardened_clay: <工作台>陶瓦*8+橙色染料->橙色陶瓦*8
+minecraft:orange_wool_slab: <工作台>橙色羊毛*3->橙色羊毛台阶*6
+minecraft:orange_wool_stairs: <工作台>橙色羊毛*6->橙色羊毛楼梯*4
+minecraft:oxidized_chiseled_copper: <工作台>氧化的切制铜台阶*2->氧化的雕纹铜块
+minecraft:oxidized_copper_bulb: <工作台>红石粉+氧化的铜块*3+烈焰棒->氧化的铜灯*4
+minecraft:oxidized_copper_grate: <工作台>氧化的铜块*4->氧化的铜格栅*4
+minecraft:packed_ice: <工作台>冰*9->浮冰
+minecraft:packed_mud: <工作台>泥巴+小麦~>泥坯
+minecraft:painting: <工作台>木棍*8+羊毛->画
+minecraft:pale_moss_carpet: <工作台>苍白苔藓块*2->苍白覆地苔藓*3
+minecraft:pale_oak_boat: <工作台>苍白橡木木板*5->苍白橡木船
+minecraft:pale_oak_button: <工作台>苍白橡木木板->苍白橡木按钮
+minecraft:pale_oak_chest_boat: <工作台>箱子+苍白橡木船~>苍白橡木运输船
+minecraft:pale_oak_door: <工作台>苍白橡木木板*6->苍白橡木门*3
+minecraft:pale_oak_fence: <工作台>木棍*2+苍白橡木木板*4->苍白橡木栅栏*3
+minecraft:pale_oak_fence_gate: <工作台>木棍*4+苍白橡木木板*2->苍白橡木栅栏门
+minecraft:pale_oak_hanging_sign: <工作台>去皮苍白橡木原木*6+铁链*2->悬挂式苍白橡木告示牌*6
+minecraft:pale_oak_planks_from_log: <工作台>苍白橡木原木->苍白橡木木板*4
+minecraft:pale_oak_planks_from_stripped_log: <工作台>去皮苍白橡木原木->苍白橡木木板*4
+minecraft:pale_oak_planks_from_stripped_wood: <工作台>去皮苍白橡木->苍白橡木木板*4
+minecraft:pale_oak_planks_from_wood: <工作台>苍白橡木->苍白橡木木板*4
+minecraft:pale_oak_pressure_plate: <工作台>苍白橡木木板*2->苍白橡木压力板
+minecraft:pale_oak_shelf_from_stripped_pale_oak_log: <工作台>去皮苍白橡木原木*6->苍白橡木展示架*6
+minecraft:pale_oak_sign: <工作台>苍白橡木木板*6+木棍->苍白橡木告示牌*3
+minecraft:pale_oak_slab: <工作台>苍白橡木木板*3->苍白橡木台阶*6
+minecraft:pale_oak_stairs: <工作台>苍白橡木木板*6->苍白橡木楼梯*4
+minecraft:pale_oak_trapdoor: <工作台>苍白橡木木板*6->苍白橡木活板门*2
+minecraft:pale_oak_wood_from_log: <工作台>苍白橡木原木*4->苍白橡木*3
+minecraft:pale_oak_wood_from_stripped_log: <工作台>去皮苍白橡木原木*4->去皮苍白橡木*3
+minecraft:paper: <工作台>甘蔗*3->纸*3
+minecraft:pillar_quartz_block: <工作台>石英块*2->石英柱*2
+minecraft:pink_banner: <工作台>粉红色羊毛*6+木棍->粉红色旗帜
+minecraft:pink_candle: <工作台>蜡烛+粉红色染料~>粉红色蜡烛
+minecraft:pink_carpet: <工作台>粉红色羊毛*2->粉红色地毯*3
+minecraft:pink_carpet_from_white: <工作台>白色地毯*8+粉红色染料->粉红色地毯*8
+minecraft:pink_concrete_powder: <工作台>粉红色染料+沙子+沙子+沙子+沙子+沙砾+沙砾+沙砾+沙砾~>粉红色混凝土粉末*8
+minecraft:pink_cushion: <工作台>粉红色羊毛台阶*3->粉红色坐垫
+minecraft:pink_dye: <工作台>红色染料+白色染料~>粉红色染料*2
+minecraft:pink_dye_from_cactus_flower: <工作台>仙人掌花~>粉红色染料
+minecraft:pink_dye_from_peony: <工作台>牡丹~>粉红色染料*2
+minecraft:pink_dye_from_pink_petals: <工作台>粉红色花簇~>粉红色染料
+minecraft:pink_dye_from_pink_tulip: <工作台>粉红色郁金香~>粉红色染料
+minecraft:pink_dye_from_red_bonemeal: <工作台>红色染料+骨粉~>粉红色染料*2
+minecraft:pink_stained_glass: <工作台>玻璃*8+粉红色染料->粉红色染色玻璃*8
+minecraft:pink_stained_glass_pane: <工作台>粉红色染色玻璃*6->粉红色染色玻璃板*16
+minecraft:pink_stained_glass_pane_from_pane: <工作台>玻璃板*8+粉红色染料->粉红色染色玻璃板*8
+minecraft:pink_stained_hardened_clay: <工作台>陶瓦*8+粉红色染料->粉红色陶瓦*8
+minecraft:pink_wool_slab: <工作台>粉红色羊毛*3->粉红色羊毛台阶*6
+minecraft:pink_wool_stairs: <工作台>粉红色羊毛*6->粉红色羊毛楼梯*4
+minecraft:piston: <工作台>木板*3+圆石*4+铁锭+红石粉->活塞
+minecraft:polished_andesite: <工作台>安山岩*4->磨制安山岩*4
+minecraft:polished_andesite_stairs: <工作台>磨制安山岩*6->磨制安山岩楼梯*4
+minecraft:polished_basalt: <工作台>玄武岩*4->磨制玄武岩*4
+minecraft:polished_blackstone: <工作台>黑石*4->磨制黑石*4
+minecraft:polished_blackstone_brick_slab: <工作台>磨制黑石砖*3->磨制黑石砖台阶*6
+minecraft:polished_blackstone_brick_stairs: <工作台>磨制黑石砖*6->磨制黑石砖楼梯*4
+minecraft:polished_blackstone_brick_wall: <工作台>磨制黑石砖*6->磨制黑石砖墙*6
+minecraft:polished_blackstone_bricks: <工作台>磨制黑石*4->磨制黑石砖*4
+minecraft:polished_blackstone_button: <工作台>磨制黑石->磨制黑石按钮
+minecraft:polished_blackstone_pressure_plate: <工作台>磨制黑石*2->磨制黑石压力板
+minecraft:polished_blackstone_slab: <工作台>磨制黑石*3->磨制黑石台阶*6
+minecraft:polished_blackstone_stairs: <工作台>磨制黑石*6->磨制黑石楼梯*4
+minecraft:polished_blackstone_wall: <工作台>磨制黑石*6->磨制黑石墙*6
+minecraft:polished_cinnabar: <工作台>朱砂*4->磨制朱砂*4
+minecraft:polished_cinnabar_slab: <工作台>磨制朱砂*3->磨制朱砂台阶*6
+minecraft:polished_cinnabar_stairs: <工作台>磨制朱砂*6->磨制朱砂楼梯*4
+minecraft:polished_cinnabar_wall: <工作台>磨制朱砂*6->磨制朱砂墙*6
+minecraft:polished_deepslate: <工作台>深板岩圆石*4->磨制深板岩*4
+minecraft:polished_deepslate_from_cobbled_deepslate_stonecutting: <切石机>深板岩圆石~>磨制深板岩
+minecraft:polished_deepslate_slab: <工作台>磨制深板岩*3->磨制深板岩台阶*6
+minecraft:polished_deepslate_slab_from_cobbled_deepslate_stonecut: <切石机>深板岩圆石~>磨制深板岩台阶*2
+minecraft:polished_deepslate_slab_from_polished_deepslate_stonecutting: <切石机>磨制深板岩~>磨制深板岩台阶*2
+minecraft:polished_deepslate_stairs: <工作台>磨制深板岩*6->磨制深板岩楼梯*4
+minecraft:polished_deepslate_stairs_from_cobbled_deepslate_stonecutting: <切石机>深板岩圆石~>磨制深板岩楼梯
+minecraft:polished_deepslate_stairs_from_polished_deepslate_stonecutting: <切石机>磨制深板岩~>磨制深板岩楼梯
+minecraft:polished_deepslate_wall: <工作台>磨制深板岩*6->磨制深板岩墙*6
+minecraft:polished_deepslate_wall_from_cobbled_deepslate_stonecut: <切石机>深板岩圆石~>磨制深板岩墙
+minecraft:polished_deepslate_wall_from_polished_deepslate_stonecut: <切石机>磨制深板岩~>磨制深板岩墙
+minecraft:polished_diorite: <工作台>闪长岩*4->磨制闪长岩*4
+minecraft:polished_diorite_stairs: <工作台>磨制闪长岩*6->磨制闪长岩楼梯*4
+minecraft:polished_granite: <工作台>花岗岩*4->磨制花岗岩*4
+minecraft:polished_granite_stairs: <工作台>磨制花岗岩*6->磨制花岗岩楼梯*4
+minecraft:polished_sulfur: <工作台>硫黄*4->磨制硫黄*4
+minecraft:polished_sulfur_slab: <工作台>磨制硫黄*3->磨制硫黄台阶*6
+minecraft:polished_sulfur_stairs: <工作台>磨制硫黄*6->磨制硫黄楼梯*4
+minecraft:polished_sulfur_wall: <工作台>磨制硫黄*6->磨制硫黄墙*6
+minecraft:polished_tuff: <工作台>凝灰岩*4->磨制凝灰岩*4
+minecraft:polished_tuff_slab: <工作台>磨制凝灰岩*3->磨制凝灰岩台阶*6
+minecraft:polished_tuff_stairs: <工作台>磨制凝灰岩*6->磨制凝灰岩楼梯*4
+minecraft:polished_tuff_wall: <工作台>磨制凝灰岩*6->磨制凝灰岩墙*6
+minecraft:poplar_boat: <工作台>杨木木板*5->杨木船
+minecraft:poplar_button: <工作台>杨木木板->杨木按钮
+minecraft:poplar_chest_boat: <工作台>箱子+杨木船~>杨木运输船
+minecraft:poplar_door: <工作台>杨木木板*6->杨木门*3
+minecraft:poplar_fence: <工作台>木棍*2+杨木木板*4->杨木栅栏*3
+minecraft:poplar_fence_gate: <工作台>木棍*4+杨木木板*2->杨木栅栏门
+minecraft:poplar_hanging_sign: <工作台>去皮杨木原木*6+铁链*2->悬挂式杨木告示牌*6
+minecraft:poplar_planks_from_log: <工作台>杨木原木->杨木木板*4
+minecraft:poplar_planks_from_stripped_log: <工作台>去皮杨木原木->杨木木板*4
+minecraft:poplar_planks_from_stripped_wood: <工作台>去皮杨木->杨木木板*4
+minecraft:poplar_planks_from_wood: <工作台>杨木->杨木木板*4
+minecraft:poplar_pressure_plate: <工作台>杨木木板*2->杨木压力板
+minecraft:poplar_shelf_from_stripped_poplar_log: <工作台>去皮杨木原木*6->杨木展示架*6
+minecraft:poplar_sign: <工作台>杨木木板*6+木棍->杨木告示牌*3
+minecraft:poplar_slab: <工作台>杨木木板*3->杨木台阶*6
+minecraft:poplar_stairs: <工作台>杨木木板*6->杨木楼梯*4
+minecraft:poplar_trapdoor: <工作台>杨木木板*6->杨木活板门*2
+minecraft:poplar_wood_from_log: <工作台>杨木原木*4->杨木*3
+minecraft:poplar_wood_from_stripped_log: <工作台>去皮杨木原木*4->去皮杨木*3
+minecraft:potent_sulfur: <工作台>硫黄*9->烈性硫黄
+minecraft:prismarine: <工作台>海晶碎片*4->海晶石
+minecraft:prismarine_bricks: <工作台>海晶碎片*9->海晶石砖
+minecraft:prismarine_stairs: <工作台>海晶石*6->海晶石楼梯*4
+minecraft:prismarine_stairs_bricks: <工作台>海晶石砖*6->海晶石砖楼梯*4
+minecraft:prismarine_stairs_dark: <工作台>暗海晶石*6->暗海晶石楼梯*4
+minecraft:prismarine_wall: <工作台>海晶石*6->海晶石墙*6
+minecraft:pumpkin_pie: <工作台>南瓜+糖+鸡蛋~>南瓜派
+minecraft:pumpkin_seeds: <工作台>南瓜->南瓜种子*4
+minecraft:purple_banner: <工作台>紫色羊毛*6+木棍->紫色旗帜
+minecraft:purple_candle: <工作台>蜡烛+紫色染料~>紫色蜡烛
+minecraft:purple_carpet: <工作台>紫色羊毛*2->紫色地毯*3
+minecraft:purple_carpet_from_white: <工作台>白色地毯*8+紫色染料->紫色地毯*8
+minecraft:purple_concrete_powder: <工作台>紫色染料+沙子+沙子+沙子+沙子+沙砾+沙砾+沙砾+沙砾~>紫色混凝土粉末*8
+minecraft:purple_cushion: <工作台>紫色羊毛台阶*3->紫色坐垫
+minecraft:purple_dye: <工作台>蓝色染料+红色染料~>紫色染料*2
+minecraft:purple_dye_from_lapis_lazuli: <工作台>青金石+红色染料~>紫色染料*2
+minecraft:purple_stained_glass: <工作台>玻璃*8+紫色染料->紫色染色玻璃*8
+minecraft:purple_stained_glass_pane: <工作台>紫色染色玻璃*6->紫色染色玻璃板*16
+minecraft:purple_stained_glass_pane_from_pane: <工作台>玻璃板*8+紫色染料->紫色染色玻璃板*8
+minecraft:purple_stained_hardened_clay: <工作台>陶瓦*8+紫色染料->紫色陶瓦*8
+minecraft:purple_wool_slab: <工作台>紫色羊毛*3->紫色羊毛台阶*6
+minecraft:purple_wool_stairs: <工作台>紫色羊毛*6->紫色羊毛楼梯*4
+minecraft:purpur_block: <工作台>爆裂紫颂果*4->紫珀块*4
+minecraft:purpur_slab: <工作台>紫珀柱*3->紫珀台阶*6
+minecraft:purpur_stairs: <工作台>紫珀块*6->紫珀楼梯*4
+minecraft:quartz_block: <工作台>下界石英*4->石英块
+minecraft:quartz_bricks: <工作台>石英块*4->石英砖*4
+minecraft:quartz_stairs: <工作台>石英块*6->石英楼梯*4
+minecraft:rabbit_stew_from_brown_mushroom: <工作台>碗+烤马铃薯+胡萝卜+棕色蘑菇+熟兔肉~>兔肉煲
+minecraft:rabbit_stew_from_red_mushroom: <工作台>碗+烤马铃薯+胡萝卜+红色蘑菇+熟兔肉~>兔肉煲
+minecraft:rabbit_stew_from_shelf_mushroom: <工作台>碗+烤马铃薯+胡萝卜+层孔菇+熟兔肉~>兔肉煲
+minecraft:rail: <工作台>木棍+铁锭*6->铁轨*16
+minecraft:raiser_armor_trim_smithing_template_duplicate: <工作台>牧民盔甲纹饰 锻造模板+钻石*7+陶瓦->牧民盔甲纹饰 锻造模板*2
+minecraft:raw_copper: <工作台>粗铜块->粗铜*9
+minecraft:raw_copper_block: <工作台>粗铜*9->粗铜块
+minecraft:raw_gold: <工作台>粗金块->粗金*9
+minecraft:raw_gold_block: <工作台>粗金*9->粗金块
+minecraft:raw_iron: <工作台>粗铁块->粗铁*9
+minecraft:raw_iron_block: <工作台>粗铁*9->粗铁块
+minecraft:record_5: <工作台>唱片残片 Samuel Åberg - 5*9->音乐唱片 Samuel Åberg - 5
+minecraft:recovery_compass: <工作台>回响碎片*8+指南针->追溯指针
+minecraft:recovery_compass_from_lodestone_compass: <工作台>回响碎片*8+磁石指针->追溯指针
+minecraft:red_banner: <工作台>红色羊毛*6+木棍->红色旗帜
+minecraft:red_candle: <工作台>蜡烛+红色染料~>红色蜡烛
+minecraft:red_carpet: <工作台>红色羊毛*2->红色地毯*3
+minecraft:red_carpet_from_white: <工作台>白色地毯*8+红色染料->红色地毯*8
+minecraft:red_concrete_powder: <工作台>红色染料+沙子+沙子+沙子+沙子+沙砾+沙砾+沙砾+沙砾~>红色混凝土粉末*8
+minecraft:red_cushion: <工作台>红色羊毛台阶*3->红色坐垫
+minecraft:red_dye_from_beetroot: <工作台>甜菜根~>红色染料
+minecraft:red_dye_from_poppy: <工作台>虞美人~>红色染料
+minecraft:red_dye_from_rose_bush: <工作台>玫瑰丛~>红色染料*2
+minecraft:red_dye_from_tulip: <工作台>红色郁金香~>红色染料
+minecraft:red_nether_brick: <工作台>下界疣*2+下界砖*2->红色下界砖块
+minecraft:red_nether_brick_stairs: <工作台>红色下界砖块*6->红色下界砖楼梯*4
+minecraft:red_nether_brick_wall: <工作台>红色下界砖块*6->红色下界砖墙*6
+minecraft:red_sandstone: <工作台>红沙*4->红砂岩
+minecraft:red_sandstone_stairs: <工作台>红砂岩*6->红砂岩楼梯*4
+minecraft:red_sandstone_stairs_from_chiseled: <工作台>雕纹红砂岩*6->红砂岩楼梯*4
+minecraft:red_sandstone_stairs_from_cut: <工作台>切制红砂岩*6->红砂岩楼梯*4
+minecraft:red_sandstone_wall: <工作台>红砂岩*6->红砂岩墙*6
+minecraft:red_stained_glass: <工作台>玻璃*8+红色染料->红色染色玻璃*8
+minecraft:red_stained_glass_pane: <工作台>红色染色玻璃*6->红色染色玻璃板*16
+minecraft:red_stained_glass_pane_from_pane: <工作台>玻璃板*8+红色染料->红色染色玻璃板*8
+minecraft:red_stained_hardened_clay: <工作台>陶瓦*8+红色染料->红色陶瓦*8
+minecraft:red_wool_slab: <工作台>红色羊毛*3->红色羊毛台阶*6
+minecraft:red_wool_stairs: <工作台>红色羊毛*6->红色羊毛楼梯*4
+minecraft:redstone: <工作台>红石块->红石粉*9
+minecraft:redstone_block: <工作台>红石粉*9->红石块
+minecraft:redstone_lamp: <工作台>红石粉*4+荧石->红石灯
+minecraft:redstone_torch: <工作台>木棍+红石粉->红石火把
+minecraft:repeater: <工作台>红石火把*2+红石粉+石头*3->红石中继器
+minecraft:resin_block: <工作台>树脂团*9->树脂块
+minecraft:resin_brick_slab: <工作台>树脂砖块*3->树脂砖台阶*6
+minecraft:resin_brick_stairs: <工作台>树脂砖块*6->树脂砖楼梯*4
+minecraft:resin_brick_wall: <工作台>树脂砖块*6->树脂砖墙*6
+minecraft:resin_bricks: <工作台>树脂砖*4->树脂砖块
+minecraft:resin_clump_from_resin_block: <工作台>树脂块->树脂团*9
+minecraft:respawn_anchor: <工作台>哭泣的黑曜石*6+荧石*3->重生锚
+minecraft:rib_armor_trim_smithing_template_duplicate: <工作台>肋骨盔甲纹饰 锻造模板+钻石*7+下界岩->肋骨盔甲纹饰 锻造模板*2
+minecraft:saddle: <工作台>皮革*3+铁锭->鞍
+minecraft:sandstone: <工作台>沙子*4->砂岩
+minecraft:sandstone_stairs: <工作台>砂岩*6->砂岩楼梯*4
+minecraft:sandstone_stairs_from_chiseled: <工作台>雕纹砂岩*6->砂岩楼梯*4
+minecraft:sandstone_stairs_from_cut: <工作台>切制砂岩*6->砂岩楼梯*4
+minecraft:sandstone_wall: <工作台>砂岩*6->砂岩墙*6
+minecraft:scaffolding: <工作台>竹子*6+线->脚手架*6
+minecraft:sealantern: <工作台>海晶碎片*4+海晶砂粒*5->海晶灯
+minecraft:sentry_armor_trim_smithing_template_duplicate: <工作台>哨兵盔甲纹饰 锻造模板+钻石*7+圆石->哨兵盔甲纹饰 锻造模板*2
+minecraft:shaper_armor_trim_smithing_template_duplicate: <工作台>塑造盔甲纹饰 锻造模板+钻石*7+陶瓦->塑造盔甲纹饰 锻造模板*2
+minecraft:shears: <工作台>铁锭*2->剪刀
+minecraft:shield: <工作台>木板*6+铁锭->盾牌
+minecraft:shulker_box: <工作台>箱子+潜影壳*2->潜影盒
+minecraft:sign_acacia: <工作台>金合欢木板*6+木棍->金合欢木告示牌*3
+minecraft:sign_birch: <工作台>白桦木板*6+木棍->白桦木告示牌*3
+minecraft:sign_darkoak: <工作台>深色橡木木板*6+木棍->深色橡木告示牌*3
+minecraft:sign_jungle: <工作台>丛林木板*6+木棍->丛林木告示牌*3
+minecraft:sign_oak: <工作台>橡木木板*6+木棍->告示牌*3
+minecraft:sign_spruce: <工作台>云杉木板*6+木棍->云杉木告示牌*3
+minecraft:silence_armor_trim_smithing_template_duplicate: <工作台>幽静盔甲纹饰 锻造模板+钻石*7+深板岩圆石->幽静盔甲纹饰 锻造模板*2
+minecraft:slime: <工作台>黏液球*9->黏液块
+minecraft:slime_ball: <工作台>黏液块->黏液球*9
+minecraft:smithing_table: <工作台>铁锭*2+木板*4->锻造台
+minecraft:smoker: <工作台>熔炉+原木*4->烟熏炉
+minecraft:smooth_quartz_stairs: <工作台>平滑石英块*6->平滑石英楼梯*4
+minecraft:smooth_red_sandstone: <工作台>红砂岩*4->切制红砂岩*4
+minecraft:smooth_red_sandstone_stairs: <工作台>平滑红砂岩*6->平滑红砂岩楼梯*4
+minecraft:smooth_sandstone: <工作台>砂岩*4->切制砂岩*4
+minecraft:smooth_sandstone_stairs: <工作台>平滑砂岩*6->平滑砂岩楼梯*4
+minecraft:snout_armor_trim_smithing_template_duplicate: <工作台>猪鼻盔甲纹饰 锻造模板+钻石*7+黑石->猪鼻盔甲纹饰 锻造模板*2
+minecraft:snow: <工作台>雪球*4->雪块
+minecraft:snow_layer: <工作台>雪块*3->雪*6
+minecraft:soul_campfire: <工作台>木棍*3+灵魂沙/灵魂土+原木*3->灵魂营火
+minecraft:soul_lantern: <工作台>灵魂火把+铁粒*8->灵魂灯笼
+minecraft:soul_torch: <工作台>煤炭/木炭+木棍+灵魂沙/灵魂土->灵魂火把*4
+minecraft:speckled_melon: <工作台>金粒*8+西瓜片->闪烁的西瓜片
+minecraft:spire_armor_trim_smithing_template_duplicate: <工作台>尖塔盔甲纹饰 锻造模板+钻石*7+紫珀块->尖塔盔甲纹饰 锻造模板*2
+minecraft:spruce_boat: <工作台>云杉木板*5->云杉木船
+minecraft:spruce_chest_boat: <工作台>箱子+云杉木船~>云杉木运输船
+minecraft:spruce_door: <工作台>云杉木板*6->云杉木门*3
+minecraft:spruce_fence: <工作台>木棍*2+云杉木板*4->云杉木栅栏*3
+minecraft:spruce_fence_gate: <工作台>木棍*4+云杉木板*2->云杉木栅栏门
+minecraft:spruce_hanging_sign: <工作台>去皮云杉原木*6+铁链*2->悬挂式云杉木告示牌*6
+minecraft:spruce_planks: <工作台>云杉原木->云杉木板*4
+minecraft:spruce_planks_from_stripped: <工作台>去皮云杉原木->云杉木板*4
+minecraft:spruce_planks_from_stripped_wood: <工作台>去皮云杉木->云杉木板*4
+minecraft:spruce_planks_from_wood: <工作台>云杉木->云杉木板*4
+minecraft:spruce_shelf_from_stripped_spruce_log: <工作台>去皮云杉原木*6->云杉木展示架*6
+minecraft:spruce_stairs: <工作台>云杉木板*6->云杉木楼梯*4
+minecraft:spruce_wood: <工作台>云杉原木*4->云杉木*3
+minecraft:spruce_wood_stripped: <工作台>去皮云杉原木*4->去皮云杉木*3
+minecraft:spruce_wooden_slab: <工作台>云杉木板*3->云杉木台阶*6
+minecraft:spyglass: <工作台>紫水晶碎片+铜锭*2->望远镜
+minecraft:stick: <工作台>木板*2->木棍*4
+minecraft:sticky_piston: <工作台>活塞+黏液球->黏性活塞
+minecraft:stone_axe: <工作台>木棍*2+类圆石方块*3->石斧
+minecraft:stone_brick_stairs: <工作台>石砖*6->石砖楼梯*4
+minecraft:stone_brick_wall: <工作台>石砖*6->石砖墙*6
+minecraft:stone_button: <工作台>石头->石头按钮
+minecraft:stone_hoe: <工作台>木棍*2+类圆石方块*2->石锄
+minecraft:stone_pickaxe: <工作台>木棍*2+类圆石方块*3->石镐
+minecraft:stone_pressure_plate: <工作台>石头*2->石头压力板
+minecraft:stone_shovel: <工作台>木棍*2+类圆石方块->石锹
+minecraft:stone_spear: <工作台>木棍*2+类圆石方块->石矛
+minecraft:stone_stairs: <工作台>石头*6->石头楼梯*4
+minecraft:stone_sword: <工作台>木棍+类圆石方块*2->石剑
+minecraft:stonebrick: <工作台>石头*4->石砖*4
+minecraft:stonecutter: <工作台>石头*3+铁锭->切石机
+minecraft:stonecutter_andesite_slab: <切石机>安山岩~>安山岩台阶*2
+minecraft:stonecutter_andesite_stairs: <切石机>安山岩~>安山岩楼梯
+minecraft:stonecutter_andesite_wall: <切石机>安山岩~>安山岩墙
+minecraft:stonecutter_blackstone_slab_from_blackstone: <切石机>黑石~>黑石台阶*2
+minecraft:stonecutter_blackstone_stairs_from_blackstone: <切石机>黑石~>黑石楼梯
+minecraft:stonecutter_blackstone_wall_from_blackstone: <切石机>黑石~>黑石墙
+minecraft:stonecutter_brick_slab: <切石机>红砖块~>红砖台阶*2
+minecraft:stonecutter_brick_slab_from_polished_blackstone: <切石机>磨制黑石~>磨制黑石砖台阶*2
+minecraft:stonecutter_brick_stairs: <切石机>红砖块~>红砖楼梯
+minecraft:stonecutter_brick_stairs_from_polished_blackstone: <切石机>磨制黑石~>磨制黑石砖楼梯
+minecraft:stonecutter_brick_wall: <切石机>红砖块~>红砖墙
+minecraft:stonecutter_brick_wall_from_polished_blackstone: <切石机>磨制黑石~>磨制黑石砖墙
+minecraft:stonecutter_bricks_from_polished_blackstone: <切石机>磨制黑石~>磨制黑石砖
+minecraft:stonecutter_chiseled_cinnabar_from_cinnabar: <切石机>朱砂~>雕纹朱砂
+minecraft:stonecutter_chiseled_from_polished_blackstone: <切石机>磨制黑石~>雕纹磨制黑石
+minecraft:stonecutter_chiseled_nether_bricks_from_nether_brick: <切石机>下界砖块~>雕纹下界砖块
+minecraft:stonecutter_chiseled_polished_from_blackstone: <切石机>黑石~>雕纹磨制黑石
+minecraft:stonecutter_chiseled_stone_bricks_from_cobblestone: <切石机>圆石~>雕纹石砖
+minecraft:stonecutter_chiseled_sulfur_from_sulfur: <切石机>硫黄~>雕纹硫黄
+minecraft:stonecutter_cinnabar_brick_slab_from_cinnabar: <切石机>朱砂~>朱砂砖台阶*2
+minecraft:stonecutter_cinnabar_brick_slab_from_cinnabar_bricks: <切石机>朱砂砖~>朱砂砖台阶*2
+minecraft:stonecutter_cinnabar_brick_slab_from_polished_cinnabar: <切石机>磨制朱砂~>朱砂砖台阶*2
+minecraft:stonecutter_cinnabar_brick_stairs_from_cinnabar: <切石机>朱砂~>朱砂砖楼梯
+minecraft:stonecutter_cinnabar_brick_stairs_from_cinnabar_bricks: <切石机>朱砂砖~>朱砂砖楼梯
+minecraft:stonecutter_cinnabar_brick_stairs_from_polished_cinnabar: <切石机>磨制朱砂~>朱砂砖楼梯
+minecraft:stonecutter_cinnabar_brick_wall_from_cinnabar: <切石机>朱砂~>朱砂砖墙
+minecraft:stonecutter_cinnabar_brick_wall_from_cinnabar_bricks: <切石机>朱砂砖~>朱砂砖墙
+minecraft:stonecutter_cinnabar_brick_wall_from_polished_cinnabar: <切石机>磨制朱砂~>朱砂砖墙
+minecraft:stonecutter_cinnabar_bricks_from_cinnabar: <切石机>朱砂~>朱砂砖
+minecraft:stonecutter_cinnabar_bricks_from_polished_cinnabar: <切石机>磨制朱砂~>朱砂砖
+minecraft:stonecutter_cinnabar_slab_from_cinnabar: <切石机>朱砂~>朱砂台阶*2
+minecraft:stonecutter_cinnabar_stairs_from_cinnabar: <切石机>朱砂~>朱砂楼梯
+minecraft:stonecutter_cinnabar_wall_from_cinnabar: <切石机>朱砂~>朱砂墙
+minecraft:stonecutter_cobbledouble_stone_slab: <切石机>圆石~>圆石台阶*2
+minecraft:stonecutter_cobblestone_from_stone: <切石机>石头~>圆石
+minecraft:stonecutter_cobblestone_slab_from_stone: <切石机>石头~>圆石台阶*2
+minecraft:stonecutter_cobblestone_stairs: <切石机>圆石~>圆石楼梯
+minecraft:stonecutter_cobblestone_stairs_from_stone: <切石机>石头~>圆石楼梯
+minecraft:stonecutter_cobblestone_wall: <切石机>圆石~>圆石墙
+minecraft:stonecutter_cobblestone_wall_from_stone: <切石机>石头~>圆石墙
+minecraft:stonecutter_copper_block_to_chiseled_copper: <切石机>铜块~>雕纹铜块*4
+minecraft:stonecutter_copper_block_to_copper_grate: <切石机>铜块~>铜格栅*4
+minecraft:stonecutter_copper_block_to_cut_copper: <切石机>铜块~>切制铜块*4
+minecraft:stonecutter_copper_block_to_cut_copper_slab: <切石机>铜块~>切制铜台阶*8
+minecraft:stonecutter_copper_block_to_cut_copper_stairs: <切石机>铜块~>切制铜楼梯*4
+minecraft:stonecutter_cut_copper_to_chiseled_copper: <切石机>切制铜块~>雕纹铜块
+minecraft:stonecutter_cut_copper_to_cut_copper_slab: <切石机>切制铜块~>切制铜台阶*2
+minecraft:stonecutter_cut_copper_to_cut_copper_stairs: <切石机>切制铜块~>切制铜楼梯
+minecraft:stonecutter_cut_red_sandstone_slab: <切石机>切制红砂岩~>切制红砂岩台阶*2
+minecraft:stonecutter_cut_sandstone_slab: <切石机>切制砂岩~>切制砂岩台阶*2
+minecraft:stonecutter_dark_prismarine_slab: <切石机>暗海晶石~>暗海晶石台阶*2
+minecraft:stonecutter_dark_prismarine_stairs: <切石机>暗海晶石~>暗海晶石楼梯
+minecraft:stonecutter_diorite_slab: <切石机>闪长岩~>闪长岩台阶*2
+minecraft:stonecutter_diorite_stairs: <切石机>闪长岩~>闪长岩楼梯
+minecraft:stonecutter_diorite_wall: <切石机>闪长岩~>闪长岩墙
+minecraft:stonecutter_double_stone_slab: <切石机>石头~>石头台阶*2
+minecraft:stonecutter_endbrick_slab: <切石机>末地石~>末地石砖台阶*2
+minecraft:stonecutter_endbrick_slab2: <切石机>末地石砖~>末地石砖台阶*2
+minecraft:stonecutter_endbrick_stairs: <切石机>末地石~>末地石砖楼梯
+minecraft:stonecutter_endbrick_stairs2: <切石机>末地石砖~>末地石砖楼梯
+minecraft:stonecutter_endbrick_wall: <切石机>末地石~>末地石砖墙
+minecraft:stonecutter_endbrick_wall2: <切石机>末地石砖~>末地石砖墙
+minecraft:stonecutter_endbricks: <切石机>末地石~>末地石砖
+minecraft:stonecutter_exposed_copper_to_cut_copper: <切石机>斑驳的铜块~>斑驳的切制铜块*4
+minecraft:stonecutter_exposed_copper_to_cut_copper_stairs: <切石机>斑驳的铜块~>斑驳的切制铜楼梯*4
+minecraft:stonecutter_exposed_copper_to_exposed_chiseled_copper: <切石机>斑驳的铜块~>斑驳的雕纹铜块*4
+minecraft:stonecutter_exposed_copper_to_exposed_copper_grate: <切石机>斑驳的铜块~>斑驳的铜格栅*4
+minecraft:stonecutter_exposed_copper_to_exposed_cut_copper_slab: <切石机>斑驳的铜块~>斑驳的切制铜台阶*8
+minecraft:stonecutter_exposed_cut_copper_to_cut_copper_slab: <切石机>斑驳的切制铜块~>斑驳的切制铜台阶*2
+minecraft:stonecutter_exposed_cut_copper_to_cut_copper_stairs: <切石机>斑驳的切制铜块~>斑驳的切制铜楼梯
+minecraft:stonecutter_exposed_cut_copper_to_exposed_chiseled_copper: <切石机>斑驳的切制铜块~>斑驳的雕纹铜块
+minecraft:stonecutter_granite_slab: <切石机>花岗岩~>花岗岩台阶*2
+minecraft:stonecutter_granite_stairs: <切石机>花岗岩~>花岗岩楼梯
+minecraft:stonecutter_granite_wall: <切石机>花岗岩~>花岗岩墙
+minecraft:stonecutter_mossy_cobbledouble_stone_slab: <切石机>苔石~>苔石台阶*2
+minecraft:stonecutter_mossy_cobblestone_stairs: <切石机>苔石~>苔石楼梯
+minecraft:stonecutter_mossy_cobblestone_wall: <切石机>苔石~>苔石墙
+minecraft:stonecutter_mossy_stonebrick_slab: <切石机>苔石砖~>苔石砖台阶*2
+minecraft:stonecutter_mossy_stonebrick_stairs: <切石机>苔石砖~>苔石砖楼梯
+minecraft:stonecutter_mossy_stonebrick_wall: <切石机>苔石砖~>苔石砖墙
+minecraft:stonecutter_mud_brick_slab: <切石机>泥砖~>泥砖台阶*2
+minecraft:stonecutter_mud_brick_stairs: <切石机>泥砖~>泥砖楼梯
+minecraft:stonecutter_mud_brick_wall: <切石机>泥砖~>泥砖墙
+minecraft:stonecutter_nether_brick_slab: <切石机>下界砖块~>下界砖台阶*2
+minecraft:stonecutter_nether_brick_stairs: <切石机>下界砖块~>下界砖楼梯
+minecraft:stonecutter_nether_brick_wall: <切石机>下界砖块~>下界砖墙
+minecraft:stonecutter_oxidized_copper_to_cut_copper: <切石机>氧化的铜块~>氧化的切制铜块*4
+minecraft:stonecutter_oxidized_copper_to_cut_copper_slab: <切石机>氧化的铜块~>氧化的切制铜台阶*8
+minecraft:stonecutter_oxidized_copper_to_cut_copper_stairs: <切石机>氧化的铜块~>氧化的切制铜楼梯*4
+minecraft:stonecutter_oxidized_copper_to_oxidized_chiseled_copper: <切石机>氧化的铜块~>氧化的雕纹铜块*4
+minecraft:stonecutter_oxidized_copper_to_oxidized_copper_grate: <切石机>氧化的铜块~>氧化的铜格栅*4
+minecraft:stonecutter_oxidized_cut_copper_to_cut_copper_slab: <切石机>氧化的切制铜块~>氧化的切制铜台阶*2
+minecraft:stonecutter_oxidized_cut_copper_to_cut_copper_stairs: <切石机>氧化的切制铜块~>氧化的切制铜楼梯
+minecraft:stonecutter_oxidized_cut_copper_to_oxidized_chiseled_copper: <切石机>氧化的切制铜块~>氧化的雕纹铜块
+minecraft:stonecutter_polished_andesite: <切石机>安山岩~>磨制安山岩
+minecraft:stonecutter_polished_andesite_slab: <切石机>安山岩~>磨制安山岩台阶*2
+minecraft:stonecutter_polished_andesite_slab2: <切石机>磨制安山岩~>磨制安山岩台阶*2
+minecraft:stonecutter_polished_andesite_stairs: <切石机>安山岩~>磨制安山岩楼梯
+minecraft:stonecutter_polished_andesite_stairs2: <切石机>磨制安山岩~>磨制安山岩楼梯
+minecraft:stonecutter_polished_basalt_from_basalt: <切石机>玄武岩~>磨制玄武岩
+minecraft:stonecutter_polished_brick_slab_from_blackstone: <切石机>黑石~>磨制黑石砖台阶*2
+minecraft:stonecutter_polished_brick_stairs_from_blackstone: <切石机>黑石~>磨制黑石砖楼梯
+minecraft:stonecutter_polished_brick_wall_from_blackstone: <切石机>黑石~>磨制黑石砖墙
+minecraft:stonecutter_polished_bricks_from_blackstone: <切石机>黑石~>磨制黑石砖
+minecraft:stonecutter_polished_cinnabar_from_cinnabar: <切石机>朱砂~>磨制朱砂
+minecraft:stonecutter_polished_cinnabar_slab_from_cinnabar: <切石机>朱砂~>磨制朱砂台阶*2
+minecraft:stonecutter_polished_cinnabar_slab_from_polished_cinnabar: <切石机>磨制朱砂~>磨制朱砂台阶*2
+minecraft:stonecutter_polished_cinnabar_stairs_from_cinnabar: <切石机>朱砂~>磨制朱砂楼梯
+minecraft:stonecutter_polished_cinnabar_stairs_from_polished_cinnabar: <切石机>磨制朱砂~>磨制朱砂楼梯
+minecraft:stonecutter_polished_cinnabar_wall_from_cinnabar: <切石机>朱砂~>磨制朱砂墙
+minecraft:stonecutter_polished_cinnabar_wall_from_polished_cinnabar: <切石机>磨制朱砂~>磨制朱砂墙
+minecraft:stonecutter_polished_diorite: <切石机>闪长岩~>磨制闪长岩
+minecraft:stonecutter_polished_diorite_slab: <切石机>闪长岩~>磨制闪长岩台阶*2
+minecraft:stonecutter_polished_diorite_slab2: <切石机>磨制闪长岩~>磨制闪长岩台阶*2
+minecraft:stonecutter_polished_diorite_stairs: <切石机>闪长岩~>磨制闪长岩楼梯
+minecraft:stonecutter_polished_diorite_stairs2: <切石机>磨制闪长岩~>磨制闪长岩楼梯
+minecraft:stonecutter_polished_from_blackstone: <切石机>黑石~>磨制黑石
+minecraft:stonecutter_polished_granite: <切石机>花岗岩~>磨制花岗岩
+minecraft:stonecutter_polished_granite_slab: <切石机>花岗岩~>磨制花岗岩台阶*2
+minecraft:stonecutter_polished_granite_slab2: <切石机>磨制花岗岩~>磨制花岗岩台阶*2
+minecraft:stonecutter_polished_granite_stairs: <切石机>花岗岩~>磨制花岗岩楼梯
+minecraft:stonecutter_polished_granite_stairs2: <切石机>磨制花岗岩~>磨制花岗岩楼梯
+minecraft:stonecutter_polished_slab_from_blackstone: <切石机>黑石~>磨制黑石台阶*2
+minecraft:stonecutter_polished_stairs_from_blackstone: <切石机>黑石~>磨制黑石楼梯
+minecraft:stonecutter_polished_sulfur_from_sulfur: <切石机>硫黄~>磨制硫黄
+minecraft:stonecutter_polished_sulfur_slab_from_polished_sulfur: <切石机>磨制硫黄~>磨制硫黄台阶*2
+minecraft:stonecutter_polished_sulfur_slab_from_sulfur: <切石机>硫黄~>磨制硫黄台阶*2
+minecraft:stonecutter_polished_sulfur_stairs_from_polished_sulfur: <切石机>磨制硫黄~>磨制硫黄楼梯
+minecraft:stonecutter_polished_sulfur_stairs_from_sulfur: <切石机>硫黄~>磨制硫黄楼梯
+minecraft:stonecutter_polished_sulfur_wall_from_polished_sulfur: <切石机>磨制硫黄~>磨制硫黄墙
+minecraft:stonecutter_polished_sulfur_wall_from_sulfur: <切石机>硫黄~>磨制硫黄墙
+minecraft:stonecutter_polished_tuff_to_chiseled_tuff_bricks: <切石机>磨制凝灰岩~>雕纹凝灰岩砖
+minecraft:stonecutter_polished_tuff_to_polished_tuff_slab: <切石机>磨制凝灰岩~>磨制凝灰岩台阶*2
+minecraft:stonecutter_polished_tuff_to_polished_tuff_stairs: <切石机>磨制凝灰岩~>磨制凝灰岩楼梯
+minecraft:stonecutter_polished_tuff_to_polished_tuff_wall: <切石机>磨制凝灰岩~>磨制凝灰岩墙
+minecraft:stonecutter_polished_tuff_to_tuff_brick_slab: <切石机>磨制凝灰岩~>凝灰岩砖台阶*2
+minecraft:stonecutter_polished_tuff_to_tuff_brick_stairs: <切石机>磨制凝灰岩~>凝灰岩砖楼梯
+minecraft:stonecutter_polished_tuff_to_tuff_brick_wall: <切石机>磨制凝灰岩~>凝灰岩砖墙
+minecraft:stonecutter_polished_tuff_to_tuff_bricks: <切石机>磨制凝灰岩~>凝灰岩砖
+minecraft:stonecutter_polished_wall_from_blackstone: <切石机>黑石~>磨制黑石墙
+minecraft:stonecutter_prismarine_brick_slab: <切石机>海晶石砖~>海晶石砖台阶*2
+minecraft:stonecutter_prismarine_brick_stairs: <切石机>海晶石砖~>海晶石砖楼梯
+minecraft:stonecutter_prismarine_slab: <切石机>海晶石~>海晶石台阶*2
+minecraft:stonecutter_prismarine_stairs: <切石机>海晶石~>海晶石楼梯
+minecraft:stonecutter_prismarine_wall: <切石机>海晶石~>海晶石墙
+minecraft:stonecutter_purpur_lines: <切石机>紫珀块~>紫珀柱
+minecraft:stonecutter_purpur_slab: <切石机>紫珀块~>紫珀台阶*2
+minecraft:stonecutter_purpur_stairs: <切石机>紫珀块~>紫珀楼梯
+minecraft:stonecutter_quartz_bricks_from_quartz_block: <切石机>石英块~>石英砖
+minecraft:stonecutter_quartz_chiseled: <切石机>石英块~>雕纹石英块
+minecraft:stonecutter_quartz_lines: <切石机>石英块~>石英柱
+minecraft:stonecutter_quartz_slab: <切石机>石英块~>石英台阶*2
+minecraft:stonecutter_quartz_stairs: <切石机>石英块~>石英楼梯
+minecraft:stonecutter_red_nether_brick_slab: <切石机>红色下界砖块~>红色下界砖台阶*2
+minecraft:stonecutter_red_nether_brick_stairs: <切石机>红色下界砖块~>红色下界砖楼梯
+minecraft:stonecutter_red_nether_brick_wall: <切石机>红色下界砖块~>红色下界砖墙
+minecraft:stonecutter_red_sanddouble_stone_slab: <切石机>红砂岩~>红砂岩台阶*2
+minecraft:stonecutter_red_sandstone_cut: <切石机>红砂岩~>切制红砂岩
+minecraft:stonecutter_red_sandstone_heiroglyphs: <切石机>红砂岩~>雕纹红砂岩
+minecraft:stonecutter_red_sandstone_stairs: <切石机>红砂岩~>红砂岩楼梯
+minecraft:stonecutter_red_sandstone_wall: <切石机>红砂岩~>红砂岩墙
+minecraft:stonecutter_resin_brick_chiseled: <切石机>树脂砖块~>雕纹树脂砖块
+minecraft:stonecutter_resin_brick_slab: <切石机>树脂砖块~>树脂砖台阶*2
+minecraft:stonecutter_resin_brick_stairs: <切石机>树脂砖块~>树脂砖楼梯
+minecraft:stonecutter_resin_brick_wall: <切石机>树脂砖块~>树脂砖墙
+minecraft:stonecutter_sanddouble_stone_slab: <切石机>砂岩~>砂岩台阶*2
+minecraft:stonecutter_sandstone_cut: <切石机>砂岩~>切制砂岩
+minecraft:stonecutter_sandstone_heiroglyphs: <切石机>砂岩~>雕纹砂岩
+minecraft:stonecutter_sandstone_stairs: <切石机>砂岩~>砂岩楼梯
+minecraft:stonecutter_sandstone_wall: <切石机>砂岩~>砂岩墙
+minecraft:stonecutter_slab_from_polished_blackstone: <切石机>磨制黑石~>磨制黑石台阶*2
+minecraft:stonecutter_slab_from_polished_blackstone_bricks: <切石机>磨制黑石砖~>磨制黑石砖台阶*2
+minecraft:stonecutter_smooth_double_stone_slab: <切石机>平滑石头~>平滑石头台阶*2
+minecraft:stonecutter_smooth_quartz_slab: <切石机>平滑石英块~>平滑石英台阶*2
+minecraft:stonecutter_smooth_quartz_stairs: <切石机>平滑石英块~>平滑石英楼梯
+minecraft:stonecutter_smooth_red_sanddouble_stone_slab: <切石机>平滑红砂岩~>平滑红砂岩台阶*2
+minecraft:stonecutter_smooth_red_sandstone_stairs: <切石机>平滑红砂岩~>平滑红砂岩楼梯
+minecraft:stonecutter_smooth_sanddouble_stone_slab: <切石机>平滑砂岩~>平滑砂岩台阶*2
+minecraft:stonecutter_smooth_sandstone_stairs: <切石机>平滑砂岩~>平滑砂岩楼梯
+minecraft:stonecutter_stairs_from_polished_blackstone: <切石机>磨制黑石~>磨制黑石楼梯
+minecraft:stonecutter_stone_brick_slab_from_cobblestone: <切石机>圆石~>石砖台阶*2
+minecraft:stonecutter_stone_brick_stairs_from_cobblestone: <切石机>圆石~>石砖楼梯
+minecraft:stonecutter_stone_brick_wall_from_cobblestone: <切石机>圆石~>石砖墙
+minecraft:stonecutter_stone_bricks_from_cobblestone: <切石机>圆石~>石砖
+minecraft:stonecutter_stone_stairs: <切石机>石头~>石头楼梯
+minecraft:stonecutter_stonebrick: <切石机>石头~>石砖
+minecraft:stonecutter_stonebrick_chiseled: <切石机>石头~>雕纹石砖
+minecraft:stonecutter_stonebrick_chiseled2: <切石机>石砖~>雕纹石砖
+minecraft:stonecutter_stonebrick_slab: <切石机>石头~>石砖台阶*2
+minecraft:stonecutter_stonebrick_slab2: <切石机>石砖~>石砖台阶*2
+minecraft:stonecutter_stonebrick_stairs: <切石机>石头~>石砖楼梯
+minecraft:stonecutter_stonebrick_stairs2: <切石机>石砖~>石砖楼梯
+minecraft:stonecutter_stonebrick_wall: <切石机>石头~>石砖墙
+minecraft:stonecutter_stonebrick_wall2: <切石机>石砖~>石砖墙
+minecraft:stonecutter_sulfur_brick_slab_from_polished_sulfur: <切石机>磨制硫黄~>硫黄砖台阶*2
+minecraft:stonecutter_sulfur_brick_slab_from_sulfur: <切石机>硫黄~>硫黄砖台阶*2
+minecraft:stonecutter_sulfur_brick_slab_from_sulfur_bricks: <切石机>硫黄砖~>硫黄砖台阶*2
+minecraft:stonecutter_sulfur_brick_stairs_from_polished_sulfur: <切石机>磨制硫黄~>硫黄砖楼梯
+minecraft:stonecutter_sulfur_brick_stairs_from_sulfur: <切石机>硫黄~>硫黄砖楼梯
+minecraft:stonecutter_sulfur_brick_stairs_from_sulfur_bricks: <切石机>硫黄砖~>硫黄砖楼梯
+minecraft:stonecutter_sulfur_brick_wall_from_polished_sulfur: <切石机>磨制硫黄~>硫黄砖墙
+minecraft:stonecutter_sulfur_brick_wall_from_sulfur: <切石机>硫黄~>硫黄砖墙
+minecraft:stonecutter_sulfur_brick_wall_from_sulfur_bricks: <切石机>硫黄砖~>硫黄砖墙
+minecraft:stonecutter_sulfur_bricks_from_polished_sulfur: <切石机>磨制硫黄~>硫黄砖
+minecraft:stonecutter_sulfur_bricks_from_sulfur: <切石机>硫黄~>硫黄砖
+minecraft:stonecutter_sulfur_slab_from_sulfur: <切石机>硫黄~>硫黄台阶*2
+minecraft:stonecutter_sulfur_stairs_from_sulfur: <切石机>硫黄~>硫黄楼梯
+minecraft:stonecutter_sulfur_wall_from_sulfur: <切石机>硫黄~>硫黄墙
+minecraft:stonecutter_tuff_bricks_to_chiseled_tuff_bricks: <切石机>凝灰岩砖~>雕纹凝灰岩砖
+minecraft:stonecutter_tuff_bricks_to_tuff_brick_slab: <切石机>凝灰岩砖~>凝灰岩砖台阶*2
+minecraft:stonecutter_tuff_bricks_to_tuff_brick_stairs: <切石机>凝灰岩砖~>凝灰岩砖楼梯
+minecraft:stonecutter_tuff_bricks_to_tuff_brick_wall: <切石机>凝灰岩砖~>凝灰岩砖墙
+minecraft:stonecutter_tuff_to_chiseled_tuff: <切石机>凝灰岩~>雕纹凝灰岩
+minecraft:stonecutter_tuff_to_chiseled_tuff_bricks: <切石机>凝灰岩~>雕纹凝灰岩砖
+minecraft:stonecutter_tuff_to_polished_tuff: <切石机>凝灰岩~>磨制凝灰岩
+minecraft:stonecutter_tuff_to_polished_tuff_slab: <切石机>凝灰岩~>磨制凝灰岩台阶*2
+minecraft:stonecutter_tuff_to_polished_tuff_stairs: <切石机>凝灰岩~>磨制凝灰岩楼梯
+minecraft:stonecutter_tuff_to_polished_tuff_wall: <切石机>凝灰岩~>磨制凝灰岩墙
+minecraft:stonecutter_tuff_to_tuff_brick_slab: <切石机>凝灰岩~>凝灰岩砖台阶*2
+minecraft:stonecutter_tuff_to_tuff_brick_stairs: <切石机>凝灰岩~>凝灰岩砖楼梯
+minecraft:stonecutter_tuff_to_tuff_brick_wall: <切石机>凝灰岩~>凝灰岩砖墙
+minecraft:stonecutter_tuff_to_tuff_bricks: <切石机>凝灰岩~>凝灰岩砖
+minecraft:stonecutter_tuff_to_tuff_slab: <切石机>凝灰岩~>凝灰岩台阶*2
+minecraft:stonecutter_tuff_to_tuff_stairs: <切石机>凝灰岩~>凝灰岩楼梯
+minecraft:stonecutter_tuff_to_tuff_wall: <切石机>凝灰岩~>凝灰岩墙
+minecraft:stonecutter_wall_from_polished_blackstone: <切石机>磨制黑石~>磨制黑石墙
+minecraft:stonecutter_wall_from_polished_blackstone_bricks: <切石机>磨制黑石砖~>磨制黑石砖墙
+minecraft:stonecutter_waxed_copper_to_cut_copper: <切石机>涂蜡的铜块~>涂蜡的切制铜块*4
+minecraft:stonecutter_waxed_copper_to_cut_copper_slab: <切石机>涂蜡的铜块~>涂蜡的切制铜台阶*8
+minecraft:stonecutter_waxed_copper_to_cut_copper_stairs: <切石机>涂蜡的铜块~>涂蜡的切制铜楼梯*4
+minecraft:stonecutter_waxed_copper_to_exposed_cut_copper_slab: <切石机>涂蜡的斑驳铜块~>涂蜡的斑驳切制铜台阶*8
+minecraft:stonecutter_waxed_copper_to_waxed_chiseled_copper: <切石机>涂蜡的铜块~>涂蜡的雕纹铜块*4
+minecraft:stonecutter_waxed_copper_to_waxed_copper_grate: <切石机>涂蜡的铜块~>涂蜡的铜格栅*4
+minecraft:stonecutter_waxed_cut_copper_to_cut_copper_slab: <切石机>涂蜡的切制铜块~>涂蜡的切制铜台阶*2
+minecraft:stonecutter_waxed_cut_copper_to_cut_copper_stairs: <切石机>涂蜡的切制铜块~>涂蜡的切制铜楼梯
+minecraft:stonecutter_waxed_cut_copper_to_waxed_chiseled_copper: <切石机>涂蜡的切制铜块~>涂蜡的雕纹铜块
+minecraft:stonecutter_waxed_exposed_copper_to_cut_copper: <切石机>涂蜡的斑驳铜块~>涂蜡的斑驳切制铜块*4
+minecraft:stonecutter_waxed_exposed_copper_to_cut_copper_stairs: <切石机>涂蜡的斑驳铜块~>涂蜡的斑驳切制铜楼梯*4
+minecraft:stonecutter_waxed_exposed_copper_to_waxed_exposed_chiseled_copper: <切石机>涂蜡的斑驳铜块~>涂蜡的斑驳雕纹铜块*4
+minecraft:stonecutter_waxed_exposed_copper_to_waxed_exposed_copper_grate: <切石机>涂蜡的斑驳铜块~>涂蜡的斑驳铜格栅*4
+minecraft:stonecutter_waxed_exposed_cut_copper_to_cut_copper_slab: <切石机>涂蜡的斑驳切制铜块~>涂蜡的斑驳切制铜台阶*2
+minecraft:stonecutter_waxed_exposed_cut_copper_to_cut_copper_stairs: <切石机>涂蜡的斑驳切制铜块~>涂蜡的斑驳切制铜楼梯
+minecraft:stonecutter_waxed_exposed_cut_copper_to_waxed_exposed_chiseled_copper: <切石机>涂蜡的斑驳切制铜块~>涂蜡的斑驳雕纹铜块
+minecraft:stonecutter_waxed_oxidized_copper_to_cut_copper: <切石机>涂蜡的氧化铜块~>涂蜡的氧化切制铜块*4
+minecraft:stonecutter_waxed_oxidized_copper_to_cut_copper_slab: <切石机>涂蜡的氧化铜块~>涂蜡的氧化切制铜台阶*8
+minecraft:stonecutter_waxed_oxidized_copper_to_cut_copper_stairs: <切石机>涂蜡的氧化铜块~>涂蜡的氧化切制铜楼梯*4
+minecraft:stonecutter_waxed_oxidized_copper_to_waxed_oxidized_chiseled_copper: <切石机>涂蜡的氧化铜块~>涂蜡的氧化雕纹铜块*4
+minecraft:stonecutter_waxed_oxidized_copper_to_waxed_oxidized_copper_grate: <切石机>涂蜡的氧化铜块~>涂蜡的氧化铜格栅*4
+minecraft:stonecutter_waxed_oxidized_cut_copper_to_cut_copper_slab: <切石机>涂蜡的氧化切制铜块~>涂蜡的氧化切制铜台阶*2
+minecraft:stonecutter_waxed_oxidized_cut_copper_to_cut_copper_stairs: <切石机>涂蜡的氧化切制铜块~>涂蜡的氧化切制铜楼梯
+minecraft:stonecutter_waxed_oxidized_cut_copper_to_waxed_oxidized_chiseled_copper: <切石机>涂蜡的氧化切制铜块~>涂蜡的氧化雕纹铜块
+minecraft:stonecutter_waxed_weathered_copper_to_cut_copper: <切石机>涂蜡的锈蚀铜块~>涂蜡的锈蚀切制铜块*4
+minecraft:stonecutter_waxed_weathered_copper_to_cut_copper_slab: <切石机>涂蜡的锈蚀铜块~>涂蜡的锈蚀切制铜台阶*8
+minecraft:stonecutter_waxed_weathered_copper_to_cut_copper_stairs: <切石机>涂蜡的锈蚀铜块~>涂蜡的锈蚀切制铜楼梯*4
+minecraft:stonecutter_waxed_weathered_copper_to_waxed_weathered_chiseled_copper: <切石机>涂蜡的锈蚀铜块~>涂蜡的锈蚀雕纹铜块*4
+minecraft:stonecutter_waxed_weathered_copper_to_waxed_weathered_copper_grate: <切石机>涂蜡的锈蚀铜块~>涂蜡的锈蚀铜格栅*4
+minecraft:stonecutter_waxed_weathered_cut_copper_to_cut_copper_slab: <切石机>涂蜡的锈蚀切制铜块~>涂蜡的锈蚀切制铜台阶*2
+minecraft:stonecutter_waxed_weathered_cut_copper_to_cut_copper_stairs: <切石机>涂蜡的锈蚀切制铜块~>涂蜡的锈蚀切制铜楼梯
+minecraft:stonecutter_waxed_weathered_cut_copper_to_waxed_weathered_chiseled_copper: <切石机>涂蜡的锈蚀切制铜块~>涂蜡的锈蚀雕纹铜块
+minecraft:stonecutter_weathered_copper_to_cut_copper: <切石机>锈蚀的铜块~>锈蚀的切制铜块*4
+minecraft:stonecutter_weathered_copper_to_cut_copper_slab: <切石机>锈蚀的铜块~>锈蚀的切制铜台阶*8
+minecraft:stonecutter_weathered_copper_to_cut_copper_stairs: <切石机>锈蚀的铜块~>锈蚀的切制铜楼梯*4
+minecraft:stonecutter_weathered_copper_to_weathered_chiseled_copper: <切石机>锈蚀的铜块~>锈蚀的雕纹铜块*4
+minecraft:stonecutter_weathered_copper_to_weathered_copper_grate: <切石机>锈蚀的铜块~>锈蚀的铜格栅*4
+minecraft:stonecutter_weathered_cut_copper_to_cut_copper_slab: <切石机>锈蚀的切制铜块~>锈蚀的切制铜台阶*2
+minecraft:stonecutter_weathered_cut_copper_to_cut_copper_stairs: <切石机>锈蚀的切制铜块~>锈蚀的切制铜楼梯
+minecraft:stonecutter_weathered_cut_copper_to_weathered_chiseled_copper: <切石机>锈蚀的切制铜块~>锈蚀的雕纹铜块
+minecraft:stonecutting_chiseled_deepslate_from_deepslate: <切石机>深板岩~>雕纹深板岩
+minecraft:stonecutting_cobbled_deepslate_slab_from_deepslate: <切石机>深板岩~>深板岩圆石台阶*2
+minecraft:stonecutting_cobbled_deepslate_stairs_from_deepslate: <切石机>深板岩~>深板岩圆石楼梯
+minecraft:stonecutting_cobbled_deepslate_wall_from_deepslate: <切石机>深板岩~>深板岩圆石墙
+minecraft:stonecutting_cobbled_deepslateblock_from_deepslate: <切石机>深板岩~>深板岩圆石
+minecraft:stonecutting_deepslate_brick_slab_from_deepslate: <切石机>深板岩~>深板岩砖台阶*2
+minecraft:stonecutting_deepslate_brick_stairs_from_deepslate: <切石机>深板岩~>深板岩砖楼梯
+minecraft:stonecutting_deepslate_brick_wall_from_deepslate: <切石机>深板岩~>深板岩砖墙
+minecraft:stonecutting_deepslate_bricks_from_deepslate: <切石机>深板岩~>深板岩砖
+minecraft:stonecutting_deepslate_tile_slab_from_deepslate: <切石机>深板岩~>深板岩瓦台阶*2
+minecraft:stonecutting_deepslate_tile_stairs_from_deepslate: <切石机>深板岩~>深板岩瓦楼梯
+minecraft:stonecutting_deepslate_tile_wall_from_deepslate: <切石机>深板岩~>深板岩瓦墙
+minecraft:stonecutting_deepslate_tiles_from_deepslate: <切石机>深板岩~>深板岩瓦
+minecraft:stonecutting_polished_deepslate_slab_from_deepslate: <切石机>深板岩~>磨制深板岩台阶*2
+minecraft:stonecutting_polished_deepslate_stairs_from_deepslate: <切石机>深板岩~>磨制深板岩楼梯
+minecraft:stonecutting_polished_deepslate_wall_from_deepslate: <切石机>深板岩~>磨制深板岩墙
+minecraft:stonecutting_polished_deepslateblock_from_deepslate: <切石机>深板岩~>磨制深板岩
+minecraft:straw_bed: <工作台>干草捆*3->Straw Bed*4
+minecraft:string_to_wool: <工作台>线*4->白色羊毛
+minecraft:stripped_crimson_hyphae: <工作台>去皮绯红菌柄*4->去皮绯红菌核*3
+minecraft:stripped_mangrove_wood: <已弃用>去皮红树原木*4->去皮红树木*3
+minecraft:stripped_warped_hyphae: <工作台>去皮诡异菌柄*4->去皮诡异菌核*3
+minecraft:sugar: <工作台>甘蔗->糖
+minecraft:sulfur: <工作台>硫黄尖锥*4->硫黄
+minecraft:sulfur_brick_slab: <工作台>硫黄砖*3->硫黄砖台阶*6
+minecraft:sulfur_brick_stairs: <工作台>硫黄砖*6->硫黄砖楼梯*4
+minecraft:sulfur_brick_wall: <工作台>硫黄砖*6->硫黄砖墙*6
+minecraft:sulfur_bricks: <工作台>磨制硫黄*4->硫黄砖*4
+minecraft:sulfur_slab: <工作台>硫黄*3->硫黄台阶*6
+minecraft:sulfur_stairs: <工作台>硫黄*6->硫黄楼梯*4
+minecraft:sulfur_wall: <工作台>硫黄*6->硫黄墙*6
+minecraft:target: <工作台>干草捆+红石粉*4->标靶
+minecraft:tide_armor_trim_smithing_template_duplicate: <工作台>潮汐盔甲纹饰 锻造模板+钻石*7+海晶石->潮汐盔甲纹饰 锻造模板*2
+minecraft:tinted_glass: <工作台>紫水晶碎片*4+玻璃->遮光玻璃*2
+minecraft:tnt: <工作台>沙子*4+火药*5->TNT
+minecraft:tnt_minecart: <工作台>TNT+矿车~>TNT矿车
+minecraft:torch: <工作台>木棍+煤炭/木炭->火把*4
+minecraft:trapped_chest: <工作台>箱子+绊线钩~>陷阱箱
+minecraft:tripwire_hook: <工作台>铁锭+木棍+木板->绊线钩*2
+minecraft:tuff_brick_slab: <工作台>凝灰岩砖*3->凝灰岩砖台阶*6
+minecraft:tuff_brick_stairs: <工作台>凝灰岩砖*6->凝灰岩砖楼梯*4
+minecraft:tuff_brick_wall: <工作台>凝灰岩砖*6->凝灰岩砖墙*6
+minecraft:tuff_bricks: <工作台>磨制凝灰岩*4->凝灰岩砖*4
+minecraft:tuff_slab: <工作台>凝灰岩*3->凝灰岩台阶*6
+minecraft:tuff_stairs: <工作台>凝灰岩*6->凝灰岩楼梯*4
+minecraft:tuff_wall: <工作台>凝灰岩*6->凝灰岩墙*6
+minecraft:turtle_helmet: <工作台>海龟鳞甲*5->海龟壳
+minecraft:vex_armor_trim_smithing_template_duplicate: <工作台>恼鬼盔甲纹饰 锻造模板+钻石*7+圆石->恼鬼盔甲纹饰 锻造模板*2
+minecraft:ward_armor_trim_smithing_template_duplicate: <工作台>监守盔甲纹饰 锻造模板+钻石*7+深板岩圆石->监守盔甲纹饰 锻造模板*2
+minecraft:warped_button: <工作台>诡异木板->诡异木按钮
+minecraft:warped_door: <工作台>诡异木板*6->诡异木门*3
+minecraft:warped_fence: <工作台>木棍*2+诡异木板*4->诡异木栅栏*3
+minecraft:warped_fence_gate: <工作台>木棍*4+诡异木板*2->诡异木栅栏门
+minecraft:warped_fungus_on_a_stick: <工作台>钓鱼竿+诡异菌->诡异菌钓竿
+minecraft:warped_hanging_sign: <工作台>去皮诡异菌柄*6+铁链*2->悬挂式诡异木告示牌*6
+minecraft:warped_hyphae: <工作台>诡异菌柄*4->诡异菌核*3
+minecraft:warped_planks: <工作台>诡异菌柄->诡异木板*4
+minecraft:warped_planks_from_stripped_log: <工作台>去皮诡异菌柄->诡异木板*4
+minecraft:warped_planks_from_stripped_warped_hyphae: <工作台>去皮诡异菌核->诡异木板*4
+minecraft:warped_planks_from_warped_hyphae: <工作台>诡异菌核->诡异木板*4
+minecraft:warped_pressure_plate: <工作台>诡异木板*2->诡异木压力板
+minecraft:warped_shelf_from_stripped_warped_stem: <工作台>去皮诡异菌柄*6->诡异木展示架*6
+minecraft:warped_sign: <工作台>诡异木板*6+木棍->诡异木告示牌*3
+minecraft:warped_slab: <工作台>诡异木板*3->诡异木台阶*6
+minecraft:warped_stairs: <工作台>诡异木板*6->诡异木楼梯*4
+minecraft:warped_trapdoor: <工作台>诡异木板*6->诡异木活板门*2
+minecraft:waxed_chiseled_copper: <工作台>涂蜡的切制铜台阶*2->涂蜡的雕纹铜块
+minecraft:waxed_copper_bulb: <工作台>红石粉+涂蜡的铜块*3+烈焰棒->涂蜡的铜灯*4
+minecraft:waxed_copper_grate: <工作台>涂蜡的铜块*4->涂蜡的铜格栅*4
+minecraft:waxed_exposed_chiseled_copper: <工作台>涂蜡的斑驳切制铜台阶*2->涂蜡的斑驳雕纹铜块
+minecraft:waxed_exposed_chiseled_copper_from_honeycomb: <工作台>斑驳的雕纹铜块+蜜脾~>涂蜡的斑驳雕纹铜块
+minecraft:waxed_exposed_copper_bulb: <工作台>红石粉+涂蜡的斑驳铜块*3+烈焰棒->涂蜡的斑驳铜灯*4
+minecraft:waxed_exposed_copper_grate: <工作台>涂蜡的斑驳铜块*4->涂蜡的斑驳铜格栅*4
+minecraft:waxed_oxidized_chiseled_copper: <工作台>涂蜡的氧化切制铜台阶*2->涂蜡的氧化雕纹铜块
+minecraft:waxed_oxidized_chiseled_copper_from_honeycomb: <工作台>氧化的雕纹铜块+蜜脾~>涂蜡的氧化雕纹铜块
+minecraft:waxed_oxidized_copper_bulb: <工作台>红石粉+涂蜡的氧化铜块*3+烈焰棒->涂蜡的氧化铜灯*4
+minecraft:waxed_oxidized_copper_grate: <工作台>涂蜡的氧化铜块*4->涂蜡的氧化铜格栅*4
+minecraft:waxed_weathered_chiseled_copper: <工作台>涂蜡的锈蚀切制铜台阶*2->涂蜡的锈蚀雕纹铜块
+minecraft:waxed_weathered_chiseled_copper_from_honeycomb: <工作台>锈蚀的雕纹铜块+蜜脾~>涂蜡的锈蚀雕纹铜块
+minecraft:waxed_weathered_copper_bulb: <工作台>红石粉+涂蜡的锈蚀铜块*3+烈焰棒->涂蜡的锈蚀铜灯*4
+minecraft:waxed_weathered_copper_grate: <工作台>涂蜡的锈蚀铜块*4->涂蜡的锈蚀铜格栅*4
+minecraft:waxing_chiseled_copper: <工作台>雕纹铜块+蜜脾~>涂蜡的雕纹铜块
+minecraft:waxing_copper_bars: <工作台>铜栏杆+蜜脾~>涂蜡的铜栏杆
+minecraft:waxing_copper_block: <工作台>铜块+蜜脾~>涂蜡的铜块
+minecraft:waxing_copper_bulb: <工作台>铜灯+蜜脾~>涂蜡的铜灯
+minecraft:waxing_copper_chain: <工作台>铜链+蜜脾~>涂蜡的铜链
+minecraft:waxing_copper_chest: <工作台>铜箱子+蜜脾~>涂蜡的铜箱子
+minecraft:waxing_copper_door: <工作台>铜门+蜜脾~>涂蜡的铜门
+minecraft:waxing_copper_golem_statue: <工作台>铜傀儡像+蜜脾~>涂蜡的铜傀儡像
+minecraft:waxing_copper_grate: <工作台>铜格栅+蜜脾~>涂蜡的铜格栅
+minecraft:waxing_copper_lantern: <工作台>铜灯笼+蜜脾~>涂蜡的铜灯笼
+minecraft:waxing_copper_trapdoor: <工作台>铜活板门+蜜脾~>涂蜡的铜活板门
+minecraft:waxing_cut_copper: <工作台>切制铜块+蜜脾~>涂蜡的切制铜块
+minecraft:waxing_cut_copper_slab: <工作台>切制铜台阶+蜜脾~>涂蜡的切制铜台阶
+minecraft:waxing_cut_copper_stairs: <工作台>切制铜楼梯+蜜脾~>涂蜡的切制铜楼梯
+minecraft:waxing_exposed_copper: <工作台>斑驳的铜块+蜜脾~>涂蜡的斑驳铜块
+minecraft:waxing_exposed_copper_bars: <工作台>斑驳的铜栏杆+蜜脾~>涂蜡的斑驳铜栏杆
+minecraft:waxing_exposed_copper_bulb: <工作台>斑驳的铜灯+蜜脾~>涂蜡的斑驳铜灯
+minecraft:waxing_exposed_copper_chain: <工作台>斑驳的铜链+蜜脾~>涂蜡的斑驳铜链
+minecraft:waxing_exposed_copper_chest: <工作台>斑驳的铜箱子+蜜脾~>涂蜡的斑驳铜箱子
+minecraft:waxing_exposed_copper_door: <工作台>斑驳的铜门+蜜脾~>涂蜡的斑驳铜门
+minecraft:waxing_exposed_copper_golem_statue: <工作台>斑驳的铜傀儡像+蜜脾~>涂蜡的斑驳铜傀儡像
+minecraft:waxing_exposed_copper_grate: <工作台>斑驳的铜格栅+蜜脾~>涂蜡的斑驳铜格栅
+minecraft:waxing_exposed_copper_lantern: <工作台>斑驳的铜灯笼+蜜脾~>涂蜡的斑驳铜灯笼
+minecraft:waxing_exposed_copper_trapdoor: <工作台>斑驳的铜活板门+蜜脾~>涂蜡的斑驳铜活板门
+minecraft:waxing_exposed_cut_copper: <工作台>斑驳的切制铜块+蜜脾~>涂蜡的斑驳切制铜块
+minecraft:waxing_exposed_cut_copper_slab: <工作台>斑驳的切制铜台阶+蜜脾~>涂蜡的斑驳切制铜台阶
+minecraft:waxing_exposed_cut_copper_stairs: <工作台>斑驳的切制铜楼梯+蜜脾~>涂蜡的斑驳切制铜楼梯
+minecraft:waxing_exposed_lightning_rod: <工作台>斑驳的避雷针+蜜脾~>涂蜡的斑驳避雷针
+minecraft:waxing_lightning_rod: <工作台>避雷针+蜜脾~>涂蜡的避雷针
+minecraft:waxing_oxidized_copper: <工作台>氧化的铜块+蜜脾~>涂蜡的氧化铜块
+minecraft:waxing_oxidized_copper_bars: <工作台>氧化的铜栏杆+蜜脾~>涂蜡的氧化铜栏杆
+minecraft:waxing_oxidized_copper_bulb: <工作台>氧化的铜灯+蜜脾~>涂蜡的氧化铜灯
+minecraft:waxing_oxidized_copper_chain: <工作台>氧化的铜链+蜜脾~>涂蜡的氧化铜链
+minecraft:waxing_oxidized_copper_chest: <工作台>氧化的铜箱子+蜜脾~>涂蜡的氧化铜箱子
+minecraft:waxing_oxidized_copper_door: <工作台>氧化的铜门+蜜脾~>涂蜡的氧化铜门
+minecraft:waxing_oxidized_copper_golem_statue: <工作台>氧化的铜傀儡像+蜜脾~>涂蜡的氧化铜傀儡像
+minecraft:waxing_oxidized_copper_grate: <工作台>氧化的铜格栅+蜜脾~>涂蜡的氧化铜格栅
+minecraft:waxing_oxidized_copper_lantern: <工作台>氧化的铜灯笼+蜜脾~>涂蜡的氧化铜灯笼
+minecraft:waxing_oxidized_copper_trapdoor: <工作台>氧化的铜活板门+蜜脾~>涂蜡的氧化铜活板门
+minecraft:waxing_oxidized_cut_copper: <工作台>氧化的切制铜块+蜜脾~>涂蜡的氧化切制铜块
+minecraft:waxing_oxidized_cut_copper_slab: <工作台>氧化的切制铜台阶+蜜脾~>涂蜡的氧化切制铜台阶
+minecraft:waxing_oxidized_cut_copper_stairs: <工作台>氧化的切制铜楼梯+蜜脾~>涂蜡的氧化切制铜楼梯
+minecraft:waxing_oxidized_lightning_rod: <工作台>氧化的避雷针+蜜脾~>涂蜡的氧化避雷针
+minecraft:waxing_weathered_copper: <工作台>锈蚀的铜块+蜜脾~>涂蜡的锈蚀铜块
+minecraft:waxing_weathered_copper_bars: <工作台>锈蚀的铜栏杆+蜜脾~>涂蜡的锈蚀铜栏杆
+minecraft:waxing_weathered_copper_bulb: <工作台>锈蚀的铜灯+蜜脾~>涂蜡的锈蚀铜灯
+minecraft:waxing_weathered_copper_chain: <工作台>锈蚀的铜链+蜜脾~>涂蜡的锈蚀铜链
+minecraft:waxing_weathered_copper_chest: <工作台>锈蚀的铜箱子+蜜脾~>涂蜡的锈蚀铜箱子
+minecraft:waxing_weathered_copper_door: <工作台>锈蚀的铜门+蜜脾~>涂蜡的锈蚀铜门
+minecraft:waxing_weathered_copper_golem_statue: <工作台>锈蚀的铜傀儡像+蜜脾~>涂蜡的锈蚀铜傀儡像
+minecraft:waxing_weathered_copper_grate: <工作台>锈蚀的铜格栅+蜜脾~>涂蜡的锈蚀铜格栅
+minecraft:waxing_weathered_copper_lantern: <工作台>锈蚀的铜灯笼+蜜脾~>涂蜡的锈蚀铜灯笼
+minecraft:waxing_weathered_copper_trapdoor: <工作台>锈蚀的铜活板门+蜜脾~>涂蜡的锈蚀铜活板门
+minecraft:waxing_weathered_cut_copper: <工作台>锈蚀的切制铜块+蜜脾~>涂蜡的锈蚀切制铜块
+minecraft:waxing_weathered_cut_copper_slab: <工作台>锈蚀的切制铜台阶+蜜脾~>涂蜡的锈蚀切制铜台阶
+minecraft:waxing_weathered_cut_copper_stairs: <工作台>锈蚀的切制铜楼梯+蜜脾~>涂蜡的锈蚀切制铜楼梯
+minecraft:waxing_weathered_lightning_rod: <工作台>锈蚀的避雷针+蜜脾~>涂蜡的锈蚀避雷针
+minecraft:wayfinder_armor_trim_smithing_template_duplicate: <工作台>向导盔甲纹饰 锻造模板+钻石*7+陶瓦->向导盔甲纹饰 锻造模板*2
+minecraft:weathered_chiseled_copper: <工作台>锈蚀的切制铜台阶*2->锈蚀的雕纹铜块
+minecraft:weathered_copper_bulb: <工作台>红石粉+锈蚀的铜块*3+烈焰棒->锈蚀的铜灯*4
+minecraft:weathered_copper_grate: <工作台>锈蚀的铜块*4->锈蚀的铜格栅*4
+minecraft:wheat: <工作台>干草捆->小麦*9
+minecraft:white_banner: <工作台>白色羊毛*6+木棍->白色旗帜
+minecraft:white_candle: <工作台>蜡烛+白色染料~>白色蜡烛
+minecraft:white_candle_from_bonemeal: <工作台>蜡烛+骨粉~>白色蜡烛
+minecraft:white_carpet: <工作台>白色羊毛*2->白色地毯*3
+minecraft:white_concrete_powder: <工作台>白色染料+沙子+沙子+沙子+沙子+沙砾+沙砾+沙砾+沙砾~>白色混凝土粉末*8
+minecraft:white_concrete_powder_from_bonemeal: <工作台>骨粉+沙子+沙子+沙子+沙子+沙砾+沙砾+沙砾+沙砾~>白色混凝土粉末*8
+minecraft:white_cushion: <工作台>白色羊毛台阶*3->白色坐垫
+minecraft:white_dye_from_bone_meal: <工作台>骨粉~>白色染料
+minecraft:white_dye_from_lily_of_the_valley: <工作台>铃兰~>白色染料
+minecraft:white_stained_glass: <工作台>玻璃*8+白色染料->白色染色玻璃*8
+minecraft:white_stained_glass_from_bonemeal: <工作台>玻璃*8+骨粉->白色染色玻璃*8
+minecraft:white_stained_glass_pane: <工作台>白色染色玻璃*6->白色染色玻璃板*16
+minecraft:white_stained_glass_pane_from_pane: <工作台>玻璃板*8+白色染料->白色染色玻璃板*8
+minecraft:white_stained_hardened_clay: <工作台>陶瓦*8+白色染料->白色陶瓦*8
+minecraft:white_stained_hardened_clay_from_bonemeal: <工作台>陶瓦*8+骨粉->白色陶瓦*8
+minecraft:white_wool_slab: <工作台>白色羊毛*3->白色羊毛台阶*6
+minecraft:white_wool_stairs: <工作台>白色羊毛*6->白色羊毛楼梯*4
+minecraft:wild_armor_trim_smithing_template_duplicate: <工作台>荒野盔甲纹饰 锻造模板+钻石*7+苔石->荒野盔甲纹饰 锻造模板*2
+minecraft:wind_charge: <工作台>旋风棒~>风弹*4
+minecraft:wolf_armor: <工作台>犰狳鳞甲*6->狼铠
+minecraft:wooden_axe: <工作台>木棍*2+木板*3->木斧
+minecraft:wooden_door: <工作台>橡木木板*6->橡木门*3
+minecraft:wooden_hoe: <工作台>木棍*2+木板*2->木锄
+minecraft:wooden_pickaxe: <工作台>木棍*2+木板*3->木镐
+minecraft:wooden_shovel: <工作台>木棍*2+木板->木锹
+minecraft:wooden_spear: <工作台>木棍*2+木板->木矛
+minecraft:wooden_sword: <工作台>木棍+木板*2->木剑
+minecraft:writable_book: <工作台>书+墨囊+羽毛~>书与笔
+minecraft:yellow_banner: <工作台>黄色羊毛*6+木棍->黄色旗帜
+minecraft:yellow_candle: <工作台>蜡烛+黄色染料~>黄色蜡烛
+minecraft:yellow_carpet: <工作台>黄色羊毛*2->黄色地毯*3
+minecraft:yellow_carpet_from_white: <工作台>白色地毯*8+黄色染料->黄色地毯*8
+minecraft:yellow_concrete_powder: <工作台>黄色染料+沙子+沙子+沙子+沙子+沙砾+沙砾+沙砾+沙砾~>黄色混凝土粉末*8
+minecraft:yellow_cushion: <工作台>黄色羊毛台阶*3->黄色坐垫
+minecraft:yellow_dye_from_dandelion: <工作台>蒲公英~>黄色染料
+minecraft:yellow_dye_from_golden_dandelion: <工作台>金蒲公英~>黄色染料
+minecraft:yellow_dye_from_sunflower: <工作台>向日葵~>黄色染料*2
+minecraft:yellow_dye_from_wildflowers: <工作台>野花簇~>黄色染料
+minecraft:yellow_stained_glass: <工作台>玻璃*8+黄色染料->黄色染色玻璃*8
+minecraft:yellow_stained_glass_pane: <工作台>黄色染色玻璃*6->黄色染色玻璃板*16
+minecraft:yellow_stained_glass_pane_from_pane: <工作台>玻璃板*8+黄色染料->黄色染色玻璃板*8
+minecraft:yellow_stained_hardened_clay: <工作台>陶瓦*8+黄色染料->黄色陶瓦*8
+minecraft:yellow_wool_slab: <工作台>黄色羊毛*3->黄色羊毛台阶*6
+minecraft:yellow_wool_stairs: <工作台>黄色羊毛*6->黄色羊毛楼梯*4
+oak_stairs_oak_recipeId: 
+paper_sulphur_recipeId: 
+shulkerBox_shulker_box_color_block_0_10_0: 
+shulkerBox_shulker_box_color_block_0_11_0: 
+shulkerBox_shulker_box_color_block_0_12_0: 
+shulkerBox_shulker_box_color_block_0_13_0: 
+shulkerBox_shulker_box_color_block_0_14_0: 
+shulkerBox_shulker_box_color_block_0_15_0: 
+shulkerBox_shulker_box_color_block_0_1_0: 
+shulkerBox_shulker_box_color_block_0_2_0: 
+shulkerBox_shulker_box_color_block_0_3_0: 
+shulkerBox_shulker_box_color_block_0_4_0: 
+shulkerBox_shulker_box_color_block_0_5_0: 
+shulkerBox_shulker_box_color_block_0_6_0: 
+shulkerBox_shulker_box_color_block_0_7_0: 
+shulkerBox_shulker_box_color_block_0_8_0: 
+shulkerBox_shulker_box_color_block_0_9_0: 
+shulkerBox_shulker_box_color_block_10_0_0: 
+shulkerBox_shulker_box_color_block_10_11_0: 
+shulkerBox_shulker_box_color_block_10_12_0: 
+shulkerBox_shulker_box_color_block_10_13_0: 
+shulkerBox_shulker_box_color_block_10_14_0: 
+shulkerBox_shulker_box_color_block_10_15_0: 
+shulkerBox_shulker_box_color_block_10_1_0: 
+shulkerBox_shulker_box_color_block_10_2_0: 
+shulkerBox_shulker_box_color_block_10_3_0: 
+shulkerBox_shulker_box_color_block_10_4_0: 
+shulkerBox_shulker_box_color_block_10_5_0: 
+shulkerBox_shulker_box_color_block_10_6_0: 
+shulkerBox_shulker_box_color_block_10_7_0: 
+shulkerBox_shulker_box_color_block_10_8_0: 
+shulkerBox_shulker_box_color_block_10_9_0: 
+shulkerBox_shulker_box_color_block_11_0_0: 
+shulkerBox_shulker_box_color_block_11_10_0: 
+shulkerBox_shulker_box_color_block_11_12_0: 
+shulkerBox_shulker_box_color_block_11_13_0: 
+shulkerBox_shulker_box_color_block_11_14_0: 
+shulkerBox_shulker_box_color_block_11_15_0: 
+shulkerBox_shulker_box_color_block_11_1_0: 
+shulkerBox_shulker_box_color_block_11_2_0: 
+shulkerBox_shulker_box_color_block_11_3_0: 
+shulkerBox_shulker_box_color_block_11_4_0: 
+shulkerBox_shulker_box_color_block_11_5_0: 
+shulkerBox_shulker_box_color_block_11_6_0: 
+shulkerBox_shulker_box_color_block_11_7_0: 
+shulkerBox_shulker_box_color_block_11_8_0: 
+shulkerBox_shulker_box_color_block_11_9_0: 
+shulkerBox_shulker_box_color_block_12_0_0: 
+shulkerBox_shulker_box_color_block_12_10_0: 
+shulkerBox_shulker_box_color_block_12_11_0: 
+shulkerBox_shulker_box_color_block_12_13_0: 
+shulkerBox_shulker_box_color_block_12_14_0: 
+shulkerBox_shulker_box_color_block_12_15_0: 
+shulkerBox_shulker_box_color_block_12_1_0: 
+shulkerBox_shulker_box_color_block_12_2_0: 
+shulkerBox_shulker_box_color_block_12_3_0: 
+shulkerBox_shulker_box_color_block_12_4_0: 
+shulkerBox_shulker_box_color_block_12_5_0: 
+shulkerBox_shulker_box_color_block_12_6_0: 
+shulkerBox_shulker_box_color_block_12_7_0: 
+shulkerBox_shulker_box_color_block_12_8_0: 
+shulkerBox_shulker_box_color_block_12_9_0: 
+shulkerBox_shulker_box_color_block_13_0_0: 
+shulkerBox_shulker_box_color_block_13_10_0: 
+shulkerBox_shulker_box_color_block_13_11_0: 
+shulkerBox_shulker_box_color_block_13_12_0: 
+shulkerBox_shulker_box_color_block_13_14_0: 
+shulkerBox_shulker_box_color_block_13_15_0: 
+shulkerBox_shulker_box_color_block_13_1_0: 
+shulkerBox_shulker_box_color_block_13_2_0: 
+shulkerBox_shulker_box_color_block_13_3_0: 
+shulkerBox_shulker_box_color_block_13_4_0: 
+shulkerBox_shulker_box_color_block_13_5_0: 
+shulkerBox_shulker_box_color_block_13_6_0: 
+shulkerBox_shulker_box_color_block_13_7_0: 
+shulkerBox_shulker_box_color_block_13_8_0: 
+shulkerBox_shulker_box_color_block_13_9_0: 
+shulkerBox_shulker_box_color_block_14_0_0: 
+shulkerBox_shulker_box_color_block_14_10_0: 
+shulkerBox_shulker_box_color_block_14_11_0: 
+shulkerBox_shulker_box_color_block_14_12_0: 
+shulkerBox_shulker_box_color_block_14_13_0: 
+shulkerBox_shulker_box_color_block_14_15_0: 
+shulkerBox_shulker_box_color_block_14_1_0: 
+shulkerBox_shulker_box_color_block_14_2_0: 
+shulkerBox_shulker_box_color_block_14_3_0: 
+shulkerBox_shulker_box_color_block_14_4_0: 
+shulkerBox_shulker_box_color_block_14_5_0: 
+shulkerBox_shulker_box_color_block_14_6_0: 
+shulkerBox_shulker_box_color_block_14_7_0: 
+shulkerBox_shulker_box_color_block_14_8_0: 
+shulkerBox_shulker_box_color_block_14_9_0: 
+shulkerBox_shulker_box_color_block_15_0_0: 
+shulkerBox_shulker_box_color_block_15_10_0: 
+shulkerBox_shulker_box_color_block_15_11_0: 
+shulkerBox_shulker_box_color_block_15_12_0: 
+shulkerBox_shulker_box_color_block_15_13_0: 
+shulkerBox_shulker_box_color_block_15_14_0: 
+shulkerBox_shulker_box_color_block_15_1_0: 
+shulkerBox_shulker_box_color_block_15_2_0: 
+shulkerBox_shulker_box_color_block_15_3_0: 
+shulkerBox_shulker_box_color_block_15_4_0: 
+shulkerBox_shulker_box_color_block_15_5_0: 
+shulkerBox_shulker_box_color_block_15_6_0: 
+shulkerBox_shulker_box_color_block_15_7_0: 
+shulkerBox_shulker_box_color_block_15_8_0: 
+shulkerBox_shulker_box_color_block_15_9_0: 
+shulkerBox_shulker_box_color_block_16_10_0: 
+shulkerBox_shulker_box_color_block_16_11_0: 
+shulkerBox_shulker_box_color_block_16_12_0: 
+shulkerBox_shulker_box_color_block_16_13_0: 
+shulkerBox_shulker_box_color_block_16_14_0: 
+shulkerBox_shulker_box_color_block_16_15_0: 
+shulkerBox_shulker_box_color_block_16_1_0: 
+shulkerBox_shulker_box_color_block_16_2_0: 
+shulkerBox_shulker_box_color_block_16_3_0: 
+shulkerBox_shulker_box_color_block_16_4_0: 
+shulkerBox_shulker_box_color_block_16_5_0: 
+shulkerBox_shulker_box_color_block_16_6_0: 
+shulkerBox_shulker_box_color_block_16_7_0: 
+shulkerBox_shulker_box_color_block_16_8_0: 
+shulkerBox_shulker_box_color_block_16_9_0: 
+shulkerBox_shulker_box_color_block_17_0_0: 
+shulkerBox_shulker_box_color_block_17_10_0: 
+shulkerBox_shulker_box_color_block_17_11_0: 
+shulkerBox_shulker_box_color_block_17_12_0: 
+shulkerBox_shulker_box_color_block_17_13_0: 
+shulkerBox_shulker_box_color_block_17_14_0: 
+shulkerBox_shulker_box_color_block_17_15_0: 
+shulkerBox_shulker_box_color_block_17_1_0: 
+shulkerBox_shulker_box_color_block_17_2_0: 
+shulkerBox_shulker_box_color_block_17_4_0: 
+shulkerBox_shulker_box_color_block_17_5_0: 
+shulkerBox_shulker_box_color_block_17_6_0: 
+shulkerBox_shulker_box_color_block_17_7_0: 
+shulkerBox_shulker_box_color_block_17_8_0: 
+shulkerBox_shulker_box_color_block_17_9_0: 
+shulkerBox_shulker_box_color_block_18_0_0: 
+shulkerBox_shulker_box_color_block_18_10_0: 
+shulkerBox_shulker_box_color_block_18_11_0: 
+shulkerBox_shulker_box_color_block_18_12_0: 
+shulkerBox_shulker_box_color_block_18_13_0: 
+shulkerBox_shulker_box_color_block_18_14_0: 
+shulkerBox_shulker_box_color_block_18_15_0: 
+shulkerBox_shulker_box_color_block_18_1_0: 
+shulkerBox_shulker_box_color_block_18_2_0: 
+shulkerBox_shulker_box_color_block_18_3_0: 
+shulkerBox_shulker_box_color_block_18_5_0: 
+shulkerBox_shulker_box_color_block_18_6_0: 
+shulkerBox_shulker_box_color_block_18_7_0: 
+shulkerBox_shulker_box_color_block_18_8_0: 
+shulkerBox_shulker_box_color_block_18_9_0: 
+shulkerBox_shulker_box_color_block_19_0_0: 
+shulkerBox_shulker_box_color_block_19_10_0: 
+shulkerBox_shulker_box_color_block_19_11_0: 
+shulkerBox_shulker_box_color_block_19_12_0: 
+shulkerBox_shulker_box_color_block_19_13_0: 
+shulkerBox_shulker_box_color_block_19_14_0: 
+shulkerBox_shulker_box_color_block_19_1_0: 
+shulkerBox_shulker_box_color_block_19_2_0: 
+shulkerBox_shulker_box_color_block_19_3_0: 
+shulkerBox_shulker_box_color_block_19_4_0: 
+shulkerBox_shulker_box_color_block_19_5_0: 
+shulkerBox_shulker_box_color_block_19_6_0: 
+shulkerBox_shulker_box_color_block_19_7_0: 
+shulkerBox_shulker_box_color_block_19_8_0: 
+shulkerBox_shulker_box_color_block_19_9_0: 
+shulkerBox_shulker_box_color_block_1_0_0: 
+shulkerBox_shulker_box_color_block_1_10_0: 
+shulkerBox_shulker_box_color_block_1_11_0: 
+shulkerBox_shulker_box_color_block_1_12_0: 
+shulkerBox_shulker_box_color_block_1_13_0: 
+shulkerBox_shulker_box_color_block_1_14_0: 
+shulkerBox_shulker_box_color_block_1_15_0: 
+shulkerBox_shulker_box_color_block_1_2_0: 
+shulkerBox_shulker_box_color_block_1_3_0: 
+shulkerBox_shulker_box_color_block_1_4_0: 
+shulkerBox_shulker_box_color_block_1_5_0: 
+shulkerBox_shulker_box_color_block_1_6_0: 
+shulkerBox_shulker_box_color_block_1_7_0: 
+shulkerBox_shulker_box_color_block_1_8_0: 
+shulkerBox_shulker_box_color_block_1_9_0: 
+shulkerBox_shulker_box_color_block_2_0_0: 
+shulkerBox_shulker_box_color_block_2_10_0: 
+shulkerBox_shulker_box_color_block_2_11_0: 
+shulkerBox_shulker_box_color_block_2_12_0: 
+shulkerBox_shulker_box_color_block_2_13_0: 
+shulkerBox_shulker_box_color_block_2_14_0: 
+shulkerBox_shulker_box_color_block_2_15_0: 
+shulkerBox_shulker_box_color_block_2_1_0: 
+shulkerBox_shulker_box_color_block_2_3_0: 
+shulkerBox_shulker_box_color_block_2_4_0: 
+shulkerBox_shulker_box_color_block_2_5_0: 
+shulkerBox_shulker_box_color_block_2_6_0: 
+shulkerBox_shulker_box_color_block_2_7_0: 
+shulkerBox_shulker_box_color_block_2_8_0: 
+shulkerBox_shulker_box_color_block_2_9_0: 
+shulkerBox_shulker_box_color_block_3_0_0: 
+shulkerBox_shulker_box_color_block_3_10_0: 
+shulkerBox_shulker_box_color_block_3_11_0: 
+shulkerBox_shulker_box_color_block_3_12_0: 
+shulkerBox_shulker_box_color_block_3_13_0: 
+shulkerBox_shulker_box_color_block_3_14_0: 
+shulkerBox_shulker_box_color_block_3_15_0: 
+shulkerBox_shulker_box_color_block_3_1_0: 
+shulkerBox_shulker_box_color_block_3_2_0: 
+shulkerBox_shulker_box_color_block_3_4_0: 
+shulkerBox_shulker_box_color_block_3_5_0: 
+shulkerBox_shulker_box_color_block_3_6_0: 
+shulkerBox_shulker_box_color_block_3_7_0: 
+shulkerBox_shulker_box_color_block_3_8_0: 
+shulkerBox_shulker_box_color_block_3_9_0: 
+shulkerBox_shulker_box_color_block_4_0_0: 
+shulkerBox_shulker_box_color_block_4_10_0: 
+shulkerBox_shulker_box_color_block_4_11_0: 
+shulkerBox_shulker_box_color_block_4_12_0: 
+shulkerBox_shulker_box_color_block_4_13_0: 
+shulkerBox_shulker_box_color_block_4_14_0: 
+shulkerBox_shulker_box_color_block_4_15_0: 
+shulkerBox_shulker_box_color_block_4_1_0: 
+shulkerBox_shulker_box_color_block_4_2_0: 
+shulkerBox_shulker_box_color_block_4_3_0: 
+shulkerBox_shulker_box_color_block_4_5_0: 
+shulkerBox_shulker_box_color_block_4_6_0: 
+shulkerBox_shulker_box_color_block_4_7_0: 
+shulkerBox_shulker_box_color_block_4_8_0: 
+shulkerBox_shulker_box_color_block_4_9_0: 
+shulkerBox_shulker_box_color_block_5_0_0: 
+shulkerBox_shulker_box_color_block_5_10_0: 
+shulkerBox_shulker_box_color_block_5_11_0: 
+shulkerBox_shulker_box_color_block_5_12_0: 
+shulkerBox_shulker_box_color_block_5_13_0: 
+shulkerBox_shulker_box_color_block_5_14_0: 
+shulkerBox_shulker_box_color_block_5_15_0: 
+shulkerBox_shulker_box_color_block_5_1_0: 
+shulkerBox_shulker_box_color_block_5_2_0: 
+shulkerBox_shulker_box_color_block_5_3_0: 
+shulkerBox_shulker_box_color_block_5_4_0: 
+shulkerBox_shulker_box_color_block_5_6_0: 
+shulkerBox_shulker_box_color_block_5_7_0: 
+shulkerBox_shulker_box_color_block_5_8_0: 
+shulkerBox_shulker_box_color_block_5_9_0: 
+shulkerBox_shulker_box_color_block_6_0_0: 
+shulkerBox_shulker_box_color_block_6_10_0: 
+shulkerBox_shulker_box_color_block_6_11_0: 
+shulkerBox_shulker_box_color_block_6_12_0: 
+shulkerBox_shulker_box_color_block_6_13_0: 
+shulkerBox_shulker_box_color_block_6_14_0: 
+shulkerBox_shulker_box_color_block_6_15_0: 
+shulkerBox_shulker_box_color_block_6_1_0: 
+shulkerBox_shulker_box_color_block_6_2_0: 
+shulkerBox_shulker_box_color_block_6_3_0: 
+shulkerBox_shulker_box_color_block_6_4_0: 
+shulkerBox_shulker_box_color_block_6_5_0: 
+shulkerBox_shulker_box_color_block_6_7_0: 
+shulkerBox_shulker_box_color_block_6_8_0: 
+shulkerBox_shulker_box_color_block_6_9_0: 
+shulkerBox_shulker_box_color_block_7_0_0: 
+shulkerBox_shulker_box_color_block_7_10_0: 
+shulkerBox_shulker_box_color_block_7_11_0: 
+shulkerBox_shulker_box_color_block_7_12_0: 
+shulkerBox_shulker_box_color_block_7_13_0: 
+shulkerBox_shulker_box_color_block_7_14_0: 
+shulkerBox_shulker_box_color_block_7_15_0: 
+shulkerBox_shulker_box_color_block_7_1_0: 
+shulkerBox_shulker_box_color_block_7_2_0: 
+shulkerBox_shulker_box_color_block_7_3_0: 
+shulkerBox_shulker_box_color_block_7_4_0: 
+shulkerBox_shulker_box_color_block_7_5_0: 
+shulkerBox_shulker_box_color_block_7_6_0: 
+shulkerBox_shulker_box_color_block_7_8_0: 
+shulkerBox_shulker_box_color_block_7_9_0: 
+shulkerBox_shulker_box_color_block_8_0_0: 
+shulkerBox_shulker_box_color_block_8_10_0: 
+shulkerBox_shulker_box_color_block_8_11_0: 
+shulkerBox_shulker_box_color_block_8_12_0: 
+shulkerBox_shulker_box_color_block_8_13_0: 
+shulkerBox_shulker_box_color_block_8_14_0: 
+shulkerBox_shulker_box_color_block_8_15_0: 
+shulkerBox_shulker_box_color_block_8_1_0: 
+shulkerBox_shulker_box_color_block_8_2_0: 
+shulkerBox_shulker_box_color_block_8_3_0: 
+shulkerBox_shulker_box_color_block_8_4_0: 
+shulkerBox_shulker_box_color_block_8_5_0: 
+shulkerBox_shulker_box_color_block_8_6_0: 
+shulkerBox_shulker_box_color_block_8_7_0: 
+shulkerBox_shulker_box_color_block_8_9_0: 
+shulkerBox_shulker_box_color_block_9_0_0: 
+shulkerBox_shulker_box_color_block_9_10_0: 
+shulkerBox_shulker_box_color_block_9_11_0: 
+shulkerBox_shulker_box_color_block_9_12_0: 
+shulkerBox_shulker_box_color_block_9_13_0: 
+shulkerBox_shulker_box_color_block_9_14_0: 
+shulkerBox_shulker_box_color_block_9_15_0: 
+shulkerBox_shulker_box_color_block_9_1_0: 
+shulkerBox_shulker_box_color_block_9_2_0: 
+shulkerBox_shulker_box_color_block_9_3_0: 
+shulkerBox_shulker_box_color_block_9_4_0: 
+shulkerBox_shulker_box_color_block_9_5_0: 
+shulkerBox_shulker_box_color_block_9_6_0: 
+shulkerBox_shulker_box_color_block_9_7_0: 
+shulkerBox_shulker_box_color_block_9_8_0: 
+shulkerBox_shulker_box_color_dye_0_0: 
+shulkerBox_shulker_box_color_dye_10_0: 
+shulkerBox_shulker_box_color_dye_11_0: 
+shulkerBox_shulker_box_color_dye_12_0: 
+shulkerBox_shulker_box_color_dye_13_0: 
+shulkerBox_shulker_box_color_dye_14_0: 
+shulkerBox_shulker_box_color_dye_15_0: 
+shulkerBox_shulker_box_color_dye_16_0: 
+shulkerBox_shulker_box_color_dye_17_0: 
+shulkerBox_shulker_box_color_dye_18_0: 
+shulkerBox_shulker_box_color_dye_19_0: 
+shulkerBox_shulker_box_color_dye_1_0: 
+shulkerBox_shulker_box_color_dye_2_0: 
+shulkerBox_shulker_box_color_dye_3_0: 
+shulkerBox_shulker_box_color_dye_4_0: 
+shulkerBox_shulker_box_color_dye_5_0: 
+shulkerBox_shulker_box_color_dye_6_0: 
+shulkerBox_shulker_box_color_dye_7_0: 
+shulkerBox_shulker_box_color_dye_8_0: 
+shulkerBox_shulker_box_color_dye_9_0: 
+slab3_endstonebrick_recipeId: 
+spruce_stairs_spruce_recipeId: 
+stonecutter_stairs_from_polished_blackstone_bricks: <切石机>磨制黑石砖~>磨制黑石砖楼梯
+stoneslab2_RedSandstone_recipeId: 
+stoneslab2_prismarine_bricks_recipeId: 
+stoneslab2_prismarine_recipeId: 
+stoneslab2_purpur_recipeId: 
+stoneslab2_recipeId: 
+stoneslab2_rednetherbrick_recipeId: 
+stoneslab2_redsandstone_heiroglyphs_recipeId: 
+stoneslab2_smoothsandstone_smooth_recipeId: 
+stoneslab3_andesite_recipeId: 
+stoneslab3_diorite_recipeId: 
+stoneslab3_granite: 
+stoneslab3_polishedGranite_GraniteSmooth_recipeId: 
+stoneslab3_polished_andesite_andesitesmooth_recipeId: 
+stoneslab3_polished_diorite_dioritesmooth_recipeId: 
+stoneslab3_smooth_recipeId: 
+stoneslab4_cut_redsandstone_cut_recipeId: 
+stoneslab4_cut_sandstone_cut_recipeId: 
+stoneslab4_smoothquartz_smooth_recipeId: 
+stoneslab_quartz_recipeId: 
+stoneslab_recipeId: 
+stoneslab_sandstone_heiroglyphs_recipeId: 
+weapon_arrow_recipe_10: 
+weapon_arrow_recipe_11: 
+weapon_arrow_recipe_12: 
+weapon_arrow_recipe_13: 
+weapon_arrow_recipe_14: 
+weapon_arrow_recipe_15: 
+weapon_arrow_recipe_16: 
+weapon_arrow_recipe_17: 
+weapon_arrow_recipe_18: 
+weapon_arrow_recipe_19: 
+weapon_arrow_recipe_20: 
+weapon_arrow_recipe_21: 
+weapon_arrow_recipe_22: 
+weapon_arrow_recipe_23: 
+weapon_arrow_recipe_24: 
+weapon_arrow_recipe_25: 
+weapon_arrow_recipe_26: 
+weapon_arrow_recipe_27: 
+weapon_arrow_recipe_28: 
+weapon_arrow_recipe_29: 
+weapon_arrow_recipe_30: 
+weapon_arrow_recipe_31: 
+weapon_arrow_recipe_32: 
+weapon_arrow_recipe_33: 
+weapon_arrow_recipe_34: 
+weapon_arrow_recipe_35: 
+weapon_arrow_recipe_36: 
+weapon_arrow_recipe_37: 
+weapon_arrow_recipe_38: 
+weapon_arrow_recipe_39: 
+weapon_arrow_recipe_40: 
+weapon_arrow_recipe_41: 
+weapon_arrow_recipe_42: 
+weapon_arrow_recipe_43: 
+weapon_arrow_recipe_44: 
+weapon_arrow_recipe_45: 
+weapon_arrow_recipe_46: 
+weapon_arrow_recipe_5: 
+weapon_arrow_recipe_6: 
+weapon_arrow_recipe_7: 
+weapon_arrow_recipe_8: 
+weapon_arrow_recipe_9: 
+wool_dye_wool_0_1: 
+wool_dye_wool_0_10: 
+wool_dye_wool_0_11: 
+wool_dye_wool_0_12: 
+wool_dye_wool_0_13: 
+wool_dye_wool_0_14: 
+wool_dye_wool_0_15: 
+wool_dye_wool_0_2: 
+wool_dye_wool_0_3: 
+wool_dye_wool_0_4: 
+wool_dye_wool_0_5: 
+wool_dye_wool_0_6: 
+wool_dye_wool_0_7: 
+wool_dye_wool_0_8: 
+wool_dye_wool_0_9: 
+wool_dye_wool_10_0: 
+wool_dye_wool_10_1: 
+wool_dye_wool_10_11: 
+wool_dye_wool_10_12: 
+wool_dye_wool_10_13: 
+wool_dye_wool_10_14: 
+wool_dye_wool_10_15: 
+wool_dye_wool_10_2: 
+wool_dye_wool_10_3: 
+wool_dye_wool_10_4: 
+wool_dye_wool_10_5: 
+wool_dye_wool_10_6: 
+wool_dye_wool_10_7: 
+wool_dye_wool_10_8: 
+wool_dye_wool_10_9: 
+wool_dye_wool_11_0: 
+wool_dye_wool_11_1: 
+wool_dye_wool_11_10: 
+wool_dye_wool_11_12: 
+wool_dye_wool_11_13: 
+wool_dye_wool_11_14: 
+wool_dye_wool_11_15: 
+wool_dye_wool_11_2: 
+wool_dye_wool_11_3: 
+wool_dye_wool_11_4: 
+wool_dye_wool_11_5: 
+wool_dye_wool_11_6: 
+wool_dye_wool_11_7: 
+wool_dye_wool_11_8: 
+wool_dye_wool_11_9: 
+wool_dye_wool_12_0: 
+wool_dye_wool_12_1: 
+wool_dye_wool_12_10: 
+wool_dye_wool_12_11: 
+wool_dye_wool_12_13: 
+wool_dye_wool_12_14: 
+wool_dye_wool_12_15: 
+wool_dye_wool_12_2: 
+wool_dye_wool_12_3: 
+wool_dye_wool_12_4: 
+wool_dye_wool_12_5: 
+wool_dye_wool_12_6: 
+wool_dye_wool_12_7: 
+wool_dye_wool_12_8: 
+wool_dye_wool_12_9: 
+wool_dye_wool_13_0: 
+wool_dye_wool_13_1: 
+wool_dye_wool_13_10: 
+wool_dye_wool_13_11: 
+wool_dye_wool_13_12: 
+wool_dye_wool_13_14: 
+wool_dye_wool_13_15: 
+wool_dye_wool_13_2: 
+wool_dye_wool_13_3: 
+wool_dye_wool_13_4: 
+wool_dye_wool_13_5: 
+wool_dye_wool_13_6: 
+wool_dye_wool_13_7: 
+wool_dye_wool_13_8: 
+wool_dye_wool_13_9: 
+wool_dye_wool_14_0: 
+wool_dye_wool_14_1: 
+wool_dye_wool_14_10: 
+wool_dye_wool_14_11: 
+wool_dye_wool_14_12: 
+wool_dye_wool_14_13: 
+wool_dye_wool_14_15: 
+wool_dye_wool_14_2: 
+wool_dye_wool_14_3: 
+wool_dye_wool_14_4: 
+wool_dye_wool_14_5: 
+wool_dye_wool_14_6: 
+wool_dye_wool_14_7: 
+wool_dye_wool_14_8: 
+wool_dye_wool_14_9: 
+wool_dye_wool_15_0: 
+wool_dye_wool_15_1: 
+wool_dye_wool_15_10: 
+wool_dye_wool_15_11: 
+wool_dye_wool_15_12: 
+wool_dye_wool_15_13: 
+wool_dye_wool_15_14: 
+wool_dye_wool_15_2: 
+wool_dye_wool_15_3: 
+wool_dye_wool_15_4: 
+wool_dye_wool_15_5: 
+wool_dye_wool_15_6: 
+wool_dye_wool_15_7: 
+wool_dye_wool_15_8: 
+wool_dye_wool_15_9: 
+wool_dye_wool_16_1: 
+wool_dye_wool_16_10: 
+wool_dye_wool_16_11: 
+wool_dye_wool_16_12: 
+wool_dye_wool_16_13: 
+wool_dye_wool_16_14: 
+wool_dye_wool_16_15: 
+wool_dye_wool_16_2: 
+wool_dye_wool_16_3: 
+wool_dye_wool_16_4: 
+wool_dye_wool_16_5: 
+wool_dye_wool_16_6: 
+wool_dye_wool_16_7: 
+wool_dye_wool_16_8: 
+wool_dye_wool_16_9: 
+wool_dye_wool_17_0: 
+wool_dye_wool_17_1: 
+wool_dye_wool_17_10: 
+wool_dye_wool_17_11: 
+wool_dye_wool_17_12: 
+wool_dye_wool_17_13: 
+wool_dye_wool_17_14: 
+wool_dye_wool_17_15: 
+wool_dye_wool_17_2: 
+wool_dye_wool_17_4: 
+wool_dye_wool_17_5: 
+wool_dye_wool_17_6: 
+wool_dye_wool_17_7: 
+wool_dye_wool_17_8: 
+wool_dye_wool_17_9: 
+wool_dye_wool_18_0: 
+wool_dye_wool_18_1: 
+wool_dye_wool_18_10: 
+wool_dye_wool_18_11: 
+wool_dye_wool_18_12: 
+wool_dye_wool_18_13: 
+wool_dye_wool_18_14: 
+wool_dye_wool_18_15: 
+wool_dye_wool_18_2: 
+wool_dye_wool_18_3: 
+wool_dye_wool_18_5: 
+wool_dye_wool_18_6: 
+wool_dye_wool_18_7: 
+wool_dye_wool_18_8: 
+wool_dye_wool_18_9: 
+wool_dye_wool_19_0: 
+wool_dye_wool_19_1: 
+wool_dye_wool_19_10: 
+wool_dye_wool_19_11: 
+wool_dye_wool_19_12: 
+wool_dye_wool_19_13: 
+wool_dye_wool_19_14: 
+wool_dye_wool_19_2: 
+wool_dye_wool_19_3: 
+wool_dye_wool_19_4: 
+wool_dye_wool_19_5: 
+wool_dye_wool_19_6: 
+wool_dye_wool_19_7: 
+wool_dye_wool_19_8: 
+wool_dye_wool_19_9: 
+wool_dye_wool_1_0: 
+wool_dye_wool_1_10: 
+wool_dye_wool_1_11: 
+wool_dye_wool_1_12: 
+wool_dye_wool_1_13: 
+wool_dye_wool_1_14: 
+wool_dye_wool_1_15: 
+wool_dye_wool_1_2: 
+wool_dye_wool_1_3: 
+wool_dye_wool_1_4: 
+wool_dye_wool_1_5: 
+wool_dye_wool_1_6: 
+wool_dye_wool_1_7: 
+wool_dye_wool_1_8: 
+wool_dye_wool_1_9: 
+wool_dye_wool_2_0: 
+wool_dye_wool_2_1: 
+wool_dye_wool_2_10: 
+wool_dye_wool_2_11: 
+wool_dye_wool_2_12: 
+wool_dye_wool_2_13: 
+wool_dye_wool_2_14: 
+wool_dye_wool_2_15: 
+wool_dye_wool_2_3: 
+wool_dye_wool_2_4: 
+wool_dye_wool_2_5: 
+wool_dye_wool_2_6: 
+wool_dye_wool_2_7: 
+wool_dye_wool_2_8: 
+wool_dye_wool_2_9: 
+wool_dye_wool_3_0: 
+wool_dye_wool_3_1: 
+wool_dye_wool_3_10: 
+wool_dye_wool_3_11: 
+wool_dye_wool_3_12: 
+wool_dye_wool_3_13: 
+wool_dye_wool_3_14: 
+wool_dye_wool_3_15: 
+wool_dye_wool_3_2: 
+wool_dye_wool_3_4: 
+wool_dye_wool_3_5: 
+wool_dye_wool_3_6: 
+wool_dye_wool_3_7: 
+wool_dye_wool_3_8: 
+wool_dye_wool_3_9: 
+wool_dye_wool_4_0: 
+wool_dye_wool_4_1: 
+wool_dye_wool_4_10: 
+wool_dye_wool_4_11: 
+wool_dye_wool_4_12: 
+wool_dye_wool_4_13: 
+wool_dye_wool_4_14: 
+wool_dye_wool_4_15: 
+wool_dye_wool_4_2: 
+wool_dye_wool_4_3: 
+wool_dye_wool_4_5: 
+wool_dye_wool_4_6: 
+wool_dye_wool_4_7: 
+wool_dye_wool_4_8: 
+wool_dye_wool_4_9: 
+wool_dye_wool_5_0: 
+wool_dye_wool_5_1: 
+wool_dye_wool_5_10: 
+wool_dye_wool_5_11: 
+wool_dye_wool_5_12: 
+wool_dye_wool_5_13: 
+wool_dye_wool_5_14: 
+wool_dye_wool_5_15: 
+wool_dye_wool_5_2: 
+wool_dye_wool_5_3: 
+wool_dye_wool_5_4: 
+wool_dye_wool_5_6: 
+wool_dye_wool_5_7: 
+wool_dye_wool_5_8: 
+wool_dye_wool_5_9: 
+wool_dye_wool_6_0: 
+wool_dye_wool_6_1: 
+wool_dye_wool_6_10: 
+wool_dye_wool_6_11: 
+wool_dye_wool_6_12: 
+wool_dye_wool_6_13: 
+wool_dye_wool_6_14: 
+wool_dye_wool_6_15: 
+wool_dye_wool_6_2: 
+wool_dye_wool_6_3: 
+wool_dye_wool_6_4: 
+wool_dye_wool_6_5: 
+wool_dye_wool_6_7: 
+wool_dye_wool_6_8: 
+wool_dye_wool_6_9: 
+wool_dye_wool_7_0: 
+wool_dye_wool_7_1: 
+wool_dye_wool_7_10: 
+wool_dye_wool_7_11: 
+wool_dye_wool_7_12: 
+wool_dye_wool_7_13: 
+wool_dye_wool_7_14: 
+wool_dye_wool_7_15: 
+wool_dye_wool_7_2: 
+wool_dye_wool_7_3: 
+wool_dye_wool_7_4: 
+wool_dye_wool_7_5: 
+wool_dye_wool_7_6: 
+wool_dye_wool_7_8: 
+wool_dye_wool_7_9: 
+wool_dye_wool_8_0: 
+wool_dye_wool_8_1: 
+wool_dye_wool_8_10: 
+wool_dye_wool_8_11: 
+wool_dye_wool_8_12: 
+wool_dye_wool_8_13: 
+wool_dye_wool_8_14: 
+wool_dye_wool_8_15: 
+wool_dye_wool_8_2: 
+wool_dye_wool_8_3: 
+wool_dye_wool_8_4: 
+wool_dye_wool_8_5: 
+wool_dye_wool_8_6: 
+wool_dye_wool_8_7: 
+wool_dye_wool_8_9: 
+wool_dye_wool_9_0: 
+wool_dye_wool_9_1: 
+wool_dye_wool_9_10: 
+wool_dye_wool_9_11: 
+wool_dye_wool_9_12: 
+wool_dye_wool_9_13: 
+wool_dye_wool_9_14: 
+wool_dye_wool_9_15: 
+wool_dye_wool_9_2: 
+wool_dye_wool_9_3: 
+wool_dye_wool_9_4: 
+wool_dye_wool_9_5: 
+wool_dye_wool_9_6: 
+wool_dye_wool_9_7: 
+wool_dye_wool_9_8: 
+
+※此ID表是MCBEID表的一部分，对应游戏版本为测试版（1.26.50.22）- 原版
+※详见：https://github.com/XeroAlpha/caidlist

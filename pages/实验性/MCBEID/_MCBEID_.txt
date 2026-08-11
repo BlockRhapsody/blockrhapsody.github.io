@@ -1,0 +1,35 @@
+【MCBEID表】
+在线版：https://idlist.projectxero.top/
+本ID表由B站@ProjectXero与命令助手开发组的小伙伴们维护，发现错误或有建议可私聊UP主或加群【MCBE命令助手开发区】：https://projectxero.top/qqgroup/cabeta/
+
+发布时间：8/5/2026, 5:16:22 AM
+对应游戏版本：测试版（1.26.50.22）- 原版
+
+Minecraft 命令更新日志：https://ca.projectxero.top/blog/command/command-history/
+
+【目录】
+block.txt: 方块
+item.txt: 物品
+entity.txt: 实体
+effect.txt: 状态效果
+enchant.txt: 魔咒
+fog.txt: 迷雾
+biome.txt: 生物群系
+location.txt: 结构
+gamerule.txt: 游戏规则
+entitySlot.txt: 实体槽位类型
+damageCause.txt: 伤害类型
+entityEvent.txt: 实体事件
+entityEventSplit.txt: 根据实体类型分类的实体事件表
+entityFamily.txt: 实体族
+inputPermission.txt: 操作输入权限
+cameraPreset.txt: 摄像机预设
+recipe.txt: 配方
+hudElement.txt: HUD界面元素
+animation.txt: 动画
+animationController.txt: 动画控制器
+feature.txt: 地物
+featureRule.txt: 地物规则
+sound.txt: 声音
+lootTable.txt: 战利品表
+stdTrans.txt: 标准化译名表
