@@ -133,7 +133,7 @@ var pagePathMap = {
     '图像文件': '/pages/实验性/图像文件.html',
     '乱写文档': '/pages/实验性/乱写文档.html',
     'DeepSeek对话': '/pages/实验性/DeepSeek对话.html',
-    'MCBEID表': '/pages/实验性/MCBEID表.html'
+    'MCBEID表': '/pages/实验性/MCBEID/index.html'
 };
 
 // ============================================================
