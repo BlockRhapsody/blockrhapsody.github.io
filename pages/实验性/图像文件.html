@@ -451,10 +451,6 @@
 
             document.body.appendChild(previewOverlay);
 
-            var scrollbarWidth = getScrollbarWidth();
-            if (scrollbarWidth > 0) {
-                document.body.style.paddingRight = scrollbarWidth + 'px';
-            }
             document.body.style.overflow = 'hidden';
 
             previewImg.src = url;
@@ -467,7 +463,6 @@
             if (previewOverlay) {
                 previewOverlay.classList.remove('active');
                 document.body.style.overflow = '';
-                document.body.style.paddingRight = '';
                 setTimeout(function() {
                     destroyPreview();
                 }, 300);
