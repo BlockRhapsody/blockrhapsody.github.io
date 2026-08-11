@@ -1,11 +1,19 @@
 <div class="doc-content">
     <h1>净标计划</h1>
     <p style="color:var(--text-secondary);">The Emoji Purification Project</p>
-    <p style="color:var(--text-muted);font-size:0.9rem;">净标计划（以下简称"计划"），全称"净标计划"，是方块狂想曲Wiki维护团队于2026年暑期发起的视觉规范化项目。</p>
+
+    <div class="msgbox info">
+        <span class="msgbox-title">计划概要</span>
+        净标计划（以下简称"计划"），全称"净标计划"，是方块狂想曲Wiki维护团队于2026年暑期发起的视觉规范化项目。
+    </div>
 
     <h2>计划目的</h2>
-    <p>本计划以打造更加纯净、专业的Wiki阅读体验为核心目标，旨在系统性去除网站内所有Emoji表情符号，以统一的视觉风格呈现内容，回归方块狂想曲Wiki"专业、清晰、简洁"的立项初衷。</p>
-    <p>Emoji表情在不同平台、不同设备上的渲染效果存在显著差异，这导致Wiki页面的视觉一致性难以保障。部分Emoji在旧版操作系统或特定浏览器上甚至无法正常显示，影响了用户的阅读体验。净标计划即是为解决这一问题而设立。</p>
+    <p>本计划以打造更加纯净、专业的Wiki阅读体验为核心目标，旨在系统性去除网站内所有Emoji表情符号，以统一的视觉风格呈现内容，回归方块狂想曲Wiki<strong>"专业、清晰、简洁"</strong>的立项初衷。</p>
+
+    <div class="msgbox knowledge">
+        <span class="msgbox-title">为什么要做这件事</span>
+        Emoji表情在不同平台、不同设备上的渲染效果存在显著差异，这导致Wiki页面的视觉一致性难以保障。部分Emoji在旧版操作系统或特定浏览器上甚至无法正常显示，影响了用户的阅读体验。净标计划即是为解决这一问题而设立。
+    </div>
 
     <h2>计划范围</h2>
     <p>本计划适用于方块狂想曲Wiki所有页面，包括但不限于：</p>
@@ -21,6 +29,7 @@
     </ul>
 
     <h2>替换方案</h2>
+
     <h3>一、标题类Emoji</h3>
     <p>原页面标题中的Emoji将被替换为以下形式之一：</p>
     <ul>
@@ -28,12 +37,22 @@
         <li><strong>Minecraft风格图标：</strong>使用本地化图标资源（位于<code>/icon/</code>目录）替代Emoji。适用于侧边栏和卡片。</li>
     </ul>
 
+    <div class="msgbox functional">
+        <span class="msgbox-title">示例</span>
+        原标题 <code>💬 论坛</code> 将变为 <code>&lt;i class="fas fa-comments"&gt;&lt;/i&gt; 论坛</code>（使用FontAwesome图标），或直接使用纯文本 <code>论坛</code>。
+    </div>
+
     <h3>二、列表项与正文中的Emoji</h3>
     <p>正文和列表中的Emoji将被移除或替换为：</p>
     <ul>
-        <li><strong>纯文本标记：</strong>如"[提示]"、"[注意]"等方括号标记。</li>
+        <li><strong>纯文本标记：</strong>如 <span class="tag info">提示</span>、<span class="tag warning">注意</span> 等方括号标记。</li>
         <li><strong>CSS样式标记：</strong>使用自定义CSS类实现视觉提示，如高亮框、标注块等。</li>
     </ul>
+
+    <div class="msgbox quote">
+        玩家体验至上是方块狂想曲服务器的核心理念与行动准则。
+        <span class="quote-source">服主弘桀孤影行</span>
+    </div>
 
     <h3>三、侧边栏与导航中的Emoji</h3>
     <p>侧边栏和导航菜单中的Emoji将由以下方式替代：</p>
@@ -43,6 +62,7 @@
     </ul>
 
     <h2>执行标准</h2>
+
     <h3>标题规范</h3>
     <ul>
         <li>一级标题（h1）：纯文字，不加任何装饰性符号</li>
@@ -52,27 +72,33 @@
 
     <h3>特殊标记规范</h3>
     <ul>
-        <li><strong>提示信息：</strong>使用<code>.highlight-box</code>样式类，配合"提示"、"注意"等文字前缀</li>
-        <li><strong>重要内容：</strong>使用<code>&lt;strong&gt;</code>或<code>&lt;em&gt;</code>标签强调</li>
-        <li><strong>状态标识：</strong>使用文字描述，如"已完成"、"进行中"、"待开始"</li>
+        <li><strong>提示信息：</strong>使用 <code>.highlight-box</code> 或 <code>.msgbox</code> 样式类，配合 <span class="tag info">提示</span>、<span class="tag warning">注意</span> 等文字前缀</li>
+        <li><strong>重要内容：</strong>使用 <code>&lt;strong&gt;</code> 或 <code>&lt;em&gt;</code> 标签强调</li>
+        <li><strong>状态标识：</strong>使用 <span class="tag success">已完成</span>、<span class="tag warning">进行中</span>、<span class="tag todo">待开始</span> 等标签</li>
     </ul>
 
+    <div class="highlight-box">
+        <p><strong>执行原则</strong></p>
+        <p>所有替换工作应当遵循"统一、规范、可维护"的原则，确保Wiki内容的长期稳定与可读性。</p>
+    </div>
+
     <h2>实施阶段</h2>
-    <h3>第一阶段：梳理与排查（计划发布日起7日内）</h3>
+
+    <h3>第一阶段：梳理与排查 <span class="tag success">已完成</span></h3>
     <ul>
         <li>全面排查Wiki所有页面中的Emoji使用情况</li>
         <li>建立Emoji使用清单，标注位置与类型</li>
         <li>确定各Emoji的替换方案</li>
     </ul>
 
-    <h3>第二阶段：替换与调整（计划发布日起14日内）</h3>
+    <h3>第二阶段：替换与调整 <span class="tag warning">进行中</span></h3>
     <ul>
         <li>按替换方案逐一替换所有Emoji</li>
         <li>调整页面布局与样式，确保替换后的视觉效果</li>
         <li>重点检查侧边栏、卡片、导航等关键位置的显示效果</li>
     </ul>
 
-    <h3>第三阶段：验收与收尾（计划发布日起21日内）</h3>
+    <h3>第三阶段：验收与收尾 <span class="tag todo">待开始</span></h3>
     <ul>
         <li>全站回归测试，确保所有页面显示正常</li>
         <li>收集反馈，对替换方案进行微调</li>
@@ -80,20 +106,25 @@
     </ul>
 
     <h2>组织架构</h2>
-    <ul>
-        <li><strong>计划发起人：</strong>服主弘桀孤影行</li>
-        <li><strong>执行团队：</strong>方块狂想曲Wiki维护团队</li>
-        <li><strong>监督与验收：</strong>监督委员会主任出击的阴笑徐铮</li>
-    </ul>
+
+    <div class="info-grid">
+        <span><strong>计划发起人：</strong>服主弘桀孤影行</span>
+        <span><strong>执行团队：</strong>方块狂想曲Wiki维护团队</span>
+        <span><strong>监督与验收：</strong>监督委员会主任出击的阴笑徐铮</span>
+    </div>
+
+    <div class="msgbox important">
+        <span class="msgbox-title">重要</span>
+        本计划自发布之日起生效。计划执行期间，所有Wiki页面的Emoji替换工作应当遵循"统一、规范、可维护"的原则，确保Wiki内容的长期稳定与可读性。
+    </div>
 
     <div style="border-top:1px solid var(--border-color);margin:2rem 0;padding-top:1.5rem;">
-        <p style="color:var(--text-muted);font-size:0.9rem;">本计划自发布之日起生效。计划执行期间，所有Wiki页面的Emoji替换工作应当遵循"统一、规范、可维护"的原则，确保Wiki内容的长期稳定与可读性。</p>
-        <p style="margin-top:1rem;color:var(--text-primary);">——弘桀孤影行《净标计划》</p>
+        <p style="color:var(--text-primary);font-size:1.1rem;">——弘桀孤影行《净标计划》</p>
+        <p style="color:var(--text-muted);font-size:0.9rem;margin-top:0.4rem;">二〇二六年八月</p>
     </div>
 
     <div class="footnote">
         <p>方块狂想曲服务器 · Wiki维护</p>
-        <p>弘桀孤影行</p>
-        <p>二〇二六年八月</p>
+        <p style="margin-top:0.3rem;font-size:0.8rem;">净标计划 · 2026年暑期</p>
     </div>
 </div>
