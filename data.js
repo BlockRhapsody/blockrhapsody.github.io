@@ -58,7 +58,7 @@ var sidebarMenu = [
     {
         title: '实验性',
         icon: 'fa-flask',
-        items: ['皮肤查看器', '强刷新', '图像文件', '乱写文档', 'DeepSeek对话']
+        items: ['皮肤查看器', '强刷新', '图像文件', '乱写文档', 'DeepSeek对话', 'MCBEID表']
     }
 ];
 
@@ -82,7 +82,7 @@ var cardData = [
     { title: '玩家文档', icon: 'fa-users', items: ['玩家游玩建议', '管理员学习手册'] },
     { title: '计划', icon: 'fa-calendar', items: ['六月建设计划', '普朗克计划', '净标计划'] },
     { title: '论坛', icon: 'fa-comments', items: ['论坛'] },
-    { title: '实验性', icon: 'fa-flask', items: ['皮肤查看器', '强刷新', '图像文件', '乱写文档', 'DeepSeek对话'] }
+    { title: '实验性', icon: 'fa-flask', items: ['皮肤查看器', '强刷新', '图像文件', '乱写文档', 'DeepSeek对话', 'MCBEID表'] }
 ];
 
 // ============================================================
@@ -132,7 +132,8 @@ var pagePathMap = {
     '强刷新': '/pages/实验性/强刷新.html',
     '图像文件': '/pages/实验性/图像文件.html',
     '乱写文档': '/pages/实验性/乱写文档.html',
-    'DeepSeek对话': '/pages/实验性/DeepSeek对话.html'
+    'DeepSeek对话': '/pages/实验性/DeepSeek对话.html',
+    'MCBEID表': '/pages/实验性/MCBEID表.html'
 };
 
 // ============================================================
