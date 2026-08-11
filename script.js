@@ -25,15 +25,10 @@ function renderSidebar() {
         html += '</ul></li>';
     });
 
-    // 桌面端渲染
     desktopSidebar.innerHTML = '<nav class="sidebar-nav"><ul>' + html + '</ul></nav>';
-
-    // 移动端渲染（只渲染菜单，品牌和登录由 HTML 结构提供）
     mobileMenuList.innerHTML = html;
 
-    // 重新绑定事件
     initSidebarEvents();
-    // 恢复高亮状态
     initHashHighlight();
 }
 
@@ -69,7 +64,6 @@ function handleLinkClick(e) {
         if (typeof window.loadPage === 'function') {
             window.loadPage(href.replace('#page-', ''));
         }
-        // 移动端点击后自动关闭侧边栏
         closeSidebarIfMobile();
     }
 }
@@ -114,14 +108,12 @@ function initHamburger() {
         document.body.style.overflow = '';
     }
 
-    // 移除旧监听器避免重复绑定
     hamburger.removeEventListener('click', toggleSidebar);
     hamburger.addEventListener('click', toggleSidebar);
 
     overlay.removeEventListener('click', closeSidebar);
     overlay.addEventListener('click', closeSidebar);
 
-    // 窗口大小变化时自动关闭移动端侧边栏
     window.removeEventListener('resize', handleResize);
     window.addEventListener('resize', handleResize);
 }
@@ -155,7 +147,6 @@ function updateActiveState(pageId) {
     });
     document.querySelectorAll('.sub-menu a[href="#page-' + pageId + '"]').forEach(function(el) {
         el.classList.add('active');
-        // 自动展开父级菜单
         var parentSub = el.closest('.sub-menu');
         if (parentSub) {
             parentSub.classList.add('open');
@@ -170,14 +161,12 @@ function updateActiveState(pageId) {
     });
 }
 
-// 监听 hashchange 保持高亮同步
 window.addEventListener('hashchange', function() {
     var hash = window.location.hash;
     if (hash && hash.startsWith('#page-')) {
         var pageId = decodeURIComponent(hash.replace('#page-', ''));
         updateActiveState(pageId);
     } else {
-        // 回到首页时清除高亮
         document.querySelectorAll('.sub-menu a, .card-list li').forEach(function(el) {
             el.classList.remove('active');
         });
@@ -191,41 +180,31 @@ function updateAuthUI() {
     var token = localStorage.getItem('token');
     var username = localStorage.getItem('username');
 
-    // 顶部导航栏
     var loginBtn = document.getElementById('loginBtn');
     var logoutBtn = document.getElementById('logoutBtn');
     var userDisplay = document.getElementById('userDisplay');
     var usernameDisplay = document.getElementById('usernameDisplay');
 
-    // 侧边栏
     var sidebarUser = document.getElementById('sidebarUser');
     var sidebarUsername = document.getElementById('sidebarUsername');
     var sidebarLoginBtn = document.getElementById('sidebarLoginBtn');
     var sidebarLogoutBtn = document.getElementById('sidebarLogoutBtn');
 
     if (token && username) {
-        // 顶部栏
         if (loginBtn) loginBtn.style.display = 'none';
-        if (logoutBtn) {
-            logoutBtn.style.display = 'inline-flex';
-        }
-        if (userDisplay) {
-            userDisplay.style.display = 'inline-block';
-        }
+        if (logoutBtn) logoutBtn.style.display = 'inline-flex';
+        if (userDisplay) userDisplay.style.display = 'inline-block';
         if (usernameDisplay) usernameDisplay.textContent = username;
 
-        // 侧边栏
         if (sidebarUser) sidebarUser.style.display = 'flex';
         if (sidebarUsername) sidebarUsername.textContent = username;
         if (sidebarLoginBtn) sidebarLoginBtn.style.display = 'none';
         if (sidebarLogoutBtn) sidebarLogoutBtn.style.display = 'inline';
     } else {
-        // 顶部栏
         if (loginBtn) loginBtn.style.display = 'inline-flex';
         if (logoutBtn) logoutBtn.style.display = 'none';
         if (userDisplay) userDisplay.style.display = 'none';
 
-        // 侧边栏
         if (sidebarUser) sidebarUser.style.display = 'none';
         if (sidebarLoginBtn) sidebarLoginBtn.style.display = 'inline';
         if (sidebarLogoutBtn) sidebarLogoutBtn.style.display = 'none';
@@ -269,19 +248,13 @@ function initRoomStatus() {
 // 7. DOM 就绪初始化
 // ============================================================
 document.addEventListener('DOMContentLoaded', function() {
-    // 先渲染侧边栏
     if (typeof sidebarMenu !== 'undefined' && typeof getMenuItems === 'function') {
         renderSidebar();
     } else {
         console.warn('sidebarMenu 或 getMenuItems 未定义，请确保 data.js 已加载');
     }
 
-    // 初始化汉堡菜单
     initHamburger();
-
-    // 初始化房间号
     initRoomStatus();
-
-    // 初始化登录状态
     updateAuthUI();
 });
