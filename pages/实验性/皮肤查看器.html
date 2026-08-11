@@ -1,23 +1,336 @@
 <div class="doc-content">
-    <h1>🧪 实验性 · Minecraft 皮肤查看器</h1>
-    <p style="color:var(--text-secondary);">测试页面 - 如果能看见这段文字，说明页面加载正常</p>
-    
-    <div style="padding:2rem;background:rgba(255,255,255,0.05);border-radius:var(--radius);border:1px solid var(--border-color);">
-        <p>✅ 皮肤查看器页面已成功加载了……吗？</p>
+    <h1>实验性 · Minecraft 皮肤查看器</h1>
+    <p style="color:var(--text-secondary);">基于 skinview3d 的 3D 皮肤展示 · 由于技术原因，目前暂不可用</p>
+
+    <div style="padding:2rem;background:rgba(255,255,255,0.05);border-radius:var(--radius);border:1px solid var(--border-color);margin-bottom:1.5rem;">
+        <p>皮肤查看器页面已成功加载。</p>
         <p>如果看到这段文字，说明 <code>index.html</code> 的 <code>reExecuteScripts</code> 函数工作正常。</p>
-        <p>我们将会在100年调用好API接口，恢复该页面的功能。</p>
+        <p style="color:var(--text-muted);font-size:0.9rem;">我们将会在未来调用好 API 接口，恢复该页面的完整功能。</p>
     </div>
-    <div style="display: flex; justify-content: center; align-items: center; min-height: 200px;">
+
+    <!-- ===== 渐变文字 ===== -->
+    <div style="display: flex; justify-content: center; align-items: center; min-height: 150px; margin: 1rem 0;">
         <span style="
-            font-size: 3rem;
+            font-size: 2.4rem;
             font-weight: 700;
             background: linear-gradient(90deg, #ff6b6b, #feca57, #48dbfb, #ff9ff3);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
             text-align: center;
+            line-height: 1.4;
         ">
-            skinview3d至今调用不了
+            skinview3d 至今调用不了
         </span>
-     <div>
+    </div>
+
+    <!-- ===== 新增内容 ===== -->
+    <div style="background:rgba(255,179,71,0.06);border-left:4px solid #ffb347;padding:1rem 1.5rem;border-radius:0 var(--radius) var(--radius) 0;margin:1rem 0 1.5rem 0;">
+        <p style="color:var(--text-secondary);">
+            但是我们仍然部署了本地的 <code style="background:rgba(255,255,255,0.06);padding:0.1rem 0.4rem;border-radius:4px;font-family:'Courier New',monospace;color:#d0d0e0;">skinview3d.bundle.js</code>，
+            不过可能由于本地运算对 GPU 的性能要求较高，您的设备可能不支持。
+        </p>
+    </div>
+
+    <!-- ===== 尝试按钮 ===== -->
+    <div style="display:flex;flex-wrap:wrap;gap:0.8rem;margin:1.2rem 0;">
+        <button id="trySkinViewerBtn" style="padding:0.6rem 1.8rem;border-radius:var(--radius);border:2px solid var(--accent);background:rgba(76,175,80,0.12);color:var(--accent);font-family:var(--font-pixel);font-size:1rem;cursor:pointer;transition:all var(--transition);">
+            尝试加载 skinview3d
+        </button>
+        <span id="tryStatus" style="color:var(--text-muted);font-size:0.85rem;align-self:center;">点击尝试加载 3D 渲染引擎</span>
+    </div>
+
+    <!-- ===== 输入区域（默认隐藏） ===== -->
+    <div id="skinInputArea" style="display:none;background:rgba(0,0,0,0.2);border-radius:var(--radius);padding:1.2rem 1.5rem;border:1px solid var(--border-color);margin:1rem 0;">
+        <p style="color:var(--text-secondary);font-size:0.95rem;margin-bottom:0.8rem;">请输入指定的 Minecraft Java 正版账号名，或皮肤图片链接：</p>
+        <div style="display:flex;flex-wrap:wrap;gap:0.6rem;">
+            <input type="text" id="skinInput" placeholder="例如：Notch 或 https://example.com/skin.png" style="flex:1;min-width:200px;padding:0.5rem 0.8rem;border-radius:6px;border:1px solid var(--border-color);background:rgba(255,255,255,0.05);color:var(--text-primary);font-family:var(--font-pixel);font-size:0.9rem;outline:none;transition:border-color var(--smooth);">
+            <button id="loadSkinBtn" style="padding:0.5rem 1.5rem;border-radius:6px;border:none;background:var(--accent);color:#fff;font-family:var(--font-pixel);font-size:0.9rem;cursor:pointer;transition:all var(--transition);">
+                加载
+            </button>
+            <button id="cancelSkinBtn" style="padding:0.5rem 1.5rem;border-radius:6px;border:1px solid var(--border-color);background:transparent;color:var(--text-secondary);font-family:var(--font-pixel);font-size:0.9rem;cursor:pointer;transition:all var(--transition);">
+                取消
+            </button>
+        </div>
+        <p id="skinLoadStatus" style="color:var(--text-muted);font-size:0.8rem;margin-top:0.5rem;">输入玩家名称或粘贴皮肤图片 URL</p>
+    </div>
+
+    <!-- ===== 渲染容器 ===== -->
+    <div id="skinViewerContainer" style="display:none;background:rgba(0,0,0,0.3);border-radius:var(--radius);border:1px solid var(--border-color);min-height:300px;position:relative;margin:1rem 0;overflow:hidden;">
+        <canvas id="skinCanvas" style="display:block;width:100%;height:100%;min-height:300px;image-rendering:pixelated;"></canvas>
+        <div id="skinLoadingText" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);color:var(--text-muted);font-size:0.9rem;pointer-events:none;">加载中...</div>
+    </div>
+
+    <div class="footnote">
+        <p>方块狂想曲 · 实验性功能 · 皮肤查看器</p>
+        <p style="margin-top:0.3rem;font-size:0.8rem;color:var(--text-muted);">提示：该功能需要 WebGL 支持，部分设备可能无法正常运行。</p>
+    </div>
 </div>
+
+<style>
+    #skinInput:focus {
+        border-color: var(--accent);
+        box-shadow: 0 0 20px var(--accent-glow);
+    }
+
+    #skinViewerContainer canvas {
+        display: block;
+        width: 100%;
+        height: 100%;
+        min-height: 300px;
+    }
+
+    /* 加载动画 */
+    @keyframes spin {
+        0% { transform: translate(-50%, -50%) rotate(0deg); }
+        100% { transform: translate(-50%, -50%) rotate(360deg); }
+    }
+
+    #skinLoadingText.loading::after {
+        content: '';
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        margin-left: 10px;
+        border: 2px solid var(--border-color);
+        border-top-color: var(--accent);
+        border-radius: 50%;
+        animation: spin 0.8s linear infinite;
+        vertical-align: middle;
+    }
+</style>
+
+<script>
+    (function initSkinViewer() {
+        var tryBtn = document.getElementById('trySkinViewerBtn');
+        var tryStatus = document.getElementById('tryStatus');
+        var inputArea = document.getElementById('skinInputArea');
+        var skinInput = document.getElementById('skinInput');
+        var loadSkinBtn = document.getElementById('loadSkinBtn');
+        var cancelSkinBtn = document.getElementById('cancelSkinBtn');
+        var skinLoadStatus = document.getElementById('skinLoadStatus');
+        var viewerContainer = document.getElementById('skinViewerContainer');
+        var canvas = document.getElementById('skinCanvas');
+        var loadingText = document.getElementById('skinLoadingText');
+
+        var viewer = null;
+        var isViewerReady = false;
+
+        // ============================================================
+        // 尝试加载 skinview3d
+        // ============================================================
+        function tryLoadSkinViewer() {
+            tryStatus.textContent = '正在加载 skinview3d...';
+            tryStatus.style.color = '#ffb347';
+            tryBtn.disabled = true;
+
+            // 检查是否已存在
+            if (typeof skinview3d !== 'undefined') {
+                tryStatus.textContent = '✅ skinview3d 已加载';
+                tryStatus.style.color = '#4CAF50';
+                tryBtn.disabled = false;
+                showInputArea();
+                return;
+            }
+
+            // 动态加载 skinview3d.bundle.js
+            var script = document.createElement('script');
+            script.src = '/icon/skinview3d.bundle.js';
+            script.onload = function() {
+                if (typeof skinview3d !== 'undefined') {
+                    tryStatus.textContent = '✅ skinview3d 加载成功！';
+                    tryStatus.style.color = '#4CAF50';
+                    tryBtn.disabled = false;
+                    showInputArea();
+                } else {
+                    tryStatus.textContent = '❌ skinview3d 加载失败，请检查文件是否存在';
+                    tryStatus.style.color = '#ff6b6b';
+                    tryBtn.disabled = false;
+                }
+            };
+            script.onerror = function() {
+                tryStatus.textContent = '❌ 加载失败：/icon/skinview3d.bundle.js 不存在';
+                tryStatus.style.color = '#ff6b6b';
+                tryBtn.disabled = false;
+            };
+            document.head.appendChild(script);
+        }
+
+        // ============================================================
+        // 显示输入区域
+        // ============================================================
+        function showInputArea() {
+            inputArea.style.display = 'block';
+            skinInput.focus();
+            skinLoadStatus.textContent = '输入玩家名称或粘贴皮肤图片 URL';
+            skinLoadStatus.style.color = 'var(--text-muted)';
+        }
+
+        // ============================================================
+        // 隐藏输入区域
+        // ============================================================
+        function hideInputArea() {
+            inputArea.style.display = 'none';
+            skinInput.value = '';
+        }
+
+        // ============================================================
+        // 加载皮肤
+        // ============================================================
+        function loadSkin() {
+            var input = skinInput.value.trim();
+            if (!input) {
+                skinLoadStatus.textContent = '⚠️ 请输入玩家名称或皮肤 URL';
+                skinLoadStatus.style.color = '#ffb347';
+                return;
+            }
+
+            if (typeof skinview3d === 'undefined') {
+                skinLoadStatus.textContent = '❌ skinview3d 未加载，请先点击"尝试加载"';
+                skinLoadStatus.style.color = '#ff6b6b';
+                return;
+            }
+
+            // 判断是玩家名还是 URL
+            var isUrl = input.startsWith('http://') || input.startsWith('https://');
+            var skinUrl = isUrl ? input : 'https://crafatar.com/skins/' + encodeURIComponent(input);
+
+            skinLoadStatus.textContent = '正在加载皮肤...';
+            skinLoadStatus.style.color = '#ffb347';
+
+            // 显示渲染容器
+            viewerContainer.style.display = 'block';
+            loadingText.style.display = 'block';
+            loadingText.textContent = '加载中...';
+            loadingText.className = 'loading';
+
+            try {
+                // 如果已有 viewer，先销毁
+                if (viewer) {
+                    viewer.dispose();
+                    viewer = null;
+                }
+
+                // 获取容器尺寸
+                var rect = viewerContainer.getBoundingClientRect();
+                var w = Math.max(rect.width - 20, 280);
+                var h = Math.min(w * 1.2, 500);
+
+                // 限制最大尺寸
+                var MAX_SIZE = 1024;
+                var dpr = Math.min(window.devicePixelRatio || 1, 1.5);
+                var canvasW = Math.min(Math.floor(w * dpr), MAX_SIZE);
+                var canvasH = Math.min(Math.floor(h * dpr), MAX_SIZE);
+
+                if (canvasW < 10) canvasW = 400;
+                if (canvasH < 10) canvasH = 480;
+
+                canvas.width = canvasW;
+                canvas.height = canvasH;
+                canvas.style.width = w + 'px';
+                canvas.style.height = h + 'px';
+
+                // 创建 viewer
+                viewer = new skinview3d.SkinViewer({
+                    canvas: canvas,
+                    width: canvas.width,
+                    height: canvas.height,
+                    skin: skinUrl,
+                    background: 0x0a0a14,
+                });
+
+                viewer.zoom = 0.8;
+                viewer.autoRotate = true;
+                viewer.autoRotateSpeed = 2.0;
+
+                loadingText.style.display = 'none';
+                skinLoadStatus.textContent = '✅ 皮肤加载成功！';
+                skinLoadStatus.style.color = '#4CAF50';
+
+                // 自适应
+                function resizeCanvas() {
+                    if (!viewer) return;
+                    var rect = viewerContainer.getBoundingClientRect();
+                    var w = Math.max(rect.width - 20, 280);
+                    var h = Math.min(w * 1.2, 500);
+                    var dpr = Math.min(window.devicePixelRatio || 1, 1.5);
+                    var newW = Math.min(Math.floor(w * dpr), MAX_SIZE);
+                    var newH = Math.min(Math.floor(h * dpr), MAX_SIZE);
+                    if (newW < 10) newW = 400;
+                    if (newH < 10) newH = 480;
+                    if (Math.abs(canvas.width - newW) > 2 || Math.abs(canvas.height - newH) > 2) {
+                        canvas.width = newW;
+                        canvas.height = newH;
+                        canvas.style.width = w + 'px';
+                        canvas.style.height = h + 'px';
+                        viewer.width = canvas.width;
+                        viewer.height = canvas.height;
+                        viewer.render();
+                    }
+                }
+
+                var resizeTimer = null;
+                function debouncedResize() {
+                    if (resizeTimer) {
+                        cancelAnimationFrame(resizeTimer);
+                    }
+                    resizeTimer = requestAnimationFrame(function() {
+                        resizeCanvas();
+                        resizeTimer = null;
+                    });
+                }
+
+                if (window.ResizeObserver) {
+                    var resizeObserver = new ResizeObserver(function() {
+                        debouncedResize();
+                    });
+                    resizeObserver.observe(viewerContainer);
+                }
+                window.addEventListener('resize', debouncedResize);
+
+                setTimeout(debouncedResize, 100);
+                setTimeout(debouncedResize, 300);
+
+            } catch (error) {
+                loadingText.style.display = 'block';
+                loadingText.textContent = '❌ 渲染失败: ' + error.message;
+                loadingText.className = '';
+                loadingText.style.color = '#ff6b6b';
+                skinLoadStatus.textContent = '❌ 渲染失败，请查看控制台错误';
+                skinLoadStatus.style.color = '#ff6b6b';
+                console.error('SkinViewer 渲染失败:', error);
+            }
+        }
+
+        // ============================================================
+        // 取消
+        // ============================================================
+        function cancelSkin() {
+            hideInputArea();
+            if (viewer) {
+                viewer.dispose();
+                viewer = null;
+            }
+            viewerContainer.style.display = 'none';
+            skinLoadStatus.textContent = '已取消';
+            skinLoadStatus.style.color = 'var(--text-muted)';
+        }
+
+        // ============================================================
+        // 绑定事件
+        // ============================================================
+        tryBtn.addEventListener('click', tryLoadSkinViewer);
+        loadSkinBtn.addEventListener('click', loadSkin);
+        cancelSkinBtn.addEventListener('click', cancelSkin);
+
+        skinInput.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                loadSkin();
+            }
+        });
+
+        console.log('皮肤查看器（轻量版）已加载');
+        console.log('点击「尝试加载 skinview3d」按钮加载 3D 渲染引擎');
+    })();
+</script>
