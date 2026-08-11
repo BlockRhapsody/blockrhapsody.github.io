@@ -23,7 +23,6 @@
                     <span></span>
                     <span></span>
                 </button>
-                <!-- 桌面端显示品牌，手机端隐藏 -->
                 <div class="nav-brand" id="navBrand">
                     <a href="/">
                         <img src="/icon/Structure_Block_1.png" alt="方块狂想曲" />
@@ -53,19 +52,15 @@
 
     <!-- ===== 移动端侧边栏 ===== -->
     <div class="mobile-sidebar" id="mobileSidebar">
-        <!-- 侧边栏顶部：品牌 Logo + 文字，点击返回首页 -->
         <div class="sidebar-header" id="sidebarHeader">
             <img src="/icon/Structure_Block_1.png" alt="方块狂想曲" />
             <span>方块狂想曲</span>
         </div>
-
         <nav class="sidebar-nav">
             <ul id="mobileMenuList">
                 <!-- 由 script.js 动态渲染 -->
             </ul>
         </nav>
-
-        <!-- 侧边栏底部：登录信息 -->
         <div class="sidebar-footer" id="sidebarFooter">
             <div class="sidebar-user" id="sidebarUser" style="display:none;">
                 <i class="fas fa-user"></i>
@@ -89,9 +84,7 @@
 
     <!-- ===== 主体 ===== -->
     <div class="main-wrapper">
-        <!-- 桌面端侧边栏（由 script.js 动态渲染） -->
         <aside class="desktop-sidebar" id="desktopSidebar"></aside>
-
         <main class="main-content" id="mainContent">
             <section id="home-content">
                 <h1>欢迎来到方块狂想曲 Wiki</h1>
@@ -164,6 +157,40 @@
                 console.log('[MCC Wiki] 版本已更新 (', storedVersion, '->', APP_VERSION, ')，缓存已清除');
             } else {
                 console.log('[MCC Wiki] 版本一致，无需清除缓存');
+            }
+        }
+
+        // ============================================================
+        // 渲染 404 页面（四种可能原因）
+        // ============================================================
+        function render404(pageId, pageContent) {
+            var errorHtml = '<div class="doc-content">';
+            errorHtml += '<h1 style="border-left-color:#ff6b6b;">页面不存在</h1>';
+            errorHtml += '<p style="color:var(--text-secondary);font-size:1.1rem;">抱歉，无法加载您请求的页面。</p>';
+            errorHtml += '<div style="background:rgba(255,107,107,0.06);border-left:4px solid #ff6b6b;padding:1.2rem 1.5rem;border-radius:0 var(--radius) var(--radius) 0;margin:1.2rem 0;">';
+            errorHtml += '<p style="color:var(--text-primary);font-weight:700;margin-bottom:0.4rem;">可能的原因</p>';
+            errorHtml += '<ul style="margin:0;padding-left:1.2rem;color:var(--text-secondary);">';
+            errorHtml += '<li><strong>内容不存在：</strong>页面 <code style="background:rgba(255,255,255,0.06);padding:0.1rem 0.4rem;border-radius:4px;font-family:\'Courier New\',monospace;color:#ff6b6b;">' + pageId + '</code> 不在 <code>pages/</code> 目录中，或 <code>data.js</code> 未正确映射。</li>';
+            errorHtml += '<li><strong>权限不足：</strong>您的访问权限未达到该页面的权限要求。</li>';
+            errorHtml += '<li><strong>服务端拒绝访问：</strong>该页面链接的服务端 API 拒绝了访问请求。</li>';
+            errorHtml += '<li><strong>网络状态异常：</strong>您的网络连接异常，导致未能正确访问该页面。</li>';
+            errorHtml += '</ul></div>';
+            errorHtml += '<div style="display:flex;flex-wrap:wrap;gap:0.8rem;margin:1.2rem 0;">';
+            errorHtml += '<a href="/" style="padding:0.5rem 1.2rem;border-radius:40px;background:var(--accent);color:#fff;font-family:var(--font-pixel);font-size:0.9rem;transition:all var(--transition);display:inline-block;">返回首页</a>';
+            errorHtml += '<a href="https://github.com/BlockRhapsody/blockrhapsody.github.io" target="_blank" style="padding:0.5rem 1.2rem;border-radius:40px;border:1px solid var(--border-color);color:var(--text-secondary);font-family:var(--font-pixel);font-size:0.9rem;transition:all var(--transition);display:inline-block;">反馈问题</a>';
+            errorHtml += '</div>';
+            errorHtml += '<div style="background:rgba(255,255,255,0.02);border-radius:var(--radius);padding:0.8rem 1.2rem;border:1px solid var(--border-color);">';
+            errorHtml += '<p style="color:var(--text-muted);font-size:0.85rem;">提示：检查 <code style="background:rgba(255,255,255,0.06);padding:0.1rem 0.4rem;border-radius:4px;font-family:\'Courier New\',monospace;color:#d0d0e0;">data.js</code> 中的 <code style="background:rgba(255,255,255,0.06);padding:0.1rem 0.4rem;border-radius:4px;font-family:\'Courier New\',monospace;color:#d0d0e0;">pagePathMap</code> 是否正确配置了 <code style="background:rgba(255,255,255,0.06);padding:0.1rem 0.4rem;border-radius:4px;font-family:\'Courier New\',monospace;color:#ff6b6b;">' + pageId + '</code> 的映射。</p>';
+            errorHtml += '</div>';
+            errorHtml += '<div class="footnote"><p>方块狂想曲 · 404 页面未找到</p></div>';
+            errorHtml += '</div>';
+
+            pageContent.innerHTML = errorHtml;
+            if (typeof updateActiveState === 'function') {
+                updateActiveState(pageId);
+            }
+            if (window.location.hash !== '#page-' + pageId) {
+                history.pushState(null, '', '#page-' + pageId);
             }
         }
 
@@ -255,7 +282,7 @@
         }
 
         // ============================================================
-        // 页面加载函数
+        // 页面加载函数（带权限检查）
         // ============================================================
         var isLoading = false;
 
@@ -281,38 +308,26 @@
             pageContent.innerHTML = '';
             pageContent.style.display = 'block';
 
-            if (!path) {
-                var errorHtml = '<div class="doc-content">';
-                errorHtml += '<h1 style="border-left-color:#ff6b6b;">页面不存在</h1>';
-                errorHtml += '<p style="color:var(--text-secondary);font-size:1.1rem;">抱歉，无法加载您请求的页面。</p>';
-                errorHtml += '<div style="background:rgba(255,107,107,0.06);border-left:4px solid #ff6b6b;padding:1.2rem 1.5rem;border-radius:0 var(--radius) var(--radius) 0;margin:1.2rem 0;">';
-                errorHtml += '<p style="color:var(--text-primary);font-weight:700;margin-bottom:0.4rem;">可能的原因</p>';
-                errorHtml += '<ul style="margin:0;padding-left:1.2rem;color:var(--text-secondary);">';
-                errorHtml += '<li><strong>内容不存在：</strong>页面 <code style="background:rgba(255,255,255,0.06);padding:0.1rem 0.4rem;border-radius:4px;font-family:\'Courier New\',monospace;color:#ff6b6b;">' + pageId + '</code> 不在 <code>pages/</code> 目录中，或 <code>data.js</code> 未正确映射。</li>';
-                errorHtml += '<li><strong>权限不足：</strong>您的访问权限未达到该页面的权限要求。</li>';
-                errorHtml += '<li><strong>服务端拒绝访问：</strong>该页面链接的服务端 API 拒绝了访问请求。</li>';
-                errorHtml += '<li><strong>网络状态异常：</strong>您的网络连接异常，导致未能正确访问该页面。</li>';
-                errorHtml += '</ul></div>';
-                errorHtml += '<div style="display:flex;flex-wrap:wrap;gap:0.8rem;margin:1.2rem 0;">';
-                errorHtml += '<a href="/" style="padding:0.5rem 1.2rem;border-radius:40px;background:var(--accent);color:#fff;font-family:var(--font-pixel);font-size:0.9rem;transition:all var(--transition);display:inline-block;">返回首页</a>';
-                errorHtml += '<a href="https://github.com/BlockRhapsody/blockrhapsody.github.io" target="_blank" style="padding:0.5rem 1.2rem;border-radius:40px;border:1px solid var(--border-color);color:var(--text-secondary);font-family:var(--font-pixel);font-size:0.9rem;transition:all var(--transition);display:inline-block;">反馈问题</a>';
-                errorHtml += '</div>';
-                errorHtml += '<div style="background:rgba(255,255,255,0.02);border-radius:var(--radius);padding:0.8rem 1.2rem;border:1px solid var(--border-color);">';
-                errorHtml += '<p style="color:var(--text-muted);font-size:0.85rem;">提示：检查 <code style="background:rgba(255,255,255,0.06);padding:0.1rem 0.4rem;border-radius:4px;font-family:\'Courier New\',monospace;color:#d0d0e0;">data.js</code> 中的 <code style="background:rgba(255,255,255,0.06);padding:0.1rem 0.4rem;border-radius:4px;font-family:\'Courier New\',monospace;color:#d0d0e0;">pagePathMap</code> 是否正确配置了 <code style="background:rgba(255,255,255,0.06);padding:0.1rem 0.4rem;border-radius:4px;font-family:\'Courier New\',monospace;color:#ff6b6b;">' + pageId + '</code> 的映射。</p>';
-                errorHtml += '</div>';
-                errorHtml += '<div class="footnote"><p>方块狂想曲 · 404 页面未找到</p></div>';
-                errorHtml += '</div>';
+            // ============================================================
+            // 权限检查：只有 BlockRhapsody 可以访问内容页
+            // ============================================================
+            var username = localStorage.getItem('username');
+            var isAuthorized = (username === 'BlockRhapsody');
 
-                pageContent.innerHTML = errorHtml;
-                if (typeof updateActiveState === 'function') {
-                    updateActiveState(pageId);
+            // 如果是首页或页面不存在，不需要权限检查
+            if (!path || pageId === '首页') {
+                if (!path) {
+                    render404(pageId, pageContent);
+                    return;
                 }
-                if (window.location.hash !== '#page-' + pageId) {
-                    history.pushState(null, '', '#page-' + pageId);
-                }
+                // 继续正常加载
+            } else if (!isAuthorized) {
+                // 非授权用户访问内容页 → 显示 404
+                render404(pageId, pageContent);
                 return;
             }
 
+            // ===== 原有缓存和加载逻辑 =====
             var cacheKey = 'page_' + pageId;
 
             if (isCacheValid(cacheKey)) {
@@ -602,7 +617,6 @@
             initRoomStatus();
             updateAuthUI();
 
-            // 侧边栏品牌点击返回首页
             var sidebarHeader = document.getElementById('sidebarHeader');
             if (sidebarHeader) {
                 sidebarHeader.addEventListener('click', function() {
@@ -611,7 +625,6 @@
                     } else {
                         window.location.href = '/';
                     }
-                    // 关闭移动端侧边栏
                     if (typeof closeSidebarIfMobile === 'function') {
                         closeSidebarIfMobile();
                     }
