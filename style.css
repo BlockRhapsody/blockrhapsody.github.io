@@ -1438,3 +1438,199 @@ a:hover {
 .sidebar-auth a:hover {
     color: var(--accent);
 }
+/* ============================================================
+   统一按钮样式系统
+   用法：<button class="btn btn-primary">按钮</button>
+   ============================================================ */
+
+/* 基础按钮样式 */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.7rem 1.8rem;
+    border-radius: var(--radius);
+    font-family: var(--font-pixel);
+    font-size: clamp(0.85rem, 1vw, 1rem);
+    cursor: pointer;
+    transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+    user-select: none;
+    text-decoration: none;
+    border: 2px solid var(--border-color);
+    background: rgba(255, 255, 255, 0.03);
+    color: var(--text-secondary);
+    position: relative;
+    overflow: hidden;
+    min-width: 120px;
+    flex: 1;
+    min-width: 180px;
+}
+
+/* 按钮悬停效果（桌面端） */
+@media (min-width: 769px) {
+    .btn:hover {
+        transform: translateY(-2px) scale(1.02);
+        box-shadow: 0 6px 24px rgba(0, 0, 0, 0.3);
+    }
+    .btn:active {
+        transform: scale(0.96);
+        transition-duration: 0.08s;
+    }
+}
+
+/* 按钮点击效果（所有设备） */
+.btn:active {
+    transform: scale(0.96);
+    transition-duration: 0.08s;
+}
+
+/* 手机端：二次点击高亮（与卡片逻辑一致） */
+@media (max-width: 768px) {
+    .btn.tapped {
+        transform: scale(0.96);
+        box-shadow: 0 0 0 3px var(--accent-glow);
+        border-color: var(--accent);
+    }
+}
+
+/* ============================================================
+   按钮变体
+   ============================================================ */
+
+/* 主要按钮（绿色） */
+.btn-primary {
+    border-color: #4CAF50;
+    background: rgba(76, 175, 80, 0.12);
+    color: #4CAF50;
+}
+.btn-primary:hover {
+    background: rgba(76, 175, 80, 0.25);
+    box-shadow: 0 0 30px rgba(76, 175, 80, 0.15);
+    border-color: #66BB6A;
+}
+.btn-primary:active {
+    background: rgba(76, 175, 80, 0.35);
+}
+
+/* 警告按钮（橙色） */
+.btn-warning {
+    border-color: #ffb347;
+    background: rgba(255, 179, 71, 0.12);
+    color: #ffb347;
+}
+.btn-warning:hover {
+    background: rgba(255, 179, 71, 0.25);
+    box-shadow: 0 0 30px rgba(255, 179, 71, 0.15);
+    border-color: #ffc107;
+}
+.btn-warning:active {
+    background: rgba(255, 179, 71, 0.35);
+}
+
+/* 危险按钮（红色） */
+.btn-danger {
+    border-color: #ff6b6b;
+    background: rgba(255, 107, 107, 0.10);
+    color: #ff6b6b;
+}
+.btn-danger:hover {
+    background: rgba(255, 107, 107, 0.25);
+    box-shadow: 0 0 30px rgba(255, 107, 107, 0.15);
+    border-color: #ff4757;
+}
+.btn-danger:active {
+    background: rgba(255, 107, 107, 0.35);
+}
+
+/* 信息按钮（蓝色） */
+.btn-info {
+    border-color: #4a9eff;
+    background: rgba(74, 158, 255, 0.12);
+    color: #4a9eff;
+}
+.btn-info:hover {
+    background: rgba(74, 158, 255, 0.25);
+    box-shadow: 0 0 30px rgba(74, 158, 255, 0.15);
+    border-color: #64b5f6;
+}
+.btn-info:active {
+    background: rgba(74, 158, 255, 0.35);
+}
+
+/* 成功按钮（同 primary，作为别名） */
+.btn-success {
+    border-color: #4CAF50;
+    background: rgba(76, 175, 80, 0.12);
+    color: #4CAF50;
+}
+.btn-success:hover {
+    background: rgba(76, 175, 80, 0.25);
+    box-shadow: 0 0 30px rgba(76, 175, 80, 0.15);
+    border-color: #66BB6A;
+}
+.btn-success:active {
+    background: rgba(76, 175, 80, 0.35);
+}
+
+/* 纯文本按钮（无边框，适合次要操作） */
+.btn-text {
+    border-color: transparent;
+    background: transparent;
+    color: var(--text-muted);
+    min-width: auto;
+    padding: 0.4rem 0.8rem;
+    flex: none;
+}
+.btn-text:hover {
+    color: var(--text-primary);
+    background: rgba(255, 255, 255, 0.05);
+    transform: translateY(-1px);
+    box-shadow: none;
+}
+.btn-text:active {
+    transform: scale(0.96);
+}
+
+/* 小型按钮 */
+.btn-sm {
+    padding: 0.4rem 1rem;
+    font-size: clamp(0.7rem, 0.8vw, 0.8rem);
+    min-width: 80px;
+    flex: none;
+}
+
+/* 大型按钮 */
+.btn-lg {
+    padding: 1rem 2.5rem;
+    font-size: clamp(1rem, 1.2vw, 1.2rem);
+    min-width: 200px;
+}
+
+/* 禁用状态 */
+.btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none !important;
+    box-shadow: none !important;
+}
+
+/* ============================================================
+   按钮组（水平排列）
+   ============================================================ */
+.btn-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+}
+
+.btn-group .btn {
+    flex: 1;
+    min-width: 140px;
+}
+
+@media (max-width: 480px) {
+    .btn-group .btn {
+        min-width: 100%;
+    }
+}
