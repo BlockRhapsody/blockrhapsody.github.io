@@ -1307,3 +1307,128 @@ a:hover {
     background: rgba(255, 255, 255, 0.06);
     color: var(--text-muted);
 }
+/* ============================================================
+   手机端优化（顶部栏极简 + 侧边栏品牌 + 二次点击）
+   ============================================================ */
+
+/* 手机端隐藏品牌文字（仅保留 Logo） */
+@media (max-width: 768px) {
+    #brandText {
+        display: none !important;
+    }
+    .nav-brand a {
+        gap: 0 !important;
+    }
+    /* 手机端隐藏刷新按钮 */
+    .hide-on-mobile {
+        display: none !important;
+    }
+}
+
+/* ============================================================
+   移动端侧边栏 - 顶部品牌 + 底部登录
+   ============================================================ */
+
+.mobile-sidebar {
+    display: flex;
+    flex-direction: column;
+    padding: 4.5rem 0.8rem 1.5rem 0.8rem;
+}
+
+.mobile-sidebar .sidebar-nav {
+    flex: 1;
+    overflow-y: auto;
+}
+
+/* 侧边栏头部（品牌 Logo + 文字） */
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.8rem 0.8rem 1.2rem 0.8rem;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 0.8rem;
+    flex-shrink: 0;
+}
+
+.sidebar-header img {
+    width: 32px;
+    height: 32px;
+    image-rendering: pixelated;
+}
+
+.sidebar-header span {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    letter-spacing: 1px;
+}
+
+/* 侧边栏底部（登录信息） */
+.sidebar-footer {
+    border-top: 1px solid var(--border-color);
+    padding-top: 0.8rem;
+    margin-top: 0.8rem;
+    flex-shrink: 0;
+}
+
+.sidebar-user {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.4rem 0.6rem;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.sidebar-user i {
+    color: var(--accent);
+}
+
+.sidebar-auth {
+    display: flex;
+    gap: 0.8rem;
+    padding: 0.4rem 0.6rem;
+}
+
+.sidebar-auth a {
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: color var(--transition);
+}
+
+.sidebar-auth a:hover {
+    color: var(--accent);
+}
+
+/* ============================================================
+   手机端卡片交互（二次点击 + 移除 hover）
+   ============================================================ */
+
+/* 卡片选中状态（手机端二次点击） */
+.card-list li.selected {
+    background: rgba(76, 175, 80, 0.20) !important;
+    color: var(--accent) !important;
+    border-left: 3px solid var(--accent);
+    padding-left: clamp(0.8rem, 1.2vw, 1.2rem) !important;
+}
+
+.card-list li.selected i {
+    color: var(--accent) !important;
+}
+
+/* 手机端移除 hover 效果（仅限卡片列表项） */
+@media (max-width: 768px) {
+    .card-list li:hover {
+        background: transparent !important;
+        color: var(--text-secondary) !important;
+        transform: none !important;
+        padding-left: clamp(0.6rem, 1vw, 1rem) !important;
+    }
+
+    .card-list li.selected:hover {
+        background: rgba(76, 175, 80, 0.20) !important;
+        color: var(--accent) !important;
+    }
+}
