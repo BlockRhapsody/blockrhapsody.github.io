@@ -1,326 +1,312 @@
-<div class="doc-content">
+<div id="app" class="doc-content">
     <h1>强刷新工具</h1>
-    <p style="color:var(--text-secondary);">彻底清除所有缓存 · 强制从服务器重新加载最新内容</p>
+    <p style="color:var(--text-secondary);">Vue 支持 · 彻底清除所有缓存</p>
 
-    <div style="display:flex;flex-direction:column;gap:1.5rem;margin:1.5rem 0;">
-
-        <!-- ===== 状态卡片 ===== -->
-        <div style="background:rgba(255,255,255,0.03);border-radius:var(--radius);padding:1.5rem;border:1px solid var(--border-color);">
-            <h3 style="margin-bottom:0.8rem;">当前缓存状态</h3>
-            <!-- 新增：本地 IP 显示 -->
-            <div style="display:flex;align-items:center;gap:0.6rem;padding:0.3rem 0.6rem;background:rgba(0,0,0,0.2);border-radius:6px;margin-bottom:0.8rem;font-size:clamp(0.8rem, 0.9vw, 0.9rem);">
-                <span style="color:var(--text-muted);">本地 IP：</span>
-                <span id="localIpDisplay" style="color:var(--text-primary);font-family:'Courier New',monospace;">检测中...</span>
-                <span style="color:var(--text-muted);font-size:0.7rem;margin-left:auto;">（仅限本地局域网）</span>
-            </div>
-            <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.5rem 1.5rem;font-size:clamp(0.85rem, 1vw, 1rem);">
-                <span style="color:var(--text-secondary);">已缓存页面数：</span>
-                <span id="cacheCount" style="color:var(--text-primary);">0</span>
-                <span style="color:var(--text-secondary);">本地存储项：</span>
-                <span id="localStorageCount" style="color:var(--text-primary);">0</span>
-                <span style="color:var(--text-secondary);">会话存储项：</span>
-                <span id="sessionStorageCount" style="color:var(--text-primary);">0</span>
-                <span style="color:var(--text-secondary);">当前版本号：</span>
-                <span id="versionDisplay" style="color:var(--text-primary);">加载中...</span>
-            </div>
+    <!-- ===== 状态卡片 ===== -->
+    <div style="background:rgba(255,255,255,0.03);border-radius:var(--radius);padding:1.5rem;border:1px solid var(--border-color);">
+        <h3 style="margin-bottom:0.8rem;">当前缓存状态</h3>
+        <!-- 新增：本地 IP 显示 -->
+        <div style="display:flex;align-items:center;gap:0.6rem;padding:0.3rem 0.6rem;background:rgba(0,0,0,0.2);border-radius:6px;margin-bottom:0.8rem;font-size:clamp(0.8rem, 0.9vw, 0.9rem);">
+            <span style="color:var(--text-muted);">本地 IP：</span>
+            <span style="color:var(--text-primary);font-family:'Courier New',monospace;">{{ localIp || '检测中...' }}</span>
+            <span style="color:var(--text-muted);font-size:0.7rem;margin-left:auto;">（仅限本地局域网）</span>
         </div>
-
-        <!-- ===== 按钮区 ===== -->
-        <div style="display:flex;flex-wrap:wrap;gap:1rem;">
-            <button id="softRefreshBtn" style="flex:1;min-width:180px;padding:0.8rem 1.5rem;border-radius:var(--radius);border:2px solid #4CAF50;background:rgba(76,175,80,0.12);color:#4CAF50;font-family:var(--font-pixel);font-size:0.95rem;cursor:pointer;transition:all var(--transition);">
-                软刷新
-            </button>
-            <button id="hardRefreshBtn" style="flex:1;min-width:180px;padding:0.8rem 1.5rem;border-radius:var(--radius);border:2px solid #ffb347;background:rgba(255,179,71,0.12);color:#ffb347;font-family:var(--font-pixel);font-size:0.95rem;cursor:pointer;transition:all var(--transition);">
-                强刷新
-            </button>
-            <button id="nuclearRefreshBtn" style="flex:1;min-width:180px;padding:0.8rem 1.5rem;border-radius:var(--radius);border:2px solid #ff6b6b;background:rgba(255,107,107,0.10);color:#ff6b6b;font-family:var(--font-pixel);font-size:0.95rem;cursor:pointer;transition:all var(--transition);">
-                核弹级刷新
-            </button>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.5rem 1.5rem;font-size:clamp(0.85rem, 1vw, 1rem);">
+            <span style="color:var(--text-secondary);">已缓存页面数：</span>
+            <span style="color:var(--text-primary);">{{ cacheCount }}</span>
+            <span style="color:var(--text-secondary);">本地存储项：</span>
+            <span style="color:var(--text-primary);">{{ localStorageCount }}</span>
+            <span style="color:var(--text-secondary);">会话存储项：</span>
+            <span style="color:var(--text-primary);">{{ sessionStorageCount }}</span>
+            <span style="color:var(--text-secondary);">当前版本号：</span>
+            <span style="color:var(--text-primary);">{{ version || '加载中...' }}</span>
         </div>
+    </div>
 
-        <!-- ===== 执行日志 ===== -->
-        <div style="background:rgba(0,0,0,0.3);border-radius:var(--radius);padding:1rem 1.5rem;border:1px solid var(--border-color);font-family:'Courier New',monospace;font-size:0.85rem;max-height:200px;overflow-y:auto;color:var(--text-secondary);">
-            <div id="logContainer">
-                <div>📋 准备就绪，等待操作...</div>
-            </div>
+    <!-- ===== 按钮区 ===== -->
+    <div style="display:flex;flex-wrap:wrap;gap:1rem;">
+        <button @click="softRefresh" style="flex:1;min-width:180px;padding:0.8rem 1.5rem;border-radius:var(--radius);border:2px solid #4CAF50;background:rgba(76,175,80,0.12);color:#4CAF50;font-family:var(--font-pixel);font-size:0.95rem;cursor:pointer;transition:all var(--transition);">
+            软刷新
+        </button>
+        <button @click="hardRefresh" style="flex:1;min-width:180px;padding:0.8rem 1.5rem;border-radius:var(--radius);border:2px solid #ffb347;background:rgba(255,179,71,0.12);color:#ffb347;font-family:var(--font-pixel);font-size:0.95rem;cursor:pointer;transition:all var(--transition);">
+            强刷新
+        </button>
+        <button @click="nuclearRefresh" style="flex:1;min-width:180px;padding:0.8rem 1.5rem;border-radius:var(--radius);border:2px solid #ff6b6b;background:rgba(255,107,107,0.10);color:#ff6b6b;font-family:var(--font-pixel);font-size:0.95rem;cursor:pointer;transition:all var(--transition);">
+            核弹级刷新
+        </button>
+    </div>
+
+    <!-- ===== 执行日志 ===== -->
+    <div style="background:rgba(0,0,0,0.3);border-radius:var(--radius);padding:1rem 1.5rem;border:1px solid var(--border-color);font-family:'Courier New',monospace;font-size:0.85rem;max-height:200px;overflow-y:auto;color:var(--text-secondary);">
+        <div v-for="(log, index) in logs" :key="index" :style="{ color: log.color }">
+            > {{ log.message }}
         </div>
+        <div v-if="logs.length === 0" style="color:var(--text-muted);">准备就绪，等待操作...</div>
+    </div>
 
-        <!-- ===== 说明 ===== -->
-        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem;font-size:clamp(0.8rem, 0.9vw, 0.9rem);">
-            <div style="background:rgba(76,175,80,0.06);border-left:3px solid #4CAF50;padding:0.8rem 1rem;border-radius:0 var(--radius) var(--radius) 0;">
-                <strong style="color:#4CAF50;">软刷新</strong>
-                <p style="color:var(--text-muted);margin-top:0.3rem;">清理 JS 缓存<br>保留登录状态<br>保留 HTTP 缓存</p>
-            </div>
-            <div style="background:rgba(255,179,71,0.06);border-left:3px solid #ffb347;padding:0.8rem 1rem;border-radius:0 var(--radius) var(--radius) 0;">
-                <strong style="color:#ffb347;">强刷新</strong>
-                <p style="color:var(--text-muted);margin-top:0.3rem;">清理 JS 缓存<br>强制跳过 HTTP 缓存<br>保留登录状态</p>
-            </div>
-            <div style="background:rgba(255,107,107,0.06);border-left:3px solid #ff6b6b;padding:0.8rem 1rem;border-radius:0 var(--radius) var(--radius) 0;">
-                <strong style="color:#ff6b6b;">核弹级刷新</strong>
-                <p style="color:var(--text-muted);margin-top:0.3rem;">清理所有数据<br>强制跳过 HTTP 缓存<br>尝试注销 Service Worker</p>
-            </div>
+    <!-- ===== 说明 ===== -->
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:1rem;font-size:clamp(0.8rem, 0.9vw, 0.9rem);">
+        <div style="background:rgba(76,175,80,0.06);border-left:3px solid #4CAF50;padding:0.8rem 1rem;border-radius:0 var(--radius) var(--radius) 0;">
+            <strong style="color:#4CAF50;">软刷新</strong>
+            <p style="color:var(--text-muted);margin-top:0.3rem;">清理 JS 缓存<br>保留登录状态<br>保留 HTTP 缓存</p>
+        </div>
+        <div style="background:rgba(255,179,71,0.06);border-left:3px solid #ffb347;padding:0.8rem 1rem;border-radius:0 var(--radius) var(--radius) 0;">
+            <strong style="color:#ffb347;">强刷新</strong>
+            <p style="color:var(--text-muted);margin-top:0.3rem;">清理 JS 缓存<br>强制跳过 HTTP 缓存<br>保留登录状态</p>
+        </div>
+        <div style="background:rgba(255,107,107,0.06);border-left:3px solid #ff6b6b;padding:0.8rem 1rem;border-radius:0 var(--radius) var(--radius) 0;">
+            <strong style="color:#ff6b6b;">核弹级刷新</strong>
+            <p style="color:var(--text-muted);margin-top:0.3rem;">清理所有数据<br>强制跳过 HTTP 缓存<br>尝试注销 Service Worker</p>
         </div>
     </div>
 
     <div class="footnote">
-        <p>方块狂想曲 · 实验性功能</p>
+        <p>方块狂想曲 · 实验性功能 · Vue 版本</p>
     </div>
 </div>
 
+<!-- ===== Vue 3 CDN ===== -->
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
 <script>
-    (function initPage() {
+    (function() {
         // ============================================================
-        // 获取本地 IP 地址
+        // Vue 应用
         // ============================================================
-        function getLocalIP() {
-            var ipDisplay = document.getElementById('localIpDisplay');
-            if (!ipDisplay) return;
+        var app = Vue.createApp({
+            data() {
+                return {
+                    localIp: '',
+                    cacheCount: 0,
+                    localStorageCount: 0,
+                    sessionStorageCount: 0,
+                    version: '',
+                    logs: []
+                };
+            },
+            mounted() {
+                this.updateStats();
+                this.getLocalIP();
+                this.addLog('强刷新工具已加载 (Vue 版本)', 'success');
+                this.addLog('软刷新 = 清理JS缓存，保留HTTP缓存（离线可用）', 'info');
+                this.addLog('强刷新 = 清理JS缓存 + 跳过HTTP缓存（从服务器重载）', 'info');
+            },
+            methods: {
+                // ============================================================
+                // 更新状态
+                // ============================================================
+                updateStats() {
+                    var cacheCount = 0;
+                    var sessionKeys = Object.keys(sessionStorage);
+                    sessionKeys.forEach(function(key) {
+                        if (key.startsWith('page_')) {
+                            cacheCount++;
+                        }
+                    });
+                    this.cacheCount = cacheCount;
+                    this.localStorageCount = Object.keys(localStorage).length;
+                    this.sessionStorageCount = Object.keys(sessionStorage).length;
+                    this.version = localStorage.getItem('app_version') || '未设置';
+                },
 
-            // 方式一：使用 WebRTC 获取本地 IP
-            var candidates = [];
-            var pc = new RTCPeerConnection({
-                iceServers: [{ urls: 'stun:stun.l.google.com:19302' }]
-            });
+                // ============================================================
+                // 获取本地 IP
+                // ============================================================
+                getLocalIP() {
+                    var self = this;
+                    var candidates = [];
+                    var pc = new RTCPeerConnection({
+                        iceServers: [{ urls: 'stun:stun.l.google.com:19302' }]
+                    });
 
-            pc.createDataChannel('');
+                    pc.createDataChannel('');
 
-            pc.onicecandidate = function(event) {
-                if (!event || !event.candidate) {
-                    // 候选收集完成
-                    if (candidates.length > 0) {
-                        var ip = candidates[0];
-                        ipDisplay.textContent = ip;
-                        ipDisplay.style.color = 'var(--text-primary)';
-                    } else {
-                        ipDisplay.textContent = '无法检测';
-                        ipDisplay.style.color = 'var(--text-muted)';
+                    pc.onicecandidate = function(event) {
+                        if (!event || !event.candidate) {
+                            if (candidates.length > 0) {
+                                self.localIp = candidates[0];
+                            } else {
+                                self.localIp = '无法检测';
+                            }
+                            pc.close();
+                            return;
+                        }
+                        var candidate = event.candidate.candidate;
+                        var ipMatch = candidate.match(/([0-9]{1,3}\.){3}[0-9]{1,3}/);
+                        if (ipMatch) {
+                            var ip = ipMatch[0];
+                            if (ip !== '0.0.0.0' && ip !== '127.0.0.1') {
+                                if (candidates.indexOf(ip) === -1) {
+                                    candidates.push(ip);
+                                }
+                            }
+                        }
+                    };
+
+                    var timeout = setTimeout(function() {
+                        pc.close();
+                        if (candidates.length > 0) {
+                            self.localIp = candidates[0];
+                        } else {
+                            self.localIp = '无法检测';
+                        }
+                    }, 3000);
+
+                    pc.createOffer()
+                        .then(function(offer) {
+                            return pc.setLocalDescription(offer);
+                        })
+                        .catch(function() {
+                            clearTimeout(timeout);
+                            self.localIp = '无法检测';
+                            pc.close();
+                        });
+                },
+
+                // ============================================================
+                // 日志
+                // ============================================================
+                addLog(message, type) {
+                    var colors = {
+                        info: 'var(--text-secondary)',
+                        success: '#4CAF50',
+                        warning: '#ffb347',
+                        error: '#ff6b6b'
+                    };
+                    this.logs.push({
+                        message: message,
+                        color: colors[type] || colors.info
+                    });
+                    // 滚动到底部
+                    var container = document.querySelector('#app .log-container');
+                    if (container) {
+                        container.scrollTop = container.scrollHeight;
                     }
-                    pc.close();
-                    return;
-                }
-                var candidate = event.candidate.candidate;
-                var ipMatch = candidate.match(/([0-9]{1,3}\.){3}[0-9]{1,3}/);
-                if (ipMatch) {
-                    var ip = ipMatch[0];
-                    // 过滤掉 0.0.0.0 和 127.0.0.1
-                    if (ip !== '0.0.0.0' && ip !== '127.0.0.1') {
-                        if (candidates.indexOf(ip) === -1) {
-                            candidates.push(ip);
+                },
+
+                // ============================================================
+                // 刷新跳转
+                // ============================================================
+                reloadWithCache() {
+                    location.reload();
+                },
+                reloadWithoutCache() {
+                    var url = window.location.origin + window.location.pathname + '?_=' + Date.now();
+                    window.location.href = url;
+                },
+
+                // ============================================================
+                // 1. 软刷新
+                // ============================================================
+                softRefresh() {
+                    this.addLog('开始软刷新...', 'info');
+
+                    var token = localStorage.getItem('token');
+                    var username = localStorage.getItem('username');
+
+                    var keysToRemove = [];
+                    for (var i = 0; i < localStorage.length; i++) {
+                        var key = localStorage.key(i);
+                        if (key !== 'token' && key !== 'username') {
+                            keysToRemove.push(key);
                         }
                     }
-                }
-            };
-
-            // 超时处理
-            var timeout = setTimeout(function() {
-                pc.close();
-                if (candidates.length > 0) {
-                    var ip = candidates[0];
-                    ipDisplay.textContent = ip;
-                    ipDisplay.style.color = 'var(--text-primary)';
-                } else {
-                    ipDisplay.textContent = '无法检测';
-                    ipDisplay.style.color = 'var(--text-muted)';
-                }
-            }, 3000);
-
-            pc.createOffer()
-                .then(function(offer) {
-                    return pc.setLocalDescription(offer);
-                })
-                .catch(function() {
-                    clearTimeout(timeout);
-                    ipDisplay.textContent = '无法检测';
-                    ipDisplay.style.color = 'var(--text-muted)';
-                    pc.close();
-                });
-        }
-
-        // ============================================================
-        // 更新状态显示
-        // ============================================================
-        function updateStats() {
-            var cacheCount = 0;
-            var sessionKeys = Object.keys(sessionStorage);
-            sessionKeys.forEach(function(key) {
-                if (key.startsWith('page_')) {
-                    cacheCount++;
-                }
-            });
-            var cacheEl = document.getElementById('cacheCount');
-            var localEl = document.getElementById('localStorageCount');
-            var sessionEl = document.getElementById('sessionStorageCount');
-            var versionEl = document.getElementById('versionDisplay');
-
-            if (cacheEl) cacheEl.textContent = cacheCount;
-            if (localEl) localEl.textContent = Object.keys(localStorage).length;
-            if (sessionEl) sessionEl.textContent = Object.keys(sessionStorage).length;
-
-            var version = localStorage.getItem('app_version') || '未设置';
-            if (versionEl) versionEl.textContent = version;
-        }
-
-        // ============================================================
-        // 日志输出
-        // ============================================================
-        function log(message, type) {
-            var container = document.getElementById('logContainer');
-            if (!container) return;
-
-            var colors = {
-                info: 'var(--text-secondary)',
-                success: '#4CAF50',
-                warning: '#ffb347',
-                error: '#ff6b6b'
-            };
-            var color = colors[type] || colors.info;
-            var entry = document.createElement('div');
-            entry.style.color = color;
-            entry.textContent = '> ' + message;
-            container.appendChild(entry);
-            container.scrollTop = container.scrollHeight;
-        }
-
-        // ============================================================
-        // 1. 软刷新
-        // ============================================================
-        function softRefresh() {
-            log('开始软刷新...', 'info');
-
-            var token = localStorage.getItem('token');
-            var username = localStorage.getItem('username');
-
-            var keysToRemove = [];
-            for (var i = 0; i < localStorage.length; i++) {
-                var key = localStorage.key(i);
-                if (key !== 'token' && key !== 'username') {
-                    keysToRemove.push(key);
-                }
-            }
-            keysToRemove.forEach(function(key) {
-                localStorage.removeItem(key);
-            });
-            log('已清除 ' + keysToRemove.length + ' 项本地存储数据', 'success');
-
-            var sessionCount = sessionStorage.length;
-            sessionStorage.clear();
-            log('已清除 ' + sessionCount + ' 项会话存储数据', 'success');
-
-            if (token) localStorage.setItem('token', token);
-            if (username) localStorage.setItem('username', username);
-            log('已恢复登录数据: ' + (username || '未登录'), 'info');
-
-            var newVersion = new Date().toISOString().slice(0, 10).replace(/-/g, '') + '.' + String(Date.now()).slice(-6);
-            localStorage.setItem('app_version', newVersion);
-            log('新版本号已设置: ' + newVersion, 'info');
-
-            updateStats();
-            log('软刷新完成！页面将重新加载（使用缓存）', 'success');
-
-            location.reload();
-        }
-
-        // ============================================================
-        // 2. 强刷新
-        // ============================================================
-        function hardRefresh() {
-            log('开始强刷新...', 'warning');
-
-            var token = localStorage.getItem('token');
-            var username = localStorage.getItem('username');
-
-            var keysToRemove = [];
-            for (var i = 0; i < localStorage.length; i++) {
-                var key = localStorage.key(i);
-                if (key !== 'token' && key !== 'username') {
-                    keysToRemove.push(key);
-                }
-            }
-            keysToRemove.forEach(function(key) {
-                localStorage.removeItem(key);
-            });
-            log('已清除 ' + keysToRemove.length + ' 项本地存储数据', 'success');
-
-            var sessionCount = sessionStorage.length;
-            sessionStorage.clear();
-            log('已清除 ' + sessionCount + ' 项会话存储数据', 'success');
-
-            if (token) localStorage.setItem('token', token);
-            if (username) localStorage.setItem('username', username);
-            log('已恢复登录数据: ' + (username || '未登录'), 'info');
-
-            var newVersion = new Date().toISOString().slice(0, 10).replace(/-/g, '') + '.' + String(Date.now()).slice(-6);
-            localStorage.setItem('app_version', newVersion);
-            log('新版本号已设置: ' + newVersion, 'info');
-
-            updateStats();
-            log('强刷新完成！正在从服务器重新加载...', 'success');
-
-            var url = window.location.origin + window.location.pathname + '?_=' + Date.now();
-            window.location.href = url;
-        }
-
-        // ============================================================
-        // 3. 核弹级刷新
-        // ============================================================
-        function nuclearRefresh() {
-            if (!confirm('核弹级刷新将清除所有数据（包括登录状态），并强制从服务器重新加载全部资源。\n\n确定继续吗？')) {
-                log('操作已取消', 'warning');
-                return;
-            }
-
-            log('开始核弹级刷新...', 'error');
-
-            localStorage.clear();
-            sessionStorage.clear();
-            log('已清除所有本地存储和会话存储数据', 'error');
-
-            if ('serviceWorker' in navigator) {
-                navigator.serviceWorker.getRegistrations().then(function(registrations) {
-                    registrations.forEach(function(reg) {
-                        reg.unregister();
-                        log('已注销 Service Worker', 'info');
+                    keysToRemove.forEach(function(key) {
+                        localStorage.removeItem(key);
                     });
-                }).catch(function() {
-                    // 忽略错误
-                });
+                    this.addLog('已清除 ' + keysToRemove.length + ' 项本地存储数据', 'success');
+
+                    var sessionCount = sessionStorage.length;
+                    sessionStorage.clear();
+                    this.addLog('已清除 ' + sessionCount + ' 项会话存储数据', 'success');
+
+                    if (token) localStorage.setItem('token', token);
+                    if (username) localStorage.setItem('username', username);
+                    this.addLog('已恢复登录数据: ' + (username || '未登录'), 'info');
+
+                    var newVersion = new Date().toISOString().slice(0, 10).replace(/-/g, '') + '.' + String(Date.now()).slice(-6);
+                    localStorage.setItem('app_version', newVersion);
+                    this.addLog('新版本号已设置: ' + newVersion, 'info');
+
+                    this.updateStats();
+                    this.addLog('软刷新完成！页面将重新加载（使用缓存）', 'success');
+
+                    setTimeout(this.reloadWithCache, 1000);
+                },
+
+                // ============================================================
+                // 2. 强刷新
+                // ============================================================
+                hardRefresh() {
+                    this.addLog('开始强刷新...', 'warning');
+
+                    var token = localStorage.getItem('token');
+                    var username = localStorage.getItem('username');
+
+                    var keysToRemove = [];
+                    for (var i = 0; i < localStorage.length; i++) {
+                        var key = localStorage.key(i);
+                        if (key !== 'token' && key !== 'username') {
+                            keysToRemove.push(key);
+                        }
+                    }
+                    keysToRemove.forEach(function(key) {
+                        localStorage.removeItem(key);
+                    });
+                    this.addLog('已清除 ' + keysToRemove.length + ' 项本地存储数据', 'success');
+
+                    var sessionCount = sessionStorage.length;
+                    sessionStorage.clear();
+                    this.addLog('已清除 ' + sessionCount + ' 项会话存储数据', 'success');
+
+                    if (token) localStorage.setItem('token', token);
+                    if (username) localStorage.setItem('username', username);
+                    this.addLog('已恢复登录数据: ' + (username || '未登录'), 'info');
+
+                    var newVersion = new Date().toISOString().slice(0, 10).replace(/-/g, '') + '.' + String(Date.now()).slice(-6);
+                    localStorage.setItem('app_version', newVersion);
+                    this.addLog('新版本号已设置: ' + newVersion, 'info');
+
+                    this.updateStats();
+                    this.addLog('强刷新完成！正在从服务器重新加载...', 'success');
+
+                    setTimeout(this.reloadWithoutCache, 1000);
+                },
+
+                // ============================================================
+                // 3. 核弹级刷新
+                // ============================================================
+                nuclearRefresh() {
+                    if (!confirm('核弹级刷新将清除所有数据（包括登录状态），并强制从服务器重新加载全部资源。\n\n确定继续吗？')) {
+                        this.addLog('操作已取消', 'warning');
+                        return;
+                    }
+
+                    this.addLog('开始核弹级刷新...', 'error');
+
+                    localStorage.clear();
+                    sessionStorage.clear();
+                    this.addLog('已清除所有本地存储和会话存储数据', 'error');
+
+                    if ('serviceWorker' in navigator) {
+                        navigator.serviceWorker.getRegistrations().then(function(registrations) {
+                            registrations.forEach(function(reg) {
+                                reg.unregister();
+                                this.addLog('已注销 Service Worker', 'info');
+                            });
+                        }.bind(this)).catch(function() {
+                            // 忽略错误
+                        });
+                    }
+
+                    this.updateStats();
+                    this.addLog('核弹级刷新完成！正在从服务器重新加载所有资源...', 'error');
+
+                    setTimeout(this.reloadWithoutCache, 1000);
+                }
             }
+        });
 
-            updateStats();
-            log('核弹级刷新完成！正在从服务器重新加载所有资源...', 'error');
-
-            var url = window.location.origin + window.location.pathname + '?_=' + Date.now() + '&_nuclear=1';
-            window.location.href = url;
-        }
-
-        // ============================================================
-        // 绑定按钮事件
-        // ============================================================
-        var softBtn = document.getElementById('softRefreshBtn');
-        var hardBtn = document.getElementById('hardRefreshBtn');
-        var nuclearBtn = document.getElementById('nuclearRefreshBtn');
-
-        if (softBtn) {
-            softBtn.removeEventListener('click', softRefresh);
-            softBtn.addEventListener('click', softRefresh);
-        }
-        if (hardBtn) {
-            hardBtn.removeEventListener('click', hardRefresh);
-            hardBtn.addEventListener('click', hardRefresh);
-        }
-        if (nuclearBtn) {
-            nuclearBtn.removeEventListener('click', nuclearRefresh);
-            nuclearBtn.addEventListener('click', nuclearRefresh);
-        }
-
-        // ============================================================
-        // 初始化
-        // ============================================================
-        updateStats();
-        getLocalIP();
-        log('强刷新工具已加载', 'success');
-        log('软刷新 = 清理JS缓存，保留HTTP缓存（离线可用）', 'info');
-        log('强刷新 = 清理JS缓存 + 跳过HTTP缓存（从服务器重载）', 'info');
-        log('核弹级刷新 = 清除所有数据 + 跳过HTTP缓存 + 注销Service Worker', 'info');
+        app.mount('#app');
     })();
 </script>
