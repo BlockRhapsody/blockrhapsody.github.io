@@ -31,8 +31,19 @@
         </div>
     </div>
 
+    <!-- ===== 进度条 ===== -->
+    <div style="margin:1rem 0;">
+        <div style="display:flex;justify-content:space-between;font-size:0.8rem;color:var(--text-muted);">
+            <span id="progressText">正在检测图像文件...</span>
+            <span id="progressPercent">0%</span>
+        </div>
+        <div style="width:100%;height:4px;background:rgba(255,255,255,0.06);border-radius:4px;overflow:hidden;margin-top:0.3rem;">
+            <div id="progressBar" style="width:0%;height:100%;background:var(--accent);border-radius:4px;transition:width 0.3s ease;"></div>
+        </div>
+    </div>
+
     <!-- ===== 加载状态 ===== -->
-    <div id="loadingStatus" style="text-align:center;padding:2rem 0;color:var(--text-muted);">
+    <div id="loadingStatus" style="text-align:center;padding:1rem 0;color:var(--text-muted);display:none;">
         <img src="/icon/Structure_Block_3.png" alt="加载中" style="width:48px;height:48px;image-rendering:pixelated;animation:breathe 1.2s ease-in-out infinite;display:block;margin:0 auto;">
         <p style="margin-top:0.8rem;">正在扫描图像文件...</p>
     </div>
@@ -43,13 +54,13 @@
 
     <!-- ===== 无结果 ===== -->
     <div id="noResult" style="text-align:center;padding:3rem 0;color:var(--text-muted);display:none;">
-        <p>📭 未找到任何图像文件</p>
+        <p>未找到任何图像文件</p>
         <p style="font-size:0.85rem;margin-top:0.4rem;">请确保 icon 目录下存在图片文件</p>
     </div>
 
     <!-- ===== 错误提示 ===== -->
     <div id="errorMsg" style="text-align:center;padding:2rem 0;color:#ff6b6b;display:none;">
-        <p>❌ 加载失败</p>
+        <p>加载失败</p>
         <p style="font-size:0.85rem;margin-top:0.4rem;" id="errorDetail">请检查网络连接</p>
     </div>
 
@@ -188,7 +199,14 @@
 
 <script>
     // ============================================================
-    // 图像文件枚举器 - 从 index.json 自动加载
+    // 获取滚动条宽度
+    // ============================================================
+    function getScrollbarWidth() {
+        return window.innerWidth - document.documentElement.clientWidth;
+    }
+
+    // ============================================================
+    // 图像文件枚举器 - 并行检测
     // ============================================================
     (function initImageGallery() {
         var imageGrid = document.getElementById('imageGrid');
@@ -196,6 +214,9 @@
         var noResult = document.getElementById('noResult');
         var errorMsg = document.getElementById('errorMsg');
         var errorDetail = document.getElementById('errorDetail');
+        var progressBar = document.getElementById('progressBar');
+        var progressText = document.getElementById('progressText');
+        var progressPercent = document.getElementById('progressPercent');
 
         var stats = {
             total: 0,
@@ -207,27 +228,18 @@
             webp: 0
         };
 
-        // ============================================================
-        // 格式化文件大小
-        // ============================================================
         function formatFileSize(bytes) {
             if (bytes < 1024) return bytes + 'B';
             if (bytes < 1048576) return (bytes / 1024).toFixed(1) + 'KB';
             return (bytes / 1048576).toFixed(1) + 'MB';
         }
 
-        // ============================================================
-        // 获取文件扩展名
-        // ============================================================
         function getExtension(filename) {
             var parts = filename.split('.');
             if (parts.length < 2) return '';
             return parts[parts.length - 1].toLowerCase();
         }
 
-        // ============================================================
-        // 获取文件大小
-        // ============================================================
         function getFileSize(url) {
             return fetch(url, { method: 'HEAD' })
                 .then(function(response) {
@@ -237,9 +249,6 @@
                 .catch(function() { return 0; });
         }
 
-        // ============================================================
-        // 从 index.json 读取文件列表
-        // ============================================================
         function loadImageList() {
             return fetch('/icon/index.json?' + Date.now())
                 .then(function(response) {
@@ -256,9 +265,6 @@
                 });
         }
 
-        // ============================================================
-        // 检测图片是否存在
-        // ============================================================
         function checkImageExists(url) {
             return new Promise(function(resolve) {
                 var img = new Image();
@@ -279,31 +285,61 @@
         }
 
         // ============================================================
-        // 加载并渲染图像
+        // 主加载函数 - 并行检测
         // ============================================================
         async function loadImages() {
             var validImages = [];
             var basePath = '/icon/';
+            var totalFiles = 0;
+            var completed = 0;
 
             try {
                 var fileList = await loadImageList();
-                loadingStatus.querySelector('p').textContent = '正在检测 ' + fileList.length + ' 个图像文件...';
+                totalFiles = fileList.length;
 
-                // 逐个检测文件
-                for (var i = 0; i < fileList.length; i++) {
-                    var filename = fileList[i];
+                if (totalFiles === 0) {
+                    loadingStatus.style.display = 'none';
+                    noResult.style.display = 'block';
+                    return;
+                }
+
+                // 显示进度条
+                progressText.textContent = '正在检测 ' + totalFiles + ' 个图像文件...';
+                progressPercent.textContent = '0%';
+                progressBar.style.width = '0%';
+
+                // 并行检测所有文件
+                var checkPromises = fileList.map(async function(filename, index) {
                     var url = basePath + filename;
                     var exists = await checkImageExists(url);
+                    var result = null;
                     if (exists) {
                         var ext = getExtension(filename);
                         var size = await getFileSize(url);
-                        validImages.push({
+                        result = {
                             filename: filename,
                             url: url,
                             ext: ext,
                             size: size
-                        });
+                        };
+                    }
+                    // 更新进度
+                    completed++;
+                    var percent = Math.round((completed / totalFiles) * 100);
+                    progressBar.style.width = percent + '%';
+                    progressPercent.textContent = percent + '%';
+                    if (completed % 3 === 0 || completed === totalFiles) {
+                        progressText.textContent = '正在检测 ' + completed + '/' + totalFiles + ' ...';
+                    }
+                    return result;
+                });
+
+                var results = await Promise.all(checkPromises);
+                results.forEach(function(result) {
+                    if (result) {
+                        validImages.push(result);
                         stats.total++;
+                        var ext = result.ext;
                         if (ext === 'png') stats.png++;
                         else if (ext === 'jpg') stats.jpg++;
                         else if (ext === 'jpeg') stats.jpeg++;
@@ -311,7 +347,7 @@
                         else if (ext === 'svg') stats.svg++;
                         else if (ext === 'webp') stats.webp++;
                     }
-                }
+                });
 
                 // 更新统计
                 document.getElementById('totalCount').textContent = stats.total;
@@ -320,6 +356,14 @@
                 document.getElementById('gifCount').textContent = stats.gif;
                 document.getElementById('svgCount').textContent = stats.svg;
                 document.getElementById('webpCount').textContent = stats.webp;
+
+                // 隐藏进度条
+                progressText.textContent = '检测完成，共 ' + validImages.length + ' 个有效文件';
+                progressPercent.textContent = '100%';
+                progressBar.style.width = '100%';
+                setTimeout(function() {
+                    progressBar.style.opacity = '0';
+                }, 1000);
 
                 loadingStatus.style.display = 'none';
 
@@ -336,7 +380,7 @@
                     var extClass = img.ext;
                     var sizeText = img.size > 0 ? formatFileSize(img.size) : '--';
                     html += '<div class="image-card" data-url="' + img.url + '" data-filename="' + img.filename + '">';
-                    html += '<img src="' + img.url + '" alt="' + img.filename + '" loading="lazy" onerror="this.style.display=\'none\'">';
+                    html += '<img src="' + img.url + '" alt="' + img.filename + '" loading="lazy" onerror="this.parentElement.style.display=\'none\'">';
                     html += '<div class="image-info">';
                     html += '<span class="filename" title="' + img.filename + '">' + img.filename + '</span>';
                     html += '<span class="format-badge ' + extClass + '">' + img.ext.toUpperCase() + '</span>';
@@ -345,11 +389,14 @@
                 }
                 imageGrid.innerHTML = html;
 
-                // 点击卡片弹出大图
+                // 绑定点击事件
                 var cards = imageGrid.querySelectorAll('.image-card');
                 cards.forEach(function(card) {
                     card.addEventListener('click', function() {
-                        openPreview(this.dataset.url, this.dataset.filename);
+                        var img = this.querySelector('img');
+                        if (img && img.src) {
+                            openPreview(img.src, this.dataset.filename);
+                        }
                     });
                 });
 
@@ -362,7 +409,7 @@
         }
 
         // ============================================================
-        // 大图预览
+        // 大图预览 - 带滚动条补偿，关闭时彻底销毁 DOM
         // ============================================================
         var previewOverlay = null;
         var previewImg = null;
@@ -370,52 +417,71 @@
         var closeBtn = null;
 
         function openPreview(url, filename) {
-            if (!previewOverlay) {
-                previewOverlay = document.createElement('div');
-                previewOverlay.className = 'preview-overlay';
-                previewOverlay.id = 'previewOverlay';
+            destroyPreview();
 
-                closeBtn = document.createElement('button');
-                closeBtn.className = 'close-btn';
-                closeBtn.textContent = '✕';
-                closeBtn.addEventListener('click', closePreview);
+            previewOverlay = document.createElement('div');
+            previewOverlay.className = 'preview-overlay';
+            previewOverlay.id = 'previewOverlay';
 
-                previewImg = document.createElement('img');
-                previewImg.alt = filename;
+            closeBtn = document.createElement('button');
+            closeBtn.className = 'close-btn';
+            closeBtn.textContent = '✕';
+            closeBtn.addEventListener('click', closePreview);
 
-                previewInfo = document.createElement('div');
-                previewInfo.className = 'preview-info';
-                previewInfo.textContent = filename;
+            previewImg = document.createElement('img');
+            previewImg.alt = filename;
 
-                previewOverlay.appendChild(closeBtn);
-                previewOverlay.appendChild(previewImg);
-                previewOverlay.appendChild(previewInfo);
+            previewInfo = document.createElement('div');
+            previewInfo.className = 'preview-info';
+            previewInfo.textContent = filename;
 
-                previewOverlay.addEventListener('click', function(e) {
-                    if (e.target === this) closePreview();
-                });
+            previewOverlay.appendChild(closeBtn);
+            previewOverlay.appendChild(previewImg);
+            previewOverlay.appendChild(previewInfo);
 
-                document.addEventListener('keydown', function(e) {
-                    if (e.key === 'Escape' && previewOverlay.classList.contains('active')) {
-                        closePreview();
-                    }
-                });
+            previewOverlay.addEventListener('click', function(e) {
+                if (e.target === this) closePreview();
+            });
 
-                document.body.appendChild(previewOverlay);
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    closePreview();
+                }
+            });
+
+            document.body.appendChild(previewOverlay);
+
+            var scrollbarWidth = getScrollbarWidth();
+            if (scrollbarWidth > 0) {
+                document.body.style.paddingRight = scrollbarWidth + 'px';
             }
+            document.body.style.overflow = 'hidden';
 
             previewImg.src = url;
             previewImg.alt = filename;
             previewInfo.textContent = filename;
             previewOverlay.classList.add('active');
-            document.body.style.overflow = 'hidden';
         }
 
         function closePreview() {
             if (previewOverlay) {
                 previewOverlay.classList.remove('active');
                 document.body.style.overflow = '';
+                document.body.style.paddingRight = '';
+                setTimeout(function() {
+                    destroyPreview();
+                }, 300);
             }
+        }
+
+        function destroyPreview() {
+            if (previewOverlay && previewOverlay.parentNode) {
+                previewOverlay.parentNode.removeChild(previewOverlay);
+            }
+            previewOverlay = null;
+            previewImg = null;
+            previewInfo = null;
+            closeBtn = null;
         }
 
         window.closePreview = closePreview;
