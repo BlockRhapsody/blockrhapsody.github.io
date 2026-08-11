@@ -3,55 +3,112 @@
     <p style="color:var(--text-secondary);">CSS 功能与渲染测试 · 方块狂想曲实验性功能</p>
 
     <!-- ============================================================ -->
-    <!-- 一、提示框模板测试（完整版） -->
+    <!-- 一、提示框模板测试 -->
     <!-- ============================================================ -->
     <h2>提示框模板</h2>
 
     <div class="msgbox info">
         这是一条普通提示信息，用于说明一般性内容。
     </div>
+    <div class="code-block">
+        <pre>&lt;div class="msgbox info"&gt;
+    这是一条普通提示信息，用于说明一般性内容。
+&lt;/div&gt;</pre>
+    </div>
 
     <div class="msgbox warning">
         <span class="msgbox-title">注意</span>
         这是一条警告信息，提醒用户注意潜在问题。
+    </div>
+    <div class="code-block">
+        <pre>&lt;div class="msgbox warning"&gt;
+    &lt;span class="msgbox-title"&gt;注意&lt;/span&gt;
+    这是一条警告信息，提醒用户注意潜在问题。
+&lt;/div&gt;</pre>
     </div>
 
     <div class="msgbox important">
         <span class="msgbox-title">重要</span>
         这是一条重要信息，强调关键内容或禁止事项。
     </div>
+    <div class="code-block">
+        <pre>&lt;div class="msgbox important"&gt;
+    &lt;span class="msgbox-title"&gt;重要&lt;/span&gt;
+    这是一条重要信息，强调关键内容或禁止事项。
+&lt;/div&gt;</pre>
+    </div>
 
     <div class="msgbox success">
         这是一条成功信息，表示操作已完成或已通过。
+    </div>
+    <div class="code-block">
+        <pre>&lt;div class="msgbox success"&gt;
+    这是一条成功信息，表示操作已完成或已通过。
+&lt;/div&gt;</pre>
     </div>
 
     <div class="msgbox todo">
         <span class="msgbox-title">计划中</span>
         这是一条待办信息，表示该功能或内容正在规划中。
     </div>
+    <div class="code-block">
+        <pre>&lt;div class="msgbox todo"&gt;
+    &lt;span class="msgbox-title"&gt;计划中&lt;/span&gt;
+    这是一条待办信息，表示该功能或内容正在规划中。
+&lt;/div&gt;</pre>
+    </div>
 
     <div class="msgbox quote">
         玩家体验至上是方块狂想曲服务器的核心理念与行动准则。
         <span class="quote-source">服主弘桀孤影行</span>
+    </div>
+    <div class="code-block">
+        <pre>&lt;div class="msgbox quote"&gt;
+    玩家体验至上是方块狂想曲服务器的核心理念与行动准则。
+    &lt;span class="quote-source"&gt;服主弘桀孤影行&lt;/span&gt;
+&lt;/div&gt;</pre>
     </div>
 
     <div class="msgbox knowledge">
         <span class="msgbox-title">你知道吗</span>
         命令方块共有三种类型：脉冲、循环、连锁。每种类型有不同的执行规则和适用场景。
     </div>
+    <div class="code-block">
+        <pre>&lt;div class="msgbox knowledge"&gt;
+    &lt;span class="msgbox-title"&gt;你知道吗&lt;/span&gt;
+    命令方块共有三种类型：脉冲、循环、连锁。
+&lt;/div&gt;</pre>
+    </div>
 
     <div class="msgbox link">
         <span class="msgbox-title">扩展阅读</span>
         更多指令相关内容请参考 <a href="#page-MCC目录">MCC 学习新编</a> 或访问 <a href="https://zh.minecraft.wiki" target="_blank">我的世界中文Wiki</a>。
+    </div>
+    <div class="code-block">
+        <pre>&lt;div class="msgbox link"&gt;
+    &lt;span class="msgbox-title"&gt;扩展阅读&lt;/span&gt;
+    更多指令内容请参考 &lt;a href="#page-MCC目录"&gt;MCC 学习新编&lt;/a&gt;
+&lt;/div&gt;</pre>
     </div>
 
     <div class="msgbox functional">
         <span class="msgbox-title">交互提示</span>
         点击侧边栏的「实验性」分类可以展开子菜单。点击卡片可以跳转到对应的页面。
     </div>
+    <div class="code-block">
+        <pre>&lt;div class="msgbox functional"&gt;
+    &lt;span class="msgbox-title"&gt;交互提示&lt;/span&gt;
+    点击侧边栏的「实验性」分类可以展开子菜单。
+&lt;/div&gt;</pre>
+    </div>
 
     <div class="msgbox plain">
         这是一条纯色块信息，没有图标，适用于不需要强调的普通内容。
+    </div>
+    <div class="code-block">
+        <pre>&lt;div class="msgbox plain"&gt;
+    这是一条纯色块信息，没有图标。
+&lt;/div&gt;</pre>
     </div>
 
     <!-- ============================================================ -->
@@ -67,6 +124,13 @@
         风险：<span class="tag warning">中等</span>
         普通标签：<span class="tag vanilla">未分类</span>
     </p>
+    <div class="code-block">
+        <pre>&lt;p&gt;
+    此功能处于 &lt;span class="tag todo"&gt;开发中&lt;/span&gt; 状态。
+    服务器版本：&lt;span class="tag info"&gt;1.21.0&lt;/span&gt;
+    状态：&lt;span class="tag success"&gt;已通过&lt;/span&gt;
+&lt;/p&gt;</pre>
+    </div>
 
     <!-- ============================================================ -->
     <!-- 三、标题层级测试 -->
@@ -75,12 +139,24 @@
 
     <h3>三级标题</h3>
     <p>这是三级标题下的正文内容，用于测试标题与正文之间的间距和样式。</p>
+    <div class="code-block">
+        <pre>&lt;h3&gt;三级标题&lt;/h3&gt;
+&lt;p&gt;这是三级标题下的正文内容。&lt;/p&gt;</pre>
+    </div>
 
     <h4>四级标题</h4>
     <p>这是四级标题下的正文内容，用于测试更细粒度的标题层级。</p>
+    <div class="code-block">
+        <pre>&lt;h4&gt;四级标题&lt;/h4&gt;
+&lt;p&gt;这是四级标题下的正文内容。&lt;/p&gt;</pre>
+    </div>
 
     <h5>五级标题</h5>
     <p>这是五级标题下的正文内容，用于测试标题层级的完整性。</p>
+    <div class="code-block">
+        <pre>&lt;h5&gt;五级标题&lt;/h5&gt;
+&lt;p&gt;这是五级标题下的正文内容。&lt;/p&gt;</pre>
+    </div>
 
     <!-- ============================================================ -->
     <!-- 四、列表样式测试 -->
@@ -100,6 +176,17 @@
         <li>第三项内容</li>
         <li>第四项内容</li>
     </ul>
+    <div class="code-block">
+        <pre>&lt;ul&gt;
+    &lt;li&gt;第一项内容&lt;/li&gt;
+    &lt;li&gt;第二项内容
+        &lt;ul&gt;
+            &lt;li&gt;嵌套子项一&lt;/li&gt;
+            &lt;li&gt;嵌套子项二&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;</pre>
+    </div>
 
     <h3>有序列表</h3>
     <ol>
@@ -112,6 +199,17 @@
         </li>
         <li>第三步操作</li>
     </ol>
+    <div class="code-block">
+        <pre>&lt;ol&gt;
+    &lt;li&gt;第一步操作&lt;/li&gt;
+    &lt;li&gt;第二步操作
+        &lt;ol&gt;
+            &lt;li&gt;子步骤一&lt;/li&gt;
+            &lt;li&gt;子步骤二&lt;/li&gt;
+        &lt;/ol&gt;
+    &lt;/li&gt;
+&lt;/ol&gt;</pre>
+    </div>
 
     <!-- ============================================================ -->
     <!-- 五、代码与预格式化文本 -->
@@ -121,12 +219,21 @@
     <h3>行内代码</h3>
     <p>使用 <code>/give @s diamond 64</code> 可以给自己 64 颗钻石。</p>
     <p>目标选择器 <code>@a</code> 表示所有玩家，<code>@e</code> 表示所有实体。</p>
+    <div class="code-block">
+        <pre>&lt;p&gt;使用 &lt;code&gt;/give @s diamond 64&lt;/code&gt; 可以给自己 64 颗钻石。&lt;/p&gt;</pre>
+    </div>
 
     <h3>代码块</h3>
     <pre style="background:rgba(0,0,0,0.3);border-radius:var(--radius);padding:1rem;overflow-x:auto;border:1px solid var(--border-color);font-family:'Courier New',monospace;font-size:0.85rem;color:var(--text-secondary);">
 /execute as @a at @s run say 你好，世界！
 /scoreboard objectives add money dummy 金币
 /give @s diamond_sword 1</pre>
+    <div class="code-block">
+        <pre>&lt;pre style="background:rgba(0,0,0,0.3);border-radius:var(--radius);padding:1rem;..."&gt;
+/execute as @a at @s run say 你好，世界！
+/scoreboard objectives add money dummy 金币
+&lt;/pre&gt;</pre>
+    </div>
 
     <!-- ============================================================ -->
     <!-- 六、表格样式测试 -->
@@ -164,6 +271,16 @@
             </tr>
         </tbody>
     </table>
+    <div class="code-block">
+        <pre>&lt;table&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;&lt;th&gt;名称&lt;/th&gt;&lt;th&gt;类型&lt;/th&gt;&lt;th&gt;说明&lt;/th&gt;&lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;&lt;td&gt;@p&lt;/td&gt;&lt;td&gt;目标选择器&lt;/td&gt;&lt;td&gt;选择最近的玩家&lt;/td&gt;&lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;</pre>
+    </div>
 
     <!-- ============================================================ -->
     <!-- 七、信息网格测试 -->
@@ -178,6 +295,12 @@
         <span><strong>服主：</strong>弘桀孤影行</span>
         <span><strong>管理员：</strong>WE泡沫君2、出击的阴笑徐铮</span>
     </div>
+    <div class="code-block">
+        <pre>&lt;div class="info-grid"&gt;
+    &lt;span&gt;&lt;strong&gt;服务器名称：&lt;/strong&gt;方块狂想曲&lt;/span&gt;
+    &lt;span&gt;&lt;strong&gt;当前版本：&lt;/strong&gt;1.21.0&lt;/span&gt;
+&lt;/div&gt;</pre>
+    </div>
 
     <!-- ============================================================ -->
     <!-- 八、高亮框测试 -->
@@ -189,23 +312,43 @@
         <p>这是一个高亮框，用于突出显示重要内容或给出关键提示。</p>
         <p style="margin-top:0.4rem;">它通常用于强调与当前页面核心相关的信息。</p>
     </div>
+    <div class="code-block">
+        <pre>&lt;div class="highlight-box"&gt;
+    &lt;p&gt;&lt;strong&gt;提示&lt;/strong&gt;&lt;/p&gt;
+    &lt;p&gt;这是一个高亮框，用于突出显示重要内容。&lt;/p&gt;
+&lt;/div&gt;</pre>
+    </div>
 
     <!-- ============================================================ -->
-    <!-- 九、链接样式测试 -->
+    <!-- 九、卡片样式测试 -->
     <!-- ============================================================ -->
-    <h2>链接样式</h2>
+    <h2>卡片样式</h2>
 
-    <p>
-        这是一个普通链接：<a href="#page-首页">返回首页</a>
-    </p>
-    <p>
-        这是一个外部链接：<a href="https://zh.minecraft.wiki" target="_blank">我的世界中文Wiki</a>
-    </p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill, minmax(200px, 1fr));gap:1rem;margin:1rem 0;">
+        <div class="card" style="padding:1rem;cursor:default;">
+            <div class="card-title" style="font-size:1.2rem;">基础卡片</div>
+            <p style="color:var(--text-secondary);font-size:0.9rem;">这是一个基础卡片，包含标题和正文内容。</p>
+        </div>
+        <div class="card" style="padding:1rem;cursor:default;">
+            <div class="card-title" style="font-size:1.2rem;"><i class="fas fa-star"></i> 带图标卡片</div>
+            <p style="color:var(--text-secondary);font-size:0.9rem;">卡片标题可以包含 FontAwesome 图标。</p>
+        </div>
+        <div class="card" style="padding:1rem;cursor:default;">
+            <div class="card-title" style="font-size:1.2rem;">交互卡片</div>
+            <p style="color:var(--text-secondary);font-size:0.9rem;">悬停时有动画效果，适合用作导航入口。</p>
+        </div>
+    </div>
+    <div class="code-block">
+        <pre>&lt;div class="card"&gt;
+    &lt;div class="card-title"&gt;基础卡片&lt;/div&gt;
+    &lt;p style="color:var(--text-secondary);"&gt;这是一个基础卡片。&lt;/p&gt;
+&lt;/div&gt;</pre>
+    </div>
 
     <!-- ============================================================ -->
-    <!-- 十、混合内容测试 -->
+    <!-- 十、混合内容测试（含嵌套列表） -->
     <!-- ============================================================ -->
-    <h2>混合内容</h2>
+    <h2>混合内容（含嵌套列表）</h2>
 
     <div class="msgbox info">
         <span class="msgbox-title">信息提示</span>
@@ -213,18 +356,92 @@
         <ul>
             <li>提示框内包含 <strong>加粗文本</strong> 和 <code>行内代码</code></li>
             <li>包含 <span class="tag warning">标签</span> 和 <span class="tag success">状态标记</span></li>
-            <li>可以嵌套列表和其他元素</li>
+            <li>可以嵌套列表和其他元素
+                <ul>
+                    <li>深度嵌套一</li>
+                    <li>深度嵌套二
+                        <ul>
+                            <li>深度嵌套三（最深层）</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>还可以包含 <a href="#page-首页">链接</a></li>
         </ul>
+    </div>
+    <div class="code-block">
+        <pre>&lt;div class="msgbox info"&gt;
+    &lt;span class="msgbox-title"&gt;信息提示&lt;/span&gt;
+    &lt;p&gt;以下内容演示了多种元素的混合使用：&lt;/p&gt;
+    &lt;ul&gt;
+        &lt;li&gt;提示框内包含 &lt;strong&gt;加粗文本&lt;/strong&gt;&lt;/li&gt;
+        &lt;li&gt;包含 &lt;span class="tag warning"&gt;标签&lt;/span&gt;&lt;/li&gt;
+        &lt;li&gt;可以嵌套列表
+            &lt;ul&gt;
+                &lt;li&gt;深度嵌套一&lt;/li&gt;
+                &lt;li&gt;深度嵌套二
+                    &lt;ul&gt;
+                        &lt;li&gt;深度嵌套三（最深层）&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;</pre>
     </div>
 
     <div class="highlight-box">
         <p><strong>测试总结</strong></p>
         <p>此页面涵盖了当前 Wiki 样式系统中所有核心组件的渲染测试。</p>
-        <p style="margin-top:0.4rem;">
-            <span class="tag success">通过</span>
-            <span class="tag info">样式正常</span>
-            <span class="tag vanilla">无异常</span>
-        </p>
+        <ul>
+            <li>提示框模板：<span class="tag success">通过</span></li>
+            <li>内联标记：<span class="tag success">通过</span></li>
+            <li>标题层级：<span class="tag success">通过</span></li>
+            <li>列表样式（含嵌套）：<span class="tag success">通过</span></li>
+            <li>代码块：<span class="tag success">通过</span></li>
+            <li>表格样式：<span class="tag success">通过</span></li>
+            <li>信息网格：<span class="tag success">通过</span></li>
+            <li>高亮框：<span class="tag success">通过</span></li>
+            <li>卡片样式：<span class="tag success">通过</span></li>
+            <li>混合内容（含深度嵌套）：<span class="tag success">通过</span></li>
+        </ul>
+    </div>
+    <div class="code-block">
+        <pre>&lt;div class="highlight-box"&gt;
+    &lt;p&gt;&lt;strong&gt;测试总结&lt;/strong&gt;&lt;/p&gt;
+    &lt;ul&gt;
+        &lt;li&gt;提示框模板：&lt;span class="tag success"&gt;通过&lt;/span&gt;&lt;/li&gt;
+        &lt;li&gt;内联标记：&lt;span class="tag success"&gt;通过&lt;/span&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;</pre>
+    </div>
+
+    <!-- ============================================================ -->
+    <!-- 十一、HTML 实时渲染测试 -->
+    <!-- ============================================================ -->
+    <h2>HTML 实时渲染测试</h2>
+    <p style="color:var(--text-muted);font-size:0.9rem;">在下方输入框中输入 <code>&lt;div&gt;</code> 包裹的 HTML 文本，点击渲染按钮预览效果。</p>
+
+    <div style="margin:1rem 0;">
+        <textarea id="htmlInput" rows="6" style="width:100%;padding:0.8rem;border-radius:var(--radius);border:1px solid var(--border-color);background:rgba(255,255,255,0.05);color:var(--text-primary);font-family:'Courier New',monospace;font-size:0.9rem;resize:vertical;outline:none;transition:border-color var(--smooth);" placeholder="在此输入 &lt;div&gt; 包裹的 HTML 文本...">&#x3C;div class=&#x22;msgbox info&#x22;&#x3E;
+    这是一条通过实时渲染生成的提示信息。
+&#x3C;/div&#x3E;</textarea>
+        <div style="display:flex;gap:0.8rem;margin-top:0.5rem;">
+            <button id="renderBtn" style="padding:0.5rem 1.5rem;border-radius:var(--radius);border:none;background:var(--accent);color:#fff;font-family:var(--font-pixel);font-size:0.9rem;cursor:pointer;transition:all var(--transition);">渲染</button>
+            <button id="clearRenderBtn" style="padding:0.5rem 1.5rem;border-radius:var(--radius);border:1px solid var(--border-color);background:transparent;color:var(--text-secondary);font-family:var(--font-pixel);font-size:0.9rem;cursor:pointer;transition:all var(--transition);">清空</button>
+            <span id="renderStatus" style="color:var(--text-muted);font-size:0.85rem;align-self:center;">就绪</span>
+        </div>
+    </div>
+
+    <div id="renderPreview" style="background:rgba(0,0,0,0.15);border-radius:var(--radius);border:1px dashed var(--border-color);padding:1rem;min-height:80px;display:flex;flex-direction:column;justify-content:center;align-items:center;color:var(--text-muted);font-size:0.9rem;">
+        <span>预览区域</span>
+        <span style="font-size:0.75rem;">渲染后的 HTML 将显示在此处</span>
+    </div>
+
+    <div class="code-block" style="margin-top:1rem;">
+        <pre style="font-size:0.8rem;">&lt;div class="msgbox info"&gt;
+    这是一条通过实时渲染生成的提示信息。
+&lt;/div&gt;</pre>
     </div>
 
     <!-- ============================================================ -->
@@ -232,6 +449,153 @@
     <!-- ============================================================ -->
     <div class="footnote">
         <p>方块狂想曲 · 实验性功能 · 乱写文档</p>
-        <p style="margin-top:0.3rem;font-size:0.8rem;">此页面仅用于测试 CSS 样式与渲染效果，内容无实际意义。</p>
+        <p style="margin-top:0.3rem;font-size:0.8rem;">此页面用于测试 CSS 样式与渲染效果。在输入框中输入 <code>&lt;div&gt;</code> 包裹的 HTML 即可预览渲染效果。</p>
     </div>
 </div>
+
+<style>
+    .code-block {
+        background: rgba(0, 0, 0, 0.3);
+        border-radius: var(--radius);
+        padding: 0.6rem 1rem;
+        margin: 0.4rem 0 1.2rem 0;
+        border: 1px solid var(--border-color);
+        overflow-x: auto;
+        font-size: 0.8rem;
+    }
+
+    .code-block pre {
+        margin: 0;
+        font-family: 'Courier New', monospace;
+        color: var(--text-secondary);
+        white-space: pre-wrap;
+        word-break: break-all;
+        font-size: 0.8rem;
+        line-height: 1.6;
+    }
+
+    .code-block pre .tag {
+        color: #4a9eff;
+    }
+    .code-block pre .attr {
+        color: #ffb347;
+    }
+    .code-block pre .string {
+        color: #4CAF50;
+    }
+    .code-block pre .text {
+        color: var(--text-secondary);
+    }
+
+    #htmlInput:focus {
+        border-color: var(--accent);
+        box-shadow: 0 0 20px var(--accent-glow);
+    }
+
+    #renderPreview .msgbox,
+    #renderPreview .highlight-box,
+    #renderPreview .card {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    #renderPreview .card-grid {
+        width: 100%;
+    }
+</style>
+
+<script>
+    (function initRenderTest() {
+        var htmlInput = document.getElementById('htmlInput');
+        var renderBtn = document.getElementById('renderBtn');
+        var clearBtn = document.getElementById('clearRenderBtn');
+        var renderPreview = document.getElementById('renderPreview');
+        var renderStatus = document.getElementById('renderStatus');
+
+        function renderHTML() {
+            var input = htmlInput.value.trim();
+            if (!input) {
+                renderStatus.textContent = '请输入内容';
+                renderStatus.style.color = '#ffb347';
+                return;
+            }
+
+            // 检查是否包含危险的 DOCTYPE 或 html 标签
+            var dangerousPatterns = [
+                /<!DOCTYPE\s+html/i,
+                /<html\s*>/i,
+                /<\/html\s*>/i,
+                /<body\s*>/i,
+                /<\/body\s*>/i,
+                /<head\s*>/i,
+                /<\/head\s*>/i,
+                /<script\s*>/i,
+                /<\/script\s*>/i,
+                /<iframe\s*>/i,
+                /<object\s*>/i,
+                /<embed\s*>/i,
+                /<link\s*>/i,
+                /<meta\s*>/i
+            ];
+
+            for (var i = 0; i < dangerousPatterns.length; i++) {
+                if (dangerousPatterns[i].test(input)) {
+                    renderStatus.textContent = '拒绝渲染：包含禁止的标签（' + dangerousPatterns[i].source + '）';
+                    renderStatus.style.color = '#ff6b6b';
+                    renderPreview.innerHTML = '<div class="msgbox important"><span class="msgbox-title">渲染被拒绝</span>输入内容包含禁止的标签（如 DOCTYPE、html、head、body、script、iframe 等），请仅使用 <code>&lt;div&gt;</code> 包裹的内容。</div>';
+                    return;
+                }
+            }
+
+            // 检查是否是纯文本（没有标签）
+            if (!/<[^>]+>/.test(input)) {
+                renderStatus.textContent = '未检测到 HTML 标签，将作为纯文本显示';
+                renderStatus.style.color = '#ffb347';
+            } else {
+                renderStatus.textContent = '渲染成功';
+                renderStatus.style.color = '#4CAF50';
+            }
+
+            // 尝试渲染
+            try {
+                // 创建一个临时容器来检测是否有闭合问题
+                var testDiv = document.createElement('div');
+                testDiv.innerHTML = input;
+                // 如果 innerHTML 为空但输入不为空，说明有解析问题
+                if (input.length > 0 && testDiv.innerHTML.length === 0) {
+                    throw new Error('HTML 解析失败，请检查标签是否正确闭合');
+                }
+                renderPreview.innerHTML = input;
+            } catch (e) {
+                renderStatus.textContent = '渲染失败：' + e.message;
+                renderStatus.style.color = '#ff6b6b';
+                renderPreview.innerHTML = '<div class="msgbox important"><span class="msgbox-title">渲染失败</span>输入的 HTML 格式有误：' + e.message + '</div>';
+            }
+        }
+
+        function clearRender() {
+            htmlInput.value = '';
+            renderPreview.innerHTML = '<div style="color:var(--text-muted);font-size:0.9rem;text-align:center;padding:1rem 0;">预览区域<br><span style="font-size:0.75rem;">渲染后的 HTML 将显示在此处</span></div>';
+            renderStatus.textContent = '已清空';
+            renderStatus.style.color = 'var(--text-muted)';
+        }
+
+        renderBtn.addEventListener('click', renderHTML);
+        clearBtn.addEventListener('click', clearRender);
+
+        // 支持 Ctrl+Enter 快捷键
+        htmlInput.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' && (e.ctrlKey || e.metaKey)) {
+                e.preventDefault();
+                renderHTML();
+            }
+        });
+
+        // 初始渲染示例
+        setTimeout(function() {
+            renderHTML();
+        }, 100);
+
+        console.log('乱写文档 · HTML 实时渲染测试已加载');
+    })();
+</script>
