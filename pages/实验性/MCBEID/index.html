@@ -1,0 +1,493 @@
+<div class="doc-content">
+    <h1>MCBEID 表 · 本地化</h1>
+    <p style="color:var(--text-secondary);">方块狂想曲 · 实验性功能 · Minecraft 基岩版 ID 本地查询</p>
+    <p style="color:var(--text-muted);font-size:0.9rem;">数据来源：<a href="https://idlist.projectxero.top/" target="_blank">MCBEID表</a> · 对应游戏版本：测试版（1.26.50.22）</p>
+
+    <!-- ===== 文件列表 ===== -->
+    <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin:1rem 0;padding:0.8rem 1rem;background:rgba(255,255,255,0.02);border-radius:var(--radius);border:1px solid var(--border-color);">
+        <span style="color:var(--text-muted);font-size:0.85rem;margin-right:0.5rem;">数据文件：</span>
+        <span id="fileCount" style="color:var(--text-primary);font-size:0.85rem;">加载中...</span>
+    </div>
+
+    <!-- ===== 分类选择 ===== -->
+    <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin:1rem 0;" id="categoryTabs">
+        <!-- 由 JavaScript 动态生成 -->
+    </div>
+
+    <!-- ===== 搜索框 ===== -->
+    <div style="display:flex;gap:0.6rem;margin:1rem 0;">
+        <input type="text" id="searchInput" placeholder="搜索 ID 或名称..." style="flex:1;padding:0.5rem 0.8rem;border-radius:var(--radius);border:1px solid var(--border-color);background:rgba(255,255,255,0.05);color:var(--text-primary);font-family:var(--font-pixel);font-size:0.9rem;outline:none;transition:border-color var(--smooth);">
+        <button id="searchBtn" style="padding:0.5rem 1.5rem;border-radius:var(--radius);border:none;background:var(--accent);color:#fff;font-family:var(--font-pixel);font-size:0.9rem;cursor:pointer;transition:all var(--transition);">搜索</button>
+        <button id="clearBtn" style="padding:0.5rem 1rem;border-radius:var(--radius);border:1px solid var(--border-color);background:transparent;color:var(--text-secondary);font-family:var(--font-pixel);font-size:0.9rem;cursor:pointer;transition:all var(--transition);">清空</button>
+    </div>
+
+    <!-- ===== 统计信息 ===== -->
+    <div id="statsBar" style="display:flex;flex-wrap:wrap;gap:0.8rem;margin:0.5rem 0 1rem 0;font-size:clamp(0.8rem, 0.9vw, 0.9rem);color:var(--text-muted);">
+        <!-- 由 JavaScript 动态生成 -->
+    </div>
+
+    <!-- ===== 数据表格 ===== -->
+    <div id="dataContainer" style="background:rgba(0,0,0,0.2);border-radius:var(--radius);border:1px solid var(--border-color);overflow:hidden;">
+        <div id="loadingStatus" style="text-align:center;padding:3rem 0;color:var(--text-muted);">
+            <img src="/icon/Structure_Block_3.png" alt="加载中" style="width:48px;height:48px;image-rendering:pixelated;animation:breathe 1.2s ease-in-out infinite;display:block;margin:0 auto;">
+            <p style="margin-top:0.8rem;">正在加载数据文件...</p>
+        </div>
+        <div id="tableWrapper" style="display:none;overflow-x:auto;padding:0.5rem;">
+            <table id="dataTable" style="width:100%;border-collapse:collapse;font-size:clamp(0.8rem, 1vw, 0.95rem);">
+                <thead>
+                    <tr>
+                        <th style="background:var(--bg-secondary);color:var(--text-primary);padding:0.5rem 0.8rem;text-align:left;border-bottom:2px solid var(--border-color);position:sticky;top:0;z-index:2;">ID</th>
+                        <th style="background:var(--bg-secondary);color:var(--text-primary);padding:0.5rem 0.8rem;text-align:left;border-bottom:2px solid var(--border-color);position:sticky;top:0;z-index:2;">名称</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    <!-- 由 JavaScript 动态生成 -->
+                </tbody>
+            </table>
+        </div>
+        <div id="emptyResult" style="display:none;text-align:center;padding:2rem 0;color:var(--text-muted);">
+            <p>未找到匹配的条目</p>
+        </div>
+    </div>
+
+    <div class="footnote">
+        <p>方块狂想曲 · 实验性功能 · MCBEID 表本地化</p>
+        <p style="margin-top:0.3rem;font-size:0.8rem;color:var(--text-muted);">数据文件位于 <code>/pages/实验性/MCBEID/</code> 目录下</p>
+    </div>
+</div>
+
+<style>
+    #searchInput:focus {
+        border-color: var(--accent);
+        box-shadow: 0 0 20px var(--accent-glow);
+    }
+
+    .category-tab {
+        padding: 0.3rem 0.8rem;
+        border-radius: 20px;
+        border: 1px solid var(--border-color);
+        background: transparent;
+        color: var(--text-secondary);
+        font-family: var(--font-pixel);
+        font-size: clamp(0.7rem, 0.8vw, 0.8rem);
+        cursor: pointer;
+        transition: all var(--transition);
+    }
+
+    .category-tab:hover {
+        border-color: var(--accent);
+        color: var(--text-primary);
+    }
+
+    .category-tab.active {
+        background: var(--accent);
+        border-color: var(--accent);
+        color: #fff;
+    }
+
+    #dataTable tbody tr:nth-child(even) {
+        background: rgba(255,255,255,0.02);
+    }
+
+    #dataTable tbody tr:hover {
+        background: rgba(76,175,80,0.08);
+    }
+
+    #dataTable td {
+        padding: 0.35rem 0.8rem;
+        border-bottom: 1px solid rgba(255,255,255,0.04);
+        color: var(--text-secondary);
+        vertical-align: top;
+        word-break: break-all;
+    }
+
+    #dataTable td:first-child {
+        color: var(--text-primary);
+        font-family: 'Courier New', monospace;
+        font-size: 0.85em;
+        white-space: nowrap;
+        max-width: 300px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .stats-item {
+        background: rgba(255,255,255,0.03);
+        padding: 0.2rem 0.8rem;
+        border-radius: 12px;
+        border: 1px solid var(--border-color);
+    }
+
+    .stats-item strong {
+        color: var(--text-primary);
+    }
+
+    @media (max-width: 480px) {
+        #dataTable td:first-child {
+            max-width: 120px;
+            font-size: 0.75em;
+        }
+        #dataTable td {
+            font-size: 0.8rem;
+            padding: 0.25rem 0.5rem;
+        }
+        .category-tab {
+            font-size: 0.65rem;
+            padding: 0.2rem 0.5rem;
+        }
+    }
+</style>
+
+<script>
+    (function initMCBEID() {
+        // ============================================================
+        // 配置
+        // ============================================================
+        var DATA_DIR = '/pages/实验性/MCBEID/';
+        var EXCLUDE_FILES = ['_MCBEID_.txt', 'index.html']; // 排除的文件
+
+        // 文件分类显示名映射
+        var CATEGORY_NAMES = {
+            'block': '方块',
+            'item': '物品',
+            'entity': '实体',
+            'effect': '状态效果',
+            'enchant': '魔咒',
+            'biome': '生物群系',
+            'sound': '声音',
+            'animation': '动画',
+            'animationController': '动画控制器',
+            'entityEvent': '实体事件',
+            'entityFamily': '实体族',
+            'entitySlot': '实体槽位',
+            'damageCause': '伤害类型',
+            'cameraPreset': '摄像机预设',
+            'gamerule': '游戏规则',
+            'hudElement': 'HUD元素',
+            'inputPermission': '操作权限',
+            'location': '结构',
+            'lootTable': '战利品表',
+            'recipe': '配方',
+            'feature': '地物',
+            'featureRule': '地物规则',
+            'fog': '迷雾',
+            'stdTrans': '标准化译名'
+        };
+
+        // ============================================================
+        // 状态
+        // ============================================================
+        var allData = {};
+        var currentCategory = 'block';
+        var currentData = [];
+        var searchQuery = '';
+
+        // ============================================================
+        // DOM 引用
+        // ============================================================
+        var categoryTabs = document.getElementById('categoryTabs');
+        var searchInput = document.getElementById('searchInput');
+        var searchBtn = document.getElementById('searchBtn');
+        var clearBtn = document.getElementById('clearBtn');
+        var statsBar = document.getElementById('statsBar');
+        var loadingStatus = document.getElementById('loadingStatus');
+        var tableWrapper = document.getElementById('tableWrapper');
+        var tableBody = document.getElementById('tableBody');
+        var emptyResult = document.getElementById('emptyResult');
+        var fileCountEl = document.getElementById('fileCount');
+
+        // ============================================================
+        // 解析 TXT 文件
+        // ============================================================
+        function parseTXT(text) {
+            var lines = text.split('\n');
+            var entries = [];
+            var currentId = '';
+            var currentName = '';
+
+            for (var i = 0; i < lines.length; i++) {
+                var line = lines[i].trim();
+                if (!line) continue;
+
+                // 跳过以 【 开头的标题行和 * 开头的注释行
+                if (line.startsWith('【') || line.startsWith('*')) continue;
+
+                // 尝试解析 ID: 名称 格式
+                var colonIndex = line.indexOf(': ');
+                if (colonIndex > 0) {
+                    var id = line.substring(0, colonIndex).trim();
+                    var name = line.substring(colonIndex + 2).trim();
+                    if (id && name) {
+                        entries.push({ id: id, name: name });
+                    }
+                } else {
+                    // 尝试解析 ID:名称 格式（无空格）
+                    var colonIndex2 = line.indexOf(':');
+                    if (colonIndex2 > 0 && colonIndex2 < line.length - 1) {
+                        var id2 = line.substring(0, colonIndex2).trim();
+                        var name2 = line.substring(colonIndex2 + 1).trim();
+                        if (id2 && name2) {
+                            entries.push({ id: id2, name: name2 });
+                        }
+                    }
+                }
+            }
+
+            return entries;
+        }
+
+        // ============================================================
+        // 加载所有 TXT 文件
+        // ============================================================
+        function loadAllFiles() {
+            // 先获取文件列表（通过 fetch _MCBEID_.txt 获取目录）
+            fetch(DATA_DIR + '_MCBEID_.txt')
+                .then(function(response) {
+                    if (!response.ok) throw new Error('_MCBEID_.txt 不存在');
+                    return response.text();
+                })
+                .then(function(text) {
+                    // 解析目录文件获取文件列表
+                    var fileNames = extractFileList(text);
+                    if (fileNames.length === 0) {
+                        // 如果解析失败，使用默认列表
+                        fileNames = getDefaultFileList();
+                    }
+                    fileCountEl.textContent = '共 ' + fileNames.length + ' 个数据文件';
+                    return loadFilesSequentially(fileNames);
+                })
+                .catch(function() {
+                    // 如果 _MCBEID_.txt 不存在，使用默认列表
+                    var fileNames = getDefaultFileList();
+                    fileCountEl.textContent = '共 ' + fileNames.length + ' 个数据文件 (默认列表)';
+                    return loadFilesSequentially(fileNames);
+                });
+        }
+
+        function extractFileList(text) {
+            var lines = text.split('\n');
+            var files = [];
+            var inList = false;
+
+            for (var i = 0; i < lines.length; i++) {
+                var line = lines[i].trim();
+                if (line.startsWith('【目录】')) {
+                    inList = true;
+                    continue;
+                }
+                if (inList && line) {
+                    var match = line.match(/^([a-zA-Z]+)\.txt/);
+                    if (match) {
+                        files.push(match[1] + '.txt');
+                    }
+                }
+            }
+            return files;
+        }
+
+        function getDefaultFileList() {
+            return [
+                'block.txt', 'item.txt', 'entity.txt', 'effect.txt', 'enchant.txt',
+                'biome.txt', 'sound.txt', 'animation.txt', 'animationController.txt',
+                'entityEvent.txt', 'entityFamily.txt', 'entitySlot.txt', 'damageCause.txt',
+                'cameraPreset.txt', 'gamerule.txt', 'hudElement.txt', 'inputPermission.txt',
+                'location.txt', 'lootTable.txt', 'recipe.txt', 'feature.txt', 'featureRule.txt',
+                'fog.txt', 'stdTrans.txt'
+            ];
+        }
+
+        function loadFilesSequentially(fileNames) {
+            var total = fileNames.length;
+            var loaded = 0;
+            var allEntries = {};
+
+            function loadNext(index) {
+                if (index >= total) {
+                    // 所有文件加载完成
+                    onAllFilesLoaded(allEntries);
+                    return;
+                }
+
+                var fileName = fileNames[index];
+                var baseName = fileName.replace('.txt', '');
+                var url = DATA_DIR + fileName;
+
+                fetch(url)
+                    .then(function(response) {
+                        if (!response.ok) throw new Error('文件不存在');
+                        return response.text();
+                    })
+                    .then(function(text) {
+                        var entries = parseTXT(text);
+                        if (entries.length > 0) {
+                            allEntries[baseName] = entries;
+                        }
+                        loaded++;
+                        updateLoadingProgress(loaded, total);
+                        loadNext(index + 1);
+                    })
+                    .catch(function() {
+                        // 文件加载失败，继续下一个
+                        loaded++;
+                        updateLoadingProgress(loaded, total);
+                        loadNext(index + 1);
+                    });
+            }
+
+            loadNext(0);
+        }
+
+        function updateLoadingProgress(loaded, total) {
+            var progress = Math.round((loaded / total) * 100);
+            var statusText = document.querySelector('#loadingStatus p');
+            if (statusText) {
+                statusText.textContent = '加载中 ' + loaded + '/' + total + ' (' + progress + '%)';
+            }
+        }
+
+        function onAllFilesLoaded(allEntries) {
+            allData = allEntries;
+            loadingStatus.style.display = 'none';
+            tableWrapper.style.display = 'block';
+
+            // 生成分类标签
+            renderCategoryTabs();
+
+            // 默认显示第一个有数据的分类
+            var categories = Object.keys(allData);
+            if (categories.length > 0) {
+                currentCategory = categories[0];
+                // 更新标签高亮
+                document.querySelectorAll('.category-tab').forEach(function(el) {
+                    el.classList.toggle('active', el.dataset.category === currentCategory);
+                });
+                renderCategory(currentCategory);
+            } else {
+                emptyResult.style.display = 'block';
+                emptyResult.querySelector('p').textContent = '未找到任何数据文件';
+            }
+        }
+
+        // ============================================================
+        // 渲染分类标签
+        // ============================================================
+        function renderCategoryTabs() {
+            var categories = Object.keys(allData);
+            if (categories.length === 0) {
+                categoryTabs.innerHTML = '<span style="color:var(--text-muted);font-size:0.85rem;">暂无数据</span>';
+                return;
+            }
+
+            var html = '';
+            categories.forEach(function(cat) {
+                var displayName = CATEGORY_NAMES[cat] || cat;
+                var count = allData[cat] ? allData[cat].length : 0;
+                html += '<button class="category-tab" data-category="' + cat + '">' +
+                    displayName + ' <span style="font-size:0.7rem;opacity:0.6;">(' + count + ')</span>' +
+                    '</button>';
+            });
+            categoryTabs.innerHTML = html;
+
+            // 绑定点击事件
+            document.querySelectorAll('.category-tab').forEach(function(el) {
+                el.addEventListener('click', function() {
+                    document.querySelectorAll('.category-tab').forEach(function(t) {
+                        t.classList.remove('active');
+                    });
+                    this.classList.add('active');
+                    currentCategory = this.dataset.category;
+                    searchQuery = '';
+                    searchInput.value = '';
+                    renderCategory(currentCategory);
+                });
+            });
+
+            // 激活第一个
+            var firstTab = document.querySelector('.category-tab');
+            if (firstTab) firstTab.classList.add('active');
+        }
+
+        // ============================================================
+        // 渲染数据
+        // ============================================================
+        function renderCategory(category, query) {
+            var data = allData[category] || [];
+            currentData = data;
+
+            // 过滤
+            var filtered = data;
+            if (query) {
+                var q = query.toLowerCase().trim();
+                filtered = data.filter(function(entry) {
+                    return entry.id.toLowerCase().includes(q) ||
+                        entry.name.toLowerCase().includes(q);
+                });
+            }
+
+            // 更新统计
+            var statsHtml = '';
+            statsHtml += '<span class="stats-item">总数：<strong>' + data.length + '</strong></span>';
+            if (query) {
+                statsHtml += '<span class="stats-item">匹配：<strong>' + filtered.length + '</strong></span>';
+            }
+            var categoryName = CATEGORY_NAMES[category] || category;
+            statsHtml += '<span class="stats-item">当前：<strong>' + categoryName + '</strong></span>';
+            statsBar.innerHTML = statsHtml;
+
+            // 渲染表格
+            if (filtered.length === 0) {
+                tableBody.innerHTML = '';
+                emptyResult.style.display = 'block';
+                return;
+            }
+            emptyResult.style.display = 'none';
+
+            var html = '';
+            filtered.forEach(function(entry) {
+                html += '<tr>' +
+                    '<td>' + escapeHtml(entry.id) + '</td>' +
+                    '<td>' + escapeHtml(entry.name) + '</td>' +
+                    '</tr>';
+            });
+            tableBody.innerHTML = html;
+        }
+
+        function escapeHtml(text) {
+            var div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+
+        // ============================================================
+        // 搜索功能
+        // ============================================================
+        function performSearch() {
+            var query = searchInput.value.trim();
+            searchQuery = query;
+            renderCategory(currentCategory, query);
+        }
+
+        function clearSearch() {
+            searchInput.value = '';
+            searchQuery = '';
+            renderCategory(currentCategory, '');
+        }
+
+        // ============================================================
+        // 初始化事件
+        // ============================================================
+        searchBtn.addEventListener('click', performSearch);
+        searchInput.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                performSearch();
+            }
+        });
+        clearBtn.addEventListener('click', clearSearch);
+
+        // ============================================================
+        // 启动
+        // ============================================================
+        loadAllFiles();
+    })();
+</script>
