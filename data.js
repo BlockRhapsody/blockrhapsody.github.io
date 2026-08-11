@@ -15,7 +15,7 @@ var sidebarMenu = [
     {
         title: '人物志',
         icon: 'fa-user',
-        items: ['弘桀孤影行', '出击的阴笑徐铮']
+        items: ['弘桀孤影行', '出击的阴笑徐铮', '贡献目录']
     },
     {
         title: '技术文档',
@@ -77,7 +77,7 @@ function getMenuItems(category) {
 var cardData = [
     { title: '制度汇编', icon: 'fa-book', items: ['服务器纲领', '玩家权限体制', '玩家行政权限体制', '管理员行政权限体制', '监督委员会制度', '创造者协会章程', '体制关系与适用规则'] },
     { title: '服主令', icon: 'fa-gavel', items: ['2026第1号', '2026第2号', '2026第3号', '2026第4号', '2026第5号', '2026第6号', '2026第7号'] },
-    { title: '人物志', icon: 'fa-user', items: ['弘桀孤影行', '出击的阴笑徐铮'] },
+    { title: '人物志', icon: 'fa-user', items: ['弘桀孤影行', '出击的阴笑徐铮', '贡献目录'] },
     { title: '技术文档', icon: 'fa-code', items: ['MCC目录', '第一章', '第二章', '第三章', '第四章', '第五章', '第六章', '第七章', '第八章', '第九章', '第十章', '第十一章', '第十二章', '第十三章', '第十四章', '盔甲架指南', '认识基岩版'] },
     { title: '玩家文档', icon: 'fa-users', items: ['玩家游玩建议', '管理员学习手册'] },
     { title: '计划', icon: 'fa-calendar', items: ['六月建设计划', '普朗克计划', '净标计划'] },
@@ -105,6 +105,7 @@ var pagePathMap = {
     '2026第7号': '/pages/服主令/2026-7号.html',
     '弘桀孤影行': '/pages/人物志/弘桀孤影行.html',
     '出击的阴笑徐铮': '/pages/人物志/出击的阴笑徐铮.html',
+    '贡献目录': '/pages/人物志/贡献目录.html',
     'MCC目录': '/pages/技术文档/MCC/目录.html',
     '第一章': '/pages/技术文档/MCC/第一章.html',
     '第二章': '/pages/技术文档/MCC/第二章.html',
