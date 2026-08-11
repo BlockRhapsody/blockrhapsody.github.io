@@ -7,13 +7,12 @@
         <!-- ===== 状态卡片 ===== -->
         <div style="background:rgba(255,255,255,0.03);border-radius:var(--radius);padding:1.5rem;border:1px solid var(--border-color);">
             <h3 style="margin-bottom:0.8rem;">当前缓存状态</h3>
-            <!-- 本地 IP 显示 -->
             <div style="display:flex;align-items:center;gap:0.6rem;padding:0.3rem 0.6rem;background:rgba(0,0,0,0.2);border-radius:6px;margin-bottom:0.8rem;font-size:clamp(0.8rem, 0.9vw, 0.9rem);">
                 <span style="color:var(--text-muted);">本地 IP：</span>
                 <span id="localIpDisplay" style="color:var(--text-primary);font-family:'Courier New',monospace;">检测中...</span>
                 <span style="color:var(--text-muted);font-size:0.7rem;margin-left:auto;">（仅限本地局域网）</span>
             </div>
-            <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.5rem 1.5rem;font-size:clamp(0.85rem, 1vw, 1rem);">
+            <div style="background:rgba(255,255,255,0.03);border-radius:var(--radius);padding:0.6rem 1.5rem 1.2rem 1.5rem;border:1px solid var(--border-color);">
                 <span style="color:var(--text-secondary);">已缓存页面数：</span>
                 <span id="cacheCount" style="color:var(--text-primary);">0</span>
                 <span style="color:var(--text-secondary);">本地存储项：</span>
@@ -26,16 +25,10 @@
         </div>
 
         <!-- ===== 按钮区 ===== -->
-        <div style="display:flex;flex-wrap:wrap;gap:1rem;">
-            <button id="softRefreshBtn" style="flex:1;min-width:180px;padding:0.8rem 1.5rem;border-radius:var(--radius);border:2px solid #4CAF50;background:rgba(76,175,80,0.12);color:#4CAF50;font-family:var(--font-pixel);font-size:0.95rem;cursor:pointer;transition:all var(--transition);">
-                软刷新
-            </button>
-            <button id="hardRefreshBtn" style="flex:1;min-width:180px;padding:0.8rem 1.5rem;border-radius:var(--radius);border:2px solid #ffb347;background:rgba(255,179,71,0.12);color:#ffb347;font-family:var(--font-pixel);font-size:0.95rem;cursor:pointer;transition:all var(--transition);">
-                强刷新
-            </button>
-            <button id="nuclearRefreshBtn" style="flex:1;min-width:180px;padding:0.8rem 1.5rem;border-radius:var(--radius);border:2px solid #ff6b6b;background:rgba(255,107,107,0.10);color:#ff6b6b;font-family:var(--font-pixel);font-size:0.95rem;cursor:pointer;transition:all var(--transition);">
-                核弹级刷新
-            </button>
+        <div class="btn-group">
+            <button id="softRefreshBtn" class="btn btn-success">软刷新</button>
+            <button id="hardRefreshBtn" class="btn btn-warning">强刷新</button>
+            <button id="nuclearRefreshBtn" class="btn btn-danger">核弹级刷新</button>
         </div>
 
         <!-- ===== 执行日志 ===== -->
