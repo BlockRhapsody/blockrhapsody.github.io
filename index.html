@@ -23,7 +23,7 @@
                     <span></span>
                     <span></span>
                 </button>
-                <!-- 手机端隐藏品牌文字，桌面端显示 -->
+                <!-- 桌面端显示品牌，手机端隐藏 -->
                 <div class="nav-brand" id="navBrand">
                     <a href="/">
                         <img src="/icon/Structure_Block_1.png" alt="方块狂想曲" />
@@ -51,10 +51,10 @@
     <!-- ===== 移动端遮罩层 ===== -->
     <div class="mobile-overlay" id="mobileOverlay"></div>
 
-    <!-- ===== 移动端侧边栏（由 script.js 动态渲染菜单） ===== -->
+    <!-- ===== 移动端侧边栏 ===== -->
     <div class="mobile-sidebar" id="mobileSidebar">
-        <!-- 侧边栏顶部：品牌 Logo + 文字 -->
-        <div class="sidebar-header">
+        <!-- 侧边栏顶部：品牌 Logo + 文字，点击返回首页 -->
+        <div class="sidebar-header" id="sidebarHeader">
             <img src="/icon/Structure_Block_1.png" alt="方块狂想曲" />
             <span>方块狂想曲</span>
         </div>
@@ -182,7 +182,6 @@
                 var itemsHtml = '';
                 for (var j = 0; j < cat.items.length; j++) {
                     var key = cat.items[j];
-                    // 新增 data-selected 属性用于跟踪选中状态（手机端二次点击）
                     itemsHtml += '<li data-page="' + key + '" data-selected="false">' +
                         '<i class="fas fa-file-alt"></i> ' + getDisplayName(key) +
                         '</li>';
@@ -206,25 +205,20 @@
                 var isMobile = window.innerWidth < 769;
 
                 if (isMobile) {
-                    // 手机端：二次点击逻辑
                     var isSelected = target.dataset.selected === 'true';
 
-                    // 取消其他所有卡片的高亮
                     document.querySelectorAll('.card-list li').forEach(function(li) {
                         li.dataset.selected = 'false';
                         li.classList.remove('selected');
                     });
 
                     if (isSelected) {
-                        // 第二次点击：跳转
                         loadPage(target.dataset.page);
                     } else {
-                        // 第一次点击：高亮
                         target.dataset.selected = 'true';
                         target.classList.add('selected');
                     }
                 } else {
-                    // 桌面端：直接跳转
                     loadPage(target.dataset.page);
                 }
             });
@@ -288,7 +282,6 @@
             pageContent.style.display = 'block';
 
             if (!path) {
-                // 友好的 404 错误页面
                 var errorHtml = '<div class="doc-content">';
                 errorHtml += '<h1 style="border-left-color:#ff6b6b;">页面不存在</h1>';
                 errorHtml += '<p style="color:var(--text-secondary);font-size:1.1rem;">抱歉，无法加载您请求的页面。</p>';
@@ -524,37 +517,31 @@
             var token = localStorage.getItem('token');
             var username = localStorage.getItem('username');
 
-            // 顶部导航栏
             var loginBtn = document.getElementById('loginBtn');
             var logoutBtn = document.getElementById('logoutBtn');
             var userDisplay = document.getElementById('userDisplay');
             var usernameDisplay = document.getElementById('usernameDisplay');
 
-            // 侧边栏
             var sidebarUser = document.getElementById('sidebarUser');
             var sidebarUsername = document.getElementById('sidebarUsername');
             var sidebarLoginBtn = document.getElementById('sidebarLoginBtn');
             var sidebarLogoutBtn = document.getElementById('sidebarLogoutBtn');
 
             if (token && username) {
-                // 顶部栏
-                loginBtn.style.display = 'none';
-                logoutBtn.style.display = 'inline-flex';
-                userDisplay.style.display = 'inline-block';
-                usernameDisplay.textContent = username;
+                if (loginBtn) loginBtn.style.display = 'none';
+                if (logoutBtn) logoutBtn.style.display = 'inline-flex';
+                if (userDisplay) userDisplay.style.display = 'inline-block';
+                if (usernameDisplay) usernameDisplay.textContent = username;
 
-                // 侧边栏
                 if (sidebarUser) sidebarUser.style.display = 'flex';
                 if (sidebarUsername) sidebarUsername.textContent = username;
                 if (sidebarLoginBtn) sidebarLoginBtn.style.display = 'none';
                 if (sidebarLogoutBtn) sidebarLogoutBtn.style.display = 'inline';
             } else {
-                // 顶部栏
-                loginBtn.style.display = 'inline-flex';
-                logoutBtn.style.display = 'none';
-                userDisplay.style.display = 'none';
+                if (loginBtn) loginBtn.style.display = 'inline-flex';
+                if (logoutBtn) logoutBtn.style.display = 'none';
+                if (userDisplay) userDisplay.style.display = 'none';
 
-                // 侧边栏
                 if (sidebarUser) sidebarUser.style.display = 'none';
                 if (sidebarLoginBtn) sidebarLoginBtn.style.display = 'inline';
                 if (sidebarLogoutBtn) sidebarLogoutBtn.style.display = 'none';
@@ -614,6 +601,22 @@
             initCards();
             initRoomStatus();
             updateAuthUI();
+
+            // 侧边栏品牌点击返回首页
+            var sidebarHeader = document.getElementById('sidebarHeader');
+            if (sidebarHeader) {
+                sidebarHeader.addEventListener('click', function() {
+                    if (typeof window.showHome === 'function') {
+                        window.showHome();
+                    } else {
+                        window.location.href = '/';
+                    }
+                    // 关闭移动端侧边栏
+                    if (typeof closeSidebarIfMobile === 'function') {
+                        closeSidebarIfMobile();
+                    }
+                });
+            }
 
             document.getElementById('loginUsername').addEventListener('keydown', function(e) {
                 if (e.key === 'Enter') login();
