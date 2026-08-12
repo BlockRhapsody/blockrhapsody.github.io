@@ -1634,3 +1634,95 @@ a:hover {
         min-width: 100%;
     }
 }
+/* ============================================================
+   语录显示
+   ============================================================ */
+.quote-display {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.2rem 1rem;
+    color: var(--text-secondary);
+    font-size: clamp(0.75rem, 1vw, 0.95rem);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 400px;
+    transition: opacity 0.4s ease;
+    flex: 1;
+    justify-content: center;
+}
+
+.quote-display .quote-text {
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.quote-display .quote-author {
+    color: var(--text-muted);
+    font-size: 0.7em;
+    margin-left: 0.2rem;
+}
+
+.quote-display .quote-author::before {
+    content: '——';
+    margin-right: 0.2rem;
+}
+
+/* 语录淡入淡出动画 */
+.quote-display.quote-fade {
+    animation: quoteFade 0.8s ease forwards;
+}
+
+@keyframes quoteFade {
+    0% {
+        opacity: 0.3;
+        transform: translateY(6px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 桌面端：导航栏中间位置 */
+@media (min-width: 769px) {
+    .quote-display {
+        max-width: 420px;
+        flex: 1;
+        justify-content: center;
+        margin: 0 0.5rem;
+    }
+}
+
+/* 移动端：导航栏右侧，在汉堡菜单左边 */
+@media (max-width: 768px) {
+    .quote-display {
+        max-width: 160px;
+        font-size: clamp(0.6rem, 1.8vw, 0.75rem);
+        padding: 0.1rem 0.4rem;
+        flex: none;
+        justify-content: flex-end;
+        order: 1;
+    }
+    .quote-display .quote-author {
+        font-size: 0.65em;
+    }
+    /* 移动端隐藏登录相关元素已在 nav-actions 中用 hide-on-mobile 控制 */
+    .nav-actions {
+        gap: 0.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .quote-display {
+        max-width: 120px;
+        font-size: clamp(0.5rem, 2vw, 0.65rem);
+    }
+    .quote-display .quote-text {
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+}
