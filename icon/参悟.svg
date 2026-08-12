@@ -1,0 +1,181 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <!-- 背景渐变 - 宣纸质感 -->
+    <radialGradient id="bgGrad" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" style="stop-color:#f5f0e8;stop-opacity:1" />
+      <stop offset="60%" style="stop-color:#e8dfd0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#d4c8b0;stop-opacity:1" />
+    </radialGradient>
+
+    <!-- 金色墨韵渐变 -->
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#c9a84c;stop-opacity:1" />
+      <stop offset="30%" style="stop-color:#e8c84a;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#f5e08a;stop-opacity:1" />
+      <stop offset="70%" style="stop-color:#d4b040;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#b8922a;stop-opacity:1" />
+    </linearGradient>
+
+    <!-- 墨色渐变 -->
+    <linearGradient id="inkGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1410;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#3a3028;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a1410;stop-opacity:1" />
+    </linearGradient>
+
+    <!-- 金色光晕 -->
+    <radialGradient id="goldGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#f5e08a;stop-opacity:0.15" />
+      <stop offset="100%" style="stop-color:#f5e08a;stop-opacity:0" />
+    </radialGradient>
+
+    <!-- 印章红色 -->
+    <radialGradient id="sealRed" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#c41a1a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#8b0000;stop-opacity:1" />
+    </radialGradient>
+
+    <!-- 纹理噪点滤镜 -->
+    <filter id="paperTexture" x="0%" y="0%" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="5" result="noise" />
+      <feColorMatrix type="saturate" values="0" in="noise" result="grayNoise" />
+      <feBlend in="SourceGraphic" in2="grayNoise" mode="multiply" result="textured" />
+    </filter>
+
+    <!-- 墨迹晕染效果 -->
+    <filter id="inkBleed" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="3" result="noise" />
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="3" xChannelSelector="R" yChannelSelector="G" />
+    </filter>
+
+    <!-- 发光效果 -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <!-- 山峦阴影 -->
+    <linearGradient id="mountainGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#2a2218;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#2a2218;stop-opacity:0" />
+    </linearGradient>
+  </defs>
+
+  <!-- 背景 -->
+  <rect width="1920" height="1080" fill="url(#bgGrad)" />
+
+  <!-- 宣纸纹理叠加 -->
+  <rect width="1920" height="1080" fill="url(#bgGrad)" filter="url(#paperTexture)" opacity="0.4" />
+
+  <!-- 装饰边框 - 古风暗纹 -->
+  <rect x="60" y="40" width="1800" height="1000" rx="8" ry="8" fill="none" stroke="#c9a84c" stroke-width="1.5" opacity="0.4" />
+  <rect x="70" y="50" width="1780" height="980" rx="4" ry="4" fill="none" stroke="#c9a84c" stroke-width="0.5" opacity="0.25" />
+
+  <!-- 四角纹饰 -->
+  <!-- 左上角 -->
+  <path d="M80,100 L80,80 L100,80" fill="none" stroke="#c9a84c" stroke-width="2" opacity="0.5" />
+  <path d="M90,95 L90,85 L100,85" fill="none" stroke="#c9a84c" stroke-width="1" opacity="0.3" />
+  <!-- 右上角 -->
+  <path d="M1840,100 L1840,80 L1820,80" fill="none" stroke="#c9a84c" stroke-width="2" opacity="0.5" />
+  <path d="M1830,95 L1830,85 L1820,85" fill="none" stroke="#c9a84c" stroke-width="1" opacity="0.3" />
+  <!-- 左下角 -->
+  <path d="M80,980 L80,1000 L100,1000" fill="none" stroke="#c9a84c" stroke-width="2" opacity="0.5" />
+  <path d="M90,985 L90,995 L100,995" fill="none" stroke="#c9a84c" stroke-width="1" opacity="0.3" />
+  <!-- 右下角 -->
+  <path d="M1840,980 L1840,1000 L1820,1000" fill="none" stroke="#c9a84c" stroke-width="2" opacity="0.5" />
+  <path d="M1830,985 L1830,995 L1820,995" fill="none" stroke="#c9a84c" stroke-width="1" opacity="0.3" />
+
+  <!-- 背景山峦 - 写意 -->
+  <path d="M0,750 Q200,550 350,620 Q500,520 620,580 Q750,480 880,550 Q1000,460 1150,530 Q1280,500 1400,560 Q1550,490 1680,570 Q1800,520 1920,600 L1920,1080 L0,1080 Z" fill="#3a3028" opacity="0.06" />
+  <path d="M0,800 Q300,650 500,700 Q700,620 900,680 Q1100,600 1300,660 Q1500,610 1700,680 Q1850,640 1920,690 L1920,1080 L0,1080 Z" fill="#2a2218" opacity="0.08" />
+
+  <!-- 云雾效果 - 在金文字周围 -->
+  <ellipse cx="700" cy="450" rx="300" ry="120" fill="url(#goldGlow)" opacity="0.3" />
+  <ellipse cx="1220" cy="500" rx="280" ry="100" fill="url(#goldGlow)" opacity="0.2" />
+
+  <!-- 上部小字 - 禅意引言 -->
+  <text x="960" y="180" text-anchor="middle" font-family="KaiTi, STKaiti, serif" font-size="28" fill="#8a7a5a" opacity="0.6" letter-spacing="12">
+    一切有为法，如梦幻泡影
+  </text>
+
+  <!-- 主文字 "参悟" - 国风大气 -->
+  <!-- "参" 字 -->
+  <text x="620" y="620" text-anchor="middle" font-family="KaiTi, STKaiti, SimSun, serif" font-size="320" fill="url(#inkGrad)" filter="url(#inkBleed)" letter-spacing="20">
+    参
+  </text>
+
+  <!-- "悟" 字 -->
+  <text x="1340" y="620" text-anchor="middle" font-family="KaiTi, STKaiti, SimSun, serif" font-size="320" fill="url(#inkGrad)" filter="url(#inkBleed)" letter-spacing="20">
+    悟
+  </text>
+
+  <!-- 文字金色轮廓 - 增加层次感 -->
+  <text x="620" y="620" text-anchor="middle" font-family="KaiTi, STKaiti, SimSun, serif" font-size="320" fill="none" stroke="url(#goldGrad)" stroke-width="1.5" opacity="0.4" letter-spacing="20">
+    参
+  </text>
+  <text x="1340" y="620" text-anchor="middle" font-family="KaiTi, STKaiti, SimSun, serif" font-size="320" fill="none" stroke="url(#goldGrad)" stroke-width="1.5" opacity="0.4" letter-spacing="20">
+    悟
+  </text>
+
+  <!-- 文字下方 - 金色点缀短线 -->
+  <line x1="420" y1="750" x2="820" y2="750" stroke="url(#goldGrad)" stroke-width="1.5" opacity="0.4" />
+  <line x1="1100" y1="750" x2="1500" y2="750" stroke="url(#goldGrad)" stroke-width="1.5" opacity="0.4" />
+
+  <!-- 文字下方小字 - 英文/拼音 -->
+  <text x="620" y="800" text-anchor="middle" font-family="Georgia, serif" font-size="22" fill="#8a7a5a" opacity="0.4" letter-spacing="8">
+    C A N  ·  W U
+  </text>
+  <text x="1340" y="800" text-anchor="middle" font-family="Georgia, serif" font-size="22" fill="#8a7a5a" opacity="0.4" letter-spacing="8">
+    C A N  ·  W U
+  </text>
+
+  <!-- 底部小字 - 出处/禅语 -->
+  <text x="960" y="920" text-anchor="middle" font-family="KaiTi, STKaiti, serif" font-size="24" fill="#8a7a5a" opacity="0.4" letter-spacing="6">
+    静观自得 · 明心见性
+  </text>
+
+  <!-- 印章 - 红色朱文印 -->
+  <g transform="translate(1600, 840)">
+    <rect x="-40" y="-40" width="80" height="80" rx="4" ry="4" fill="url(#sealRed)" opacity="0.85" />
+    <rect x="-35" y="-35" width="70" height="70" rx="2" ry="2" fill="none" stroke="#f5f0e8" stroke-width="0.8" opacity="0.5" />
+    <!-- 印章内文字 - 篆书风格 -->
+    <text x="0" y="-2" text-anchor="middle" font-family="KaiTi, STKaiti, serif" font-size="22" fill="#f5f0e8" opacity="0.9" font-weight="bold">
+      静心
+    </text>
+    <text x="0" y="22" text-anchor="middle" font-family="KaiTi, STKaiti, serif" font-size="18" fill="#f5f0e8" opacity="0.7">
+      禅意
+    </text>
+  </g>
+
+  <!-- 左侧装饰 - 竖排小字 -->
+  <g transform="translate(140, 500)">
+    <text x="0" y="0" font-family="KaiTi, STKaiti, serif" font-size="16" fill="#8a7a5a" opacity="0.35" letter-spacing="6" writing-mode="tb">
+      道可道非常道
+    </text>
+  </g>
+
+  <!-- 右侧装饰 - 竖排小字 -->
+  <g transform="translate(1770, 500)">
+    <text x="0" y="0" font-family="KaiTi, STKaiti, serif" font-size="16" fill="#8a7a5a" opacity="0.35" letter-spacing="6" writing-mode="tb">
+      名可名非常名
+    </text>
+  </g>
+
+  <!-- 散落墨点 - 增加意境 -->
+  <circle cx="280" cy="350" r="4" fill="#3a3028" opacity="0.08" />
+  <circle cx="1680" cy="300" r="3" fill="#3a3028" opacity="0.06" />
+  <circle cx="350" cy="780" r="5" fill="#3a3028" opacity="0.05" />
+  <circle cx="1600" cy="200" r="3" fill="#3a3028" opacity="0.07" />
+  <circle cx="200" cy="600" r="2" fill="#3a3028" opacity="0.06" />
+  <circle cx="1750" cy="700" r="4" fill="#3a3028" opacity="0.05" />
+
+  <!-- 飞鸟点缀 - 极简写意 -->
+  <path d="M300,280 Q310,270 320,280 Q330,270 340,280" fill="none" stroke="#8a7a5a" stroke-width="1.5" opacity="0.2" />
+  <path d="M1580,250 Q1588,242 1596,250 Q1604,242 1612,250" fill="none" stroke="#8a7a5a" stroke-width="1.5" opacity="0.2" />
+
+  <!-- 顶部金色装饰线 -->
+  <line x1="760" y1="230" x2="1160" y2="230" stroke="url(#goldGrad)" stroke-width="0.5" opacity="0.3" />
+</svg>
