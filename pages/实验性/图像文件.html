@@ -31,21 +31,10 @@
         </div>
     </div>
 
-    <!-- ===== 进度条 ===== -->
-    <div style="margin:1rem 0;">
-        <div style="display:flex;justify-content:space-between;font-size:0.8rem;color:var(--text-muted);">
-            <span id="progressText">正在检测图像文件...</span>
-            <span id="progressPercent">0%</span>
-        </div>
-        <div style="width:100%;height:4px;background:rgba(255,255,255,0.06);border-radius:4px;overflow:hidden;margin-top:0.3rem;">
-            <div id="progressBar" style="width:0%;height:100%;background:var(--accent);border-radius:4px;transition:width 0.3s ease;"></div>
-        </div>
-    </div>
-
     <!-- ===== 加载状态 ===== -->
-    <div id="loadingStatus" style="text-align:center;padding:1rem 0;color:var(--text-muted);display:none;">
+    <div id="loadingStatus" style="text-align:center;padding:1rem 0;color:var(--text-muted);">
         <img src="/icon/Structure_Block_3.png" alt="加载中" style="width:48px;height:48px;image-rendering:pixelated;animation:breathe 1.2s ease-in-out infinite;display:block;margin:0 auto;">
-        <p style="margin-top:0.8rem;">正在扫描图像文件...</p>
+        <p style="margin-top:0.8rem;">正在加载图像列表...</p>
     </div>
 
     <!-- ===== 图像网格 ===== -->
@@ -121,12 +110,6 @@
         font-size: 0.75rem;
     }
 
-    .image-card .image-info .filesize {
-        color: var(--text-muted);
-        font-size: 0.65rem;
-        flex-shrink: 0;
-    }
-
     .image-card .image-info .format-badge {
         font-size: 0.55rem;
         padding: 0.1rem 0.4rem;
@@ -199,14 +182,7 @@
 
 <script>
     // ============================================================
-    // 获取滚动条宽度
-    // ============================================================
-    function getScrollbarWidth() {
-        return window.innerWidth - document.documentElement.clientWidth;
-    }
-
-    // ============================================================
-    // 图像文件枚举器 - 并行检测
+    // 图像文件枚举器 - 快速加载
     // ============================================================
     (function initImageGallery() {
         var imageGrid = document.getElementById('imageGrid');
@@ -214,9 +190,6 @@
         var noResult = document.getElementById('noResult');
         var errorMsg = document.getElementById('errorMsg');
         var errorDetail = document.getElementById('errorDetail');
-        var progressBar = document.getElementById('progressBar');
-        var progressText = document.getElementById('progressText');
-        var progressPercent = document.getElementById('progressPercent');
 
         var stats = {
             total: 0,
@@ -228,126 +201,48 @@
             webp: 0
         };
 
-        function formatFileSize(bytes) {
-            if (bytes < 1024) return bytes + 'B';
-            if (bytes < 1048576) return (bytes / 1024).toFixed(1) + 'KB';
-            return (bytes / 1048576).toFixed(1) + 'MB';
-        }
-
         function getExtension(filename) {
             var parts = filename.split('.');
             if (parts.length < 2) return '';
             return parts[parts.length - 1].toLowerCase();
         }
 
-        function getFileSize(url) {
-            return fetch(url, { method: 'HEAD' })
-                .then(function(response) {
-                    var size = response.headers.get('content-length');
-                    return size ? parseInt(size) : 0;
-                })
-                .catch(function() { return 0; });
-        }
-
-        function loadImageList() {
-            return fetch('/icon/index.json?' + Date.now())
-                .then(function(response) {
-                    if (!response.ok) {
-                        throw new Error('index.json 不存在或无法读取 (HTTP ' + response.status + ')');
-                    }
-                    return response.json();
-                })
-                .then(function(data) {
-                    if (!Array.isArray(data)) {
-                        throw new Error('index.json 格式错误：应为数组');
-                    }
-                    return data;
-                });
-        }
-
-        function checkImageExists(url) {
-            return new Promise(function(resolve) {
-                var img = new Image();
-                var timeout = setTimeout(function() {
-                    img.src = '';
-                    resolve(false);
-                }, 3000);
-                img.onload = function() {
-                    clearTimeout(timeout);
-                    resolve(true);
-                };
-                img.onerror = function() {
-                    clearTimeout(timeout);
-                    resolve(false);
-                };
-                img.src = url;
-            });
-        }
-
         // ============================================================
-        // 主加载函数 - 并行检测
+        // 主加载函数 - 直接信任 index.json
         // ============================================================
         async function loadImages() {
-            var validImages = [];
-            var basePath = '/icon/';
-            var totalFiles = 0;
-            var completed = 0;
-
             try {
-                var fileList = await loadImageList();
-                totalFiles = fileList.length;
-
-                if (totalFiles === 0) {
+                var response = await fetch('/icon/index.json?' + Date.now());
+                if (!response.ok) {
+                    throw new Error('index.json 不存在或无法读取 (HTTP ' + response.status + ')');
+                }
+                var fileList = await response.json();
+                if (!Array.isArray(fileList) || fileList.length === 0) {
                     loadingStatus.style.display = 'none';
                     noResult.style.display = 'block';
                     return;
                 }
 
-                // 显示进度条
-                progressText.textContent = '正在检测 ' + totalFiles + ' 个图像文件...';
-                progressPercent.textContent = '0%';
-                progressBar.style.width = '0%';
+                // 直接信任列表，无需逐个检测存在性
+                var validImages = [];
+                var basePath = '/icon/';
 
-                // 并行检测所有文件
-                var checkPromises = fileList.map(async function(filename, index) {
-                    var url = basePath + filename;
-                    var exists = await checkImageExists(url);
-                    var result = null;
-                    if (exists) {
-                        var ext = getExtension(filename);
-                        var size = await getFileSize(url);
-                        result = {
-                            filename: filename,
-                            url: url,
-                            ext: ext,
-                            size: size
-                        };
-                    }
-                    // 更新进度
-                    completed++;
-                    var percent = Math.round((completed / totalFiles) * 100);
-                    progressBar.style.width = percent + '%';
-                    progressPercent.textContent = percent + '%';
-                    if (completed % 3 === 0 || completed === totalFiles) {
-                        progressText.textContent = '正在检测 ' + completed + '/' + totalFiles + ' ...';
-                    }
-                    return result;
-                });
-
-                var results = await Promise.all(checkPromises);
-                results.forEach(function(result) {
-                    if (result) {
-                        validImages.push(result);
-                        stats.total++;
-                        var ext = result.ext;
-                        if (ext === 'png') stats.png++;
-                        else if (ext === 'jpg') stats.jpg++;
-                        else if (ext === 'jpeg') stats.jpeg++;
-                        else if (ext === 'gif') stats.gif++;
-                        else if (ext === 'svg') stats.svg++;
-                        else if (ext === 'webp') stats.webp++;
-                    }
-                });
+                for (var i = 0; i < fileList.length; i++) {
+                    var filename = fileList[i];
+                    var ext = getExtension(filename);
+                    validImages.push({
+                        filename: filename,
+                        url: basePath + filename,
+                        ext: ext
+                    });
+                    stats.total++;
+                    if (ext === 'png') stats.png++;
+                    else if (ext === 'jpg') stats.jpg++;
+                    else if (ext === 'jpeg') stats.jpeg++;
+                    else if (ext === 'gif') stats.gif++;
+                    else if (ext === 'svg') stats.svg++;
+                    else if (ext === 'webp') stats.webp++;
+                }
 
                 // 更新统计
                 document.getElementById('totalCount').textContent = stats.total;
@@ -357,20 +252,7 @@
                 document.getElementById('svgCount').textContent = stats.svg;
                 document.getElementById('webpCount').textContent = stats.webp;
 
-                // 隐藏进度条
-                progressText.textContent = '检测完成，共 ' + validImages.length + ' 个有效文件';
-                progressPercent.textContent = '100%';
-                progressBar.style.width = '100%';
-                setTimeout(function() {
-                    progressBar.style.opacity = '0';
-                }, 1000);
-
                 loadingStatus.style.display = 'none';
-
-                if (validImages.length === 0) {
-                    noResult.style.display = 'block';
-                    return;
-                }
 
                 // 渲染网格
                 imageGrid.style.display = 'grid';
@@ -378,13 +260,11 @@
                 for (var j = 0; j < validImages.length; j++) {
                     var img = validImages[j];
                     var extClass = img.ext;
-                    var sizeText = img.size > 0 ? formatFileSize(img.size) : '--';
                     html += '<div class="image-card" data-url="' + img.url + '" data-filename="' + img.filename + '">';
-                    html += '<img src="' + img.url + '" alt="' + img.filename + '" loading="lazy" onerror="this.parentElement.style.display=\'none\'">';
+                    html += '<img src="' + img.url + '" alt="' + img.filename + '" loading="lazy" onerror="this.style.display=\'none\'">';
                     html += '<div class="image-info">';
                     html += '<span class="filename" title="' + img.filename + '">' + img.filename + '</span>';
                     html += '<span class="format-badge ' + extClass + '">' + img.ext.toUpperCase() + '</span>';
-                    html += '<span class="filesize">' + sizeText + '</span>';
                     html += '</div></div>';
                 }
                 imageGrid.innerHTML = html;
@@ -409,7 +289,7 @@
         }
 
         // ============================================================
-        // 大图预览 - 带滚动条补偿，关闭时彻底销毁 DOM
+        // 大图预览
         // ============================================================
         var previewOverlay = null;
         var previewImg = null;
