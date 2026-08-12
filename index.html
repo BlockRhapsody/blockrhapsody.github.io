@@ -13,6 +13,7 @@
     <meta name="description" content="方块狂想曲服务器 · 制度汇编 · 技术文档 · 玩家指南" />
     <meta name="theme-color" content="#0d0d1a" />
     <script type="module" src="https://cdn.jsdelivr.net/npm/web-page@1.1.0/index.min.js"></script>
+    <script src="/verse.js"></script>
 </head>
 <body>
     <!-- ===== 导航栏 ===== -->
@@ -32,13 +33,16 @@
                 </div>
             </div>
             <div class="nav-actions">
-                <span id="userDisplay" style="display:none;color:var(--text-secondary);font-size:clamp(0.7rem, 0.9vw, 0.9rem);">
+                <!-- 语录显示区域 -->
+                <div id="quoteDisplay" class="quote-display"></div>
+                <!-- 以下登录相关元素在移动端隐藏 -->
+                <span class="hide-on-mobile" id="userDisplay" style="display:none;color:var(--text-secondary);font-size:clamp(0.7rem, 0.9vw, 0.9rem);">
                     <i class="fas fa-user"></i> <span id="usernameDisplay"></span>
                 </span>
-                <a id="loginBtn" href="#" class="nav-btn" onclick="openLoginModal(event)">
+                <a id="loginBtn" href="#" class="nav-btn hide-on-mobile" onclick="openLoginModal(event)">
                     <i class="fas fa-sign-in-alt"></i> 登录
                 </a>
-                <a id="logoutBtn" href="#" style="display:none;" class="nav-btn" onclick="logout(event)">
+                <a id="logoutBtn" href="#" style="display:none;" class="nav-btn hide-on-mobile" onclick="logout(event)">
                     <i class="fas fa-sign-out-alt"></i> 退出
                 </a>
                 <button class="nav-btn hide-on-mobile" onclick="clearCacheAndReload()" title="清除缓存并刷新">
