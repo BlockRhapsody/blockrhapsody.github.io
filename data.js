@@ -53,7 +53,7 @@ var sidebarMenu = [
     {
         title: '论坛',
         icon: 'fa-comments',
-        items: ['论坛']
+        items: ['论坛', '论指令圈现状']
     },
     {
         title: '实验性',
@@ -81,7 +81,7 @@ var cardData = [
     { title: '技术文档', icon: 'fa-code', items: ['MCC目录', '第一章', '第二章', '第三章', '第四章', '第五章', '第六章', '第七章', '第八章', '第九章', '第十章', '第十一章', '第十二章', '第十三章', '第十四章', '盔甲架指南', '认识基岩版'] },
     { title: '玩家文档', icon: 'fa-users', items: ['玩家游玩建议', '管理员学习手册'] },
     { title: '计划', icon: 'fa-calendar', items: ['六月建设计划', '普朗克计划', '净标计划'] },
-    { title: '论坛', icon: 'fa-comments', items: ['论坛'] },
+    { title: '论坛', icon: 'fa-comments', items: ['论坛', '论指令圈现状'] },
     { title: '实验性', icon: 'fa-flask', items: ['皮肤查看器', '强刷新', '图像文件', '乱写文档', 'DeepSeek对话', 'MCBEID表'] }
 ];
 
@@ -129,6 +129,7 @@ var pagePathMap = {
     '净标计划': '/pages/计划/净标计划.html',
     '普朗克计划': '/pages/计划/普朗克计划.html',
     '论坛': '/pages/论坛/index.html',
+    '论指令圈现状': '/pages/论坛/指令圈现状.html',
     '皮肤查看器': '/pages/实验性/皮肤查看器.html',
     '强刷新': '/pages/实验性/强刷新.html',
     '图像文件': '/pages/实验性/图像文件.html',
