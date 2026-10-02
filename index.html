@@ -92,8 +92,31 @@
         <aside class="desktop-sidebar" id="desktopSidebar"></aside>
         <main class="main-content" id="mainContent">
             <section id="home-content">
-                <h1>欢迎来到方块狂想曲 Wiki</h1>
-                <p class="subtitle">服务器制度 · 技术文档 · 玩家指南</p>
+                <!-- ===== 关服公告 ===== -->
+                <div class="shutdown-notice">
+                    <div class="shutdown-icon">
+                        <i class="fas fa-power-off"></i>
+                    </div>
+                    <h1 class="shutdown-title">方块狂想曲 · 已关服</h1>
+                    <p class="shutdown-date">2026年9月27日</p>
+                    <div class="shutdown-divider"></div>
+                    <p class="shutdown-lead">
+                        存档已于九月二十六日永久丢失。主城结构尚在，指令技术尚在，<br>
+                        但那个完整的、鲜活的、曾经属于我们所有人的方块狂想曲，已经找不回来了。
+                    </p>
+                    <blockquote class="shutdown-quote">
+                        “存档丢了，一切没了，梦该醒了，我不会重建狂想曲了，因为大炮走了。”
+                        <span class="shutdown-quote-author">—— 弘桀孤影行</span>
+                    </blockquote>
+                    <div class="shutdown-actions">
+                        <a href="#page-关服公告" class="btn btn-danger" onclick="loadPage('关服公告');return false;">
+                            <i class="fas fa-book-open"></i> 阅读完整关服公告
+                        </a>
+                    </div>
+                    <p class="shutdown-footer">感谢每一位曾经来到方块狂想曲的玩家。</p>
+                </div>
+
+                <!-- 原有卡片网格保留，放在公告下方 -->
                 <div class="card-grid" id="cardGrid"></div>
             </section>
             <div id="page-content" class="hidden"></div>
@@ -197,6 +220,20 @@
             if (window.location.hash !== '#page-' + pageId) {
                 history.pushState(null, '', '#page-' + pageId);
             }
+        }
+
+        function injectShutdownBanner(container) {
+            // 避免重复插入
+            if (container.querySelector('.shutdown-banner')) return;
+
+            var banner = document.createElement('div');
+            banner.className = 'shutdown-banner';
+            banner.innerHTML =
+                '<i class="fas fa-power-off"></i>' +
+                '<span><strong>方块狂想曲已于 2026年9月27日 正式关服。</strong>' +
+                '存档已永久丢失，本 Wiki 仅作历史存档保留。</span>' +
+                '<a href="#page-关服公告" onclick="loadPage(\'关服公告\');return false;">查看公告</a>';
+            container.insertBefore(banner, container.firstChild);
         }
 
         // ============================================================
@@ -378,6 +415,7 @@
                     sessionStorage.setItem(cacheKey, html);
                     sessionStorage.setItem(cacheKey + '_time', String(Date.now()));
                     pageContent.innerHTML = html;
+                    injectShutdownBanner(pageContent);
                     window.scrollTo({ top: 0, behavior: 'smooth' });
                     if (window.location.hash !== '#page-' + pageId) {
                         history.pushState(null, '', '#page-' + pageId);
